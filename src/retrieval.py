@@ -9,8 +9,9 @@
 - HierarchicalRetriever: 分层检索 = 粗筛 + 精排（核心方案）
 """
 import numpy as np
-from typing import List, Tuple
+from typing import List, Tuple, Optional, Dict
 from knowledge import KnowledgeBase
+from preprocessing import phase_align_via_cross_correlation
 
 
 class CoarseRetriever:
@@ -65,11 +66,16 @@ class FineRetriever:
 
     def __init__(self, kb: KnowledgeBase, metric: str = 'euclidean',
                  normalize: bool = False,
-                 weights: dict = None):
+                 weights: dict = None,
+                 phase_align: bool = False,
+                 dtw_window: Optional[int] = None):
         self.kb = kb
         self.metric = metric
         self.normalize = normalize
         self.weights = weights or {'euclidean': 0.5, 'spectral': 0.3, 'statistical': 0.2}
+        self.phase_align = phase_align
+        self.dtw_window = dtw_window
+        self.last_aligned_templates: Dict[int, np.ndarray] = {}
 
     def _prepare(self, q: np.ndarray, t: np.ndarray):
         """准备信号（可选归一化）."""
@@ -109,7 +115,11 @@ class FineRetriever:
         elif self.metric == 'dtw':
             try:
                 from dtaidistance import dtw
-                return float(dtw.distance(q, t))
+                window = self.dtw_window
+                if window is None:
+                    # 默认：Sakoe-Chiba窗口 = 10%信号长度
+                    window = max(5, len(q) // 10)
+                return float(dtw.distance(q, t, window=window))
             except ImportError:
                 return self._euclidean_dist(q, t)
 
@@ -132,12 +142,24 @@ class FineRetriever:
         k: int = 3,
     ) -> List[Tuple[int, float]]:
         """精排：对候选集中每条模板计算相似度，返回Top-K."""
+        self.last_aligned_templates.clear()
         scored = []
         for internal_id, _ in candidates:
             record = self.kb.get_record(internal_id)
             if record is None:
                 continue
-            dist = self._compute_distance(y_query, record.raw_data)
+            template = record.raw_data
+            if self.phase_align:
+                aligned, lag, corr = phase_align_via_cross_correlation(
+                    y_query, template
+                )
+                # 相关性太低时放弃对齐
+                if corr < 0.3:
+                    aligned = template
+                self.last_aligned_templates[internal_id] = aligned
+                dist = self._compute_distance(y_query, aligned)
+            else:
+                dist = self._compute_distance(y_query, template)
             scored.append((internal_id, dist))
 
         scored.sort(key=lambda x: x[1])
@@ -157,15 +179,19 @@ class HierarchicalRetriever:
         weights: dict = None,
         distance_window: float = 0.5,
         angle_window: float = 15.0,
+        phase_align: bool = False,
+        dtw_window: Optional[int] = None,
     ):
         self.kb = kb
         self.coarse = CoarseRetriever(kb)
         self.fine = FineRetriever(kb, metric=metric, normalize=normalize,
-                                  weights=weights)
+                                  weights=weights, phase_align=phase_align,
+                                  dtw_window=dtw_window)
         self.coarse_k = coarse_k
         self.fine_k = fine_k
         self.distance_window = distance_window
         self.angle_window = angle_window
+        self.last_coarse_count = 0
 
     def retrieve(
         self,
@@ -183,6 +209,7 @@ class HierarchicalRetriever:
             angle_window=self.angle_window,
             snr_range=snr_range,
         )
+        self.last_coarse_count = len(candidates)
         if len(candidates) == 0:
             return []
         return self.fine.retrieve(y_query, candidates, k=self.fine_k)
@@ -230,10 +257,13 @@ class SignalOnlyRetriever:
     """纯信号检索（基线3）：只用精排，不做粗筛."""
 
     def __init__(self, kb: KnowledgeBase, metric: str = 'euclidean',
-                 normalize: bool = False, weights: dict = None):
+                 normalize: bool = False, weights: dict = None,
+                 phase_align: bool = False,
+                 dtw_window: Optional[int] = None):
         self.kb = kb
         self.fine = FineRetriever(kb, metric=metric, normalize=normalize,
-                                  weights=weights)
+                                  weights=weights, phase_align=phase_align,
+                                  dtw_window=dtw_window)
 
     def retrieve(
         self, y_query: np.ndarray, k: int = 3, **kwargs

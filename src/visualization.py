@@ -20,6 +20,13 @@ _STYLE_MAP = {
     'Hier-adapt-v2 (Ours)':   {'color': '#7b1fa2', 'ls': '-',  'lw': 2.8, 'marker': 'o', 'ms': 6},
     'Hierarchical (Ours)':    {'color': '#7b1fa2', 'ls': '-',  'lw': 2.8, 'marker': 'o', 'ms': 6},
     'Hier-adaptive (Ours)':   {'color': '#7b1fa2', 'ls': '-',  'lw': 2.8, 'marker': 'o', 'ms': 6},
+    # DTW / Phase-alignment methods (exp05)
+    'Signal-Only (DTW)':        {'color': '#00838f', 'ls': (0, (3,1,1,1)), 'lw': 1.8, 'marker': 'h', 'ms': 5},
+    'Signal-Only (Phase-AE)':   {'color': '#c62828', 'ls': (0, (4,2)), 'lw': 1.8, 'marker': 'P', 'ms': 6},
+    'Signal-Only (Phase-DTW)':  {'color': '#e91e63', 'ls': (0, (1,1)), 'lw': 2.0, 'marker': '*', 'ms': 7},
+    'Hier-adapt-v2 (DTW)':      {'color': '#00695c', 'ls': (0, (3,1,1,1)), 'lw': 1.8, 'marker': 'h', 'ms': 5},
+    'Hier-adapt-v2 (Phase-AE)': {'color': '#b71c1c', 'ls': (0, (4,2)), 'lw': 2.0, 'marker': 'P', 'ms': 6},
+    'Hier-adapt-v2 (Phase-DTW)':{'color': '#880e4f', 'ls': (0, (1,1)), 'lw': 2.2, 'marker': '*', 'ms': 7},
 }
 
 # 短标签映射
@@ -34,6 +41,12 @@ _SHORT_LABEL = {
     'Hier-adapt-v2 (Ours)': 'Hier-adapt-v2 (angle+SNR)',
     'Hierarchical (Ours)': 'Hier-adapt (Ours)',
     'Hier-adaptive (Ours)': 'Hier-adapt (Ours)',
+    'Signal-Only (DTW)': 'SignalOnly+DTW',
+    'Signal-Only (Phase-AE)': 'SignalOnly+PhaseAlign',
+    'Signal-Only (Phase-DTW)': 'SignalOnly+PhaseDTW',
+    'Hier-adapt-v2 (DTW)': 'HierAdapt+DTW',
+    'Hier-adapt-v2 (Phase-AE)': 'HierAdapt+PhaseAlign',
+    'Hier-adapt-v2 (Phase-DTW)': 'HierAdapt+PhaseDTW',
 }
 
 
@@ -63,6 +76,7 @@ def plot_snr_vs_mse(
     mse_results: dict,
     save_path: str = 'results/snr_vs_mse.png',
     title: str = 'SNR vs MSE: Retrieval Method Comparison',
+    y_label: str = 'MSE (log scale)',
 ):
     """SNR扫描下各检索方法的MSE对比.
 
@@ -90,7 +104,7 @@ def plot_snr_vs_mse(
     _add_overlap_annotations(ax, mse_results, snr_values)
 
     ax.set_xlabel('SNR (dB)', fontsize=12)
-    ax.set_ylabel('MSE (log scale)', fontsize=12)
+    ax.set_ylabel(y_label, fontsize=12)
     ax.set_title(title, fontsize=14, fontweight='bold')
     ax.legend(fontsize=9, framealpha=0.9, ncol=2, loc='upper right')
     ax.grid(True, alpha=0.25, which='both')
@@ -255,3 +269,56 @@ def plot_signal_waveform(
     Path(save_path).parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(save_path, dpi=150, bbox_inches='tight')
     plt.close(fig)
+
+
+def plot_efficiency_comparison(
+    snr_values: list,
+    candidate_counts: dict,  # {method_name: [avg_count_per_snr]}
+    save_path: str = 'results/exp03_efficiency.png',
+    title: str = '检索效率对比：粗筛候选数 vs SNR',
+):
+    """检索效率对比：展示各方案在不同SNR下的平均粗筛候选数.
+
+    - 固定窗口(dw=0.5/dw=1.5)：候选数随SNR基本不变
+    - 自适应窗口(v1/v2)：信道好时自动收缩 → 候选数减少 → 计算效率提升
+    """
+    fig, ax = plt.subplots(figsize=(10, 6))
+
+    style_map = {
+        'Hier-dw=0.5 (narrow)':   {'color': '#9c27b0', 'ls': (0, (2,2)), 'lw': 1.5, 'marker': '<', 'ms': 6},
+        'Hier-dw=1.5 (wide)':     {'color': '#00838f', 'ls': (0, (6,2)), 'lw': 1.5, 'marker': '>', 'ms': 6},
+        'Hier-adapt-v1 (Ours)':   {'color': '#e65100', 'ls': '-',  'lw': 2.2, 'marker': 'p', 'ms': 7},
+        'Hier-adapt-v2 (Ours)':   {'color': '#7b1fa2', 'ls': '-',  'lw': 2.8, 'marker': 'o', 'ms': 7},
+    }
+
+    for method_name, counts in candidate_counts.items():
+        style = style_map.get(method_name, {}).copy()
+        label = _SHORT_LABEL.get(method_name, method_name)
+        ax.plot(snr_values, counts, label=label,
+                color=style.get('color', '#333'),
+                linestyle=style.get('ls', '-'),
+                linewidth=style.get('lw', 1.5),
+                marker=style.get('marker', 'o'),
+                markersize=style.get('ms', 5),
+                markevery=1, alpha=0.9)
+
+    # 标注节省比例
+    if 'Hier-dw=1.5 (wide)' in candidate_counts and 'Hier-adapt-v2 (Ours)' in candidate_counts:
+        wide_avg = np.mean(candidate_counts['Hier-dw=1.5 (wide)'])
+        v2_avg = np.mean(candidate_counts['Hier-adapt-v2 (Ours)'])
+        if wide_avg > 0:
+            saving = (1 - v2_avg / wide_avg) * 100
+            ax.text(0.98, 0.95, f'v2 avg saving vs dw=1.5: {saving:.0f}%',
+                    transform=ax.transAxes, fontsize=11, ha='right', va='top',
+                    bbox=dict(boxstyle='round', facecolor='#e8f5e9', alpha=0.85))
+
+    ax.set_xlabel('SNR (dB)', fontsize=12)
+    ax.set_ylabel('平均粗筛候选数', fontsize=12)
+    ax.set_title(title, fontsize=14, fontweight='bold')
+    ax.legend(fontsize=10, framealpha=0.9, loc='upper left')
+    ax.grid(True, alpha=0.25)
+
+    Path(save_path).parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(save_path, dpi=180, bbox_inches='tight')
+    plt.close(fig)
+    print(f"Saved: {save_path}")

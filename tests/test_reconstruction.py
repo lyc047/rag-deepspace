@@ -6,7 +6,8 @@ from reconstruction import reconstruct_from_template, compute_residual
 from knowledge import KnowledgeBase, TemplateRecord
 
 
-def test_reconstruct_returns_template():
+def test_reconstruct_returns_template_or_query():
+    """无损模式返回y_query, n_bits=0返回template, n_bits=None返回y_query."""
     kb = KnowledgeBase()
     y_template = np.array([1.0, 2.0, 3.0], dtype=np.float32)
     physics = {'distance_au': 1.5, 'sun_earth_probe_angle': 30.0,
@@ -15,8 +16,19 @@ def test_reconstruct_returns_template():
     record = TemplateRecord(raw_data=y_template, physics=physics)
     kb.insert(record)
     y_query = np.array([1.1, 2.1, 3.1], dtype=np.float32)
+
+    # Default (n_bits=None): returns y_query
     y_recon = reconstruct_from_template(y_query, [(1, 0.1)], kb)
+    np.testing.assert_array_equal(y_recon, y_query)
+
+    # n_bits=0: returns template
+    y_recon = reconstruct_from_template(y_query, [(1, 0.1)], kb, n_bits=0)
     np.testing.assert_array_equal(y_recon, y_template)
+
+    # n_bits=8 with y_original: quantized reconstruction
+    y_recon = reconstruct_from_template(
+        y_query, [(1, 0.1)], kb, n_bits=8, y_original=y_query)
+    assert len(y_recon) == 3
 
 
 def test_reconstruct_empty_results():
