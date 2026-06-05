@@ -45,14 +45,21 @@ def run_experiment(
 
     # 2. 初始化检索器
     print("\n[2/4] Initializing retrievers...")
+    # 自适应窗口函数（与exp03一致）
+    def _adaptive_dw(sun_angle, snr_db):
+        snr_norm = (snr_db + 170) / 40.0
+        return min(1.0 + 0.5*(sun_angle/90) + 0.5*(1 - snr_norm), 2.0)
+
     retrievers = {
         'No Retrieval': None,
         'Random': RandomRetriever(kb),
         'Physics-Only': PhysicsOnlyRetriever(kb),
-        'Signal-Only': SignalOnlyRetriever(kb, metric=metric, normalize=False),
-        'Hierarchical (Ours)': HierarchicalRetriever(
+        'Hier-dw=0.5 (narrow)': HierarchicalRetriever(
             kb, coarse_k=50, fine_k=3, metric=metric, normalize=False,
+            distance_window=0.5, angle_window=15.0,
         ),
+        'Hier-adaptive (Ours)': 'adaptive',  # 每次查询时动态计算窗口
+        'Signal-Only (upper)': SignalOnlyRetriever(kb, metric=metric, normalize=False),
     }
 
     # 3. SNR扫描
@@ -81,6 +88,16 @@ def run_experiment(
             for method_name, retriever in retrievers.items():
                 if method_name == 'No Retrieval':
                     y_recon = y_received
+                elif method_name == 'Hier-adaptive (Ours)':
+                    dw = _adaptive_dw(physics['sun_earth_probe_angle'], physics['snr_db'])
+                    da = min(90, dw * 30)
+                    hier = HierarchicalRetriever(
+                        kb, coarse_k=200, fine_k=3, metric=metric, normalize=False,
+                        distance_window=dw, angle_window=da,
+                    )
+                    rr = hier.retrieve(y_received, distance_au=physics['distance_au'],
+                                       sun_angle=physics['sun_earth_probe_angle'])
+                    y_recon = reconstruct_from_template(y_received, rr, kb)
                 else:
                     retrieval_results = retriever.retrieve(
                         y_received,
@@ -111,11 +128,14 @@ def run_experiment(
     for name in retrievers.keys():
         print(f"  {name:25s}: MSE = {results[name][snr_idx]:.6f}")
 
-    # 计算分层检索相对于无检索的增益
+    # 计算自适应窗口相对于无检索和窄窗口的增益
     no_retrieval_mse = results['No Retrieval'][snr_idx]
-    hierarchical_mse = results['Hierarchical (Ours)'][snr_idx]
-    gain = (no_retrieval_mse - hierarchical_mse) / no_retrieval_mse * 100
-    print(f"\n  Hierarchical gain over No Retrieval: {gain:.1f}%")
+    adaptive_mse = results['Hier-adaptive (Ours)'][snr_idx]
+    narrow_mse = results['Hier-dw=0.5 (narrow)'][snr_idx]
+    gain_no = (no_retrieval_mse - adaptive_mse) / no_retrieval_mse * 100
+    gain_narrow = (narrow_mse - adaptive_mse) / narrow_mse * 100
+    print(f"\n  Adaptive gain over No Retrieval: {gain_no:.1f}%")
+    print(f"  Adaptive gain over narrow (dw=0.5): {gain_narrow:.1f}%")
 
     return snr_values, results
 

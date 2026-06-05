@@ -37,13 +37,12 @@ def adaptive_window_v2(sun_angle: float, snr_db: float = -150,
 
     物理直觉：
     - 太阳角大 → 信号形态与物理参数解耦 → 放宽窗口
-    - SNR低 → 信号退化严重 → 更难匹配 → 放宽窗口
+    - SNR低   → 信号被噪声污染严重 → 更难匹配 → 放宽窗口
     """
-    # 太阳角贡献：0 → +0.5AU
     angle_factor = 0.5 * (sun_angle / 90.0)
-    # SNR贡献：-130dB(好) → 0, -170dB(差) → +0.5AU
-    snr_norm = (snr_db + 170) / 40.0  # [-170,-130] → [0,1]
-    snr_factor = 0.5 * snr_norm
+    # SNR: 越差(-170dB)窗口越大, 越好(-130dB)窗口越小
+    snr_norm = (snr_db + 170) / 40.0   # -170→0, -130→1
+    snr_factor = 0.5 * (1 - snr_norm)   # 低SNR→大, 高SNR→小
     dw = w_base + angle_factor + snr_factor
     return min(dw, w_max)
 

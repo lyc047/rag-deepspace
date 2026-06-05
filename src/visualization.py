@@ -114,7 +114,7 @@ def _add_overlap_annotations(ax, mse_results, snr_values):
                 overlaps.append(f"- {_SHORT_LABEL.get(names[i], names[i])} ~ {_SHORT_LABEL.get(names[j], names[j])}")
 
     if overlaps:
-        note = '\n'.join(f'• {o}' for o in overlaps[:3])
+        note = '\n'.join(f'* {o}' for o in overlaps[:3])
         ax.text(0.02, 0.02, f'Overlapping:\n{note}', transform=ax.transAxes,
                 fontsize=7, color='#666', va='bottom', ha='left',
                 bbox=dict(boxstyle='round,pad=0.3', facecolor='#fff9c4', alpha=0.7))

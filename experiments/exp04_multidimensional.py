@@ -22,7 +22,7 @@ def adaptive_window_v2(sun_angle: float, snr_db: float = -150,
                        w_base: float = 1.0, w_max: float = 2.0) -> float:
     angle_factor = 0.5 * (sun_angle / 90.0)
     snr_norm = (snr_db + 170) / 40.0
-    snr_factor = 0.5 * snr_norm
+    snr_factor = 0.5 * (1 - snr_norm)  # 低SNR→大窗口
     return min(w_base + angle_factor + snr_factor, w_max)
 
 
