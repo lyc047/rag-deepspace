@@ -49,9 +49,9 @@ def run_experiment(
         'No Retrieval': None,
         'Random': RandomRetriever(kb),
         'Physics-Only': PhysicsOnlyRetriever(kb),
-        'Signal-Only': SignalOnlyRetriever(kb, metric=metric),
+        'Signal-Only': SignalOnlyRetriever(kb, metric=metric, normalize=False),
         'Hierarchical (Ours)': HierarchicalRetriever(
-            kb, coarse_k=50, fine_k=3, metric=metric,
+            kb, coarse_k=50, fine_k=3, metric=metric, normalize=False,
         ),
     }
 

@@ -47,29 +47,41 @@ class CoarseRetriever:
 
 
 class FineRetriever:
-    """信号特征精排：在候选集中按信号相似度排序."""
+    """信号特征精排：在候选集中按信号相似度排序.
 
-    def __init__(self, kb: KnowledgeBase, metric: str = 'euclidean'):
+    Args:
+        kb: 知识库
+        metric: 距离度量 'euclidean' | 'dtw'
+        normalize: 是否归一化。True=只看形态, False=保留尺度信息。
+                   慢变信号（温度/电压）应设为False，周期性信号可设为True。
+    """
+
+    def __init__(self, kb: KnowledgeBase, metric: str = 'euclidean',
+                 normalize: bool = False):
         self.kb = kb
         self.metric = metric
+        self.normalize = normalize
 
     def _compute_distance(
         self, y_query: np.ndarray, y_template: np.ndarray,
     ) -> float:
         """计算两条信号的相似度距离."""
-        # 归一化后计算
-        q_norm = (y_query - np.mean(y_query)) / (np.std(y_query) + 1e-8)
-        t_norm = (y_template - np.mean(y_template)) / (np.std(y_template) + 1e-8)
+        if self.normalize:
+            q = (y_query - np.mean(y_query)) / (np.std(y_query) + 1e-8)
+            t = (y_template - np.mean(y_template)) / (np.std(y_template) + 1e-8)
+        else:
+            q = y_query
+            t = y_template
 
         if self.metric == 'euclidean':
-            return float(np.mean((q_norm - t_norm) ** 2))
+            return float(np.mean((q - t) ** 2))
 
         elif self.metric == 'dtw':
             try:
                 from dtaidistance import dtw
-                return float(dtw.distance(q_norm, t_norm))
+                return float(dtw.distance(q, t))
             except ImportError:
-                return float(np.mean((q_norm - t_norm) ** 2))
+                return float(np.mean((q - t) ** 2))
 
         else:
             raise ValueError(f"Unknown metric: {self.metric}")
@@ -102,12 +114,13 @@ class HierarchicalRetriever:
         coarse_k: int = 50,
         fine_k: int = 3,
         metric: str = 'euclidean',
+        normalize: bool = False,
         distance_window: float = 0.5,
         angle_window: float = 15.0,
     ):
         self.kb = kb
         self.coarse = CoarseRetriever(kb)
-        self.fine = FineRetriever(kb, metric=metric)
+        self.fine = FineRetriever(kb, metric=metric, normalize=normalize)
         self.coarse_k = coarse_k
         self.fine_k = fine_k
         self.distance_window = distance_window
@@ -173,11 +186,12 @@ class PhysicsOnlyRetriever:
 
 
 class SignalOnlyRetriever:
-    """纯信号检索（基线3）：只用精排（DTW/欧氏），不做粗筛."""
+    """纯信号检索（基线3）：只用精排，不做粗筛."""
 
-    def __init__(self, kb: KnowledgeBase, metric: str = 'euclidean'):
+    def __init__(self, kb: KnowledgeBase, metric: str = 'euclidean',
+                 normalize: bool = False):
         self.kb = kb
-        self.fine = FineRetriever(kb, metric=metric)
+        self.fine = FineRetriever(kb, metric=metric, normalize=normalize)
 
     def retrieve(
         self, y_query: np.ndarray, k: int = 3, **kwargs
