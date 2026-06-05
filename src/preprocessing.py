@@ -62,6 +62,34 @@ def phase_align_via_cross_correlation(
     return aligned, int(lag), peak_corr
 
 
+def doppler_compensate(
+    y_received: np.ndarray,
+    doppler_hz: float,
+    fs_hz: float = 10.0,
+) -> np.ndarray:
+    """多普勒频偏补偿.
+
+    对接收信号施加逆多普勒频移，恢复原始频率。
+    接收端根据轨道预测已知doppler_hz，补偿后再检索。
+
+    原理: 发射信号 x(t), 接收信号 y(t) = x(t)*exp(j*2π*fd*t)
+          补偿: y_comp(t) = y(t)*exp(-j*2π*fd*t) ≈ x(t)
+
+    Args:
+        y_received: 含多普勒频移的接收信号
+        doppler_hz: 多普勒频偏(Hz)，正=接近，负=远离
+        fs_hz: 采样率
+
+    Returns:
+        频偏补偿后的信号
+    """
+    from channel import DopplerShift
+    if abs(doppler_hz) < 1.0:
+        return y_received
+    compensator = DopplerShift(-doppler_hz, fs_hz)
+    return compensator.forward(y_received)
+
+
 def phase_align_and_distance(
     query: np.ndarray,
     template: np.ndarray,
