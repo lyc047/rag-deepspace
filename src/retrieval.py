@@ -49,39 +49,78 @@ class CoarseRetriever:
 class FineRetriever:
     """信号特征精排：在候选集中按信号相似度排序.
 
+    支持单维度度量和多维度加权融合：
+    - euclidean: 时域欧氏距离
+    - spectral: 频谱包络距离
+    - statistical: 统计特征距离 [mean, std, skew, kurt]
+    - dtw: 动态时间规整
+
     Args:
         kb: 知识库
-        metric: 距离度量 'euclidean' | 'dtw'
-        normalize: 是否归一化。True=只看形态, False=保留尺度信息。
-                   慢变信号（温度/电压）应设为False，周期性信号可设为True。
+        metric: 距离度量 'euclidean' | 'dtw' | 'multi'
+        normalize: 是否归一化
+        weights: 多维权重 dict, 仅 metric='multi' 时生效
+                 默认 {'euclidean': 0.5, 'spectral': 0.3, 'statistical': 0.2}
     """
 
     def __init__(self, kb: KnowledgeBase, metric: str = 'euclidean',
-                 normalize: bool = False):
+                 normalize: bool = False,
+                 weights: dict = None):
         self.kb = kb
         self.metric = metric
         self.normalize = normalize
+        self.weights = weights or {'euclidean': 0.5, 'spectral': 0.3, 'statistical': 0.2}
+
+    def _prepare(self, q: np.ndarray, t: np.ndarray):
+        """准备信号（可选归一化）."""
+        if self.normalize:
+            q = (q - np.mean(q)) / (np.std(q) + 1e-8)
+            t = (t - np.mean(t)) / (np.std(t) + 1e-8)
+        return q, t
+
+    def _euclidean_dist(self, q: np.ndarray, t: np.ndarray) -> float:
+        return float(np.mean((q - t) ** 2))
+
+    def _spectral_dist(self, q: np.ndarray, t: np.ndarray) -> float:
+        """频谱包络距离：比较归一化FFT幅值."""
+        fft_q = np.abs(np.fft.rfft(q))
+        fft_t = np.abs(np.fft.rfft(t))
+        # 归一化总能量
+        fft_q = fft_q / (np.sum(fft_q) + 1e-8)
+        fft_t = fft_t / (np.sum(fft_t) + 1e-8)
+        return float(np.mean((fft_q - fft_t) ** 2))
+
+    def _statistical_dist(self, q: np.ndarray, t: np.ndarray) -> float:
+        """统计特征距离."""
+        from scipy import stats
+        feat_q = np.array([np.mean(q), np.std(q), stats.skew(q), stats.kurtosis(q)])
+        feat_t = np.array([np.mean(t), np.std(t), stats.skew(t), stats.kurtosis(t)])
+        return float(np.mean((feat_q - feat_t) ** 2))
 
     def _compute_distance(
         self, y_query: np.ndarray, y_template: np.ndarray,
     ) -> float:
         """计算两条信号的相似度距离."""
-        if self.normalize:
-            q = (y_query - np.mean(y_query)) / (np.std(y_query) + 1e-8)
-            t = (y_template - np.mean(y_template)) / (np.std(y_template) + 1e-8)
-        else:
-            q = y_query
-            t = y_template
+        q, t = self._prepare(y_query, y_template)
 
         if self.metric == 'euclidean':
-            return float(np.mean((q - t) ** 2))
+            return self._euclidean_dist(q, t)
 
         elif self.metric == 'dtw':
             try:
                 from dtaidistance import dtw
                 return float(dtw.distance(q, t))
             except ImportError:
-                return float(np.mean((q - t) ** 2))
+                return self._euclidean_dist(q, t)
+
+        elif self.metric == 'multi':
+            w = self.weights
+            d_euc = self._euclidean_dist(q, t)
+            d_spec = self._spectral_dist(q, t)
+            d_stat = self._statistical_dist(q, t)
+            return (w.get('euclidean', 0.5) * d_euc +
+                    w.get('spectral', 0.3) * d_spec +
+                    w.get('statistical', 0.2) * d_stat)
 
         else:
             raise ValueError(f"Unknown metric: {self.metric}")
@@ -101,7 +140,7 @@ class FineRetriever:
             dist = self._compute_distance(y_query, record.raw_data)
             scored.append((internal_id, dist))
 
-        scored.sort(key=lambda x: x[1])  # 距离升序
+        scored.sort(key=lambda x: x[1])
         return scored[:k]
 
 
@@ -115,12 +154,14 @@ class HierarchicalRetriever:
         fine_k: int = 3,
         metric: str = 'euclidean',
         normalize: bool = False,
+        weights: dict = None,
         distance_window: float = 0.5,
         angle_window: float = 15.0,
     ):
         self.kb = kb
         self.coarse = CoarseRetriever(kb)
-        self.fine = FineRetriever(kb, metric=metric, normalize=normalize)
+        self.fine = FineRetriever(kb, metric=metric, normalize=normalize,
+                                  weights=weights)
         self.coarse_k = coarse_k
         self.fine_k = fine_k
         self.distance_window = distance_window
@@ -189,9 +230,10 @@ class SignalOnlyRetriever:
     """纯信号检索（基线3）：只用精排，不做粗筛."""
 
     def __init__(self, kb: KnowledgeBase, metric: str = 'euclidean',
-                 normalize: bool = False):
+                 normalize: bool = False, weights: dict = None):
         self.kb = kb
-        self.fine = FineRetriever(kb, metric=metric, normalize=normalize)
+        self.fine = FineRetriever(kb, metric=metric, normalize=normalize,
+                                  weights=weights)
 
     def retrieve(
         self, y_query: np.ndarray, k: int = 3, **kwargs
