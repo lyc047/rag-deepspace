@@ -18,11 +18,6 @@ from retrieval import HierarchicalRetriever, SignalOnlyRetriever
 from reconstruction import reconstruct_from_template
 from metrics import mse
 
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-
-
 def adaptive_window_v2(sun_angle: float, snr_db: float = -150,
                        w_base: float = 1.0, w_max: float = 2.0) -> float:
     angle_factor = 0.5 * (sun_angle / 90.0)
@@ -125,37 +120,10 @@ def main():
         )
         all_results[st] = res
 
-    # 汇总图表：4×2 子图（每种信号类型一行）
-    fig, axes = plt.subplots(2, 2, figsize=(14, 12))
-    axes = axes.flatten()
-
-    for idx, st in enumerate(signal_types):
-        ax = axes[idx]
-        res = all_results[st]
-        snr_vals = np.linspace(-170, -130, 7)
-
-        for key, mse_list in res.items():
-            parts = key.split('_')
-            strat = 'Hier-adapt' if 'adapt' in key else 'SignalOnly'
-            met = 'multi' if 'multi' in key else 'euc'
-            label = f'{strat}+{met}'
-            ls = '-' if 'adapt' in key else '--'
-            lw = 2.5 if ('adapt' in key and 'multi' in key) else 1.2
-            color = '#7b1fa2' if ('adapt' in key and 'multi' in key) else \
-                    '#1976d2' if 'adapt' in key else '#f57c00'
-            ax.semilogy(snr_vals, mse_list, label=label, color=color,
-                        linestyle=ls, linewidth=lw, marker='o', markersize=3)
-
-        ax.set_title(f'{st}', fontsize=12)
-        ax.set_xlabel('SNR (dB)')
-        ax.set_ylabel('MSE')
-        ax.legend(fontsize=8)
-        ax.grid(True, alpha=0.3)
-
-    plt.tight_layout()
-    fig.savefig('results/exp04_multidimensional.png', dpi=150, bbox_inches='tight')
-    plt.close(fig)
-    print(f"\nSaved: results/exp04_multidimensional.png")
+    from visualization import plot_multisignal_grid
+    snr_vals = np.linspace(-170, -130, 7)
+    plot_multisignal_grid(signal_types, all_results, snr_vals.tolist(),
+                          save_path='results/exp04_multidimensional.png')
 
 
 if __name__ == '__main__':
