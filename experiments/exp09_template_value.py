@@ -40,6 +40,8 @@ def run_single_signal(signal_type, n_templates=2000, n_test=50, snr_steps=9):
         'Hier-dw=0.5': HierarchicalRetriever(kb, coarse_k=n_templates, fine_k=3,
             normalize=False, distance_window=0.5, angle_window=15.0),
     }
+    # slow_varying无需对齐, periodic/transient自动开启
+    need_align = signal_type in ('periodic', 'transient')
     names = ['No Retrieval', 'Physics-Only', 'Hier-dw=0.5',
              'Stats-Only', 'Signal-Only']
 
@@ -63,19 +65,23 @@ def run_single_signal(signal_type, n_templates=2000, n_test=50, snr_steps=9):
                     y_recon = y_recv
                 elif mname == 'Physics-Only':
                     rr = cache['Physics-Only'].retrieve(y_recv, distance_au=qd, sun_angle=qa)
-                    y_recon = reconstruct_from_template(y_recv, rr, kb, y_original=y_orig, channel=ch)
+                    y_recon = reconstruct_from_template(y_recv, rr, kb,
+                        y_original=y_orig, channel=ch, phase_align=need_align)
                 elif mname == 'Signal-Only':
                     rr = cache['Signal-Only'].retrieve(y_recv)
-                    y_recon = reconstruct_from_template(y_recv, rr, kb, y_original=y_orig, channel=ch)
+                    y_recon = reconstruct_from_template(y_recv, rr, kb,
+                        y_original=y_orig, channel=ch, phase_align=need_align)
                 elif mname == 'Hier-dw=0.5':
                     rr = cache['Hier-dw=0.5'].retrieve(y_recv, distance_au=qd, sun_angle=qa)
-                    y_recon = reconstruct_from_template(y_recv, rr, kb, y_original=y_orig, channel=ch)
+                    y_recon = reconstruct_from_template(y_recv, rr, kb,
+                        y_original=y_orig, channel=ch, phase_align=need_align)
                 elif mname == 'Stats-Only':
                     h = HierarchicalRetriever(kb, coarse_k=n_templates, fine_k=3, normalize=False,
                         distance_window=3.0, angle_window=90.0,
                         stat_filter=True, stat_max_keep=200)
                     rr = h.retrieve(y_recv, distance_au=qd, sun_angle=qa)
-                    y_recon = reconstruct_from_template(y_recv, rr, kb, y_original=y_orig, channel=ch)
+                    y_recon = reconstruct_from_template(y_recv, rr, kb,
+                        y_original=y_orig, channel=ch, phase_align=need_align)
                 raw[mname][snr_db].append(mse(y_orig, y_recon))
 
     # Aggregate with trimmed mean

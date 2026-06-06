@@ -1,15 +1,16 @@
 """信号重建模块：模板匹配 + 残差传输 + 量化.
 
-Phase 3 完整流水线:
-1. 发射端: y_original → 找模板 → residual = y_original - y_template
+Phase 4 完整流水线:
+1. 发射端: y_original → 找模板 → [相位对齐] → residual = y_original - y_template_aligned
 2. 残差过信道 (AWGN)
-3. 接收端: y_recon = y_template + received_residual
+3. 接收端: y_recon = y_template_aligned + received_residual
 
-模板越好 → 残差功率越小 → 同等SNR下绝对噪声越小 → MSE越低
+模板越好 + 对齐 → 残差功率越小 → 同等SNR下绝对噪声越小 → MSE越低
 """
 import numpy as np
 from typing import List, Tuple, Optional
 from knowledge import KnowledgeBase
+from preprocessing import phase_align_via_cross_correlation
 
 
 def quantize_uniform(
@@ -36,6 +37,7 @@ def reconstruct_from_template(
     y_original: Optional[np.ndarray] = None,
     channel: object = None,
     n_bits: Optional[int] = None,
+    phase_align: bool = False,
 ) -> np.ndarray:
     """模板+残差重建 (发射端残差过信道).
 
@@ -46,6 +48,7 @@ def reconstruct_from_template(
         y_original: 原始干净信号 (用于算残差), None时退回直接传
         channel: DeepSpaceChannel实例, 用于对残差加噪. None时完美传输
         n_bits: 残差量化比特数, None=无损
+        phase_align: 是否相位对齐模板到原始信号 (periodic/transient推荐开启)
 
     Returns:
         重建信号
@@ -64,8 +67,16 @@ def reconstruct_from_template(
     if y_original is None:
         return y_received
 
-    # 发射端: residual = y_original - y_template
-    residual = y_original - y_template
+    # 相位对齐 (发射端操作: 以原始信号为基准对齐模板)
+    aligned_template = y_template
+    if phase_align:
+        aligned, lag, corr = phase_align_via_cross_correlation(y_original, y_template)
+        if corr > 0.3:
+            aligned_template = aligned
+        # corr太低则放弃对齐, 用原模板
+
+    # 发射端: residual = y_original - aligned_template
+    residual = y_original - aligned_template
 
     # 残差过信道 (模拟真实传输)
     if channel is not None:
@@ -75,8 +86,8 @@ def reconstruct_from_template(
     if n_bits is not None and n_bits > 0:
         residual, _ = quantize_uniform(residual, n_bits)
 
-    # 接收端: y_recon = y_template + residual
-    return y_template + residual
+    # 接收端: y_recon = aligned_template + residual
+    return aligned_template + residual
 
 
 def compute_residual(
