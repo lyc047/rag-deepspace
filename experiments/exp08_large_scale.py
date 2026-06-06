@@ -98,6 +98,7 @@ def run_stratified_experiment(n_templates=5000, n_per_condition=150, seed=42):
     for label, snr_db, sun_angle in conditions:
         rec_w = []; cand_w = []
         rec_a = []; cand_a = []
+        rec_as = []; cand_as = []  # Adaptive + Stats (双粗筛)
         dw_a_vals = []
 
         for _ in range(n_per_condition):
@@ -109,7 +110,7 @@ def run_stratified_experiment(n_templates=5000, n_per_condition=150, seed=42):
             ch = DeepSpaceChannel(distance_au=physics['distance_au'], snr_db=snr_db)
             y_received = ch.forward(y_original)
             qd = physics['distance_au']
-            qa = sun_angle  # 固定太阳角
+            qa = sun_angle
 
             oracle_rr = oracle.retrieve(y_received, k=1)
             oracle_id = oracle_rr[0][0] if oracle_rr else None
@@ -131,12 +132,22 @@ def run_stratified_experiment(n_templates=5000, n_per_condition=150, seed=42):
             cand_a.append(h_a.last_coarse_count)
             dw_a_vals.append(dw)
 
+            # Adaptive + Stats (双粗筛: 物理窗口 → 统计过滤 → 精排)
+            h_as = HierarchicalRetriever(kb, coarse_k=coarse_k, fine_k=3, normalize=False,
+                                         distance_window=dw, angle_window=da,
+                                         stat_filter=True, stat_max_keep=200)
+            rr_as = h_as.retrieve(y_received, distance_au=qd, sun_angle=qa)
+            rec_as.append(1.0 if rr_as and rr_as[0][0] == oracle_id else 0.0)
+            cand_as.append(getattr(h_as, 'last_stat_filtered_count', h_as.last_coarse_count))
+
         results[label] = {
             'dw_adaptive': np.mean(dw_a_vals),
             'recall_wide': np.mean(rec_w),
             'recall_adaptive': np.mean(rec_a),
+            'recall_adaptive_stats': np.mean(rec_as),
             'cand_wide': np.mean(cand_w),
             'cand_adaptive': np.mean(cand_a),
+            'cand_adaptive_stats': np.mean(cand_as),
         }
 
     return results
@@ -178,33 +189,33 @@ def plot_combined(scaling, stratified):
     x = np.arange(len(labels))
     width = 0.3
 
-    # Recall bars
+    # Recall bars: 3 methods per condition
     rec_wide = [stratified[l]['recall_wide'] for l in labels]
     rec_adap = [stratified[l]['recall_adaptive'] for l in labels]
-    bars1 = ax2.bar(x - width/2, rec_wide, width, color='#00838f', edgecolor='white',
+    rec_astats = [stratified[l]['recall_adaptive_stats'] for l in labels]
+
+    width = 0.22
+    bars1 = ax2.bar(x - width, rec_wide, width, color='#00838f', edgecolor='white',
                     label='dw=1.5 (fixed wide)')
-    bars2 = ax2.bar(x + width/2, rec_adap, width, color='#7b1fa2', edgecolor='white',
-                    label='Adaptive v2 (Ours)')
+    bars2 = ax2.bar(x, rec_adap, width, color='#7b1fa2', edgecolor='white',
+                    label='Adaptive v2')
+    bars3 = ax2.bar(x + width, rec_astats, width, color='#e65100', edgecolor='white',
+                    label='Adaptive + Stats (Ours)')
 
-    # Annotate bars
-    for bar, val in zip(bars1, rec_wide):
-        ax2.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.02,
-                f'{val:.0%}', ha='center', fontsize=10, fontweight='bold', color='#00838f')
-    for bar, val in zip(bars2, rec_adap):
-        ax2.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.02,
-                f'{val:.0%}', ha='center', fontsize=10, fontweight='bold', color='#7b1fa2')
+    for bars, color in [(bars1, '#00838f'), (bars2, '#7b1fa2'), (bars3, '#e65100')]:
+        for bar in bars:
+            h = bar.get_height()
+            ax2.text(bar.get_x() + bar.get_width()/2, h + 0.02,
+                    f'{h:.0%}', ha='center', fontsize=9, fontweight='bold', color=color)
 
-    # Candidate count as text below
+    # Candidate count as text
     for i, label in enumerate(labels):
         s = stratified[label]
-        dw_val = s['dw_adaptive']
-        cand_saving = (s['cand_wide'] - s['cand_adaptive']) / max(s['cand_wide'], 1) * 100
-        ax2.text(i, max(rec_wide[i], rec_adap[i]) + 0.18,
-                f'dw={dw_val:.1f}AU\n'
-                f'cand: {s["cand_adaptive"]:.0f} vs {s["cand_wide"]:.0f}\n'
-                f'({cand_saving:+.0f}%)',
-                ha='center', fontsize=8, color='#555',
-                bbox=dict(boxstyle='round,pad=0.3', facecolor='#f5f5f5', alpha=0.8))
+        ax2.text(i, max(rec_wide[i], rec_adap[i], rec_astats[i]) + 0.18,
+                f'{s["cand_adaptive_stats"]:.0f} cand\n'
+                f'(vs {s["cand_adaptive"]:.0f} w/o stats)',
+                ha='center', fontsize=8, color='#e65100',
+                bbox=dict(boxstyle='round,pad=0.3', facecolor='#fff3e0', alpha=0.8))
 
     ax2.set_xticks(x)
     ax2.set_xticklabels(labels, fontsize=10)
@@ -243,7 +254,8 @@ if __name__ == '__main__':
     for label, s in stratified.items():
         dw = s['dw_adaptive']
         print(f"  {label.replace(chr(10),' ')}: dw={dw:.2f}AU, "
-              f"recall: wide={s['recall_wide']:.3f} adaptive={s['recall_adaptive']:.3f}, "
-              f"cand: wide={s['cand_wide']:.0f} adaptive={s['cand_adaptive']:.0f}")
+              f"wide={s['recall_wide']:.0%} adapt={s['recall_adaptive']:.0%} "
+              f"adapt+stats={s['recall_adaptive_stats']:.0%}, "
+              f"cand: {s['cand_adaptive']:.0f}->{s['cand_adaptive_stats']:.0f} (w/ stats)")
 
     plot_combined(scaling, stratified)

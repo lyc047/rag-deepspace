@@ -181,6 +181,8 @@ class HierarchicalRetriever:
         angle_window: float = 15.0,
         phase_align: bool = False,
         dtw_window: Optional[int] = None,
+        stat_filter: bool = False,
+        stat_max_keep: int = 200,
     ):
         self.kb = kb
         self.coarse = CoarseRetriever(kb)
@@ -192,6 +194,8 @@ class HierarchicalRetriever:
         self.distance_window = distance_window
         self.angle_window = angle_window
         self.last_coarse_count = 0
+        self.stat_filter = stat_filter
+        self.stat_max_keep = stat_max_keep
 
     def retrieve(
         self,
@@ -212,6 +216,20 @@ class HierarchicalRetriever:
         self.last_coarse_count = len(candidates)
         if len(candidates) == 0:
             return []
+
+        # 统计特征过滤：物理粗筛 → 统计过滤 → 精排
+        if self.stat_filter and len(candidates) > self.stat_max_keep:
+            filtered_ids = self.kb.stat_filter(
+                y_query,
+                [c[0] for c in candidates],
+                max_keep=self.stat_max_keep,
+            )
+            # 重新构造候选列表
+            id_set = set(filtered_ids)
+            candidates = [(cid, score) for cid, score in candidates
+                         if cid in id_set]
+            self.last_stat_filtered_count = len(candidates)
+
         return self.fine.retrieve(y_query, candidates, k=self.fine_k)
 
 

@@ -156,6 +156,49 @@ class KnowledgeBase:
             return self._records[idx]
         return None
 
+    def stat_filter(
+        self,
+        y_query: np.ndarray,
+        candidate_ids: List[int],
+        stat_window: float = 3.0,
+        max_keep: int = 200,
+    ) -> List[int]:
+        """统计特征过滤：保留统计特征接近查询的候选.
+
+        对候选模板计算 [mean, std, skew, kurt] 欧氏距离，
+        按距离排序后保留前 max_keep 个。
+
+        Args:
+            y_query: 查询信号
+            candidate_ids: 候选模板的内部ID列表
+            stat_window: 统计特征距离阈值（标准差倍数），留作接口
+            max_keep: 最多保留多少个候选
+
+        Returns:
+            过滤后的内部ID列表
+        """
+        from scipy import stats as sp_stats
+        q_features = np.array([
+            float(np.mean(y_query)),
+            float(np.std(y_query)),
+            float(sp_stats.skew(y_query)),
+            float(sp_stats.kurtosis(y_query)),
+        ])
+
+        scored = []
+        for cid in candidate_ids:
+            record = self.get_record(cid)
+            if record is None:
+                continue
+            dist = float(np.sqrt(np.mean((q_features - record.stat_features) ** 2)))
+            scored.append((cid, dist))
+
+        if len(scored) <= max_keep:
+            return [cid for cid, _ in scored]
+
+        scored.sort(key=lambda x: x[1])
+        return [cid for cid, _ in scored[:max_keep]]
+
     @property
     def count(self) -> int:
         cursor = self.conn.execute('SELECT COUNT(*) FROM templates')
