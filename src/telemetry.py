@@ -206,8 +206,16 @@ def generate_telemetry_segment(
     physics: Optional[Dict[str, float]] = None,
     channel_name: str = 'ch0',
     seed: Optional[int] = None,
+    model_mismatch: float = 0.0,
 ) -> TelemetrySample:
     """生成一条完整的遥测片段（信号 + 物理元数据）.
+
+    Args:
+        model_mismatch: 模型失配强度 [0, 1].
+            0 = 完美模型 (模板和查询同分布)
+            0.1 = 轻微失配 (传感器漂移0.1°C, 额外噪声10%)
+            0.5 = 严重失配
+            KB模板用0, 查询用>0 模拟真实场景
 
     便捷函数，一步生成TelemetrySample。
     """
@@ -224,11 +232,31 @@ def generate_telemetry_segment(
     gen_func = generators.get(signal_type, generate_slow_varying)
     signal = gen_func(duration_sec=duration_sec, fs_hz=fs_hz, seed=seed)
 
+    # 模型失配: 模拟真实传感器的不完美
+    if model_mismatch > 0:
+        rng = np.random.RandomState(
+            seed + 99999 if seed is not None else None)
+        n = len(signal)
+        signal_std = np.std(signal)
+
+        # 传感器漂移 (缓慢偏移)
+        drift = model_mismatch * signal_std * np.sin(
+            2 * np.pi * 0.0003 * np.arange(n) / fs_hz
+            + rng.uniform(0, 2 * np.pi))
+
+        # 额外噪声
+        extra_noise = rng.normal(0, model_mismatch * signal_std * 0.1, n)
+
+        # 刻度误差 (校准偏差)
+        scale = 1.0 + model_mismatch * rng.uniform(-0.02, 0.02)
+
+        signal = signal * scale + drift + extra_noise
+
     import uuid
     sample_id = str(uuid.uuid4())[:8]
 
     return TelemetrySample(
-        signal=signal,
+        signal=signal.astype(np.float32),
         physics=physics,
         signal_type=signal_type,
         channel_name=channel_name,
