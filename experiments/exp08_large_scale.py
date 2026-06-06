@@ -81,6 +81,9 @@ def run_experiment(library_sizes=[500, 1000, 2000, 5000, 10000],
         cand_n = []; cand_w = []; cand_a = []
         mse_n = []; mse_w = []; mse_a = []; mse_s = []
 
+        # coarse_k: 至少200，最多取全部模板（不设上限，测窗口本身极限）
+        coarse_k = max(200, n_templates)
+
         for _ in tqdm(range(n_queries), desc=f"  n={n_templates}"):
             physics = generate_physical_metadata(snr_db=snr_db)
             sample = generate_telemetry_segment(
@@ -105,7 +108,7 @@ def run_experiment(library_sizes=[500, 1000, 2000, 5000, 10000],
 
             # Narrow window
             hier_n = HierarchicalRetriever(
-                kb, coarse_k=500, fine_k=3, normalize=False,
+                kb, coarse_k=coarse_k, fine_k=3, normalize=False,
                 distance_window=0.5, angle_window=15.0,
             )
             rr_n = hier_n.retrieve(y_received, distance_au=qd, sun_angle=qa)
@@ -117,7 +120,7 @@ def run_experiment(library_sizes=[500, 1000, 2000, 5000, 10000],
 
             # Wide window
             hier_w = HierarchicalRetriever(
-                kb, coarse_k=500, fine_k=3, normalize=False,
+                kb, coarse_k=coarse_k, fine_k=3, normalize=False,
                 distance_window=1.5, angle_window=45.0,
             )
             rr_w = hier_w.retrieve(y_received, distance_au=qd, sun_angle=qa)
@@ -131,7 +134,7 @@ def run_experiment(library_sizes=[500, 1000, 2000, 5000, 10000],
             dw = adaptive_window_v2(qa, snr_db)
             da = min(90, dw * 30)
             hier_a = HierarchicalRetriever(
-                kb, coarse_k=500, fine_k=3, normalize=False,
+                kb, coarse_k=coarse_k, fine_k=3, normalize=False,
                 distance_window=dw, angle_window=da,
             )
             rr_a = hier_a.retrieve(y_received, distance_au=qd, sun_angle=qa)
