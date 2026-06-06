@@ -98,7 +98,9 @@ def run_stratified_experiment(n_templates=5000, n_per_condition=150, seed=42):
     for label, snr_db, sun_angle in conditions:
         rec_w = []; cand_w = []
         rec_a = []; cand_a = []
-        rec_as = []; cand_as = []  # Adaptive + Stats (双粗筛)
+        rec_as = []; cand_as = []  # Adaptive + Stats
+        rec_so = []; cand_so = []  # Stats-Only (no physics filter)
+        rec_ws = []; cand_ws = []  # Wide(2.0) + Stats
         dw_a_vals = []
 
         for _ in range(n_per_condition):
@@ -132,7 +134,7 @@ def run_stratified_experiment(n_templates=5000, n_per_condition=150, seed=42):
             cand_a.append(h_a.last_coarse_count)
             dw_a_vals.append(dw)
 
-            # Adaptive + Stats (双粗筛: 物理窗口 → 统计过滤 → 精排)
+            # Adaptive + Stats (双粗筛: 物理 → 统计 → 精排)
             h_as = HierarchicalRetriever(kb, coarse_k=coarse_k, fine_k=3, normalize=False,
                                          distance_window=dw, angle_window=da,
                                          stat_filter=True, stat_max_keep=200)
@@ -140,14 +142,34 @@ def run_stratified_experiment(n_templates=5000, n_per_condition=150, seed=42):
             rec_as.append(1.0 if rr_as and rr_as[0][0] == oracle_id else 0.0)
             cand_as.append(getattr(h_as, 'last_stat_filtered_count', h_as.last_coarse_count))
 
+            # Stats-Only: 跳过物理粗筛，全库→统计过滤→精排
+            h_so = HierarchicalRetriever(kb, coarse_k=coarse_k, fine_k=3, normalize=False,
+                                         distance_window=3.0, angle_window=90.0,
+                                         stat_filter=True, stat_max_keep=200)
+            rr_so = h_so.retrieve(y_received, distance_au=qd, sun_angle=qa)
+            rec_so.append(1.0 if rr_so and rr_so[0][0] == oracle_id else 0.0)
+            cand_so.append(getattr(h_so, 'last_stat_filtered_count', h_so.last_coarse_count))
+
+            # Wide(2.0)+Stats: 最大物理窗口 + 统计过滤
+            h_ws = HierarchicalRetriever(kb, coarse_k=coarse_k, fine_k=3, normalize=False,
+                                         distance_window=2.0, angle_window=60.0,
+                                         stat_filter=True, stat_max_keep=200)
+            rr_ws = h_ws.retrieve(y_received, distance_au=qd, sun_angle=qa)
+            rec_ws.append(1.0 if rr_ws and rr_ws[0][0] == oracle_id else 0.0)
+            cand_ws.append(getattr(h_ws, 'last_stat_filtered_count', h_ws.last_coarse_count))
+
         results[label] = {
             'dw_adaptive': np.mean(dw_a_vals),
             'recall_wide': np.mean(rec_w),
             'recall_adaptive': np.mean(rec_a),
             'recall_adaptive_stats': np.mean(rec_as),
+            'recall_stats_only': np.mean(rec_so),
+            'recall_wide_stats': np.mean(rec_ws),
             'cand_wide': np.mean(cand_w),
             'cand_adaptive': np.mean(cand_a),
             'cand_adaptive_stats': np.mean(cand_as),
+            'cand_stats_only': np.mean(cand_so),
+            'cand_wide_stats': np.mean(cand_ws),
         }
 
     return results
@@ -189,33 +211,32 @@ def plot_combined(scaling, stratified):
     x = np.arange(len(labels))
     width = 0.3
 
-    # Recall bars: 3 methods per condition
-    rec_wide = [stratified[l]['recall_wide'] for l in labels]
-    rec_adap = [stratified[l]['recall_adaptive'] for l in labels]
+    # Recall bars: 4 methods per condition
+    rec_wide  = [stratified[l]['recall_wide'] for l in labels]
+    rec_adap  = [stratified[l]['recall_adaptive'] for l in labels]
     rec_astats = [stratified[l]['recall_adaptive_stats'] for l in labels]
+    rec_stats = [stratified[l]['recall_stats_only'] for l in labels]
 
-    width = 0.22
-    bars1 = ax2.bar(x - width, rec_wide, width, color='#00838f', edgecolor='white',
-                    label='dw=1.5 (fixed wide)')
-    bars2 = ax2.bar(x, rec_adap, width, color='#7b1fa2', edgecolor='white',
-                    label='Adaptive v2')
-    bars3 = ax2.bar(x + width, rec_astats, width, color='#e65100', edgecolor='white',
-                    label='Adaptive + Stats (Ours)')
+    width = 0.18
+    offsets = [-1.5*width, -0.5*width, 0.5*width, 1.5*width]
+    data_list = [
+        (rec_wide,  offsets[0], '#00838f', 'dw=1.5'),
+        (rec_adap,  offsets[1], '#7b1fa2', 'Adaptive'),
+        (rec_astats,offsets[2], '#e65100', 'Adapt+Stats'),
+        (rec_stats, offsets[3], '#2e7d32', 'Stats-Only (Ours)'),
+    ]
 
-    for bars, color in [(bars1, '#00838f'), (bars2, '#7b1fa2'), (bars3, '#e65100')]:
-        for bar in bars:
-            h = bar.get_height()
-            ax2.text(bar.get_x() + bar.get_width()/2, h + 0.02,
-                    f'{h:.0%}', ha='center', fontsize=9, fontweight='bold', color=color)
+    for rec, off, color, name in data_list:
+        bars = ax2.bar(x + off, rec, width, color=color, edgecolor='white', label=name)
+        for bar, val in zip(bars, rec):
+            ax2.text(bar.get_x() + bar.get_width()/2, val + 0.02,
+                    f'{val:.0%}', ha='center', fontsize=8, fontweight='bold', color=color)
 
-    # Candidate count as text
+    # Stats-Only candidate count
     for i, label in enumerate(labels):
         s = stratified[label]
-        ax2.text(i, max(rec_wide[i], rec_adap[i], rec_astats[i]) + 0.18,
-                f'{s["cand_adaptive_stats"]:.0f} cand\n'
-                f'(vs {s["cand_adaptive"]:.0f} w/o stats)',
-                ha='center', fontsize=8, color='#e65100',
-                bbox=dict(boxstyle='round,pad=0.3', facecolor='#fff3e0', alpha=0.8))
+        ax2.text(i, 0.02, f'cand: {s["cand_stats_only"]:.0f}',
+                ha='center', fontsize=8, color='#2e7d32', fontweight='bold')
 
     ax2.set_xticks(x)
     ax2.set_xticklabels(labels, fontsize=10)
@@ -253,9 +274,12 @@ if __name__ == '__main__':
 
     for label, s in stratified.items():
         dw = s['dw_adaptive']
-        print(f"  {label.replace(chr(10),' ')}: dw={dw:.2f}AU, "
-              f"wide={s['recall_wide']:.0%} adapt={s['recall_adaptive']:.0%} "
-              f"adapt+stats={s['recall_adaptive_stats']:.0%}, "
-              f"cand: {s['cand_adaptive']:.0f}->{s['cand_adaptive_stats']:.0f} (w/ stats)")
+        print(f"  {label.replace(chr(10),' ')}: dw={dw:.2f}AU")
+        print(f"    wide={s['recall_wide']:.0%} adapt={s['recall_adaptive']:.0%} "
+              f"adapt+stats={s['recall_adaptive_stats']:.0%} "
+              f"stats-only={s['recall_stats_only']:.0%}")
+        print(f"    cand: adapt={s['cand_adaptive']:.0f} "
+              f"adapt+stats={s['cand_adaptive_stats']:.0f} "
+              f"stats-only={s['cand_stats_only']:.0f}")
 
     plot_combined(scaling, stratified)
