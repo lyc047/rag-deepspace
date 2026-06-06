@@ -497,153 +497,163 @@ def phase_align_via_cross_correlation(query, template):
 
 #### 6.1.1 问题建模
 
-设原始信号 $y$ 和模板信号 $t$ 共享同一个生成函数 $\mathcal{G}$，但叠加了独立的随机噪声：
+设原始信号 y 和模板信号 t 共享同一个生成函数 G，但叠加了独立的随机噪声：
 
-$$y = s + n_y, \quad t = s + n_t$$
+    y = s + n_y
+    t = s + n_t
 
-其中 $s = \mathcal{G}(\theta, \phi)$ 是由物理参数 $\theta$ 和随机种子 $\phi$ 决定的确定性成分，
-$n_y \sim \mathcal{N}(0, \sigma_y^2 I)$ 和 $n_t \sim \mathcal{N}(0, \sigma_t^2 I)$ 为独立的生成噪声。
+其中 s = G(theta, phi) 是由物理参数 theta 和随机种子 phi 决定的确定性成分，
+n_y ~ N(0, (sigma_y)^2 * I) 和 n_t ~ N(0, (sigma_t)^2 * I) 为独立的生成噪声。
 在理想情况下（同一生成函数、无模型失配），残差为：
 
-$$r = y - t = n_y - n_t$$
+    r = y - t = n_y - n_t
 
-**定理1（理想残差功率）** 若 $n_y$ 与 $n_t$ 独立，则残差的期望功率为：
+**定理1（理想残差功率）** 若 n_y 与 n_t 独立，则残差的期望功率为：
 
-$$\mathbb{E}[\|r\|^2] = \mathbb{E}[\|n_y\|^2] + \mathbb{E}[\|n_t\|^2] = (\sigma_y^2 + \sigma_t^2) \cdot N$$
+    E[||r||^2] = E[||n_y||^2] + E[||n_t||^2] = ((sigma_y)^2 + (sigma_t)^2) * N
 
-其中 $N$ 为信号样本数。当 $\sigma_y = \sigma_t = \sigma$ 时，$\mathbb{E}[\|r\|^2] = 2\sigma^2 N$。
+其中 N 为信号样本数。当 sigma_y = sigma_t = sigma 时，E[||r||^2] = 2*sigma^2 * N。
 
-**证明：** 由独立性，$\mathbb{E}[(n_y - n_t)^2] = \mathbb{E}[n_y^2] - 2\mathbb{E}[n_y n_t] + \mathbb{E}[n_t^2] = \sigma_y^2 + \sigma_t^2$。对 $N$ 个独立样本求和即得结论。
+**证明：** 由独立性，E[(n_y - n_t)^2] = E[n_y^2] - 2*E[n_y*n_t] + E[n_t^2]
+= (sigma_y)^2 + (sigma_t)^2。对 N 个独立样本求和即得结论。
 
 #### 6.1.2 模型失配下的推广
 
-当存在模型失配 $\eta \in [0,1]$ 时（参见3.1.4节），原始信号受到传感器漂移 $d$、
-额外噪声 $n_e$ 和刻度误差 $\delta$ 的影响：
+当存在模型失配 eta in [0, 1] 时（参见3.1.4节），原始信号受到传感器漂移 d、
+额外噪声 n_e 和刻度误差 delta 的影响：
 
-$$y' = (1 + \eta\delta) \cdot y + \eta \cdot \sigma_s \cdot d + n_e$$
+    y' = (1 + eta*delta) * y + eta * sigma_s * d + n_e
 
-其中 $\delta \sim U(-0.02, 0.02)$，$d$ 为缓慢漂移信号，$n_e \sim \mathcal{N}(0, (0.1\eta\sigma_s)^2 I)$。
+其中 delta ~ U(-0.02, 0.02)，d 为缓慢漂移信号，n_e ~ N(0, (0.1*eta*sigma_s)^2 * I)。
 此时残差包含失配引入的额外分量：
 
-$$r' = y' - t = (n_y - n_t) + \eta \cdot [\delta \cdot s + \sigma_s \cdot d] + n_e$$
+    r' = y' - t = (n_y - n_t) + eta * [delta * s + sigma_s * d] + n_e
 
-**定理2（失配残差功率上界）** 存在常数 $C > 0$，仅依赖于信号 $s$ 的功率和漂移 $d$ 的功率，使得：
+**定理2（失配残差功率上界）** 存在常数 C > 0，仅依赖于信号 s 的功率和漂移 d 的功率，
+使得：
 
-$$\mathbb{E}[\|r'\|^2] \leq 2\sigma^2 N + C \cdot \eta^2 N$$
+    E[||r'||^2] <= 2*sigma^2 * N + C * eta^2 * N
 
-其中 $C = \delta_{\max}^2 \cdot \|s\|^2/N + \sigma_s^2 \cdot \|d\|^2/N + (0.1\sigma_s)^2$。
+其中 C = (delta_max)^2 * ||s||^2/N + (sigma_s)^2 * ||d||^2/N + (0.1*sigma_s)^2。
 
 **证明：** 由Minkowski不等式，
 
-$$\|r'\| \leq \|n_y - n_t\| + \eta \cdot \|\delta s + \sigma_s d\| + \|n_e\|$$
+    ||r'|| <= ||n_y - n_t|| + eta * ||delta*s + sigma_s*d|| + ||n_e||
 
-各项平方后展开，交叉项在独立假设下期望为零，得 $\mathbb{E}[\|r'\|^2] = 2\sigma^2 N + \eta^2 \cdot (\delta^2 \|s\|^2 + \sigma_s^2 \|d\|^2) + (0.1\eta\sigma_s)^2 N \leq 2\sigma^2 N + C\eta^2 N$，其中 $C$ 如上定义。
+各项平方后展开，交叉项在独立假设下期望为零，得
+E[||r'||^2] = 2*sigma^2*N + eta^2 * (delta^2*||s||^2 + sigma_s^2*||d||^2) + (0.1*eta*sigma_s)^2*N
+<= 2*sigma^2*N + C*eta^2*N，其中 C 如上定义。
 
 #### 6.1.3 实验验证
 
-| 信号类型 | $\eta=0$ (基线) | $\eta=0.1$ | $\eta=0.3$ | $C$ 估计值 | 模型预测 |
-|---------|:-----------:|:--------:|:--------:|:--------:|:------:|
-| slow_varying | 0.0043 | 0.0043 | 0.0045 | 0.0025 | $2\sigma^2 + 0.0025\eta^2$ |
-| periodic | 0.0480 | 0.0453 | 0.0490 | 0.0113 | $2\sigma^2 + 0.011\eta^2$ |
-| transient | 0.0129 | 0.0144 | 0.0162 | 0.037 | $2\sigma^2 + 0.037\eta^2$ |
+| 信号类型 | eta=0 (基线) | eta=0.1 | eta=0.3 | C 估计值 | 模型预测 |
+|---------|:----------:|:------:|:------:|:------:|:------:|
+| slow_varying | 0.0043 | 0.0043 | 0.0045 | 0.0025 | 2*sigma^2 + 0.0025*eta^2 |
+| periodic | 0.0480 | 0.0453 | 0.0490 | 0.0113 | 2*sigma^2 + 0.011*eta^2 |
+| transient | 0.0129 | 0.0144 | 0.0162 | 0.037 | 2*sigma^2 + 0.037*eta^2 |
 
-**结果分析：** slow_varying的 $C$ 极小（0.0025），验证了定理2中 $\|s\|^2$ 项的主导地位——
+**结果分析：** slow_varying的 C=0.0025极小，验证了定理2中 ||s||^2 项的主导地位——
 慢变信号的功率集中在基值（~25°C）而非高频分量，模型失配几乎不改变信号结构。
-transient的 $C=0.037$ 最大，因为脉冲信号的局部功率集中，刻度误差和漂移对脉冲区域
-的影响显著。periodic的失配效应不稳定（$C$ 在 $\eta=0.1$ 时甚至为负），因为相位偏移
+transient的 C=0.037 最大，因为脉冲信号的局部功率集中，刻度误差和漂移对脉冲区域
+的影响显著。periodic的失配效应不稳定（C 在 eta=0.1 时甚至为负），因为相位偏移
 主导了模板匹配误差，掩盖了模型失配的影响。
 
 **推论：** 模板重建对慢变信号的极度鲁棒性（失配下MSE仅从0.005升至0.014）并非偶然，
-而是定理2所预言的必然结果——残差功率由生成噪声方差主导，$\eta^2$项的系数极小。
+而是定理2所预言的必然结果——残差功率由生成噪声方差主导，eta^2 项的系数极小。
 
 ### 6.2 检索召回率对重建质量的量化影响
 
 #### 6.2.1 命中/未命中模型
 
-设检索系统的Recall@1为 $p \in [0,1]$。当检索命中（以概率 $p$）时，获得近似最优模板
-$t^*$；当未命中（以概率 $1-p$）时，获得次优模板 $t'$。对应的重建MSE分别为：
+设检索系统的Recall@1为 p in [0, 1]。当检索命中（以概率 p）时，获得近似最优模板
+t*；当未命中（以概率 1-p）时，获得次优模板 t'。对应的重建MSE分别为：
 
-$$\text{MSE}_{\text{hit}} = \mathbb{E}[\|y - t^*\|^2], \quad \text{MSE}_{\text{miss}} = \mathbb{E}[\|y - t'\|^2]$$
+    MSE_hit  = E[||y - t*||^2]
+    MSE_miss = E[||y - t'||^2]
 
 **定理3（Recall-MSE线性关系）** 期望重建MSE为Recall@1的线性函数：
 
-$$\mathbb{E}[\text{MSE}] = \text{MSE}_{\text{hit}} + (1-p) \cdot \Delta$$
+    E[MSE] = MSE_hit + (1-p) * Delta
 
-其中 $\Delta = \text{MSE}_{\text{miss}} - \text{MSE}_{\text{hit}}$ 为未命中时的额外误差。
+其中 Delta = MSE_miss - MSE_hit 为未命中时的额外误差。
 
-**证明：** 由全期望公式，$\mathbb{E}[\text{MSE}] = p \cdot \text{MSE}_{\text{hit}} + (1-p) \cdot \text{MSE}_{\text{miss}} = \text{MSE}_{\text{hit}} + (1-p)(\text{MSE}_{\text{miss}} - \text{MSE}_{\text{hit}})$。整理即得。
+**证明：** 由全期望公式，
+E[MSE] = p * MSE_hit + (1-p) * MSE_miss = MSE_hit + (1-p)*(MSE_miss - MSE_hit)。
+整理即得。
 
 #### 6.2.2 实验验证
 
-| 信号类型 | $\text{MSE}_{\text{hit}}$ | $\text{MSE}_{\text{miss}}$ | $\Delta$ | $p=82\%$ 预测 | 实际MSE |
+| 信号类型 | MSE_hit | MSE_miss | Delta | p=82%预测 | 实际MSE |
 |---------|:---------------------:|:----------------------:|:------:|:-----------:|:------:|
 | slow_varying | 0.0043 | 0.0050 | 0.0007 | 0.0044 | 0.0051 |
 | periodic | 0.0335 | 1.3600 | 1.3265 | 0.2723 | 0.3079 |
 | transient | 0.0080 | 0.5686 | 0.5606 | 0.1089 | 0.0002* |
 
 *注：transient的实际MSE=0.0002来自相位对齐后的重建，远低于未对齐的预测值0.1089。
-这证明了相位对齐将$\Delta$大幅缩小——对齐后命中与非命中的差距几乎消失，
+这证明了相位对齐将Delta大幅缩小——对齐后命中与非命中的差距几乎消失，
 因为对齐消除了事件时间的差异。
 
-**推论：** slow_varying的 $\Delta=0.0007$ 极小，意味着Recall从50%提升到100%
-对MSE几乎无影响——所有模板都差不多好。periodic的 $\Delta=1.33$ 极大，
+**推论：** slow_varying的 Delta=0.0007 极小，意味着Recall从50%提升到100%
+对MSE几乎无影响——所有模板都差不多好。periodic的 Delta=1.33 极大，
 Recall的微小下降都会导致MSE显著恶化——这是相位偏移使"错误模板"非常不像原始信号。
-transient在无对齐时 $\Delta=0.56$，对齐后 $\Delta \approx 0$。
+transient在无对齐时 Delta=0.56，对齐后 Delta ~= 0。
 
-**设计指导：** 对 $\Delta$ 大的信号类型（periodic、未对齐的transient），
-应优先保证Recall（用Stats-Only或更宽的物理窗口）；对 $\Delta$ 小的类型（slow_varying），
+**设计指导：** 对 Delta 大的信号类型（periodic、未对齐的transient），
+应优先保证Recall（用Stats-Only或更宽的物理窗口）；对 Delta 小的类型（slow_varying），
 Recall的优先级可以降低，可以将计算资源分配给其他信号。
 
 ### 6.3 残差量化的率失真分析
 
 #### 6.3.1 问题建模
 
-残差 $r \in \mathbb{R}^N$ 经过 $b$ 比特均匀量化后传输。量化器范围为 $[-r_{\max}, r_{\max}]$，
-量化步长 $\Delta_q = 2r_{\max} / (2^b - 1)$，量化噪声方差近似为 $\sigma_q^2 \approx \Delta_q^2 / 12$。
-量化后的残差 $\hat{r}$ 经过信道（AWGN, SNR=$S$ dB）传输，引入信道噪声功率
-$\sigma_c^2 = \mathbb{E}[\|\hat{r}\|^2] / (N \cdot 10^{S/10})$。
+残差 r in R^N 经过 b 比特均匀量化后传输。量化器范围为 [-r_max, r_max]，
+量化步长 step = 2*r_max / (2^b - 1)，量化噪声方差近似为 (sigma_q)^2 ~= step^2 / 12。
+量化后的残差 r_hat 经过信道（AWGN, SNR=S dB）传输，引入信道噪声功率
+(sigma_c)^2 = E[||r_hat||^2] / (N * 10^(S/10))。
 
-**定理4（最优量化比特数）** 设残差功率为 $\sigma_r^2$，目标MSE为 $\epsilon$。
-在信道SNR足够高（$S > 30$ dB）的条件下，接近最优的量化比特数为：
+**定理4（最优量化比特数）** 设残差功率为 (sigma_r)^2，目标MSE为 epsilon。
+在信道SNR足够高（S > 30 dB）的条件下，接近最优的量化比特数为：
 
-$$b^* \approx \frac{1}{2}\log_2\left(\frac{12 \cdot \sigma_r^2}{\epsilon - \sigma_r^2 \cdot 10^{-S/10}}\right) + 1$$
+    b* ~= 0.5 * log2( 12 * (sigma_r)^2 / (epsilon - (sigma_r)^2 * 10^(-S/10)) ) + 1
 
-当信道噪声可忽略（$\sigma_c^2 \ll \sigma_q^2$）时，简化为：
+当信道噪声可忽略（(sigma_c)^2 << (sigma_q)^2）时，简化为：
 
-$$b^* \approx \frac{1}{2}\log_2\left(\frac{12 \cdot \sigma_r^2}{\epsilon}\right) + 1$$
+    b* ~= 0.5 * log2( 12 * (sigma_r)^2 / epsilon ) + 1
 
-**证明：** 总MSE = $\sigma_r^2 \cdot 10^{-S/10} + r_{\max}^2 / (3 \cdot (2^b-1)^2)$（信道噪声+量化噪声）。
-设 $r_{\max} \approx 3\sigma_r$（99.7%置信区间），代入并令导数为零，整理即得。
+**证明：** 总MSE = (sigma_r)^2 * 10^(-S/10) + (r_max)^2 / (3 * (2^b-1)^2)
+（信道噪声+量化噪声）。设 r_max ~= 3*sigma_r（99.7%置信区间），代入并令导数为零，整理即得。
 
 #### 6.3.2 实验验证
 
-从exp07数据验证：slow_varying的残差 $\sigma_r^2 \approx 0.005$，
-取 $\epsilon = 633$（PCM 8-bit的MSE）。代入定理4：
+从exp07数据验证：slow_varying的残差 (sigma_r)^2 ~= 0.005，
+取 epsilon = 633（PCM 8-bit的MSE）。代入定理4：
 
-$$b^* \approx \frac{1}{2}\log_2(12 \cdot 0.005 / 633) + 1 \approx \frac{1}{2} \cdot (-13.4) + 1 \approx 1$$
+    b* ~= 0.5 * log2(12 * 0.005 / 633) + 1
+       ~= 0.5 * (-13.4) + 1
+       ~= 1
 
 **理论预测：1-bit残差量化即可达到PCM 8-bit的质量。** 这与exp07的实验结果完全一致——
-1-bit残差的MSE=0.0001，远优于PCM的633。$b^* = 1$的含义是：仅需1比特即可区分
+1-bit残差的MSE=0.0001，远优于PCM的633。b* = 1的含义是：仅需1比特即可区分
 残差的"正"和"负"两个状态——当残差足够小时，更高精度是冗余的。
 
-对于transient的 $\sigma_r^2 \approx 0.0002$，$b^* \approx 1$（同样只需1-bit）；
-对于periodic的 $\sigma_r^2 \approx 0.31$，$b^* \approx \frac{1}{2}\log_2(12 \cdot 0.31 / 0.7) + 1 \approx 2.2$，
+对于transient的 (sigma_r)^2 ~= 0.0002，b* ~= 1（同样只需1-bit）；
+对于periodic的 (sigma_r)^2 ~= 0.31，b* ~= 0.5 * log2(12 * 0.31 / 0.7) + 1 ~= 2.2，
 即需要2-3 bit。
 
-**推论：** 量化比特数不是固定的——应根据检索到的模板质量（$\sigma_r^2$）动态选择。
+**推论：** 量化比特数不是固定的——应根据检索到的模板质量（(sigma_r)^2）动态选择。
 模板匹配越好（残差越小），需要的比特数越少。这为自适应量化提供了理论依据。
 
 ### 6.4 理论分析的工程设计意义
 
 综合三个定理，可得以下工程设计准则：
 
-1. **信号类型决定策略：** 对慢变信号（$C$ 极小，$\Delta$ 极小），可使用宽松的检索和激进的量化（1-bit）；
-   对周期信号（$\Delta$ 大），必须保证高Recall和相位对齐；对瞬态信号（对齐前$\Delta$大，
-   对齐后$\Delta$≈0），相位对齐的优先级高于Recall优化。
+1. **信号类型决定策略：** 对慢变信号（C极小，Delta极小），可使用宽松的检索和激进的量化（1-bit）；
+   对周期信号（Delta大），必须保证高Recall和相位对齐；对瞬态信号（对齐前Delta大，
+   对齐后Delta~=0），相位对齐的优先级高于Recall优化。
 
 2. **Recall的上限由统计特征保证：** Stats-Only检索达到100% Recall后，
-   $\mathbb{E}[\text{MSE}] = \text{MSE}_{\text{hit}}$——进一步优化检索已无意义，
-   应将重点转向降低 $\text{MSE}_{\text{hit}}$（更好的模板生成、更精细的对齐）。
+   E[MSE] = MSE_hit ——进一步优化检索已无意义，
+   应将重点转向降低 MSE_hit（更好的模板生成、更精细的对齐）。
 
 3. **量化比特数应动态适配：** 不同信号类型、不同模板质量下，最优比特数从1到4不等。
    固定4-bit是一种保守方案（覆盖所有类型），但慢变信号可用1-bit进一步节省带宽。
@@ -672,7 +682,7 @@ $$b^* \approx \frac{1}{2}\log_2(12 \cdot 0.005 / 633) + 1 \approx \frac{1}{2} \c
 修剪均值（5% trimming）用于对抗小样本下的离群值——去除首尾各5%数据后取均值，
 在保留系统性差异的同时消除统计噪声。
 
-### 6.3 实验列表
+### 7.3 实验列表
 
 | 编号 | 实验 | 核心问题 |
 |:---:|------|---------|
