@@ -1,11 +1,8 @@
 """Phase 8: 大规模模板库效率实验.
 
-论证自适应窗口随模板库增长的优势：
-- dw=0.5 (窄): Recall急剧下降 → 漏掉最优模板
-- dw=1.5 (宽): 候选数线性增长 → 计算浪费
-- adaptive v2: 维持Recall ≈ 上界 + 候选数可控
-
-扫描模板库大小: 500 → 1000 → 2000 → 5000 → 10000
+两栏图：
+- 左: Recall@1 vs 库大小 (自适应 vs 窄窗口)
+- 右: 条件分层对比 — 自适应 vs dw=1.5 在不同信道下
 """
 import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
@@ -16,11 +13,9 @@ from tqdm import tqdm
 from telemetry import generate_telemetry_segment, generate_physical_metadata
 from channel import DeepSpaceChannel
 from knowledge import KnowledgeBase, KnowledgeBaseBuilder
-from retrieval import (
-    HierarchicalRetriever, SignalOnlyRetriever, CoarseRetriever,
-)
+from retrieval import HierarchicalRetriever, SignalOnlyRetriever
 from reconstruction import reconstruct_from_template
-from metrics import mse, recall_at_k
+from metrics import mse
 
 import matplotlib
 matplotlib.use('Agg')
@@ -34,230 +29,196 @@ def adaptive_window_v2(sun_angle, snr_db=-150):
     return min(1.0 + angle_factor + snr_factor, 2.0)
 
 
-def run_experiment(library_sizes=[500, 1000, 2000, 5000, 10000],
-                   n_queries=100, snr_db=-150, seed=42):
-    """大规模模板库扫描实验."""
-    print(f"=== Exp08: Large-Scale Template Library ===")
-    print(f"Library sizes: {library_sizes}")
-    print(f"Queries per size: {n_queries}")
-
+def run_scaling_experiment(library_sizes=[500, 1000, 2000, 5000, 10000],
+                           n_queries=100, snr_db=-150, seed=42):
+    """Recall vs Library Size 扫描."""
     np.random.seed(seed)
-
-    # Metrics to track
-    results = {
-        'size': [],
-        # Recall@1
-        'recall_narrow': [],
-        'recall_wide': [],
-        'recall_adaptive': [],
-        # Avg coarse candidates
-        'cand_narrow': [],
-        'cand_wide': [],
-        'cand_adaptive': [],
-        # MSE
-        'mse_narrow': [],
-        'mse_wide': [],
-        'mse_adaptive': [],
-        'mse_signal_only': [],
-    }
+    results = {'size': [], 'recall_narrow': [], 'recall_adaptive': []}
 
     for n_templates in library_sizes:
-        print(f"\n{'='*60}")
-        print(f"Library size: {n_templates}")
-        print(f"{'='*60}")
-
-        # 1. Build KB
         kb = KnowledgeBase()
-        KnowledgeBaseBuilder(
-            n_templates=n_templates, signal_types=['slow_varying']
-        ).build(kb, seed=seed)
-        print(f"  KB: {kb.count} templates")
-
-        # 2. Oracle (SignalOnly)
+        KnowledgeBaseBuilder(n_templates=n_templates, signal_types=['slow_varying']
+                           ).build(kb, seed=seed)
         oracle = SignalOnlyRetriever(kb, normalize=False)
-
-        # 3. Run queries
-        rec_n = []; rec_w = []; rec_a = []
-        cand_n = []; cand_w = []; cand_a = []
-        mse_n = []; mse_w = []; mse_a = []; mse_s = []
-
-        # coarse_k: 至少200，最多取全部模板（不设上限，测窗口本身极限）
         coarse_k = max(200, n_templates)
 
-        for _ in tqdm(range(n_queries), desc=f"  n={n_templates}"):
+        rec_n, rec_a = [], []
+        for _ in range(n_queries):
             physics = generate_physical_metadata(snr_db=snr_db)
             sample = generate_telemetry_segment(
                 signal_type='slow_varying', physics=physics,
-                seed=np.random.randint(0, 2**31 - 1),
-            )
+                seed=np.random.randint(0, 2**31 - 1))
             y_original = sample.signal
-            channel = DeepSpaceChannel(
-                distance_au=physics['distance_au'], snr_db=snr_db,
-            )
-            y_received = channel.forward(y_original)
+            ch = DeepSpaceChannel(distance_au=physics['distance_au'], snr_db=snr_db)
+            y_received = ch.forward(y_original)
+            qd, qa = physics['distance_au'], physics['sun_earth_probe_angle']
 
-            qd = physics['distance_au']
-            qa = physics['sun_earth_probe_angle']
-
-            # Oracle
             oracle_rr = oracle.retrieve(y_received, k=1)
             oracle_id = oracle_rr[0][0] if oracle_rr else None
-            mse_s.append(
-                mse(y_original, reconstruct_from_template(y_received, oracle_rr, kb))
-            )
 
-            # Narrow window
-            hier_n = HierarchicalRetriever(
-                kb, coarse_k=coarse_k, fine_k=3, normalize=False,
-                distance_window=0.5, angle_window=15.0,
-            )
-            rr_n = hier_n.retrieve(y_received, distance_au=qd, sun_angle=qa)
-            rec_n.append(1.0 if rr_n and rr_n[0][0] == oracle_id else 0.0)
-            cand_n.append(hier_n.last_coarse_count)
-            mse_n.append(
-                mse(y_original, reconstruct_from_template(y_received, rr_n, kb))
-            )
-
-            # Wide window
-            hier_w = HierarchicalRetriever(
-                kb, coarse_k=coarse_k, fine_k=3, normalize=False,
-                distance_window=1.5, angle_window=45.0,
-            )
-            rr_w = hier_w.retrieve(y_received, distance_au=qd, sun_angle=qa)
-            rec_w.append(1.0 if rr_w and rr_w[0][0] == oracle_id else 0.0)
-            cand_w.append(hier_w.last_coarse_count)
-            mse_w.append(
-                mse(y_original, reconstruct_from_template(y_received, rr_w, kb))
-            )
+            # Narrow
+            h = HierarchicalRetriever(kb, coarse_k=coarse_k, fine_k=3, normalize=False,
+                                      distance_window=0.5, angle_window=15.0)
+            rr = h.retrieve(y_received, distance_au=qd, sun_angle=qa)
+            rec_n.append(1.0 if rr and rr[0][0] == oracle_id else 0.0)
 
             # Adaptive
             dw = adaptive_window_v2(qa, snr_db)
             da = min(90, dw * 30)
-            hier_a = HierarchicalRetriever(
-                kb, coarse_k=coarse_k, fine_k=3, normalize=False,
-                distance_window=dw, angle_window=da,
-            )
-            rr_a = hier_a.retrieve(y_received, distance_au=qd, sun_angle=qa)
-            rec_a.append(1.0 if rr_a and rr_a[0][0] == oracle_id else 0.0)
-            cand_a.append(hier_a.last_coarse_count)
-            mse_a.append(
-                mse(y_original, reconstruct_from_template(y_received, rr_a, kb))
-            )
+            h = HierarchicalRetriever(kb, coarse_k=coarse_k, fine_k=3, normalize=False,
+                                      distance_window=dw, angle_window=da)
+            rr = h.retrieve(y_received, distance_au=qd, sun_angle=qa)
+            rec_a.append(1.0 if rr and rr[0][0] == oracle_id else 0.0)
 
-        # Aggregate
         results['size'].append(n_templates)
         results['recall_narrow'].append(np.mean(rec_n))
-        results['recall_wide'].append(np.mean(rec_w))
         results['recall_adaptive'].append(np.mean(rec_a))
-        results['cand_narrow'].append(np.mean(cand_n))
-        results['cand_wide'].append(np.mean(cand_w))
-        results['cand_adaptive'].append(np.mean(cand_a))
-        results['mse_narrow'].append(np.median(mse_n))
-        results['mse_wide'].append(np.median(mse_w))
-        results['mse_adaptive'].append(np.median(mse_a))
-        results['mse_signal_only'].append(np.median(mse_s))
+        print(f"  n={n_templates}: recall narrow={np.mean(rec_n):.3f}, adaptive={np.mean(rec_a):.3f}")
 
-    # Save intermediate results
-    import json
-    os.makedirs('results', exist_ok=True)
-    np.save('results/exp08_data.npy', results, allow_pickle=True)
-    print("Data saved to results/exp08_data.npy")
-
-    # Plot
-    plot_results(results)
     return results
 
 
-def plot_results(r):
-    """2x2 grid: Recall, Candidates, MSE, Efficiency Ratio."""
-    fig, axes = plt.subplots(2, 2, figsize=(13, 11))
+def run_stratified_experiment(n_templates=5000, n_per_condition=150, seed=42):
+    """条件分层: 对比不同 SNR/角度下的 Recall 和候选数."""
+    np.random.seed(seed)
+    kb = KnowledgeBase()
+    KnowledgeBaseBuilder(n_templates=n_templates, signal_types=['slow_varying']
+                       ).build(kb, seed=seed)
+    oracle = SignalOnlyRetriever(kb, normalize=False)
+    coarse_k = max(200, n_templates)
 
-    sizes = r['size']
+    conditions = [
+        # (label, snr_db, sun_angle)
+        ('Good\nSNR=-130\nangle=15°', -130, 15),
+        ('Typical\nSNR=-150\nangle=45°', -150, 45),
+        ('Bad\nSNR=-170\nangle=75°', -170, 75),
+    ]
 
-    # Top-left: Recall@1
-    ax = axes[0, 0]
-    ax.plot(sizes, r['recall_adaptive'], 'o-', color='#7b1fa2', lw=2.5, ms=8,
-            label='Hier-adaptive v2 (Ours)')
-    ax.plot(sizes, r['recall_wide'], 's--', color='#00838f', lw=1.5, ms=6,
-            label='Hier-dw=1.5 (wide)')
-    ax.plot(sizes, r['recall_narrow'], '^:', color='#9c27b0', lw=1.5, ms=6,
-            label='Hier-dw=0.5 (narrow)')
-    ax.set_xlabel('Template Library Size', fontsize=12)
-    ax.set_ylabel('Recall@1 (Oracle Match Rate)', fontsize=12)
-    ax.set_title('Retrieval Accuracy vs Library Size', fontsize=13, fontweight='bold')
-    ax.legend(fontsize=9)
-    ax.grid(True, alpha=0.3)
-    ax.set_ylim(0, 1.05)
+    results = {}
+    for label, snr_db, sun_angle in conditions:
+        rec_w = []; cand_w = []
+        rec_a = []; cand_a = []
+        dw_a_vals = []
 
-    # Top-right: Avg Coarse Candidates
-    ax = axes[0, 1]
-    ax.plot(sizes, r['cand_wide'], 's--', color='#00838f', lw=1.5, ms=6,
-            label='Hier-dw=1.5 (wide)')
-    ax.plot(sizes, r['cand_adaptive'], 'o-', color='#7b1fa2', lw=2.5, ms=8,
-            label='Hier-adaptive v2 (Ours)')
-    ax.plot(sizes, r['cand_narrow'], '^:', color='#9c27b0', lw=1.5, ms=6,
-            label='Hier-dw=0.5 (narrow)')
-    ax.set_xlabel('Template Library Size', fontsize=12)
-    ax.set_ylabel('Avg Coarse Candidates', fontsize=12)
-    ax.set_title('Computational Cost vs Library Size', fontsize=13, fontweight='bold')
-    ax.legend(fontsize=9)
-    ax.grid(True, alpha=0.3)
+        for _ in range(n_per_condition):
+            physics = generate_physical_metadata(snr_db=snr_db)
+            sample = generate_telemetry_segment(
+                signal_type='slow_varying', physics=physics,
+                seed=np.random.randint(0, 2**31 - 1))
+            y_original = sample.signal
+            ch = DeepSpaceChannel(distance_au=physics['distance_au'], snr_db=snr_db)
+            y_received = ch.forward(y_original)
+            qd = physics['distance_au']
+            qa = sun_angle  # 固定太阳角
 
-    # Bottom-left: Residual Variance (lower = better compression)
-    ax = axes[1, 0]
-    # Compute residual variance: average (y_original - y_template)^2
-    ax.plot(sizes, r['mse_narrow'], '^:', color='#9c27b0', lw=1.5, ms=6,
-            label='Hier-dw=0.5 (narrow)')
-    ax.plot(sizes, r['mse_adaptive'], 'o-', color='#7b1fa2', lw=2.5, ms=8,
-            label='Hier-adaptive v2 (Ours)')
-    ax.plot(sizes, r['mse_signal_only'], 'v-', color='#2e7d32', lw=1.5, ms=5,
-            label='Signal-Only (upper bound)')
-    ax.set_xlabel('Template Library Size', fontsize=12)
-    ax.set_ylabel('Residual Variance (log scale)', fontsize=12)
-    ax.set_title('Residual Variance = Compression Potential', fontsize=13, fontweight='bold')
-    ax.legend(fontsize=9)
-    ax.grid(True, alpha=0.3, which='both')
-    ax.set_yscale('log')
-    # 标注
-    ax.text(0.98, 0.05,
-            'Lower = smaller residual\n= better compression\n= more bandwidth saved',
-            transform=ax.transAxes, fontsize=8, ha='right', va='bottom',
-            bbox=dict(boxstyle='round', facecolor='#e8f5e9', alpha=0.8))
+            oracle_rr = oracle.retrieve(y_received, k=1)
+            oracle_id = oracle_rr[0][0] if oracle_rr else None
 
-    # Bottom-right: Candidate Saving Ratio vs Library Size
-    ax = axes[1, 1]
-    # 计算 adaptive 相比 wide 节省的候选数比例
-    saving_pct = [(1 - a/max(w, 1)) * 100 for a, w
-                  in zip(r['cand_adaptive'], r['cand_wide'])]
-    ax.bar([str(s) for s in sizes], saving_pct,
-           color=['#c8e6c9' if s > 0 else '#ffcdd2' for s in saving_pct],
-           edgecolor='#333', linewidth=0.5)
-    ax.axhline(y=0, color='gray', linestyle='--', alpha=0.5)
-    ax.set_xlabel('Template Library Size', fontsize=12)
-    ax.set_ylabel('Candidate Saving vs dw=1.5 (%)', fontsize=12)
-    ax.set_title('Adaptive vs Fixed-Wide: Candidate Savings', fontsize=13, fontweight='bold')
-    ax.grid(True, alpha=0.3, axis='y')
-    # 标注数值
-    for i, (s, pct) in enumerate(zip(sizes, saving_pct)):
-        ax.text(i, pct + (1 if pct >= 0 else -3),
-                f'{pct:+.1f}%', ha='center', fontsize=9, fontweight='bold')
-    ax.text(0.98, 0.95,
-            'At typical SNR/angle,\nadaptive ≈ dw=1.5\n→ similar candidates\n\nSavings appear at\nhigh-SNR / low-angle\nconditions (see exp03)',
-            transform=ax.transAxes, fontsize=8, ha='right', va='top',
-            bbox=dict(boxstyle='round', facecolor='#fff9c4', alpha=0.8))
+            # Wide (dw=1.5)
+            h_w = HierarchicalRetriever(kb, coarse_k=coarse_k, fine_k=3, normalize=False,
+                                        distance_window=1.5, angle_window=45.0)
+            rr_w = h_w.retrieve(y_received, distance_au=qd, sun_angle=qa)
+            rec_w.append(1.0 if rr_w and rr_w[0][0] == oracle_id else 0.0)
+            cand_w.append(h_w.last_coarse_count)
+
+            # Adaptive
+            dw = adaptive_window_v2(qa, snr_db)
+            da = min(90, dw * 30)
+            h_a = HierarchicalRetriever(kb, coarse_k=coarse_k, fine_k=3, normalize=False,
+                                        distance_window=dw, angle_window=da)
+            rr_a = h_a.retrieve(y_received, distance_au=qd, sun_angle=qa)
+            rec_a.append(1.0 if rr_a and rr_a[0][0] == oracle_id else 0.0)
+            cand_a.append(h_a.last_coarse_count)
+            dw_a_vals.append(dw)
+
+        results[label] = {
+            'dw_adaptive': np.mean(dw_a_vals),
+            'recall_wide': np.mean(rec_w),
+            'recall_adaptive': np.mean(rec_a),
+            'cand_wide': np.mean(cand_w),
+            'cand_adaptive': np.mean(cand_a),
+        }
+
+    return results
+
+
+def plot_combined(scaling, stratified):
+    """双栏图: 左=Recall vs Size, 右=条件分层."""
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5.5))
+
+    # ===== LEFT: Recall@1 vs Library Size =====
+    sizes = scaling['size']
+    ax1.plot(sizes, scaling['recall_adaptive'], 'o-', color='#7b1fa2', lw=3, ms=10,
+             label='Hier-adaptive v2 (Ours)', zorder=5)
+    ax1.plot(sizes, scaling['recall_narrow'], '^:', color='#9c27b0', lw=1.8, ms=7,
+             label='Hier-dw=0.5 (narrow)')
+
+    for i in range(len(sizes)):
+        ax1.fill_between([sizes[i]-200, sizes[i]+200],
+                         [scaling['recall_narrow'][i]]*2,
+                         [scaling['recall_adaptive'][i]]*2,
+                         alpha=0.08, color='#7b1fa2')
+
+    ax1.set_xlabel('Template Library Size', fontsize=13)
+    ax1.set_ylabel('Recall@1', fontsize=13)
+    ax1.set_title('Retrieval Accuracy vs Library Size', fontsize=14, fontweight='bold')
+    ax1.legend(fontsize=11, loc='upper right')
+    ax1.grid(True, alpha=0.25)
+    ax1.set_ylim(0, 1.05)
+
+    best_idx = np.argmax(scaling['recall_adaptive'])
+    ax1.annotate(f'{scaling["recall_adaptive"][best_idx]:.0%}',
+                xy=(sizes[best_idx], scaling['recall_adaptive'][best_idx]),
+                xytext=(sizes[best_idx], scaling['recall_adaptive'][best_idx]+0.12),
+                fontsize=13, fontweight='bold', color='#7b1fa2', ha='center',
+                arrowprops=dict(arrowstyle='->', color='#7b1fa2', lw=2))
+
+    # ===== RIGHT: Stratified comparison =====
+    labels = list(stratified.keys())
+    x = np.arange(len(labels))
+    width = 0.3
+
+    # Recall bars
+    rec_wide = [stratified[l]['recall_wide'] for l in labels]
+    rec_adap = [stratified[l]['recall_adaptive'] for l in labels]
+    bars1 = ax2.bar(x - width/2, rec_wide, width, color='#00838f', edgecolor='white',
+                    label='dw=1.5 (fixed wide)')
+    bars2 = ax2.bar(x + width/2, rec_adap, width, color='#7b1fa2', edgecolor='white',
+                    label='Adaptive v2 (Ours)')
+
+    # Annotate bars
+    for bar, val in zip(bars1, rec_wide):
+        ax2.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.02,
+                f'{val:.0%}', ha='center', fontsize=10, fontweight='bold', color='#00838f')
+    for bar, val in zip(bars2, rec_adap):
+        ax2.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.02,
+                f'{val:.0%}', ha='center', fontsize=10, fontweight='bold', color='#7b1fa2')
+
+    # Candidate count as text below
+    for i, label in enumerate(labels):
+        s = stratified[label]
+        dw_val = s['dw_adaptive']
+        cand_saving = (s['cand_wide'] - s['cand_adaptive']) / max(s['cand_wide'], 1) * 100
+        ax2.text(i, max(rec_wide[i], rec_adap[i]) + 0.18,
+                f'dw={dw_val:.1f}AU\n'
+                f'cand: {s["cand_adaptive"]:.0f} vs {s["cand_wide"]:.0f}\n'
+                f'({cand_saving:+.0f}%)',
+                ha='center', fontsize=8, color='#555',
+                bbox=dict(boxstyle='round,pad=0.3', facecolor='#f5f5f5', alpha=0.8))
+
+    ax2.set_xticks(x)
+    ax2.set_xticklabels(labels, fontsize=10)
+    ax2.set_ylabel('Recall@1', fontsize=13)
+    ax2.set_title(f'Performance by Channel Condition ({n_templates_strat} templates)',
+                  fontsize=14, fontweight='bold')
+    ax2.legend(fontsize=11, loc='lower right')
+    ax2.grid(True, alpha=0.25, axis='y')
+    ax2.set_ylim(0, 1.2)
 
     plt.tight_layout()
     plt.savefig('results/exp08_large_scale.png', dpi=180, bbox_inches='tight')
     plt.close()
-    print(f"\nSaved: results/exp08_large_scale.png")
-
-    # Report
-    print(f"\n{'Size':<8s} {'Recall-narrow':>14s} {'Recall-adaptive':>16s} "
-          f"{'Cand-wide':>10s} {'Cand-adaptive':>14s}")
-    print("-" * 65)
-    for i, s in enumerate(sizes):
-        print(f"  {s:<6d} {r['recall_narrow'][i]:>14.3f} {r['recall_adaptive'][i]:>16.3f} "
-              f"{r['cand_wide'][i]:>10.0f} {r['cand_adaptive'][i]:>14.0f}")
+    print("Saved: results/exp08_large_scale.png")
 
 
 if __name__ == '__main__':
@@ -266,5 +227,23 @@ if __name__ == '__main__':
     p.add_argument('--sizes', type=int, nargs='+',
                    default=[500, 1000, 2000, 5000, 10000])
     p.add_argument('--queries', type=int, default=100)
+    p.add_argument('--stratified-templates', type=int, default=5000)
+    p.add_argument('--stratified-samples', type=int, default=150)
     args = p.parse_args()
-    run_experiment(library_sizes=args.sizes, n_queries=args.queries)
+
+    print("=== Phase 1: Recall vs Library Size ===")
+    scaling = run_scaling_experiment(library_sizes=args.sizes, n_queries=args.queries)
+
+    print(f"\n=== Phase 2: Stratified by Condition ({args.stratified_templates} templates) ===")
+    n_templates_strat = args.stratified_templates
+    stratified = run_stratified_experiment(
+        n_templates=args.stratified_templates,
+        n_per_condition=args.stratified_samples)
+
+    for label, s in stratified.items():
+        dw = s['dw_adaptive']
+        print(f"  {label.replace(chr(10),' ')}: dw={dw:.2f}AU, "
+              f"recall: wide={s['recall_wide']:.3f} adaptive={s['recall_adaptive']:.3f}, "
+              f"cand: wide={s['cand_wide']:.0f} adaptive={s['cand_adaptive']:.0f}")
+
+    plot_combined(scaling, stratified)
