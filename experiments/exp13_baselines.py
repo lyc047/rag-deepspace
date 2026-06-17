@@ -98,153 +98,150 @@ def dct_encode(data: np.ndarray, keep_ratio: float) -> tuple:
 # ============================================================
 def run_baseline_comparison(signal_type='slow_varying', n_templates=2000,
                             n_test=50, snr_db=-150, seed=42):
-    """对一种信号类型跑所有基线的对比."""
+    """对一种信号类型跑所有基线的对比, 每个整数bps一个点."""
     need_align = signal_type in ('periodic', 'transient')
-
-    # Build KB for our method
     kb = KnowledgeBase()
     KnowledgeBaseBuilder(n_templates=n_templates, signal_types=[signal_type]).build(kb, seed=seed)
     n_samples = len(kb._records[0].raw_data)
 
-    # Bitrate levels to test
-    target_bps_list = np.arange(0.5, 8.5, 0.5)
+    target_bps_list = list(range(1, 9))  # 1,2,...,8 bps
 
-    # Store: {method: {bps: [mse_values]}}
     methods = ['PCM', 'DPCM', 'DCT', 'CCSDS121', 'Ours']
-    raw = {m: [] for m in methods}  # [(bps, mse), ...] per test sample
+    # raw[method][target_bps] = [mse_values...]
+    raw = {m: {b: [] for b in target_bps_list} for m in methods}
 
     for _ in tqdm(range(n_test), desc=f'  {signal_type}'):
         physics = generate_physical_metadata(snr_db=snr_db)
         sample = generate_telemetry_segment(signal_type, physics=physics,
             seed=np.random.randint(0, 2**31 - 1))
         y_orig = sample.signal
-        ch = DeepSpaceChannel(distance_au=physics['distance_au'], snr_db=snr_db)
-        y_recv = ch.forward(y_orig)
-        qd, qa = physics['distance_au'], physics['sun_earth_probe_angle']
 
-        # ---- PCM (无信道, 纯量化失真) ----
-        for b in [1, 2, 4, 8]:
-            yq, step = quantize_uniform(y_orig, b)
-            raw['PCM'].append((float(b), float(np.mean((y_orig - yq)**2))))
+        # ---- PCM: bps = n_bits exactly ----
+        for b in target_bps_list:
+            yq, _ = quantize_uniform(y_orig, b)
+            raw['PCM'][b].append(float(np.mean((y_orig - yq)**2)))
 
-        # ---- DPCM (无信道) ----
-        for b in [1, 2, 3, 4, 6, 8]:
+        # ---- DPCM: bps ≈ n_bits, use Rice to get real bps ----
+        for b in target_bps_list:
             y_recon, bits = dpcm_encode(y_orig, b)
-            # Rice编码叠加: 对重建信号做熵编码估计实际bps
             rice_r = benchmark_ccsds(y_recon)
-            bps = max(0.5, min(float(b), rice_r['bits_per_sample']))
-            raw['DPCM'].append((bps, float(np.mean((y_orig - y_recon)**2))))
+            actual_bps = max(0.5, min(float(b), rice_r['bits_per_sample']))
+            # Bin to nearest integer bps
+            b_target = int(round(actual_bps))
+            if 1 <= b_target <= 8:
+                raw['DPCM'][b_target].append(float(np.mean((y_orig - y_recon)**2)))
 
-        # ---- DCT (无信道) ----
-        for ratio in [0.01, 0.02, 0.05, 0.10, 0.20, 0.50, 1.0]:
+        # ---- DCT: sweep keep_ratio to hit each integer bps ----
+        dct_points = []
+        for ratio in np.linspace(0.01, 1.0, 30):
             y_recon, bits = dct_encode(y_orig, ratio)
             bps = bits / n_samples
-            raw['DCT'].append((bps, float(np.mean((y_orig - y_recon)**2))))
+            mse_val = float(np.mean((y_orig - y_recon)**2))
+            dct_points.append((bps, mse_val))
+        dct_points.sort(key=lambda p: p[0])
+        # Assign each DCT point to nearest integer bps (take closest)
+        for target_b in target_bps_list:
+            best = min(dct_points, key=lambda p: abs(p[0] - target_b))
+            raw['DCT'][target_b].append(best[1])
 
-        # ---- CCSDS 121.0 (无损, bps仅统计冗余) ----
-        ccsds_result = benchmark_ccsds(y_orig)
-        bps = ccsds_result['bits_per_sample']
-        raw['CCSDS121'].append((bps, 0.0))  # Lossless MSE=0
+        # ---- CCSDS 121.0 ----
+        ccsds_r = benchmark_ccsds(y_orig)
+        bps = ccsds_r['bits_per_sample']
+        b_target = int(round(bps))
+        if 1 <= b_target <= 8:
+            raw['CCSDS121'][b_target].append(0.0)
 
-        # ---- Ours (template + residual, 无信道, 仅量化失真) ----
+        # ---- Ours ----
         h = HierarchicalRetriever(kb, coarse_k=n_templates, fine_k=3, normalize=False,
             distance_window=3.0, angle_window=90.0,
             stat_filter=True, stat_max_keep=200)
-        rr = h.retrieve(y_recv, distance_au=qd, sun_angle=qa)
-        if rr:
-            info = {}
-            rec = kb.get_record(rr[0][0])
-            y_template = rec.raw_data if rec else np.zeros_like(y_orig)
+        rr = h.retrieve(y_orig, distance_au=1.5, sun_angle=45)
+        if not rr:
+            continue
+        rec = kb.get_record(rr[0][0])
+        if not rec:
+            continue
+        y_template = rec.raw_data
 
-            # Phase align
-            y_template_aligned = y_template
-            if need_align:
-                from preprocessing import phase_align_via_cross_correlation
-                aligned, lag, corr = phase_align_via_cross_correlation(y_orig, y_template)
-                if corr > 0.3:
-                    y_template_aligned = aligned
+        # Phase align
+        y_template_aligned = y_template
+        if need_align:
+            from preprocessing import phase_align_via_cross_correlation
+            aligned, lag, corr = phase_align_via_cross_correlation(y_orig, y_template)
+            if corr > 0.3:
+                y_template_aligned = aligned
 
-            residual = y_orig - y_template_aligned
+        residual = y_orig - y_template_aligned
 
-            for n_bits in [1, 2, 3, 4, 6, 8]:
-                rq, _ = quantize_uniform(residual, n_bits)
-                y_recon = y_template_aligned + rq
-                mse_val = float(np.mean((y_orig - y_recon)**2))
+        # Sweep n_bits 1..8, compute actual bps from CCSDS on residual
+        ours_points = []
+        for n_bits in target_bps_list:
+            rq, _ = quantize_uniform(residual, n_bits)
+            mse_val = float(np.mean((y_orig - (y_template_aligned + rq))**2))
+            res_ccsds = benchmark_ccsds(rq)
+            overhead_bps = 30.0 / n_samples  # ~0.05 bps
+            actual_bps = overhead_bps + res_ccsds['bits_per_sample']
+            ours_points.append((actual_bps, mse_val))
 
-                # CCSDS堆叠: 残差压缩后的实际bps
-                res_ccsds = benchmark_ccsds(rq)
-                overhead_bps = info.get('overhead_bits', 30) / n_samples
-                bps = overhead_bps + res_ccsds['bits_per_sample']
-                raw['Ours'].append((bps, mse_val))
+        for target_b in target_bps_list:
+            best = min(ours_points, key=lambda p: abs(p[0] - target_b))
+            raw['Ours'][target_b].append(best[1])
 
-    return raw, n_samples
+    # Aggregate: mean MSE per target bps
+    results = {}
+    for method in methods:
+        results[method] = {}
+        for b in target_bps_list:
+            vals = raw[method][b]
+            if vals:
+                results[method][b] = trim_mean(vals, 0.05)
+            else:
+                results[method][b] = None
+
+    return results
 
 
 def plot_rate_distortion(all_data, save_path='results/exp13_baselines.png'):
-    """多信号Rate-Distortion曲线对比."""
+    """多信号Rate-Distortion曲线, 每整数bps一个点."""
     signal_types = list(all_data.keys())
     fig, axes = plt.subplots(1, 3, figsize=(18, 5.5))
 
-    colors = {
-        'PCM': '#d32f2f', 'DPCM': '#f57c00', 'DCT': '#1976d2',
-        'CCSDS121': '#00838f', 'Ours': '#7b1fa2'
-    }
+    colors = {'PCM': '#d32f2f', 'DPCM': '#f57c00', 'DCT': '#1976d2',
+              'CCSDS121': '#00838f', 'Ours': '#7b1fa2'}
     markers = {'PCM': 's', 'DPCM': 'D', 'DCT': '^', 'CCSDS121': 'v', 'Ours': 'o'}
-    labels = {
-        'PCM': 'PCM', 'DPCM': 'DPCM+Quant',
-        'DCT': 'DCT', 'CCSDS121': 'CCSDS 121.0',
-        'Ours': 'Ours (Template+CCSDS)'
-    }
+    labels = {'PCM': 'PCM', 'DPCM': 'DPCM+Quant', 'DCT': 'DCT',
+              'CCSDS121': 'CCSDS 121.0', 'Ours': 'Ours (Template+CCSDS)'}
 
     for idx, st in enumerate(signal_types):
         ax = axes[idx]
-        raw, _ = all_data[st]
+        results = all_data[st]
 
         for method in ['PCM', 'DPCM', 'DCT', 'CCSDS121', 'Ours']:
-            points = raw[method]
-            if not points:
-                continue
-            # Sort by bps
-            points_sorted = sorted(points, key=lambda p: p[0])
-            bps_vals = [p[0] for p in points_sorted]
-            mse_vals = [p[1] for p in points_sorted]
+            data = results[method]
+            bps_list = []
+            mse_list = []
+            for b in sorted(data.keys()):
+                if data[b] is not None:
+                    bps_list.append(float(b))
+                    mse_val = data[b]
+                    mse_list.append(max(mse_val, 1e-8) if mse_val == 0 else mse_val)
 
-            # Bin by bps (average within 0.5 bps bins)
-            bin_edges = np.arange(0, 9, 0.5)
-            binned_bps = []
-            binned_mse = []
-            for i in range(len(bin_edges) - 1):
-                mask = [(b >= bin_edges[i]) & (b < bin_edges[i+1]) for b in bps_vals]
-                pts = [mse_vals[j] for j, m in enumerate(mask) if m]
-                if pts:
-                    binned_bps.append((bin_edges[i] + bin_edges[i+1]) / 2)
-                    binned_mse.append(np.mean(pts))
+            if bps_list:
+                ax.semilogy(bps_list, mse_list,
+                           color=colors[method], marker=markers[method],
+                           markersize=7, linewidth=2.5 if method == 'Ours' else 1.5,
+                           alpha=0.9, label=labels[method])
 
-            if binned_bps:
-                # Handle MSE=0 (lossless) in log scale
-                binned_mse_plot = [max(m, 1e-8) for m in binned_mse]
-                ax.semilogy(binned_bps, binned_mse_plot,
-                         color=colors[method], marker=markers[method],
-                         markersize=5, linewidth=2 if method == 'Ours' else 1.2,
-                         alpha=0.9, label=labels[method])
-
-        ax.set_xlabel('Bits per Sample (linear)', fontsize=11)
+        ax.set_xlabel('Bits per Sample', fontsize=11)
         if idx == 0:
-            ax.set_ylabel('MSE', fontsize=11)
+            ax.set_ylabel('MSE (log scale)', fontsize=11)
         ax.set_title(st, fontsize=13, fontweight='bold')
+        ax.set_xticks(range(1, 9))
         ax.grid(True, alpha=0.25, which='both')
         if idx == 2:
             ax.legend(fontsize=8, loc='lower left')
 
-        # Mark the CCSDS 121.0 point
-        ccsds_pts = [(p[0], p[1]) for p in raw['CCSDS121']]
-        if ccsds_pts:
-            ccsds_x = np.mean([p[0] for p in ccsds_pts])
-            ax.axvline(x=ccsds_x, color='#00838f', linestyle=':', alpha=0.4, linewidth=1)
-            ax.text(ccsds_x - 0.5, ax.get_ylim()[1] * 0.1,
-                   f'CCSDS 121.0\n{ccsds_x:.1f}bps', fontsize=8, color='#00838f', alpha=0.7)
-
-    fig.suptitle('Rate-Distortion Comparison: Traditional vs Ours',
+    fig.suptitle('Rate-Distortion: Traditional Codecs vs RAG Template Method',
                  fontsize=14, fontweight='bold', y=1.02)
     plt.tight_layout()
     plt.savefig(save_path, dpi=180, bbox_inches='tight')
@@ -305,16 +302,14 @@ if __name__ == '__main__':
     # Run baseline comparison
     all_data = {}
     for st in ['slow_varying', 'periodic', 'transient']:
-        raw, _ = run_baseline_comparison(st, n_templates=args.templates, n_test=args.test)
-        all_data[st] = (raw, _)
+        results = run_baseline_comparison(st, n_templates=args.templates, n_test=args.test)
+        all_data[st] = results
 
-        # Summary table
-        print(f"\n  {st} summary (best achievable MSE at ~4 bps):")
-        for method in ['DPCM', 'DCT', 'CCSDS121', 'Ours']:
-            pts = [(p[0], p[1]) for p in raw[method] if 3.5 < p[0] < 4.5]
-            if pts:
-                avg_mse = np.mean([p[1] for p in pts])
-                avg_bps = np.mean([p[0] for p in pts])
-                print(f"    {method:10s}: bps={avg_bps:.1f}, MSE={avg_mse:.4f}")
+        # Summary: MSE at 4 bps
+        print(f"\n  {st} @ 4 bps:")
+        for method in ['PCM', 'DPCM', 'DCT', 'Ours']:
+            mse_val = results[method].get(4, None)
+            if mse_val is not None:
+                print(f"    {method:10s}: MSE={mse_val:.6f}")
 
     plot_rate_distortion(all_data)
