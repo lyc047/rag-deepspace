@@ -223,12 +223,12 @@ def plot_rate_distortion(all_data, save_path='results/exp13_baselines.png'):
             if binned_bps:
                 # Handle MSE=0 (lossless) in log scale
                 binned_mse_plot = [max(m, 1e-8) for m in binned_mse]
-                ax.loglog(binned_bps, binned_mse_plot,
+                ax.semilogy(binned_bps, binned_mse_plot,
                          color=colors[method], marker=markers[method],
                          markersize=5, linewidth=2 if method == 'Ours' else 1.2,
                          alpha=0.9, label=labels[method])
 
-        ax.set_xlabel('Bits per Sample', fontsize=11)
+        ax.set_xlabel('Bits per Sample (linear)', fontsize=11)
         if idx == 0:
             ax.set_ylabel('MSE', fontsize=11)
         ax.set_title(st, fontsize=13, fontweight='bold')
@@ -239,11 +239,10 @@ def plot_rate_distortion(all_data, save_path='results/exp13_baselines.png'):
         # Mark the CCSDS 121.0 point
         ccsds_pts = [(p[0], p[1]) for p in raw['CCSDS121']]
         if ccsds_pts:
-            ax.axvline(x=np.mean([p[0] for p in ccsds_pts]),
-                      color='#00838f', linestyle=':', alpha=0.4, linewidth=1)
-            ax.text(np.mean([p[0] for p in ccsds_pts]) + 0.1,
-                   ax.get_ylim()[1] * 0.5,
-                   'CCSDS', fontsize=8, color='#00838f', alpha=0.7, rotation=90)
+            ccsds_x = np.mean([p[0] for p in ccsds_pts])
+            ax.axvline(x=ccsds_x, color='#00838f', linestyle=':', alpha=0.4, linewidth=1)
+            ax.text(ccsds_x - 0.5, ax.get_ylim()[1] * 0.1,
+                   f'CCSDS 121.0\n{ccsds_x:.1f}bps', fontsize=8, color='#00838f', alpha=0.7)
 
     fig.suptitle('Rate-Distortion Comparison: Traditional vs Ours',
                  fontsize=14, fontweight='bold', y=1.02)
