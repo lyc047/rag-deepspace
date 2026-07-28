@@ -1,0 +1,44 @@
+{
+  "version": "1.0",
+  "status": "stage6_external_final_execution_failed_inconclusive",
+  "failure_category": "external_data_adapter_schema_mismatch",
+  "failure_message": "The frozen adapter required freqs and powers annotations, but the 2025 campaign metadata did not provide them.",
+  "access_count": 1,
+  "access_receipt_sha256": "34adfd59533ffcf2ad05c71b5137ba2cf3ba4c9fba413fc5132e3792333664ff",
+  "catalog_sha256": "e54aeaeea4eca5457166048dcd61482fe277eb93b290fc8fc4560b6b256d1e3a",
+  "stdout_sha256": "fc15b448f28f09d2713c7f3c1d733fa6a624affea433f5a913f642e74c61699d",
+  "stderr_sha256": "a793fdc7ab2a65e58743da84545d0ed7d6f61e92c5a04d8345b50320c5714088",
+  "last_reported_loaded_sweep_count": 125,
+  "first_incompatible_scene": {
+    "catalog_index": 135,
+    "scene_id": "aerpaw_packapalooza_2025:spec_results_20250823_112637",
+    "campaign_id": "aerpaw_packapalooza_2025",
+    "required_annotations_present": false,
+    "annotation_labels": [],
+    "datatype": "rf32_le",
+    "metadata_loaded": true,
+    "sample_array_loaded": false
+  },
+  "metadata_compatibility_by_campaign": {
+    "aerpaw_lake_wheeler_2024": {
+      "compatible_scene_count": 67,
+      "incompatible_scene_count": 0
+    },
+    "aerpaw_packapalooza_2024": {
+      "compatible_scene_count": 67,
+      "incompatible_scene_count": 0
+    },
+    "aerpaw_packapalooza_2025": {
+      "compatible_scene_count": 0,
+      "incompatible_scene_count": 66
+    }
+  },
+  "compatible_scene_count": 134,
+  "incompatible_scene_count": 66,
+  "raw_algorithm_result_generated": false,
+  "statistical_algorithm_result_generated": false,
+  "algorithm_effectiveness_verdict": "inconclusive",
+  "post_failure_forensic_scope": "SigMF JSON metadata labels only; no sample arrays or method outputs were loaded by this forensic audit.",
+  "retry_on_this_final_permitted": false,
+  "reset_permitted": false
+}

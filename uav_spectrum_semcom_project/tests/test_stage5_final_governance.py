@@ -73,15 +73,25 @@ def test_catalog_validation_allows_repeated_clusters_but_not_bad_spacing() -> No
     )
 
 
-def test_real_access_state_remains_zero() -> None:
+def test_real_access_state_records_irreversible_stage6_consumption() -> None:
     root = Path(__file__).resolve().parents[1]
     state = json.loads(
         (
             root / "configs/stage5_external_final_access_state.json"
         ).read_text(encoding="utf-8")
     )
-    assert state["access_count"] == 0
-    assert state["final_signal_values_accessed"] is False
+    stage6 = json.loads(
+        (
+            root / "configs/stage6_external_final_access_state.json"
+        ).read_text(encoding="utf-8")
+    )
+    assert state["access_count"] == stage6["access_count"]
+    if stage6["access_count"] == 0:
+        assert state["final_signal_values_accessed"] is False
+    else:
+        assert state["status"].startswith("superseded_by_stage6")
+        assert state["final_signal_values_accessed"] is True
+        assert state["reset_permitted"] is False
 
 
 def test_real_snapshot_catalog_and_prefinal_state_are_consistent() -> None:

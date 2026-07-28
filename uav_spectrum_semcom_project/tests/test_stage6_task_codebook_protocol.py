@@ -33,15 +33,25 @@ def test_stage6_protocol_uses_only_hash_locked_excluded_pilot() -> None:
     assert sha256_file(PROJECT_DIR / source["cache"]) == source["cache_sha256"]
 
 
-def test_external_final_access_remains_unconsumed() -> None:
+def test_external_final_access_history_is_immutable_after_consumption() -> None:
     state = json.loads(
         (
             PROJECT_DIR / "configs/stage5_external_final_access_state.json"
         ).read_text(encoding="utf-8")
     )
-    assert state["access_count"] == 0
-    assert state["final_signal_values_accessed"] is False
-    assert state["final_method_outputs_accessed"] is False
+    stage6 = json.loads(
+        (
+            PROJECT_DIR / "configs/stage6_external_final_access_state.json"
+        ).read_text(encoding="utf-8")
+    )
+    assert state["access_count"] == stage6["access_count"]
+    if state["access_count"] == 0:
+        assert state["final_signal_values_accessed"] is False
+        assert state["final_method_outputs_accessed"] is False
+    else:
+        assert state["status"].startswith("superseded_by_stage6")
+        assert state["final_signal_values_accessed"] is True
+        assert state["reset_permitted"] is False
 
 
 def test_stage6_task_codec_protocol_accounts_for_identity_overhead() -> None:

@@ -55,13 +55,25 @@ def test_registry_audit_does_not_open_archive_contents() -> None:
     assert all(row["signal_values_loaded"] is False for row in result["rows"])
 
 
-def test_external_final_access_state_is_unused() -> None:
+def test_external_final_access_state_has_consistent_cross_stage_lifecycle() -> None:
     state = json.loads(
         (
             ROOT / "configs/stage5_external_final_access_state.json"
         ).read_text(encoding="utf-8")
     )
-    assert state["status"] == "downloaded_integrity_verified_not_accessed"
-    assert state["access_count"] == 0
-    assert state["final_signal_values_accessed"] is False
-    assert state["final_method_outputs_accessed"] is False
+    stage6 = json.loads(
+        (
+            ROOT / "configs/stage6_external_final_access_state.json"
+        ).read_text(encoding="utf-8")
+    )
+    if stage6["access_count"] == 0:
+        assert state["status"] == "downloaded_integrity_verified_not_accessed"
+        assert state["access_count"] == 0
+        assert state["final_signal_values_accessed"] is False
+        assert state["final_method_outputs_accessed"] is False
+    else:
+        assert stage6["access_count"] == 1
+        assert state["status"].startswith("superseded_by_stage6")
+        assert state["access_count"] == 1
+        assert state["final_signal_values_accessed"] is True
+        assert state["reset_permitted"] is False

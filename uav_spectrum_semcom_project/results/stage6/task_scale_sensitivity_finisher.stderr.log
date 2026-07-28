@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\scripts\run_stage6_task_scale_sensitivity.py", line 746, in <module>
+    main()
+  File "C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\scripts\run_stage6_task_scale_sensitivity.py", line 737, in main
+    merge(
+  File "C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\scripts\run_stage6_task_scale_sensitivity.py", line 695, in merge
+    "environment": environment_snapshot(PROJECT_DIR),
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\src\spectrum_semcom\reproducibility.py", line 82, in environment_snapshot
+    for name in distributions:
+                ^^^^^^^^^^^^^
+TypeError: 'WindowsPath' object is not iterable
+S6.7c merge failed
+所在位置 C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\scripts\finalize_stage6_task_scale_on_f
+.ps1:52 字符: 5
++     throw "S6.7c merge failed"
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (S6.7c merge failed:String) [], RuntimeException
+    + FullyQualifiedErrorId : S6.7c merge failed
+ 

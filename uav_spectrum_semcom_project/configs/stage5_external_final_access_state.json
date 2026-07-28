@@ -1,12 +1,15 @@
 {
   "version": "1.0",
   "registry_id": "stage5_external_final_registry_v1",
-  "status": "downloaded_integrity_verified_not_accessed",
-  "access_count": 0,
-  "final_signal_values_accessed": false,
+  "status": "superseded_by_stage6_external_final_access_consumed",
+  "access_count": 1,
+  "final_signal_values_accessed": true,
   "final_method_outputs_accessed": false,
-  "code_snapshot_sha256": null,
-  "catalog_sha256": null,
-  "consumed_at": null,
-  "actor": null
+  "code_snapshot_sha256": "c5437b2a95b344dd2fe31a833eff27e5fe7f1eef457aced973f3eb2de6e60f15",
+  "catalog_sha256": "a3bc3696441ef717c5980ba5200a471a00f1095e825a5588cb3bf19f1f092219",
+  "consumed_at": "2026-07-28T14:14:44.035915+00:00",
+  "actor": "codex-gpt5",
+  "superseding_protocol_id": "stage6_external_final_v1",
+  "receipt_sha256": "34adfd59533ffcf2ad05c71b5137ba2cf3ba4c9fba413fc5132e3792333664ff",
+  "reset_permitted": false
 }

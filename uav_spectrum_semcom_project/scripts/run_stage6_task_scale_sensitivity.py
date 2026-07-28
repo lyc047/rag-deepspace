@@ -692,7 +692,7 @@ def merge(
             "external_final_signal_values_loaded": False,
             "external_final_access_count": 0,
         },
-        "environment": environment_snapshot(PROJECT_DIR),
+        "environment": environment_snapshot(["numpy"]),
         "claim_boundary": protocol["claim_boundary"],
     }
     representation_result = {

@@ -1,0 +1,57 @@
+﻿{
+    "schema_version":  "uav-spectrum-semcom-storage-migration-v1",
+    "generated_at":  "2026-07-28T21:36:00.8139582+08:00",
+    "project_root":  "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project",
+    "policy":  "Code, documents, Git metadata and compact summaries remain on C; bulk datasets and large experiment artifacts reside on F and are exposed through NTFS junctions.",
+    "final_data_accesses_added":  0,
+    "c_free_bytes_before":  12077395968,
+    "c_free_bytes_after":  12077395968,
+    "f_free_bytes_before":  174122987520,
+    "f_free_bytes_after":  174122987520,
+    "total_bulk_files_on_f":  103360,
+    "total_bulk_bytes_on_f":  4990279076,
+    "mappings":  [
+                     {
+                         "source":  "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\data\\raw",
+                         "target":  "F:\\uav_spectrum_semcom_data\\raw",
+                         "files":  101474,
+                         "bytes":  2246171416,
+                         "status":  "already_junction"
+                     },
+                     {
+                         "source":  "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\data\\processed",
+                         "target":  "F:\\uav_spectrum_semcom_data\\processed",
+                         "files":  1686,
+                         "bytes":  94139931,
+                         "status":  "already_junction"
+                     },
+                     {
+                         "source":  "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage6\\matched_reliability_coarse_grid_v1",
+                         "target":  "F:\\uav_spectrum_semcom_large_results\\stage6\\matched_reliability_coarse_grid_v1",
+                         "files":  17,
+                         "bytes":  924248954,
+                         "status":  "already_junction"
+                     },
+                     {
+                         "source":  "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage6\\matched_reliability_grouped_validation_v1",
+                         "target":  "F:\\uav_spectrum_semcom_large_results\\stage6\\matched_reliability_grouped_validation_v1",
+                         "files":  17,
+                         "bytes":  386818473,
+                         "status":  "already_junction"
+                     },
+                     {
+                         "source":  "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage6\\reliability_protocol_r1_grouped_v1",
+                         "target":  "F:\\uav_spectrum_semcom_large_results\\stage6\\reliability_protocol_r1_grouped_v1",
+                         "files":  15,
+                         "bytes":  365770587,
+                         "status":  "already_junction"
+                     },
+                     {
+                         "source":  "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage6\\task_scale_sensitivity_grouped_v1",
+                         "target":  "F:\\uav_spectrum_semcom_large_results\\stage6\\task_scale_sensitivity_grouped_v1",
+                         "files":  151,
+                         "bytes":  973129715,
+                         "status":  "already_junction"
+                     }
+                 ]
+}

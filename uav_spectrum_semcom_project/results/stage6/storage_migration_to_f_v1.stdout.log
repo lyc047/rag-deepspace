@@ -1,0 +1,13 @@
+COPY C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\data\raw -> F:\uav_spectrum_semcom_data\raw (101474 files, 2246171416 bytes)
+DONE C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\data\raw -> F:\uav_spectrum_semcom_data\raw
+COPY C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\data\processed -> F:\uav_spectrum_semcom_data\processed (1686 files, 94139931 bytes)
+DONE C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\data\processed -> F:\uav_spectrum_semcom_data\processed
+COPY C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\results\stage6\matched_reliability_coarse_grid_v1 -> F:\uav_spectrum_semcom_large_results\stage6\matched_reliability_coarse_grid_v1 (17 files, 924248954 bytes)
+DONE C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\results\stage6\matched_reliability_coarse_grid_v1 -> F:\uav_spectrum_semcom_large_results\stage6\matched_reliability_coarse_grid_v1
+COPY C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\results\stage6\matched_reliability_grouped_validation_v1 -> F:\uav_spectrum_semcom_large_results\stage6\matched_reliability_grouped_validation_v1 (17 files, 386818473 bytes)
+DONE C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\results\stage6\matched_reliability_grouped_validation_v1 -> F:\uav_spectrum_semcom_large_results\stage6\matched_reliability_grouped_validation_v1
+COPY C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\results\stage6\reliability_protocol_r1_grouped_v1 -> F:\uav_spectrum_semcom_large_results\stage6\reliability_protocol_r1_grouped_v1 (15 files, 365770587 bytes)
+DONE C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\results\stage6\reliability_protocol_r1_grouped_v1 -> F:\uav_spectrum_semcom_large_results\stage6\reliability_protocol_r1_grouped_v1
+SKIP already migrated: C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\results\stage6\task_scale_sensitivity_grouped_v1 -> F:\uav_spectrum_semcom_large_results\stage6\task_scale_sensitivity_grouped_v1
+MANIFEST C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\results\stage6\storage_migration_to_f_v1.json
+C free: 11.25 GB; F free: 162.16 GB

@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "protocol_id": "stage6_external_final_v1",
+  "status": "access_consumed_final_execution_failed",
+  "access_count": 1,
+  "final_signal_values_accessed": true,
+  "final_method_outputs_accessed": false,
+  "code_snapshot_sha256": "c5437b2a95b344dd2fe31a833eff27e5fe7f1eef457aced973f3eb2de6e60f15",
+  "catalog_sha256": "a3bc3696441ef717c5980ba5200a471a00f1095e825a5588cb3bf19f1f092219",
+  "consumed_at": "2026-07-28T14:14:44.035915+00:00",
+  "actor": "codex-gpt5",
+  "receipt": {
+    "access_number": 1,
+    "consumed_utc": "2026-07-28T14:14:44.035915+00:00",
+    "actor": "codex-gpt5",
+    "protocol_sha256": "751e89804e549a9403567a35638ba9d3e8f200c63b25c438778e9032bbec265c",
+    "registry_sha256": "178e4b254b067d2696130742f3cd49d01d0bbf5afca6dfcfd371b9a94340915d",
+    "catalog_sha256": "a3bc3696441ef717c5980ba5200a471a00f1095e825a5588cb3bf19f1f092219",
+    "code_snapshot_sha256": "c5437b2a95b344dd2fe31a833eff27e5fe7f1eef457aced973f3eb2de6e60f15",
+    "crash_policy": "access_remains_consumed_and_may_not_be_reset",
+    "legacy_state_superseded": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\configs\\stage5_external_final_access_state.json"
+  },
+  "receipt_sha256": "34adfd59533ffcf2ad05c71b5137ba2cf3ba4c9fba413fc5132e3792333664ff",
+  "reset_permitted": false,
+  "failure_receipt_sha256": "ba54f76189294526e774749cabce2dcbfe95219056039980ccee2d955c35c49b",
+  "stage6_external_value_supported": null,
+  "algorithm_effectiveness_verdict": "inconclusive",
+  "retry_on_this_final_permitted": false
+}

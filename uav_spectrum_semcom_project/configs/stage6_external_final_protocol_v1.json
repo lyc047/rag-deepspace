@@ -1,0 +1,176 @@
+{
+  "protocol_id": "stage6_external_final_v1",
+  "status": "registered_before_external_signal_access",
+  "created_date": "2026-07-28",
+  "purpose": "Single-access external confirmation of the frozen Stage-6 R1 V2 task-semantic reliability architecture on three unseen 2024-2025 airborne spectrum campaigns.",
+  "registry": "configs/stage5_external_final_registry_v1.json",
+  "access_state": "configs/stage6_external_final_access_state.json",
+  "legacy_access_state_to_supersede": "configs/stage5_external_final_access_state.json",
+  "frozen_development_evidence": {
+    "task_scale_protocol": {
+      "path": "configs/stage6_task_scale_sensitivity_v1.json",
+      "sha256": "5484758db98417f82c26bddef440123f5addf1b5f243e0f14f4f501388e64487"
+    },
+    "task_scale_grouped_result": {
+      "path": "results/stage6/task_scale_sensitivity_grouped_v1/result.json",
+      "sha256": "4abbd6ca95f58b6a1cb1e0ebb2a39e142ef7ced8ff67dc716878cdd22b127c3e"
+    },
+    "task_scale_analysis": {
+      "path": "results/stage6/task_scale_sensitivity_analysis_v1/analysis.json",
+      "sha256": "b43bdefab6f2fd7be95aee14db1e82afa2acf0d81c3c4e56e12932246bf3a5e7"
+    },
+    "excluded_2023_pilot_cache": {
+      "path": "results/stage5/helikite_pilot_v1/helikite_pilot_cache.npz",
+      "sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+      "role": "codebook_fit_only_permanently_excluded_from_final"
+    },
+    "grouped_controller_candidates": {
+      "path": "configs/stage6_grouped_validation_candidates_v1.json",
+      "sha256": "c52e0540b2533ca71ae7c8e02f3bf6fabfd88c1910702a0d9eff2dfe103ce7b7"
+    },
+    "matched_reliability_parent": {
+      "path": "configs/stage6_matched_reliability_development_v1.json",
+      "sha256": "cb3d5fde27edeefd39b6dcaf94db67d565997b89cda7e3be3946efa7e4515636"
+    }
+  },
+  "sampling": {
+    "target_scene_count": 200,
+    "campaign_allocations": {
+      "aerpaw_packapalooza_2024": 67,
+      "aerpaw_lake_wheeler_2024": 67,
+      "aerpaw_packapalooza_2025": 66
+    },
+    "minimum_spacing_minutes": 5,
+    "cluster_minutes": 15,
+    "local_timezone": "America/New_York",
+    "selection_rule": "filename_timestamp_only_then_greedy_spacing_then_deterministic_even_spread",
+    "selection_may_use_signal_values": false,
+    "selection_may_use_method_outputs": false,
+    "all_methods_use_identical_scene_catalog": true,
+    "post_access_scene_replacement_permitted": false
+  },
+  "resource_task": {
+    "analysis_band_mhz": [3550.0, 3700.0],
+    "primary_n_channels": 8,
+    "secondary_n_channels": [16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "demand_rounding": "nearest_integer",
+    "query_set_id": "multi_025_050_075",
+    "regret_threshold_db": 0.2,
+    "task_header_bits": 48,
+    "outage_penalty_db": 10.0,
+    "codebook_epoch": 1,
+    "channel_cost": "mean_power_dbm_over_each_contiguous_candidate_block"
+  },
+  "frozen_architecture": {
+    "semantic_variant": "v2_durable_codebook_compact_refresh",
+    "deployment_mode": "preconfigured_codebook_empty_action_state",
+    "durability_assumption": "Codebook identity and decoder actions reside in non-volatile storage; ordinary receiver resets clear only the current action cache.",
+    "codebook_fit_source": "permanently_excluded_2023_pilot_only",
+    "codebook_fit_group_field": "cluster_ids",
+    "codebook_fit_seed": 20260726,
+    "codebook_fit_train_group_fraction": 0.6,
+    "codebook_fit_rule": "greedy_maximum_new_coverage_then_minimum_mean_max_regret_then_lexicographic",
+    "unseen_policy": "reserved_escape_symbol_plus_exact_query_bundle_payload",
+    "controller_parameters": {
+      "heartbeat_silence_scenes": 10,
+      "maximum_state_age_minutes": 30.0,
+      "update_reservation_fraction": 0.0,
+      "task_update_open_loop_attempts": 2
+    }
+  },
+  "fault_model": {
+    "source": "frozen_stage6_matched_reliability_primary_fault_condition",
+    "install_loss_probability": 0.1,
+    "task_loss_probability": 0.1,
+    "ack_loss_probability": 0.2,
+    "delayed_duplicate_probability": 0.1,
+    "receiver_context_reset_probability": 0.02,
+    "evidence_boundary": "Controlled reporting-link injection; the external spectrum datasets do not measure ACK or receiver-reset faults."
+  },
+  "system_evaluation": {
+    "outer_group": "campaign",
+    "inner_unit": "paired_link_trajectory",
+    "link_trajectories": 60,
+    "paired_common_random_numbers": true,
+    "random_stream_count": 11,
+    "random_seed": 20260728,
+    "exact_reference_open_loop_attempts": [1, 2, 3],
+    "primary_matched_clean_target": 0.9,
+    "auxiliary_matched_clean_targets": [0.85],
+    "paired_bootstrap_replicates": 5000,
+    "confidence_level": 0.95,
+    "leave_one_campaign_out": true,
+    "amortized_codebook_horizons_scenes": [500, 5000, 50000]
+  },
+  "decision_rules": {
+    "primary_configuration": {
+      "n_channels": 8,
+      "epsilon_db": 0.2,
+      "query_set_id": "multi_025_050_075",
+      "target_clean_rate": 0.9
+    },
+    "primary_acceptance": "Semantic clean-rate 95-percent lower bound is at least 0.90, paired total-bit savings 95-percent lower bound is greater than zero, leave-one-campaign-out point estimates are all positive, and wrong-codebook action count is zero.",
+    "strong_effect": "Primary acceptance passes and total-bit savings point estimate is at least 15 percent.",
+    "scale_support": "At least three of N in {8,16,32,64} pass primary acceptance at the 0.90 clean target.",
+    "stage6_external_value_supported": "The N=8 primary configuration passes, scale support passes, all three campaigns are present, and wrong-codebook action count is zero for every N.",
+    "high_reliability_boundary": "Clean targets 0.95 and 0.97 are not Final hypotheses because the development curves had no common eligible workpoint.",
+    "failure_policy": "Any failure remains a Final result; this Final cannot be reset, resampled, or used to retune the evaluated algorithm."
+  },
+  "statistics": {
+    "cvar_alpha": 0.9,
+    "bootstrap_seed": 20260729,
+    "campaign_stratified_results_required": true,
+    "aggregate_result_requires_all_three_campaigns": true,
+    "all_registered_N_results_must_be_retained": true
+  },
+  "freeze": {
+    "include_globs": [
+      "src/spectrum_semcom/*.py"
+    ],
+    "include_files": [
+      "configs/stage6_external_final_protocol_v1.json",
+      "configs/stage5_external_final_registry_v1.json",
+      "configs/stage6_task_scale_sensitivity_v1.json",
+      "configs/stage6_grouped_validation_candidates_v1.json",
+      "configs/stage6_matched_reliability_development_v1.json",
+      "scripts/freeze_stage6_external_final.py",
+      "scripts/build_stage6_external_final_catalog.py",
+      "scripts/consume_stage6_external_final_access.py",
+      "scripts/run_stage6_external_final.py",
+      "scripts/analyze_stage6_external_final.py",
+      "scripts/run_stage5_external_final.py",
+      "scripts/run_stage6_task_scale_sensitivity.py",
+      "scripts/analyze_stage6_task_scale_sensitivity.py",
+      "tests/test_stage6_external_final_protocol.py",
+      "tests/test_stage5_external_final_registry.py",
+      "requirements-lock.txt"
+    ]
+  },
+  "outputs": {
+    "snapshot": "results/stage6/external_final_freeze_v1/code_snapshot.json",
+    "catalog": "results/stage6/external_final_catalog_v1/catalog.json",
+    "raw_result": "results/stage6/external_final_v1/final_raw.json",
+    "analysis": "results/stage6/external_final_v1/final_analysis.json",
+    "execution_log": "results/stage6/external_final_v1/execution.log"
+  },
+  "execution_gates": {
+    "all_archives_sha256_verified": true,
+    "development_decision_gate_passed": true,
+    "snapshot_must_precede_catalog": true,
+    "catalog_must_have_exactly_200_scenes": true,
+    "access_state_must_transition_zero_to_one_before_signal_read": true,
+    "legacy_stage5_state_must_be_superseded_on_consumption": true,
+    "access_state_reset_after_failure_is_forbidden": true,
+    "existing_final_output_may_not_be_overwritten": true
+  },
+  "governance": {
+    "2023_pilot_is_final_eligible": false,
+    "2022_development_signal_values_may_refit_codebook": false,
+    "final_signal_values_may_be_loaded_before_access_consumption": false,
+    "method_outputs_may_be_used_for_scene_selection": false,
+    "post_final_parameter_tuning_on_this_final_is_forbidden": true,
+    "output_is_external_confirmatory_final": true
+  },
+  "claim_boundary": "This Final can test cross-campaign airborne spectrum-task generalization and total application-bit savings under frozen controlled reporting faults. It cannot establish measured backhaul reliability, real ACK-fault recovery, simultaneous multi-node sensing, MIMO, image semantics, causal deployment performance, or aircraft hardware feasibility."
+}

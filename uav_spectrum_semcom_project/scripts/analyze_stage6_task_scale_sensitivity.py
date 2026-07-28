@@ -58,9 +58,16 @@ def _exact_row(group: dict, attempts: int) -> dict:
     ]
     if len(matches) != 1:
         raise ValueError("exact sensitivity workpoint is not unique")
-    return matches[0] | {
-        "evaluated_scene_count": group["evaluated_scene_count"]
-    }
+    row = copy.deepcopy(matches[0])
+    if "resource_equivalent_bits_per_scene" not in row["summary"]:
+        row["summary"]["resource_equivalent_bits_per_scene"] = row[
+            "summary"
+        ]["actual_bits_per_scene"]
+        for trajectory in row["trajectory_metrics"]:
+            trajectory["resource_equivalent_bits_per_scene"] = trajectory[
+                "actual_bits_per_scene"
+            ]
+    return row | {"evaluated_scene_count": group["evaluated_scene_count"]}
 
 
 def _semantic_row(group: dict) -> dict:

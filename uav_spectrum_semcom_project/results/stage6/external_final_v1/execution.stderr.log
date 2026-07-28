@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\scripts\run_stage6_external_final.py", line 628, in <module>
+    main()
+  File "C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\scripts\run_stage6_external_final.py", line 545, in main
+    records = load_scene_arrays(catalog, protocol)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\scripts\run_stage5_external_final.py", line 147, in load_scene_arrays
+    sweep = load_helikite_zip_power_sweep(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\src\spectrum_semcom\aerpaw_helikite.py", line 232, in load_helikite_zip_power_sweep
+    annotations = _annotation_map(metadata_value, ("freqs", "powers"))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\src\spectrum_semcom\aerpaw_helikite.py", line 124, in _annotation_map
+    raise ValueError(
+ValueError: required annotations differ: [] != ['freqs', 'powers']
