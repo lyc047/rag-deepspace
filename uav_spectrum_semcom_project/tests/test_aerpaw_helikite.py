@@ -12,6 +12,9 @@ from spectrum_semcom.aerpaw_helikite import (
     load_helikite_power_sweep,
     nearest_helikite_position,
 )
+from spectrum_semcom.aerpaw_helikite_repair import (
+    load_helikite_zip_power_sweep_compatible,
+)
 
 
 def write_sigmf(
@@ -57,6 +60,79 @@ def test_helikite_power_adapter_and_crop(tmp_path: Path) -> None:
     assert cropped.n_bins > 2
     assert cropped.frequencies_mhz[0] >= 3550.0
     assert meta == pairs[0].meta_path
+
+
+def test_helikite_compact_power_adapter_and_zip(tmp_path: Path) -> None:
+    frequencies_hz = np.linspace(3.5e9, 3.8e9, 16, dtype=np.float64)
+    powers = np.linspace(-130.0, -90.0, 16, dtype="<f4")
+    data = tmp_path / "spec_results_20250823_112637.sigmf-data"
+    meta = tmp_path / "spec_results_20250823_112637.sigmf-meta"
+    data.write_bytes(powers.tobytes())
+    metadata = {
+        "global": {
+            "core:datatype": "rf32_le",
+            "core:sha512": hashlib.sha512(data.read_bytes()).hexdigest(),
+            "aerpaw:freq_start": float(frequencies_hz[0]),
+            "aerpaw:freq_stop": float(frequencies_hz[-1]),
+            "aerpaw:bin_width": float(frequencies_hz[1] - frequencies_hz[0]),
+        },
+        "captures": [{"core:sample_start": 0}],
+        "annotations": [],
+    }
+    meta.write_text(json.dumps(metadata), encoding="utf-8")
+
+    archive_path = tmp_path / "compact.zip"
+    import zipfile
+
+    with zipfile.ZipFile(archive_path, "w") as archive:
+        archive.write(meta, meta.name)
+        archive.write(data, data.name)
+    with zipfile.ZipFile(archive_path) as archive:
+        zipped = load_helikite_zip_power_sweep_compatible(
+            archive,
+            meta_member=meta.name,
+            data_member=data.name,
+            timestamp_local="2025-08-23T11:26:37",
+            site="pack2025",
+        )
+    np.testing.assert_allclose(zipped.frequencies_mhz, frequencies_hz / 1.0e6)
+    np.testing.assert_array_equal(zipped.powers_dbm, powers)
+
+
+def test_helikite_compact_power_adapter_rejects_inconsistent_axis(
+    tmp_path: Path,
+) -> None:
+    powers = np.linspace(-130.0, -90.0, 16, dtype="<f4")
+    data = tmp_path / "spec_results_20250823_112637.sigmf-data"
+    meta = tmp_path / "spec_results_20250823_112637.sigmf-meta"
+    data.write_bytes(powers.tobytes())
+    metadata = {
+        "global": {
+            "core:datatype": "rf32_le",
+            "core:sha512": hashlib.sha512(data.read_bytes()).hexdigest(),
+            "aerpaw:freq_start": 3.5e9,
+            "aerpaw:freq_stop": 3.8e9,
+            "aerpaw:bin_width": 1.0e6,
+        },
+        "captures": [{"core:sample_start": 0}],
+        "annotations": [],
+    }
+    meta.write_text(json.dumps(metadata), encoding="utf-8")
+    archive_path = tmp_path / "inconsistent.zip"
+    import zipfile
+
+    with zipfile.ZipFile(archive_path, "w") as archive:
+        archive.write(meta, meta.name)
+        archive.write(data, data.name)
+    with zipfile.ZipFile(archive_path) as archive:
+        with np.testing.assert_raises_regex(ValueError, "frequency axis"):
+            load_helikite_zip_power_sweep_compatible(
+                archive,
+                meta_member=meta.name,
+                data_member=data.name,
+                timestamp_local="2025-08-23T11:26:37",
+                site="pack2025",
+            )
 
 
 def test_helikite_position_adapter_and_nearest(tmp_path: Path) -> None:

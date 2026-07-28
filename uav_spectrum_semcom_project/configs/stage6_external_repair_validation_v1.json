@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "validation_id": "stage6_external_repair_validation_v1",
+  "status": "registered_non_confirmatory_repair_validation",
+  "created_date": "2026-07-28",
+  "purpose": "Complete the originally registered 200-scene evaluation after a data-layout-only adapter repair, without changing the frozen algorithm, task, link, sampling, or statistical settings.",
+  "classification": "external_repair_validation_non_confirmatory",
+  "parent_final": {
+    "protocol": {
+      "path": "configs/stage6_external_final_protocol_v1.json",
+      "sha256": "751e89804e549a9403567a35638ba9d3e8f200c63b25c438778e9032bbec265c"
+    },
+    "access_state": {
+      "path": "configs/stage6_external_final_access_state.json",
+      "sha256": "1b19c8500adaf7cfeeccc151c1e98bc54eb0e93d90c411f78f5429f827f8ece5",
+      "required_status": "access_consumed_final_execution_failed",
+      "required_access_count": 1
+    },
+    "failure_receipt": {
+      "path": "results/stage6/external_final_v1/failure_receipt.json",
+      "sha256": "ba54f76189294526e774749cabce2dcbfe95219056039980ccee2d955c35c49b"
+    },
+    "catalog": {
+      "path": "results/stage6/external_final_catalog_v1/catalog.json",
+      "sha256": "e54aeaeea4eca5457166048dcd61482fe277eb93b290fc8fc4560b6b256d1e3a",
+      "required_scene_count": 200
+    },
+    "code_snapshot": {
+      "path": "results/stage6/external_final_freeze_v1/code_snapshot.json",
+      "sha256": "029f3c85361c839907e210128b007bba6a32a4caec4d94240cde8e604e2b1535"
+    }
+  },
+  "permitted_change": {
+    "path": "src/spectrum_semcom/aerpaw_helikite_repair.py",
+    "parent_sha256": null,
+    "scope": "Support the 2025 power-only SigMF layout by deterministically reconstructing the frequency axis from aerpaw:freq_start, aerpaw:freq_stop, and aerpaw:bin_width.",
+    "may_change_algorithm": false,
+    "may_change_task_thresholds": false,
+    "may_change_scene_selection": false
+  },
+  "execution": {
+    "algorithm_and_statistics_source": "configs/stage6_external_final_protocol_v1.json",
+    "scene_catalog_source": "results/stage6/external_final_catalog_v1/catalog.json",
+    "all_200_scenes_required": true,
+    "subset_analysis_as_primary_result_permitted": false,
+    "method_output_guided_tuning_permitted": false,
+    "raw_output": "results/stage6/external_repair_validation_v1/repair_raw.json",
+    "analysis_output": "results/stage6/external_repair_validation_v1/repair_analysis.json",
+    "execution_log": "results/stage6/external_repair_validation_v1/execution.log",
+    "freeze_snapshot": "results/stage6/external_repair_validation_freeze_v1/code_snapshot.json"
+  },
+  "freeze": {
+    "additional_files": [
+      "configs/stage6_external_repair_validation_v1.json",
+      "src/spectrum_semcom/aerpaw_helikite_repair.py",
+      "scripts/freeze_stage6_external_repair_validation.py",
+      "scripts/run_stage6_external_repair_validation.py",
+      "scripts/analyze_stage6_external_repair_validation.py",
+      "tests/test_aerpaw_helikite.py",
+      "tests/test_stage6_external_repair_validation.py"
+    ],
+    "unchanged_parent_frozen_files_required": true,
+    "parent_frozen_files_allowed_to_change": []
+  },
+  "interpretation": {
+    "may_be_called_external_confirmatory_final": false,
+    "may_be_called_single_access_final": false,
+    "permitted_label": "external repair validation",
+    "registered_final_acceptance_rules_are_descriptive_only": true,
+    "reason": "The adapter was repaired after observing an external metadata incompatibility and the same registered catalog is accessed again."
+  }
+}

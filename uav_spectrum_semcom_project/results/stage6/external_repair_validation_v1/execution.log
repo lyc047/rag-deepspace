@@ -1,0 +1,37 @@
+loaded Final sweeps: 25/200
+loaded Final sweeps: 50/200
+loaded Final sweeps: 75/200
+loaded Final sweeps: 100/200
+loaded Final sweeps: 125/200
+loaded Final sweeps: 150/200
+loaded Final sweeps: 175/200
+loaded Final sweeps: 200/200
+Stage-6 Final N=8 campaign=aerpaw_lake_wheeler_2024 complete
+Stage-6 Final N=8 campaign=aerpaw_packapalooza_2024 complete
+Stage-6 Final N=8 campaign=aerpaw_packapalooza_2025 complete
+Stage-6 Final N=16 campaign=aerpaw_lake_wheeler_2024 complete
+Stage-6 Final N=16 campaign=aerpaw_packapalooza_2024 complete
+Stage-6 Final N=16 campaign=aerpaw_packapalooza_2025 complete
+Stage-6 Final N=32 campaign=aerpaw_lake_wheeler_2024 complete
+Stage-6 Final N=32 campaign=aerpaw_packapalooza_2024 complete
+Stage-6 Final N=32 campaign=aerpaw_packapalooza_2025 complete
+Stage-6 Final N=64 campaign=aerpaw_lake_wheeler_2024 complete
+Stage-6 Final N=64 campaign=aerpaw_packapalooza_2024 complete
+Stage-6 Final N=64 campaign=aerpaw_packapalooza_2025 complete
+{
+  "output": "C:\\Users\\Lenovo\\Desktop\\\u9879\u76ee\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage6\\external_repair_validation_v1\\repair_raw.json",
+  "scene_count": 200,
+  "campaign_ids": [
+    "aerpaw_lake_wheeler_2024",
+    "aerpaw_packapalooza_2024",
+    "aerpaw_packapalooza_2025"
+  ],
+  "n_values": [
+    8,
+    16,
+    32,
+    64
+  ],
+  "classification": "external_repair_validation_non_confirmatory",
+  "parent_final_state_unchanged": true
+}
