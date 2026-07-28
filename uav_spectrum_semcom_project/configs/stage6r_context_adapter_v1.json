@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage6r_context_adapter_v1",
+  "status": "registered_before_execution",
+  "purpose": "Test a lightweight learned-context codebook selector with training-only OOD gating and safe few-shot installation.",
+  "parent_experiment": "stage6r_few_shot_adaptation_v1",
+  "inputs": {
+    "parent_config": "configs/stage6r_few_shot_adaptation_v1.json",
+    "parent_result": "results/stage6r/few_shot_adaptation_v1/result.json"
+  },
+  "representation": {
+    "per_scene_center": "median_power",
+    "per_scene_scale": "standard_deviation",
+    "session_feature": "mean_normalized_spectral_shape",
+    "context_model": "nearest_campaign_centroid",
+    "ood_threshold": "maximum_training_context_nearest_neighbour_distance",
+    "threshold_multiplier": 1.0
+  },
+  "methods": [
+    "zero_shot_global",
+    "hard_coverage_gate_parent",
+    "spectral_context_ood_adapter",
+    "oracle_future_upper_bound"
+  ],
+  "primary_gate": {
+    "minimum_macro_future_coverage": 0.9,
+    "minimum_worst_activity_future_coverage": 0.8,
+    "minimum_macro_full_session_payload_savings_percentage": 0.0,
+    "maximum_k": 4,
+    "maximum_calibration_scenes": 8,
+    "unsafe_coded_action_count": 0
+  },
+  "retention_rule": "Retain only if the spectral context adapter passes the primary gate for at least three N values and is not worse than the hard coverage gate by more than 0.02 macro future coverage.",
+  "claim_boundary": [
+    "This is a lightweight context-learning prototype, not an end-to-end neural semantic codebook.",
+    "All evaluated scenes are already-consumed development data and cannot support a new Final claim.",
+    "The OOD threshold is fitted only from training-campaign prototypes in each outer fold.",
+    "Every transmitted compact action still requires exact regret safety verification, with exact-action escape on failure."
+  ]
+}

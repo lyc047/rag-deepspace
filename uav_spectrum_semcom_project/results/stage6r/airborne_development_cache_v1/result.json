@@ -1,0 +1,83 @@
+{
+  "version": "1.0",
+  "status": "stage6r_airborne_development_cache_complete",
+  "data_role": "consumed_external_data_now_development_only",
+  "external_confirmatory_final": false,
+  "source_access_count": 1,
+  "source_access_state_sha256": "1b19c8500adaf7cfeeccc151c1e98bc54eb0e93d90c411f78f5429f827f8ece5",
+  "source_catalog_sha256": "e54aeaeea4eca5457166048dcd61482fe277eb93b290fc8fc4560b6b256d1e3a",
+  "source_protocol_sha256": "751e89804e549a9403567a35638ba9d3e8f200c63b25c438778e9032bbec265c",
+  "cache_path": "results/stage6r/airborne_development_cache_v1/cache.npz",
+  "cache_sha256": "5632cd221e330edbab1b90e6394fe961897f1aba792c7aa8b295e0dd198373a8",
+  "scene_count": 200,
+  "campaign_counts": {
+    "aerpaw_lake_wheeler_2024": 67,
+    "aerpaw_packapalooza_2024": 67,
+    "aerpaw_packapalooza_2025": 66
+  },
+  "n_values": [
+    8,
+    16,
+    32,
+    64
+  ],
+  "arrays": {
+    "scene_ids": {
+      "shape": [
+        200
+      ],
+      "dtype": "<U53"
+    },
+    "campaign_ids": {
+      "shape": [
+        200
+      ],
+      "dtype": "<U24"
+    },
+    "timestamps_local": {
+      "shape": [
+        200
+      ],
+      "dtype": "<U19"
+    },
+    "cluster_ids": {
+      "shape": [
+        200
+      ],
+      "dtype": "<U38"
+    },
+    "channel_power_n8": {
+      "shape": [
+        200,
+        8
+      ],
+      "dtype": "float32"
+    },
+    "channel_power_n16": {
+      "shape": [
+        200,
+        16
+      ],
+      "dtype": "float32"
+    },
+    "channel_power_n32": {
+      "shape": [
+        200,
+        32
+      ],
+      "dtype": "float32"
+    },
+    "channel_power_n64": {
+      "shape": [
+        200,
+        64
+      ],
+      "dtype": "float32"
+    }
+  },
+  "governance": {
+    "may_be_used_for_stage6r_training_and_selection": true,
+    "may_be_relabelled_as_new_final": false,
+    "future_final_requires_new_unseen_signal_data": true
+  }
+}

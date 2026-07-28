@@ -1,0 +1,96 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage6r_codebook_feasibility_v1",
+  "status": "registered_before_stage6r_feasibility_execution",
+  "created_date": "2026-07-28",
+  "purpose": "Measure the cross-campaign feasibility and oracle boundary of safe fixed-action task codebooks before training an AI codebook.",
+  "research_questions": [
+    "Does expanding candidates beyond observed optimal actions reduce leave-one-campaign-out escape?",
+    "Does campaign-balanced coverage improve worst-campaign generalization?",
+    "Is a single fixed-action codebook structurally adequate at practical K?"
+  ],
+  "inputs": {
+    "pilot_2023_cache": "results/stage5/helikite_pilot_v1/helikite_pilot_cache.npz",
+    "external_2024_2025_cache": "results/stage6r/airborne_development_cache_v1/cache.npz",
+    "external_catalog": "results/stage6/external_final_catalog_v1/catalog.json",
+    "external_access_state": "configs/stage6_external_final_access_state.json",
+    "required_external_access_status": "access_consumed_final_execution_failed",
+    "external_data_role": "consumed_external_data_now_development_only",
+    "fixed_site_2022_role": "deferred_cross_domain_stress_not_used_in_primary_airborne_scan"
+  },
+  "task": {
+    "n_channels": [8, 16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "demand_rounding": "nearest_integer",
+    "epsilon_db": 0.2,
+    "k_values": [3, 4, 8, 16, 32, 64],
+    "cvar_alpha": 0.9
+  },
+  "splitting": {
+    "outer_unit": "airborne_campaign",
+    "campaign_ids": [
+      "aerpaw_packapalooza_2023",
+      "aerpaw_lake_wheeler_2024",
+      "aerpaw_packapalooza_2024",
+      "aerpaw_packapalooza_2025"
+    ],
+    "leave_one_campaign_out": true,
+    "random_scene_split_permitted": false,
+    "campaign_balanced_training_weight": true
+  },
+  "methods": [
+    "optimal_only_unbalanced",
+    "optimal_only_balanced",
+    "admissible_union_balanced",
+    "exhaustive_balanced",
+    "oracle_holdout_exhaustive"
+  ],
+  "selection": {
+    "primary_score": "maximum_new_weighted_coverage",
+    "balanced_weight_per_scene": "one_over_campaign_scene_count",
+    "tie_break_1": "minimum_mean_max_regret_on_newly_covered_states",
+    "tie_break_2": "lexicographic_action_tuple",
+    "unsafe_codeword_transmission_permitted": false,
+    "fallback": "escape_plus_exact_action"
+  },
+  "metrics": {
+    "primary": [
+      "heldout_escape_rate",
+      "macro_heldout_coverage",
+      "worst_heldout_coverage"
+    ],
+    "secondary": [
+      "train_coverage",
+      "codeword_utilization",
+      "codeword_entropy_bits",
+      "covered_mean_max_regret_db",
+      "covered_cvar_0_9_max_regret_db",
+      "covered_maximum_max_regret_db",
+      "expected_semantic_payload_bits_per_scene",
+      "training_test_coverage_gap"
+    ],
+    "safety": [
+      "unsafe_coded_action_count",
+      "escape_count"
+    ]
+  },
+  "decision_rules": {
+    "single_layer_fixed_codebook_structurally_inadequate": "oracle holdout escape exceeds 0.50 at K=64 for any three or more N values",
+    "representation_generalization_problem": "oracle holdout macro escape is at most 0.20 but cross-campaign exhaustive-balanced macro escape exceeds 0.50",
+    "candidate_generation_problem": "admissible-union balanced improves macro coverage by at least 0.10 over optimal-only balanced at the same K",
+    "strong_feasibility": "cross-campaign macro escape is at most 0.20 with K at most 16 for at least three N values",
+    "ai_entry_gate": "oracle shows fixed-action feasibility and the strongest cross-campaign analytic method leaves at least 0.10 absolute macro coverage gap"
+  },
+  "outputs": {
+    "cache_result": "results/stage6r/airborne_development_cache_v1/result.json",
+    "raw_result": "results/stage6r/codebook_feasibility_v1/result.json",
+    "report": "docs/STAGE6R_CODEBOOK_FEASIBILITY_REPORT.md"
+  },
+  "governance": {
+    "external_confirmatory_final": false,
+    "may_tune_future_development": true,
+    "may_claim_new_final": false,
+    "all_grid_points_must_be_retained": true,
+    "future_final_must_use_new_unseen_signal_data": true
+  }
+}

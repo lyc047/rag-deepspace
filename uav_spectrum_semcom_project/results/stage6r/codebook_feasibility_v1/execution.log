@@ -1,0 +1,104 @@
+Stage-6R feasibility N=8 holdout=aerpaw_packapalooza_2023 method=optimal_only_unbalanced complete
+Stage-6R feasibility N=8 holdout=aerpaw_packapalooza_2023 method=optimal_only_balanced complete
+Stage-6R feasibility N=8 holdout=aerpaw_packapalooza_2023 method=admissible_union_balanced complete
+Stage-6R feasibility N=8 holdout=aerpaw_packapalooza_2023 method=exhaustive_balanced complete
+Stage-6R feasibility N=8 holdout=aerpaw_packapalooza_2023 method=oracle_holdout_exhaustive complete
+Stage-6R feasibility N=8 holdout=aerpaw_lake_wheeler_2024 method=optimal_only_unbalanced complete
+Stage-6R feasibility N=8 holdout=aerpaw_lake_wheeler_2024 method=optimal_only_balanced complete
+Stage-6R feasibility N=8 holdout=aerpaw_lake_wheeler_2024 method=admissible_union_balanced complete
+Stage-6R feasibility N=8 holdout=aerpaw_lake_wheeler_2024 method=exhaustive_balanced complete
+Stage-6R feasibility N=8 holdout=aerpaw_lake_wheeler_2024 method=oracle_holdout_exhaustive complete
+Stage-6R feasibility N=8 holdout=aerpaw_packapalooza_2024 method=optimal_only_unbalanced complete
+Stage-6R feasibility N=8 holdout=aerpaw_packapalooza_2024 method=optimal_only_balanced complete
+Stage-6R feasibility N=8 holdout=aerpaw_packapalooza_2024 method=admissible_union_balanced complete
+Stage-6R feasibility N=8 holdout=aerpaw_packapalooza_2024 method=exhaustive_balanced complete
+Stage-6R feasibility N=8 holdout=aerpaw_packapalooza_2024 method=oracle_holdout_exhaustive complete
+Stage-6R feasibility N=8 holdout=aerpaw_packapalooza_2025 method=optimal_only_unbalanced complete
+Stage-6R feasibility N=8 holdout=aerpaw_packapalooza_2025 method=optimal_only_balanced complete
+Stage-6R feasibility N=8 holdout=aerpaw_packapalooza_2025 method=admissible_union_balanced complete
+Stage-6R feasibility N=8 holdout=aerpaw_packapalooza_2025 method=exhaustive_balanced complete
+Stage-6R feasibility N=8 holdout=aerpaw_packapalooza_2025 method=oracle_holdout_exhaustive complete
+Stage-6R feasibility N=8 complete
+Stage-6R feasibility N=16 holdout=aerpaw_packapalooza_2023 method=optimal_only_unbalanced complete
+Stage-6R feasibility N=16 holdout=aerpaw_packapalooza_2023 method=optimal_only_balanced complete
+Stage-6R feasibility N=16 holdout=aerpaw_packapalooza_2023 method=admissible_union_balanced complete
+Stage-6R feasibility N=16 holdout=aerpaw_packapalooza_2023 method=exhaustive_balanced complete
+Stage-6R feasibility N=16 holdout=aerpaw_packapalooza_2023 method=oracle_holdout_exhaustive complete
+Stage-6R feasibility N=16 holdout=aerpaw_lake_wheeler_2024 method=optimal_only_unbalanced complete
+Stage-6R feasibility N=16 holdout=aerpaw_lake_wheeler_2024 method=optimal_only_balanced complete
+Stage-6R feasibility N=16 holdout=aerpaw_lake_wheeler_2024 method=admissible_union_balanced complete
+Stage-6R feasibility N=16 holdout=aerpaw_lake_wheeler_2024 method=exhaustive_balanced complete
+Stage-6R feasibility N=16 holdout=aerpaw_lake_wheeler_2024 method=oracle_holdout_exhaustive complete
+Stage-6R feasibility N=16 holdout=aerpaw_packapalooza_2024 method=optimal_only_unbalanced complete
+Stage-6R feasibility N=16 holdout=aerpaw_packapalooza_2024 method=optimal_only_balanced complete
+Stage-6R feasibility N=16 holdout=aerpaw_packapalooza_2024 method=admissible_union_balanced complete
+Stage-6R feasibility N=16 holdout=aerpaw_packapalooza_2024 method=exhaustive_balanced complete
+Stage-6R feasibility N=16 holdout=aerpaw_packapalooza_2024 method=oracle_holdout_exhaustive complete
+Stage-6R feasibility N=16 holdout=aerpaw_packapalooza_2025 method=optimal_only_unbalanced complete
+Stage-6R feasibility N=16 holdout=aerpaw_packapalooza_2025 method=optimal_only_balanced complete
+Stage-6R feasibility N=16 holdout=aerpaw_packapalooza_2025 method=admissible_union_balanced complete
+Stage-6R feasibility N=16 holdout=aerpaw_packapalooza_2025 method=exhaustive_balanced complete
+Stage-6R feasibility N=16 holdout=aerpaw_packapalooza_2025 method=oracle_holdout_exhaustive complete
+Stage-6R feasibility N=16 complete
+Stage-6R feasibility N=32 holdout=aerpaw_packapalooza_2023 method=optimal_only_unbalanced complete
+Stage-6R feasibility N=32 holdout=aerpaw_packapalooza_2023 method=optimal_only_balanced complete
+Stage-6R feasibility N=32 holdout=aerpaw_packapalooza_2023 method=admissible_union_balanced complete
+Stage-6R feasibility N=32 holdout=aerpaw_packapalooza_2023 method=exhaustive_balanced complete
+Stage-6R feasibility N=32 holdout=aerpaw_packapalooza_2023 method=oracle_holdout_exhaustive complete
+Stage-6R feasibility N=32 holdout=aerpaw_lake_wheeler_2024 method=optimal_only_unbalanced complete
+Stage-6R feasibility N=32 holdout=aerpaw_lake_wheeler_2024 method=optimal_only_balanced complete
+Stage-6R feasibility N=32 holdout=aerpaw_lake_wheeler_2024 method=admissible_union_balanced complete
+Stage-6R feasibility N=32 holdout=aerpaw_lake_wheeler_2024 method=exhaustive_balanced complete
+Stage-6R feasibility N=32 holdout=aerpaw_lake_wheeler_2024 method=oracle_holdout_exhaustive complete
+Stage-6R feasibility N=32 holdout=aerpaw_packapalooza_2024 method=optimal_only_unbalanced complete
+Stage-6R feasibility N=32 holdout=aerpaw_packapalooza_2024 method=optimal_only_balanced complete
+Stage-6R feasibility N=32 holdout=aerpaw_packapalooza_2024 method=admissible_union_balanced complete
+Stage-6R feasibility N=32 holdout=aerpaw_packapalooza_2024 method=exhaustive_balanced complete
+Stage-6R feasibility N=32 holdout=aerpaw_packapalooza_2024 method=oracle_holdout_exhaustive complete
+Stage-6R feasibility N=32 holdout=aerpaw_packapalooza_2025 method=optimal_only_unbalanced complete
+Stage-6R feasibility N=32 holdout=aerpaw_packapalooza_2025 method=optimal_only_balanced complete
+Stage-6R feasibility N=32 holdout=aerpaw_packapalooza_2025 method=admissible_union_balanced complete
+Stage-6R feasibility N=32 holdout=aerpaw_packapalooza_2025 method=exhaustive_balanced complete
+Stage-6R feasibility N=32 holdout=aerpaw_packapalooza_2025 method=oracle_holdout_exhaustive complete
+Stage-6R feasibility N=32 complete
+Stage-6R feasibility N=64 holdout=aerpaw_packapalooza_2023 method=optimal_only_unbalanced complete
+Stage-6R feasibility N=64 holdout=aerpaw_packapalooza_2023 method=optimal_only_balanced complete
+Stage-6R feasibility N=64 holdout=aerpaw_packapalooza_2023 method=admissible_union_balanced complete
+Stage-6R feasibility N=64 holdout=aerpaw_packapalooza_2023 method=exhaustive_balanced complete
+Stage-6R feasibility N=64 holdout=aerpaw_packapalooza_2023 method=oracle_holdout_exhaustive complete
+Stage-6R feasibility N=64 holdout=aerpaw_lake_wheeler_2024 method=optimal_only_unbalanced complete
+Stage-6R feasibility N=64 holdout=aerpaw_lake_wheeler_2024 method=optimal_only_balanced complete
+Stage-6R feasibility N=64 holdout=aerpaw_lake_wheeler_2024 method=admissible_union_balanced complete
+Stage-6R feasibility N=64 holdout=aerpaw_lake_wheeler_2024 method=exhaustive_balanced complete
+Stage-6R feasibility N=64 holdout=aerpaw_lake_wheeler_2024 method=oracle_holdout_exhaustive complete
+Stage-6R feasibility N=64 holdout=aerpaw_packapalooza_2024 method=optimal_only_unbalanced complete
+Stage-6R feasibility N=64 holdout=aerpaw_packapalooza_2024 method=optimal_only_balanced complete
+Stage-6R feasibility N=64 holdout=aerpaw_packapalooza_2024 method=admissible_union_balanced complete
+Stage-6R feasibility N=64 holdout=aerpaw_packapalooza_2024 method=exhaustive_balanced complete
+Stage-6R feasibility N=64 holdout=aerpaw_packapalooza_2024 method=oracle_holdout_exhaustive complete
+Stage-6R feasibility N=64 holdout=aerpaw_packapalooza_2025 method=optimal_only_unbalanced complete
+Stage-6R feasibility N=64 holdout=aerpaw_packapalooza_2025 method=optimal_only_balanced complete
+Stage-6R feasibility N=64 holdout=aerpaw_packapalooza_2025 method=admissible_union_balanced complete
+Stage-6R feasibility N=64 holdout=aerpaw_packapalooza_2025 method=exhaustive_balanced complete
+Stage-6R feasibility N=64 holdout=aerpaw_packapalooza_2025 method=oracle_holdout_exhaustive complete
+Stage-6R feasibility N=64 complete
+{
+  "output": "C:\\Users\\Lenovo\\Desktop\\\u9879\u76ee\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage6r\\codebook_feasibility_v1\\result.json",
+  "status": "stage6r_codebook_feasibility_complete",
+  "decision_summary": {
+    "single_layer_fixed_codebook_structurally_inadequate": false,
+    "n_values_with_oracle_escape_above_0_50_at_k64": [],
+    "representation_generalization_problem_n_values": [],
+    "candidate_generation_problem_detected": false,
+    "candidate_generation_improvements": [],
+    "strong_feasibility_passed": false,
+    "strong_feasibility_n_values": [],
+    "ai_entry_gate_n_values": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "recommended_next_route": "regret_aware_candidate_ranking_ai_prototype"
+  }
+}

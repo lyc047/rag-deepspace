@@ -1,0 +1,58 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage6r_few_shot_adaptation_v1",
+  "status": "registered_before_execution",
+  "purpose": "Measure how many chronological calibration scenes are required to install or select a compact safe task-action codebook for a previously unseen activity.",
+  "inputs": {
+    "pilot_2023_cache": "results/stage5/helikite_pilot_v1/helikite_pilot_cache.npz",
+    "external_2024_2025_cache": "results/stage6r/airborne_development_cache_v1/cache.npz",
+    "external_access_state": "configs/stage6_external_final_access_state.json",
+    "required_external_access_status": "access_consumed_final_execution_failed"
+  },
+  "task": {
+    "n_channels": [8, 16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "epsilon_db": 0.2,
+    "cvar_alpha": 0.95,
+    "k_values": [3, 4, 8],
+    "calibration_scene_budgets": [1, 2, 4, 8, 16, 32]
+  },
+  "splitting": {
+    "unit": "activity",
+    "within_holdout_order": "chronological_prefix_calibration_then_future_evaluation",
+    "campaign_ids": [
+      "aerpaw_packapalooza_2023",
+      "aerpaw_lake_wheeler_2024",
+      "aerpaw_packapalooza_2024",
+      "aerpaw_packapalooza_2025"
+    ]
+  },
+  "methods": [
+    "zero_shot_global",
+    "preinstalled_bank_selector",
+    "calibration_only_adapt",
+    "bank_or_adapt",
+    "oracle_future_upper_bound"
+  ],
+  "protocol_accounting": {
+    "adapted_codebook_install_header_bits": 16,
+    "preinstalled_bank_selection_header_bits": 8,
+    "calibration_scenes_use_exact_action_payload": true,
+    "scope": "payload_and_explicit_adaptation_control_only_not_full_stage6_reliability_protocol"
+  },
+  "bank_or_adapt": {
+    "minimum_calibration_coverage_to_reuse_bank": 0.9
+  },
+  "decision_rules": {
+    "few_shot_adaptation_viable": "For at least three N values, K <= 4 and calibration budget <= 8 achieve macro future coverage >= 0.90, worst-activity future coverage >= 0.80, zero unsafe coded actions, and positive full-session payload savings.",
+    "bank_reuse_viable": "The preinstalled bank selector meets the few-shot adaptation gate without installing new action tuples.",
+    "ai_ranker_entry": "Calibration adaptation is viable, but the bank selector is not; train a regret-aware candidate ranker to reduce calibration or installation cost.",
+    "reject_direct_global_vq": "The zero-shot global codebook remains below 0.80 worst-activity future coverage at K = 8."
+  },
+  "claim_boundary": [
+    "All 2024-2025 scenes were already consumed and are development-only.",
+    "The chronological suffix is an internal future segment, not a new Final holdout.",
+    "Oracle future fitting is an unattainable upper bound and cannot be reported as an implementable method.",
+    "Every compact action is accepted only after exact regret verification; otherwise the system escapes to the exact action."
+  ]
+}
