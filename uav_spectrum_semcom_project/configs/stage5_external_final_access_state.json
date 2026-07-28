@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "registry_id": "stage5_external_final_registry_v1",
+  "status": "downloaded_integrity_verified_not_accessed",
+  "access_count": 0,
+  "final_signal_values_accessed": false,
+  "final_method_outputs_accessed": false,
+  "code_snapshot_sha256": null,
+  "catalog_sha256": null,
+  "consumed_at": null,
+  "actor": null
+}

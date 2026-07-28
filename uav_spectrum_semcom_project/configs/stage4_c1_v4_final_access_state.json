@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "protocol_id": "stage4_c1_v4_same_campaign_temporal_final_v1",
+  "status": "access_consumed",
+  "access_count": 1,
+  "receipt": {
+    "consumed_utc": "2026-07-22T04:05:20.112085+00:00",
+    "protocol_sha256": "86e4797d201f93abce5d07b9a7d2e5e1952bf197bef1bc77e3f6a1f1438842d5",
+    "inventory_sha256": "578d988b5edf204d353da12d22730167ce1611306d18b39b7f5bcd60e6b1e105",
+    "executable_snapshot_sha256": "1ed56a08e0405421baade426d1e98664c4b31555324561bfa447a1d9c6e67991"
+  },
+  "receipt_sha256": "2ac71dcf093ea14e0d06b7454e58c7b508f19291f222c4079f8b2df8f0393d96"
+}

@@ -1,0 +1,4827 @@
+{
+  "schema_version": "stage4_final_scene_metrics_v1",
+  "registry_sha256": "cab70cf796cc0f12cc92370ad4dfcd5e187c4bd26919536324e0a69e08ebc487",
+  "access_receipt_sha256": "b85f573644d1b1bd9ba017d13dd05d341e51c4e15678bc8c9e73308012f8cfc3",
+  "families": {
+    "C1_resource_loss": {
+      "rows": [
+        {
+          "scene_id": "aerpaw-three-site:20220208T175826Z",
+          "method": "detection_only",
+          "regret": 0.012592315673828125,
+          "actual_bits": 696.0177777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T175826Z",
+          "method": "detection_plus_resource",
+          "regret": 0.012592315673828125,
+          "actual_bits": 690.7288888888888
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T182834Z",
+          "method": "detection_only",
+          "regret": 0.4022216796875,
+          "actual_bits": 689.1422222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T182834Z",
+          "method": "detection_plus_resource",
+          "regret": 0.4022216796875,
+          "actual_bits": 695.7533333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T185839Z",
+          "method": "detection_only",
+          "regret": 0.33774566650390625,
+          "actual_bits": 691.2577777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T185839Z",
+          "method": "detection_plus_resource",
+          "regret": 0.33774566650390625,
+          "actual_bits": 690.2
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T192847Z",
+          "method": "detection_only",
+          "regret": 0.219552001953125,
+          "actual_bits": 689.1422222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T192847Z",
+          "method": "detection_plus_resource",
+          "regret": 0.22488833533393013,
+          "actual_bits": 695.4888888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T195854Z",
+          "method": "detection_only",
+          "regret": 0.055484771728515625,
+          "actual_bits": 692.0511111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T195854Z",
+          "method": "detection_plus_resource",
+          "regret": 0.055484771728515625,
+          "actual_bits": 685.7044444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T202902Z",
+          "method": "detection_only",
+          "regret": 0.30686187744140625,
+          "actual_bits": 688.0844444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T202902Z",
+          "method": "detection_plus_resource",
+          "regret": 0.30686187744140625,
+          "actual_bits": 699.9844444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T205912Z",
+          "method": "detection_only",
+          "regret": 0.12354278564453125,
+          "actual_bits": 692.0511111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T205912Z",
+          "method": "detection_plus_resource",
+          "regret": 0.12354278564453125,
+          "actual_bits": 698.3977777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T212923Z",
+          "method": "detection_only",
+          "regret": 0.2747611999511719,
+          "actual_bits": 693.3733333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T212923Z",
+          "method": "detection_plus_resource",
+          "regret": 0.2747611999511719,
+          "actual_bits": 694.4311111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T222936Z",
+          "method": "detection_only",
+          "regret": 0.13913726806640625,
+          "actual_bits": 685.7044444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T222936Z",
+          "method": "detection_plus_resource",
+          "regret": 0.13913726806640625,
+          "actual_bits": 692.58
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T225943Z",
+          "method": "detection_only",
+          "regret": 0.3405713187323676,
+          "actual_bits": 692.3155555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T225943Z",
+          "method": "detection_plus_resource",
+          "regret": 0.34638311598036026,
+          "actual_bits": 718.7288888888888
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T232950Z",
+          "method": "detection_only",
+          "regret": 0.07123947143554688,
+          "actual_bits": 698.6622222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T232950Z",
+          "method": "detection_plus_resource",
+          "regret": 0.07123947143554688,
+          "actual_bits": 687.2911111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T235957Z",
+          "method": "detection_only",
+          "regret": 0.33310504065619573,
+          "actual_bits": 693.6377777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T235957Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3370841111077203,
+          "actual_bits": 725.9311111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T003004Z",
+          "method": "detection_only",
+          "regret": 0.06572723388671875,
+          "actual_bits": 693.3733333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T003004Z",
+          "method": "detection_plus_resource",
+          "regret": 0.06572723388671875,
+          "actual_bits": 685.7044444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T010011Z",
+          "method": "detection_only",
+          "regret": 0.307525634765625,
+          "actual_bits": 686.7622222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T010011Z",
+          "method": "detection_plus_resource",
+          "regret": 0.307525634765625,
+          "actual_bits": 698.3977777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T013018Z",
+          "method": "detection_only",
+          "regret": 0.397613525390625,
+          "actual_bits": 688.0844444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T013018Z",
+          "method": "detection_plus_resource",
+          "regret": 0.397613525390625,
+          "actual_bits": 698.6622222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T023035Z",
+          "method": "detection_only",
+          "regret": 0.055750287373860674,
+          "actual_bits": 690.2
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T023035Z",
+          "method": "detection_plus_resource",
+          "regret": 0.05603914896647135,
+          "actual_bits": 716.3877777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T030041Z",
+          "method": "detection_only",
+          "regret": 0.005161285400390625,
+          "actual_bits": 686.2333333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T030041Z",
+          "method": "detection_plus_resource",
+          "regret": 0.005161285400390625,
+          "actual_bits": 686.7622222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T033049Z",
+          "method": "detection_only",
+          "regret": 0.4813079833984375,
+          "actual_bits": 696.2822222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T033049Z",
+          "method": "detection_plus_resource",
+          "regret": 0.4813079833984375,
+          "actual_bits": 688.8777777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T040055Z",
+          "method": "detection_only",
+          "regret": 0.34145355224609375,
+          "actual_bits": 694.6955555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T040055Z",
+          "method": "detection_plus_resource",
+          "regret": 0.34145355224609375,
+          "actual_bits": 696.8111111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T043102Z",
+          "method": "detection_only",
+          "regret": 0.3790063010321723,
+          "actual_bits": 691.5222222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T043102Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3796586354573568,
+          "actual_bits": 719.8411111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T050109Z",
+          "method": "detection_only",
+          "regret": 0.5178260803222656,
+          "actual_bits": 696.5466666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T050109Z",
+          "method": "detection_plus_resource",
+          "regret": 0.44964564641316734,
+          "actual_bits": 725.8922222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T053115Z",
+          "method": "detection_only",
+          "regret": 0.1573206753200955,
+          "actual_bits": 693.6377777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T053115Z",
+          "method": "detection_plus_resource",
+          "regret": 0.15704989963107638,
+          "actual_bits": 691.5222222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T060122Z",
+          "method": "detection_only",
+          "regret": 0.1039795027838813,
+          "actual_bits": 692.58
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T060122Z",
+          "method": "detection_plus_resource",
+          "regret": 0.10535443835788302,
+          "actual_bits": 698.6622222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T070136Z",
+          "method": "detection_only",
+          "regret": 0.21730882856580946,
+          "actual_bits": 695.7533333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T070136Z",
+          "method": "detection_plus_resource",
+          "regret": 0.2094714609781901,
+          "actual_bits": 719.3122222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T073143Z",
+          "method": "detection_only",
+          "regret": 0.37900277031792534,
+          "actual_bits": 700.5133333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T073143Z",
+          "method": "detection_plus_resource",
+          "regret": 0.37335537804497615,
+          "actual_bits": 717.8344444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T080151Z",
+          "method": "detection_only",
+          "regret": 0.1134033203125,
+          "actual_bits": 690.2
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T080151Z",
+          "method": "detection_plus_resource",
+          "regret": 0.1149783664279514,
+          "actual_bits": 724.4766666666667
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T083159Z",
+          "method": "detection_only",
+          "regret": 0.3372077941894531,
+          "actual_bits": 692.3155555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T083159Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3372077941894531,
+          "actual_bits": 692.0511111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T090207Z",
+          "method": "detection_only",
+          "regret": 0.4961204528808594,
+          "actual_bits": 687.0266666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T090207Z",
+          "method": "detection_plus_resource",
+          "regret": 0.4961204528808594,
+          "actual_bits": 703.1577777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T093214Z",
+          "method": "detection_only",
+          "regret": 0.29328965504964194,
+          "actual_bits": 691.7866666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T093214Z",
+          "method": "detection_plus_resource",
+          "regret": 0.30392710367838544,
+          "actual_bits": 721.0466666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T100223Z",
+          "method": "detection_only",
+          "regret": 0.0,
+          "actual_bits": 691.2577777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T100223Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0,
+          "actual_bits": 683.5888888888888
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T110239Z",
+          "method": "detection_only",
+          "regret": 0.3443450927734375,
+          "actual_bits": 695.7533333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T110239Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3443450927734375,
+          "actual_bits": 689.1422222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T113247Z",
+          "method": "detection_only",
+          "regret": 0.2490234375,
+          "actual_bits": 693.9022222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T113247Z",
+          "method": "detection_plus_resource",
+          "regret": 0.2490234375,
+          "actual_bits": 689.1422222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T120253Z",
+          "method": "detection_only",
+          "regret": 0.04239647547403971,
+          "actual_bits": 688.6133333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T120253Z",
+          "method": "detection_plus_resource",
+          "regret": 0.04283734003702799,
+          "actual_bits": 693.3733333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T123301Z",
+          "method": "detection_only",
+          "regret": 0.3764457702636719,
+          "actual_bits": 690.9933333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T123301Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3764457702636719,
+          "actual_bits": 689.6711111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T130310Z",
+          "method": "detection_only",
+          "regret": 0.0034027099609375,
+          "actual_bits": 695.4888888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T130310Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0034027099609375,
+          "actual_bits": 693.6377777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T133317Z",
+          "method": "detection_only",
+          "regret": 0.0,
+          "actual_bits": 692.58
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T133317Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0,
+          "actual_bits": 685.44
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T140324Z",
+          "method": "detection_only",
+          "regret": 0.10634496476915148,
+          "actual_bits": 693.3733333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T140324Z",
+          "method": "detection_plus_resource",
+          "regret": 0.09984800550672743,
+          "actual_bits": 690.2
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T150338Z",
+          "method": "detection_only",
+          "regret": 0.03173564910888672,
+          "actual_bits": 700.7777777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T150338Z",
+          "method": "detection_plus_resource",
+          "regret": 0.031574554443359375,
+          "actual_bits": 696.2822222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T153345Z",
+          "method": "detection_only",
+          "regret": 0.36863374286227757,
+          "actual_bits": 700.2488888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T153345Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3723139466179742,
+          "actual_bits": 725.4488888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T160352Z",
+          "method": "detection_only",
+          "regret": 0.11669540405273438,
+          "actual_bits": 696.2822222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T160352Z",
+          "method": "detection_plus_resource",
+          "regret": 0.11669540405273438,
+          "actual_bits": 696.8111111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T163359Z",
+          "method": "detection_only",
+          "regret": 0.06518173217773438,
+          "actual_bits": 696.0177777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T163359Z",
+          "method": "detection_plus_resource",
+          "regret": 0.06518173217773438,
+          "actual_bits": 695.2244444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T170407Z",
+          "method": "detection_only",
+          "regret": 0.41483190324571395,
+          "actual_bits": 746.5188888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T170407Z",
+          "method": "detection_plus_resource",
+          "regret": 0.41326649983723956,
+          "actual_bits": 753.8766666666667
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T173414Z",
+          "method": "detection_only",
+          "regret": 0.07128143310546875,
+          "actual_bits": 692.3155555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T173414Z",
+          "method": "detection_plus_resource",
+          "regret": 0.07128143310546875,
+          "actual_bits": 690.9933333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T180421Z",
+          "method": "detection_only",
+          "regret": 0.4047050476074219,
+          "actual_bits": 692.8444444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T180421Z",
+          "method": "detection_plus_resource",
+          "regret": 0.35321757210625543,
+          "actual_bits": 720.3855555555556
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T183429Z",
+          "method": "detection_only",
+          "regret": 0.0491778564453125,
+          "actual_bits": 697.6044444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T183429Z",
+          "method": "detection_plus_resource",
+          "regret": 0.047513631184895835,
+          "actual_bits": 690.2
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T193444Z",
+          "method": "detection_only",
+          "regret": 0.205472412109375,
+          "actual_bits": 693.6377777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T193444Z",
+          "method": "detection_plus_resource",
+          "regret": 0.21474720848931206,
+          "actual_bits": 692.58
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T200451Z",
+          "method": "detection_only",
+          "regret": 0.20209726969401043,
+          "actual_bits": 695.7533333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T200451Z",
+          "method": "detection_plus_resource",
+          "regret": 0.19695048014322916,
+          "actual_bits": 695.4888888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T203459Z",
+          "method": "detection_only",
+          "regret": 0.045650482177734375,
+          "actual_bits": 685.44
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T203459Z",
+          "method": "detection_plus_resource",
+          "regret": 0.045650482177734375,
+          "actual_bits": 696.0177777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T210506Z",
+          "method": "detection_only",
+          "regret": 0.049022674560546875,
+          "actual_bits": 691.2577777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T210506Z",
+          "method": "detection_plus_resource",
+          "regret": 0.049022674560546875,
+          "actual_bits": 692.58
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T213514Z",
+          "method": "detection_only",
+          "regret": 0.005748748779296875,
+          "actual_bits": 690.7288888888888
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T213514Z",
+          "method": "detection_plus_resource",
+          "regret": 0.005748748779296875,
+          "actual_bits": 694.4311111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T220521Z",
+          "method": "detection_only",
+          "regret": 0.2008371141221788,
+          "actual_bits": 692.58
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T220521Z",
+          "method": "detection_plus_resource",
+          "regret": 0.19813678317599825,
+          "actual_bits": 690.2
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T223528Z",
+          "method": "detection_only",
+          "regret": 0.21237945556640625,
+          "actual_bits": 692.8444444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T223528Z",
+          "method": "detection_plus_resource",
+          "regret": 0.21237945556640625,
+          "actual_bits": 693.9022222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T233543Z",
+          "method": "detection_only",
+          "regret": 0.301500244140625,
+          "actual_bits": 693.1088888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T233543Z",
+          "method": "detection_plus_resource",
+          "regret": 0.30830493715074325,
+          "actual_bits": 714.5133333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T000551Z",
+          "method": "detection_only",
+          "regret": 0.33586883544921875,
+          "actual_bits": 693.3733333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T000551Z",
+          "method": "detection_plus_resource",
+          "regret": 0.29220588684082033,
+          "actual_bits": 721.6611111111112
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T003558Z",
+          "method": "detection_only",
+          "regret": 0.032886505126953125,
+          "actual_bits": 693.9022222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T003558Z",
+          "method": "detection_plus_resource",
+          "regret": 0.032886505126953125,
+          "actual_bits": 689.9355555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T010606Z",
+          "method": "detection_only",
+          "regret": 0.377227783203125,
+          "actual_bits": 685.44
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T010606Z",
+          "method": "detection_plus_resource",
+          "regret": 0.377227783203125,
+          "actual_bits": 694.4311111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T013612Z",
+          "method": "detection_only",
+          "regret": 0.24432794782850478,
+          "actual_bits": 689.9355555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T013612Z",
+          "method": "detection_plus_resource",
+          "regret": 0.24145350138346355,
+          "actual_bits": 689.9355555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T020618Z",
+          "method": "detection_only",
+          "regret": 0.042552947998046875,
+          "actual_bits": 690.9933333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T020618Z",
+          "method": "detection_plus_resource",
+          "regret": 0.042552947998046875,
+          "actual_bits": 690.9933333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T023626Z",
+          "method": "detection_only",
+          "regret": 0.09875455220540365,
+          "actual_bits": 689.1422222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T023626Z",
+          "method": "detection_plus_resource",
+          "regret": 0.10208138995700412,
+          "actual_bits": 691.7866666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T033639Z",
+          "method": "detection_only",
+          "regret": 0.25380706787109375,
+          "actual_bits": 696.5466666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T033639Z",
+          "method": "detection_plus_resource",
+          "regret": 0.25380706787109375,
+          "actual_bits": 699.1911111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T040646Z",
+          "method": "detection_only",
+          "regret": 0.0,
+          "actual_bits": 693.6377777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T040646Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0,
+          "actual_bits": 692.3155555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T043653Z",
+          "method": "detection_only",
+          "regret": 0.061717987060546875,
+          "actual_bits": 684.1177777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T043653Z",
+          "method": "detection_plus_resource",
+          "regret": 0.061717987060546875,
+          "actual_bits": 694.6955555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T050700Z",
+          "method": "detection_only",
+          "regret": 0.5463676452636719,
+          "actual_bits": 686.7622222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T050700Z",
+          "method": "detection_plus_resource",
+          "regret": 0.47533985137939455,
+          "actual_bits": 723.0222222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T053708Z",
+          "method": "detection_only",
+          "regret": 0.36220550537109375,
+          "actual_bits": 693.6377777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T053708Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3145151138305664,
+          "actual_bits": 727.16
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T060715Z",
+          "method": "detection_only",
+          "regret": 0.9873771667480469,
+          "actual_bits": 690.2
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T060715Z",
+          "method": "detection_plus_resource",
+          "regret": 0.9873771667480469,
+          "actual_bits": 689.9355555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T063722Z",
+          "method": "detection_only",
+          "regret": 0.32158289591471356,
+          "actual_bits": 698.9266666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T063722Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3248699442545573,
+          "actual_bits": 725.2855555555556
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T070730Z",
+          "method": "detection_only",
+          "regret": 0.315287176767985,
+          "actual_bits": 688.3488888888888
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T070730Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3289006127251519,
+          "actual_bits": 721.4122222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T080742Z",
+          "method": "detection_only",
+          "regret": 0.35531129837036135,
+          "actual_bits": 689.1422222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T080742Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3619923655192057,
+          "actual_bits": 719.8255555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T083748Z",
+          "method": "detection_only",
+          "regret": 0.0,
+          "actual_bits": 690.2
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T083748Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0,
+          "actual_bits": 690.2
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T090755Z",
+          "method": "detection_only",
+          "regret": 0.29139232635498047,
+          "actual_bits": 691.5222222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T090755Z",
+          "method": "detection_plus_resource",
+          "regret": 0.38181224822998044,
+          "actual_bits": 748.4244444444445
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T093803Z",
+          "method": "detection_only",
+          "regret": 0.35838968065049914,
+          "actual_bits": 694.4311111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T093803Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3577685546875,
+          "actual_bits": 716.2477777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T100811Z",
+          "method": "detection_only",
+          "regret": 0.1432037353515625,
+          "actual_bits": 687.0266666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T100811Z",
+          "method": "detection_plus_resource",
+          "regret": 0.1432037353515625,
+          "actual_bits": 691.5222222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T103818Z",
+          "method": "detection_only",
+          "regret": 0.28215789794921875,
+          "actual_bits": 689.6711111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T103818Z",
+          "method": "detection_plus_resource",
+          "regret": 0.28215789794921875,
+          "actual_bits": 692.3155555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T110825Z",
+          "method": "detection_only",
+          "regret": 0.46099090576171875,
+          "actual_bits": 699.72
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T110825Z",
+          "method": "detection_plus_resource",
+          "regret": 0.4005498758951823,
+          "actual_bits": 717.9355555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T120839Z",
+          "method": "detection_only",
+          "regret": 0.0,
+          "actual_bits": 693.1088888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T120839Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0,
+          "actual_bits": 696.0177777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T123847Z",
+          "method": "detection_only",
+          "regret": 0.38395284016927084,
+          "actual_bits": 694.1666666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T123847Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3944183349609375,
+          "actual_bits": 724.0022222222223
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T130855Z",
+          "method": "detection_only",
+          "regret": 0.5054435729980469,
+          "actual_bits": 691.5222222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T130855Z",
+          "method": "detection_plus_resource",
+          "regret": 0.5054435729980469,
+          "actual_bits": 686.7622222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T133903Z",
+          "method": "detection_only",
+          "regret": 0.23212331136067707,
+          "actual_bits": 687.2911111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T133903Z",
+          "method": "detection_plus_resource",
+          "regret": 0.2333239491780599,
+          "actual_bits": 691.5222222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T140910Z",
+          "method": "detection_only",
+          "regret": 0.06937408447265625,
+          "actual_bits": 686.4977777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T140910Z",
+          "method": "detection_plus_resource",
+          "regret": 0.06937408447265625,
+          "actual_bits": 689.1422222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T143918Z",
+          "method": "detection_only",
+          "regret": 0.295928955078125,
+          "actual_bits": 693.1088888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T143918Z",
+          "method": "detection_plus_resource",
+          "regret": 0.295928955078125,
+          "actual_bits": 691.7866666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T150926Z",
+          "method": "detection_only",
+          "regret": 0.003498077392578125,
+          "actual_bits": 688.3488888888888
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T150926Z",
+          "method": "detection_plus_resource",
+          "regret": 0.003498077392578125,
+          "actual_bits": 694.1666666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T153933Z",
+          "method": "detection_only",
+          "regret": 0.23339462280273438,
+          "actual_bits": 690.4644444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T153933Z",
+          "method": "detection_plus_resource",
+          "regret": 0.23339462280273438,
+          "actual_bits": 692.0511111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T163945Z",
+          "method": "detection_only",
+          "regret": 0.06420516967773438,
+          "actual_bits": 696.8111111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T163945Z",
+          "method": "detection_plus_resource",
+          "regret": 0.06420516967773438,
+          "actual_bits": 688.8777777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T170953Z",
+          "method": "detection_only",
+          "regret": 0.0,
+          "actual_bits": 695.2244444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T170953Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0,
+          "actual_bits": 697.34
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T174001Z",
+          "method": "detection_only",
+          "regret": 0.18692779541015625,
+          "actual_bits": 688.6133333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T174001Z",
+          "method": "detection_plus_resource",
+          "regret": 0.18692779541015625,
+          "actual_bits": 679.3577777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T181008Z",
+          "method": "detection_only",
+          "regret": 0.061115264892578125,
+          "actual_bits": 687.2911111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T181008Z",
+          "method": "detection_plus_resource",
+          "regret": 0.061115264892578125,
+          "actual_bits": 686.7622222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T184015Z",
+          "method": "detection_only",
+          "regret": 0.2891209411621094,
+          "actual_bits": 695.7533333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T184015Z",
+          "method": "detection_plus_resource",
+          "regret": 0.290535888671875,
+          "actual_bits": 727.7277777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T191022Z",
+          "method": "detection_only",
+          "regret": 0.041881561279296875,
+          "actual_bits": 698.9266666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T191022Z",
+          "method": "detection_plus_resource",
+          "regret": 0.041881561279296875,
+          "actual_bits": 692.3155555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T194029Z",
+          "method": "detection_only",
+          "regret": 0.010692596435546875,
+          "actual_bits": 690.7288888888888
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T194029Z",
+          "method": "detection_plus_resource",
+          "regret": 0.010692596435546875,
+          "actual_bits": 693.6377777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T204043Z",
+          "method": "detection_only",
+          "regret": 0.2963133176167806,
+          "actual_bits": 719.5766666666667
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T204043Z",
+          "method": "detection_plus_resource",
+          "regret": 0.161332458919949,
+          "actual_bits": 812.9644444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T211050Z",
+          "method": "detection_only",
+          "regret": 0.04785357157389323,
+          "actual_bits": 692.58
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T211050Z",
+          "method": "detection_plus_resource",
+          "regret": 0.04768798828125,
+          "actual_bits": 698.9266666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T214057Z",
+          "method": "detection_only",
+          "regret": 0.0041046142578125,
+          "actual_bits": 689.4066666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T214057Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0041046142578125,
+          "actual_bits": 690.7288888888888
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T221104Z",
+          "method": "detection_only",
+          "regret": 0.08582687377929688,
+          "actual_bits": 690.4644444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T221104Z",
+          "method": "detection_plus_resource",
+          "regret": 0.08582687377929688,
+          "actual_bits": 697.34
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T224110Z",
+          "method": "detection_only",
+          "regret": 0.039093017578125,
+          "actual_bits": 696.0177777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T224110Z",
+          "method": "detection_plus_resource",
+          "regret": 0.039093017578125,
+          "actual_bits": 692.3155555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T231116Z",
+          "method": "detection_only",
+          "regret": 0.26676025390625,
+          "actual_bits": 693.1088888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T231116Z",
+          "method": "detection_plus_resource",
+          "regret": 0.26539225260416666,
+          "actual_bits": 725.5188888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T234123Z",
+          "method": "detection_only",
+          "regret": 0.0720367431640625,
+          "actual_bits": 688.8777777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T234123Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0720367431640625,
+          "actual_bits": 691.7866666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T004137Z",
+          "method": "detection_only",
+          "regret": 0.0469479751586914,
+          "actual_bits": 693.1088888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T004137Z",
+          "method": "detection_plus_resource",
+          "regret": 0.04984699249267578,
+          "actual_bits": 734.4633333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T011144Z",
+          "method": "detection_only",
+          "regret": 0.21832656860351562,
+          "actual_bits": 690.9933333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T011144Z",
+          "method": "detection_plus_resource",
+          "regret": 0.21832656860351562,
+          "actual_bits": 689.6711111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T014151Z",
+          "method": "detection_only",
+          "regret": 0.22371673583984375,
+          "actual_bits": 692.58
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T014151Z",
+          "method": "detection_plus_resource",
+          "regret": 0.22371673583984375,
+          "actual_bits": 691.7866666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T021158Z",
+          "method": "detection_only",
+          "regret": 0.2602806091308594,
+          "actual_bits": 692.0511111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T021158Z",
+          "method": "detection_plus_resource",
+          "regret": 0.2602806091308594,
+          "actual_bits": 696.0177777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T024206Z",
+          "method": "detection_only",
+          "regret": 0.007923126220703125,
+          "actual_bits": 701.8355555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T024206Z",
+          "method": "detection_plus_resource",
+          "regret": 0.007923126220703125,
+          "actual_bits": 683.8533333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T031214Z",
+          "method": "detection_only",
+          "regret": 0.2944831848144531,
+          "actual_bits": 696.0177777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T031214Z",
+          "method": "detection_plus_resource",
+          "regret": 0.2944831848144531,
+          "actual_bits": 684.1177777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T034221Z",
+          "method": "detection_only",
+          "regret": 0.23149871826171875,
+          "actual_bits": 698.3977777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T034221Z",
+          "method": "detection_plus_resource",
+          "regret": 0.23149871826171875,
+          "actual_bits": 690.9933333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T041229Z",
+          "method": "detection_only",
+          "regret": 0.048915863037109375,
+          "actual_bits": 693.6377777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T041229Z",
+          "method": "detection_plus_resource",
+          "regret": 0.048915863037109375,
+          "actual_bits": 694.4311111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T051241Z",
+          "method": "detection_only",
+          "regret": 0.3800315856933594,
+          "actual_bits": 691.7866666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T051241Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3800315856933594,
+          "actual_bits": 693.3733333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T054250Z",
+          "method": "detection_only",
+          "regret": 0.14720916748046875,
+          "actual_bits": 685.1755555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T054250Z",
+          "method": "detection_plus_resource",
+          "regret": 0.14720916748046875,
+          "actual_bits": 690.7288888888888
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T061258Z",
+          "method": "detection_only",
+          "regret": 0.38435334947374133,
+          "actual_bits": 701.5711111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T061258Z",
+          "method": "detection_plus_resource",
+          "regret": 0.36717199113633897,
+          "actual_bits": 717.36
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T064304Z",
+          "method": "detection_only",
+          "regret": 0.4121285353766547,
+          "actual_bits": 693.6377777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T064304Z",
+          "method": "detection_plus_resource",
+          "regret": 0.4023986879984538,
+          "actual_bits": 718.0911111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T071312Z",
+          "method": "detection_only",
+          "regret": 0.32658685048421227,
+          "actual_bits": 689.6711111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T071312Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3231351195441352,
+          "actual_bits": 688.0844444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T074319Z",
+          "method": "detection_only",
+          "regret": 0.26526728947957356,
+          "actual_bits": 692.3155555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T074319Z",
+          "method": "detection_plus_resource",
+          "regret": 0.2666002909342448,
+          "actual_bits": 729.5166666666667
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T081326Z",
+          "method": "detection_only",
+          "regret": 0.08608890109592014,
+          "actual_bits": 693.3733333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T081326Z",
+          "method": "detection_plus_resource",
+          "regret": 0.08683361477322049,
+          "actual_bits": 687.82
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T091341Z",
+          "method": "detection_only",
+          "regret": 0.3623466491699219,
+          "actual_bits": 693.9022222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T091341Z",
+          "method": "detection_plus_resource",
+          "regret": 0.31322854783799914,
+          "actual_bits": 723.3333333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T094348Z",
+          "method": "detection_only",
+          "regret": 0.267608642578125,
+          "actual_bits": 690.9933333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T094348Z",
+          "method": "detection_plus_resource",
+          "regret": 0.267608642578125,
+          "actual_bits": 691.7866666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T101355Z",
+          "method": "detection_only",
+          "regret": 0.07067489624023438,
+          "actual_bits": 689.9355555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T101355Z",
+          "method": "detection_plus_resource",
+          "regret": 0.07067489624023438,
+          "actual_bits": 684.9111111111112
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T104403Z",
+          "method": "detection_only",
+          "regret": 0.17488525390625,
+          "actual_bits": 692.58
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T104403Z",
+          "method": "detection_plus_resource",
+          "regret": 0.1833866204155816,
+          "actual_bits": 725.5733333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T111411Z",
+          "method": "detection_only",
+          "regret": 0.24735641479492188,
+          "actual_bits": 691.5222222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T111411Z",
+          "method": "detection_plus_resource",
+          "regret": 0.24735641479492188,
+          "actual_bits": 694.4311111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T114417Z",
+          "method": "detection_only",
+          "regret": 0.4301567077636719,
+          "actual_bits": 688.8777777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T114417Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3708906724717882,
+          "actual_bits": 724.1422222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T121424Z",
+          "method": "detection_only",
+          "regret": 0.09497833251953125,
+          "actual_bits": 689.4066666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T121424Z",
+          "method": "detection_plus_resource",
+          "regret": 0.09497833251953125,
+          "actual_bits": 694.4311111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T131438Z",
+          "method": "detection_only",
+          "regret": 0.5164909362792969,
+          "actual_bits": 689.1422222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T131438Z",
+          "method": "detection_plus_resource",
+          "regret": 0.5164909362792969,
+          "actual_bits": 688.6133333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T134445Z",
+          "method": "detection_only",
+          "regret": 0.20012223137749566,
+          "actual_bits": 688.6133333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T134445Z",
+          "method": "detection_plus_resource",
+          "regret": 0.20046315511067708,
+          "actual_bits": 712.2811111111112
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T141454Z",
+          "method": "detection_only",
+          "regret": 0.0,
+          "actual_bits": 689.6711111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T141454Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0,
+          "actual_bits": 693.3733333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T144500Z",
+          "method": "detection_only",
+          "regret": 0.7918314276801215,
+          "actual_bits": 712.6855555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T144500Z",
+          "method": "detection_plus_resource",
+          "regret": 0.6742780473497179,
+          "actual_bits": 747.1566666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T151507Z",
+          "method": "detection_only",
+          "regret": 0.0,
+          "actual_bits": 691.5222222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T151507Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0,
+          "actual_bits": 694.4311111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T154513Z",
+          "method": "detection_only",
+          "regret": 0.31781933466593426,
+          "actual_bits": 690.9933333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T154513Z",
+          "method": "detection_plus_resource",
+          "regret": 0.32110146204630535,
+          "actual_bits": 718.5733333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T161520Z",
+          "method": "detection_only",
+          "regret": 0.004718780517578125,
+          "actual_bits": 694.1666666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T161520Z",
+          "method": "detection_plus_resource",
+          "regret": 0.004718780517578125,
+          "actual_bits": 695.2244444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T164528Z",
+          "method": "detection_only",
+          "regret": 0.3989906311035156,
+          "actual_bits": 697.6044444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T164528Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3989906311035156,
+          "actual_bits": 695.2244444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T174544Z",
+          "method": "detection_only",
+          "regret": 0.3102520751953125,
+          "actual_bits": 696.5466666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T174544Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3158285013834635,
+          "actual_bits": 722.4933333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T181552Z",
+          "method": "detection_only",
+          "regret": 0.4444580078125,
+          "actual_bits": 689.1422222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T181552Z",
+          "method": "detection_plus_resource",
+          "regret": 0.38346849229600694,
+          "actual_bits": 718.8844444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T184600Z",
+          "method": "detection_only",
+          "regret": 0.054710254669189454,
+          "actual_bits": 690.9933333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T184600Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0562706184387207,
+          "actual_bits": 723.2322222222223
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T191608Z",
+          "method": "detection_only",
+          "regret": 0.055561065673828125,
+          "actual_bits": 690.2
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T191608Z",
+          "method": "detection_plus_resource",
+          "regret": 0.055561065673828125,
+          "actual_bits": 692.8444444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T194616Z",
+          "method": "detection_only",
+          "regret": 0.046207427978515625,
+          "actual_bits": 688.0844444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T194616Z",
+          "method": "detection_plus_resource",
+          "regret": 0.046207427978515625,
+          "actual_bits": 690.9933333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T201624Z",
+          "method": "detection_only",
+          "regret": 0.1394253879123264,
+          "actual_bits": 688.8777777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T201624Z",
+          "method": "detection_plus_resource",
+          "regret": 0.1411316426595052,
+          "actual_bits": 690.7288888888888
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T204632Z",
+          "method": "detection_only",
+          "regret": 0.0,
+          "actual_bits": 691.2577777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T204632Z",
+          "method": "detection_plus_resource",
+          "regret": 0.03154822031656901,
+          "actual_bits": 757.5477777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T214647Z",
+          "method": "detection_only",
+          "regret": 0.02466833326551649,
+          "actual_bits": 701.5711111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T214647Z",
+          "method": "detection_plus_resource",
+          "regret": 0.023254224989149305,
+          "actual_bits": 683.3244444444445
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T221655Z",
+          "method": "detection_only",
+          "regret": 0.0345306396484375,
+          "actual_bits": 694.4311111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T221655Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0345306396484375,
+          "actual_bits": 687.2911111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T224702Z",
+          "method": "detection_only",
+          "regret": 0.0,
+          "actual_bits": 690.2
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T224702Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0,
+          "actual_bits": 689.6711111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T231709Z",
+          "method": "detection_only",
+          "regret": 0.06809444003634983,
+          "actual_bits": 693.6377777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T231709Z",
+          "method": "detection_plus_resource",
+          "regret": 0.06437404844495985,
+          "actual_bits": 687.2911111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T234717Z",
+          "method": "detection_only",
+          "regret": 0.11588668823242188,
+          "actual_bits": 696.2822222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T234717Z",
+          "method": "detection_plus_resource",
+          "regret": 0.11588668823242188,
+          "actual_bits": 688.3488888888888
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T001724Z",
+          "method": "detection_only",
+          "regret": 0.1242840109931098,
+          "actual_bits": 691.7866666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T001724Z",
+          "method": "detection_plus_resource",
+          "regret": 0.1310551961263021,
+          "actual_bits": 696.2822222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T004731Z",
+          "method": "detection_only",
+          "regret": 0.326228879292806,
+          "actual_bits": 698.9266666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T004731Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3081640879313151,
+          "actual_bits": 720.9611111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T011739Z",
+          "method": "detection_only",
+          "regret": 0.1823577880859375,
+          "actual_bits": 696.2822222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T011739Z",
+          "method": "detection_plus_resource",
+          "regret": 0.1823577880859375,
+          "actual_bits": 691.2577777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T021753Z",
+          "method": "detection_only",
+          "regret": 0.3707466125488281,
+          "actual_bits": 691.5222222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T021753Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3707466125488281,
+          "actual_bits": 689.6711111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T024801Z",
+          "method": "detection_only",
+          "regret": 0.0,
+          "actual_bits": 690.2
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T024801Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0,
+          "actual_bits": 690.9933333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T031808Z",
+          "method": "detection_only",
+          "regret": 0.0,
+          "actual_bits": 689.6711111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T031808Z",
+          "method": "detection_plus_resource",
+          "regret": 0.07527224222819011,
+          "actual_bits": 753.0911111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T034816Z",
+          "method": "detection_only",
+          "regret": 0.05968475341796875,
+          "actual_bits": 690.7288888888888
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T034816Z",
+          "method": "detection_plus_resource",
+          "regret": 0.05968475341796875,
+          "actual_bits": 693.9022222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T041824Z",
+          "method": "detection_only",
+          "regret": 0.003040313720703125,
+          "actual_bits": 695.4888888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T041824Z",
+          "method": "detection_plus_resource",
+          "regret": 0.003040313720703125,
+          "actual_bits": 691.5222222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T044834Z",
+          "method": "detection_only",
+          "regret": 0.06012725830078125,
+          "actual_bits": 687.5555555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T044834Z",
+          "method": "detection_plus_resource",
+          "regret": 0.06012725830078125,
+          "actual_bits": 691.5222222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T051842Z",
+          "method": "detection_only",
+          "regret": 0.4412384033203125,
+          "actual_bits": 695.4888888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T051842Z",
+          "method": "detection_plus_resource",
+          "regret": 0.3831420135498047,
+          "actual_bits": 722.8511111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T061857Z",
+          "method": "detection_only",
+          "regret": 0.35172271728515625,
+          "actual_bits": 688.8777777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T061857Z",
+          "method": "detection_plus_resource",
+          "regret": 0.35172271728515625,
+          "actual_bits": 692.8444444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T064906Z",
+          "method": "detection_only",
+          "regret": 0.2513275146484375,
+          "actual_bits": 689.6711111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T064906Z",
+          "method": "detection_plus_resource",
+          "regret": 0.2513275146484375,
+          "actual_bits": 702.6288888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T071913Z",
+          "method": "detection_only",
+          "regret": 0.08476532406277126,
+          "actual_bits": 692.58
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T071913Z",
+          "method": "detection_plus_resource",
+          "regret": 0.08432913886176216,
+          "actual_bits": 694.6955555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T074920Z",
+          "method": "detection_only",
+          "regret": 0.2485198974609375,
+          "actual_bits": 686.4977777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T074920Z",
+          "method": "detection_plus_resource",
+          "regret": 0.2485198974609375,
+          "actual_bits": 688.0844444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T081928Z",
+          "method": "detection_only",
+          "regret": 0.08396530151367188,
+          "actual_bits": 690.4644444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T081928Z",
+          "method": "detection_plus_resource",
+          "regret": 0.08396530151367188,
+          "actual_bits": 689.6711111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T084935Z",
+          "method": "detection_only",
+          "regret": 0.04943084716796875,
+          "actual_bits": 683.8533333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T084935Z",
+          "method": "detection_plus_resource",
+          "regret": 0.04943084716796875,
+          "actual_bits": 691.5222222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T091942Z",
+          "method": "detection_only",
+          "regret": 0.050018310546875,
+          "actual_bits": 688.3488888888888
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T091942Z",
+          "method": "detection_plus_resource",
+          "regret": 0.050018310546875,
+          "actual_bits": 696.2822222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T101958Z",
+          "method": "detection_only",
+          "regret": 0.057153229183620875,
+          "actual_bits": 696.0177777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T101958Z",
+          "method": "detection_plus_resource",
+          "regret": 0.057645081414116756,
+          "actual_bits": 691.5222222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T105005Z",
+          "method": "detection_only",
+          "regret": 0.056425582038031684,
+          "actual_bits": 687.5555555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T105005Z",
+          "method": "detection_plus_resource",
+          "regret": 0.05546921624077691,
+          "actual_bits": 718.4644444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T112012Z",
+          "method": "detection_only",
+          "regret": 0.06679916381835938,
+          "actual_bits": 694.4311111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T112012Z",
+          "method": "detection_plus_resource",
+          "regret": 0.06679916381835938,
+          "actual_bits": 685.44
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T115019Z",
+          "method": "detection_only",
+          "regret": 0.30376754760742186,
+          "actual_bits": 694.6955555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T115019Z",
+          "method": "detection_plus_resource",
+          "regret": 0.30124874538845486,
+          "actual_bits": 727.37
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T122027Z",
+          "method": "detection_only",
+          "regret": 0.0,
+          "actual_bits": 691.2577777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T122027Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0,
+          "actual_bits": 689.4066666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T125034Z",
+          "method": "detection_only",
+          "regret": 0.34685358471340605,
+          "actual_bits": 690.9933333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T125034Z",
+          "method": "detection_plus_resource",
+          "regret": 0.340441165500217,
+          "actual_bits": 729.9522222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T132042Z",
+          "method": "detection_only",
+          "regret": 0.13870221455891926,
+          "actual_bits": 694.6955555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T132042Z",
+          "method": "detection_plus_resource",
+          "regret": 0.13289391411675347,
+          "actual_bits": 690.2
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T135050Z",
+          "method": "detection_only",
+          "regret": 0.27282751931084526,
+          "actual_bits": 688.6133333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T135050Z",
+          "method": "detection_plus_resource",
+          "regret": 0.2832661374409993,
+          "actual_bits": 720.5333333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T145107Z",
+          "method": "detection_only",
+          "regret": 0.06668853759765625,
+          "actual_bits": 692.3155555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T145107Z",
+          "method": "detection_plus_resource",
+          "regret": 0.06668853759765625,
+          "actual_bits": 691.5222222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T152114Z",
+          "method": "detection_only",
+          "regret": 0.2545433044433594,
+          "actual_bits": 704.7444444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T152114Z",
+          "method": "detection_plus_resource",
+          "regret": 0.2545433044433594,
+          "actual_bits": 693.6377777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T155122Z",
+          "method": "detection_only",
+          "regret": 0.0445404052734375,
+          "actual_bits": 694.1666666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T155122Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0445404052734375,
+          "actual_bits": 692.58
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T162131Z",
+          "method": "detection_only",
+          "regret": 0.27957195705837673,
+          "actual_bits": 695.4888888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T162131Z",
+          "method": "detection_plus_resource",
+          "regret": 0.27865532769097223,
+          "actual_bits": 728.49
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T165139Z",
+          "method": "detection_only",
+          "regret": 0.06825637817382812,
+          "actual_bits": 698.6622222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T165139Z",
+          "method": "detection_plus_resource",
+          "regret": 0.06825637817382812,
+          "actual_bits": 693.9022222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T172146Z",
+          "method": "detection_only",
+          "regret": 0.04412496778700087,
+          "actual_bits": 692.58
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T172146Z",
+          "method": "detection_plus_resource",
+          "regret": 0.04544431898328993,
+          "actual_bits": 719.3588888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T175154Z",
+          "method": "detection_only",
+          "regret": 0.047229766845703125,
+          "actual_bits": 681.4733333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T175154Z",
+          "method": "detection_plus_resource",
+          "regret": 0.047229766845703125,
+          "actual_bits": 692.0511111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T185210Z",
+          "method": "detection_only",
+          "regret": 0.000476837158203125,
+          "actual_bits": 696.5466666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T185210Z",
+          "method": "detection_plus_resource",
+          "regret": 0.000476837158203125,
+          "actual_bits": 696.2822222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T192217Z",
+          "method": "detection_only",
+          "regret": 0.043125152587890625,
+          "actual_bits": 693.1088888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T192217Z",
+          "method": "detection_plus_resource",
+          "regret": 0.043125152587890625,
+          "actual_bits": 684.1177777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T195225Z",
+          "method": "detection_only",
+          "regret": 0.18773695627848308,
+          "actual_bits": 693.9022222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T195225Z",
+          "method": "detection_plus_resource",
+          "regret": 0.20025275336371529,
+          "actual_bits": 722.9755555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T202232Z",
+          "method": "detection_only",
+          "regret": 0.031407470703125,
+          "actual_bits": 686.2333333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T202232Z",
+          "method": "detection_plus_resource",
+          "regret": 0.03249800788031684,
+          "actual_bits": 688.8777777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T205239Z",
+          "method": "detection_only",
+          "regret": 0.1960601806640625,
+          "actual_bits": 689.4066666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T205239Z",
+          "method": "detection_plus_resource",
+          "regret": 0.1960601806640625,
+          "actual_bits": 696.8111111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T212247Z",
+          "method": "detection_only",
+          "regret": 0.14955923504299587,
+          "actual_bits": 687.82
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T212247Z",
+          "method": "detection_plus_resource",
+          "regret": 0.15414537853664823,
+          "actual_bits": 748.3544444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T215255Z",
+          "method": "detection_only",
+          "regret": 0.2355398178100586,
+          "actual_bits": 690.4644444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T215255Z",
+          "method": "detection_plus_resource",
+          "regret": 0.23837277094523113,
+          "actual_bits": 720.3155555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T225309Z",
+          "method": "detection_only",
+          "regret": 0.06242401123046875,
+          "actual_bits": 699.9844444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T225309Z",
+          "method": "detection_plus_resource",
+          "regret": 0.06138878716362847,
+          "actual_bits": 690.4644444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T232317Z",
+          "method": "detection_only",
+          "regret": 0.202911376953125,
+          "actual_bits": 690.4644444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T232317Z",
+          "method": "detection_plus_resource",
+          "regret": 0.202911376953125,
+          "actual_bits": 688.3488888888888
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T235324Z",
+          "method": "detection_only",
+          "regret": 0.21433875613742404,
+          "actual_bits": 684.1177777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T235324Z",
+          "method": "detection_plus_resource",
+          "regret": 0.22399700164794922,
+          "actual_bits": 723.8077777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T002331Z",
+          "method": "detection_only",
+          "regret": 0.10950088500976562,
+          "actual_bits": 689.1422222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T002331Z",
+          "method": "detection_plus_resource",
+          "regret": 0.10950088500976562,
+          "actual_bits": 687.5555555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T005339Z",
+          "method": "detection_only",
+          "regret": 0.008854200575086806,
+          "actual_bits": 688.8777777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T005339Z",
+          "method": "detection_plus_resource",
+          "regret": 0.009096781412760416,
+          "actual_bits": 691.2577777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T012347Z",
+          "method": "detection_only",
+          "regret": 0.2591343879699707,
+          "actual_bits": 691.5222222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T012347Z",
+          "method": "detection_plus_resource",
+          "regret": 0.25957735273573135,
+          "actual_bits": 725.3477777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T015355Z",
+          "method": "detection_only",
+          "regret": 0.24724578857421875,
+          "actual_bits": 692.8444444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T015355Z",
+          "method": "detection_plus_resource",
+          "regret": 0.24724578857421875,
+          "actual_bits": 693.9022222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T022403Z",
+          "method": "detection_only",
+          "regret": 0.03776303609212239,
+          "actual_bits": 692.8444444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T022403Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0373549567328559,
+          "actual_bits": 724.9666666666667
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T032417Z",
+          "method": "detection_only",
+          "regret": 0.2382965087890625,
+          "actual_bits": 685.9688888888888
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T032417Z",
+          "method": "detection_plus_resource",
+          "regret": 0.2382965087890625,
+          "actual_bits": 689.6711111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T035424Z",
+          "method": "detection_only",
+          "regret": 0.01669695536295573,
+          "actual_bits": 692.3155555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T035424Z",
+          "method": "detection_plus_resource",
+          "regret": 0.01644138971964518,
+          "actual_bits": 690.7288888888888
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T042432Z",
+          "method": "detection_only",
+          "regret": 0.11321111679077149,
+          "actual_bits": 690.9933333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T042432Z",
+          "method": "detection_plus_resource",
+          "regret": 0.11418205261230469,
+          "actual_bits": 689.6711111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T045440Z",
+          "method": "detection_only",
+          "regret": 0.24299909803602432,
+          "actual_bits": 694.1666666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T045440Z",
+          "method": "detection_plus_resource",
+          "regret": 0.2534731970893012,
+          "actual_bits": 724.0177777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T052448Z",
+          "method": "detection_only",
+          "regret": 0.28155989117092556,
+          "actual_bits": 685.1755555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T052448Z",
+          "method": "detection_plus_resource",
+          "regret": 0.2952706336975098,
+          "actual_bits": 723.9944444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T055456Z",
+          "method": "detection_only",
+          "regret": 0.1063105689154731,
+          "actual_bits": 694.96
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T055456Z",
+          "method": "detection_plus_resource",
+          "regret": 0.11162609736124675,
+          "actual_bits": 695.4888888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T062505Z",
+          "method": "detection_only",
+          "regret": 0.0064428117540147566,
+          "actual_bits": 692.0511111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T062505Z",
+          "method": "detection_plus_resource",
+          "regret": 0.006496323479546441,
+          "actual_bits": 723.1777777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T072521Z",
+          "method": "detection_only",
+          "regret": 0.007863748338487414,
+          "actual_bits": 686.7622222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T072521Z",
+          "method": "detection_plus_resource",
+          "regret": 0.007748010423448351,
+          "actual_bits": 726.3588888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T075529Z",
+          "method": "detection_only",
+          "regret": 0.00565338134765625,
+          "actual_bits": 689.6711111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T075529Z",
+          "method": "detection_plus_resource",
+          "regret": 0.00565338134765625,
+          "actual_bits": 688.0844444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T082537Z",
+          "method": "detection_only",
+          "regret": 0.06519966125488282,
+          "actual_bits": 696.0177777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T082537Z",
+          "method": "detection_plus_resource",
+          "regret": 0.06660529242621528,
+          "actual_bits": 691.2577777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T085545Z",
+          "method": "detection_only",
+          "regret": 0.005626678466796875,
+          "actual_bits": 694.4311111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T085545Z",
+          "method": "detection_plus_resource",
+          "regret": 0.005626678466796875,
+          "actual_bits": 687.0266666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T092554Z",
+          "method": "detection_only",
+          "regret": 0.06647635989718967,
+          "actual_bits": 689.9355555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T092554Z",
+          "method": "detection_plus_resource",
+          "regret": 0.0682015249464247,
+          "actual_bits": 724.7022222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T095601Z",
+          "method": "detection_only",
+          "regret": 0.12410043716430665,
+          "actual_bits": 696.0177777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T095601Z",
+          "method": "detection_plus_resource",
+          "regret": 0.12101336161295573,
+          "actual_bits": 692.8444444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T102609Z",
+          "method": "detection_only",
+          "regret": 0.1865711212158203,
+          "actual_bits": 694.96
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T102609Z",
+          "method": "detection_plus_resource",
+          "regret": 0.1862494468688965,
+          "actual_bits": 692.0511111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T112625Z",
+          "method": "detection_only",
+          "regret": 0.007122039794921875,
+          "actual_bits": 691.2577777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T112625Z",
+          "method": "detection_plus_resource",
+          "regret": 0.007122039794921875,
+          "actual_bits": 693.1088888888889
+        }
+      ]
+    },
+    "selective_G2_digital_reporting": {
+      "rows": [
+        {
+          "scene_id": "aerpaw-three-site:20220208T175826Z",
+          "method": "selective_G2",
+          "regret": 0.0014831104853052514,
+          "actual_bits": 2206.8977777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T175826Z",
+          "method": "all_G2",
+          "regret": 0.0027621231974033576,
+          "actual_bits": 2278.048888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T182834Z",
+          "method": "selective_G2",
+          "regret": 0.011485948227345943,
+          "actual_bits": 2180.43
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T182834Z",
+          "method": "all_G2",
+          "regret": 0.011485948227345943,
+          "actual_bits": 2265.9622222222224
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T185839Z",
+          "method": "selective_G2",
+          "regret": 0.0325675444271312,
+          "actual_bits": 2200.2477777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T185839Z",
+          "method": "all_G2",
+          "regret": 0.025593116849626382,
+          "actual_bits": 2271.43
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T192847Z",
+          "method": "selective_G2",
+          "regret": 0.015777632037557106,
+          "actual_bits": 2195.067777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T192847Z",
+          "method": "all_G2",
+          "regret": 0.02385070045375162,
+          "actual_bits": 2255.3144444444442
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T195854Z",
+          "method": "selective_G2",
+          "regret": 0.0039058066411288795,
+          "actual_bits": 2189.911111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T195854Z",
+          "method": "all_G2",
+          "regret": 0.006238751020799908,
+          "actual_bits": 2265.9622222222224
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T202902Z",
+          "method": "selective_G2",
+          "regret": 0.0038231126964092255,
+          "actual_bits": 2193.317777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T202902Z",
+          "method": "all_G2",
+          "regret": 0.0038231126964092255,
+          "actual_bits": 2276.322222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T205912Z",
+          "method": "selective_G2",
+          "regret": 0.015728008096037357,
+          "actual_bits": 2194.507777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T205912Z",
+          "method": "all_G2",
+          "regret": 0.011928877229284904,
+          "actual_bits": 2265.0988888888887
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T212923Z",
+          "method": "selective_G2",
+          "regret": 0.02175049350674574,
+          "actual_bits": 2199.0344444444445
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T212923Z",
+          "method": "all_G2",
+          "regret": 0.022927331802762897,
+          "actual_bits": 2272.581111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T222936Z",
+          "method": "selective_G2",
+          "regret": 0.03165210628261168,
+          "actual_bits": 2192.9366666666665
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T222936Z",
+          "method": "all_G2",
+          "regret": 0.03416663566862956,
+          "actual_bits": 2272.2933333333335
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T225943Z",
+          "method": "selective_G2",
+          "regret": 0.012274314059565465,
+          "actual_bits": 2199.532222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T225943Z",
+          "method": "all_G2",
+          "regret": 0.01848837781904472,
+          "actual_bits": 2275.458888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T232950Z",
+          "method": "selective_G2",
+          "regret": 0.005262662656605244,
+          "actual_bits": 2204.93
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T232950Z",
+          "method": "all_G2",
+          "regret": 0.009354575942097989,
+          "actual_bits": 2259.3433333333332
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T235957Z",
+          "method": "selective_G2",
+          "regret": 0.009732648202097382,
+          "actual_bits": 2200.551111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220208T235957Z",
+          "method": "all_G2",
+          "regret": 0.010151335709659308,
+          "actual_bits": 2271.717777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T003004Z",
+          "method": "selective_G2",
+          "regret": 0.0022189309268637945,
+          "actual_bits": 2189.2655555555557
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T003004Z",
+          "method": "all_G2",
+          "regret": 0.004913347052341259,
+          "actual_bits": 2275.1711111111113
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T010011Z",
+          "method": "selective_G2",
+          "regret": 0.020253074582303986,
+          "actual_bits": 2197.4166666666665
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T010011Z",
+          "method": "all_G2",
+          "regret": 0.010987854175424826,
+          "actual_bits": 2278.048888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T013018Z",
+          "method": "selective_G2",
+          "regret": 0.006696675904095174,
+          "actual_bits": 2191.9333333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T013018Z",
+          "method": "all_G2",
+          "regret": 0.006696675904095174,
+          "actual_bits": 2260.2066666666665
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T023035Z",
+          "method": "selective_G2",
+          "regret": 0.009978418583395304,
+          "actual_bits": 2186.5822222222223
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T023035Z",
+          "method": "all_G2",
+          "regret": 0.017208568800965114,
+          "actual_bits": 2264.811111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T030041Z",
+          "method": "selective_G2",
+          "regret": 0.013703304211160647,
+          "actual_bits": 2210.6855555555558
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T030041Z",
+          "method": "all_G2",
+          "regret": 0.014578515246544996,
+          "actual_bits": 2263.66
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T033049Z",
+          "method": "selective_G2",
+          "regret": 0.00916737877022199,
+          "actual_bits": 2197.7355555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T033049Z",
+          "method": "all_G2",
+          "regret": 0.009938310074481977,
+          "actual_bits": 2262.508888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T040055Z",
+          "method": "selective_G2",
+          "regret": 0.013132165225429666,
+          "actual_bits": 2193.5433333333335
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T040055Z",
+          "method": "all_G2",
+          "regret": 0.008470527143562556,
+          "actual_bits": 2263.0844444444447
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T043102Z",
+          "method": "selective_G2",
+          "regret": 0.01712931649552451,
+          "actual_bits": 2205.3811111111113
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T043102Z",
+          "method": "all_G2",
+          "regret": 0.023463594991265345,
+          "actual_bits": 2276.61
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T050109Z",
+          "method": "selective_G2",
+          "regret": 0.015880744351263815,
+          "actual_bits": 2196.242222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T050109Z",
+          "method": "all_G2",
+          "regret": 0.00971913224905384,
+          "actual_bits": 2269.7033333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T053115Z",
+          "method": "selective_G2",
+          "regret": 0.024243901165685165,
+          "actual_bits": 2197.4244444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T053115Z",
+          "method": "all_G2",
+          "regret": 0.033822785192686645,
+          "actual_bits": 2265.9622222222224
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T060122Z",
+          "method": "selective_G2",
+          "regret": 0.014200133381118238,
+          "actual_bits": 2206.1355555555556
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T060122Z",
+          "method": "all_G2",
+          "regret": 0.020497509376835765,
+          "actual_bits": 2257.041111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T070136Z",
+          "method": "selective_G2",
+          "regret": 0.013346557056841755,
+          "actual_bits": 2197.268888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T070136Z",
+          "method": "all_G2",
+          "regret": 0.013294579441124508,
+          "actual_bits": 2259.6311111111113
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T073143Z",
+          "method": "selective_G2",
+          "regret": 0.022870849762801775,
+          "actual_bits": 2185.5555555555557
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T073143Z",
+          "method": "all_G2",
+          "regret": 0.030640732851051906,
+          "actual_bits": 2269.991111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T080151Z",
+          "method": "selective_G2",
+          "regret": 0.020106401504276113,
+          "actual_bits": 2202.238888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T080151Z",
+          "method": "all_G2",
+          "regret": 0.02360539064665014,
+          "actual_bits": 2265.3866666666668
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T083159Z",
+          "method": "selective_G2",
+          "regret": 0.0170605868715103,
+          "actual_bits": 2188.3555555555554
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T083159Z",
+          "method": "all_G2",
+          "regret": 0.011374978077839371,
+          "actual_bits": 2282.0777777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T090207Z",
+          "method": "selective_G2",
+          "regret": 0.0028680264949798584,
+          "actual_bits": 2200.597777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T090207Z",
+          "method": "all_G2",
+          "regret": 0.0028680264949798584,
+          "actual_bits": 2265.9622222222224
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T093214Z",
+          "method": "selective_G2",
+          "regret": 0.016990654293137293,
+          "actual_bits": 2193.7766666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T093214Z",
+          "method": "all_G2",
+          "regret": 0.026587549390064344,
+          "actual_bits": 2267.4011111111113
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T100223Z",
+          "method": "selective_G2",
+          "regret": 0.012389260675085506,
+          "actual_bits": 2200.9244444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T100223Z",
+          "method": "all_G2",
+          "regret": 0.014765599314813265,
+          "actual_bits": 2288.9844444444443
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T110239Z",
+          "method": "selective_G2",
+          "regret": 0.010303087040988937,
+          "actual_bits": 2206.3922222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T110239Z",
+          "method": "all_G2",
+          "regret": 0.006939627658575775,
+          "actual_bits": 2266.25
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T113247Z",
+          "method": "selective_G2",
+          "regret": 0.02658301238246538,
+          "actual_bits": 2189.18
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T113247Z",
+          "method": "all_G2",
+          "regret": 0.03227715835630618,
+          "actual_bits": 2280.6388888888887
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T120253Z",
+          "method": "selective_G2",
+          "regret": 0.015432370135353672,
+          "actual_bits": 2182.5377777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T120253Z",
+          "method": "all_G2",
+          "regret": 0.016964211466946398,
+          "actual_bits": 2272.0055555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T123301Z",
+          "method": "selective_G2",
+          "regret": 0.012547548127671082,
+          "actual_bits": 2202.301111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T123301Z",
+          "method": "all_G2",
+          "regret": 0.01406917243419836,
+          "actual_bits": 2274.02
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T130310Z",
+          "method": "selective_G2",
+          "regret": 0.0014284765347838402,
+          "actual_bits": 2192.998888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T130310Z",
+          "method": "all_G2",
+          "regret": 0.0014284765347838402,
+          "actual_bits": 2260.782222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T133317Z",
+          "method": "selective_G2",
+          "regret": 0.004780967098971205,
+          "actual_bits": 2196.592222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T133317Z",
+          "method": "all_G2",
+          "regret": 0.010780237564230681,
+          "actual_bits": 2263.947777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T140324Z",
+          "method": "selective_G2",
+          "regret": 0.008707139453229805,
+          "actual_bits": 2203.576666666667
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T140324Z",
+          "method": "all_G2",
+          "regret": 0.006494669592163215,
+          "actual_bits": 2272.2933333333335
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T150338Z",
+          "method": "selective_G2",
+          "regret": 0.014042157910902188,
+          "actual_bits": 2197.766666666667
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T150338Z",
+          "method": "all_G2",
+          "regret": 0.019395216776713447,
+          "actual_bits": 2274.3077777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T153345Z",
+          "method": "selective_G2",
+          "regret": 0.024512244938976236,
+          "actual_bits": 2198.9955555555557
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T153345Z",
+          "method": "all_G2",
+          "regret": 0.024461623783464788,
+          "actual_bits": 2276.0344444444445
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T160352Z",
+          "method": "selective_G2",
+          "regret": 0.004302039587249361,
+          "actual_bits": 2197.8133333333335
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T160352Z",
+          "method": "all_G2",
+          "regret": 0.004302039587249361,
+          "actual_bits": 2266.5377777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T163359Z",
+          "method": "selective_G2",
+          "regret": 0.0066745287428299546,
+          "actual_bits": 2184.1866666666665
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T163359Z",
+          "method": "all_G2",
+          "regret": 0.0066745287428299546,
+          "actual_bits": 2265.3866666666668
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T170407Z",
+          "method": "selective_G2",
+          "regret": 0.0024021828309115437,
+          "actual_bits": 2206.1433333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T170407Z",
+          "method": "all_G2",
+          "regret": 0.0031350521691557434,
+          "actual_bits": 2270.5666666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T173414Z",
+          "method": "selective_G2",
+          "regret": 0.0035068188375724377,
+          "actual_bits": 2197.6111111111113
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T173414Z",
+          "method": "all_G2",
+          "regret": 0.011718772824474224,
+          "actual_bits": 2257.041111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T180421Z",
+          "method": "selective_G2",
+          "regret": 0.018515518991518088,
+          "actual_bits": 2197.86
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T180421Z",
+          "method": "all_G2",
+          "regret": 0.012375533984008218,
+          "actual_bits": 2266.5377777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T183429Z",
+          "method": "selective_G2",
+          "regret": 0.002166178105054076,
+          "actual_bits": 2193.947777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T183429Z",
+          "method": "all_G2",
+          "regret": 0.0033874162714238485,
+          "actual_bits": 2262.508888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T193444Z",
+          "method": "selective_G2",
+          "regret": 0.012396578581279355,
+          "actual_bits": 2188.9544444444446
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T193444Z",
+          "method": "all_G2",
+          "regret": 0.02042942134473749,
+          "actual_bits": 2272.581111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T200451Z",
+          "method": "selective_G2",
+          "regret": 0.012063008755773165,
+          "actual_bits": 2187.958888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T200451Z",
+          "method": "all_G2",
+          "regret": 0.015970307221653417,
+          "actual_bits": 2279.2
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T203459Z",
+          "method": "selective_G2",
+          "regret": 0.0085922107067718,
+          "actual_bits": 2192.8433333333332
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T203459Z",
+          "method": "all_G2",
+          "regret": 0.009829093246134344,
+          "actual_bits": 2263.3722222222223
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T210506Z",
+          "method": "selective_G2",
+          "regret": 0.0009495493335028513,
+          "actual_bits": 2195.262222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T210506Z",
+          "method": "all_G2",
+          "regret": 0.01347928126653036,
+          "actual_bits": 2270.5666666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T213514Z",
+          "method": "selective_G2",
+          "regret": 0.004624804254724748,
+          "actual_bits": 2192.4
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T213514Z",
+          "method": "all_G2",
+          "regret": 0.005221553190818263,
+          "actual_bits": 2265.6744444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T220521Z",
+          "method": "selective_G2",
+          "regret": 0.01402637755481043,
+          "actual_bits": 2192.322222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T220521Z",
+          "method": "all_G2",
+          "regret": 0.015015182238831007,
+          "actual_bits": 2276.61
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T223528Z",
+          "method": "selective_G2",
+          "regret": 0.0019074037360648326,
+          "actual_bits": 2205.116666666667
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T223528Z",
+          "method": "all_G2",
+          "regret": 0.0019074037360648326,
+          "actual_bits": 2263.947777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T233543Z",
+          "method": "selective_G2",
+          "regret": 0.016401232913033,
+          "actual_bits": 2191.528888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220209T233543Z",
+          "method": "all_G2",
+          "regret": 0.018204949064594175,
+          "actual_bits": 2269.991111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T000551Z",
+          "method": "selective_G2",
+          "regret": 0.028467743317941545,
+          "actual_bits": 2181.34
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T000551Z",
+          "method": "all_G2",
+          "regret": 0.022950563516847232,
+          "actual_bits": 2266.5377777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T003558Z",
+          "method": "selective_G2",
+          "regret": 0.015601437157537375,
+          "actual_bits": 2197.346666666667
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T003558Z",
+          "method": "all_G2",
+          "regret": 0.01671867562406179,
+          "actual_bits": 2268.552222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T010606Z",
+          "method": "selective_G2",
+          "regret": 0.005259894145031774,
+          "actual_bits": 2200.73
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T010606Z",
+          "method": "all_G2",
+          "regret": 0.005259894145031774,
+          "actual_bits": 2267.1133333333332
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T013612Z",
+          "method": "selective_G2",
+          "regret": 0.011328898519277573,
+          "actual_bits": 2182.988888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T013612Z",
+          "method": "all_G2",
+          "regret": 0.017892466709017753,
+          "actual_bits": 2257.9044444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T020618Z",
+          "method": "selective_G2",
+          "regret": 0.00478096709897121,
+          "actual_bits": 2208.538888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T020618Z",
+          "method": "all_G2",
+          "regret": 0.014108065064065162,
+          "actual_bits": 2272.0055555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T023626Z",
+          "method": "selective_G2",
+          "regret": 0.002441558857638115,
+          "actual_bits": 2188.2155555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T023626Z",
+          "method": "all_G2",
+          "regret": 0.003961774750129771,
+          "actual_bits": 2281.5022222222224
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T033639Z",
+          "method": "selective_G2",
+          "regret": 0.010528093203902245,
+          "actual_bits": 2195.1222222222223
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T033639Z",
+          "method": "all_G2",
+          "regret": 0.00905416015535593,
+          "actual_bits": 2261.6455555555553
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T040646Z",
+          "method": "selective_G2",
+          "regret": 0.009397197887301445,
+          "actual_bits": 2194.8033333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T040646Z",
+          "method": "all_G2",
+          "regret": 0.010333512894188364,
+          "actual_bits": 2267.9766666666665
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T043653Z",
+          "method": "selective_G2",
+          "regret": 0.002109992670723136,
+          "actual_bits": 2186.761111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T043653Z",
+          "method": "all_G2",
+          "regret": 0.003906384882413682,
+          "actual_bits": 2270.278888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T050700Z",
+          "method": "selective_G2",
+          "regret": 0.02087930392956844,
+          "actual_bits": 2205.4744444444445
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T050700Z",
+          "method": "all_G2",
+          "regret": 0.015822457002337885,
+          "actual_bits": 2270.5666666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T053708Z",
+          "method": "selective_G2",
+          "regret": 0.020279112558604942,
+          "actual_bits": 2190.5255555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T053708Z",
+          "method": "all_G2",
+          "regret": 0.009409147711660437,
+          "actual_bits": 2264.2355555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T060715Z",
+          "method": "selective_G2",
+          "regret": 0.05088566258584185,
+          "actual_bits": 2205.7233333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T060715Z",
+          "method": "all_G2",
+          "regret": 0.02440872975573358,
+          "actual_bits": 2273.7322222222224
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T063722Z",
+          "method": "selective_G2",
+          "regret": 0.004088599100553741,
+          "actual_bits": 2187.5933333333332
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T063722Z",
+          "method": "all_G2",
+          "regret": 0.009070780114529447,
+          "actual_bits": 2275.458888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T070730Z",
+          "method": "selective_G2",
+          "regret": 0.016787581183619935,
+          "actual_bits": 2197.0822222222223
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T070730Z",
+          "method": "all_G2",
+          "regret": 0.026457453677861915,
+          "actual_bits": 2268.2644444444445
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T080742Z",
+          "method": "selective_G2",
+          "regret": 0.016590693419005858,
+          "actual_bits": 2190.5333333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T080742Z",
+          "method": "all_G2",
+          "regret": 0.02445917197399669,
+          "actual_bits": 2255.89
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T083748Z",
+          "method": "selective_G2",
+          "regret": 0.0,
+          "actual_bits": 2201.826666666667
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T083748Z",
+          "method": "all_G2",
+          "regret": 0.0,
+          "actual_bits": 2263.66
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T090755Z",
+          "method": "selective_G2",
+          "regret": 0.0004698963294288637,
+          "actual_bits": 2184.5833333333335
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T090755Z",
+          "method": "all_G2",
+          "regret": 0.008475007736641504,
+          "actual_bits": 2255.89
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T093803Z",
+          "method": "selective_G2",
+          "regret": 0.015129871444121281,
+          "actual_bits": 2191.241111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T093803Z",
+          "method": "all_G2",
+          "regret": 0.022998066877480596,
+          "actual_bits": 2267.4011111111113
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T100811Z",
+          "method": "selective_G2",
+          "regret": 0.012985201705661085,
+          "actual_bits": 2202.4255555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T100811Z",
+          "method": "all_G2",
+          "regret": 0.014813374737622563,
+          "actual_bits": 2274.3077777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T103818Z",
+          "method": "selective_G2",
+          "regret": 0.02728224002445738,
+          "actual_bits": 2199.8122222222223
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T103818Z",
+          "method": "all_G2",
+          "regret": 0.016238812585188837,
+          "actual_bits": 2264.5233333333335
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T110825Z",
+          "method": "selective_G2",
+          "regret": 0.00469817747724139,
+          "actual_bits": 2197.6266666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T110825Z",
+          "method": "all_G2",
+          "regret": 0.00736323540021355,
+          "actual_bits": 2272.2933333333335
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T120839Z",
+          "method": "selective_G2",
+          "regret": 0.0004706221322218571,
+          "actual_bits": 2202.13
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T120839Z",
+          "method": "all_G2",
+          "regret": 0.0004706221322218571,
+          "actual_bits": 2282.3655555555556
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T123847Z",
+          "method": "selective_G2",
+          "regret": 0.015711580577168476,
+          "actual_bits": 2193.652222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T123847Z",
+          "method": "all_G2",
+          "regret": 0.02473655299059357,
+          "actual_bits": 2263.66
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T130855Z",
+          "method": "selective_G2",
+          "regret": 0.024419750086963177,
+          "actual_bits": 2188.402222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T130855Z",
+          "method": "all_G2",
+          "regret": 0.014787515330438813,
+          "actual_bits": 2271.43
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T133903Z",
+          "method": "selective_G2",
+          "regret": 0.011503604182076674,
+          "actual_bits": 2191.8866666666668
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T133903Z",
+          "method": "all_G2",
+          "regret": 0.018969264351245425,
+          "actual_bits": 2263.66
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T140910Z",
+          "method": "selective_G2",
+          "regret": 0.001985581266193619,
+          "actual_bits": 2198.326666666667
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T140910Z",
+          "method": "all_G2",
+          "regret": 0.0020655608968809277,
+          "actual_bits": 2268.2644444444445
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T143918Z",
+          "method": "selective_G2",
+          "regret": 0.019214733580075614,
+          "actual_bits": 2189.4366666666665
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T143918Z",
+          "method": "all_G2",
+          "regret": 0.020569390121899126,
+          "actual_bits": 2277.761111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T150926Z",
+          "method": "selective_G2",
+          "regret": 0.006217748858034612,
+          "actual_bits": 2189.4133333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T150926Z",
+          "method": "all_G2",
+          "regret": 0.002079491562520465,
+          "actual_bits": 2269.1277777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T153933Z",
+          "method": "selective_G2",
+          "regret": 0.007654530306657152,
+          "actual_bits": 2189.981111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T153933Z",
+          "method": "all_G2",
+          "regret": 0.004416753248639265,
+          "actual_bits": 2258.7677777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T163945Z",
+          "method": "selective_G2",
+          "regret": 0.0,
+          "actual_bits": 2199.6566666666668
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T163945Z",
+          "method": "all_G2",
+          "regret": 0.0,
+          "actual_bits": 2278.6244444444446
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T170953Z",
+          "method": "selective_G2",
+          "regret": 0.010051934669415164,
+          "actual_bits": 2191.3966666666665
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T170953Z",
+          "method": "all_G2",
+          "regret": 0.010051934669415164,
+          "actual_bits": 2255.0266666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T174001Z",
+          "method": "selective_G2",
+          "regret": 0.0,
+          "actual_bits": 2176.152222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T174001Z",
+          "method": "all_G2",
+          "regret": 0.0,
+          "actual_bits": 2264.2355555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T181008Z",
+          "method": "selective_G2",
+          "regret": 0.009570239111781122,
+          "actual_bits": 2191.3033333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T181008Z",
+          "method": "all_G2",
+          "regret": 0.009570239111781122,
+          "actual_bits": 2277.1855555555558
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T184015Z",
+          "method": "selective_G2",
+          "regret": 0.030591217590909867,
+          "actual_bits": 2197.2533333333336
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T184015Z",
+          "method": "all_G2",
+          "regret": 0.03119834162760526,
+          "actual_bits": 2274.3077777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T191022Z",
+          "method": "selective_G2",
+          "regret": 0.01004916646828254,
+          "actual_bits": 2191.9644444444443
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T191022Z",
+          "method": "all_G2",
+          "regret": 0.01004916646828254,
+          "actual_bits": 2290.423333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T194029Z",
+          "method": "selective_G2",
+          "regret": 0.0004706221322218571,
+          "actual_bits": 2199.7344444444443
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T194029Z",
+          "method": "all_G2",
+          "regret": 0.0004706221322218571,
+          "actual_bits": 2262.221111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T204043Z",
+          "method": "selective_G2",
+          "regret": 0.0246758785036703,
+          "actual_bits": 2196.498888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T204043Z",
+          "method": "all_G2",
+          "regret": 0.025872742821014042,
+          "actual_bits": 2270.5666666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T211050Z",
+          "method": "selective_G2",
+          "regret": 0.009545102136692516,
+          "actual_bits": 2202.8611111111113
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T211050Z",
+          "method": "all_G2",
+          "regret": 0.014673055944170944,
+          "actual_bits": 2257.9044444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T214057Z",
+          "method": "selective_G2",
+          "regret": 0.0,
+          "actual_bits": 2198.661111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T214057Z",
+          "method": "all_G2",
+          "regret": 0.0,
+          "actual_bits": 2283.516666666667
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T221104Z",
+          "method": "selective_G2",
+          "regret": 0.0,
+          "actual_bits": 2201.1344444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T221104Z",
+          "method": "all_G2",
+          "regret": 0.0,
+          "actual_bits": 2257.3288888888887
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T224110Z",
+          "method": "selective_G2",
+          "regret": 0.0031470469578548698,
+          "actual_bits": 2188.612222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T224110Z",
+          "method": "all_G2",
+          "regret": 0.003096847263751206,
+          "actual_bits": 2274.3077777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T231116Z",
+          "method": "selective_G2",
+          "regret": 0.010818383377045389,
+          "actual_bits": 2195.8455555555556
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T231116Z",
+          "method": "all_G2",
+          "regret": 0.01435166010288176,
+          "actual_bits": 2275.458888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T234123Z",
+          "method": "selective_G2",
+          "regret": 0.0,
+          "actual_bits": 2201.468888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220210T234123Z",
+          "method": "all_G2",
+          "regret": 0.004578064182014377,
+          "actual_bits": 2280.6388888888887
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T004137Z",
+          "method": "selective_G2",
+          "regret": 0.010713807053312105,
+          "actual_bits": 2191.653333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T004137Z",
+          "method": "all_G2",
+          "regret": 0.016650581580276286,
+          "actual_bits": 2264.2355555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T011144Z",
+          "method": "selective_G2",
+          "regret": 0.010813558770826575,
+          "actual_bits": 2210.8955555555553
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T011144Z",
+          "method": "all_G2",
+          "regret": 0.011376562728374097,
+          "actual_bits": 2263.3722222222223
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T014151Z",
+          "method": "selective_G2",
+          "regret": 0.04357406931618849,
+          "actual_bits": 2198.0855555555554
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T014151Z",
+          "method": "all_G2",
+          "regret": 0.03778840122365013,
+          "actual_bits": 2281.2144444444443
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T021158Z",
+          "method": "selective_G2",
+          "regret": 0.014111555338819958,
+          "actual_bits": 2207.6444444444446
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T021158Z",
+          "method": "all_G2",
+          "regret": 0.016304393005729823,
+          "actual_bits": 2267.688888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T024206Z",
+          "method": "selective_G2",
+          "regret": 0.0,
+          "actual_bits": 2199.1744444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T024206Z",
+          "method": "all_G2",
+          "regret": 0.0,
+          "actual_bits": 2272.8688888888887
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T031214Z",
+          "method": "selective_G2",
+          "regret": 0.006217748702814181,
+          "actual_bits": 2194.0644444444442
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T031214Z",
+          "method": "all_G2",
+          "regret": 0.006217748702814181,
+          "actual_bits": 2274.3077777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T034221Z",
+          "method": "selective_G2",
+          "regret": 0.00047062213222185886,
+          "actual_bits": 2200.4655555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T034221Z",
+          "method": "all_G2",
+          "regret": 0.00047062213222185886,
+          "actual_bits": 2269.1277777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T041229Z",
+          "method": "selective_G2",
+          "regret": 0.00342695933973624,
+          "actual_bits": 2206.82
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T041229Z",
+          "method": "all_G2",
+          "regret": 0.007840070282022852,
+          "actual_bits": 2275.458888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T051241Z",
+          "method": "selective_G2",
+          "regret": 0.026332691311836246,
+          "actual_bits": 2191.1555555555556
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T051241Z",
+          "method": "all_G2",
+          "regret": 0.026332691311836246,
+          "actual_bits": 2264.2355555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T054250Z",
+          "method": "selective_G2",
+          "regret": 0.0,
+          "actual_bits": 2200.8155555555554
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T054250Z",
+          "method": "all_G2",
+          "regret": 0.0,
+          "actual_bits": 2258.48
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T061258Z",
+          "method": "selective_G2",
+          "regret": 0.01635442590384089,
+          "actual_bits": 2197.7044444444446
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T061258Z",
+          "method": "all_G2",
+          "regret": 0.024682972864420328,
+          "actual_bits": 2271.1422222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T064304Z",
+          "method": "selective_G2",
+          "regret": 0.02202908960895405,
+          "actual_bits": 2211.2922222222223
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T064304Z",
+          "method": "all_G2",
+          "regret": 0.018706873135158304,
+          "actual_bits": 2273.4444444444443
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T071312Z",
+          "method": "selective_G2",
+          "regret": 0.005154013497823917,
+          "actual_bits": 2194.391111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T071312Z",
+          "method": "all_G2",
+          "regret": 0.009018551568517942,
+          "actual_bits": 2292.4377777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T074319Z",
+          "method": "selective_G2",
+          "regret": 0.027984269643978526,
+          "actual_bits": 2203.8566666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T074319Z",
+          "method": "all_G2",
+          "regret": 0.018816689581920704,
+          "actual_bits": 2273.4444444444443
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T081326Z",
+          "method": "selective_G2",
+          "regret": 0.006628967334205904,
+          "actual_bits": 2199.306666666667
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T081326Z",
+          "method": "all_G2",
+          "regret": 0.011251134606147252,
+          "actual_bits": 2263.3722222222223
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T091341Z",
+          "method": "selective_G2",
+          "regret": 0.006977987673857969,
+          "actual_bits": 2192.781111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T091341Z",
+          "method": "all_G2",
+          "regret": 0.020572322165696974,
+          "actual_bits": 2268.84
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T094348Z",
+          "method": "selective_G2",
+          "regret": 0.009677411165968,
+          "actual_bits": 2193.3255555555556
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T094348Z",
+          "method": "all_G2",
+          "regret": 0.011776336532310342,
+          "actual_bits": 2266.5377777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T101355Z",
+          "method": "selective_G2",
+          "regret": 0.0009523176898558922,
+          "actual_bits": 2201.321111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T101355Z",
+          "method": "all_G2",
+          "regret": 0.013671025405292983,
+          "actual_bits": 2269.7033333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T104403Z",
+          "method": "selective_G2",
+          "regret": 0.006194076223333399,
+          "actual_bits": 2191.777777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T104403Z",
+          "method": "all_G2",
+          "regret": 0.008488669770735278,
+          "actual_bits": 2268.2644444444445
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T111411Z",
+          "method": "selective_G2",
+          "regret": 0.0009523176898558922,
+          "actual_bits": 2183.16
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T111411Z",
+          "method": "all_G2",
+          "regret": 0.0019170680745608268,
+          "actual_bits": 2274.3077777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T114417Z",
+          "method": "selective_G2",
+          "regret": 0.002662820100646329,
+          "actual_bits": 2202.3633333333332
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T114417Z",
+          "method": "all_G2",
+          "regret": 0.008074619744869845,
+          "actual_bits": 2281.79
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T121424Z",
+          "method": "selective_G2",
+          "regret": 0.0,
+          "actual_bits": 2195.6511111111113
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T121424Z",
+          "method": "all_G2",
+          "regret": 0.0,
+          "actual_bits": 2259.0555555555557
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T131438Z",
+          "method": "selective_G2",
+          "regret": 0.019123867930223547,
+          "actual_bits": 2198.1244444444446
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T131438Z",
+          "method": "all_G2",
+          "regret": 0.010266669028335151,
+          "actual_bits": 2267.9766666666665
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T134445Z",
+          "method": "selective_G2",
+          "regret": 0.017235201564876155,
+          "actual_bits": 2190.3155555555554
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T134445Z",
+          "method": "all_G2",
+          "regret": 0.02332737255944974,
+          "actual_bits": 2272.2933333333335
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T141454Z",
+          "method": "selective_G2",
+          "regret": 0.018617257010191676,
+          "actual_bits": 2192.8044444444445
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T141454Z",
+          "method": "all_G2",
+          "regret": 0.013302941289212965,
+          "actual_bits": 2261.9333333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T144500Z",
+          "method": "selective_G2",
+          "regret": 0.01827286340727436,
+          "actual_bits": 2195.9544444444446
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T144500Z",
+          "method": "all_G2",
+          "regret": 0.007068458138620135,
+          "actual_bits": 2272.8688888888887
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T151507Z",
+          "method": "selective_G2",
+          "regret": 0.004302039897690214,
+          "actual_bits": 2195.5033333333336
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T151507Z",
+          "method": "all_G2",
+          "regret": 0.001599879916671111,
+          "actual_bits": 2261.9333333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T154513Z",
+          "method": "selective_G2",
+          "regret": 0.011070028348929352,
+          "actual_bits": 2199.501111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T154513Z",
+          "method": "all_G2",
+          "regret": 0.01772382198419008,
+          "actual_bits": 2273.7322222222224
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T161520Z",
+          "method": "selective_G2",
+          "regret": 0.00047062213222185534,
+          "actual_bits": 2194.0955555555556
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T161520Z",
+          "method": "all_G2",
+          "regret": 0.00047062213222185534,
+          "actual_bits": 2280.351111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T164528Z",
+          "method": "selective_G2",
+          "regret": 0.011485947916905083,
+          "actual_bits": 2202.69
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T164528Z",
+          "method": "all_G2",
+          "regret": 0.005777850717961511,
+          "actual_bits": 2272.581111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T174544Z",
+          "method": "selective_G2",
+          "regret": 0.009193606275927135,
+          "actual_bits": 2199.1044444444447
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T174544Z",
+          "method": "all_G2",
+          "regret": 0.014656120349687555,
+          "actual_bits": 2271.717777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T181552Z",
+          "method": "selective_G2",
+          "regret": 0.002065243611664131,
+          "actual_bits": 2189.467777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T181552Z",
+          "method": "all_G2",
+          "regret": 0.0020705527383661645,
+          "actual_bits": 2265.9622222222224
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T184600Z",
+          "method": "selective_G2",
+          "regret": 0.011728739411121718,
+          "actual_bits": 2202.588888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T184600Z",
+          "method": "all_G2",
+          "regret": 0.014938394441786743,
+          "actual_bits": 2268.552222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T191608Z",
+          "method": "selective_G2",
+          "regret": 0.005808939461130651,
+          "actual_bits": 2192.182222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T191608Z",
+          "method": "all_G2",
+          "regret": 0.00770022207638249,
+          "actual_bits": 2269.4155555555553
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T194616Z",
+          "method": "selective_G2",
+          "regret": 0.004469394833194433,
+          "actual_bits": 2198.007777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T194616Z",
+          "method": "all_G2",
+          "regret": 0.002649317774576721,
+          "actual_bits": 2268.84
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T201624Z",
+          "method": "selective_G2",
+          "regret": 0.010262277101908154,
+          "actual_bits": 2197.541111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T201624Z",
+          "method": "all_G2",
+          "regret": 0.011246331070584278,
+          "actual_bits": 2266.8255555555556
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T204632Z",
+          "method": "selective_G2",
+          "regret": 0.032352445805445315,
+          "actual_bits": 2200.1
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T204632Z",
+          "method": "all_G2",
+          "regret": 0.024105264083482326,
+          "actual_bits": 2255.6022222222223
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T214647Z",
+          "method": "selective_G2",
+          "regret": 0.0039948895379590494,
+          "actual_bits": 2209.76
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T214647Z",
+          "method": "all_G2",
+          "regret": 0.005047511225738736,
+          "actual_bits": 2264.811111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T221655Z",
+          "method": "selective_G2",
+          "regret": 0.0044102829428286135,
+          "actual_bits": 2186.628888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T221655Z",
+          "method": "all_G2",
+          "regret": 0.007862176224503109,
+          "actual_bits": 2263.66
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T224702Z",
+          "method": "selective_G2",
+          "regret": 0.0,
+          "actual_bits": 2189.0866666666666
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T224702Z",
+          "method": "all_G2",
+          "regret": 0.0,
+          "actual_bits": 2273.7322222222224
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T231709Z",
+          "method": "selective_G2",
+          "regret": 0.005045939287067283,
+          "actual_bits": 2199.1666666666665
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T231709Z",
+          "method": "all_G2",
+          "regret": 0.007636810840469677,
+          "actual_bits": 2282.0777777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T234717Z",
+          "method": "selective_G2",
+          "regret": 0.00669667574887474,
+          "actual_bits": 2200.0066666666667
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220211T234717Z",
+          "method": "all_G2",
+          "regret": 0.004160677763219508,
+          "actual_bits": 2280.6388888888887
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T001724Z",
+          "method": "selective_G2",
+          "regret": 0.0011328054260876454,
+          "actual_bits": 2209.6666666666665
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T001724Z",
+          "method": "all_G2",
+          "regret": 0.0060077396556045175,
+          "actual_bits": 2265.6744444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T004731Z",
+          "method": "selective_G2",
+          "regret": 0.009820932898739419,
+          "actual_bits": 2201.6711111111113
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T004731Z",
+          "method": "all_G2",
+          "regret": 0.008341629198510888,
+          "actual_bits": 2278.912222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T011739Z",
+          "method": "selective_G2",
+          "regret": 0.013880583457648752,
+          "actual_bits": 2197.9144444444446
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T011739Z",
+          "method": "all_G2",
+          "regret": 0.007277521645236346,
+          "actual_bits": 2267.1133333333332
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T021753Z",
+          "method": "selective_G2",
+          "regret": 0.00013393329249488045,
+          "actual_bits": 2198.7544444444443
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T021753Z",
+          "method": "all_G2",
+          "regret": 0.0003261221227822495,
+          "actual_bits": 2274.5955555555556
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T024801Z",
+          "method": "selective_G2",
+          "regret": 0.0004706221322218571,
+          "actual_bits": 2200.5822222222223
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T024801Z",
+          "method": "all_G2",
+          "regret": 0.0004706221322218571,
+          "actual_bits": 2267.4011111111113
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T031808Z",
+          "method": "selective_G2",
+          "regret": 0.01150528852465666,
+          "actual_bits": 2193.8077777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T031808Z",
+          "method": "all_G2",
+          "regret": 0.011723283465123838,
+          "actual_bits": 2280.9266666666667
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T034816Z",
+          "method": "selective_G2",
+          "regret": 0.011732031070385819,
+          "actual_bits": 2200.4733333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T034816Z",
+          "method": "all_G2",
+          "regret": 0.01516104360826797,
+          "actual_bits": 2259.3433333333332
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T041824Z",
+          "method": "selective_G2",
+          "regret": 0.0,
+          "actual_bits": 2212.5055555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T041824Z",
+          "method": "all_G2",
+          "regret": 0.011987248074384062,
+          "actual_bits": 2263.947777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T044834Z",
+          "method": "selective_G2",
+          "regret": 0.000952317689855894,
+          "actual_bits": 2198.21
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T044834Z",
+          "method": "all_G2",
+          "regret": 0.000952317689855894,
+          "actual_bits": 2264.811111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T051842Z",
+          "method": "selective_G2",
+          "regret": 0.0025350106193649546,
+          "actual_bits": 2191.427777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T051842Z",
+          "method": "all_G2",
+          "regret": 0.00272979280669932,
+          "actual_bits": 2275.458888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T061857Z",
+          "method": "selective_G2",
+          "regret": 0.004835337253063218,
+          "actual_bits": 2201.5544444444445
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T061857Z",
+          "method": "all_G2",
+          "regret": 0.005138750052752172,
+          "actual_bits": 2287.257777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T064906Z",
+          "method": "selective_G2",
+          "regret": 0.011964875118186077,
+          "actual_bits": 2198.8555555555554
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T064906Z",
+          "method": "all_G2",
+          "regret": 0.0035063285098618094,
+          "actual_bits": 2263.66
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T071913Z",
+          "method": "selective_G2",
+          "regret": 0.001073738121324114,
+          "actual_bits": 2188.7833333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T071913Z",
+          "method": "all_G2",
+          "regret": 0.0009447230757386585,
+          "actual_bits": 2271.43
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T074920Z",
+          "method": "selective_G2",
+          "regret": 0.024893140730758493,
+          "actual_bits": 2186.9166666666665
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T074920Z",
+          "method": "all_G2",
+          "regret": 0.006798257742818718,
+          "actual_bits": 2253.3
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T081928Z",
+          "method": "selective_G2",
+          "regret": 0.013401656566808614,
+          "actual_bits": 2188.4566666666665
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T081928Z",
+          "method": "all_G2",
+          "regret": 0.006018530926580919,
+          "actual_bits": 2267.9766666666665
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T084935Z",
+          "method": "selective_G2",
+          "regret": 0.00046508541951576984,
+          "actual_bits": 2193.7144444444443
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T084935Z",
+          "method": "all_G2",
+          "regret": 0.00046508541951576984,
+          "actual_bits": 2263.947777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T091942Z",
+          "method": "selective_G2",
+          "regret": 0.00046508541951576984,
+          "actual_bits": 2189.677777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T091942Z",
+          "method": "all_G2",
+          "regret": 0.007495847616551654,
+          "actual_bits": 2268.84
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T101958Z",
+          "method": "selective_G2",
+          "regret": 0.03160157560672679,
+          "actual_bits": 2191.668888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T101958Z",
+          "method": "all_G2",
+          "regret": 0.027205614770021008,
+          "actual_bits": 2269.7033333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T105005Z",
+          "method": "selective_G2",
+          "regret": 0.032383506411893484,
+          "actual_bits": 2191.7933333333335
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T105005Z",
+          "method": "all_G2",
+          "regret": 0.027916033888684095,
+          "actual_bits": 2274.02
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T112012Z",
+          "method": "selective_G2",
+          "regret": 0.00046785377586881256,
+          "actual_bits": 2190.237777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T112012Z",
+          "method": "all_G2",
+          "regret": 0.0013636506579091975,
+          "actual_bits": 2271.717777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T115019Z",
+          "method": "selective_G2",
+          "regret": 0.013244694362446253,
+          "actual_bits": 2196.18
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T115019Z",
+          "method": "all_G2",
+          "regret": 0.022996868437707978,
+          "actual_bits": 2259.918888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T122027Z",
+          "method": "selective_G2",
+          "regret": 0.004504782519113553,
+          "actual_bits": 2200.8855555555556
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T122027Z",
+          "method": "all_G2",
+          "regret": 0.004058248031436022,
+          "actual_bits": 2286.3944444444446
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T125034Z",
+          "method": "selective_G2",
+          "regret": 0.030844180584816194,
+          "actual_bits": 2198.9411111111112
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T125034Z",
+          "method": "all_G2",
+          "regret": 0.040143161056201075,
+          "actual_bits": 2274.3077777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T132042Z",
+          "method": "selective_G2",
+          "regret": 0.018507297768568,
+          "actual_bits": 2199.5944444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T132042Z",
+          "method": "all_G2",
+          "regret": 0.0278329657137187,
+          "actual_bits": 2267.4011111111113
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T135050Z",
+          "method": "selective_G2",
+          "regret": 0.010548954449283584,
+          "actual_bits": 2207.1077777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T135050Z",
+          "method": "all_G2",
+          "regret": 0.015901379613205795,
+          "actual_bits": 2258.7677777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T145107Z",
+          "method": "selective_G2",
+          "regret": 0.00047062213222185534,
+          "actual_bits": 2209.9155555555553
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T145107Z",
+          "method": "all_G2",
+          "regret": 0.008523879677436686,
+          "actual_bits": 2265.3866666666668
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T152114Z",
+          "method": "selective_G2",
+          "regret": 0.010528093514343103,
+          "actual_bits": 2190.3933333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T152114Z",
+          "method": "all_G2",
+          "regret": 0.0035327602681462416,
+          "actual_bits": 2273.7322222222224
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T155122Z",
+          "method": "selective_G2",
+          "regret": 0.007175603260596599,
+          "actual_bits": 2194.4766666666665
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T155122Z",
+          "method": "all_G2",
+          "regret": 0.014115585915796045,
+          "actual_bits": 2280.6388888888887
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T162131Z",
+          "method": "selective_G2",
+          "regret": 0.02539752287221037,
+          "actual_bits": 2209.1455555555553
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T162131Z",
+          "method": "all_G2",
+          "regret": 0.025120591024385276,
+          "actual_bits": 2273.7322222222224
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T165139Z",
+          "method": "selective_G2",
+          "regret": 0.0023890992936988695,
+          "actual_bits": 2191.5444444444443
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T165139Z",
+          "method": "all_G2",
+          "regret": 0.011744679268449541,
+          "actual_bits": 2263.3722222222223
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T172146Z",
+          "method": "selective_G2",
+          "regret": 0.015068889813307947,
+          "actual_bits": 2184.9255555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T172146Z",
+          "method": "all_G2",
+          "regret": 0.022670384576647645,
+          "actual_bits": 2267.4011111111113
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T175154Z",
+          "method": "selective_G2",
+          "regret": 0.0004706221322218571,
+          "actual_bits": 2202.6511111111113
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T175154Z",
+          "method": "all_G2",
+          "regret": 0.0004706221322218571,
+          "actual_bits": 2282.9411111111112
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T185210Z",
+          "method": "selective_G2",
+          "regret": 0.020210957197403463,
+          "actual_bits": 2212.116666666667
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T185210Z",
+          "method": "all_G2",
+          "regret": 0.02055489749164769,
+          "actual_bits": 2257.9044444444444
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T192217Z",
+          "method": "selective_G2",
+          "regret": 0.0013662990493079035,
+          "actual_bits": 2180.7877777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T192217Z",
+          "method": "all_G2",
+          "regret": 0.012064662225613441,
+          "actual_bits": 2272.2933333333335
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T195225Z",
+          "method": "selective_G2",
+          "regret": 0.011231972805345087,
+          "actual_bits": 2179.4655555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T195225Z",
+          "method": "all_G2",
+          "regret": 0.01770859089050511,
+          "actual_bits": 2253.587777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T202232Z",
+          "method": "selective_G2",
+          "regret": 0.019101807192588846,
+          "actual_bits": 2196.1722222222224
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T202232Z",
+          "method": "all_G2",
+          "regret": 0.017897042238964107,
+          "actual_bits": 2278.912222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T205239Z",
+          "method": "selective_G2",
+          "regret": 0.03755977240753257,
+          "actual_bits": 2190.891111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T205239Z",
+          "method": "all_G2",
+          "regret": 0.01952541938129192,
+          "actual_bits": 2274.02
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T212247Z",
+          "method": "selective_G2",
+          "regret": 0.021681646512372903,
+          "actual_bits": 2202.472222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T212247Z",
+          "method": "all_G2",
+          "regret": 0.032517637454352724,
+          "actual_bits": 2263.0844444444447
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T215255Z",
+          "method": "selective_G2",
+          "regret": 0.019290735523250918,
+          "actual_bits": 2201.702222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T215255Z",
+          "method": "all_G2",
+          "regret": 0.02900650742912182,
+          "actual_bits": 2272.8688888888887
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T225309Z",
+          "method": "selective_G2",
+          "regret": 0.011847188674189423,
+          "actual_bits": 2188.0911111111113
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T225309Z",
+          "method": "all_G2",
+          "regret": 0.009759364440623253,
+          "actual_bits": 2269.991111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T232317Z",
+          "method": "selective_G2",
+          "regret": 0.027290545403957363,
+          "actual_bits": 2195.41
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T232317Z",
+          "method": "all_G2",
+          "regret": 0.011518027048420022,
+          "actual_bits": 2286.3944444444446
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T235324Z",
+          "method": "selective_G2",
+          "regret": 0.000507083425936461,
+          "actual_bits": 2188.791111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220212T235324Z",
+          "method": "all_G2",
+          "regret": 0.0004072330216014821,
+          "actual_bits": 2275.7466666666664
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T002331Z",
+          "method": "selective_G2",
+          "regret": 0.0047809669437507765,
+          "actual_bits": 2199.7344444444443
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T002331Z",
+          "method": "all_G2",
+          "regret": 0.002856468560639767,
+          "actual_bits": 2278.6244444444446
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T005339Z",
+          "method": "selective_G2",
+          "regret": 0.0005612166908880075,
+          "actual_bits": 2199.4155555555553
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T005339Z",
+          "method": "all_G2",
+          "regret": 0.006653206990773065,
+          "actual_bits": 2269.1277777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T012347Z",
+          "method": "selective_G2",
+          "regret": 0.017386410920018403,
+          "actual_bits": 2188.021111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T012347Z",
+          "method": "all_G2",
+          "regret": 0.02415130535071647,
+          "actual_bits": 2269.7033333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T015355Z",
+          "method": "selective_G2",
+          "regret": 0.008028590303276564,
+          "actual_bits": 2204.012222222222
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T015355Z",
+          "method": "all_G2",
+          "regret": 0.008594613367329458,
+          "actual_bits": 2274.3077777777776
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T022403Z",
+          "method": "selective_G2",
+          "regret": 0.007239101488160452,
+          "actual_bits": 2188.837777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T022403Z",
+          "method": "all_G2",
+          "regret": 0.007569033727567228,
+          "actual_bits": 2261.07
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T032417Z",
+          "method": "selective_G2",
+          "regret": 0.02058556443080306,
+          "actual_bits": 2200.7066666666665
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T032417Z",
+          "method": "all_G2",
+          "regret": 0.016236464076985917,
+          "actual_bits": 2263.947777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T035424Z",
+          "method": "selective_G2",
+          "regret": 0.002677729315020971,
+          "actual_bits": 2200.9088888888887
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T035424Z",
+          "method": "all_G2",
+          "regret": 0.0036937471756849564,
+          "actual_bits": 2267.9766666666665
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T042432Z",
+          "method": "selective_G2",
+          "regret": 0.005723443619596459,
+          "actual_bits": 2195.7444444444445
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T042432Z",
+          "method": "all_G2",
+          "regret": 0.009287382126785813,
+          "actual_bits": 2268.2644444444445
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T045440Z",
+          "method": "selective_G2",
+          "regret": 0.013056458021445137,
+          "actual_bits": 2195.6277777777777
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T045440Z",
+          "method": "all_G2",
+          "regret": 0.01336812830969899,
+          "actual_bits": 2264.2355555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T052448Z",
+          "method": "selective_G2",
+          "regret": 0.024184181966508428,
+          "actual_bits": 2202.6433333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T052448Z",
+          "method": "all_G2",
+          "regret": 0.01687188142393198,
+          "actual_bits": 2269.4155555555553
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T055456Z",
+          "method": "selective_G2",
+          "regret": 0.007372308868604402,
+          "actual_bits": 2193.1466666666665
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T055456Z",
+          "method": "all_G2",
+          "regret": 0.006602509548991091,
+          "actual_bits": 2272.0055555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T062505Z",
+          "method": "selective_G2",
+          "regret": 0.00034355427681778965,
+          "actual_bits": 2183.7744444444443
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T062505Z",
+          "method": "all_G2",
+          "regret": 0.0035080315014002533,
+          "actual_bits": 2272.0055555555555
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T072521Z",
+          "method": "selective_G2",
+          "regret": 0.007693803666107773,
+          "actual_bits": 2198.847777777778
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T072521Z",
+          "method": "all_G2",
+          "regret": 0.010102058426666732,
+          "actual_bits": 2275.1711111111113
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T075529Z",
+          "method": "selective_G2",
+          "regret": 0.0,
+          "actual_bits": 2184.668888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T075529Z",
+          "method": "all_G2",
+          "regret": 0.00604892138098539,
+          "actual_bits": 2265.3866666666668
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T082537Z",
+          "method": "selective_G2",
+          "regret": 0.015512295642660724,
+          "actual_bits": 2197.7433333333333
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T082537Z",
+          "method": "all_G2",
+          "regret": 0.010229122489000911,
+          "actual_bits": 2254.1633333333334
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T085545Z",
+          "method": "selective_G2",
+          "regret": 0.00046785377586881256,
+          "actual_bits": 2189.8488888888887
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T085545Z",
+          "method": "all_G2",
+          "regret": 0.000725819281716313,
+          "actual_bits": 2273.7322222222224
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T092554Z",
+          "method": "selective_G2",
+          "regret": 0.012160597607079476,
+          "actual_bits": 2200.5044444444443
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T092554Z",
+          "method": "all_G2",
+          "regret": 0.015671479819445968,
+          "actual_bits": 2272.2933333333335
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T095601Z",
+          "method": "selective_G2",
+          "regret": 0.008970487761414717,
+          "actual_bits": 2198.108888888889
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T095601Z",
+          "method": "all_G2",
+          "regret": 0.009483673560122653,
+          "actual_bits": 2263.3722222222223
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T102609Z",
+          "method": "selective_G2",
+          "regret": 0.015019129605239472,
+          "actual_bits": 2194.7255555555557
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T102609Z",
+          "method": "all_G2",
+          "regret": 0.01553535131021852,
+          "actual_bits": 2261.6455555555553
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T112625Z",
+          "method": "selective_G2",
+          "regret": 0.0019046353797117855,
+          "actual_bits": 2188.791111111111
+        },
+        {
+          "scene_id": "aerpaw-three-site:20220213T112625Z",
+          "method": "all_G2",
+          "regret": 0.001646451472684188,
+          "actual_bits": 2272.8688888888887
+        }
+      ]
+    }
+  },
+  "audit": {
+    "inference_protocol_sha256": "75f87d686cce201b2ba7bc0c43d5f68933691060fced46b469d9f49db20753d0",
+    "stage2_config_sha256": "66fbe3cc3166225d8aa4bbcd82131a92c808196314045735019321b1791932a1",
+    "stage4_protocol_sha256": "7c8e052c07b8d4a064d0dec46b39b544027829adc60016203de13067115805aa",
+    "aggregation_is_scene_level": true,
+    "original_access_receipt_snapshot_sha256": "43e6162d2d267246977da8f3ec35fa881fc2db77de8aeab8e705137afbae379f",
+    "post_access_recovery_snapshot_sha256": "4426e39949128db8406bb847dfc90ffce5b7d93f7448c4c7bc0d326e54a712ff",
+    "recovery_changed_paths": [
+      "configs/stage4_final_access_state.json",
+      "scripts/run_aerpaw_three_site_final_inference.py"
+    ]
+  }
+}

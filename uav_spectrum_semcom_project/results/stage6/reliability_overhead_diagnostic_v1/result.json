@@ -1,0 +1,201 @@
+{
+  "version": "1.0",
+  "status": "reliability_overhead_diagnostic_complete",
+  "protocol_id": "stage6_reliability_protocol_diagnostic_v1",
+  "negative_result_retained": {
+    "supported_primary_candidate_comparison_count": 0,
+    "primary_development_success": false
+  },
+  "primary_l500_preconfigured_by_n": {
+    "8": {
+      "n_channels": 8,
+      "candidate_id": "n8_controller_01",
+      "deployment_mode": "preconfigured_codebook_empty_action_state",
+      "requested_session_scene_count": 500,
+      "evaluated_scene_count": 89010,
+      "clean_rate": 0.9340150919372355,
+      "semantic_actual_bits_per_scene": 79.56305546193312,
+      "exact_one_attempt_bits_per_scene": 56.0,
+      "observed_savings_percentage": -42.076884753452,
+      "component_bits_per_scene": {
+        "forward_bits_per_scene": 66.94265176197432,
+        "feedback_bits_per_scene": 12.620403699958805,
+        "task_frame_bits_per_scene": 30.760769950941842,
+        "heartbeat_bits_per_scene": 1.412317717110437,
+        "initial_install_bits_per_scene": 0.0,
+        "recovery_install_bits_per_scene": 35.36166535595252,
+        "escape_bits_per_scene": 1.2562079167134779
+      },
+      "component_share_of_semantic_total_percentage": {
+        "forward_bits_per_scene": 84.13785942899463,
+        "feedback_bits_per_scene": 15.862140571005382,
+        "task_frame_bits_per_scene": 38.66212750672869,
+        "heartbeat_bits_per_scene": 1.7750923577666764,
+        "initial_install_bits_per_scene": 0.0,
+        "recovery_install_bits_per_scene": 44.444830770572004,
+        "escape_bits_per_scene": 1.578883452150112
+      },
+      "event_rates_per_scene": {
+        "compact_update": 0.33628992997041535,
+        "context_install": 0.0918484814440325,
+        "heartbeat_probe": 0.025631764221248545
+      },
+      "non_deployable_no_recovery_install_upper_bound": {
+        "bits_per_scene": 44.2013901059806,
+        "savings_percentage": 21.068946239320358,
+        "safety_claim_allowed": false
+      }
+    },
+    "16": {
+      "n_channels": 16,
+      "candidate_id": "n16_controller_01",
+      "deployment_mode": "preconfigured_codebook_empty_action_state",
+      "requested_session_scene_count": 500,
+      "evaluated_scene_count": 89010,
+      "clean_rate": 0.9380640751975433,
+      "semantic_actual_bits_per_scene": 87.6505055611729,
+      "exact_one_attempt_bits_per_scene": 59.0,
+      "observed_savings_percentage": -48.56017891724221,
+      "component_bits_per_scene": {
+        "forward_bits_per_scene": 74.2012946110924,
+        "feedback_bits_per_scene": 13.449210950080515,
+        "task_frame_bits_per_scene": 34.9621896416133,
+        "heartbeat_bits_per_scene": 1.1900146051005507,
+        "initial_install_bits_per_scene": 0.0,
+        "recovery_install_bits_per_scene": 38.54790472980564,
+        "escape_bits_per_scene": 1.9263099651724522
+      },
+      "component_share_of_semantic_total_percentage": {
+        "forward_bits_per_scene": 84.6558660854568,
+        "feedback_bits_per_scene": 15.34413391454321,
+        "task_frame_bits_per_scene": 39.88817796060805,
+        "heartbeat_bits_per_scene": 1.3576813932579288,
+        "initial_install_bits_per_scene": 0.0,
+        "recovery_install_bits_per_scene": 43.97910141305727,
+        "escape_bits_per_scene": 2.1977168903242035
+      },
+      "event_rates_per_scene": {
+        "compact_update": 0.3703520203722428,
+        "context_install": 0.09783732164925289,
+        "heartbeat_probe": 0.021600007489795153
+      },
+      "non_deployable_no_recovery_install_upper_bound": {
+        "bits_per_scene": 49.10260083136727,
+        "savings_percentage": 16.775252828191068,
+        "safety_claim_allowed": false
+      }
+    },
+    "32": {
+      "n_channels": 32,
+      "candidate_id": "n32_controller_01",
+      "deployment_mode": "preconfigured_codebook_empty_action_state",
+      "requested_session_scene_count": 500,
+      "evaluated_scene_count": 89010,
+      "clean_rate": 0.9368085982848369,
+      "semantic_actual_bits_per_scene": 88.02034471782197,
+      "exact_one_attempt_bits_per_scene": 62.0,
+      "observed_savings_percentage": -41.96829793197092,
+      "component_bits_per_scene": {
+        "forward_bits_per_scene": 74.78563700707784,
+        "feedback_bits_per_scene": 13.234707710744111,
+        "task_frame_bits_per_scene": 35.18913080927236,
+        "heartbeat_bits_per_scene": 1.2961360146799983,
+        "initial_install_bits_per_scene": 0.0,
+        "recovery_install_bits_per_scene": 38.84294891959705,
+        "escape_bits_per_scene": 2.455006928060518
+      },
+      "component_share_of_semantic_total_percentage": {
+        "forward_bits_per_scene": 84.96403558385016,
+        "feedback_bits_per_scene": 15.03596441614981,
+        "task_frame_bits_per_scene": 39.97840604019746,
+        "heartbeat_bits_per_scene": 1.4725413980542643,
+        "initial_install_bits_per_scene": 0.0,
+        "recovery_install_bits_per_scene": 44.12951238048526,
+        "escape_bits_per_scene": 2.7891357798368617
+      },
+      "event_rates_per_scene": {
+        "compact_update": 0.3604656780137063,
+        "context_install": 0.09638448863423586,
+        "heartbeat_probe": 0.02354866494401378
+      },
+      "non_deployable_no_recovery_install_upper_bound": {
+        "bits_per_scene": 49.17739579822492,
+        "savings_percentage": 20.681619680282388,
+        "safety_claim_allowed": false
+      }
+    },
+    "64": {
+      "n_channels": 64,
+      "candidate_id": "n64_controller_01",
+      "deployment_mode": "preconfigured_codebook_empty_action_state",
+      "requested_session_scene_count": 500,
+      "evaluated_scene_count": 89010,
+      "clean_rate": 0.9368838707261358,
+      "semantic_actual_bits_per_scene": 90.76642324832416,
+      "exact_one_attempt_bits_per_scene": 65.0,
+      "observed_savings_percentage": -39.64065115126794,
+      "component_bits_per_scene": {
+        "forward_bits_per_scene": 77.41611054937648,
+        "feedback_bits_per_scene": 13.350312698947683,
+        "task_frame_bits_per_scene": 36.75036437853424,
+        "heartbeat_bits_per_scene": 1.2387102572744635,
+        "initial_install_bits_per_scene": 0.0,
+        "recovery_install_bits_per_scene": 39.946318391192,
+        "escape_bits_per_scene": 3.0178931206231505
+      },
+      "component_share_of_semantic_total_percentage": {
+        "forward_bits_per_scene": 85.29157344624774,
+        "feedback_bits_per_scene": 14.708426553752268,
+        "task_frame_bits_per_scene": 40.488941905301715,
+        "heartbeat_bits_per_scene": 1.3647230032250215,
+        "initial_install_bits_per_scene": 0.0,
+        "recovery_install_bits_per_scene": 44.010017098398265,
+        "escape_bits_per_scene": 3.3249003459865545
+      },
+      "event_rates_per_scene": {
+        "compact_update": 0.3656497397296184,
+        "context_install": 0.09695708347376698,
+        "heartbeat_probe": 0.022482118114069582
+      },
+      "non_deployable_no_recovery_install_upper_bound": {
+        "bits_per_scene": 50.82010485713216,
+        "savings_percentage": 21.815223296719758,
+        "safety_claim_allowed": false
+      }
+    }
+  },
+  "diagnostic_hypothesis_checks": {
+    "8": {
+      "h1_recovery_share_exceeds_35_percent": true,
+      "h2_no_recovery_upper_bound_has_positive_savings": true
+    },
+    "16": {
+      "h1_recovery_share_exceeds_35_percent": true,
+      "h2_no_recovery_upper_bound_has_positive_savings": true
+    },
+    "32": {
+      "h1_recovery_share_exceeds_35_percent": true,
+      "h2_no_recovery_upper_bound_has_positive_savings": true
+    },
+    "64": {
+      "h1_recovery_share_exceeds_35_percent": true,
+      "h2_no_recovery_upper_bound_has_positive_savings": true
+    }
+  },
+  "aggregate_checks": {
+    "h1_passes_all_n": true,
+    "h2_passes_all_n": true,
+    "wrong_codebook_actions_remain_zero": true,
+    "external_final_signal_values_not_loaded": true,
+    "external_final_access_count_remains_zero": true
+  },
+  "interpretation_boundary": "The no-recovery calculation is an accounting upper bound, not a deployable protocol result. It motivates R1 but cannot support a reliability or savings claim by itself.",
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "version": "1.0",
+  "status": "stage6_candidate_architecture_frozen",
+  "freeze_id": "stage6_candidate_architecture_freeze_v1",
+  "manifest_sha256": "8409170d391af04d04c1ba0e16f937ab01749d8248d63b20dc25be43634da3dd",
+  "retained_components": [
+    "analytic_epsilon_task_equivalent_codebook",
+    "exact_action_escape_fallback",
+    "versioned_task_and_context_codec",
+    "preconfigured_codebook_with_runtime_install_recovery",
+    "hard_regret_and_state_age_event_trigger",
+    "cumulative_ack_context_belief_recovery",
+    "fixed_twenty_scene_silence_heartbeat",
+    "frozen_learned_one_step_hazard_ranking",
+    "budgeted_duplicate_compact_update_protection",
+    "codebook_identity_check_and_fail_closed_decode"
+  ],
+  "excluded_components": [
+    "adaptive_heartbeat",
+    "direct_next_codeword_multiclass_controller",
+    "selective_two_stage_destination_controller",
+    "markov_hard_spectrum_action",
+    "markov_update_reservation_controller",
+    "markov_token_bucket_controller",
+    "prediction_selected_future_spectrum_action",
+    "online_full_codebook_install_as_default_short_session_mode"
+  ],
+  "frozen_parameters": {
+    "epsilon_db": 0.2,
+    "maximum_state_age_minutes": 120.0,
+    "heartbeat_silence_scenes": 20,
+    "maximum_duplicate_update_reservation_fraction": 0.1,
+    "hazard_threshold_source": "training_out_of_fold_upper_0p1_quantile",
+    "n_channels_development_grid": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "demand_ratios": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "codebook_epoch": 1,
+    "task_header_bits": 48,
+    "codebook_epoch_bits": 8,
+    "codebook_tag_bits": 16,
+    "compact_update_bits_nominal": 40,
+    "outage_penalty_db": 10.0
+  },
+  "deployment_boundary": {
+    "default_codebook_deployment": "software_preconfigured_with_device",
+    "runtime_full_install_role": "initialization_or_context_recovery_only",
+    "prediction_role": "duplicate_update_capacity_scheduling_only",
+    "prediction_may_execute_spectrum_action": false,
+    "hard_trigger_may_be_suppressed": false,
+    "wrong_codebook_action_may_be_executed": false
+  },
+  "locked_code_hash_checks": {
+    "src/spectrum_semcom/stage6_task_codebook.py": true,
+    "src/spectrum_semcom/stage6_task_codec.py": true,
+    "src/spectrum_semcom/stage6_context_codec.py": true,
+    "src/spectrum_semcom/stage6_context_recovery.py": true,
+    "src/spectrum_semcom/stage6_context_heartbeat.py": true,
+    "src/spectrum_semcom/stage6_temporal_hazard.py": true,
+    "src/spectrum_semcom/stage5_cumulative_ack.py": true,
+    "scripts/run_stage6_context_recovery_development.py": true,
+    "scripts/run_stage6_joint_predictive_recovery_development.py": true,
+    "configs/stage6_joint_predictive_recovery_development_v1.json": true
+  },
+  "locked_evidence_hash_checks": {
+    "results/stage6/task_codebook_development_v1/task_codebook_result.json": true,
+    "results/stage6/task_codec_development_v1/task_codec_result.json": true,
+    "results/stage6/context_event_development_v1/context_event_result.json": true,
+    "results/stage6/context_recovery_development_v1/context_recovery_result.json": true,
+    "results/stage6/context_heartbeat_development_v1/context_heartbeat_result.json": true,
+    "results/stage6/temporal_hazard_development_v1/temporal_hazard_result.json": true,
+    "results/stage6/predictive_repetition_development_v1/predictive_repetition_result.json": true,
+    "results/stage6/joint_predictive_recovery_development_v1/joint_predictive_recovery_result.json": true,
+    "results/stage6/next_codeword_prediction_development_v1/next_codeword_prediction_result.json": true,
+    "results/stage6/selective_codeword_prediction_development_v2/selective_codeword_prediction_result.json": true,
+    "results/stage6/markov_probability_scheduler_development_v1/markov_probability_scheduler_result.json": true,
+    "results/stage6/markov_token_bucket_scheduler_development_v1/markov_probability_scheduler_result.json": true
+  },
+  "validation_matrix": {
+    "ablation_cells": [
+      "full_candidate",
+      "minus_learned_update_protection",
+      "minus_fixed_heartbeat",
+      "minus_context_belief_recovery",
+      "ideal_feedback_upper_bound",
+      "exact_query_bundle_reference"
+    ],
+    "fault_stress_dimensions": [
+      "install_loss_probability",
+      "task_loss_probability",
+      "ack_loss_probability",
+      "receiver_context_reset_probability"
+    ],
+    "scale_dimensions": {
+      "n_channels": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "demand_ratios": [
+        0.25,
+        0.5,
+        0.75
+      ]
+    },
+    "complexity_metrics": [
+      "wall_clock_runtime",
+      "peak_traced_memory",
+      "codebook_fit_runtime",
+      "per_scene_encode_runtime",
+      "per_scene_control_runtime"
+    ],
+    "primary_metrics": [
+      "clean_rate",
+      "availability_rate",
+      "application_bits_per_scene",
+      "reserved_capacity_bits_per_scene",
+      "effective_mean_regret_db",
+      "effective_cvar_0_9_regret_db",
+      "wrong_codebook_decode_count"
+    ]
+  },
+  "checks": {
+    "retained_and_excluded_components_disjoint": true,
+    "all_locked_code_hashes_match": true,
+    "all_locked_evidence_hashes_match": true,
+    "final_access_state_hash_matches": true,
+    "final_access_count_remains_zero": true,
+    "post_freeze_algorithm_addition_forbidden": true,
+    "post_freeze_parameter_tuning_forbidden": true,
+    "defect_requires_new_freeze_version": true,
+    "external_final_forbidden_during_s6_6": true
+  },
+  "final_access_count": 0,
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": "This freeze identifies the Stage-6 candidate architecture and its development evidence. It is not external Final registration, real-UAV mobility validation, or authorization to access held-out signal values."
+}

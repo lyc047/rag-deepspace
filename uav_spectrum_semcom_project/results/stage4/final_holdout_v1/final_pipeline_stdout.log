@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "status": "access_consumed",
+  "access_count": 1,
+  "receipt": {
+    "access_number": 1,
+    "timestamp_utc": "2026-07-21T06:41:43.953804+00:00",
+    "actor": "local-final-20260721",
+    "registry_sha256": "cab70cf796cc0f12cc92370ad4dfcd5e187c4bd26919536324e0a69e08ebc487",
+    "code_snapshot_sha256": "43e6162d2d267246977da8f3ec35fa881fc2db77de8aeab8e705137afbae379f"
+  }
+}

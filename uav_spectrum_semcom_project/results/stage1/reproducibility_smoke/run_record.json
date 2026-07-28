@@ -1,0 +1,68 @@
+{
+  "config": {
+    "experiment_id": "stage1_reproducibility_smoke_v1",
+    "experiment_role": "development",
+    "hypothesis_ids": [
+      "H1"
+    ],
+    "split_id": "stage1_dataset_registry_v1",
+    "manifest_checksum": "registry:configs/dataset_registry.json",
+    "config_id": "configs/stage1_baseline.json",
+    "code_version": "working-tree-stage1",
+    "seed": 7,
+    "baseline_or_method": "synthetic_energy_detector_smoke",
+    "fairness_budget_type": "bits",
+    "fairness_budget_value": 1572864,
+    "sensing_channel": {
+      "model": "synthetic_awgn",
+      "snr_db": 8.0
+    },
+    "reporting_channel": {
+      "model": "identity_development_smoke",
+      "bler": 0.0,
+      "fec_rate": 1.0,
+      "max_retransmissions": 0
+    },
+    "metrics": {
+      "best_tf_iou": 0.014645290040135883,
+      "total_transmitted_bits_per_decision": 257
+    },
+    "repeat_count": 1,
+    "command": [
+      "scripts/run_phase1_smoke.py"
+    ],
+    "output": "results/phase1/smoke_result.json",
+    "notes": "Development-only reproducibility check; not main evidence for H1."
+  },
+  "config_sha256": "2279dfe32980509e70998ef3044cc65610565a52addc354b416e965afea7b30d",
+  "dataset_registry_sha256": "9479755ac414f8a18ada509e30284a42a8b3f8767087d7352ffcabf887bd3c0e",
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "matplotlib": "3.9.2",
+      "pillow": "10.4.0",
+      "torch": "2.12.0",
+      "pytest": "7.4.4",
+      "torchvision": null,
+      "ultralytics": null
+    }
+  },
+  "execution": {
+    "command": [
+      "D:\\anaconda\\python.exe",
+      "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\scripts\\run_phase1_smoke.py"
+    ],
+    "returncode": 0,
+    "duration_s": 0.7981040000013309,
+    "stdout": "[\n  {\n    \"name\": \"raw_iq_12bit_iq\",\n    \"bits_per_frame\": 1572864,\n    \"bitrate_bps\": 240000000.0\n  },\n  {\n    \"name\": \"stft_8bit\",\n    \"bits_per_frame\": 2084864,\n    \"bitrate_bps\": 318125000.0\n  },\n  {\n    \"name\": \"semantic_packet\",\n    \"bits_per_frame\": 257,\n    \"bitrate_bps\": 39215.087890625\n  }\n]\nbest_tf_iou=0.0146\nwrote C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\phase1\\smoke_result.json\n",
+    "stderr": ""
+  },
+  "artifacts": {
+    "result": "results/phase1/smoke_result.json",
+    "result_sha256": "9f377ce8e6b8a60f4e080ff6d6a6014692041bdc105357b14db1acd629eef3b1"
+  }
+}

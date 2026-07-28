@@ -1,0 +1,17 @@
+N=8 group=LW1:20220219 excluded_too_short 24/27
+N=8 group=LW1:20220220 25/27 seconds=117.0
+N=8 group=LW1:20220221 26/27 seconds=266.0
+N=8 group=LW1:20220222 27/27 seconds=121.8
+N=16 group=LW1:20220219 excluded_too_short 24/27
+N=16 group=LW1:20220220 25/27 seconds=136.5
+N=16 group=LW1:20220221 26/27 seconds=288.3
+N=16 group=LW1:20220222 27/27 seconds=130.0
+N=32 group=LW1:20220219 excluded_too_short 24/27
+N=32 group=LW1:20220220 25/27 seconds=123.1
+N=32 group=LW1:20220221 26/27 seconds=273.5
+N=32 group=LW1:20220222 27/27 seconds=128.5
+C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\results\stage6\matched_reliability_grouped_validation_v1\result.json
+C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\results\stage6\matched_reliability_grouped_analysis_v1\analysis.json
+grouped_validation_and_analysis_complete
+C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\results\stage6\matched_reliability_grouped_validation_v1\result.json
+C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\results\stage6\matched_reliability_grouped_analysis_v1\analysis.json

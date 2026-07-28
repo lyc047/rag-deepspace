@@ -1,0 +1,128 @@
+{
+  "protocol_id": "stage6_reliability_protocol_diagnostic_v1",
+  "status": "registered_after_grouped_negative_result_before_r1_result_access",
+  "created_date": "2026-07-28",
+  "purpose": "Diagnose why the frozen task-semantic controller loses to the exact per-scene reference at matched clean, then test protocol simplifications without changing the task codebook or external Final.",
+  "frozen_inputs": {
+    "grouped_candidate_protocol": {
+      "path": "configs/stage6_grouped_validation_candidates_v1.json",
+      "sha256": "c52e0540b2533ca71ae7c8e02f3bf6fabfd88c1910702a0d9eff2dfe103ce7b7"
+    },
+    "grouped_result": {
+      "path": "results/stage6/matched_reliability_grouped_validation_v1/result.json",
+      "sha256": "a858f10af2e9e2a0339bc0b08cd58ef37286eac8823aeeadc3f063e2b99fce27"
+    },
+    "grouped_analysis": {
+      "path": "results/stage6/matched_reliability_grouped_analysis_v1/analysis.json",
+      "sha256": "5ed65861e3aa75106e78ac3b0d4b5f13f6552b7d5725718f16e97635fffde585"
+    },
+    "fixed_site_cache": {
+      "path": "results/stage6/fixed_site_stream_cache_v1/cache.npz",
+      "sha256": "93c7a49548f05e2e53c6789fabc845de711fcf101869be5331af607c5b292305",
+      "role": "development_only_historically_accessed_2022"
+    },
+    "excluded_pilot_cache": {
+      "path": "results/stage5/helikite_pilot_v1/helikite_pilot_cache.npz",
+      "sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+      "role": "permanently_excluded_2023_pilot_for_codebook_fit_only"
+    }
+  },
+  "negative_result_lock": {
+    "primary_candidate_supported_comparison_count": 0,
+    "all_frozen_candidate_supported_comparison_count": 0,
+    "interpretation": "Clean is near 0.93 to 0.94, but semantic total bits exceed the one-attempt exact per-scene reference. The result must remain reported even if R1 later succeeds.",
+    "may_overwrite_or_relabel_as_pilot": false
+  },
+  "diagnostic_hypotheses": {
+    "h1": "Recovery context-install bits are the largest removable component and exceed 35 percent of semantic total bits at the primary L500 preconfigured workpoint.",
+    "h2": "Removing recovery-install bits only as a non-deployable upper bound makes the semantic representation cheaper than the one-attempt exact per-scene reference.",
+    "h3": "A context-independent exact-action refresh can replace most full codebook reinstalls while retaining fail-closed behavior.",
+    "h4": "A durable preconfigured codebook with volatile action state can use compact semantic refresh after action-cache loss without wrong-codebook execution.",
+    "h5_counterexample": "Event-triggered exact actions may explain most of the gain; if so, the semantic-codebook contribution must be narrowed."
+  },
+  "r1_variants": [
+    {
+      "variant_id": "v0_frozen_full_context_install",
+      "role": "locked_negative_reference",
+      "source": "existing_grouped_result"
+    },
+    {
+      "variant_id": "v1_oracle_no_recovery_install_bits",
+      "role": "non_deployable_accounting_upper_bound",
+      "safety_claim_allowed": false
+    },
+    {
+      "variant_id": "v2_durable_codebook_compact_refresh",
+      "role": "semi_stateful_semantic_candidate",
+      "fault_model": "codebook survives volatile action-cache reset; codebook identity mismatch remains fail-closed"
+    },
+    {
+      "variant_id": "v3_context_independent_exact_refresh",
+      "role": "safe_recovery_candidate_and_counterexample_baseline",
+      "fault_model": "exact multi-query actions are executable without codebook context; compact frames remain forbidden under codebook uncertainty"
+    },
+    {
+      "variant_id": "v4_event_triggered_exact_action_cache",
+      "role": "non_semantic_stateful_baseline",
+      "fault_model": "self-contained exact actions update a receiver action cache and use the same trigger and link trajectories"
+    }
+  ],
+  "evaluation_scope": {
+    "n_channels": [8, 16, 32, 64],
+    "primary_controller_candidate_per_n": "controller_01_from_frozen_grouped_candidate_protocol",
+    "session_scene_counts": [20, 100, 500],
+    "deployment_modes": [
+      "preconfigured_codebook_empty_action_state",
+      "online_install_empty_context"
+    ],
+    "link_trajectories": 60,
+    "paired_random_stream_count": 11,
+    "outer_group": "site_x_local_date",
+    "minimum_remainder_scenes": 2,
+    "paired_bootstrap_replicates": 5000,
+    "confidence_level": 0.95,
+    "matched_clean_targets": [0.85, 0.9, 0.95, 0.97]
+  },
+  "instrumentation_requirements": [
+    "initial_online_install",
+    "recovery_after_missing_update_ack",
+    "recovery_after_failed_heartbeat",
+    "recovery_after_actual_context_reset",
+    "recovery_after_codebook_mismatch",
+    "recovery_after_maximum_age",
+    "compact_refresh",
+    "exact_refresh",
+    "rejected_compact",
+    "wrong_codebook_decode"
+  ],
+  "primary_acceptance": {
+    "clean_lower_bound_minimum": 0.9,
+    "resource_savings_lower_bound_percentage_must_exceed": 0.0,
+    "actual_savings_lower_bound_percentage_must_exceed": 0.0,
+    "strong_effect_point_savings_percentage": 15.0,
+    "wrong_codebook_decode_count_must_equal": 0,
+    "leave_one_site_out_direction_must_not_reverse": true
+  },
+  "decision_rules": {
+    "if_v2_passes_and_v4_fails": "retain_task_semantic_codebook_as_primary_protocol_contribution",
+    "if_v2_and_v4_both_pass_with_similar_bits": "narrow_claim_to_task_trigger_and_reliable_state_reuse; treat_codebook_as_payload_optimization",
+    "if_only_v3_or_v4_passes": "do_not_claim_the_existing_codebook_is_the_source_of_system_level_savings",
+    "if_no_deployable_variant_passes": "stop_before_external_final_and_reframe_the_system_as_a_rate_reliability_tradeoff",
+    "may_run_external_final": false
+  },
+  "outputs": {
+    "overhead_diagnostic": "results/stage6/reliability_overhead_diagnostic_v1/result.json",
+    "r1_smoke": "results/stage6/reliability_protocol_r1_smoke_v1/result.json",
+    "r1_grouped": "results/stage6/reliability_protocol_r1_grouped_v1/result.json",
+    "r1_analysis": "results/stage6/reliability_protocol_r1_analysis_v1/analysis.json",
+    "report": "docs/STAGE6_S6_7B_R1_RELIABILITY_PROTOCOL.md"
+  },
+  "governance": {
+    "external_final_signal_values_may_be_loaded": false,
+    "external_final_access_count_must_remain_zero": true,
+    "frozen_stage6_files_may_be_modified": false,
+    "new_protocol_code_must_use_new_files": true,
+    "negative_results_must_be_retained": true
+  },
+  "claim_boundary": "Development-only diagnosis and protocol redesign on historically accessed 2022 data. No R1 result is external Final evidence."
+}

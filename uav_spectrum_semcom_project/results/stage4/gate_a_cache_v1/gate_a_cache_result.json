@@ -1,0 +1,57 @@
+{
+  "experiment_id": "stage4_gate_a_frozen_detector_cache_v1",
+  "protocol_sha256": "f583ae4e26bf9d18757ac5da0580f2a1ae02ed49245f4726d42460480205b49f",
+  "registry_sha256": "ff672ca5ceadde0652e9bfc05829f0e09e47a92a68449bd9c64447f0ca9e1b33",
+  "checkpoint_sha256": "a91be5993b616a68a4a1632d87cae01f63260b273e48be62ddc5f06a0480f7b9",
+  "model_result_sha256": "c1d4e35614093f287516f64337a3d5cb35f6be714aa35cb9139f0794bf9a61df",
+  "task": {
+    "sources_per_scene": 8,
+    "n_channels": 8,
+    "demand_channels": 4,
+    "channel_axis": "y"
+  },
+  "splits": {
+    "train": {
+      "split": "train",
+      "scenes": 300,
+      "mean_discrete_regret": 0.02518441714346409,
+      "cvar_0_9_regret": 0.1440924108028412,
+      "brier": 0.009671473875641823,
+      "cache": "results/stage4/gate_a_cache_v1/gate_a_train.npz",
+      "cache_sha256": "f04c26862f03ebbbb548937cf316a683edbdc8e3eaf2d55f42ab5e62e67ae9cf",
+      "scene_ids_sha256": "9812dfa7cd9f8e612212c2804bc392a8149d5068443df6dc8b3501e6c0e7a9c3"
+    },
+    "calibration": {
+      "split": "calibration",
+      "scenes": 50,
+      "mean_discrete_regret": 0.01880669593811035,
+      "cvar_0_9_regret": 0.08762538433074951,
+      "brier": 0.008779250085353851,
+      "cache": "results/stage4/gate_a_cache_v1/gate_a_calibration.npz",
+      "cache_sha256": "a4a94d9766dc5c358966e96da48afab3a79056cdf1e98d7c834f198ea4e06770",
+      "scene_ids_sha256": "7c7075b28903c99808c03a96a578aecd23d96fade8504f3501bcb8427a4081eb"
+    },
+    "validation": {
+      "split": "validation",
+      "scenes": 150,
+      "mean_discrete_regret": 0.022882480174303055,
+      "cvar_0_9_regret": 0.1117781549692154,
+      "brier": 0.007610552478581667,
+      "cache": "results/stage4/gate_a_cache_v1/gate_a_validation.npz",
+      "cache_sha256": "6239ffa17f2abc626df75b3b09527fa6f52e67abfb485b3db177b814f5aba594",
+      "scene_ids_sha256": "03a36c26eaef7196a04962051ec82b1b59af946ed1dd5a4d77fcb9f856be4014"
+    }
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "torch": "2.12.0",
+      "pillow": "10.4.0"
+    }
+  },
+  "final_holdout_accessed": false,
+  "claim_boundary": "Development cache only; no final H2/H3 claim."
+}

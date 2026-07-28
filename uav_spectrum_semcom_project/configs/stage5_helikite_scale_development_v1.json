@@ -1,0 +1,57 @@
+{
+  "protocol_id": "stage5_helikite_measured_scale_development_v1",
+  "status": "frozen_before_measured_scale_metrics",
+  "created_date": "2026-07-25",
+  "purpose": "Test the frozen task-sufficient query bundle on real airborne CBRS-band sweeps at N=8, 16, 32, and 64 without touching the external Final campaigns.",
+  "development_source": {
+    "pilot_result": "results/stage5/helikite_pilot_v1/helikite_pilot_result.json",
+    "pilot_result_sha256": "9fdd5dfd67c27dc264268737eb9553b5af268c8629163a5de82e1216e2d0f0e9",
+    "cache": "results/stage5/helikite_pilot_v1/helikite_pilot_cache.npz",
+    "cache_sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+    "role": "permanently_excluded_2023_adapter_pilot_used_for_fixed_algorithm_development_only"
+  },
+  "task_grid": {
+    "analysis_band_mhz": [3550.0, 3700.0],
+    "n_channels": [8, 16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "query_schedule": "deterministic_cyclic_over_demand_ratios",
+    "application_header_bits": 40,
+    "soft_power_bits_per_channel": 4
+  },
+  "fixed_policy": {
+    "regret_threshold_db": 0.2,
+    "max_state_age_minutes": 120.0,
+    "parameters_may_be_retuned": false
+  },
+  "methods": [
+    "soft_power_fixed4_always",
+    "separate_optimal_indices_always",
+    "query_bundle_always",
+    "query_event_bundle_fixed"
+  ],
+  "link_accounting": {
+    "stage2_config": "configs/stage2_digital_link.json",
+    "stage2_config_sha256": "66fbe3cc3166225d8aa4bbcd82131a92c808196314045735019321b1791932a1",
+    "fec": "hamming74",
+    "channel": "awgn",
+    "ebn0_db": 6.0,
+    "scope": "nominal_encoded_bit_accounting_only_no_stochastic_channel_outcome"
+  },
+  "engineering_benchmark": {
+    "repetitions": 20,
+    "reported_as_machine_specific_secondary_evidence": true
+  },
+  "descriptive_checks": {
+    "query_bundle_clean_regret_must_equal_zero": true,
+    "event_bundle_maximum_scene_regret_db": 0.2,
+    "bundle_application_bits_must_be_lower_than_soft_power_for_all_n": true,
+    "bit_reduction_must_increase_from_n8_to_n64": true
+  },
+  "governance": {
+    "external_final_archives_may_be_opened": false,
+    "external_final_signal_values_may_be_loaded": false,
+    "fixed_policy_retuned": false,
+    "output_is_confirmatory_final": false
+  },
+  "claim_boundary": "Development-only airborne measured-spectrum scale evidence. It tests task representation and nominal link cost, but not independent Final generalization, stochastic link robustness, measured backhaul, ACK faults, multiple receivers, or MIMO."
+}

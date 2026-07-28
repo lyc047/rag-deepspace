@@ -1,0 +1,10 @@
+{
+  "pair_disagreement_threshold": 0.0,
+  "stale_trigger_s": 0.1,
+  "target_reports": 3,
+  "fusion_mode": "robust_quality_weighted",
+  "average_regret": 0.01115771054866768,
+  "mean_transmitted_bits": 2066.391666666667,
+  "baseline_average_regret": 0.011233245022594929,
+  "feasible": true
+}

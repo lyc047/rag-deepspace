@@ -1,0 +1,17 @@
+{
+  "audit_id": "stage4_recent_literature_verification_v1",
+  "verification_date": "2026-07-16",
+  "source_policy": "publisher_author_institution_CVF_or_arXiv_primary_pages",
+  "reference_count": 7,
+  "references": [
+    {"id": "R1", "title": "Integrated Distributed Semantic Communication and Over-the-Air Computation for Cooperative Spectrum Sensing", "year": 2025, "identifier": "doi:10.1109/TCOMM.2024.3468215", "url": "https://ieeexplore.ieee.org/document/10693603/", "status": "verified"},
+    {"id": "R2", "title": "Digital Semantic Device-Edge Co-Inference With Task-Oriented ARQ", "year": 2024, "identifier": "doi:10.1109/TVT.2024.3390213", "url": "https://research.cuhk.edu.hk/en/publications/digital-semantic-device-edge-co-inference-with-task-oriented-arq-2/", "status": "verified"},
+    {"id": "R3", "title": "Pragmatic Communication in Multi-Agent Collaborative Perception", "year": 2024, "identifier": "arXiv:2401.12694", "url": "https://arxiv.org/abs/2401.12694", "status": "verified"},
+    {"id": "R4", "title": "End-to-End Learning for Task-Oriented Semantic Communications Over MIMO Channels: An Information-Theoretic Framework", "year": 2025, "identifier": "doi:10.1109/JSAC.2025.3531575", "url": "https://research.cuhk.edu.hk/en/publications/end-to-end-learning-for-task-oriented-semantic-communications-ove/", "status": "verified"},
+    {"id": "R5", "title": "mmCooper: A Multi-agent Multi-stage Communication-efficient and Collaboration-robust Cooperative Perception Framework", "year": 2025, "identifier": "ICCV2025:28396-28406", "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Liu_mmCooper_A_Multi-agent_Multi-stage_Communication-efficient_and_Collaboration-robust_Cooperative_Perception_Framework_ICCV_2025_paper.html", "status": "verified"},
+    {"id": "R6", "title": "Entropy-and-Channel-Aware Adaptive-Rate Semantic Communication with MLLM-Aided Feature Compensation", "year": 2026, "identifier": "arXiv:2501.15414v4", "url": "https://arxiv.org/abs/2501.15414", "status": "verified_title_changed_since_v1"},
+    {"id": "R7", "title": "Toward Reliable Semantic Communication: Beyond Average Performance", "year": 2026, "identifier": "arXiv:2606.01284", "url": "https://arxiv.org/abs/2606.01284", "status": "verified"}
+  ],
+  "acceptance": {"completed": true, "unverified_references_in_core_matrix": 0},
+  "claim_boundary": "Related works motivate comparisons; none substitute for this project's final evidence."
+}

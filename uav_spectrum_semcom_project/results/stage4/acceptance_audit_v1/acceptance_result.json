@@ -1,0 +1,188 @@
+{
+  "audit_id": "stage4_acceptance_audit_v1",
+  "development_acceptance": true,
+  "final_acceptance": false,
+  "counts": {
+    "blocked": 1,
+    "failed": 0,
+    "passed": 16,
+    "waived": 1
+  },
+  "blocking_item_ids": [
+    "F02_SINGLE_USE_FINAL_EVALUATION"
+  ],
+  "failed_item_ids": [],
+  "items": [
+    {
+      "item_id": "A01_PROTOCOL",
+      "scope": "development",
+      "status": "passed",
+      "evidence": [
+        "configs/stage4_protocol.json"
+      ],
+      "note": "frozen protocol is valid"
+    },
+    {
+      "item_id": "A02_PROTOCOL_REGISTRY",
+      "scope": "development",
+      "status": "passed",
+      "evidence": [
+        "configs/stage4_dataset_registry_v1.json"
+      ],
+      "note": "protocol-only registry is structurally valid"
+    },
+    {
+      "item_id": "A03_C1_GATE_A",
+      "scope": "development",
+      "status": "passed",
+      "evidence": [
+        "results/stage4/gate_a_training_v1/gate_a_paired_analysis.json"
+      ],
+      "note": "C1 validation Gate A passed at matched nominal bits; final H2 remains untested"
+    },
+    {
+      "item_id": "A04_C2_GATE_B_NEGATIVE",
+      "scope": "development",
+      "status": "passed",
+      "evidence": [
+        "results/stage4/value_network_v1/value_network_result.json",
+        "results/stage4/analytic_scheduler_selective_v1/analytic_scheduler_result.json",
+        "results/stage4/preview_diagnostic_v1/preview_diagnostic_result.json",
+        "docs/STAGE4_BATCH6_REPORT.md"
+      ],
+      "note": "Gate B investigated with learned, analytic, and preview variants; rejected as a documented negative result"
+    },
+    {
+      "item_id": "A05_C3_GATE_C_NEGATIVE",
+      "scope": "development",
+      "status": "passed",
+      "evidence": [
+        "results/stage4/reliable_minority_v2/reliable_minority_result.json",
+        "docs/STAGE4_BATCH7_REPORT.md"
+      ],
+      "note": "controlled C3 robustness completed; Gate C rejected and no H3 spatial claim is made"
+    },
+    {
+      "item_id": "A06_END_TO_END_DECODER",
+      "scope": "development",
+      "status": "passed",
+      "evidence": [
+        "results/stage4/end_to_end_sweep_v1/end_to_end_sweep_result.json"
+      ],
+      "note": "150-scene decoder-path sweep covers 3 channels x 4 Eb/N0 values; selective G2 saves actual transmitted bits"
+    },
+    {
+      "item_id": "A07_QUALITY_DIAGNOSTICS",
+      "scope": "development",
+      "status": "passed",
+      "evidence": [
+        "results/stage4/quality_diagnostics_v1/quality_diagnostics_result.json"
+      ],
+      "note": "quality calibration and controlled anomaly diagnostics are recorded"
+    },
+    {
+      "item_id": "A08_VALUE_RANKING_DIAGNOSTICS",
+      "scope": "development",
+      "status": "passed",
+      "evidence": [
+        "results/stage4/value_diagnostics_v1/value_diagnostics_result.json"
+      ],
+      "note": "aggregate MAE, rank correlation, top-k recall, and scheduler effect are recorded"
+    },
+    {
+      "item_id": "A09_FINAL_PREREGISTRATION",
+      "scope": "development",
+      "status": "passed",
+      "evidence": [
+        "configs/stage4_protocol.json",
+        "docs/STAGE4_FINAL_HOLDOUT_RUNBOOK.md"
+      ],
+      "note": "single-use final evaluation, primary families, multiplicity control, and acceptance thresholds are frozen"
+    },
+    {
+      "item_id": "F01_INDEPENDENT_FINAL_SCENES",
+      "scope": "final",
+      "status": "passed",
+      "evidence": [
+        "configs/stage4_final_registry_v1.json"
+      ],
+      "note": "registered independent final scenes: 200/200"
+    },
+    {
+      "item_id": "F02_SINGLE_USE_FINAL_EVALUATION",
+      "scope": "final",
+      "status": "blocked",
+      "evidence": [
+        "results\\stage4\\final_holdout_v1\\final_holdout_result.json"
+      ],
+      "note": "cannot run before an eligible independent catalog is registered"
+    },
+    {
+      "item_id": "F03_H3_SPATIAL_COLLABORATION",
+      "scope": "claim",
+      "status": "waived",
+      "evidence": [
+        "docs/STAGE4_BATCH7_REPORT.md"
+      ],
+      "note": "no formal H3 claim is made; controlled faults are reported only as mechanism/negative evidence"
+    },
+    {
+      "item_id": "A10_PRE_FINAL_SNAPSHOT",
+      "scope": "development",
+      "status": "passed",
+      "evidence": [
+        "results/stage4/pre_final_freeze_v1/pre_final_freeze_result.json"
+      ],
+      "note": "executable source, configuration, and frozen checkpoint hashes are recorded with passing regression evidence"
+    },
+    {
+      "item_id": "A11_COMPLEXITY_PROFILE",
+      "scope": "development",
+      "status": "passed",
+      "evidence": [
+        "results/stage4/complexity_profile_v1/complexity_result.json"
+      ],
+      "note": "C1/C2 parameter count, linear MACs, checkpoint size, and single-thread CPU latency are recorded"
+    },
+    {
+      "item_id": "A12_MATRIX_COVERAGE",
+      "scope": "development",
+      "status": "passed",
+      "evidence": [
+        "results/stage4/matrix_coverage_v1/matrix_coverage_result.json"
+      ],
+      "note": "baseline, ablation, and sweep coverage has no unaccounted development failures; gate-conditioned waivers are explicit"
+    },
+    {
+      "item_id": "A13_THESIS_MATERIALS",
+      "scope": "development",
+      "status": "passed",
+      "evidence": [
+        "results/stage4/thesis_materials_audit_v1/thesis_materials_audit_result.json"
+      ],
+      "note": "generated figures/tables, chapter draft, claim matrix, and locked final template pass integrity and claim-boundary checks"
+    },
+    {
+      "item_id": "A14_FINAL_STATISTICS_ENGINE",
+      "scope": "development",
+      "status": "passed",
+      "evidence": [
+        "results/stage4/final_statistics_selftest_v1/final_statistics_selftest_result.json",
+        "scripts/run_stage4_final_statistics.py"
+      ],
+      "note": "frozen scene-level bootstrap, paired-randomization, noninferiority, Holm, success/failure, and integrity-rejection branches are verified"
+    },
+    {
+      "item_id": "A15_VERIFIED_RELATED_WORK",
+      "scope": "development",
+      "status": "passed",
+      "evidence": [
+        "results/stage4/literature_audit_v1/verified_references.json",
+        "docs/STAGE4_RELATED_WORK_MATRIX.md",
+        "docs/references/stage4_verified_refs.bib"
+      ],
+      "note": "recent related-work metadata and project-boundary comparisons are verified against primary publisher, institution, CVF, or arXiv pages"
+    }
+  ],
+  "claim_boundary": "Development acceptance is not final H2/H3 evidence."
+}

@@ -1,0 +1,65 @@
+{
+  "asset_id": "stage4_c1_v4_scalability_assets_v1",
+  "source_files": [
+    {
+      "path": "results/stage4/c1_v4_scalability_v1/scalability_result.json",
+      "sha256": "fc97c86384e6f37351692c96698d9037b87327d5dfcf3b872a6bea40094a14ab"
+    },
+    {
+      "path": "configs/stage4_c1_v4_scalability_experiment.json",
+      "sha256": "34926d5d2ebb7a84892d9f2b1d264f8870b0a7322b2d4fb7edd9b16114badc25"
+    }
+  ],
+  "generated_files": [
+    {
+      "path": "results/stage4/c1_v4_scalability_assets_v1/figure_scalability_actual_bits.png",
+      "sha256": "c4b8b8c82ebd8e23a9f8bed62a7be581dfd254166d52d3d9b4b6395cc741739e",
+      "bytes": 141028
+    },
+    {
+      "path": "results/stage4/c1_v4_scalability_assets_v1/figure_scalability_link_degradation_n64_d32.png",
+      "sha256": "311c7b77d1f0fdab4c7ae3a656ce1f83ef094f9abb41fda6cc9675d9e68fa8de",
+      "bytes": 207246
+    },
+    {
+      "path": "results/stage4/c1_v4_scalability_assets_v1/figure_scalability_regret.png",
+      "sha256": "e3f6077387554bda1aa536b699e0220aae5fc2ce89ac931d77bf7b3a0e7414dd",
+      "bytes": 187785
+    },
+    {
+      "path": "results/stage4/c1_v4_scalability_assets_v1/scalability_tables.md",
+      "sha256": "0334fa7422f8e1e36d593c45fe17152c9e309cee14e3a0757e474ce56f384d29",
+      "bytes": 3796
+    },
+    {
+      "path": "results/stage4/c1_v4_scalability_assets_v1/table_scalability_inference.csv",
+      "sha256": "7503d2258a0399626bfa19ee1f559a568610b6845c87fc1c0fa4f146a8f5819b",
+      "bytes": 5427
+    },
+    {
+      "path": "results/stage4/c1_v4_scalability_assets_v1/table_scalability_link_conditions.csv",
+      "sha256": "732c2e177424a6edc8f475794bf7cf27b8857c898b8322b646009ec1cadb1fab",
+      "bytes": 49307
+    },
+    {
+      "path": "results/stage4/c1_v4_scalability_assets_v1/table_scalability_summary.csv",
+      "sha256": "4255af6ea1840c4a9e79ba0e6b45d058e69e8d9999a18c536aebf1bc7fad7eb3",
+      "bytes": 5662
+    }
+  ],
+  "task_count": 12,
+  "scene_count": 180,
+  "strong_target_task_count": {
+    "best_block_onehot": 6,
+    "best_block_binary_index": 6
+  },
+  "governance": {
+    "final_measurement_values_loaded": false,
+    "final_metrics_loaded": false,
+    "changes_final_algorithm_or_claim": false,
+    "compact_binary_index_confirmed": false,
+    "data_role": "already-seen development validation",
+    "confirmatory": false
+  },
+  "claim_boundary": "Fixed-task scaling on already-seen AERPAW development sweeps and a simulated reporting link. It does not alter the consumed Final, confirm the compact index, or establish dynamic-demand, mobility, MIMO, measured-backhaul, or cross-dataset generalization."
+}

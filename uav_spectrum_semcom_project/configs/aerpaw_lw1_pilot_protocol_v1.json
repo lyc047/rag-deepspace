@@ -1,0 +1,49 @@
+{
+  "protocol_id": "aerpaw_lw1_pilot_protocol_v1",
+  "dataset_doi": "10.5061/dryad.hmgqnk9zn",
+  "archive": "ResultsLW1Feb2022_SigMF.zip",
+  "archive_sha256": "595e7ea4c3164b43ba1e49f154ceec583c9f4f14c565b1525e49a27311401951",
+  "dataset_role": "input_adapter_and_resource_proxy_pilot_before_any_final_registration",
+  "format": {
+    "payload_datatype": "rf32_le",
+    "payload_semantics": "received_power_dbm",
+    "bins_per_sweep": 98868,
+    "frequency_span_mhz": [87.16000366210938, 6019.18017578125],
+    "raw_complex_iq": false,
+    "deposit_supplies_independent_occupancy_labels": false
+  },
+  "pilot": {
+    "selection": "deterministic_even_spacing_by_filename_timestamp_before_model_output_access",
+    "default_scene_count": 20,
+    "status": "permanently_excluded_from_final",
+    "allowed_uses": [
+      "schema_validation",
+      "power_and_frequency_unit_validation",
+      "frequency_band_selection",
+      "power_to_occupancy_rule_freezing",
+      "end_to_end_interface_dry_run"
+    ],
+    "forbidden_uses": [
+      "claiming_final_H2_or_H3",
+      "choosing_scenes_after_viewing_model_outputs",
+      "reusing_pilot_scenes_in_final",
+      "tuning_C1_C2_or_C3_weights"
+    ]
+  },
+  "stage4_compatibility": {
+    "C1_resource_proxy": "conditional_on_a_predeclared_power_to_occupancy_and_resource_cost_mapping",
+    "C1_raw_iq_external_validation": "unsupported",
+    "selective_G2_four_node_final_with_LW1_only": "unsupported",
+    "H3_real_spatial_collaboration_with_LW1_only": "unsupported",
+    "automatic_final_catalog_generation": false
+  },
+  "required_before_final_registration": [
+    "archive_sha256_passes",
+    "all_selected_sigmf_pairs_pass_schema_and_size_checks",
+    "pilot_manifest_is_frozen_and_excluded",
+    "power_to_occupancy_mapping_is_frozen_without_final_model_outputs",
+    "claim_scope_is_reconciled_with_single_receiver_and_missing_label_boundaries",
+    "final_scene_independence_rule_is approved and recorded"
+  ],
+  "final_access_count": 0
+}

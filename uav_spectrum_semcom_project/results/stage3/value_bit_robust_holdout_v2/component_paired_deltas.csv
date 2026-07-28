@@ -1,0 +1,8 @@
+﻿scenario,comparison,regret_delta_mean,regret_delta_std,regret_delta_ci95_low,regret_delta_ci95_high,bit_delta_mean,bit_delta_std,bit_delta_ci95_low,bit_delta_ci95_high
+baseline_4_nodes,robust_weighting_minus_selected_mean,-6.780857220292091e-05,0.00028575161939550726,-0.0003182809100973295,0.00018266376569148768,0.0,0.0,0.0,0.0
+best_node_failure,robust_weighting_minus_selected_mean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+best_single_node,robust_weighting_minus_selected_mean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+combined_stale_failure_anomaly,robust_weighting_minus_selected_mean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+heterogeneous_2_nodes,robust_weighting_minus_selected_mean,6.180424243211746e-05,0.00012720869074989757,-4.969909126732623e-05,0.00017330757613156117,0.0,0.0,0.0,0.0
+high_confidence_wrong,robust_weighting_minus_selected_mean,-2.3656152188777922e-05,0.0003844313233551297,-0.00036062506429606874,0.00031331275991851293,0.0,0.0,0.0,0.0
+high_snr_stale,robust_weighting_minus_selected_mean,-3.085210919380188e-05,0.00027045313731794465,-0.00026791473630403755,0.00020621051791643377,0.0,0.0,0.0,0.0

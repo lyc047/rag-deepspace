@@ -1,0 +1,103 @@
+{
+  "protocol_id": "aerpaw_c1_temporal_holdout_protocol_v1",
+  "status": "frozen_before_new_calibration_or_holdout_model_output_access",
+  "created_date": "2026-07-21",
+  "purpose": "Post-Final confirmation of C1-v3 tail-risk stability without reusing the original 200-scene three-site Final.",
+  "dataset_doi": "10.5061/dryad.hmgqnk9zn",
+  "campaign_timezone": "America/New_York",
+  "official_archives": {
+    "LW1": {
+      "path": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsLW1Feb2022_SigMF.zip",
+      "size_bytes": 12498435786,
+      "sha256": "595e7ea4c3164b43ba1e49f154ceec583c9f4f14c565b1525e49a27311401951"
+    },
+    "CC1": {
+      "path": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsCC1Feb2022_SigMF.zip",
+      "size_bytes": 19084799397,
+      "sha256": "c2b1e6d9172f4738b11d78d874c2ca2e3d4232330a99d2b278eb1e05b642f747"
+    }
+  },
+  "permanent_exclusions": {
+    "pilot_manifest": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/work/aerpaw_lw1_pilot_manifest_v1.json",
+    "pilot_manifest_sha256": "289f90d510da5d16827407a368d2a37b57719d80ca232cb0e43826fbb0ab7045",
+    "original_final_registry": "configs/stage4_final_registry_v1.json",
+    "original_final_registry_file_sha256": "1b1cf853817b707d28d626f1103f4113c53e0fed989bc3c00d4960fa4e04f48b"
+  },
+  "partitions": {
+    "calibration": [
+      {
+        "site": "LW1",
+        "start_local_inclusive": "2022-02-20T14:00:00",
+        "end_local_exclusive": "2022-02-21T00:00:00",
+        "minimum_separation_s": 600.0,
+        "selected_count": 60
+      }
+    ],
+    "guard_excluded": [
+      {
+        "site": "LW1",
+        "start_local_inclusive": "2022-02-21T00:00:00",
+        "end_local_exclusive": "2022-02-21T06:00:00",
+        "reason": "six-hour temporal guard between calibration and confirmation"
+      }
+    ],
+    "confirmation_holdout": [
+      {
+        "stratum": "later_time_same_site",
+        "site": "LW1",
+        "start_local_inclusive": "2022-02-21T06:00:00",
+        "end_local_exclusive": "2022-02-22T11:00:00",
+        "minimum_separation_s": 300.0,
+        "selected_count": 270
+      },
+      {
+        "stratum": "later_time_second_site",
+        "site": "CC1",
+        "start_local_inclusive": "2022-02-24T17:00:00",
+        "end_local_exclusive": "2022-02-24T20:00:00",
+        "minimum_separation_s": 300.0,
+        "selected_count": 30
+      }
+    ]
+  },
+  "selection_rule": "exclude every pilot and original-Final provenance; greedy earliest time thinning inside each frozen window; deterministic even spacing to the declared count",
+  "resource_proxy": {
+    "frequency_low_mhz_inclusive": 2400.0,
+    "frequency_high_mhz_exclusive": 2483.5,
+    "n_equal_width_channels": 8,
+    "demand_channels": 4,
+    "threshold_sigma_multiplier": 3.0,
+    "threshold_gaussian_mad_scale": 1.4826,
+    "threshold_sigma_floor_db": 0.25,
+    "resource_cost": "mean_received_power_dbm_per_equal_width_channel"
+  },
+  "candidate_grid": {
+    "fixed_probability_bits": [4],
+    "tail_ranking_weights": [0.5, 1.0, 2.0],
+    "ranking_margins": [0.01, 0.02, 0.05],
+    "selection_order": ["mean_regret", "cvar_0_9_regret", "brier"],
+    "candidate_training_inputs": "original development train and calibration caches only",
+    "candidate_selection_input": "new 60-scene LW1 temporal calibration partition only"
+  },
+  "confirmation_statistics": {
+    "scene_count": 300,
+    "primary_resampling_unit": "site_by_local_hour_block",
+    "paired_cluster_bootstrap_repetitions": 20000,
+    "bootstrap_seed": 20260723,
+    "cvar_alpha": 0.9,
+    "success_gates": [
+      "one_sided_95pct_cluster_bootstrap_upper_bound_for_mean_regret_difference_below_zero",
+      "one_sided_95pct_cluster_bootstrap_upper_bound_for_cvar_difference_below_zero",
+      "fixed_application_payload_bits_exactly_equal",
+      "actual_transmitted_bit_noninferiority_upper_bound_within_one_percent_of_baseline"
+    ]
+  },
+  "governance": {
+    "old_development_validation_may_select_new_hyperparameters": false,
+    "original_three_site_final_may_select_new_hyperparameters": false,
+    "confirmation_measurement_values_or_model_outputs_before_candidate_freeze_allowed": false,
+    "confirmation_access_count": 1,
+    "candidate_or_threshold_changes_after_confirmation_access_allowed": false
+  },
+  "claim_boundary": "Secondary temporal and cross-fixed-site confirmation on real received-power sweeps with a simulated reporting link; not a new independent campaign, raw-IQ detector validation, UAV mobility, measured backhaul, or MIMO."
+}

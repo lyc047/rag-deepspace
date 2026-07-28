@@ -1,0 +1,173 @@
+{
+  "version": "1.0",
+  "status": "instrumentation_dry_run_passed",
+  "protocol_sha256": "cb3d5fde27edeefd39b6dcaf94db67d565997b89cda7e3be3946efa7e4515636",
+  "source": {
+    "cache": "results/stage5/helikite_pilot_v1/helikite_pilot_cache.npz",
+    "cache_sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+    "role": "permanently_excluded_2023_pilot"
+  },
+  "dry_run": {
+    "n_channels": 8,
+    "demands": [
+      2,
+      4,
+      6
+    ],
+    "scene_count": 20,
+    "trajectory_count": 3,
+    "context_install_bits": 385,
+    "compact_codeword_update_bits": 42,
+    "maximum_compact_update_bits": 50,
+    "ack_bits": 24,
+    "heartbeat_request_bits": 32,
+    "heartbeat_response_bits": 32,
+    "runs": [
+      {
+        "trajectory_index": 0,
+        "counts": {
+          "context_install_count": 5,
+          "compact_update_count": 9,
+          "protected_update_count": 1,
+          "heartbeat_probe_count": 0,
+          "heartbeat_response_count": 0,
+          "ack_frame_count": 17
+        },
+        "bit_breakdown": {
+          "task_frame_bits": 420,
+          "exact_action_frame_bits": 0,
+          "escape_exact_bits": 0,
+          "initial_install_bits": 385,
+          "recovery_install_bits": 1540,
+          "compact_update_bits": 378,
+          "duplicate_update_bits": 42,
+          "heartbeat_request_bits": 0,
+          "ack_bits": 408,
+          "heartbeat_response_bits": 0,
+          "other_feedback_bits": 0,
+          "actual_forward_bits": 2345,
+          "actual_feedback_bits": 408,
+          "actual_total_application_bits": 2753,
+          "reserved_capacity_bits": 100,
+          "used_reserved_capacity_bits": 50,
+          "unused_reserved_capacity_bits": 50,
+          "resource_equivalent_bits": 2803
+        },
+        "clean_rate": 0.95,
+        "availability_rate": 1.0
+      },
+      {
+        "trajectory_index": 1,
+        "counts": {
+          "context_install_count": 1,
+          "compact_update_count": 5,
+          "protected_update_count": 1,
+          "heartbeat_probe_count": 0,
+          "heartbeat_response_count": 0,
+          "ack_frame_count": 10
+        },
+        "bit_breakdown": {
+          "task_frame_bits": 252,
+          "exact_action_frame_bits": 0,
+          "escape_exact_bits": 0,
+          "initial_install_bits": 385,
+          "recovery_install_bits": 0,
+          "compact_update_bits": 210,
+          "duplicate_update_bits": 42,
+          "heartbeat_request_bits": 0,
+          "ack_bits": 240,
+          "heartbeat_response_bits": 0,
+          "other_feedback_bits": 0,
+          "actual_forward_bits": 637,
+          "actual_feedback_bits": 240,
+          "actual_total_application_bits": 877,
+          "reserved_capacity_bits": 100,
+          "used_reserved_capacity_bits": 50,
+          "unused_reserved_capacity_bits": 50,
+          "resource_equivalent_bits": 927
+        },
+        "clean_rate": 1.0,
+        "availability_rate": 1.0
+      },
+      {
+        "trajectory_index": 2,
+        "counts": {
+          "context_install_count": 3,
+          "compact_update_count": 7,
+          "protected_update_count": 1,
+          "heartbeat_probe_count": 0,
+          "heartbeat_response_count": 0,
+          "ack_frame_count": 10
+        },
+        "bit_breakdown": {
+          "task_frame_bits": 336,
+          "exact_action_frame_bits": 0,
+          "escape_exact_bits": 0,
+          "initial_install_bits": 385,
+          "recovery_install_bits": 770,
+          "compact_update_bits": 294,
+          "duplicate_update_bits": 42,
+          "heartbeat_request_bits": 0,
+          "ack_bits": 240,
+          "heartbeat_response_bits": 0,
+          "other_feedback_bits": 0,
+          "actual_forward_bits": 1491,
+          "actual_feedback_bits": 240,
+          "actual_total_application_bits": 1731,
+          "reserved_capacity_bits": 100,
+          "used_reserved_capacity_bits": 50,
+          "unused_reserved_capacity_bits": 50,
+          "resource_equivalent_bits": 1781
+        },
+        "clean_rate": 0.95,
+        "availability_rate": 1.0
+      }
+    ],
+    "heartbeat_accounting_probe": {
+      "scene_count": 6,
+      "heartbeat_interval_scenes": 2,
+      "counts": {
+        "heartbeat_probe_count": 1,
+        "heartbeat_response_count": 1,
+        "ack_frame_count": 2
+      },
+      "bit_breakdown": {
+        "task_frame_bits": 42,
+        "exact_action_frame_bits": 0,
+        "escape_exact_bits": 0,
+        "initial_install_bits": 385,
+        "recovery_install_bits": 0,
+        "compact_update_bits": 42,
+        "duplicate_update_bits": 0,
+        "heartbeat_request_bits": 32,
+        "ack_bits": 48,
+        "heartbeat_response_bits": 32,
+        "other_feedback_bits": 0,
+        "actual_forward_bits": 459,
+        "actual_feedback_bits": 80,
+        "actual_total_application_bits": 539,
+        "reserved_capacity_bits": 0,
+        "used_reserved_capacity_bits": 0,
+        "unused_reserved_capacity_bits": 0,
+        "resource_equivalent_bits": 539
+      }
+    }
+  },
+  "checks": {
+    "all_bit_identities_pass": true,
+    "all_escape_remainders_nonnegative": true,
+    "all_other_feedback_remainders_zero": true,
+    "heartbeat_request_and_response_observed": true,
+    "external_final_signal_values_not_loaded": true,
+    "external_final_access_count_remains_zero": true
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": "Instrumentation identity dry-run on permanently excluded 2023 pilot data. It is not a rate-risk result or external Final."
+}

@@ -1,0 +1,2 @@
+dataset_id,split,format,meta_path,data_path,source_url,notes
+sigmf_5g_short,smoke,sigmf,data/raw/sigmf_5g_short/1876954_7680KSPS_srsRAN_Project_gnb_short.sigmf-meta,data/raw/sigmf_5g_short/1876954_7680KSPS_srsRAN_Project_gnb_short.sigmf-data,https://destevez.net/2023/12/an-annotated-5g-sigmf-recording/,"Small annotated 5G NR SigMF recording for real-IQ interface validation; not final training data."

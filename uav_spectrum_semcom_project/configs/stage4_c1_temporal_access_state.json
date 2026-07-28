@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "protocol_id": "aerpaw_c1_temporal_holdout_protocol_v1",
+  "status": "access_consumed",
+  "access_count": 1,
+  "receipt": {
+    "consumed_utc": "2026-07-21T14:40:59.727979+00:00",
+    "protocol_sha256": "e53c75e1cbb1ed4b5e971c74c733c88d980a110d9318860849f81ff9f2def400",
+    "inventory_sha256": "f81afa89d7c1d556284a58c70b05389161452b7441604c8f3f32e780002499e7",
+    "candidate_manifest_sha256": "9b9498f5da2b339cc0b545d1296456d63992be6d19b900b2bff410b43c2a8b9f",
+    "executable_snapshot_sha256": "f7304b8d9e0c02e9aa9ad8bc7988ad6054ad28f202df09c233a1ef926896ece1"
+  },
+  "receipt_sha256": "34f5c9f67ef1805523f2a708a3e2450a413ce8289330847de497161e6dd5af32"
+}

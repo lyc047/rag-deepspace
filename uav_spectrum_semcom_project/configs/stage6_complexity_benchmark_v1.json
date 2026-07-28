@@ -1,0 +1,81 @@
+{
+  "protocol_id": "stage6_complexity_benchmark_v1",
+  "status": "benchmark_protocol_fixed_before_timing_result_access",
+  "created_date": "2026-07-26",
+  "purpose": "Measure the computational and Python-traced-memory cost of the frozen Stage-6 candidate across N = 8, 16, 32, and 64 without changing algorithms or parameters.",
+  "architecture_freeze": {
+    "result": "results/stage6/candidate_architecture_freeze_v1/candidate_architecture_freeze_result.json",
+    "sha256": "d98704c63df12f8abca7eeb36558242daaa0a667dc14b0aaf751e60f1a22f699"
+  },
+  "development_source": {
+    "cache": "results/stage5/helikite_pilot_v1/helikite_pilot_cache.npz",
+    "cache_sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+    "role": "permanently_excluded_2023_adapter_pilot_development_only"
+  },
+  "frozen_model_source": {
+    "path": "results/stage6/temporal_hazard_development_v1/temporal_hazard_result.json",
+    "sha256": "3c36cb992e1696d4df80c077969e8f391c0a9fdae98f53b78fda7d1faf232b47"
+  },
+  "split": {
+    "group_field": "cluster_ids",
+    "seed": 20260726,
+    "train_group_fraction": 0.6
+  },
+  "task_grid": {
+    "n_channels": [8, 16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "epsilon_db": 0.2,
+    "max_state_age_minutes": 120.0,
+    "heartbeat_silence_scenes": 20,
+    "maximum_update_reservation_fraction": 0.1,
+    "codebook_epoch": 1,
+    "outage_penalty_db": 10.0
+  },
+  "fault_condition": {
+    "name": "mixed_context_fault",
+    "install_loss_probability": 0.1,
+    "task_loss_probability": 0.1,
+    "ack_loss_probability": 0.2,
+    "delayed_duplicate_probability": 0.1,
+    "receiver_context_reset_probability": 0.02,
+    "include_reset_hypothesis_after_missing_ack": true
+  },
+  "benchmark": {
+    "warmup_repetitions": 3,
+    "state_build_repetitions": 7,
+    "codebook_fit_repetitions": 20,
+    "hazard_fit_repetitions": 12,
+    "encode_batch_repetitions": 30,
+    "hazard_inference_repetitions": 100,
+    "controller_trajectory_repetitions": 12,
+    "clock": "time.perf_counter_ns",
+    "garbage_collection_disabled_inside_timed_region": true,
+    "memory_metric": "tracemalloc_peak_python_bytes",
+    "memory_limitation": "Python-traced allocations exclude some native NumPy and operating-system allocations."
+  },
+  "reported_metrics": [
+    "task_state_build_microseconds_per_scene",
+    "codebook_fit_milliseconds",
+    "hazard_model_fit_milliseconds",
+    "task_encode_microseconds_per_scene",
+    "hazard_inference_microseconds_per_scene",
+    "controller_microseconds_per_scene",
+    "end_to_end_peak_traced_mebibytes",
+    "empirical_log_log_scaling_exponent"
+  ],
+  "reproducibility_rule": {
+    "classification": "environment_sensitive",
+    "timing_values_must_not_be_compared_for_exact_equality": true,
+    "structural_outputs_must_match_exactly": true,
+    "timing_rerun_median_relative_difference_advisory_threshold": 0.25,
+    "memory_rerun_relative_difference_advisory_threshold": 0.10
+  },
+  "governance": {
+    "frozen_algorithm_or_parameters_may_be_modified": false,
+    "external_final_archives_may_be_opened": false,
+    "external_final_signal_values_may_be_loaded": false,
+    "external_final_access_may_be_consumed": false,
+    "output_is_confirmatory_final": false
+  },
+  "claim_boundary": "Single-machine development benchmark. Runtime and traced memory characterize this Python implementation and environment only; they are not measured UAV latency, energy consumption, embedded memory, or cross-platform guarantees."
+}

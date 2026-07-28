@@ -1,0 +1,229 @@
+{
+  "protocol_id": "stage6_matched_reliability_development_v1",
+  "status": "pre_registered_before_s6_7b_result_access",
+  "created_date": "2026-07-27",
+  "purpose": "Build development-only rate-risk curves for the frozen Stage-6 task-semantic system and a self-contained exact-action reference under matched clean constraints.",
+  "upstream_freeze": {
+    "manifest": "configs/stage6_candidate_architecture_freeze_v1.json",
+    "manifest_sha256": "8409170d391af04d04c1ba0e16f937ab01749d8248d63b20dc25be43634da3dd",
+    "locked_artifacts_may_be_modified": false,
+    "new_instrumentation_must_use_new_files": true
+  },
+  "governance_audit": {
+    "result": "results/stage6/s6_7a_governance_audit_v1/governance_metadata_audit.json",
+    "result_sha256": "369b3f1822ab9e4b3995b0fb64ed1e2eca676379c8a9c190ce408ec20c2b5f8c",
+    "external_final_access_count": 0
+  },
+  "frozen_risk_ranker": {
+    "selection_result": "results/stage6/temporal_hazard_development_v1/temporal_hazard_result.json",
+    "selection_result_sha256": "3c36cb992e1696d4df80c077969e8f391c0a9fdae98f53b78fda7d1faf232b47",
+    "feature_module": "src/spectrum_semcom/stage6_temporal_hazard.py",
+    "feature_module_sha256": "c6b06462b011ae36e25bedc5df5141eddbd5521b616795ee63815615f5ee08b2",
+    "model_family": "standardized_class_weighted_logistic_regression",
+    "selected_c_by_n_must_come_from_selection_result": true,
+    "reservation_threshold_rule": "upper training out-of-fold score quantile at 1 minus reservation fraction",
+    "fraction_zero_produces_no_candidates": true,
+    "may_refit_on_frozen_development_training_groups": true,
+    "may_reselect_model_family_or_c": false
+  },
+  "development_sources": {
+    "coarse_grid_cache": {
+      "path": "results/stage5/helikite_pilot_v1/helikite_pilot_cache.npz",
+      "sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+      "role": "permanently_excluded_2023_pilot"
+    },
+    "grouped_validation_archives": [
+      {
+        "site": "LW1",
+        "path": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsLW1Feb2022_SigMF.zip",
+        "paired_scene_count": 21617,
+        "role": "development_only_historically_accessed"
+      },
+      {
+        "site": "CC1",
+        "path": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsCC1Feb2022_SigMF.zip",
+        "paired_scene_count": 32529,
+        "role": "development_only_historically_accessed"
+      },
+      {
+        "site": "CC2",
+        "path": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsCC2Feb2022_SigMF.zip",
+        "paired_scene_count": 34865,
+        "role": "development_only_historically_accessed"
+      }
+    ],
+    "external_final_archives_may_be_opened": false,
+    "external_final_signal_values_may_be_loaded": false
+  },
+  "study_stages": {
+    "coarse_grid": {
+      "source": "coarse_grid_cache",
+      "purpose": "Enumerate the complete controller working-point grid and identify non-dominated development candidates.",
+      "may_select_working_points": true
+    },
+    "grouped_validation": {
+      "source": "grouped_validation_archives",
+      "purpose": "Evaluate only frozen Pareto candidates across site-by-date groups.",
+      "maximum_semantic_candidates_per_n": 5,
+      "may_refit_codebook": false,
+      "may_change_working_points_after_result_access": false
+    }
+  },
+  "coarse_split": {
+    "group_field": "cluster_ids",
+    "seed": 20260726,
+    "train_group_fraction": 0.6
+  },
+  "task_grid": {
+    "n_channels": [8, 16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "epsilon_db": 0.2,
+    "outage_penalty_db": 10.0,
+    "codebook_epoch": 1,
+    "task_header_bits": 48,
+    "ack_bits": 24,
+    "heartbeat_request_bits": 32,
+    "heartbeat_response_bits": 32
+  },
+  "session_grid": {
+    "scene_counts": [20, 100, 500],
+    "deployment_modes": [
+      "preconfigured_codebook_empty_action_state",
+      "online_install_empty_context"
+    ],
+    "gap_break_rule": "gap_seconds > max(3 * site_median_gap_seconds, 120)",
+    "coarse_cache_group_rule": "cluster_id boundaries are hard session boundaries",
+    "within_group_segmentation": "chronological non-overlapping chunks of the requested scene count",
+    "final_remainder_rule": "retain a final remainder when it has at least 2 scenes",
+    "context_reset_rule": "each session starts independently in the selected deployment mode",
+    "same_scene_may_appear_once_per_requested_session_length": true,
+    "report_install_amortization_separately": true
+  },
+  "primary_fault_condition": {
+    "install_loss_probability": 0.1,
+    "task_loss_probability": 0.1,
+    "ack_loss_probability": 0.2,
+    "delayed_duplicate_probability": 0.1,
+    "receiver_context_reset_probability": 0.02,
+    "include_reset_hypothesis_after_missing_ack": true
+  },
+  "semantic_working_point_grid": {
+    "heartbeat_silence_scenes": [10, 20, 40, 80, null],
+    "maximum_state_age_minutes": [30.0, 60.0, 120.0],
+    "update_reservation_fraction": [0.0, 0.05, 0.1, 0.2],
+    "task_update_open_loop_attempts": [1, 2, 3],
+    "ack_policy": ["cumulative_ack_24_bit"],
+    "risk_ranker": "frozen_stage6_one_step_hazard",
+    "reservation_budget_rule": "each independent session may reserve at most ceil(update_reservation_fraction times session_scene_count) extra attempts",
+    "hard_regret_trigger_cannot_be_suppressed": true,
+    "escape_cannot_be_suppressed": true
+  },
+  "exact_reference_grid": {
+    "transmission_rule": "send_self_contained_current_exact_query_actions_every_scene",
+    "task_packet_open_loop_attempts": [1, 2, 3],
+    "feedback_policy": "none",
+    "codebook_or_context_dependency": false,
+    "same_task_loss_random_stream": true
+  },
+  "robustness_grid_after_working_point_freeze": {
+    "task_loss_probability": [0.0, 0.05, 0.1, 0.2],
+    "ack_loss_probability": [0.0, 0.1, 0.2, 0.3],
+    "install_loss_probability": [0.0, 0.05, 0.1, 0.2],
+    "delayed_duplicate_probability": [0.0, 0.05, 0.1, 0.2],
+    "receiver_context_reset_probability": [0.0, 0.005, 0.01, 0.02, 0.05],
+    "run_full_cartesian_product": false,
+    "scan_one_fault_dimension_at_a_time_around_primary_condition": true
+  },
+  "bit_accounting": {
+    "primary_actual_bits": "actual_forward_bits + actual_feedback_bits",
+    "resource_equivalent_bits": "actual_total_application_bits + unused_reserved_capacity_bits",
+    "reserved_capacity_is_not_automatically_actual_transmission": true,
+    "report_actual_and_resource_equivalent_curves": true,
+    "report_component_breakdown": true,
+    "task_frame_identity": "task_frame_bits = exact_action_frame_bits + compact_update_bits + escape_exact_bits + duplicate_update_bits",
+    "open_loop_attempt_rule": "the first task packet attempt is counted in compact_update_bits or exact_action_frame_bits; all additional semantic task packet copies are counted in duplicate_update_bits",
+    "risk_reservation_rule": "a selected risk-protection scene reserves one worst-case compact-update packet; if a semantic update occurs it adds one independent packet attempt beyond the base open-loop attempts",
+    "required_fields": [
+      "task_frame_bits",
+      "exact_action_frame_bits",
+      "escape_exact_bits",
+      "initial_install_bits",
+      "recovery_install_bits",
+      "compact_update_bits",
+      "duplicate_update_bits",
+      "heartbeat_request_bits",
+      "ack_bits",
+      "heartbeat_response_bits",
+      "other_feedback_bits",
+      "actual_forward_bits",
+      "actual_feedback_bits",
+      "actual_total_application_bits",
+      "reserved_capacity_bits",
+      "used_reserved_capacity_bits",
+      "unused_reserved_capacity_bits",
+      "resource_equivalent_bits"
+    ]
+  },
+  "metrics": {
+    "availability": "receiver_has_executable_actions",
+    "clean": "available_and_max_query_regret_not_above_epsilon",
+    "task_failure_probability": "one_minus_clean_rate",
+    "conditional_regret_population": "available_scenes_only",
+    "effective_outage_regret_db": 10.0,
+    "report_cvar_outage_fraction": true,
+    "report_escape_per_scene_and_per_update": true
+  },
+  "matched_clean": {
+    "candidate_target_clean_rates": [0.85, 0.9, 0.95, 0.97],
+    "target_is_eligible_when": "both_methods_have_a_real_non_interpolated_working_point_whose_95_percent_clean_lower_bound_reaches_target",
+    "selection_rule": "among_eligible_points_choose_minimum_resource_equivalent_bits",
+    "final_may_rematch_on_final_clean": false,
+    "interpolation_is_descriptive_only": true,
+    "primary_savings": "100 * (exact_resource_bits - semantic_resource_bits) / exact_resource_bits"
+  },
+  "monte_carlo": {
+    "trajectories": 60,
+    "seed": 20260728,
+    "paired_common_random_numbers": true,
+    "random_stream_count": 11,
+    "random_stream_layout": {
+      "receiver_reset": 0,
+      "context_install_delivery": 1,
+      "context_install_ack": 2,
+      "nested_task_packet_attempts": [3, 4, 5],
+      "task_update_ack": 6,
+      "delayed_duplicate_ack": 7,
+      "heartbeat_request_delivery": 8,
+      "heartbeat_response_delivery": 9,
+      "risk_protection_extra_attempt": 10
+    },
+    "attempt_nesting_rule": "K attempts use the first K nested_task_packet_attempts so K=1,2,3 are paired and reliability cannot decrease solely from adding an attempt",
+    "paired_bootstrap_replicates": 5000,
+    "confidence_level": 0.95,
+    "outer_data_group": "site_x_local_date",
+    "report_leave_one_site_out": true
+  },
+  "decision_rules": {
+    "primary_success": "at_least_one_pre_registered_matched_clean_target_has_positive_savings_with_95_percent_lower_bound_above_zero",
+    "strong_effect_target_percentage": 15.0,
+    "actual_and_resource_equivalent_conclusion_direction_must_agree": true,
+    "availability_must_be_reported": true,
+    "no_common_clean_range": "stop_before_external_final_and_simplify_protocol",
+    "negative_results_must_be_retained": true
+  },
+  "safety_boundary": {
+    "prediction_cannot_select_spectrum_action": true,
+    "prediction_cannot_suppress_hard_trigger": true,
+    "wrong_codebook_action_may_not_be_executed": true,
+    "external_final_access_count_must_remain_zero": true
+  },
+  "outputs": {
+    "preflight": "results/stage6/matched_reliability_preflight_v1/preflight.json",
+    "instrumentation_dry_run": "results/stage6/matched_reliability_instrumentation_dry_run_v1/result.json",
+    "execution_smoke": "results/stage6/matched_reliability_execution_smoke_v1/result.json",
+    "coarse_grid": "results/stage6/matched_reliability_coarse_grid_v1/result.json",
+    "grouped_validation": "results/stage6/matched_reliability_grouped_validation_v1/result.json",
+    "report": "docs/STAGE6_S6_7B_MATCHED_RELIABILITY_RESULTS.md"
+  },
+  "claim_boundary": "Development-only fairness calibration and grouped validation. No result from this protocol is external Final evidence."
+}

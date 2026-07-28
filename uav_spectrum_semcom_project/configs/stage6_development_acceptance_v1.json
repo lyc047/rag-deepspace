@@ -1,0 +1,83 @@
+{
+  "acceptance_id": "stage6_development_acceptance_v1",
+  "status": "acceptance_protocol_fixed_before_acceptance_result_generation",
+  "created_date": "2026-07-26",
+  "purpose": "Audit whether the frozen Stage-6 candidate has sufficient development evidence to proceed to external-Final protocol registration without accessing external Final.",
+  "locked_evidence": {
+    "architecture_freeze": {
+      "path": "results/stage6/candidate_architecture_freeze_v1/candidate_architecture_freeze_result.json",
+      "sha256": "d98704c63df12f8abca7eeb36558242daaa0a667dc14b0aaf751e60f1a22f699"
+    },
+    "component_ablation": {
+      "path": "results/stage6/component_ablation_development_v1/component_ablation_result.json",
+      "sha256": "df5a1ba9e924a2af44dcf9035eda54b157f2d4502c8fdd27c9a585c306a11249"
+    },
+    "component_ablation_reproduction": {
+      "path": "results/stage6/component_ablation_reproduction_v1/component_ablation_result.json",
+      "sha256": "df5a1ba9e924a2af44dcf9035eda54b157f2d4502c8fdd27c9a585c306a11249"
+    },
+    "complexity_primary": {
+      "path": "results/stage6/complexity_benchmark_v1/complexity_benchmark_result.json",
+      "sha256": "badc0cd3d2c0c00fe30cd3ee196a5209c0f49d8795e74b3e11e608b5f3a704a2"
+    },
+    "complexity_reproduction": {
+      "path": "results/stage6/complexity_benchmark_reproduction_v1/complexity_benchmark_result.json",
+      "sha256": "c94b9974ee2318c193d4fbfe23b065c47582bb8010d6b74df5eb853be8aaad64"
+    },
+    "fault_stress_primary": {
+      "path": "results/stage6/fault_probability_stress_v1/fault_probability_stress_result.json",
+      "sha256": "b2844878f836a3931b603099f05b9eed520338db70f7c99dbb57ba47944b91c0"
+    },
+    "fault_stress_reproduction": {
+      "path": "results/stage6/fault_probability_stress_reproduction_v1/fault_probability_stress_result.json",
+      "sha256": "b2844878f836a3931b603099f05b9eed520338db70f7c99dbb57ba47944b91c0"
+    },
+    "query_stress_primary": {
+      "path": "results/stage6/query_demand_stress_v1/query_demand_stress_result.json",
+      "sha256": "ec599cb2dbdf5d8b1cf554bcb54d8ec2e3e2fa492a2c08a5933783f0d97fe137"
+    },
+    "query_stress_reproduction": {
+      "path": "results/stage6/query_demand_stress_reproduction_v1/query_demand_stress_result.json",
+      "sha256": "ec599cb2dbdf5d8b1cf554bcb54d8ec2e3e2fa492a2c08a5933783f0d97fe137"
+    }
+  },
+  "acceptance_gates": {
+    "architecture_freeze_checks_all_true": true,
+    "component_ablation_checks_all_true": true,
+    "learned_auxiliary_cross_n_support_minimum": 3,
+    "fault_stress_checks_all_true": true,
+    "query_stress_checks_all_true": true,
+    "all_query_epsilon_safe": true,
+    "wrong_codebook_decode_count_zero": true,
+    "deterministic_primary_reproduction_hashes_equal": true,
+    "complexity_timing_cells_within_25_percent_minimum": 23,
+    "complexity_timing_cell_count": 24,
+    "complexity_memory_exact_across_reproduction": true,
+    "minimum_full_regression_test_count": 322,
+    "full_regression_must_pass": true,
+    "external_final_access_count_must_equal": 0
+  },
+  "caution_flags": {
+    "same_clean_rate_end_to_end_bit_saving_not_demonstrated": true,
+    "effective_cvar_0p9_is_outage_limited": true,
+    "receiver_reset_probability_0p05_causes_about_30pp_clean_drop": true,
+    "ack_loss_reliability_requires_large_signaling_growth": true,
+    "learned_component_is_auxiliary_not_primary": true,
+    "complexity_is_single_machine_python_only": true,
+    "development_activity_is_fixed_site_not_uav_mobility": true
+  },
+  "decision_rule": {
+    "all_acceptance_gates_must_pass": true,
+    "caution_flags_do_not_block_protocol_registration": true,
+    "caution_flags_must_be_carried_into_final_protocol_and_thesis_claims": true,
+    "passing_authorizes_external_final_execution": false,
+    "passing_authorizes_stage6_final_protocol_registration_only": true
+  },
+  "governance": {
+    "external_final_archives_may_be_opened": false,
+    "external_final_signal_values_may_be_loaded": false,
+    "external_final_access_may_be_consumed": false,
+    "frozen_algorithm_or_parameters_may_be_modified": false
+  },
+  "claim_boundary": "This acceptance audits development completeness and authorizes only protocol registration when all gates pass. It is not an external Final result, not real-UAV validation, and not evidence that all thesis targets have been achieved."
+}

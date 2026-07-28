@@ -1,0 +1,92 @@
+{
+  "version": "1.0",
+  "split_id": "stage1_dataset_registry_v1",
+  "rules": [
+    "Split source frames or acquisition sequences before generating channel-condition samples.",
+    "Do not tune thresholds or model choices on the test split.",
+    "The local RadDet data.yaml train/val/test directory mapping is frozen as observed; do not relabel it without provenance verification.",
+    "Unrelated RadDet frames aggregated for pressure tests are not correlated multi-UAV observations."
+  ],
+  "manifests": [
+    {
+      "path": "data/frame_manifest.csv",
+      "sha256": "c0a5e12075fe7cda3026a6ed38adbcb8917a84daccc9798570ad19b0d922b0b1",
+      "rows": 14,
+      "split_counts": {
+        "test": 3,
+        "train": 8,
+        "val": 3
+      },
+      "unique_frame_ids": 14,
+      "cross_split_frame_ids": [],
+      "role": "real_iq_interface_validation",
+      "formal_eligible": false,
+      "source_group_key": "meta_path",
+      "unique_source_groups": 1,
+      "cross_split_source_groups": [
+        "data/raw/sigmf_5g_short/1876954_7680KSPS_srsRAN_Project_gnb_short.sigmf-meta"
+      ],
+      "policy_reason": "All frames originate from one short SigMF recording; frame-level train/val/test labels cannot support independent generalization claims."
+    },
+    {
+      "path": "data/manifest.csv",
+      "sha256": "8188a74ad4fed2f2090fa7be51ce7f6f8003e3be1986b3eb4d3d24555cb08d86",
+      "rows": 1,
+      "split_counts": {
+        "smoke": 1
+      },
+      "unique_frame_ids": 0,
+      "cross_split_frame_ids": [],
+      "role": "dataset_catalog",
+      "formal_eligible": false,
+      "source_group_key": "dataset_id",
+      "unique_source_groups": 1,
+      "cross_split_source_groups": [],
+      "policy_reason": "Catalog-level manifest rather than a sample-level formal split."
+    },
+    {
+      "path": "data/synthetic_frame_manifest.csv",
+      "sha256": "23f583732f03ce892a52764fbfa4281865ff846de748b22c98b774066257dc77",
+      "rows": 36,
+      "split_counts": {
+        "test": 8,
+        "train": 21,
+        "val": 7
+      },
+      "unique_frame_ids": 36,
+      "cross_split_frame_ids": [],
+      "role": "controlled_pipeline_and_channel_sweep",
+      "formal_eligible": false,
+      "source_group_key": "path",
+      "unique_source_groups": 36,
+      "cross_split_source_groups": [],
+      "policy_reason": "Controlled synthetic evidence is useful for diagnosis and sweeps but cannot replace primary real or benchmark evidence."
+    }
+  ],
+  "raddet": {
+    "path": "data/raw/raddet/RadDet40k128HW001Tv2",
+    "identity": "local_data_yaml_directory_split",
+    "splits": {
+      "test": {
+        "frames": 20001,
+        "filename_list_sha256": "5cb642811b2cafbf6cbe29bf56a7653bcc33b3660355f4d99a874c83ed6d5810"
+      },
+      "train": {
+        "frames": 14001,
+        "filename_list_sha256": "c4573f65539553621561d71b1c8f73624f644320e130b155648b8fdf445add35"
+      },
+      "val": {
+        "frames": 6001,
+        "filename_list_sha256": "4c3a7a6bea85df2b1c7952ca4631d7dc63d61f506151161096638761144b463d"
+      }
+    },
+    "role": "primary_benchmark",
+    "formal_eligible": true,
+    "split_policy": "local_data_yaml_directory_split",
+    "limitations": [
+      "synthetically generated radar benchmark rather than real UAV measurement",
+      "independent frames are not correlated multi-UAV observations",
+      "observed local test/train/val counts are 20001/14001/6001 and must not be relabeled without provenance verification"
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "frame_id": "smoke_0001",
+  "n_samples": 65536,
+  "duration_s": 0.0065536,
+  "sample_rate_hz": 10000000.0,
+  "truth_boxes": [
+    {
+      "label": "tone",
+      "t_start_s": 0.0040555,
+      "t_end_s": 0.0055746,
+      "f_low_hz": 1177119.3661328328,
+      "f_high_hz": 1802776.2601718681,
+      "confidence": 1.0
+    },
+    {
+      "label": "chirp",
+      "t_start_s": 0.0021042,
+      "t_end_s": 0.0026567,
+      "f_low_hz": -340404.50867492426,
+      "f_high_hz": -12142.794014048297,
+      "confidence": 1.0
+    },
+    {
+      "label": "burst",
+      "t_start_s": 0.0030387,
+      "t_end_s": 0.0042922,
+      "f_low_hz": -1851036.0003826278,
+      "f_high_hz": -1158119.7814253801,
+      "confidence": 1.0
+    }
+  ],
+  "pred_boxes": [
+    {
+      "label": "occupied",
+      "t_start_s": 2.56e-05,
+      "t_end_s": 0.006528,
+      "f_low_hz": -5000000.0,
+      "f_high_hz": 4980468.75,
+      "confidence": 1.0
+    }
+  ],
+  "best_tf_iou": 0.014645290040135883,
+  "payloads": [
+    {
+      "name": "raw_iq_12bit_iq",
+      "bits_per_frame": 1572864,
+      "bitrate_bps": 240000000.0
+    },
+    {
+      "name": "stft_8bit",
+      "bits_per_frame": 2084864,
+      "bitrate_bps": 318125000.0
+    },
+    {
+      "name": "semantic_packet",
+      "bits_per_frame": 257,
+      "bitrate_bps": 39215.087890625
+    }
+  ]
+}

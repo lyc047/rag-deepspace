@@ -1,0 +1,63 @@
+{
+  "version": "1.0",
+  "split_id": "stage4_scene_registry_v1",
+  "status": "protocol_only_awaiting_independent_scene_catalog",
+  "created_date": "2026-07-16",
+  "protocol_ref": "configs/stage4_protocol.json",
+  "source_registry_ref": "configs/dataset_registry.json",
+  "group_key": "scene_id",
+  "split_seed": 20260716,
+  "split_rules": [
+    "Assign complete independent scenes before creating node views, channel realizations, retransmission traces, or semantic granularities.",
+    "Keep every derivative of one scene in exactly one split.",
+    "Use train truth for model and counterfactual-value fitting only.",
+    "Use calibration only for confidence and quality calibration.",
+    "Use validation for thresholds, hyperparameters, ablations, and decision gates.",
+    "Run final_holdout once only after code, weights, budgets, thresholds, and success rules are frozen.",
+    "Do not reuse any consumed stage-3 holdout as the stage-4 final holdout.",
+    "Do not count reporting-link repeats as independent RF scenes."
+  ],
+  "target_split_ratios": {
+    "train": 0.6,
+    "calibration": 0.1,
+    "validation": 0.15,
+    "final_holdout": 0.15
+  },
+  "splits": {
+    "train": {"status": "unmaterialized", "scene_count": 0, "scene_ids": [], "scene_ids_sha256": null},
+    "calibration": {"status": "unmaterialized", "scene_count": 0, "scene_ids": [], "scene_ids_sha256": null},
+    "validation": {"status": "unmaterialized", "scene_count": 0, "scene_ids": [], "scene_ids_sha256": null},
+    "final_holdout": {"status": "not_created_not_accessed", "scene_count": 0, "scene_ids": [], "scene_ids_sha256": null}
+  },
+  "available_sources": [
+    {
+      "id": "raddet_local_directory_split",
+      "role": "detector_pretraining_and_semi_synthetic_development",
+      "formal_H3_eligible": false,
+      "final_holdout_eligible": false,
+      "reason": "Synthetic radar frames and all existing directory splits have already been used in stages 1-3; correlated node views remain controlled diagnostics."
+    },
+    {
+      "id": "loraiq_four_receiver_two_event_pilot",
+      "role": "interface_and_failure_mechanism_pilot",
+      "formal_H3_eligible": false,
+      "final_holdout_eligible": false,
+      "reason": "Only two independent RF events and a saturated resource-selection task."
+    },
+    {
+      "id": "new_independent_correlated_scene_catalog",
+      "role": "required_for_formal_stage4_final_holdout_and_H3",
+      "formal_H3_eligible": true,
+      "final_holdout_eligible": true,
+      "status": "not_acquired_or_generated"
+    }
+  ],
+  "final_holdout": {
+    "status": "not_created",
+    "access_count": 0,
+    "labels_or_model_outputs_accessed": false,
+    "minimum_independent_real_scenes_for_H3": 30,
+    "recommended_independent_real_scenes_for_H3": [50, 100]
+  },
+  "claim_boundary": "This registry freezes the protocol without inventing scene IDs. Until materialized from a new independent catalog, it supports implementation and diagnostics only, not a final H2/H3 claim."
+}

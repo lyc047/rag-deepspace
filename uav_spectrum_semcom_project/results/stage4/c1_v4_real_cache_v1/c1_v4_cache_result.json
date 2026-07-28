@@ -1,0 +1,165 @@
+{
+  "version": "1.0",
+  "status": "c1_v4_real_development_cache_complete",
+  "protocol_path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\configs\\stage4_c1_v4_development_protocol.json",
+  "protocol_sha256": "28531bef74cfdb6f428073c2ef23bb7d457c39b1445a2ab90bd1d56ae6ce5529",
+  "verified_archive_audit_sha256": "ec4aa183a79712327abc7ddbd48496ee16a383dd62d3783770cda131595d3405",
+  "archive_audit": {
+    "LW1": {
+      "path": "F:\\uav_spectrum_final_data\\aerpaw_sub6_feb2022\\raw\\ResultsLW1Feb2022_SigMF.zip",
+      "size_bytes": 12498435786,
+      "verified_sha256": "595e7ea4c3164b43ba1e49f154ceec583c9f4f14c565b1525e49a27311401951",
+      "pair_count": 21617
+    },
+    "CC1": {
+      "path": "F:\\uav_spectrum_final_data\\aerpaw_sub6_feb2022\\raw\\ResultsCC1Feb2022_SigMF.zip",
+      "size_bytes": 19084799397,
+      "verified_sha256": "c2b1e6d9172f4738b11d78d874c2ca2e3d4232330a99d2b278eb1e05b642f747",
+      "pair_count": 32529
+    },
+    "CC2": {
+      "path": "F:\\uav_spectrum_final_data\\aerpaw_sub6_feb2022\\raw\\ResultsCC2Feb2022_SigMF.zip",
+      "size_bytes": 20662580993,
+      "verified_sha256": "eec92ea4733c2ebc959dd9359ce81e0392af2f06dedff66dc6d3037691ce6b4d",
+      "pair_count": 34865
+    }
+  },
+  "selection_audit": {
+    "train": [
+      {
+        "site": "LW1",
+        "raw_window_pairs": 4188,
+        "permanent_exclusions": 66,
+        "after_thinning": 140,
+        "selected": 90,
+        "first_local": "2022-02-08T12:58:57",
+        "last_local": "2022-02-09T23:52:28"
+      },
+      {
+        "site": "CC1",
+        "raw_window_pairs": 6629,
+        "permanent_exclusions": 67,
+        "after_thinning": 139,
+        "selected": 90,
+        "first_local": "2022-02-08T12:50:34",
+        "last_local": "2022-02-09T23:56:09"
+      },
+      {
+        "site": "CC2",
+        "raw_window_pairs": 7291,
+        "permanent_exclusions": 72,
+        "after_thinning": 140,
+        "selected": 90,
+        "first_local": "2022-02-08T12:48:18",
+        "last_local": "2022-02-09T23:57:39"
+      }
+    ],
+    "calibration": [
+      {
+        "site": "LW1",
+        "raw_window_pairs": 2868,
+        "permanent_exclusions": 45,
+        "after_thinning": 96,
+        "selected": 60,
+        "first_local": "2022-02-10T00:00:29",
+        "last_local": "2022-02-10T23:51:36"
+      },
+      {
+        "site": "CC1",
+        "raw_window_pairs": 4522,
+        "permanent_exclusions": 45,
+        "after_thinning": 95,
+        "selected": 60,
+        "first_local": "2022-02-10T00:00:17",
+        "last_local": "2022-02-10T23:53:37"
+      },
+      {
+        "site": "CC2",
+        "raw_window_pairs": 4988,
+        "permanent_exclusions": 46,
+        "after_thinning": 95,
+        "selected": 60,
+        "first_local": "2022-02-10T00:00:15",
+        "last_local": "2022-02-10T23:48:27"
+      }
+    ],
+    "validation": [
+      {
+        "site": "LW1",
+        "raw_window_pairs": 2868,
+        "permanent_exclusions": 45,
+        "after_thinning": 96,
+        "selected": 60,
+        "first_local": "2022-02-11T00:00:08",
+        "last_local": "2022-02-11T23:51:05"
+      },
+      {
+        "site": "CC1",
+        "raw_window_pairs": 4522,
+        "permanent_exclusions": 45,
+        "after_thinning": 95,
+        "selected": 60,
+        "first_local": "2022-02-11T00:00:18",
+        "last_local": "2022-02-11T23:53:53"
+      },
+      {
+        "site": "CC2",
+        "raw_window_pairs": 4976,
+        "permanent_exclusions": 50,
+        "after_thinning": 96,
+        "selected": 60,
+        "first_local": "2022-02-11T00:00:16",
+        "last_local": "2022-02-11T23:58:55"
+      }
+    ]
+  },
+  "splits": {
+    "train": {
+      "scene_count": 270,
+      "site_counts": {
+        "LW1": 90,
+        "CC1": 90,
+        "CC2": 90
+      },
+      "cluster_count": 108,
+      "cache": "results/stage4/c1_v4_real_cache_v1/c1_v4_train.npz",
+      "cache_sha256": "bc73a959f11fd4077591d5e496fa172411eb5ed637b3dc31a807ac42233d67fa",
+      "provenance": "results/stage4/c1_v4_real_cache_v1/c1_v4_train_provenance.json",
+      "provenance_sha256": "fcf96ef711c090f50b0d9b705cf533b3674d9fa8ab4d7c6037c6d7dfb564b10c"
+    },
+    "calibration": {
+      "scene_count": 180,
+      "site_counts": {
+        "LW1": 60,
+        "CC1": 60,
+        "CC2": 60
+      },
+      "cluster_count": 72,
+      "cache": "results/stage4/c1_v4_real_cache_v1/c1_v4_calibration.npz",
+      "cache_sha256": "619a51e927023e111bdde43835a469e06ad19a4cfeba3850cad99e3345ec2e01",
+      "provenance": "results/stage4/c1_v4_real_cache_v1/c1_v4_calibration_provenance.json",
+      "provenance_sha256": "a82387eb75aa02f899e3839ba8e06d409a45f72a92a7e7ad78e56ae8b0a06fcf"
+    },
+    "validation": {
+      "scene_count": 180,
+      "site_counts": {
+        "LW1": 60,
+        "CC1": 60,
+        "CC2": 60
+      },
+      "cluster_count": 72,
+      "cache": "results/stage4/c1_v4_real_cache_v1/c1_v4_validation.npz",
+      "cache_sha256": "28d271cf8b00b34c192b9c64e22bfbf4c8dc908cbe77d756bd4008745862bcc4",
+      "provenance": "results/stage4/c1_v4_real_cache_v1/c1_v4_validation_provenance.json",
+      "provenance_sha256": "838b70dfeb592141ba1bcaac9f2d35bfac2a5c28ba2556a6f0cd45febca05973"
+    }
+  },
+  "governance": {
+    "prior_pilot_or_holdout_stem_overlap": 0,
+    "prior_holdout_measurement_values_loaded": false,
+    "prior_holdout_metrics_loaded": false,
+    "model_outputs_loaded": false,
+    "development_only": true
+  },
+  "claim_boundary": "Development-only real fixed-site power sweeps. The result may select a C1-v4 representation but cannot confirm it; not raw-IQ detection, UAV mobility, MIMO, or measured backhaul."
+}

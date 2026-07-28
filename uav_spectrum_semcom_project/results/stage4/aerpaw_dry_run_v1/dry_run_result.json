@@ -1,0 +1,92 @@
+{
+  "experiment_id": "aerpaw_stage4_interface_dry_run_v1",
+  "role": "interface_and_complexity_dry_run_not_performance_evaluation",
+  "input": "deterministic_synthetic_rf32_power_sweep",
+  "input_bins": 98868,
+  "frequency_span_mhz": [
+    87.16000366210938,
+    6019.18017578125
+  ],
+  "threshold_dbm": -110.0,
+  "base_occupancy": [
+    0.05000404641032219,
+    0.5500081181526184,
+    0.11999353021383286,
+    0.7500404715538025,
+    0.2999676465988159,
+    0.0800226554274559,
+    0.6200032234191895,
+    0.1799498349428177
+  ],
+  "channel_mean_power_dbm": [
+    -130.11570739746094,
+    -101.09774780273438,
+    -126.04342651367188,
+    -89.46086120605469,
+    -115.60468292236328,
+    -128.35440063476562,
+    -96.9935073852539,
+    -122.56076049804688
+  ],
+  "oracle_cleanest_block_start": 4,
+  "oracle_cleanest_block_mean_dbm": -115.87833786010742,
+  "methods": {
+    "detection_only": {
+      "refined_occupancy": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "probability_bits": 1,
+      "application_bits": 159,
+      "actual_transmitted_bits": 476,
+      "selected_block_start": 0
+    },
+    "detection_plus_resource": {
+      "refined_occupancy": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "probability_bits": 1,
+      "application_bits": 159,
+      "actual_transmitted_bits": 476,
+      "selected_block_start": 0
+    }
+  },
+  "timing": {
+    "power_to_8_channel_occupancy": {
+      "median_ms": 0.64675,
+      "p95_ms": 1.192995
+    },
+    "C1_inference_both_methods": {
+      "median_ms": 2.84445,
+      "p95_ms": 4.700139999999999
+    },
+    "G2_codec_and_digital_link": {
+      "median_ms": 2.51585,
+      "p95_ms": 3.6497199999999994
+    },
+    "resource_selection": {
+      "median_ms": 0.15805000000000002,
+      "p95_ms": 0.2847799999999999
+    }
+  },
+  "repeats": 100,
+  "checkpoint_sha256": {
+    "detection_only": "418808efa3a3c7816b2b20d1980b3bc5ae5c102fc29876f489646d968eed7a39",
+    "detection_plus_resource": "383ddb9a916e1ee8b969f2a3d1269c75327408d7a6fd4e8d99a6c620c8976cb7"
+  },
+  "final_access_consumed": false,
+  "claim_boundary": "Dry-run validates data shape, frozen C1, G2 codec, digital link, and resource-selection interfaces only."
+}

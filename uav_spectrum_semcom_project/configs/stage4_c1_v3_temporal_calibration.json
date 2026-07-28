@@ -1,0 +1,39 @@
+{
+  "experiment_id": "stage4_c1_v3_tail_ranking_temporal_calibration_v1",
+  "status": "preregistered_calibration_only_before_confirmation_access",
+  "temporal_protocol": "configs/aerpaw_c1_temporal_holdout_protocol_v1.json",
+  "prefinal_inventory": "results/stage4/aerpaw_c1_temporal_prefinal_v1/prefinal_inventory.json",
+  "development_cache": "results/stage4/gate_a_cache_v1/gate_a_cache_result.json",
+  "baseline_checkpoint_pattern": "results/stage4/c1_v2_paired_finetune_exploratory_v1/checkpoints/robust_detection_fixed4_seed{seed}.pt",
+  "training_seeds": [20260716, 20260717, 20260718, 20260719, 20260720],
+  "fine_tune_epochs": 80,
+  "batch_size": 64,
+  "fine_tune_learning_rate": 0.0005,
+  "weight_decay": 0.0001,
+  "hidden_dim": 32,
+  "fixed_probability_bits": 4,
+  "view_specs": [
+    {"name": "clean", "temperature": 1.0, "bias": 0.0, "noise_std": 0.0},
+    {"name": "sparse", "temperature": 1.25, "bias": -0.8, "noise_std": 0.01},
+    {"name": "dense", "temperature": 0.8, "bias": 0.5, "noise_std": 0.01},
+    {"name": "noisy", "temperature": 1.0, "bias": 0.0, "noise_std": 0.04}
+  ],
+  "worst_view_weight": 0.25,
+  "consistency_weight": 0.1,
+  "resource_weight": 1.0,
+  "soft_tail_weight": 0.5,
+  "ranking_weight": 4.0,
+  "inverse_temperature": 20.0,
+  "cvar_alpha": 0.9,
+  "tail_ranking_weights": [0.5, 1.0, 2.0],
+  "ranking_margins": [0.01, 0.02, 0.05],
+  "development_checkpoint_selection_split": "calibration",
+  "candidate_selection_split": "new_aerpaw_lw1_temporal_calibration_only",
+  "selection_order": ["mean_regret", "cvar_0_9_regret", "brier_to_input_proxy"],
+  "forbidden_model_selection_inputs": [
+    "original_development_validation",
+    "original_three_site_final",
+    "new_temporal_confirmation_holdout"
+  ],
+  "claim_boundary": "Calibration and candidate freezing only; no new confirmation claim is produced by this run."
+}

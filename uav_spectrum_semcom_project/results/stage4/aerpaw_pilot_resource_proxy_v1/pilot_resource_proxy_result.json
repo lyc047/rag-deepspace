@@ -1,0 +1,105 @@
+{
+  "experiment_id": "aerpaw_lw1_pilot_resource_proxy_freeze_v1",
+  "role": "pilot_only_mapping_and_interface_freeze_not_model_evaluation",
+  "protocol_path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\configs\\aerpaw_three_site_prefinal_protocol_v1.json",
+  "protocol_sha256": "5c6c3ebd33cd5ba3978c1644bc1461d66823c00739e04f03e709c9e6c77fe838",
+  "pilot_manifest_path": "F:\\uav_spectrum_final_data\\aerpaw_sub6_feb2022\\work\\aerpaw_lw1_pilot_manifest_v1.json",
+  "pilot_manifest_sha256": "289f90d510da5d16827407a368d2a37b57719d80ca232cb0e43826fbb0ab7045",
+  "pilot_scene_count": 20,
+  "pilot_sites": [
+    "LW1"
+  ],
+  "frequency_band_mhz": [
+    2400.0,
+    2483.5
+  ],
+  "bins_per_selected_band": [
+    1391
+  ],
+  "n_equal_width_channels": 8,
+  "threshold_rule": {
+    "estimator": "median_plus_scaled_MAD",
+    "sigma_multiplier": 3.0,
+    "gaussian_mad_scale": 1.4826,
+    "sigma_floor_db": 0.25,
+    "uses_only_current_sweep": true,
+    "uses_labels_or_model_outputs": false
+  },
+  "threshold_dbm_summary": {
+    "minimum": -133.97166442871094,
+    "q10": -133.57120819091796,
+    "median": -132.8086393875122,
+    "q90": -119.62969834838867,
+    "maximum": -104.99117007293701
+  },
+  "channel_occupancy_summary": {
+    "pooled": {
+      "minimum": 0.0,
+      "q10": 0.0,
+      "median": 0.03169224597513676,
+      "q90": 0.28537305295467363,
+      "maximum": 1.0
+    },
+    "per_channel_median": [
+      0.02298850566148758,
+      0.04597701132297516,
+      0.017241379246115685,
+      0.06321839243173599,
+      0.017341040074825287,
+      0.04885057546198368,
+      0.043103449046611786,
+      0.01149425283074379
+    ],
+    "per_channel_q10": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.03390804585069418,
+      0.027586206793785095,
+      0.0
+    ],
+    "per_channel_q90": [
+      0.04655172415077687,
+      0.06379310488700868,
+      0.16839080899953845,
+      0.8810344815254213,
+      0.3473988384008408,
+      0.6551724374294282,
+      0.3620689570903781,
+      0.012068965472280988
+    ]
+  },
+  "channel_mean_power_dbm_summary": {
+    "pooled": {
+      "minimum": -134.87844848632812,
+      "q10": -134.4543716430664,
+      "median": -133.62396240234375,
+      "q90": -127.26921005249024,
+      "maximum": -114.25527954101562
+    },
+    "per_channel_median": [
+      -133.74700164794922,
+      -133.67628479003906,
+      -133.59906768798828,
+      -131.61063385009766,
+      -133.35327911376953,
+      -132.52587127685547,
+      -132.960693359375,
+      -134.08814239501953
+    ]
+  },
+  "sanity_checks": {
+    "all_pilot_sweeps_loaded": true,
+    "single_expected_site": true,
+    "selected_band_has_constant_bin_count": true,
+    "occupancy_is_finite_and_bounded": true,
+    "resource_cost_is_finite": true,
+    "model_imported_or_executed": false,
+    "final_catalog_created": false,
+    "final_access_consumed": false
+  },
+  "final_access_consumed": false,
+  "claim_boundary": "No independent occupancy labels exist. Occupancy is a deterministic proxy input and received power supplies the resource-cost reference; this cannot validate raw-IQ detection accuracy."
+}

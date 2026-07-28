@@ -1,0 +1,102 @@
+{
+  "version": "1.0",
+  "registry_id": "stage5_external_final_registry_v1",
+  "status": "download_bundles_verified_inner_archives_ready_final_not_accessed",
+  "created_date": "2026-07-24",
+  "license": "CC0-1.0",
+  "local_root": "F:/uav_spectrum_final_data/aerpaw_helikite_external_v1",
+  "development_adapter_pilot": {
+    "dataset_id": "aerpaw_packapalooza_2023",
+    "doi": "10.5061/dryad.mw6m9063f",
+    "campaign": "Packapalooza urban helikite, August 2023",
+    "role": "adapter_and_quality_control_only_permanently_excluded_from_final",
+    "archive": "pilot/Packapalooza_2023/AERPAW_helikite_packapalooza_23.7z",
+    "archive_size_bytes": 80854632,
+    "archive_sha256": "b1265fbe5e2c94385b37aff723ad881b0e59108710620096d4139ea093c6f9e6",
+    "download_bundle": {
+      "path": "F:/uav_spectrum_final_data/doi_10_5061_dryad_mw6m9063f__v20231117.zip",
+      "size_bytes": 80857099,
+      "sha256": "4b2d07cb5b952a566400313cb4b2e391120ed415c021b1a6db9e47640d67ceed",
+      "member": "AERPAW_helikite_packapalooza_23.7z"
+    },
+    "measurement_summary": "90 minutes, 364 sweeps, approximately 15 seconds per sweep, urban helikite up to approximately 140 m",
+    "final_eligible": false
+  },
+  "final_candidates": [
+    {
+      "dataset_id": "aerpaw_packapalooza_2024",
+      "doi": "10.5061/dryad.0zpc8676n",
+      "campaign": "Packapalooza urban helikite, August 2024",
+      "archive": "final/Packapalooza_2024/Packapalooza_2024_SigMF.zip",
+      "archive_size_bytes": 745874507,
+      "archive_sha256": "d6367101b05a8161880029274d619e8e823637e92e2c47751102f9be0f987617",
+      "download_bundle": {
+        "path": "F:/uav_spectrum_final_data/doi_10_5061_dryad_0zpc8676n__v20241030.zip",
+        "size_bytes": 745876931,
+        "sha256": "411613dc421a5d7e5b94321ec1c5a840e11d20657cb442f597cb379482bd4b21",
+        "member": "Packapalooza_2024_SigMF.zip"
+      },
+      "measurement_summary": "approximately 6 hours, approximately 15 seconds per sweep, urban helikite up to approximately 180 m",
+      "source_values_or_method_outputs_accessed": false
+    },
+    {
+      "dataset_id": "aerpaw_lake_wheeler_2024",
+      "doi": "10.5061/dryad.pk0p2ngz8",
+      "campaign": "Lake Wheeler rural helikite, August 2024",
+      "archive": "final/Lake_Wheeler_2024/Lake_Wheeler_2024_SigMF.zip",
+      "archive_size_bytes": 787189713,
+      "archive_sha256": "bee764cee4c99f7cddc35c9036ef5c38e6283516ebfe322f34d50297c3bbfa9b",
+      "download_bundle": {
+        "path": "F:/uav_spectrum_final_data/doi_10_5061_dryad_pk0p2ngz8__v20241031.zip",
+        "size_bytes": 787191974,
+        "sha256": "826df7e25567797536af11e5c94822cca3eb7951de1ce286721cd6fdfa600b36",
+        "member": "Lake_Wheeler_2024_SigMF.zip"
+      },
+      "measurement_summary": "approximately 6 hours at altitude, continuous sweeps up to 6 GHz, rural helikite up to approximately 300 m",
+      "source_values_or_method_outputs_accessed": false
+    },
+    {
+      "dataset_id": "aerpaw_packapalooza_2025",
+      "doi": "10.5061/dryad.tb2rbp0fw",
+      "campaign": "Packapalooza urban helikite, August 2025",
+      "archive": "final/Packapalooza_2025/Dryad_submission_AERPAW_Pack2025_17Oct2025.zip",
+      "archive_size_bytes": 438557314,
+      "archive_sha256": "30490681c9f791a8d66ea18ad40ce4ad02d0d30322ee6bfb774b33153ea012c9",
+      "download_bundle": {
+        "path": "F:/uav_spectrum_final_data/doi_10_5061_dryad_tb2rbp0fw__v20251104.zip",
+        "size_bytes": 438560570,
+        "sha256": "7f9db2a4a0ea097e24ddc524309acb0e0f35db912c5a5cb552e8287095fe7f47",
+        "member": "Dryad_submission_AERPAW_Pack2025_17Oct2025.zip"
+      },
+      "measurement_summary": "approximately 6 hours, approximately 15 seconds per sweep, urban helikite up to approximately 160 m",
+      "source_values_or_method_outputs_accessed": false
+    }
+  ],
+  "sampling_precommitment": {
+    "target_scene_count": 200,
+    "minimum_spacing_minutes": 5,
+    "cluster_key": "campaign_id_x_15_minute_time_block",
+    "campaigns_are_separate_strata": true,
+    "all_methods_use_identical_scene_catalog": true,
+    "selection_may_use_timestamps_frequency_grid_and_integrity_only": true,
+    "selection_may_use_candidate_method_outputs": false
+  },
+  "size_accounting": {
+    "final_archives_total_bytes": 1971621534,
+    "pilot_plus_final_archives_total_bytes": 2052476166,
+    "pilot_plus_final_archives_total_gib": 1.9115,
+    "estimated_extracted_total_gib": 9.1,
+    "estimated_archives_plus_extracted_total_gib": 11.1,
+    "recommended_free_space_gib_including_compact_caches_logs_and_margin": 15.0,
+    "estimate_basis": "The local February 2022 AERPAW LW1 archive expands by approximately 4.76 times. Exact expansion for these archives remains unverified until download; streaming extraction can reduce peak use."
+  },
+  "governance": {
+    "stage4_consumed_final_may_be_loaded": false,
+    "pilot_may_select_adapter_and_quality_rules": true,
+    "pilot_may_select_algorithm_or_success_thresholds": false,
+    "final_signal_values_may_be_opened_before_code_freeze": false,
+    "final_method_outputs_may_be_opened_before_single_access": false,
+    "ack_faults_are_measured_by_these_datasets": false
+  },
+  "claim_boundary": "The three Final candidates are independent airborne spectrum-monitoring campaigns relative to the February 2022 fixed-site development source and contain power spectrum, time, frequency and GPS/altitude information. They do not contain a measured semantic reporting link or ACK-fault trace, and they do not create a multi-node or MIMO claim."
+}

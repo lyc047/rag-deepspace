@@ -1,0 +1,338 @@
+{
+  "version": "1.0",
+  "status": "stage6_complexity_benchmark_complete",
+  "protocol_sha256": "fc984329d7b07f9679c078ae6cd6b1ec00dba355a12aa917d8b27d0f5a946c4e",
+  "benchmark_classification": "environment_sensitive",
+  "results": {
+    "8": {
+      "n_channels": 8,
+      "demands": [
+        2,
+        4,
+        6
+      ],
+      "scene_count": 364,
+      "training_scene_count": 197,
+      "evaluation_scene_count": 167,
+      "codebook_size": 3,
+      "codeword_symbol_width_bits": 2,
+      "evaluation_fallback_count": 0,
+      "learned_candidate_count": 26,
+      "maximum_update_reservations": 17,
+      "reservation_equivalent_bits": 50,
+      "timings": {
+        "task_state_build_microseconds_per_scene": {
+          "repetitions": 7,
+          "median": 100.78901098901099,
+          "p25": 98.5559065934066,
+          "p75": 102.49450549450549,
+          "minimum": 94.74835164835164,
+          "maximum": 106.02005494505494
+        },
+        "codebook_fit_milliseconds": {
+          "repetitions": 20,
+          "median": 14.0876,
+          "p25": 13.5588,
+          "p75": 14.687875,
+          "minimum": 12.9529,
+          "maximum": 18.4299
+        },
+        "hazard_model_fit_milliseconds": {
+          "repetitions": 12,
+          "median": 9.8286,
+          "p25": 8.91835,
+          "p75": 10.741249999999999,
+          "minimum": 8.6645,
+          "maximum": 11.0975
+        },
+        "task_encode_microseconds_per_scene": {
+          "repetitions": 30,
+          "median": 20.455988023952095,
+          "p25": 19.393712574850298,
+          "p75": 21.288173652694613,
+          "minimum": 18.17185628742515,
+          "maximum": 41.5125748502994
+        },
+        "hazard_inference_microseconds_per_scene": {
+          "repetitions": 100,
+          "median": 1.0972560975609755,
+          "p25": 1.0803353658536587,
+          "p75": 1.1301829268292682,
+          "minimum": 1.0548780487804879,
+          "maximum": 2.5310975609756095
+        },
+        "controller_microseconds_per_scene": {
+          "repetitions": 12,
+          "median": 51.537724550898204,
+          "p25": 49.9501497005988,
+          "p75": 55.98982035928144,
+          "minimum": 49.32574850299402,
+          "maximum": 86.48023952095808
+        }
+      },
+      "end_to_end_peak_traced_bytes": 1235829,
+      "end_to_end_peak_traced_mebibytes": 1.1785783767700195,
+      "controller_structural_output": {
+        "clean_rate": 0.8502994011976048,
+        "application_bits_per_scene": 37.82035928143713,
+        "wrong_codebook_decode_count": 0
+      }
+    },
+    "16": {
+      "n_channels": 16,
+      "demands": [
+        4,
+        8,
+        12
+      ],
+      "scene_count": 364,
+      "training_scene_count": 197,
+      "evaluation_scene_count": 167,
+      "codebook_size": 3,
+      "codeword_symbol_width_bits": 2,
+      "evaluation_fallback_count": 0,
+      "learned_candidate_count": 35,
+      "maximum_update_reservations": 17,
+      "reservation_equivalent_bits": 53,
+      "timings": {
+        "task_state_build_microseconds_per_scene": {
+          "repetitions": 7,
+          "median": 110.44752747252748,
+          "p25": 106.83695054945055,
+          "p75": 112.1918956043956,
+          "minimum": 104.36703296703297,
+          "maximum": 125.87802197802198
+        },
+        "codebook_fit_milliseconds": {
+          "repetitions": 20,
+          "median": 20.23365,
+          "p25": 19.9727,
+          "p75": 20.446575,
+          "minimum": 19.2406,
+          "maximum": 21.1582
+        },
+        "hazard_model_fit_milliseconds": {
+          "repetitions": 12,
+          "median": 2.8691,
+          "p25": 2.7323500000000003,
+          "p75": 3.070125,
+          "minimum": 2.6412,
+          "maximum": 3.74
+        },
+        "task_encode_microseconds_per_scene": {
+          "repetitions": 30,
+          "median": 18.133233532934135,
+          "p25": 17.66167664670659,
+          "p75": 18.50404191616766,
+          "minimum": 17.34071856287425,
+          "maximum": 30.32994011976048
+        },
+        "hazard_inference_microseconds_per_scene": {
+          "repetitions": 100,
+          "median": 1.0960365853658536,
+          "p25": 1.0628048780487804,
+          "p75": 1.401219512195122,
+          "minimum": 1.0420731707317072,
+          "maximum": 2.073170731707317
+        },
+        "controller_microseconds_per_scene": {
+          "repetitions": 12,
+          "median": 61.60568862275449,
+          "p25": 60.86152694610779,
+          "p75": 62.76601796407186,
+          "minimum": 58.967664670658685,
+          "maximum": 67.98982035928144
+        }
+      },
+      "end_to_end_peak_traced_bytes": 1354125,
+      "end_to_end_peak_traced_mebibytes": 1.2913942337036133,
+      "controller_structural_output": {
+        "clean_rate": 0.7664670658682635,
+        "application_bits_per_scene": 55.209580838323355,
+        "wrong_codebook_decode_count": 0
+      }
+    },
+    "32": {
+      "n_channels": 32,
+      "demands": [
+        8,
+        16,
+        24
+      ],
+      "scene_count": 364,
+      "training_scene_count": 197,
+      "evaluation_scene_count": 167,
+      "codebook_size": 3,
+      "codeword_symbol_width_bits": 2,
+      "evaluation_fallback_count": 0,
+      "learned_candidate_count": 12,
+      "maximum_update_reservations": 17,
+      "reservation_equivalent_bits": 56,
+      "timings": {
+        "task_state_build_microseconds_per_scene": {
+          "repetitions": 7,
+          "median": 147.975,
+          "p25": 129.9789835164835,
+          "p75": 152.75686813186815,
+          "minimum": 125.01126373626373,
+          "maximum": 157.3835164835165
+        },
+        "codebook_fit_milliseconds": {
+          "repetitions": 20,
+          "median": 27.44395,
+          "p25": 26.544825,
+          "p75": 30.668074999999998,
+          "minimum": 25.8887,
+          "maximum": 37.5952
+        },
+        "hazard_model_fit_milliseconds": {
+          "repetitions": 12,
+          "median": 2.96145,
+          "p25": 2.8741250000000003,
+          "p75": 3.14565,
+          "minimum": 2.6683,
+          "maximum": 3.5696
+        },
+        "task_encode_microseconds_per_scene": {
+          "repetitions": 30,
+          "median": 20.019760479041913,
+          "p25": 18.99955089820359,
+          "p75": 21.13817365269461,
+          "minimum": 18.381437125748505,
+          "maximum": 29.05329341317365
+        },
+        "hazard_inference_microseconds_per_scene": {
+          "repetitions": 100,
+          "median": 1.3301829268292684,
+          "p25": 1.0560975609756098,
+          "p75": 1.388719512195122,
+          "minimum": 1.027439024390244,
+          "maximum": 2.2634146341463417
+        },
+        "controller_microseconds_per_scene": {
+          "repetitions": 12,
+          "median": 60.61017964071857,
+          "p25": 59.78203592814371,
+          "p75": 61.98967065868264,
+          "minimum": 57.23293413173653,
+          "maximum": 63.72754491017964
+        }
+      },
+      "end_to_end_peak_traced_bytes": 1728861,
+      "end_to_end_peak_traced_mebibytes": 1.6487703323364258,
+      "controller_structural_output": {
+        "clean_rate": 0.8083832335329342,
+        "application_bits_per_scene": 49.874251497005986,
+        "wrong_codebook_decode_count": 0
+      }
+    },
+    "64": {
+      "n_channels": 64,
+      "demands": [
+        16,
+        32,
+        48
+      ],
+      "scene_count": 364,
+      "training_scene_count": 197,
+      "evaluation_scene_count": 167,
+      "codebook_size": 3,
+      "codeword_symbol_width_bits": 2,
+      "evaluation_fallback_count": 0,
+      "learned_candidate_count": 17,
+      "maximum_update_reservations": 17,
+      "reservation_equivalent_bits": 59,
+      "timings": {
+        "task_state_build_microseconds_per_scene": {
+          "repetitions": 7,
+          "median": 148.53214285714287,
+          "p25": 144.83379120879118,
+          "p75": 159.3559065934066,
+          "minimum": 143.9651098901099,
+          "maximum": 163.8824175824176
+        },
+        "codebook_fit_milliseconds": {
+          "repetitions": 20,
+          "median": 35.09725,
+          "p25": 33.112474999999996,
+          "p75": 39.91575,
+          "minimum": 31.4202,
+          "maximum": 43.5114
+        },
+        "hazard_model_fit_milliseconds": {
+          "repetitions": 12,
+          "median": 3.8688000000000002,
+          "p25": 3.4763,
+          "p75": 4.0708,
+          "minimum": 3.0148,
+          "maximum": 4.2663
+        },
+        "task_encode_microseconds_per_scene": {
+          "repetitions": 30,
+          "median": 23.893113772455088,
+          "p25": 22.233682634730542,
+          "p75": 24.66377245508982,
+          "minimum": 20.577245508982035,
+          "maximum": 33.700598802395206
+        },
+        "hazard_inference_microseconds_per_scene": {
+          "repetitions": 100,
+          "median": 1.2067073170731708,
+          "p25": 1.1809451219512193,
+          "p75": 1.276829268292683,
+          "minimum": 1.1542682926829269,
+          "maximum": 4.250609756097561
+        },
+        "controller_microseconds_per_scene": {
+          "repetitions": 12,
+          "median": 49.877245508982035,
+          "p25": 48.153443113772454,
+          "p75": 52.8065868263473,
+          "minimum": 45.90059880239521,
+          "maximum": 64.37604790419162
+        }
+      },
+      "end_to_end_peak_traced_bytes": 2421949,
+      "end_to_end_peak_traced_mebibytes": 2.309750556945801,
+      "controller_structural_output": {
+        "clean_rate": 0.9880239520958084,
+        "application_bits_per_scene": 28.431137724550897,
+        "wrong_codebook_decode_count": 0
+      }
+    }
+  },
+  "empirical_log_log_scaling_exponent": {
+    "task_state_build_microseconds_per_scene": 0.21003027894535278,
+    "codebook_fit_milliseconds": 0.43905279776743295,
+    "hazard_model_fit_milliseconds": -0.3989593870246185,
+    "task_encode_microseconds_per_scene": 0.08150034779447557,
+    "hazard_inference_microseconds_per_scene": 0.0690855233418194,
+    "controller_microseconds_per_scene": -0.016524460000791014,
+    "end_to_end_peak_traced_mebibytes": 0.32645290182269465
+  },
+  "checks": {
+    "all_timings_positive": true,
+    "wrong_codebook_decode_count_equals_zero": true,
+    "final_access_state_unchanged": true,
+    "final_access_count_remains_zero": true
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "scikit-learn": "1.5.1"
+    },
+    "logical_cpu_count": 12,
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "clock": "time.perf_counter_ns"
+  },
+  "memory_limitation": "Python-traced allocations exclude some native NumPy and operating-system allocations.",
+  "governance": {
+    "development_only": true,
+    "external_final_signal_values_loaded": false,
+    "external_final_access_consumed": false
+  },
+  "claim_boundary": "Single-machine development benchmark. Runtime and traced memory characterize this Python implementation and environment only; they are not measured UAV latency, energy consumption, embedded memory, or cross-platform guarantees."
+}

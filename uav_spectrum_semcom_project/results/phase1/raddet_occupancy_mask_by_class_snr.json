@@ -1,0 +1,683 @@
+{
+  "dataset": "RadDet40k128HW001Tv2",
+  "model": "TinyOccupancyCNN mask baseline",
+  "split": "test",
+  "max_frames": 1000,
+  "threshold": 0.85,
+  "iou_threshold": 0.3,
+  "class_totals": [
+    {
+      "class_idx": 0,
+      "class_name": "Rect",
+      "truth": 51,
+      "matched": 27,
+      "recall": 0.5294117647058824
+    },
+    {
+      "class_idx": 1,
+      "class_name": "Barker",
+      "truth": 39,
+      "matched": 24,
+      "recall": 0.6153846153846154
+    },
+    {
+      "class_idx": 2,
+      "class_name": "Frank",
+      "truth": 47,
+      "matched": 25,
+      "recall": 0.5319148936170213
+    },
+    {
+      "class_idx": 3,
+      "class_name": "P1",
+      "truth": 57,
+      "matched": 38,
+      "recall": 0.6666666666666666
+    },
+    {
+      "class_idx": 4,
+      "class_name": "P2",
+      "truth": 47,
+      "matched": 30,
+      "recall": 0.6382978723404256
+    },
+    {
+      "class_idx": 5,
+      "class_name": "P3",
+      "truth": 51,
+      "matched": 35,
+      "recall": 0.6862745098039216
+    },
+    {
+      "class_idx": 6,
+      "class_name": "P4",
+      "truth": 47,
+      "matched": 28,
+      "recall": 0.5957446808510638
+    },
+    {
+      "class_idx": 7,
+      "class_name": "Px",
+      "truth": 43,
+      "matched": 25,
+      "recall": 0.5813953488372093
+    },
+    {
+      "class_idx": 8,
+      "class_name": "ZadoffChu",
+      "truth": 57,
+      "matched": 41,
+      "recall": 0.7192982456140351
+    },
+    {
+      "class_idx": 9,
+      "class_name": "LFM",
+      "truth": 41,
+      "matched": 25,
+      "recall": 0.6097560975609756
+    },
+    {
+      "class_idx": 10,
+      "class_name": "FMCW",
+      "truth": 36,
+      "matched": 25,
+      "recall": 0.6944444444444444
+    }
+  ],
+  "rows": [
+    {
+      "snr_db": -20.0,
+      "class_idx": 0,
+      "class_name": "Rect",
+      "truth": 12,
+      "matched": 10,
+      "recall": 0.8333333333333334,
+      "mean_iou": 0.47257739007472993
+    },
+    {
+      "snr_db": -20.0,
+      "class_idx": 1,
+      "class_name": "Barker",
+      "truth": 7,
+      "matched": 4,
+      "recall": 0.5714285714285714,
+      "mean_iou": 0.5642862319946289
+    },
+    {
+      "snr_db": -20.0,
+      "class_idx": 2,
+      "class_name": "Frank",
+      "truth": 9,
+      "matched": 6,
+      "recall": 0.6666666666666666,
+      "mean_iou": 0.6503690183162689
+    },
+    {
+      "snr_db": -20.0,
+      "class_idx": 3,
+      "class_name": "P1",
+      "truth": 8,
+      "matched": 7,
+      "recall": 0.875,
+      "mean_iou": 0.6606881405626025
+    },
+    {
+      "snr_db": -20.0,
+      "class_idx": 4,
+      "class_name": "P2",
+      "truth": 11,
+      "matched": 11,
+      "recall": 1.0,
+      "mean_iou": 0.5396493890068748
+    },
+    {
+      "snr_db": -20.0,
+      "class_idx": 5,
+      "class_name": "P3",
+      "truth": 13,
+      "matched": 10,
+      "recall": 0.7692307692307693,
+      "mean_iou": 0.5222276955842972
+    },
+    {
+      "snr_db": -20.0,
+      "class_idx": 6,
+      "class_name": "P4",
+      "truth": 8,
+      "matched": 4,
+      "recall": 0.5,
+      "mean_iou": 0.6515104994177818
+    },
+    {
+      "snr_db": -20.0,
+      "class_idx": 7,
+      "class_name": "Px",
+      "truth": 6,
+      "matched": 6,
+      "recall": 1.0,
+      "mean_iou": 0.556735172867775
+    },
+    {
+      "snr_db": -20.0,
+      "class_idx": 8,
+      "class_name": "ZadoffChu",
+      "truth": 9,
+      "matched": 9,
+      "recall": 1.0,
+      "mean_iou": 0.4698066645198398
+    },
+    {
+      "snr_db": -20.0,
+      "class_idx": 9,
+      "class_name": "LFM",
+      "truth": 7,
+      "matched": 4,
+      "recall": 0.5714285714285714,
+      "mean_iou": 0.43562422692775726
+    },
+    {
+      "snr_db": -20.0,
+      "class_idx": 10,
+      "class_name": "FMCW",
+      "truth": 10,
+      "matched": 5,
+      "recall": 0.5,
+      "mean_iou": 0.689760434627533
+    },
+    {
+      "snr_db": -12.0,
+      "class_idx": 0,
+      "class_name": "Rect",
+      "truth": 7,
+      "matched": 4,
+      "recall": 0.5714285714285714,
+      "mean_iou": 0.48868797719478607
+    },
+    {
+      "snr_db": -12.0,
+      "class_idx": 1,
+      "class_name": "Barker",
+      "truth": 6,
+      "matched": 2,
+      "recall": 0.3333333333333333,
+      "mean_iou": 0.47668446600437164
+    },
+    {
+      "snr_db": -12.0,
+      "class_idx": 2,
+      "class_name": "Frank",
+      "truth": 7,
+      "matched": 4,
+      "recall": 0.5714285714285714,
+      "mean_iou": 0.6522338539361954
+    },
+    {
+      "snr_db": -12.0,
+      "class_idx": 3,
+      "class_name": "P1",
+      "truth": 13,
+      "matched": 7,
+      "recall": 0.5384615384615384,
+      "mean_iou": 0.5465378037520817
+    },
+    {
+      "snr_db": -12.0,
+      "class_idx": 4,
+      "class_name": "P2",
+      "truth": 7,
+      "matched": 3,
+      "recall": 0.42857142857142855,
+      "mean_iou": 0.5529859761397043
+    },
+    {
+      "snr_db": -12.0,
+      "class_idx": 5,
+      "class_name": "P3",
+      "truth": 8,
+      "matched": 7,
+      "recall": 0.875,
+      "mean_iou": 0.5832328413214002
+    },
+    {
+      "snr_db": -12.0,
+      "class_idx": 6,
+      "class_name": "P4",
+      "truth": 6,
+      "matched": 4,
+      "recall": 0.6666666666666666,
+      "mean_iou": 0.5218715965747833
+    },
+    {
+      "snr_db": -12.0,
+      "class_idx": 7,
+      "class_name": "Px",
+      "truth": 9,
+      "matched": 5,
+      "recall": 0.5555555555555556,
+      "mean_iou": 0.45071716904640197
+    },
+    {
+      "snr_db": -12.0,
+      "class_idx": 8,
+      "class_name": "ZadoffChu",
+      "truth": 8,
+      "matched": 5,
+      "recall": 0.625,
+      "mean_iou": 0.5822549939155579
+    },
+    {
+      "snr_db": -12.0,
+      "class_idx": 9,
+      "class_name": "LFM",
+      "truth": 5,
+      "matched": 4,
+      "recall": 0.8,
+      "mean_iou": 0.6102078855037689
+    },
+    {
+      "snr_db": -12.0,
+      "class_idx": 10,
+      "class_name": "FMCW",
+      "truth": 6,
+      "matched": 5,
+      "recall": 0.8333333333333334,
+      "mean_iou": 0.592614209651947
+    },
+    {
+      "snr_db": -4.0,
+      "class_idx": 0,
+      "class_name": "Rect",
+      "truth": 5,
+      "matched": 5,
+      "recall": 1.0,
+      "mean_iou": 0.40803874135017393
+    },
+    {
+      "snr_db": -4.0,
+      "class_idx": 1,
+      "class_name": "Barker",
+      "truth": 10,
+      "matched": 6,
+      "recall": 0.6,
+      "mean_iou": 0.4595881501833598
+    },
+    {
+      "snr_db": -4.0,
+      "class_idx": 2,
+      "class_name": "Frank",
+      "truth": 4,
+      "matched": 3,
+      "recall": 0.75,
+      "mean_iou": 0.4847959478696187
+    },
+    {
+      "snr_db": -4.0,
+      "class_idx": 3,
+      "class_name": "P1",
+      "truth": 7,
+      "matched": 4,
+      "recall": 0.5714285714285714,
+      "mean_iou": 0.5196950137615204
+    },
+    {
+      "snr_db": -4.0,
+      "class_idx": 4,
+      "class_name": "P2",
+      "truth": 6,
+      "matched": 2,
+      "recall": 0.3333333333333333,
+      "mean_iou": 0.4798460751771927
+    },
+    {
+      "snr_db": -4.0,
+      "class_idx": 5,
+      "class_name": "P3",
+      "truth": 6,
+      "matched": 2,
+      "recall": 0.3333333333333333,
+      "mean_iou": 0.3502131998538971
+    },
+    {
+      "snr_db": -4.0,
+      "class_idx": 6,
+      "class_name": "P4",
+      "truth": 8,
+      "matched": 4,
+      "recall": 0.5,
+      "mean_iou": 0.4568078964948654
+    },
+    {
+      "snr_db": -4.0,
+      "class_idx": 7,
+      "class_name": "Px",
+      "truth": 6,
+      "matched": 3,
+      "recall": 0.5,
+      "mean_iou": 0.6044002572695414
+    },
+    {
+      "snr_db": -4.0,
+      "class_idx": 8,
+      "class_name": "ZadoffChu",
+      "truth": 12,
+      "matched": 7,
+      "recall": 0.5833333333333334,
+      "mean_iou": 0.4434600557599749
+    },
+    {
+      "snr_db": -4.0,
+      "class_idx": 9,
+      "class_name": "LFM",
+      "truth": 8,
+      "matched": 5,
+      "recall": 0.625,
+      "mean_iou": 0.6154747843742371
+    },
+    {
+      "snr_db": -4.0,
+      "class_idx": 10,
+      "class_name": "FMCW",
+      "truth": 5,
+      "matched": 3,
+      "recall": 0.6,
+      "mean_iou": 0.4286123514175415
+    },
+    {
+      "snr_db": 4.0,
+      "class_idx": 0,
+      "class_name": "Rect",
+      "truth": 6,
+      "matched": 3,
+      "recall": 0.5,
+      "mean_iou": 0.4523120919863383
+    },
+    {
+      "snr_db": 4.0,
+      "class_idx": 1,
+      "class_name": "Barker",
+      "truth": 3,
+      "matched": 2,
+      "recall": 0.6666666666666666,
+      "mean_iou": 0.5554227232933044
+    },
+    {
+      "snr_db": 4.0,
+      "class_idx": 2,
+      "class_name": "Frank",
+      "truth": 11,
+      "matched": 5,
+      "recall": 0.45454545454545453,
+      "mean_iou": 0.37213857769966124
+    },
+    {
+      "snr_db": 4.0,
+      "class_idx": 3,
+      "class_name": "P1",
+      "truth": 8,
+      "matched": 5,
+      "recall": 0.625,
+      "mean_iou": 0.39787015318870544
+    },
+    {
+      "snr_db": 4.0,
+      "class_idx": 4,
+      "class_name": "P2",
+      "truth": 6,
+      "matched": 4,
+      "recall": 0.6666666666666666,
+      "mean_iou": 0.43765629082918167
+    },
+    {
+      "snr_db": 4.0,
+      "class_idx": 5,
+      "class_name": "P3",
+      "truth": 7,
+      "matched": 6,
+      "recall": 0.8571428571428571,
+      "mean_iou": 0.40136927366256714
+    },
+    {
+      "snr_db": 4.0,
+      "class_idx": 6,
+      "class_name": "P4",
+      "truth": 6,
+      "matched": 2,
+      "recall": 0.3333333333333333,
+      "mean_iou": 0.4422031044960022
+    },
+    {
+      "snr_db": 4.0,
+      "class_idx": 7,
+      "class_name": "Px",
+      "truth": 10,
+      "matched": 6,
+      "recall": 0.6,
+      "mean_iou": 0.42231204609076184
+    },
+    {
+      "snr_db": 4.0,
+      "class_idx": 8,
+      "class_name": "ZadoffChu",
+      "truth": 11,
+      "matched": 8,
+      "recall": 0.7272727272727273,
+      "mean_iou": 0.4134978652000427
+    },
+    {
+      "snr_db": 4.0,
+      "class_idx": 9,
+      "class_name": "LFM",
+      "truth": 8,
+      "matched": 5,
+      "recall": 0.625,
+      "mean_iou": 0.4018648624420166
+    },
+    {
+      "snr_db": 4.0,
+      "class_idx": 10,
+      "class_name": "FMCW",
+      "truth": 5,
+      "matched": 3,
+      "recall": 0.6,
+      "mean_iou": 0.5873627960681915
+    },
+    {
+      "snr_db": 12.0,
+      "class_idx": 0,
+      "class_name": "Rect",
+      "truth": 13,
+      "matched": 1,
+      "recall": 0.07692307692307693,
+      "mean_iou": 0.3402867317199707
+    },
+    {
+      "snr_db": 12.0,
+      "class_idx": 1,
+      "class_name": "Barker",
+      "truth": 7,
+      "matched": 5,
+      "recall": 0.7142857142857143,
+      "mean_iou": 0.39087981581687925
+    },
+    {
+      "snr_db": 12.0,
+      "class_idx": 2,
+      "class_name": "Frank",
+      "truth": 9,
+      "matched": 3,
+      "recall": 0.3333333333333333,
+      "mean_iou": 0.4113840063412984
+    },
+    {
+      "snr_db": 12.0,
+      "class_idx": 3,
+      "class_name": "P1",
+      "truth": 8,
+      "matched": 7,
+      "recall": 0.875,
+      "mean_iou": 0.4467861907822745
+    },
+    {
+      "snr_db": 12.0,
+      "class_idx": 4,
+      "class_name": "P2",
+      "truth": 6,
+      "matched": 3,
+      "recall": 0.5,
+      "mean_iou": 0.4787597159544627
+    },
+    {
+      "snr_db": 12.0,
+      "class_idx": 5,
+      "class_name": "P3",
+      "truth": 9,
+      "matched": 5,
+      "recall": 0.5555555555555556,
+      "mean_iou": 0.48048717379570005
+    },
+    {
+      "snr_db": 12.0,
+      "class_idx": 6,
+      "class_name": "P4",
+      "truth": 10,
+      "matched": 6,
+      "recall": 0.6,
+      "mean_iou": 0.45522937675317127
+    },
+    {
+      "snr_db": 12.0,
+      "class_idx": 7,
+      "class_name": "Px",
+      "truth": 5,
+      "matched": 1,
+      "recall": 0.2,
+      "mean_iou": 0.45304805040359497
+    },
+    {
+      "snr_db": 12.0,
+      "class_idx": 8,
+      "class_name": "ZadoffChu",
+      "truth": 7,
+      "matched": 3,
+      "recall": 0.42857142857142855,
+      "mean_iou": 0.422320157289505
+    },
+    {
+      "snr_db": 12.0,
+      "class_idx": 9,
+      "class_name": "LFM",
+      "truth": 4,
+      "matched": 2,
+      "recall": 0.5,
+      "mean_iou": 0.3701556921005249
+    },
+    {
+      "snr_db": 12.0,
+      "class_idx": 10,
+      "class_name": "FMCW",
+      "truth": 5,
+      "matched": 4,
+      "recall": 0.8,
+      "mean_iou": 0.5686319693922997
+    },
+    {
+      "snr_db": 20.0,
+      "class_idx": 0,
+      "class_name": "Rect",
+      "truth": 8,
+      "matched": 4,
+      "recall": 0.5,
+      "mean_iou": 0.4327777028083801
+    },
+    {
+      "snr_db": 20.0,
+      "class_idx": 1,
+      "class_name": "Barker",
+      "truth": 6,
+      "matched": 5,
+      "recall": 0.8333333333333334,
+      "mean_iou": 0.48850410580635073
+    },
+    {
+      "snr_db": 20.0,
+      "class_idx": 2,
+      "class_name": "Frank",
+      "truth": 7,
+      "matched": 4,
+      "recall": 0.5714285714285714,
+      "mean_iou": 0.40211188793182373
+    },
+    {
+      "snr_db": 20.0,
+      "class_idx": 3,
+      "class_name": "P1",
+      "truth": 13,
+      "matched": 8,
+      "recall": 0.6153846153846154,
+      "mean_iou": 0.5327469557523727
+    },
+    {
+      "snr_db": 20.0,
+      "class_idx": 4,
+      "class_name": "P2",
+      "truth": 11,
+      "matched": 7,
+      "recall": 0.6363636363636364,
+      "mean_iou": 0.5123513851846967
+    },
+    {
+      "snr_db": 20.0,
+      "class_idx": 5,
+      "class_name": "P3",
+      "truth": 8,
+      "matched": 5,
+      "recall": 0.625,
+      "mean_iou": 0.5725754559040069
+    },
+    {
+      "snr_db": 20.0,
+      "class_idx": 6,
+      "class_name": "P4",
+      "truth": 9,
+      "matched": 8,
+      "recall": 0.8888888888888888,
+      "mean_iou": 0.5659185163676739
+    },
+    {
+      "snr_db": 20.0,
+      "class_idx": 7,
+      "class_name": "Px",
+      "truth": 7,
+      "matched": 4,
+      "recall": 0.5714285714285714,
+      "mean_iou": 0.502343624830246
+    },
+    {
+      "snr_db": 20.0,
+      "class_idx": 8,
+      "class_name": "ZadoffChu",
+      "truth": 10,
+      "matched": 9,
+      "recall": 0.9,
+      "mean_iou": 0.46073876486884224
+    },
+    {
+      "snr_db": 20.0,
+      "class_idx": 9,
+      "class_name": "LFM",
+      "truth": 9,
+      "matched": 5,
+      "recall": 0.5555555555555556,
+      "mean_iou": 0.5198190093040467
+    },
+    {
+      "snr_db": 20.0,
+      "class_idx": 10,
+      "class_name": "FMCW",
+      "truth": 5,
+      "matched": 5,
+      "recall": 1.0,
+      "mean_iou": 0.5960974156856537
+    }
+  ]
+}

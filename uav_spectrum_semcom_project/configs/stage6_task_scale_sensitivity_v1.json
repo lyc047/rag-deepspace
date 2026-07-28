@@ -1,0 +1,153 @@
+{
+  "protocol_id": "stage6_task_scale_sensitivity_v1",
+  "status": "registered_after_r1_grouped_result_before_sensitivity_result_access",
+  "created_date": "2026-07-28",
+  "purpose": "Measure how task tolerance, channel scale, demand ratio, and query-set size jointly determine analytic codebook complexity, fallback rate, task risk, and matched-clean end-to-end communication cost for the frozen R1 V2 protocol.",
+  "frozen_inputs": {
+    "r1_protocol": {
+      "path": "configs/stage6_reliability_protocol_diagnostic_v1.json",
+      "sha256": "e7d942645d9fcc2a0c255ad2033b9270a8d8c507a90055b90e43be89c62ac7dc"
+    },
+    "r1_grouped_result": {
+      "path": "results/stage6/reliability_protocol_r1_grouped_v1/result.json",
+      "sha256": "d1f91151d7b9dc56dc5c3c5994af1da02345addbcc2bec4cefc48053abe7bd54"
+    },
+    "r1_grouped_analysis": {
+      "path": "results/stage6/reliability_protocol_r1_analysis_v1/analysis.json",
+      "sha256": "d01f9551287a626a9fe840a4b97c1fac644a05f648b8d515a0fbe0042aa4da83"
+    },
+    "matched_reliability_parent": {
+      "path": "configs/stage6_matched_reliability_development_v1.json",
+      "sha256": "cb3d5fde27edeefd39b6dcaf94db67d565997b89cda7e3be3946efa7e4515636"
+    },
+    "grouped_candidates": {
+      "path": "configs/stage6_grouped_validation_candidates_v1.json",
+      "sha256": "c52e0540b2533ca71ae7c8e02f3bf6fabfd88c1910702a0d9eff2dfe103ce7b7"
+    },
+    "fixed_site_cache": {
+      "path": "results/stage6/fixed_site_stream_cache_v1/cache.npz",
+      "sha256": "93c7a49548f05e2e53c6789fabc845de711fcf101869be5331af607c5b292305",
+      "role": "historically_accessed_2022_grouped_development_evaluation"
+    },
+    "excluded_pilot_cache": {
+      "path": "results/stage5/helikite_pilot_v1/helikite_pilot_cache.npz",
+      "sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+      "role": "permanently_excluded_2023_codebook_fit_only"
+    }
+  },
+  "frozen_architecture": {
+    "semantic_variant": "v2_durable_codebook_compact_refresh",
+    "deployment_mode": "preconfigured_codebook_empty_action_state",
+    "durability_assumption": "The codebook identity and decoder actions reside in non-volatile storage; ordinary receiver resets clear only the current action cache.",
+    "controller_per_n": "controller_01_from_stage6_grouped_validation_candidates_v1",
+    "controller_parameters": {
+      "heartbeat_silence_scenes": 10,
+      "maximum_state_age_minutes": 30.0,
+      "update_reservation_fraction": 0.0,
+      "task_update_open_loop_attempts": 2
+    },
+    "session_scene_count": 500,
+    "codebook_fit_rule": "greedy_maximum_new_coverage_then_minimum_mean_max_regret_then_lexicographic",
+    "unseen_policy": "reserved_escape_symbol_plus_exact_query_bundle_payload",
+    "controller_or_codebook_rule_may_be_retuned_on_2022": false
+  },
+  "task_grid": {
+    "n_channels": [8, 16, 32, 64],
+    "epsilon_db": [0.0, 0.1, 0.2, 0.5, 1.0],
+    "base_demand_ratios": [0.25, 0.5, 0.75],
+    "query_sets": [
+      {"query_set_id": "single_025", "demand_ratios": [0.25]},
+      {"query_set_id": "single_050", "demand_ratios": [0.5]},
+      {"query_set_id": "single_075", "demand_ratios": [0.75]},
+      {"query_set_id": "pair_025_050", "demand_ratios": [0.25, 0.5]},
+      {"query_set_id": "pair_025_075", "demand_ratios": [0.25, 0.75]},
+      {"query_set_id": "pair_050_075", "demand_ratios": [0.5, 0.75]},
+      {"query_set_id": "multi_025_050_075", "demand_ratios": [0.25, 0.5, 0.75]}
+    ],
+    "demand_rounding": "nearest_integer",
+    "task_header_bits": 48,
+    "outage_penalty_db": 10.0,
+    "codebook_epoch": 1
+  },
+  "codebook_fit_split": {
+    "group_field": "cluster_ids",
+    "seed": 20260726,
+    "train_group_fraction": 0.6,
+    "all_scenes_in_one_cluster_must_share_split": true
+  },
+  "system_evaluation": {
+    "outer_group": "site_x_local_date",
+    "minimum_remainder_scenes": 2,
+    "link_trajectories": 60,
+    "paired_common_random_numbers": true,
+    "random_stream_count": 11,
+    "random_seed": 20260728,
+    "exact_reference_open_loop_attempts": [1, 2, 3],
+    "matched_clean_targets": [0.85, 0.9, 0.95, 0.97],
+    "paired_bootstrap_replicates": 5000,
+    "confidence_level": 0.95,
+    "leave_one_site_out": true,
+    "amortized_codebook_horizons_scenes": [500, 5000, 50000]
+  },
+  "reported_metrics": {
+    "representation": [
+      "codeword_count",
+      "symbol_width_bits",
+      "codeword_utilization_rate",
+      "codeword_usage_entropy_bits",
+      "effective_codeword_perplexity",
+      "escape_rate",
+      "mean_max_query_regret_db",
+      "cvar_0_9_max_query_regret_db",
+      "maximum_max_query_regret_db",
+      "new_exact_action_tuple_rate_on_2022",
+      "context_install_bits",
+      "compact_frame_bits",
+      "exact_action_frame_bits"
+    ],
+    "system": [
+      "clean_rate",
+      "availability_rate",
+      "effective_mean_regret_db",
+      "effective_cvar_0_9_regret_db",
+      "conditional_mean_regret_db",
+      "conditional_cvar_0_9_regret_db",
+      "actual_bits_per_scene",
+      "resource_equivalent_bits_per_scene",
+      "matched_clean_savings_percentage",
+      "amortized_savings_percentage",
+      "codebook_install_break_even_scenes",
+      "wrong_codebook_decode_count"
+    ]
+  },
+  "decision_rules": {
+    "primary_reference_configuration": {
+      "epsilon_db": 0.2,
+      "query_set_id": "multi_025_050_075"
+    },
+    "reproduction_check": "The primary reference configuration must reproduce the frozen R1 V2 grouped metrics under the same deployment, session, and controller settings within deterministic numerical tolerance.",
+    "broad_rate_risk_support": "For multi_025_050_075, matched-clean savings must have a positive 95-percent lower bound for at least three of five epsilon values in at least three of four N values.",
+    "task_scale_support": "Report the paired change in savings from single-query to two-query and three-query tasks; do not infer task-scale benefit from raw payload width alone.",
+    "narrow_claim": "If positive savings occurs only at epsilon 0.2 or only in one N, restrict the thesis claim to that operating region.",
+    "codeword_count_claim": "K equals three is not assumed and may not be described as a universal structure.",
+    "representation_only_is_insufficient": "Payload reduction without matched-clean total-bit improvement does not pass the system gate.",
+    "may_enter_s6_7d": "Only after the sensitivity grid, amortized-install analysis, and statistical checks are complete."
+  },
+  "outputs": {
+    "preflight": "results/stage6/task_scale_sensitivity_preflight_v1/preflight.json",
+    "representation": "results/stage6/task_scale_representation_v1/result.json",
+    "grouped": "results/stage6/task_scale_sensitivity_grouped_v1/result.json",
+    "analysis": "results/stage6/task_scale_sensitivity_analysis_v1/analysis.json",
+    "report": "docs/STAGE6_S6_7C_TASK_SCALE_SENSITIVITY.md"
+  },
+  "governance": {
+    "external_final_signal_values_may_be_loaded": false,
+    "external_final_access_count_must_remain_zero": true,
+    "2022_may_be_used_to_refit_codebook": false,
+    "2022_may_be_used_to_retune_controller": false,
+    "failed_or_non_deployable_grid_points_must_be_retained": true,
+    "r1_negative_and_positive_results_must_remain_immutable": true,
+    "output_is_external_confirmatory_final": false
+  },
+  "claim_boundary": "Development-only rate-risk and task-scale sensitivity analysis. It may freeze an external Final protocol but cannot establish external Final performance."
+}

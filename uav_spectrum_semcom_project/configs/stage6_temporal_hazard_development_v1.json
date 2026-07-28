@@ -1,0 +1,68 @@
+{
+  "protocol_id": "stage6_temporal_hazard_development_v1",
+  "status": "development_protocol_fixed_before_result_access",
+  "created_date": "2026-07-26",
+  "purpose": "Test whether causal spectrum-history features can forecast a one-step violation of the installed semantic action before integrating prediction into the transmission controller.",
+  "development_source": {
+    "cache": "results/stage5/helikite_pilot_v1/helikite_pilot_cache.npz",
+    "cache_sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+    "role": "permanently_excluded_2023_adapter_pilot_development_only"
+  },
+  "task_grid": {
+    "n_channels": [8, 16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "epsilon_db": 0.2,
+    "codebook_fitted_on_training_groups_only": true
+  },
+  "split": {
+    "group_field": "cluster_ids",
+    "seed": 20260726,
+    "train_group_fraction": 0.6,
+    "one_step_pairs_never_cross_group_boundaries": true
+  },
+  "predictors": {
+    "learned": {
+      "type": "standardized_l2_logistic_regression",
+      "class_weight": "balanced",
+      "c_grid": [0.01, 0.1, 1.0, 10.0],
+      "selection": "leave_one_training_group_out_mean_average_precision_then_smaller_c",
+      "maximum_iterations": 5000
+    },
+    "baselines": [
+      "constant_training_prevalence",
+      "previous_transition_violation",
+      "past_mean_absolute_power_change"
+    ],
+    "operating_threshold": {
+      "source": "training_out_of_fold_predictions_only",
+      "target_recall": 0.8,
+      "rule": "highest_threshold_reaching_target_recall"
+    }
+  },
+  "metrics": [
+    "positive_prevalence",
+    "roc_auc",
+    "average_precision",
+    "brier_score",
+    "recall_at_frozen_threshold",
+    "false_positive_rate_at_frozen_threshold"
+  ],
+  "retention_rule": {
+    "status": "fixed_before_evaluation",
+    "learned_predictor_median_average_precision_lift_over_best_baseline_minimum": 0.05,
+    "learned_predictor_roc_auc_must_exceed_random_for_at_least_n_scales": 3,
+    "failure_action": "record_negative_result_and_do_not_integrate_into_controller"
+  },
+  "safety_boundary": {
+    "prediction_may_only_schedule_early_updates_or_context_probes": true,
+    "prediction_may_not_suppress_a_hard_regret_trigger": true,
+    "prediction_may_not_replace_context_belief_recovery": true
+  },
+  "governance": {
+    "external_final_archives_may_be_opened": false,
+    "external_final_signal_values_may_be_loaded": false,
+    "external_final_access_may_be_consumed": false,
+    "output_is_confirmatory_final": false
+  },
+  "claim_boundary": "Development-only one-step forecasting on seven fixed-site temporal groups. Evaluation tests temporal-group transfer inside one excluded pilot dataset; it is not mobility, measured UAV traffic prediction, independent external generalization, or permission to bypass the regret safety rule."
+}

@@ -1,0 +1,51 @@
+{
+  "experiment_id": "stage4_c2_counterfactual_labels_v1",
+  "protocol_sha256": "4be9d16128c96063416273d3ecf25ebb50b2af604134f57ba4f0708d4a7d8fa3",
+  "stage2_config_sha256": "66fbe3cc3166225d8aa4bbcd82131a92c808196314045735019321b1791932a1",
+  "multinode_cache_result_sha256": "715db73c81216200098a70ed87b057184d82f38cb05a7431579ccc16e31a617c",
+  "label_file": "results/stage4/counterfactual_labels_v1/train_counterfactual_labels.npz",
+  "label_sha256": "494cc6a9d42198406b6cb9f673f63220eb3550473b7ad9996cc00ae4e190d054",
+  "train_scene_ids_sha256": "9812dfa7cd9f8e612212c2804bc392a8149d5068443df6dc8b3501e6c0e7a9c3",
+  "train_scene_count": 300,
+  "train_label_count": 18000,
+  "labels_per_scene": 60.0,
+  "truth_access_audit": {
+    "saved_supervision_split": "train",
+    "calibration_labels_saved": false,
+    "validation_labels_saved": false,
+    "final_holdout_accessed": false,
+    "candidate_high_precision_report_is_supervision_only": true
+  },
+  "deployable_feature_schema": [
+    "current_belief",
+    "candidate_current_report",
+    "available_candidate_quality",
+    "current_state",
+    "candidate_node",
+    "target_granularity",
+    "expected_transmitted_bits"
+  ],
+  "label_statistics": {
+    "positive_fraction": 0.17494444444444446,
+    "zero_fraction": 0.6768333333333333,
+    "negative_fraction": 0.14822222222222223,
+    "mean_marginal_value": 0.0009900517761707306,
+    "mean_expected_transmitted_bits": 709.1865844726562
+  },
+  "validation_one_step_oracle": {
+    "scene_count": 150,
+    "mean_baseline_regret": 0.028171974765856856,
+    "mean_best_regret": 0.005499942453073648,
+    "mean_regret_reduction": 0.022672032312783207,
+    "improved_scene_fraction": 0.5266666666666666
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": "Train-only labels; validation aggregate oracle diagnostic only; no final evidence."
+}

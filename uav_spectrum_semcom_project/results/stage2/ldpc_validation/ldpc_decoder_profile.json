@@ -1,0 +1,32 @@
+{
+  "config_sha256": "66fbe3cc3166225d8aa4bbcd82131a92c808196314045735019321b1791932a1",
+  "rows": [
+    {
+      "ebn0_db": 2.0,
+      "trials": 20,
+      "max_bp_iterations": 20,
+      "wall_time_s": 12.102749399993627,
+      "mean_wall_time_ms_per_codeword": 605.1374699996813,
+      "success_rate": 0.75
+    },
+    {
+      "ebn0_db": 3.0,
+      "trials": 20,
+      "max_bp_iterations": 20,
+      "wall_time_s": 10.070541900000535,
+      "mean_wall_time_ms_per_codeword": 503.52709500002675,
+      "success_rate": 1.0
+    }
+  ],
+  "scope": "CPU wall-clock encode plus BP decode; excludes RF front-end and energy measurement",
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "pyldpc": "0.7.9",
+      "numba": "0.60.0"
+    }
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "rows": [
+    {
+      "uavs_per_step": 1,
+      "scheme": "iq12_partial",
+      "trials": 3,
+      "mean_bits_per_decision": 30000000.0,
+      "channel_occupancy_mae": 0.005106708190093438,
+      "block_occupancy_mae": 0.004906314425170422,
+      "clean_block_accuracy": 0.942037037037037,
+      "mean_truth_occupancy": 0.004587357708563407,
+      "mean_sensed_occupancy": 0.006554362053672473
+    },
+    {
+      "uavs_per_step": 1,
+      "scheme": "semantic_hard",
+      "trials": 3,
+      "mean_bits_per_decision": 262.12,
+      "channel_occupancy_mae": 0.005234414245933294,
+      "block_occupancy_mae": 0.005071888367335002,
+      "clean_block_accuracy": 0.9401851851851851,
+      "mean_truth_occupancy": 0.004587357708563407,
+      "mean_sensed_occupancy": 0.0069326443287233514
+    },
+    {
+      "uavs_per_step": 1,
+      "scheme": "semantic_hard_rep3",
+      "trials": 3,
+      "mean_bits_per_decision": 786.36,
+      "channel_occupancy_mae": 0.005386482148120801,
+      "block_occupancy_mae": 0.0052663722696403665,
+      "clean_block_accuracy": 0.9461111111111111,
+      "mean_truth_occupancy": 0.004587357708563407,
+      "mean_sensed_occupancy": 0.008988444072504839
+    },
+    {
+      "uavs_per_step": 1,
+      "scheme": "spectrogram8_partial",
+      "trials": 3,
+      "mean_bits_per_decision": 163840.0,
+      "channel_occupancy_mae": 0.005165884426484506,
+      "block_occupancy_mae": 0.005023295525461435,
+      "clean_block_accuracy": 0.9385185185185185,
+      "mean_truth_occupancy": 0.004587357708563407,
+      "mean_sensed_occupancy": 0.00655887167279919
+    },
+    {
+      "uavs_per_step": 2,
+      "scheme": "iq12_partial",
+      "trials": 3,
+      "mean_bits_per_decision": 60000000.0,
+      "channel_occupancy_mae": 0.010088629399736723,
+      "block_occupancy_mae": 0.009840856616695723,
+      "clean_block_accuracy": 0.8835185185185185,
+      "mean_truth_occupancy": 0.009224523790180683,
+      "mean_sensed_occupancy": 0.013543802934388319
+    },
+    {
+      "uavs_per_step": 2,
+      "scheme": "semantic_hard",
+      "trials": 3,
+      "mean_bits_per_decision": 526.48,
+      "channel_occupancy_mae": 0.010354832125206789,
+      "block_occupancy_mae": 0.010141699264446894,
+      "clean_block_accuracy": 0.8814814814814814,
+      "mean_truth_occupancy": 0.009224523790180683,
+      "mean_sensed_occupancy": 0.015208977895478407
+    },
+    {
+      "uavs_per_step": 2,
+      "scheme": "semantic_hard_rep3",
+      "trials": 3,
+      "mean_bits_per_decision": 1579.4399999999998,
+      "channel_occupancy_mae": 0.011166714442272982,
+      "block_occupancy_mae": 0.01107536597798268,
+      "clean_block_accuracy": 0.8877777777777777,
+      "mean_truth_occupancy": 0.009224523790180683,
+      "mean_sensed_occupancy": 0.018926866352558136
+    },
+    {
+      "uavs_per_step": 2,
+      "scheme": "spectrogram8_partial",
+      "trials": 3,
+      "mean_bits_per_decision": 327680.0,
+      "channel_occupancy_mae": 0.01025377151866754,
+      "block_occupancy_mae": 0.009929751666883627,
+      "clean_block_accuracy": 0.8846296296296297,
+      "mean_truth_occupancy": 0.009224523790180683,
+      "mean_sensed_occupancy": 0.014006008704503378
+    },
+    {
+      "uavs_per_step": 4,
+      "scheme": "iq12_partial",
+      "trials": 3,
+      "mean_bits_per_decision": 120000000.0,
+      "channel_occupancy_mae": 0.018321077649792034,
+      "block_occupancy_mae": 0.017092863097786903,
+      "clean_block_accuracy": 0.7918518518518519,
+      "mean_truth_occupancy": 0.018518144885698955,
+      "mean_sensed_occupancy": 0.027105102315545082
+    },
+    {
+      "uavs_per_step": 4,
+      "scheme": "semantic_hard",
+      "trials": 3,
+      "mean_bits_per_decision": 1047.32,
+      "channel_occupancy_mae": 0.01902102120220661,
+      "block_occupancy_mae": 0.017869746933380764,
+      "clean_block_accuracy": 0.7944444444444444,
+      "mean_truth_occupancy": 0.018518144885698955,
+      "mean_sensed_occupancy": 0.02964043493072192
+    },
+    {
+      "uavs_per_step": 4,
+      "scheme": "semantic_hard_rep3",
+      "trials": 3,
+      "mean_bits_per_decision": 3141.9600000000005,
+      "channel_occupancy_mae": 0.020841704681515694,
+      "block_occupancy_mae": 0.02059449441730976,
+      "clean_block_accuracy": 0.7903703703703703,
+      "mean_truth_occupancy": 0.018518144885698955,
+      "mean_sensed_occupancy": 0.03703996414939562
+    },
+    {
+      "uavs_per_step": 4,
+      "scheme": "spectrogram8_partial",
+      "trials": 3,
+      "mean_bits_per_decision": 655360.0,
+      "channel_occupancy_mae": 0.01853041537106037,
+      "block_occupancy_mae": 0.017187710851430893,
+      "clean_block_accuracy": 0.8101851851851851,
+      "mean_truth_occupancy": 0.018518144885698955,
+      "mean_sensed_occupancy": 0.026705797140796978
+    },
+    {
+      "uavs_per_step": 8,
+      "scheme": "iq12_partial",
+      "trials": 3,
+      "mean_bits_per_decision": 240000000.0,
+      "channel_occupancy_mae": 0.034976884722709656,
+      "block_occupancy_mae": 0.03138391735653082,
+      "clean_block_accuracy": 0.75,
+      "mean_truth_occupancy": 0.03669604038198789,
+      "mean_sensed_occupancy": 0.054097493489583336
+    },
+    {
+      "uavs_per_step": 8,
+      "scheme": "semantic_hard",
+      "trials": 3,
+      "mean_bits_per_decision": 2099.2000000000003,
+      "channel_occupancy_mae": 0.03635549917817116,
+      "block_occupancy_mae": 0.03336003174384435,
+      "clean_block_accuracy": 0.7422222222222222,
+      "mean_truth_occupancy": 0.03669604038198789,
+      "mean_sensed_occupancy": 0.058489042023817696
+    },
+    {
+      "uavs_per_step": 8,
+      "scheme": "semantic_hard_rep3",
+      "trials": 3,
+      "mean_bits_per_decision": 6297.600000000001,
+      "channel_occupancy_mae": 0.04200099781155586,
+      "block_occupancy_mae": 0.04130934178829193,
+      "clean_block_accuracy": 0.7348148148148148,
+      "mean_truth_occupancy": 0.03669604038198789,
+      "mean_sensed_occupancy": 0.0740602935353915
+    },
+    {
+      "uavs_per_step": 8,
+      "scheme": "spectrogram8_partial",
+      "trials": 3,
+      "mean_bits_per_decision": 1310720.0,
+      "channel_occupancy_mae": 0.034603716184695564,
+      "block_occupancy_mae": 0.03127016065021356,
+      "clean_block_accuracy": 0.7412962962962962,
+      "mean_truth_occupancy": 0.03669604038198789,
+      "mean_sensed_occupancy": 0.054149373124043144
+    }
+  ],
+  "packet_loss": 0.2,
+  "ber": 0.0001
+}

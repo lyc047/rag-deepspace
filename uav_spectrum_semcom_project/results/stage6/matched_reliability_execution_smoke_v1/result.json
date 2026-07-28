@@ -1,0 +1,286 @@
+{
+  "version": "1.0",
+  "status": "execution_smoke_passed",
+  "protocol_sha256": "cb3d5fde27edeefd39b6dcaf94db67d565997b89cda7e3be3946efa7e4515636",
+  "source": {
+    "path": "results/stage5/helikite_pilot_v1/helikite_pilot_cache.npz",
+    "sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+    "role": "permanently_excluded_2023_pilot"
+  },
+  "smoke_scope": {
+    "n_channels": 8,
+    "demands": [
+      2,
+      4,
+      6
+    ],
+    "scene_count": 20,
+    "trajectory_count": 5,
+    "semantic_workpoint_count": 14,
+    "exact_workpoint_count": 3,
+    "reservation_fractions": [
+      0.0,
+      0.1
+    ],
+    "purpose": "execution correctness and runtime estimate only; not working-point selection or performance evidence"
+  },
+  "runtime": {
+    "elapsed_seconds": 0.14442530000087572,
+    "scene_evaluations": 1700,
+    "scene_evaluations_per_second": 11770.790851669977,
+    "estimated_full_coarse_scene_evaluations": 95135040,
+    "estimated_single_process_full_runtime_seconds": 8082.298054467831
+  },
+  "semantic_rows": [
+    {
+      "deployment_mode": "preconfigured_codebook_empty_action_state",
+      "heartbeat_silence_scenes": 10,
+      "task_update_open_loop_attempts": 1,
+      "update_reservation_fraction": 0.0,
+      "summary": {
+        "clean_rate": 0.9700000000000001,
+        "availability_rate": 0.99,
+        "actual_bits_per_scene": 83.47999999999999,
+        "resource_equivalent_bits_per_scene": 83.47999999999999,
+        "mean_initial_install_bits": 0.0,
+        "mean_recovery_install_bits": 1078.0
+      }
+    },
+    {
+      "deployment_mode": "preconfigured_codebook_empty_action_state",
+      "heartbeat_silence_scenes": 10,
+      "task_update_open_loop_attempts": 2,
+      "update_reservation_fraction": 0.0,
+      "summary": {
+        "clean_rate": 0.99,
+        "availability_rate": 0.99,
+        "actual_bits_per_scene": 85.31,
+        "resource_equivalent_bits_per_scene": 85.31,
+        "mean_initial_install_bits": 0.0,
+        "mean_recovery_install_bits": 847.0
+      }
+    },
+    {
+      "deployment_mode": "preconfigured_codebook_empty_action_state",
+      "heartbeat_silence_scenes": 10,
+      "task_update_open_loop_attempts": 3,
+      "update_reservation_fraction": 0.0,
+      "summary": {
+        "clean_rate": 0.99,
+        "availability_rate": 0.99,
+        "actual_bits_per_scene": 100.42999999999999,
+        "resource_equivalent_bits_per_scene": 100.42999999999999,
+        "mean_initial_install_bits": 0.0,
+        "mean_recovery_install_bits": 847.0
+      }
+    },
+    {
+      "deployment_mode": "preconfigured_codebook_empty_action_state",
+      "heartbeat_silence_scenes": null,
+      "task_update_open_loop_attempts": 1,
+      "update_reservation_fraction": 0.0,
+      "summary": {
+        "clean_rate": 0.9700000000000001,
+        "availability_rate": 0.99,
+        "actual_bits_per_scene": 83.47999999999999,
+        "resource_equivalent_bits_per_scene": 83.47999999999999,
+        "mean_initial_install_bits": 0.0,
+        "mean_recovery_install_bits": 1078.0
+      }
+    },
+    {
+      "deployment_mode": "preconfigured_codebook_empty_action_state",
+      "heartbeat_silence_scenes": null,
+      "task_update_open_loop_attempts": 2,
+      "update_reservation_fraction": 0.0,
+      "summary": {
+        "clean_rate": 0.99,
+        "availability_rate": 0.99,
+        "actual_bits_per_scene": 85.31,
+        "resource_equivalent_bits_per_scene": 85.31,
+        "mean_initial_install_bits": 0.0,
+        "mean_recovery_install_bits": 847.0
+      }
+    },
+    {
+      "deployment_mode": "preconfigured_codebook_empty_action_state",
+      "heartbeat_silence_scenes": null,
+      "task_update_open_loop_attempts": 3,
+      "update_reservation_fraction": 0.0,
+      "summary": {
+        "clean_rate": 0.99,
+        "availability_rate": 0.99,
+        "actual_bits_per_scene": 100.42999999999999,
+        "resource_equivalent_bits_per_scene": 100.42999999999999,
+        "mean_initial_install_bits": 0.0,
+        "mean_recovery_install_bits": 847.0
+      }
+    },
+    {
+      "deployment_mode": "online_install_empty_context",
+      "heartbeat_silence_scenes": 10,
+      "task_update_open_loop_attempts": 1,
+      "update_reservation_fraction": 0.0,
+      "summary": {
+        "clean_rate": 0.9700000000000001,
+        "availability_rate": 0.99,
+        "actual_bits_per_scene": 103.92999999999999,
+        "resource_equivalent_bits_per_scene": 103.92999999999999,
+        "mean_initial_install_bits": 385.0,
+        "mean_recovery_install_bits": 1078.0
+      }
+    },
+    {
+      "deployment_mode": "online_install_empty_context",
+      "heartbeat_silence_scenes": 10,
+      "task_update_open_loop_attempts": 2,
+      "update_reservation_fraction": 0.0,
+      "summary": {
+        "clean_rate": 0.99,
+        "availability_rate": 0.99,
+        "actual_bits_per_scene": 105.75999999999999,
+        "resource_equivalent_bits_per_scene": 105.75999999999999,
+        "mean_initial_install_bits": 385.0,
+        "mean_recovery_install_bits": 847.0
+      }
+    },
+    {
+      "deployment_mode": "online_install_empty_context",
+      "heartbeat_silence_scenes": 10,
+      "task_update_open_loop_attempts": 3,
+      "update_reservation_fraction": 0.0,
+      "summary": {
+        "clean_rate": 0.99,
+        "availability_rate": 0.99,
+        "actual_bits_per_scene": 120.88,
+        "resource_equivalent_bits_per_scene": 120.88,
+        "mean_initial_install_bits": 385.0,
+        "mean_recovery_install_bits": 847.0
+      }
+    },
+    {
+      "deployment_mode": "online_install_empty_context",
+      "heartbeat_silence_scenes": null,
+      "task_update_open_loop_attempts": 1,
+      "update_reservation_fraction": 0.0,
+      "summary": {
+        "clean_rate": 0.9700000000000001,
+        "availability_rate": 0.99,
+        "actual_bits_per_scene": 103.92999999999999,
+        "resource_equivalent_bits_per_scene": 103.92999999999999,
+        "mean_initial_install_bits": 385.0,
+        "mean_recovery_install_bits": 1078.0
+      }
+    },
+    {
+      "deployment_mode": "online_install_empty_context",
+      "heartbeat_silence_scenes": null,
+      "task_update_open_loop_attempts": 2,
+      "update_reservation_fraction": 0.0,
+      "summary": {
+        "clean_rate": 0.99,
+        "availability_rate": 0.99,
+        "actual_bits_per_scene": 105.75999999999999,
+        "resource_equivalent_bits_per_scene": 105.75999999999999,
+        "mean_initial_install_bits": 385.0,
+        "mean_recovery_install_bits": 847.0
+      }
+    },
+    {
+      "deployment_mode": "online_install_empty_context",
+      "heartbeat_silence_scenes": null,
+      "task_update_open_loop_attempts": 3,
+      "update_reservation_fraction": 0.0,
+      "summary": {
+        "clean_rate": 0.99,
+        "availability_rate": 0.99,
+        "actual_bits_per_scene": 120.88,
+        "resource_equivalent_bits_per_scene": 120.88,
+        "mean_initial_install_bits": 385.0,
+        "mean_recovery_install_bits": 847.0
+      }
+    },
+    {
+      "deployment_mode": "preconfigured_codebook_empty_action_state",
+      "heartbeat_silence_scenes": 10,
+      "task_update_open_loop_attempts": 1,
+      "update_reservation_fraction": 0.1,
+      "summary": {
+        "clean_rate": 0.9700000000000001,
+        "availability_rate": 0.99,
+        "actual_bits_per_scene": 85.58,
+        "resource_equivalent_bits_per_scene": 88.08,
+        "mean_initial_install_bits": 0.0,
+        "mean_recovery_install_bits": 1078.0
+      }
+    },
+    {
+      "deployment_mode": "online_install_empty_context",
+      "heartbeat_silence_scenes": 10,
+      "task_update_open_loop_attempts": 1,
+      "update_reservation_fraction": 0.1,
+      "summary": {
+        "clean_rate": 0.9700000000000001,
+        "availability_rate": 0.99,
+        "actual_bits_per_scene": 106.03,
+        "resource_equivalent_bits_per_scene": 108.53,
+        "mean_initial_install_bits": 385.0,
+        "mean_recovery_install_bits": 1078.0
+      }
+    }
+  ],
+  "exact_rows": [
+    {
+      "task_packet_open_loop_attempts": 1,
+      "summary": {
+        "clean_rate": 0.97,
+        "availability_rate": 1.0,
+        "actual_bits_per_scene": 56.0,
+        "resource_equivalent_bits_per_scene": 56.0,
+        "mean_initial_install_bits": 0.0,
+        "mean_recovery_install_bits": 0.0
+      }
+    },
+    {
+      "task_packet_open_loop_attempts": 2,
+      "summary": {
+        "clean_rate": 1.0,
+        "availability_rate": 1.0,
+        "actual_bits_per_scene": 112.0,
+        "resource_equivalent_bits_per_scene": 112.0,
+        "mean_initial_install_bits": 0.0,
+        "mean_recovery_install_bits": 0.0
+      }
+    },
+    {
+      "task_packet_open_loop_attempts": 3,
+      "summary": {
+        "clean_rate": 1.0,
+        "availability_rate": 1.0,
+        "actual_bits_per_scene": 168.0,
+        "resource_equivalent_bits_per_scene": 168.0,
+        "mean_initial_install_bits": 0.0,
+        "mean_recovery_install_bits": 0.0
+      }
+    }
+  ],
+  "checks": {
+    "all_rows_produced": true,
+    "paired_random_stream_count_matches_protocol": true,
+    "preconfigured_rows_have_zero_initial_install_bits": true,
+    "online_rows_charge_initial_install_bits": true,
+    "risk_candidate_sets_are_nested": true,
+    "risk_candidates_reach_smoke_scenes": true,
+    "external_final_signal_values_not_loaded": true,
+    "external_final_access_count_remains_zero": true
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": "Excluded-2023-pilot execution smoke only. No external Final signal values were opened, and no algorithm claim is made."
+}

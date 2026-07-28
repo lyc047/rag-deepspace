@@ -1,0 +1,22 @@
+{
+  "catalog_id": "REPLACE_WITH_NEW_INDEPENDENT_CAMPAIGN_ID",
+  "status": "template_not_runnable",
+  "created_date": "YYYY-MM-DD",
+  "scenes": [
+    {
+      "scene_id": "REPLACE_UNIQUE_SCENE_ID",
+      "independence_group_id": "REPLACE_UNIQUE_STATISTICAL_UNIT_ID",
+      "collection_event_id": "REPLACE_UNIQUE_RF_EVENT_ID",
+      "start_time_utc": "YYYY-MM-DDTHH:MM:SSZ",
+      "receiver_ids": ["receiver-1", "receiver-2"],
+      "provenance_ids": ["campaign:event:receiver-1", "campaign:event:receiver-2"],
+      "source_files": [
+        {"path": "relative/path/to/source.sigmf-data", "sha256": "REPLACE_64_HEX_CHARACTERS"}
+      ],
+      "label_ref": "relative/path/to/labels.json",
+      "label_sha256": "REPLACE_64_HEX_CHARACTERS",
+      "integrity_status": "passed_without_model_output_access"
+    }
+  ],
+  "instructions": "Copy this template outside configs, set status=candidate_final_catalog, provide at least 200 independent scenes, and run scripts/register_stage4_final_catalog.py. Do not invent identifiers or hashes."
+}

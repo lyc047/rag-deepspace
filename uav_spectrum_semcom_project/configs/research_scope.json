@@ -1,0 +1,109 @@
+{
+  "version": "1.0",
+  "stage": 0,
+  "status": "canonical",
+  "title_zh": "面向多无人机协同宽带频谱感知的任务导向数字语义通信与资源优化方法研究",
+  "title_en": "Task-Oriented Digital Semantic Communication and Resource Optimization for Collaborative Wideband Spectrum Sensing in Multi-UAV Networks",
+  "primary_scope": "frequency_semantic_reporting_and_resource_selection",
+  "research_questions": [
+    {
+      "id": "RQ1",
+      "summary": "在有限上报预算下选择对频谱资源决策最有价值的语义。"
+    },
+    {
+      "id": "RQ2",
+      "summary": "融合感知质量、位置、链路可靠性和信息新鲜度不同的多 UAV 语义。"
+    },
+    {
+      "id": "RQ3",
+      "summary": "评估数字化和公平链路约束下语义方案的有效条件与失效边界。"
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "name": "rate_efficiency",
+      "summary": "相同资源选择性能下，任务语义所需实际总 bit 数低于硬判决、量化软信息和压缩谱图。"
+    },
+    {
+      "id": "H2",
+      "name": "task_alignment",
+      "summary": "相同 bit 预算下，资源 regret 感知的语义编码优于仅优化检测指标的方法。"
+    },
+    {
+      "id": "H3",
+      "name": "collaborative_gain",
+      "summary": "关联多节点观测下，质量感知融合优于投票、平均和固定权重融合。"
+    },
+    {
+      "id": "H4",
+      "name": "digital_link_validity",
+      "summary": "公平数字链路下，所提方法仍保持任务性能与通信开销优势。"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "C1",
+      "priority": "core",
+      "summary": "资源选择感知的频谱语义表示与联合损失。"
+    },
+    {
+      "id": "C2",
+      "priority": "core",
+      "summary": "任务价值/bit 驱动的变长数字语义编码。"
+    },
+    {
+      "id": "C3",
+      "priority": "enhancement",
+      "summary": "感知质量与上报可靠性联合感知的多 UAV 融合。"
+    }
+  ],
+  "non_goals": [
+    "full_iq_reconstruction_as_primary_objective",
+    "new_visual_detector_or_visual_jscc",
+    "unpaired_visdrone_raddet_as_real_multimodal_evidence",
+    "single_step_dqn_as_core_contribution",
+    "uav_trajectory_aircomp_federated_learning_and_generative_models_in_main_scope",
+    "synthetic_raddet_described_as_real_uav_measurement",
+    "unfair_protection_between_semantic_and_raw_baselines",
+    "train_test_leakage_across_source_frames_or_sequences"
+  ],
+  "primary_metrics": [
+    "mean_occupancy_regret",
+    "clean_resource_rate",
+    "missed_occupancy_rate",
+    "total_transmitted_bits_per_decision",
+    "goodput",
+    "end_to_end_latency"
+  ],
+  "secondary_metrics": [
+    "precision",
+    "recall",
+    "macro_f1",
+    "map50",
+    "map50_95",
+    "ece",
+    "brier_score",
+    "bler",
+    "retransmissions",
+    "peak_memory",
+    "inference_latency",
+    "energy_per_successful_decision"
+  ],
+  "required_experiment_metadata": [
+    "hypothesis_ids",
+    "split_id",
+    "manifest_checksum",
+    "config_id",
+    "code_version",
+    "seed",
+    "baseline_or_method",
+    "fairness_budget_type",
+    "fairness_budget_value",
+    "sensing_channel",
+    "reporting_channel",
+    "metrics",
+    "repeat_count"
+  ],
+  "visual_module_role": "optional_system_extension_not_core_evidence"
+}

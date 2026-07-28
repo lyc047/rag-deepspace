@@ -1,0 +1,196 @@
+{
+  "experiment_id": "stage4_final_statistics_synthetic_selftest_v1",
+  "data_role": "synthetic_statistics_engine_selftest_not_RF_data",
+  "success_branch": {
+    "analysis_id": "stage4_final_statistics_v1",
+    "schema_version": "stage4_final_scene_metrics_v1",
+    "registry_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "access_receipt_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "scene_count": 240,
+    "statistical_unit": "independent_scene",
+    "c1": {
+      "regret": {
+        "difference": -0.0036250000000000015,
+        "ci95": [
+          -0.0036916666666666673,
+          -0.003566666666666668
+        ],
+        "one_sided_paired_randomization_p": 9.999000099990002e-05,
+        "threshold": 0.0,
+        "bootstrap_repetitions": 10000
+      },
+      "cvar_0_9_regret": {
+        "difference": -0.004749999999999997,
+        "ci95": [
+          -0.00541666666666666,
+          -0.004166666666666666
+        ],
+        "one_sided_paired_randomization_p": 9.999000099990002e-05,
+        "threshold": 0.0,
+        "bootstrap_repetitions": 10000
+      },
+      "actual_bits": {
+        "difference": 0.0,
+        "ci95": [
+          -0.10416666666666667,
+          0.10010416666666516
+        ],
+        "one_sided_paired_randomization_p": 0.531046895310469,
+        "threshold": 0.0,
+        "bootstrap_repetitions": 10000
+      },
+      "requirements": {
+        "regret_ci_upper_below_0": true,
+        "cvar_ci_upper_below_0": true,
+        "bit_ci_contains_0": true,
+        "holm_adjusted_family_p_at_most_alpha": true
+      }
+    },
+    "selective_g2": {
+      "regret": {
+        "difference": 0.0006000000000000016,
+        "ci95": [
+          0.0006000000000000014,
+          0.0006000000000000018
+        ],
+        "one_sided_paired_randomization_p": 9.999000099990002e-05,
+        "threshold": 0.0026813,
+        "bootstrap_repetitions": 10000
+      },
+      "actual_bits": {
+        "difference": -550.0,
+        "ci95": [
+          -550.0,
+          -550.0
+        ],
+        "one_sided_paired_randomization_p": 9.999000099990002e-05,
+        "threshold": 0.0,
+        "bootstrap_repetitions": 10000
+      },
+      "requirements": {
+        "regret_ci_upper_below_margin": true,
+        "actual_bit_ci_upper_below_0": true,
+        "holm_adjusted_family_p_at_most_alpha": true
+      }
+    },
+    "family_p_values": {
+      "C1_resource_loss": {
+        "raw": 9.999000099990002e-05,
+        "holm_adjusted": 0.00019998000199980003
+      },
+      "selective_G2_digital_reporting": {
+        "raw": 9.999000099990002e-05,
+        "holm_adjusted": 0.00019998000199980003
+      }
+    },
+    "family_decisions": {
+      "C1_resource_loss": true,
+      "selective_G2_digital_reporting": true
+    },
+    "any_primary_family_passed": true,
+    "all_primary_families_passed": true,
+    "claim_boundary": "H3 is not evaluated by this engine. A failed family cannot be rescued by secondary metrics."
+  },
+  "failure_branch": {
+    "analysis_id": "stage4_final_statistics_v1",
+    "schema_version": "stage4_final_scene_metrics_v1",
+    "registry_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "access_receipt_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "scene_count": 240,
+    "statistical_unit": "independent_scene",
+    "c1": {
+      "regret": {
+        "difference": 0.0008000000000000005,
+        "ci95": [
+          0.0008000000000000003,
+          0.0008000000000000007
+        ],
+        "one_sided_paired_randomization_p": 1.0,
+        "threshold": 0.0,
+        "bootstrap_repetitions": 10000
+      },
+      "cvar_0_9_regret": {
+        "difference": 0.0008000000000000021,
+        "ci95": [
+          0.0007999999999999952,
+          0.000800000000000009
+        ],
+        "one_sided_paired_randomization_p": 1.0,
+        "threshold": 0.0,
+        "bootstrap_repetitions": 10000
+      },
+      "actual_bits": {
+        "difference": 0.0,
+        "ci95": [
+          -0.10416666666666667,
+          0.10010416666666516
+        ],
+        "one_sided_paired_randomization_p": 0.531046895310469,
+        "threshold": 0.0,
+        "bootstrap_repetitions": 10000
+      },
+      "requirements": {
+        "regret_ci_upper_below_0": false,
+        "cvar_ci_upper_below_0": false,
+        "bit_ci_contains_0": true,
+        "holm_adjusted_family_p_at_most_alpha": false
+      }
+    },
+    "selective_g2": {
+      "regret": {
+        "difference": 0.0042000000000000015,
+        "ci95": [
+          0.0042,
+          0.0042000000000000015
+        ],
+        "one_sided_paired_randomization_p": 1.0,
+        "threshold": 0.0026813,
+        "bootstrap_repetitions": 10000
+      },
+      "actual_bits": {
+        "difference": -550.0,
+        "ci95": [
+          -550.0,
+          -550.0
+        ],
+        "one_sided_paired_randomization_p": 9.999000099990002e-05,
+        "threshold": 0.0,
+        "bootstrap_repetitions": 10000
+      },
+      "requirements": {
+        "regret_ci_upper_below_margin": false,
+        "actual_bit_ci_upper_below_0": true,
+        "holm_adjusted_family_p_at_most_alpha": false
+      }
+    },
+    "family_p_values": {
+      "C1_resource_loss": {
+        "raw": 1.0,
+        "holm_adjusted": 1.0
+      },
+      "selective_G2_digital_reporting": {
+        "raw": 1.0,
+        "holm_adjusted": 1.0
+      }
+    },
+    "family_decisions": {
+      "C1_resource_loss": false,
+      "selective_G2_digital_reporting": false
+    },
+    "any_primary_family_passed": false,
+    "all_primary_families_passed": false,
+    "claim_boundary": "H3 is not evaluated by this engine. A failed family cannot be rescued by secondary metrics."
+  },
+  "integrity_rejection_errors": [
+    "selective_G2_digital_reporting method scene sets do not match",
+    "the two primary families must use exactly the same independent scene set"
+  ],
+  "acceptance": {
+    "success_branch_passes_both": true,
+    "failure_branch_fails_both": true,
+    "broken_payload_rejected": true,
+    "completed": true
+  },
+  "final_holdout_accessed": false,
+  "claim_boundary": "This validates statistical code branches only and contains no sensing, link, or final evidence."
+}

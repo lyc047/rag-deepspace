@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "status": "fixed_site_stream_cache_complete",
+  "protocol_sha256": "cb3d5fde27edeefd39b6dcaf94db67d565997b89cda7e3be3946efa7e4515636",
+  "cache": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage6\\fixed_site_stream_cache_v1\\cache.npz",
+  "cache_sha256": "93c7a49548f05e2e53c6789fabc845de711fcf101869be5331af607c5b292305",
+  "scene_count": 89011,
+  "site_counts": {
+    "CC1": 32529,
+    "CC2": 34865,
+    "LW1": 21617
+  },
+  "outer_group_count": 27,
+  "session_segment_count": 27,
+  "analysis_band_mhz": [
+    3550.0,
+    3700.0
+  ],
+  "analysis_band_bins": 2500,
+  "power_range_dbm": [
+    -137.57081604003906,
+    -108.22598266601562
+  ],
+  "channel_shapes": {
+    "8": [
+      89011,
+      8
+    ],
+    "16": [
+      89011,
+      16
+    ],
+    "32": [
+      89011,
+      32
+    ],
+    "64": [
+      89011,
+      64
+    ]
+  },
+  "archive_audit": {
+    "LW1": {
+      "path": "F:\\uav_spectrum_final_data\\aerpaw_sub6_feb2022\\raw\\ResultsLW1Feb2022_SigMF.zip",
+      "size_bytes": 12498435786,
+      "pair_count": 21617,
+      "median_gap_seconds": 30.0,
+      "session_gap_threshold_seconds": 120.0,
+      "elapsed_seconds": 71.52015519999986
+    },
+    "CC1": {
+      "path": "F:\\uav_spectrum_final_data\\aerpaw_sub6_feb2022\\raw\\ResultsCC1Feb2022_SigMF.zip",
+      "size_bytes": 19084799397,
+      "pair_count": 32529,
+      "median_gap_seconds": 19.0,
+      "session_gap_threshold_seconds": 120.0,
+      "elapsed_seconds": 107.06422459999885
+    },
+    "CC2": {
+      "path": "F:\\uav_spectrum_final_data\\aerpaw_sub6_feb2022\\raw\\ResultsCC2Feb2022_SigMF.zip",
+      "size_bytes": 20662580993,
+      "pair_count": 34865,
+      "median_gap_seconds": 17.0,
+      "session_gap_threshold_seconds": 120.0,
+      "elapsed_seconds": 116.22625960000005
+    }
+  },
+  "elapsed_seconds": 307.20125310000003,
+  "governance": {
+    "role": "development_only_historically_accessed_2022",
+    "external_final_signal_values_loaded": false,
+    "external_final_access_count": 0,
+    "full_archives_extracted": false,
+    "streamed_data_members_only": true
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": "Compact development cache from the historically accessed 2022 fixed-site activity. It supports grouped validation but is not an independent external Final."
+}

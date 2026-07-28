@@ -1,0 +1,375 @@
+{
+  "experiment_id": "stage4_c1_v2_postfinal_exploratory_v1",
+  "config_sha256": "1a8679b3011057577f19d802b9cf649a17302a05ad9c719de4a96163c56b05da",
+  "development_cache_sha256": "9330a2f07dc512a5b7e6bf02e89b50ecdff2546214368728e528d8a464cf441b",
+  "fixed_probability_bits": 2,
+  "fixed_application_bits": 167,
+  "fixed_nominal_transmitted_bits": 490,
+  "run_metrics": [
+    {
+      "seed": 20260716,
+      "method": "robust_detection_only",
+      "split": "train",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.024517551064491272,
+      "cvar_0_9_regret": 0.12456917762756348,
+      "clean_resource_rate": 0.4633333384990692,
+      "brier": 0.01011322159320116,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260716,
+      "method": "robust_detection_only",
+      "split": "calibration",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.025004897266626358,
+      "cvar_0_9_regret": 0.14572124183177948,
+      "clean_resource_rate": 0.5,
+      "brier": 0.01006034854799509,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260716,
+      "method": "robust_detection_only",
+      "split": "validation",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.026078471913933754,
+      "cvar_0_9_regret": 0.14159618318080902,
+      "clean_resource_rate": 0.4933333396911621,
+      "brier": 0.00822097435593605,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260716,
+      "method": "robust_resource_tail",
+      "split": "train",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.02439655177295208,
+      "cvar_0_9_regret": 0.12456917762756348,
+      "clean_resource_rate": 0.46666666865348816,
+      "brier": 0.010267063975334167,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260716,
+      "method": "robust_resource_tail",
+      "split": "calibration",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.025004897266626358,
+      "cvar_0_9_regret": 0.14572124183177948,
+      "clean_resource_rate": 0.5,
+      "brier": 0.01006034854799509,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260716,
+      "method": "robust_resource_tail",
+      "split": "validation",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.0259533878415823,
+      "cvar_0_9_regret": 0.14159618318080902,
+      "clean_resource_rate": 0.5,
+      "brier": 0.008070159703493118,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260717,
+      "method": "robust_detection_only",
+      "split": "train",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.024417072534561157,
+      "cvar_0_9_regret": 0.12456917762756348,
+      "clean_resource_rate": 0.46666666865348816,
+      "brier": 0.010027327574789524,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260717,
+      "method": "robust_detection_only",
+      "split": "calibration",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.025004897266626358,
+      "cvar_0_9_regret": 0.14572124183177948,
+      "clean_resource_rate": 0.5,
+      "brier": 0.01002923771739006,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260717,
+      "method": "robust_detection_only",
+      "split": "validation",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.026078471913933754,
+      "cvar_0_9_regret": 0.14159618318080902,
+      "clean_resource_rate": 0.4933333396911621,
+      "brier": 0.00822097435593605,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260717,
+      "method": "robust_resource_tail",
+      "split": "train",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.02422047220170498,
+      "cvar_0_9_regret": 0.12456917762756348,
+      "clean_resource_rate": 0.4699999988079071,
+      "brier": 0.010029369965195656,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260717,
+      "method": "robust_resource_tail",
+      "split": "calibration",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.025004897266626358,
+      "cvar_0_9_regret": 0.14572124183177948,
+      "clean_resource_rate": 0.5,
+      "brier": 0.01002923771739006,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260717,
+      "method": "robust_resource_tail",
+      "split": "validation",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.026078471913933754,
+      "cvar_0_9_regret": 0.14159618318080902,
+      "clean_resource_rate": 0.4933333396911621,
+      "brier": 0.007977566681802273,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260718,
+      "method": "robust_detection_only",
+      "split": "train",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.024186216294765472,
+      "cvar_0_9_regret": 0.12456917762756348,
+      "clean_resource_rate": 0.46666666865348816,
+      "brier": 0.010100736282765865,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260718,
+      "method": "robust_detection_only",
+      "split": "calibration",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.025004897266626358,
+      "cvar_0_9_regret": 0.14572124183177948,
+      "clean_resource_rate": 0.5,
+      "brier": 0.01006034854799509,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260718,
+      "method": "robust_detection_only",
+      "split": "validation",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.0259533878415823,
+      "cvar_0_9_regret": 0.14159618318080902,
+      "clean_resource_rate": 0.5,
+      "brier": 0.008313566446304321,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260718,
+      "method": "robust_resource_tail",
+      "split": "train",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.024323729798197746,
+      "cvar_0_9_regret": 0.12456917762756348,
+      "clean_resource_rate": 0.46666666865348816,
+      "brier": 0.010334333404898643,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260718,
+      "method": "robust_resource_tail",
+      "split": "calibration",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.025004897266626358,
+      "cvar_0_9_regret": 0.14572124183177948,
+      "clean_resource_rate": 0.5,
+      "brier": 0.01006034854799509,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260718,
+      "method": "robust_resource_tail",
+      "split": "validation",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.0259533878415823,
+      "cvar_0_9_regret": 0.14159618318080902,
+      "clean_resource_rate": 0.5,
+      "brier": 0.008070159703493118,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260719,
+      "method": "robust_detection_only",
+      "split": "train",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.024517551064491272,
+      "cvar_0_9_regret": 0.12456917762756348,
+      "clean_resource_rate": 0.4633333384990692,
+      "brier": 0.01011322159320116,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260719,
+      "method": "robust_detection_only",
+      "split": "calibration",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.025004897266626358,
+      "cvar_0_9_regret": 0.14572124183177948,
+      "clean_resource_rate": 0.5,
+      "brier": 0.01002923771739006,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260719,
+      "method": "robust_detection_only",
+      "split": "validation",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.026078471913933754,
+      "cvar_0_9_regret": 0.14159618318080902,
+      "clean_resource_rate": 0.4933333396911621,
+      "brier": 0.00822097435593605,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260719,
+      "method": "robust_resource_tail",
+      "split": "train",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.02430085465312004,
+      "cvar_0_9_regret": 0.12456917762756348,
+      "clean_resource_rate": 0.46666666865348816,
+      "brier": 0.010115263052284718,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260719,
+      "method": "robust_resource_tail",
+      "split": "calibration",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.025004897266626358,
+      "cvar_0_9_regret": 0.14572124183177948,
+      "clean_resource_rate": 0.5,
+      "brier": 0.01006034854799509,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260719,
+      "method": "robust_resource_tail",
+      "split": "validation",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.0259533878415823,
+      "cvar_0_9_regret": 0.14159618318080902,
+      "clean_resource_rate": 0.5,
+      "brier": 0.008070159703493118,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260720,
+      "method": "robust_detection_only",
+      "split": "train",
+      "best_epoch": 2,
+      "mean_discrete_regret": 0.024517104029655457,
+      "cvar_0_9_regret": 0.1253795176744461,
+      "clean_resource_rate": 0.46666666865348816,
+      "brier": 0.010391809977591038,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260720,
+      "method": "robust_detection_only",
+      "split": "calibration",
+      "best_epoch": 2,
+      "mean_discrete_regret": 0.025004897266626358,
+      "cvar_0_9_regret": 0.14572124183177948,
+      "clean_resource_rate": 0.5,
+      "brier": 0.010338126681745052,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260720,
+      "method": "robust_detection_only",
+      "split": "validation",
+      "best_epoch": 2,
+      "mean_discrete_regret": 0.0259533878415823,
+      "cvar_0_9_regret": 0.14159618318080902,
+      "clean_resource_rate": 0.5,
+      "brier": 0.008070159703493118,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260720,
+      "method": "robust_resource_tail",
+      "split": "train",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.024360159412026405,
+      "cvar_0_9_regret": 0.12456917762756348,
+      "clean_resource_rate": 0.47333332896232605,
+      "brier": 0.010049864649772644,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260720,
+      "method": "robust_resource_tail",
+      "split": "calibration",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.025004897266626358,
+      "cvar_0_9_regret": 0.14572124183177948,
+      "clean_resource_rate": 0.5,
+      "brier": 0.009963598102331161,
+      "mean_nominal_transmitted_bits": 490.0
+    },
+    {
+      "seed": 20260720,
+      "method": "robust_resource_tail",
+      "split": "validation",
+      "best_epoch": 3,
+      "mean_discrete_regret": 0.026336845010519028,
+      "cvar_0_9_regret": 0.14159618318080902,
+      "clean_resource_rate": 0.4866666793823242,
+      "brier": 0.007971098646521568,
+      "mean_nominal_transmitted_bits": 490.0
+    }
+  ],
+  "paired_validation_bootstrap": {
+    "mean_regret_difference": 2.6657789931050502e-05,
+    "mean_regret_ci95": [
+      -7.5049843871966e-05,
+      0.0001550232118461281
+    ],
+    "cvar_difference": 0.0,
+    "cvar_ci95": [
+      -1.4901161193847656e-08,
+      1.4901161193847656e-08
+    ],
+    "nominal_bit_difference": 0.0,
+    "bootstrap_repetitions": 10000,
+    "requirements": {
+      "mean_regret_ci_upper_below_0": false,
+      "cvar_ci_upper_below_0": false,
+      "nominal_bit_difference_exactly_0": true
+    },
+    "exploratory_success": false
+  },
+  "governance": {
+    "final_access_state_observed": "access_consumed",
+    "final_data_loaded": false,
+    "validation_used_for_checkpoint_selection": false
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "torch": "2.12.0"
+    }
+  },
+  "claim_boundary": "Post-final development evidence only; requires a new independent dataset for confirmation."
+}

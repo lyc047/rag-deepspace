@@ -1,0 +1,131 @@
+{
+  "version": "1.0",
+  "status": "stage6_task_codec_development_complete",
+  "protocol_sha256": "f596ea0359af551019078966fa9246a57277eade5bcd9e63c899e5f442273894",
+  "inputs": {
+    "cache_sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+    "train_scene_count": 197,
+    "evaluation_scene_count": 167,
+    "train_groups": [
+      "aerpaw_packapalooza_2023:20230826T1215",
+      "aerpaw_packapalooza_2023:20230826T1300",
+      "aerpaw_packapalooza_2023:20230826T1315",
+      "aerpaw_packapalooza_2023:20230826T1330"
+    ],
+    "evaluation_groups": [
+      "aerpaw_packapalooza_2023:20230826T1200",
+      "aerpaw_packapalooza_2023:20230826T1230",
+      "aerpaw_packapalooza_2023:20230826T1245"
+    ]
+  },
+  "n_results": {
+    "8": {
+      "n_channels": 8,
+      "demands": [
+        2,
+        4,
+        6
+      ],
+      "codebook_size": 3,
+      "manifest_sha256": "2c0e027e2ad6258e89103e5f15d6781aa3dc09c4f92a79b565f3bb078f0ac6ec",
+      "packet_tag": 11278,
+      "stage5_exact_bundle_application_bits": 48,
+      "stage6_mean_real_packet_bits": 50.0,
+      "stage6_minimum_real_packet_bits": 50,
+      "stage6_maximum_real_packet_bits": 50,
+      "real_packet_bit_reduction_pct_vs_stage5_exact_bundle": -4.166666666666667,
+      "evaluation_codeword_coverage_rate": 1.0,
+      "evaluation_fallback_rate": 0.0,
+      "evaluation_mean_max_query_regret_db": 0.005248086895057541,
+      "evaluation_cvar_0_9_max_query_regret_db": 0.05149325202493107,
+      "evaluation_maximum_max_query_regret_db": 0.14478302001953125,
+      "round_trip_scene_count": 167
+    },
+    "16": {
+      "n_channels": 16,
+      "demands": [
+        4,
+        8,
+        12
+      ],
+      "codebook_size": 3,
+      "manifest_sha256": "ea0b757d525a8dfe85589eb8ebbcdc9ae2e07dfd79a28a8f24785b93a6b8f2ab",
+      "packet_tag": 59915,
+      "stage5_exact_bundle_application_bits": 51,
+      "stage6_mean_real_packet_bits": 50.0,
+      "stage6_minimum_real_packet_bits": 50,
+      "stage6_maximum_real_packet_bits": 50,
+      "real_packet_bit_reduction_pct_vs_stage5_exact_bundle": 1.9607843137254901,
+      "evaluation_codeword_coverage_rate": 1.0,
+      "evaluation_fallback_rate": 0.0,
+      "evaluation_mean_max_query_regret_db": 0.02273221501333271,
+      "evaluation_cvar_0_9_max_query_regret_db": 0.11178633745978861,
+      "evaluation_maximum_max_query_regret_db": 0.14516448974609375,
+      "round_trip_scene_count": 167
+    },
+    "32": {
+      "n_channels": 32,
+      "demands": [
+        8,
+        16,
+        24
+      ],
+      "codebook_size": 3,
+      "manifest_sha256": "3191acb3221ffdaa9211706968c075abbb45452779e3159b567e87ca186248e2",
+      "packet_tag": 12689,
+      "stage5_exact_bundle_application_bits": 54,
+      "stage6_mean_real_packet_bits": 50.0,
+      "stage6_minimum_real_packet_bits": 50,
+      "stage6_maximum_real_packet_bits": 50,
+      "real_packet_bit_reduction_pct_vs_stage5_exact_bundle": 7.407407407407407,
+      "evaluation_codeword_coverage_rate": 1.0,
+      "evaluation_fallback_rate": 0.0,
+      "evaluation_mean_max_query_regret_db": 0.008317657097608925,
+      "evaluation_cvar_0_9_max_query_regret_db": 0.05967887242635035,
+      "evaluation_maximum_max_query_regret_db": 0.16266632080078125,
+      "round_trip_scene_count": 167
+    },
+    "64": {
+      "n_channels": 64,
+      "demands": [
+        16,
+        32,
+        48
+      ],
+      "codebook_size": 3,
+      "manifest_sha256": "136371c09c83a99642d3afe77773ff81b4db24384848f4ca27161a9de563cdeb",
+      "packet_tag": 4963,
+      "stage5_exact_bundle_application_bits": 57,
+      "stage6_mean_real_packet_bits": 50.0,
+      "stage6_minimum_real_packet_bits": 50,
+      "stage6_maximum_real_packet_bits": 50,
+      "real_packet_bit_reduction_pct_vs_stage5_exact_bundle": 12.280701754385966,
+      "evaluation_codeword_coverage_rate": 1.0,
+      "evaluation_fallback_rate": 0.0,
+      "evaluation_mean_max_query_regret_db": 0.008729782884944337,
+      "evaluation_cvar_0_9_max_query_regret_db": 0.05987618483749202,
+      "evaluation_maximum_max_query_regret_db": 0.16269493103027344,
+      "round_trip_scene_count": 167
+    }
+  },
+  "checks": {
+    "all_packets_round_trip": true,
+    "all_decisions_respect_epsilon": true,
+    "final_access_state_unchanged": true,
+    "final_access_count_remains_zero": true
+  },
+  "governance": {
+    "development_only": true,
+    "external_final_signal_values_loaded": false,
+    "external_final_access_consumed": false
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": "Development-only codec correctness and bit accounting on excluded pilot data. The packet tag is not a cryptographic authenticator, and no noisy reporting-link result is claimed."
+}

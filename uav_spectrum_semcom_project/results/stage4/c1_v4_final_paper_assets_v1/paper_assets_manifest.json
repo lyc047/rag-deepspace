@@ -1,0 +1,58 @@
+{
+  "asset_id": "stage4_c1_v4_final_paper_assets_v1",
+  "source_files": [
+    {
+      "path": "results/stage4/c1_v4_final_v1/c1_v4_final_result.json",
+      "sha256": "8999ff2cb9d9ee9eeee0800cc79e9e05a5b704a1aaa83bb88bf2583a603fece2"
+    },
+    {
+      "path": "configs/stage4_c1_v4_final_protocol.json",
+      "sha256": "86e4797d201f93abce5d07b9a7d2e5e1952bf197bef1bc77e3f6a1f1438842d5"
+    },
+    {
+      "path": "configs/stage4_c1_v4_final_access_state.json",
+      "sha256": "550caaac3c04806c0a7ccdc7dc4d6daaf2f747c27479a608b0b3fcc8d956ccf8"
+    },
+    {
+      "path": "results/stage4/c1_v4_final_inventory_v1/final_inventory.json",
+      "sha256": "578d988b5edf204d353da12d22730167ce1611306d18b39b7f5bcd60e6b1e105"
+    }
+  ],
+  "generated_files": [
+    {
+      "path": "results/stage4/c1_v4_final_paper_assets_v1/c1_v4_final_paper_tables.md",
+      "sha256": "bec41267ba29639ced6a54492b240708fd5e7b7ababf5a8257fc2fa4874a5c22",
+      "bytes": 813
+    },
+    {
+      "path": "results/stage4/c1_v4_final_paper_assets_v1/figure_c1_v4_final_effects.png",
+      "sha256": "cf94ac28cfd2917a8a5354be6c5a991c1229cbfa9f6f619d7c55551fcef41e8b",
+      "bytes": 52865
+    },
+    {
+      "path": "results/stage4/c1_v4_final_paper_assets_v1/figure_c1_v4_final_overall.png",
+      "sha256": "1ef592c87e778366728518b7f419d5fd98840cf8d64772b69713386b3fb1f01c",
+      "bytes": 107405
+    },
+    {
+      "path": "results/stage4/c1_v4_final_paper_assets_v1/figure_c1_v4_final_sites.png",
+      "sha256": "19f596eb2b4bf63cd67a73e4019f6bd0d9e99e9cdb1604a7c37259a3cd6401e3",
+      "bytes": 53468
+    },
+    {
+      "path": "results/stage4/c1_v4_final_paper_assets_v1/table_c1_v4_final_inference.csv",
+      "sha256": "535c646392d2775b73385a4e3aa41c62b92fd34393597489eda56fbc67ddbcf0",
+      "bytes": 599
+    },
+    {
+      "path": "results/stage4/c1_v4_final_paper_assets_v1/table_c1_v4_final_summary.csv",
+      "sha256": "5eb356963434b50bf20103bfaf6b7e7e9e5d7704e02da0c15eb9c7a304dc4944",
+      "bytes": 411
+    }
+  ],
+  "final_access_count": 1,
+  "overall_final_success": true,
+  "scene_count": 280,
+  "cluster_count": 74,
+  "claim_boundary": "Single-use temporal confirmation within the same AERPAW February 2022 fixed-site power-sweep campaign at two sites. It is not cross-dataset evidence, UAV mobility, raw-IQ detection, MIMO, or a measured reporting link."
+}

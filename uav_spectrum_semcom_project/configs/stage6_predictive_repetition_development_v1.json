@@ -1,0 +1,77 @@
+{
+  "protocol_id": "stage6_predictive_repetition_development_v1",
+  "status": "development_protocol_fixed_before_result_access",
+  "created_date": "2026-07-26",
+  "purpose": "Test whether one-step semantic hazard scores can reserve capped next-scene duplicate capacity for exact hard-triggered updates more efficiently than nonlearned schedules.",
+  "development_source": {
+    "cache": "results/stage5/helikite_pilot_v1/helikite_pilot_cache.npz",
+    "cache_sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+    "role": "permanently_excluded_2023_adapter_pilot_development_only"
+  },
+  "predecessor": {
+    "protocol": "configs/stage6_temporal_hazard_development_v1.json",
+    "result": "results/stage6/temporal_hazard_development_v1/temporal_hazard_result.json",
+    "result_sha256": "3c36cb992e1696d4df80c077969e8f391c0a9fdae98f53b78fda7d1faf232b47"
+  },
+  "task_grid": {
+    "n_channels": [8, 16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "epsilon_db": 0.2,
+    "max_state_age_minutes": 120.0,
+    "codebook_epoch": 1,
+    "outage_penalty_db": 10.0
+  },
+  "split": {
+    "group_field": "cluster_ids",
+    "seed": 20260726,
+    "train_group_fraction": 0.6,
+    "receiver_task_state_resets_at_group_boundaries": true
+  },
+  "link_conditions": {
+    "task_packet_loss_probabilities": [0.05, 0.1, 0.2],
+    "ack_feedback": "ideal_to_isolate_forward_update_protection",
+    "context_reset_probability": 0.0,
+    "duplicate_copy_loss_is_independent_given_fixed_probability": true
+  },
+  "protection": {
+    "repetition_factor": 2,
+    "maximum_reservation_fractions_of_evaluation_scenes": [0.05, 0.1, 0.2],
+    "score_threshold_source": "training_out_of_fold_upper_quantile_at_matching_fraction",
+    "budget_is_hard_cap_on_one_scene_ahead_reservations": true,
+    "false_positive_reservation_consumes_capacity_even_without_an_update": true,
+    "reserved_capacity_uses_codebook_known_worst_case_compact_update_bits": true
+  },
+  "methods": [
+    "no_protection",
+    "periodic_schedule",
+    "previous_transition_violation",
+    "past_mean_absolute_power_change",
+    "learned_logistic",
+    "future_hard_trigger_oracle"
+  ],
+  "monte_carlo": {
+    "trajectories": 200,
+    "seed": 20260729,
+    "paired_common_random_numbers": true,
+    "paired_bootstrap_replicates": 5000,
+    "confidence_level": 0.95
+  },
+  "retention_rule": {
+    "learned_method_must_have_positive_clean_gain_in_every_n_at_one_or_more_budget_link_pairs": true,
+    "learned_method_must_beat_periodic_clean_gain_per_reserved_bit_in_at_least_half_of_nonzero_budget_cells": true,
+    "oracle_is_non_deployable_upper_bound": true
+  },
+  "safety_boundary": {
+    "exact_current_spectrum_selects_every_transmitted_action": true,
+    "prediction_may_only_reserve_a_duplicate_for_an_existing_hard_triggered_update": true,
+    "prediction_may_not_create_or_suppress_a_hard_update": true,
+    "ideal_ack_and_no_context_reset_limit_claims_to_forward_update_protection": true
+  },
+  "governance": {
+    "external_final_archives_may_be_opened": false,
+    "external_final_signal_values_may_be_loaded": false,
+    "external_final_access_may_be_consumed": false,
+    "output_is_confirmatory_final": false
+  },
+  "claim_boundary": "Development-only paired Monte Carlo over fixed-site excluded pilot spectra and a synthetic independent forward-loss model. The experiment isolates score-guided repetition of exact semantic updates; it is not measured backhaul coding, UAV mobility, ACK robustness, context-reset robustness, or external Final evidence."
+}

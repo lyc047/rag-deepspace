@@ -1,0 +1,94 @@
+{
+  "protocol_id": "stage4_c1_v4_block_semantic_development_v1",
+  "status": "frozen_before_c1_v4_development_metrics",
+  "created_date": "2026-07-22",
+  "purpose": "Develop decision-aligned continuous-block spectrum semantics after C1-v3 failed temporal confirmation.",
+  "verified_archive_audit": {
+    "path": "results/stage4/aerpaw_three_site_prefinal_v1/prefinal_inventory.json",
+    "sha256": "ec4aa183a79712327abc7ddbd48496ee16a383dd62d3783770cda131595d3405"
+  },
+  "archives": {
+    "LW1": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsLW1Feb2022_SigMF.zip",
+    "CC1": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsCC1Feb2022_SigMF.zip",
+    "CC2": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsCC2Feb2022_SigMF.zip"
+  },
+  "permanent_exclusions": {
+    "pilot_manifest": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/work/aerpaw_lw1_pilot_manifest_v1.json",
+    "pilot_manifest_sha256": "289f90d510da5d16827407a368d2a37b57719d80ca232cb0e43826fbb0ab7045",
+    "pilot_stems": [
+      "results_20220208_125756", "results_20220208_222848", "results_20220209_080009",
+      "results_20220209_173128", "results_20220210_030211", "results_20220210_123329",
+      "results_20220210_220442", "results_20220211_073529", "results_20220211_170652",
+      "results_20220212_023818", "results_20220212_120913", "results_20220212_214037",
+      "results_20220220_141455", "results_20220220_203822", "results_20220221_025905",
+      "results_20220221_092006", "results_20220221_154045", "results_20220221_220127",
+      "results_20220222_042215", "results_20220222_104254"
+    ],
+    "original_final_registry": "configs/stage4_final_registry_v1.json",
+    "original_final_registry_sha256": "1b1cf853817b707d28d626f1103f4113c53e0fed989bc3c00d4960fa4e04f48b",
+    "c1_temporal_inventory": "results/stage4/aerpaw_c1_temporal_prefinal_v1/prefinal_inventory.json",
+    "c1_temporal_inventory_sha256": "f81afa89d7c1d556284a58c70b05389161452b7441604c8f3f32e780002499e7"
+  },
+  "splits": {
+    "train": {
+      "start_local_inclusive": "2022-02-08T12:00:00",
+      "end_local_exclusive": "2022-02-10T00:00:00",
+      "minimum_separation_s": 900.0,
+      "selected_per_site": 90
+    },
+    "calibration": {
+      "start_local_inclusive": "2022-02-10T00:00:00",
+      "end_local_exclusive": "2022-02-11T00:00:00",
+      "minimum_separation_s": 900.0,
+      "selected_per_site": 60
+    },
+    "validation": {
+      "start_local_inclusive": "2022-02-11T00:00:00",
+      "end_local_exclusive": "2022-02-12T00:00:00",
+      "minimum_separation_s": 900.0,
+      "selected_per_site": 60
+    }
+  },
+  "selection_rule": "exclude every prior pilot/calibration/final stem, apply greedy 15-minute thinning within whole-date split and site, then deterministic even spacing",
+  "resource_task": {
+    "frequency_low_mhz": 2400.0,
+    "frequency_high_mhz": 2483.5,
+    "n_channels": 8,
+    "demand_channels": 4,
+    "threshold_sigma_multiplier": 3.0,
+    "threshold_gaussian_mad_scale": 1.4826,
+    "threshold_sigma_floor_db": 0.25
+  },
+  "frozen_representations": [
+    {"name": "occupancy_fixed4", "values": 8, "bits_per_value": 4, "kind": "channel"},
+    {"name": "channel_power_fixed4", "values": 8, "bits_per_value": 4, "kind": "channel"},
+    {"name": "block_score_fixed4", "values": 5, "bits_per_value": 4, "kind": "block"},
+    {"name": "block_score_fixed6", "values": 5, "bits_per_value": 6, "kind": "block"},
+    {"name": "best_block_indicator1", "values": 5, "bits_per_value": 1, "kind": "block"}
+  ],
+  "application_overhead_bits": 152,
+  "development_link": {
+    "stage2_config": "configs/stage2_digital_link.json",
+    "channel_models": ["awgn", "rayleigh", "rician"],
+    "ebn0_db": [0.0, 3.0, 6.0, 9.0],
+    "repeats": 10,
+    "paired_common_random_numbers": true,
+    "failed_packet_fallback": "block_start_zero"
+  },
+  "metrics": ["mean_regret_db", "cvar_0_9_regret_db", "clean_regret_db", "actual_transmitted_bits", "frame_success_rate"],
+  "development_statistics": {
+    "primary_split": "validation",
+    "paired_cluster_bootstrap_repetitions": 10000,
+    "bootstrap_seed": 20260724,
+    "cvar_alpha": 0.9,
+    "admissibility": "mean regret one-sided 95pct cluster upper bound no greater than occupancy_fixed4 and actual-bit upper bound strictly below occupancy_fixed4",
+    "selection_order": ["mean_regret_db", "cvar_0_9_regret_db", "mean_actual_bits", "application_bits"]
+  },
+  "governance": {
+    "prior_final_measurement_values_loaded": false,
+    "prior_final_metrics_used_for_candidate_selection": false,
+    "validation_used_for_representation_design": false,
+    "future_independent_confirmation_required": true
+  },
+  "claim_boundary": "Development-only real fixed-site power sweeps. The result may select a C1-v4 representation but cannot confirm it; not raw-IQ detection, UAV mobility, MIMO, or measured backhaul."
+}

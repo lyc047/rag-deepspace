@@ -1,0 +1,26 @@
+{
+  "dataset": "VisDrone2019-DET-val",
+  "detector": "torchvision fasterrcnn_mobilenet_v3_large_320_fpn COCO pretrained",
+  "frames": 60,
+  "score_threshold": 0.05,
+  "iou_threshold": 0.5,
+  "precision": 0.20192307692307693,
+  "recall": 0.16285081240768096,
+  "f1": 0.1802943581357318,
+  "matched_class_accuracy": 0.7913832199546486,
+  "mean_matched_iou": 0.6787304026398105,
+  "tp": 441,
+  "fp": 1743,
+  "fn": 2267,
+  "mean_pred_boxes_per_frame": 36.4,
+  "mean_truth_boxes_per_frame": 45.13333333333333,
+  "mean_pred_semantic_bits_per_frame": 2829.8,
+  "mean_truth_semantic_bits_per_frame": 3458.6,
+  "mean_jpeg_bits_per_frame": 1247287.7333333334,
+  "jpeg_to_pred_semantic_ratio": 440.7688647018635,
+  "notes": [
+    "This is a zero-shot COCO-pretrained detector, not fine-tuned on VisDrone.",
+    "COCO person is treated as a coarse match for VisDrone pedestrian/people.",
+    "The result estimates the feasibility of model-generated visual semantic packets before VisDrone fine-tuning."
+  ]
+}

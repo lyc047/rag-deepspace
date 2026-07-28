@@ -1,0 +1,62 @@
+{
+  "asset_id": "stage4_c1_v4_supplementary_baseline_assets_v1",
+  "source_files": [
+    {
+      "path": "results/stage4/c1_v4_supplementary_baselines_v1/supplementary_baselines_result.json",
+      "sha256": "7eb21f7ca6040878b2f0452698c90357fbb35bc6eeb9ac0c24ba7ae66a525ee1"
+    },
+    {
+      "path": "configs/stage4_c1_v4_supplementary_baselines.json",
+      "sha256": "2d82911a73b01f9b7744d13bf94babb967e6b8bb21274c5018e507ab0a46783b"
+    }
+  ],
+  "generated_files": [
+    {
+      "path": "results/stage4/c1_v4_supplementary_baseline_assets_v1/figure_reliability_baselines.png",
+      "sha256": "39bd8d1b19a153f50c2c7376b16b888945e9ae6099b191aa88b08e3d37bf70d4",
+      "bytes": 177390
+    },
+    {
+      "path": "results/stage4/c1_v4_supplementary_baseline_assets_v1/figure_representation_baselines.png",
+      "sha256": "75378efb1dda771e7023c1acc148a9e7296a50eb8ad21341df0394fcd2c2c26b",
+      "bytes": 122551
+    },
+    {
+      "path": "results/stage4/c1_v4_supplementary_baseline_assets_v1/supplementary_baseline_tables.md",
+      "sha256": "61a219c971eae72f4e1e619c9c12569aee297db20ec12d6e5720ec66914471f9",
+      "bytes": 2069
+    },
+    {
+      "path": "results/stage4/c1_v4_supplementary_baseline_assets_v1/table_reliability_baselines.csv",
+      "sha256": "5712abbc564addad0b924fc7f404de22ace90be134b05e556d6e21e9d6b10a82",
+      "bytes": 670
+    },
+    {
+      "path": "results/stage4/c1_v4_supplementary_baseline_assets_v1/table_reliability_inference.csv",
+      "sha256": "d31fecbcc19434af564b02fa86fe709e92def84258ee228e97557a4e88b9cb6e",
+      "bytes": 935
+    },
+    {
+      "path": "results/stage4/c1_v4_supplementary_baseline_assets_v1/table_representation_baselines.csv",
+      "sha256": "c6f265975c209ed0d68f3a2db3deae29c22074c7b42fde26196aea4448c02ed6",
+      "bytes": 741
+    },
+    {
+      "path": "results/stage4/c1_v4_supplementary_baseline_assets_v1/table_representation_inference.csv",
+      "sha256": "05cb2d7f7f3d88f1435d57222720e3f587b2e8d8bd5e6f4215e601d9523ba0d5",
+      "bytes": 974
+    }
+  ],
+  "representation_scene_count": 180,
+  "reliability_scene_count": 180,
+  "governance": {
+    "final_access_count_observed": 1,
+    "final_measurement_values_loaded": false,
+    "final_metrics_loaded": false,
+    "changes_final_claim": false,
+    "data_role": "already-seen development validation only",
+    "confirmatory": false
+  },
+  "claim_boundary": "Classical and reliability baselines on already-seen AERPAW development dates with a simulated reporting link. They strengthen interpretation but do not alter or extend the consumed Final conclusion.",
+  "protocol_claim_boundary": "Classical and reliability baselines on already-seen AERPAW development dates with a simulated reporting link. They strengthen interpretation but do not alter or extend the consumed Final conclusion."
+}

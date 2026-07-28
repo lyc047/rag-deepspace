@@ -1,0 +1,52 @@
+{
+  "protocol_id": "stage5_scale_query_codec_boundary_v1",
+  "status": "frozen_before_scale_boundary_metrics",
+  "created_date": "2026-07-23",
+  "purpose": "Measure how channel count, query-set size, application header length, and FEC boundaries change the real digital-link cost of multi-query spectrum semantics.",
+  "predecessor": {
+    "protocol": "configs/stage5_query_bundle_development_v1.json",
+    "protocol_sha256": "c6ed7efc481af0a57c093672b469253c29e954e65747c08ac6cdded99ff64cba",
+    "result": "results/stage5/query_bundle_development_v1/query_bundle_result.json",
+    "result_sha256": "30e9a57b88e9ee30891a6499664f21b910d806ed1925c29bf3be5d3d4cd21751"
+  },
+  "scale_grid": {
+    "n_channels": [8, 16, 32, 64],
+    "query_families": {
+      "q3": ["1/4", "1/2", "3/4"],
+      "q5": ["1/8", "1/4", "1/2", "3/4", "7/8"],
+      "q7": ["1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"]
+    },
+    "application_header_bits": [40, 152],
+    "soft_power_bits_per_channel": 4
+  },
+  "link": {
+    "stage2_config": "configs/stage2_digital_link.json",
+    "stage2_config_sha256": "66fbe3cc3166225d8aa4bbcd82131a92c808196314045735019321b1791932a1",
+    "fec_schemes": ["none", "hamming74", "repetition3"],
+    "channel_models": ["awgn", "rayleigh", "rician"],
+    "ebn0_db": [0.0, 3.0, 6.0, 9.0],
+    "monte_carlo_repeats": 100,
+    "paired_common_random_numbers": true,
+    "seed": 20260804
+  },
+  "representations": [
+    "single_index_mean",
+    "bundle_all_queries",
+    "separate_indices_all_queries",
+    "occupancy_vector_all_queries",
+    "soft_power_all_queries"
+  ],
+  "primary_slice": {
+    "application_header_bits": 40,
+    "fec": "hamming74",
+    "interpretation": "Matches the current compact Stage-5 application header and the frozen Stage-2 reporting link."
+  },
+  "governance": {
+    "stage4_final_measurements_may_be_loaded": false,
+    "stage4_final_metrics_may_be_loaded": false,
+    "stage5_prior_results_used_only_as_boundary_evidence": true,
+    "output_is_confirmatory_final": false,
+    "result_directory_must_not_exist_before_run": true
+  },
+  "claim_boundary": "Codec and simulated reporting-link boundary study only. Channel-count scaling does not use new measured N-channel spectra and therefore cannot establish task-performance generalization at N=16, 32, or 64."
+}

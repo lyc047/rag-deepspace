@@ -1,0 +1,102 @@
+{
+  "version": "1.0",
+  "status": "candidate_frozen_before_confirmation_access",
+  "selected_candidate_id": "tail2_margin0.05",
+  "tail_ranking_weight": 2.0,
+  "ranking_margin": 0.05,
+  "fixed_probability_bits": 4,
+  "training_seeds": [
+    20260716,
+    20260717,
+    20260718,
+    20260719,
+    20260720
+  ],
+  "candidate_checkpoints": [
+    {
+      "seed": 20260716,
+      "best_epoch": 3,
+      "development_calibration_score": [
+        0.01880994252860546,
+        0.10641391575336456,
+        0.008335410617291927
+      ],
+      "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.05_seed20260716.pt",
+      "checkpoint_sha256": "e3c23c256aa0664c57c4dd49404a17daecb98e9a3f9affc95b56364137cad22f"
+    },
+    {
+      "seed": 20260717,
+      "best_epoch": 2,
+      "development_calibration_score": [
+        0.019268479198217392,
+        0.10942838340997696,
+        0.008846938610076904
+      ],
+      "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.05_seed20260717.pt",
+      "checkpoint_sha256": "182a1b19d9e743b1dd4e6b4dfdd86dfa80a5105292e56b4f10051f94322f2811"
+    },
+    {
+      "seed": 20260718,
+      "best_epoch": 68,
+      "development_calibration_score": [
+        0.022251417860388756,
+        0.1171744242310524,
+        0.00897454097867012
+      ],
+      "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.05_seed20260718.pt",
+      "checkpoint_sha256": "2237ccbdf24f283adb82fb9fed57df71dc6a13fb912aa5947abfd6834ba78695"
+    },
+    {
+      "seed": 20260719,
+      "best_epoch": 3,
+      "development_calibration_score": [
+        0.01880994252860546,
+        0.10641391575336456,
+        0.008235841058194637
+      ],
+      "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.05_seed20260719.pt",
+      "checkpoint_sha256": "2c56fcf7da88acc0e304b4b1a39ca165d84f5affbdeb13982bf2fe7a114a1553"
+    },
+    {
+      "seed": 20260720,
+      "best_epoch": 15,
+      "development_calibration_score": [
+        0.01963583193719387,
+        0.10369087755680084,
+        0.008977031335234642
+      ],
+      "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.05_seed20260720.pt",
+      "checkpoint_sha256": "7cae7415e8f7d18a80ecf61f9c6a3e5f7921a93518d8469e59c6d9e561e152bc"
+    }
+  ],
+  "baseline_checkpoints": [
+    {
+      "seed": 20260716,
+      "path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage4\\c1_v2_paired_finetune_exploratory_v1\\checkpoints\\robust_detection_fixed4_seed20260716.pt",
+      "sha256": "5e4dc1e2b63ad13beeb2b7311aaf1db016740d1a68c998c37e9b327019dbafec"
+    },
+    {
+      "seed": 20260717,
+      "path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage4\\c1_v2_paired_finetune_exploratory_v1\\checkpoints\\robust_detection_fixed4_seed20260717.pt",
+      "sha256": "bda2e038e444e038a9c4e295a7160c344983ece511cf7f0be03c5f617c60b948"
+    },
+    {
+      "seed": 20260718,
+      "path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage4\\c1_v2_paired_finetune_exploratory_v1\\checkpoints\\robust_detection_fixed4_seed20260718.pt",
+      "sha256": "1e6dfbbb51e978255c978a2131b9b5c1a3e339918f75646975fd3a0b86ce9977"
+    },
+    {
+      "seed": 20260719,
+      "path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage4\\c1_v2_paired_finetune_exploratory_v1\\checkpoints\\robust_detection_fixed4_seed20260719.pt",
+      "sha256": "d13770e542d5f020afaa2e25cf36044635b3dc9e7094d7139a1a0d49fa1b21c7"
+    },
+    {
+      "seed": 20260720,
+      "path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage4\\c1_v2_paired_finetune_exploratory_v1\\checkpoints\\robust_detection_fixed4_seed20260720.pt",
+      "sha256": "8109467b813b1e06af0c9decdab6ae5d734e398053ff0cdba9103df61d42a2b7"
+    }
+  ],
+  "calibration_result_path": "results/stage4/c1_v3_temporal_calibration_v1/c1_v3_calibration_result.json",
+  "calibration_result_sha256": "cf36bae4239daf0f65f9efea9eb33dec1865c544399ddc01872afac79be190e8",
+  "confirmation_accessed": false
+}

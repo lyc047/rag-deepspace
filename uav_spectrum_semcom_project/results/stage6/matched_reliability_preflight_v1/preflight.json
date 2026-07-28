@@ -1,0 +1,173 @@
+{
+  "version": "1.0",
+  "preflight_id": "stage6_matched_reliability_preflight_v1",
+  "status": "ready_for_instrumentation_dry_run",
+  "created_utc": "2026-07-27T10:32:02.058197+00:00",
+  "protocol_path": "configs/stage6_matched_reliability_development_v1.json",
+  "protocol_sha256": "cb3d5fde27edeefd39b6dcaf94db67d565997b89cda7e3be3946efa7e4515636",
+  "checks": {
+    "protocol_status_is_pre_registered": true,
+    "freeze_hash_matches": true,
+    "governance_audit_hash_matches": true,
+    "coarse_grid_cache_hash_matches": true,
+    "frozen_risk_ranker_hashes_match": true,
+    "all_grouped_archives_exist": true,
+    "external_final_is_forbidden": true,
+    "bit_identity_fields_are_required": true,
+    "common_random_numbers_are_enabled": true,
+    "paired_random_stream_layout_is_complete": true,
+    "final_rematching_is_forbidden": true
+  },
+  "upstream": {
+    "freeze": {
+      "path": "C:/Users/Lenovo/Desktop/项目/rag-deepspace/uav_spectrum_semcom_project/configs/stage6_candidate_architecture_freeze_v1.json",
+      "exists": true,
+      "expected_sha256": "8409170d391af04d04c1ba0e16f937ab01749d8248d63b20dc25be43634da3dd",
+      "actual_sha256": "8409170d391af04d04c1ba0e16f937ab01749d8248d63b20dc25be43634da3dd",
+      "matches": true
+    },
+    "governance_audit": {
+      "path": "C:/Users/Lenovo/Desktop/项目/rag-deepspace/uav_spectrum_semcom_project/results/stage6/s6_7a_governance_audit_v1/governance_metadata_audit.json",
+      "exists": true,
+      "expected_sha256": "369b3f1822ab9e4b3995b0fb64ed1e2eca676379c8a9c190ce408ec20c2b5f8c",
+      "actual_sha256": "369b3f1822ab9e4b3995b0fb64ed1e2eca676379c8a9c190ce408ec20c2b5f8c",
+      "matches": true
+    },
+    "coarse_grid_cache": {
+      "path": "C:/Users/Lenovo/Desktop/项目/rag-deepspace/uav_spectrum_semcom_project/results/stage5/helikite_pilot_v1/helikite_pilot_cache.npz",
+      "exists": true,
+      "expected_sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+      "actual_sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+      "matches": true
+    },
+    "frozen_risk_ranker_result": {
+      "path": "C:/Users/Lenovo/Desktop/项目/rag-deepspace/uav_spectrum_semcom_project/results/stage6/temporal_hazard_development_v1/temporal_hazard_result.json",
+      "exists": true,
+      "expected_sha256": "3c36cb992e1696d4df80c077969e8f391c0a9fdae98f53b78fda7d1faf232b47",
+      "actual_sha256": "3c36cb992e1696d4df80c077969e8f391c0a9fdae98f53b78fda7d1faf232b47",
+      "matches": true
+    },
+    "frozen_risk_ranker_feature_module": {
+      "path": "C:/Users/Lenovo/Desktop/项目/rag-deepspace/uav_spectrum_semcom_project/src/spectrum_semcom/stage6_temporal_hazard.py",
+      "exists": true,
+      "expected_sha256": "c6b06462b011ae36e25bedc5df5141eddbd5521b616795ee63815615f5ee08b2",
+      "actual_sha256": "c6b06462b011ae36e25bedc5df5141eddbd5521b616795ee63815615f5ee08b2",
+      "matches": true
+    }
+  },
+  "grouped_validation_archives": [
+    {
+      "site": "LW1",
+      "path": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsLW1Feb2022_SigMF.zip",
+      "exists": true,
+      "size_bytes": 12498435786,
+      "paired_scene_count_from_audit": 21617,
+      "role": "development_only_historically_accessed"
+    },
+    {
+      "site": "CC1",
+      "path": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsCC1Feb2022_SigMF.zip",
+      "exists": true,
+      "size_bytes": 19084799397,
+      "paired_scene_count_from_audit": 32529,
+      "role": "development_only_historically_accessed"
+    },
+    {
+      "site": "CC2",
+      "path": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsCC2Feb2022_SigMF.zip",
+      "exists": true,
+      "size_bytes": 20662580993,
+      "paired_scene_count_from_audit": 34865,
+      "role": "development_only_historically_accessed"
+    }
+  ],
+  "grid": {
+    "semantic_working_points_per_n": 360,
+    "exact_working_points_per_n": 3,
+    "n_count": 4,
+    "session_length_count": 3,
+    "semantic_session_working_points_per_n": 1080,
+    "exact_session_working_points_per_n": 9,
+    "semantic_working_points_all_n": 4320,
+    "exact_working_points_all_n": 36,
+    "estimated_coarse_semantic_scene_evaluations": 94348800,
+    "estimated_coarse_exact_scene_evaluations": 786240,
+    "semantic_examples": [
+      {
+        "heartbeat_silence_scenes": 10,
+        "maximum_state_age_minutes": 30.0,
+        "update_reservation_fraction": 0.0,
+        "task_update_open_loop_attempts": 1,
+        "deployment_mode": "preconfigured_codebook_empty_action_state",
+        "ack_policy": "cumulative_ack_24_bit"
+      },
+      {
+        "heartbeat_silence_scenes": 10,
+        "maximum_state_age_minutes": 30.0,
+        "update_reservation_fraction": 0.0,
+        "task_update_open_loop_attempts": 1,
+        "deployment_mode": "online_install_empty_context",
+        "ack_policy": "cumulative_ack_24_bit"
+      },
+      {
+        "heartbeat_silence_scenes": 10,
+        "maximum_state_age_minutes": 30.0,
+        "update_reservation_fraction": 0.0,
+        "task_update_open_loop_attempts": 2,
+        "deployment_mode": "preconfigured_codebook_empty_action_state",
+        "ack_policy": "cumulative_ack_24_bit"
+      },
+      {
+        "heartbeat_silence_scenes": null,
+        "maximum_state_age_minutes": 120.0,
+        "update_reservation_fraction": 0.2,
+        "task_update_open_loop_attempts": 2,
+        "deployment_mode": "online_install_empty_context",
+        "ack_policy": "cumulative_ack_24_bit"
+      },
+      {
+        "heartbeat_silence_scenes": null,
+        "maximum_state_age_minutes": 120.0,
+        "update_reservation_fraction": 0.2,
+        "task_update_open_loop_attempts": 3,
+        "deployment_mode": "preconfigured_codebook_empty_action_state",
+        "ack_policy": "cumulative_ack_24_bit"
+      },
+      {
+        "heartbeat_silence_scenes": null,
+        "maximum_state_age_minutes": 120.0,
+        "update_reservation_fraction": 0.2,
+        "task_update_open_loop_attempts": 3,
+        "deployment_mode": "online_install_empty_context",
+        "ack_policy": "cumulative_ack_24_bit"
+      }
+    ],
+    "exact_points": [
+      {
+        "task_packet_open_loop_attempts": 1,
+        "feedback_policy": "none"
+      },
+      {
+        "task_packet_open_loop_attempts": 2,
+        "feedback_policy": "none"
+      },
+      {
+        "task_packet_open_loop_attempts": 3,
+        "feedback_policy": "none"
+      }
+    ]
+  },
+  "result_access": {
+    "s6_7b_results_loaded": false,
+    "external_final_signal_values_loaded": false,
+    "external_final_access_count": 0
+  },
+  "next_action": "implement a new versioned instrumentation layer and run a small synthetic or excluded-pilot dry-run before the full grid",
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {}
+  },
+  "claim_boundary": "This preflight enumerates configuration metadata and verifies hashes only. It does not load spectrum values or produce performance evidence."
+}

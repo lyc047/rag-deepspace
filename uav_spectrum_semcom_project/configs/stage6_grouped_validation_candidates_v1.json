@@ -1,0 +1,138 @@
+{
+  "protocol_id": "stage6_grouped_validation_candidates_v1",
+  "status": "frozen_after_coarse_grid_before_grouped_validation_result_access",
+  "created_date": "2026-07-27",
+  "parent_protocol": {
+    "path": "configs/stage6_matched_reliability_development_v1.json",
+    "sha256": "cb3d5fde27edeefd39b6dcaf94db67d565997b89cda7e3be3946efa7e4515636"
+  },
+  "coarse_evidence": {
+    "result": "results/stage6/matched_reliability_coarse_grid_v1/result.json",
+    "result_sha256": "0da668fe5a2c044132417d936ff0db8da7951e4be2b431933ecc7a688b6dba5f",
+    "analysis": "results/stage6/matched_reliability_coarse_analysis_v1/analysis.json",
+    "analysis_sha256": "dabee7610a40560f8ed98912345e74ff31ebb3a06d49c58c426d74c708585d4f"
+  },
+  "grouped_development_cache": {
+    "cache": "results/stage6/fixed_site_stream_cache_v1/cache.npz",
+    "cache_sha256": "93c7a49548f05e2e53c6789fabc845de711fcf101869be5331af607c5b292305",
+    "result": "results/stage6/fixed_site_stream_cache_v1/result.json",
+    "result_sha256": "d1c771bf0b3bc02ebade5d945f642f2b030ef4a899c0cb0b930efba0efc10caf",
+    "scene_count": 89011,
+    "outer_group": "site_x_local_date",
+    "outer_group_count": 27,
+    "session_segment_count": 27,
+    "role": "development_only_historically_accessed_2022"
+  },
+  "controller_candidates": {
+    "8": [
+      {
+        "candidate_id": "n8_controller_01",
+        "heartbeat_silence_scenes": 10,
+        "maximum_state_age_minutes": 30.0,
+        "update_reservation_fraction": 0.0,
+        "task_update_open_loop_attempts": 2
+      },
+      {
+        "candidate_id": "n8_controller_02",
+        "heartbeat_silence_scenes": 10,
+        "maximum_state_age_minutes": 30.0,
+        "update_reservation_fraction": 0.0,
+        "task_update_open_loop_attempts": 1
+      },
+      {
+        "candidate_id": "n8_controller_03",
+        "heartbeat_silence_scenes": 20,
+        "maximum_state_age_minutes": 30.0,
+        "update_reservation_fraction": 0.0,
+        "task_update_open_loop_attempts": 3
+      }
+    ],
+    "16": [
+      {
+        "candidate_id": "n16_controller_01",
+        "heartbeat_silence_scenes": 10,
+        "maximum_state_age_minutes": 30.0,
+        "update_reservation_fraction": 0.0,
+        "task_update_open_loop_attempts": 2
+      },
+      {
+        "candidate_id": "n16_controller_02",
+        "heartbeat_silence_scenes": 20,
+        "maximum_state_age_minutes": 30.0,
+        "update_reservation_fraction": 0.0,
+        "task_update_open_loop_attempts": 1
+      },
+      {
+        "candidate_id": "n16_controller_03",
+        "heartbeat_silence_scenes": 10,
+        "maximum_state_age_minutes": 30.0,
+        "update_reservation_fraction": 0.0,
+        "task_update_open_loop_attempts": 1
+      }
+    ],
+    "32": [
+      {
+        "candidate_id": "n32_controller_01",
+        "heartbeat_silence_scenes": 10,
+        "maximum_state_age_minutes": 30.0,
+        "update_reservation_fraction": 0.0,
+        "task_update_open_loop_attempts": 2
+      },
+      {
+        "candidate_id": "n32_controller_02",
+        "heartbeat_silence_scenes": 20,
+        "maximum_state_age_minutes": 30.0,
+        "update_reservation_fraction": 0.0,
+        "task_update_open_loop_attempts": 2
+      },
+      {
+        "candidate_id": "n32_controller_03",
+        "heartbeat_silence_scenes": 10,
+        "maximum_state_age_minutes": 30.0,
+        "update_reservation_fraction": 0.0,
+        "task_update_open_loop_attempts": 1
+      }
+    ],
+    "64": [
+      {
+        "candidate_id": "n64_controller_01",
+        "heartbeat_silence_scenes": 10,
+        "maximum_state_age_minutes": 30.0,
+        "update_reservation_fraction": 0.0,
+        "task_update_open_loop_attempts": 2
+      },
+      {
+        "candidate_id": "n64_controller_02",
+        "heartbeat_silence_scenes": 20,
+        "maximum_state_age_minutes": 30.0,
+        "update_reservation_fraction": 0.0,
+        "task_update_open_loop_attempts": 2
+      }
+    ]
+  },
+  "evaluation_conditions": {
+    "requested_session_scene_counts": [20, 100, 500],
+    "deployment_modes": [
+      "preconfigured_codebook_empty_action_state",
+      "online_install_empty_context"
+    ],
+    "exact_task_packet_open_loop_attempts": [1, 2, 3],
+    "link_trajectories": 60,
+    "paired_random_stream_count": 11,
+    "paired_bootstrap_replicates": 5000,
+    "confidence_level": 0.95,
+    "candidate_target_clean_rates": [0.85, 0.9, 0.95, 0.97],
+    "report_per_site_date": true,
+    "report_leave_one_site_out": true
+  },
+  "freeze_rules": {
+    "may_refit_task_codebook_on_2022": false,
+    "may_refit_risk_ranker_on_2022": false,
+    "may_add_or_remove_controller_candidates_after_result_access": false,
+    "may_change_matched_clean_targets_after_result_access": false,
+    "may_change_session_segmentation_after_result_access": false,
+    "external_final_signal_values_may_be_loaded": false,
+    "external_final_access_count_must_remain_zero": true
+  },
+  "claim_boundary": "Frozen-candidate grouped validation on the historically accessed 2022 fixed-site activity. It tests cross-site and cross-date stability but is not external Final evidence."
+}

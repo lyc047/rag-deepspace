@@ -1,0 +1,41 @@
+{
+  "dataset": "RadDet40k128HW001Tv2",
+  "source": "https://www.kaggle.com/datasets/abcxyzi/raddet-icassp-2025",
+  "license": "CC-BY-NC-SA-4.0",
+  "n_frames": 40003,
+  "split_counts": {
+    "train": 14001,
+    "val": 6001,
+    "test": 20001
+  },
+  "n_labeled_frames": 20041,
+  "mean_boxes_per_frame": 0.5009874259430542,
+  "class_counts": {
+    "Frank": 1883,
+    "P3": 1825,
+    "Barker": 1850,
+    "P1": 1846,
+    "Rect": 1858,
+    "LFM": 1817,
+    "P2": 1782,
+    "Px": 1788,
+    "P4": 1793,
+    "FMCW": 1810,
+    "ZadoffChu": 1789
+  },
+  "mean_png_bits_per_frame": 116541.29480288978,
+  "raw_spectrogram_8bit_bits_per_frame": 131072,
+  "mean_raw_iq_12bit_bits_per_frame": 24000000.0,
+  "mean_semantic_box_bits_per_frame": 245.0710946678999,
+  "png_to_semantic_ratio": 475.5407607772631,
+  "spectrogram8_to_semantic_ratio": 534.8325561511771,
+  "iq12_to_semantic_ratio": 97930.76589682196,
+  "snr_values": [
+    -20.0,
+    -12.0,
+    -4.0,
+    4.0,
+    12.0,
+    20.0
+  ]
+}

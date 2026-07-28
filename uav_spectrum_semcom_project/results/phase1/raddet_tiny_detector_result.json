@@ -1,0 +1,119 @@
+{
+  "dataset": "RadDet40k128HW001Tv2",
+  "model": "TinyRadDetCNN single-box baseline",
+  "device": "cuda",
+  "train_frames": 3000,
+  "val_frames": 1000,
+  "test_frames": 1000,
+  "epochs": 5,
+  "threshold": 0.5,
+  "iou_threshold": 0.3,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 2.0598769758610014,
+      "val": {
+        "precision": 0.001584786053882726,
+        "recall": 0.001953125,
+        "f1": 0.0017497812773403325,
+        "mean_iou": 0.338099867105484,
+        "matched_class_accuracy": 0.0,
+        "tp": 1,
+        "fp": 630,
+        "fn": 511,
+        "mean_semantic_bits_per_frame": 254.432,
+        "mean_raw_spectrogram_8bit_bits_per_frame": 131072.0,
+        "mean_raw_iq_12bit_bits_per_frame": 24000000.0,
+        "predicted_positive_frames": 631
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.85156286777334,
+      "val": {
+        "precision": 0.0029069767441860465,
+        "recall": 0.001953125,
+        "f1": 0.002336448598130841,
+        "mean_iou": 0.3953395485877991,
+        "matched_class_accuracy": 0.0,
+        "tp": 1,
+        "fp": 343,
+        "fn": 511,
+        "mean_semantic_bits_per_frame": 233.768,
+        "mean_raw_spectrogram_8bit_bits_per_frame": 131072.0,
+        "mean_raw_iq_12bit_bits_per_frame": 24000000.0,
+        "predicted_positive_frames": 344
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.7889786984058136,
+      "val": {
+        "precision": 0.0018656716417910447,
+        "recall": 0.001953125,
+        "f1": 0.0019083969465648854,
+        "mean_iou": 0.41806522011756897,
+        "matched_class_accuracy": 0.0,
+        "tp": 1,
+        "fp": 535,
+        "fn": 511,
+        "mean_semantic_bits_per_frame": 247.592,
+        "mean_raw_spectrogram_8bit_bits_per_frame": 131072.0,
+        "mean_raw_iq_12bit_bits_per_frame": 24000000.0,
+        "predicted_positive_frames": 536
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.7033992485797151,
+      "val": {
+        "precision": 0.001,
+        "recall": 0.001953125,
+        "f1": 0.0013227513227513227,
+        "mean_iou": 0.3398358225822449,
+        "matched_class_accuracy": 0.0,
+        "tp": 1,
+        "fp": 999,
+        "fn": 511,
+        "mean_semantic_bits_per_frame": 281.0,
+        "mean_raw_spectrogram_8bit_bits_per_frame": 131072.0,
+        "mean_raw_iq_12bit_bits_per_frame": 24000000.0,
+        "predicted_positive_frames": 1000
+      }
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.6884530782699585,
+      "val": {
+        "precision": 0.003976143141153081,
+        "recall": 0.00390625,
+        "f1": 0.00394088669950739,
+        "mean_iou": 0.4701234847307205,
+        "matched_class_accuracy": 0.0,
+        "tp": 2,
+        "fp": 501,
+        "fn": 510,
+        "mean_semantic_bits_per_frame": 245.216,
+        "mean_raw_spectrogram_8bit_bits_per_frame": 131072.0,
+        "mean_raw_iq_12bit_bits_per_frame": 24000000.0,
+        "predicted_positive_frames": 503
+      }
+    }
+  ],
+  "test": {
+    "precision": 0.0019801980198019802,
+    "recall": 0.001937984496124031,
+    "f1": 0.0019588638589618022,
+    "mean_iou": 0.6248075366020203,
+    "matched_class_accuracy": 0.0,
+    "tp": 1,
+    "fp": 504,
+    "fn": 515,
+    "mean_semantic_bits_per_frame": 245.36,
+    "mean_raw_spectrogram_8bit_bits_per_frame": 131072.0,
+    "mean_raw_iq_12bit_bits_per_frame": 24000000.0,
+    "predicted_positive_frames": 505,
+    "spectrogram8_to_semantic_ratio": 534.2028040430388,
+    "iq12_to_semantic_ratio": 97815.45484186501
+  }
+}

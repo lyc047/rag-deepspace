@@ -1,0 +1,80 @@
+{
+  "protocol_id": "stage5_dynamic_query_event_semantics_development_v1",
+  "status": "frozen_before_dynamic_query_metrics",
+  "created_date": "2026-07-23",
+  "purpose": "Test whether the fixed-demand Stage-5 event policy remains useful when contiguous bandwidth demand changes among D=2,4,6 and the receiver keeps independent query states.",
+  "development_source": {
+    "cache_result": "results/stage4/c1_v4_real_cache_v1/c1_v4_cache_result.json",
+    "cache_result_sha256": "858bdebbe54bcf9f5a1c96fce5d1af6b3d816563a934bac77797b938d97ae98d",
+    "split": "validation",
+    "cache_sha256": "28d271cf8b00b34c192b9c64e22bfbf4c8dc908cbe77d756bd4008745862bcc4",
+    "role": "already-seen development validation; no new confirmatory status"
+  },
+  "fixed_policy_from_s5_1": {
+    "source_result": "results/stage5/event_semantics_development_v1/event_semantics_result.json",
+    "source_result_sha256": "6621dad9e4e11c90c911aa024f2d7c6695ee678ad4993dfdf1c1e10e719e3bac",
+    "regret_threshold_db": 0.2,
+    "max_age_minutes": 120.0,
+    "parameters_may_be_retuned": false
+  },
+  "resource_queries": {
+    "n_channels": 8,
+    "demand_channels": [2, 4, 6],
+    "state_scope": "one independent ACK-synchronised state per demand width",
+    "schedules": {
+      "cyclic": {
+        "description": "D=2,4,6 repeated; site-specific starting offset balances the aggregate counts",
+        "retunes_policy": false
+      },
+      "markov": {
+        "seed": 20260801,
+        "initial_state": "site index modulo three",
+        "transition_matrix": [
+          [0.70, 0.25, 0.05],
+          [0.15, 0.70, 0.15],
+          [0.05, 0.25, 0.70]
+        ],
+        "retunes_policy": false
+      }
+    }
+  },
+  "codec": {
+    "compact_application_header_bits": 40,
+    "absolute_payload_formula": "ceil(log2(N-D+1))",
+    "delta_payload": "one sign bit followed by Elias-gamma magnitude"
+  },
+  "methods": [
+    "query_absolute_index_always",
+    "query_periodic_absolute_60min",
+    "query_event_absolute_fixed",
+    "query_event_delta_fixed"
+  ],
+  "link": {
+    "stage2_config": "configs/stage2_digital_link.json",
+    "stage2_config_sha256": "66fbe3cc3166225d8aa4bbcd82131a92c808196314045735019321b1791932a1",
+    "channel_models": ["awgn", "rayleigh", "rician"],
+    "ebn0_db": [0.0, 3.0, 6.0, 9.0],
+    "repeats": 10,
+    "paired_common_random_numbers": true
+  },
+  "statistics": {
+    "cvar_alpha": 0.9,
+    "paired_cluster_bootstrap_repetitions": 10000,
+    "bootstrap_seed": 20260802,
+    "one_sided_confidence": 0.95
+  },
+  "descriptive_gate_per_schedule": {
+    "minimum_actual_bit_reduction_pct": 30.0,
+    "maximum_mean_regret_upper_bound_db": 0.02,
+    "maximum_cvar_upper_bound_db": 0.05,
+    "interpretation": "Development extension only; passing does not create a new Final."
+  },
+  "governance": {
+    "stage4_final_measurements_may_be_loaded": false,
+    "stage4_final_metrics_may_be_loaded": false,
+    "may_modify_stage4_final_algorithm_or_claim": false,
+    "output_is_confirmatory_final": false,
+    "result_directory_must_not_exist_before_run": true
+  },
+  "claim_boundary": "Development-only dynamic queries over the same fixed-site AERPAW validation sweeps and simulated reporting link. Query changes are generated, not observed user traffic; the result does not establish multi-user allocation, mobility, MIMO, measured backhaul, or cross-dataset generalization."
+}

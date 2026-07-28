@@ -1,0 +1,5517 @@
+{
+  "device": "cpu",
+  "rows": [
+    {
+      "threshold": 0.3,
+      "n_pred": 128,
+      "n_truth": 55,
+      "true_positive": 26,
+      "false_positive": 102,
+      "false_negative": 29,
+      "precision": 0.203125,
+      "recall": 0.4727272727272727,
+      "f1": 0.2841530054644809,
+      "mean_matched_iou": 0.3900038238995197,
+      "best_iou": 0.5628421532846699,
+      "semantic_packet_bits_per_frame": 10449,
+      "semantic_packet_bps": 72934.98334957175,
+      "raw_iq_32bit_iq_bps": 491520000.0,
+      "raw_iq_12bit_iq_bps": 184320000.0,
+      "stft_8bit_bps": 122824605.98833743,
+      "pred_boxes": [
+        {
+          "label": "occupied",
+          "t_start_s": 0.10998333333333334,
+          "t_end_s": 0.11105,
+          "f_low_hz": -2332500.0,
+          "f_high_hz": -277500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03908333333333333,
+          "t_end_s": 0.03948333333333333,
+          "f_low_hz": -2527500.0,
+          "f_high_hz": 2887500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07908333333333334,
+          "t_end_s": 0.07951666666666667,
+          "f_low_hz": -2977500.0,
+          "f_high_hz": 2167500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06911666666666666,
+          "t_end_s": 0.06951666666666667,
+          "f_low_hz": -2497500.0,
+          "f_high_hz": 2362500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.019116666666666664,
+          "t_end_s": 0.01948333333333333,
+          "f_low_hz": -2632500.0,
+          "f_high_hz": 2077500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11911666666666666,
+          "t_end_s": 0.11948333333333333,
+          "f_low_hz": -2347500.0,
+          "f_high_hz": 2602500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.059116666666666665,
+          "t_end_s": 0.05951666666666666,
+          "f_low_hz": -2167500.0,
+          "f_high_hz": 2497500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.029116666666666666,
+          "t_end_s": 0.029516666666666667,
+          "f_low_hz": -2377500.0,
+          "f_high_hz": 2197500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13908333333333334,
+          "t_end_s": 0.13951666666666668,
+          "f_low_hz": -1942500.0,
+          "f_high_hz": 2842500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10911666666666667,
+          "t_end_s": 0.10948333333333334,
+          "f_low_hz": -2377500.0,
+          "f_high_hz": 2122500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12911666666666666,
+          "t_end_s": 0.12951666666666667,
+          "f_low_hz": -2362500.0,
+          "f_high_hz": 2242500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.048549999999999996,
+          "t_end_s": 0.04948333333333334,
+          "f_low_hz": -2092500.0,
+          "f_high_hz": 2347500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09911666666666666,
+          "t_end_s": 0.09948333333333334,
+          "f_low_hz": -2407500.0,
+          "f_high_hz": 2062500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.009083333333333334,
+          "t_end_s": 0.009516666666666666,
+          "f_low_hz": -2152500.0,
+          "f_high_hz": 2017500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08911666666666666,
+          "t_end_s": 0.08948333333333333,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 2032500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.041216666666666665,
+          "t_end_s": 0.04141666666666667,
+          "f_low_hz": -2317500.0,
+          "f_high_hz": 2422500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12121666666666667,
+          "t_end_s": 0.12141666666666667,
+          "f_low_hz": -2317500.0,
+          "f_high_hz": 2422500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.042216666666666666,
+          "t_end_s": 0.04241666666666667,
+          "f_low_hz": -2272500.0,
+          "f_high_hz": 2467500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03125,
+          "t_end_s": 0.031483333333333335,
+          "f_low_hz": -2257500.0,
+          "f_high_hz": 2512500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12218333333333334,
+          "t_end_s": 0.12241666666666667,
+          "f_low_hz": -2212500.0,
+          "f_high_hz": 2452500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.042550000000000004,
+          "t_end_s": 0.042749999999999996,
+          "f_low_hz": -2317500.0,
+          "f_high_hz": 2527500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12254999999999999,
+          "t_end_s": 0.12271666666666667,
+          "f_low_hz": -2212500.0,
+          "f_high_hz": 2632500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.041550000000000004,
+          "t_end_s": 0.041716666666666666,
+          "f_low_hz": -2182500.0,
+          "f_high_hz": 2437500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12154999999999999,
+          "t_end_s": 0.12175,
+          "f_low_hz": -2182500.0,
+          "f_high_hz": 2437500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11125,
+          "t_end_s": 0.11145,
+          "f_low_hz": -727500.0,
+          "f_high_hz": 2497500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08391666666666667,
+          "t_end_s": 0.08618333333333333,
+          "f_low_hz": -862500.0,
+          "f_high_hz": -607500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10994999999999999,
+          "t_end_s": 0.11018333333333333,
+          "f_low_hz": 697500.0,
+          "f_high_hz": 1912500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09311666666666667,
+          "t_end_s": 0.09475,
+          "f_low_hz": -877500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.023350000000000003,
+          "t_end_s": 0.025016666666666666,
+          "f_low_hz": -892500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11128333333333333,
+          "t_end_s": 0.11145,
+          "f_low_hz": -2152500.0,
+          "f_high_hz": -802500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07415,
+          "t_end_s": 0.07568333333333332,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04585,
+          "t_end_s": 0.047483333333333336,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07241666666666667,
+          "t_end_s": 0.07398333333333333,
+          "f_low_hz": -862500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.014116666666666666,
+          "t_end_s": 0.015383333333333334,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05371666666666666,
+          "t_end_s": 0.055016666666666665,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13641666666666666,
+          "t_end_s": 0.13745,
+          "f_low_hz": -862500.0,
+          "f_high_hz": -622500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.02565,
+          "t_end_s": 0.026683333333333337,
+          "f_low_hz": -862500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.010616666666666667,
+          "t_end_s": 0.01165,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -622500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05561666666666666,
+          "t_end_s": 0.05678333333333334,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13468333333333332,
+          "t_end_s": 0.13575,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06601666666666667,
+          "t_end_s": 0.06715,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -622500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.019916666666666666,
+          "t_end_s": 0.020983333333333333,
+          "f_low_hz": -862500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12548333333333334,
+          "t_end_s": 0.12648333333333334,
+          "f_low_hz": -877500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07641666666666666,
+          "t_end_s": 0.07748333333333333,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12721666666666667,
+          "t_end_s": 0.12801666666666667,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13291666666666666,
+          "t_end_s": 0.13398333333333334,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0035833333333333333,
+          "t_end_s": 0.0046166666666666665,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.034883333333333336,
+          "t_end_s": 0.035750000000000004,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10464999999999999,
+          "t_end_s": 0.10568333333333334,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.013083333333333334,
+          "t_end_s": 0.01395,
+          "f_low_hz": -907500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.016383333333333333,
+          "t_end_s": 0.01725,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -607500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.14205,
+          "t_end_s": 0.14321666666666666,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05791666666666667,
+          "t_end_s": 0.05895,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10241666666666667,
+          "t_end_s": 0.10348333333333333,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09141666666666667,
+          "t_end_s": 0.09248333333333333,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08221666666666666,
+          "t_end_s": 0.08321666666666666,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10364999999999999,
+          "t_end_s": 0.10458333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -622500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08055,
+          "t_end_s": 0.08148333333333334,
+          "f_low_hz": -877500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03298333333333334,
+          "t_end_s": 0.033850000000000005,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06725,
+          "t_end_s": 0.06808333333333333,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.02225,
+          "t_end_s": 0.02325,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 1.6666666666666667e-05,
+          "t_end_s": 0.0006833333333333333,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13198333333333334,
+          "t_end_s": 0.13271666666666668,
+          "f_low_hz": -862500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05051666666666667,
+          "t_end_s": 0.05148333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09485,
+          "t_end_s": 0.09545000000000001,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13815,
+          "t_end_s": 0.13868333333333333,
+          "f_low_hz": -862500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06485,
+          "t_end_s": 0.06541666666666666,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -622500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10628333333333334,
+          "t_end_s": 0.10695,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.004883333333333333,
+          "t_end_s": 0.005416666666666667,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12658333333333333,
+          "t_end_s": 0.12708333333333333,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11228333333333333,
+          "t_end_s": 0.11311666666666667,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.007116666666666667,
+          "t_end_s": 0.007516666666666666,
+          "f_low_hz": -97500.0,
+          "f_high_hz": 187500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11561666666666667,
+          "t_end_s": 0.11628333333333334,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.061483333333333334,
+          "t_end_s": 0.062016666666666664,
+          "f_low_hz": -862500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.007183333333333333,
+          "t_end_s": 0.007716666666666667,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05971666666666667,
+          "t_end_s": 0.060649999999999996,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07131666666666667,
+          "t_end_s": 0.07185,
+          "f_low_hz": -877500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0025166666666666666,
+          "t_end_s": 0.0030833333333333333,
+          "f_low_hz": -7500.0,
+          "f_high_hz": 172500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04985,
+          "t_end_s": 0.050449999999999995,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05258333333333333,
+          "t_end_s": 0.053116666666666666,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07991666666666666,
+          "t_end_s": 0.08041666666666666,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.02815,
+          "t_end_s": 0.02895,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09081666666666667,
+          "t_end_s": 0.09131666666666667,
+          "f_low_hz": -862500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11468333333333333,
+          "t_end_s": 0.11538333333333334,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.011783333333333333,
+          "t_end_s": 0.012316666666666667,
+          "f_low_hz": 757500.0,
+          "f_high_hz": 952500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08975,
+          "t_end_s": 0.09035,
+          "f_low_hz": -877500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.011783333333333333,
+          "t_end_s": 0.012283333333333334,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12488333333333333,
+          "t_end_s": 0.12541666666666668,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.006583333333333333,
+          "t_end_s": 0.00715,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13988333333333333,
+          "t_end_s": 0.14038333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0019833333333333335,
+          "t_end_s": 0.00245,
+          "f_low_hz": -877500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08925,
+          "t_end_s": 0.08945,
+          "f_low_hz": 2077500.0,
+          "f_high_hz": 2452500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06208333333333334,
+          "t_end_s": 0.06241666666666666,
+          "f_low_hz": -862500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09665,
+          "t_end_s": 0.09708333333333333,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04795,
+          "t_end_s": 0.04845,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13068333333333332,
+          "t_end_s": 0.13118333333333332,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09725,
+          "t_end_s": 0.09775,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.018216666666666666,
+          "t_end_s": 0.018716666666666666,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03725,
+          "t_end_s": 0.037849999999999995,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10068333333333333,
+          "t_end_s": 0.10125,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13128333333333334,
+          "t_end_s": 0.13161666666666666,
+          "f_low_hz": -877500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.005516666666666666,
+          "t_end_s": 0.00595,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0014833333333333335,
+          "t_end_s": 0.0019166666666666668,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06548333333333334,
+          "t_end_s": 0.06595000000000001,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04521666666666667,
+          "t_end_s": 0.04568333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07068333333333333,
+          "t_end_s": 0.07115,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13418333333333332,
+          "t_end_s": 0.13458333333333333,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10008333333333333,
+          "t_end_s": 0.10055,
+          "f_low_hz": -862500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.006016666666666667,
+          "t_end_s": 0.006516666666666667,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07821666666666667,
+          "t_end_s": 0.07868333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.012383333333333333,
+          "t_end_s": 0.012750000000000001,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08731666666666667,
+          "t_end_s": 0.08771666666666667,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05168333333333333,
+          "t_end_s": 0.05208333333333333,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03925,
+          "t_end_s": 0.03945,
+          "f_low_hz": -2857500.0,
+          "f_high_hz": -2602500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12838333333333332,
+          "t_end_s": 0.12878333333333333,
+          "f_low_hz": -862500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.008416666666666666,
+          "t_end_s": 0.008816666666666667,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03668333333333333,
+          "t_end_s": 0.037116666666666666,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08801666666666666,
+          "t_end_s": 0.08855,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08638333333333334,
+          "t_end_s": 0.08671666666666666,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11331666666666666,
+          "t_end_s": 0.11388333333333334,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09591666666666666,
+          "t_end_s": 0.09621666666666667,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.044649999999999995,
+          "t_end_s": 0.04501666666666666,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.00935,
+          "t_end_s": 0.009516666666666666,
+          "f_low_hz": -2527500.0,
+          "f_high_hz": -2212500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07195,
+          "t_end_s": 0.07225000000000001,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0026833333333333336,
+          "t_end_s": 0.0030833333333333333,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12321666666666667,
+          "t_end_s": 0.12355,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09048333333333333,
+          "t_end_s": 0.09075,
+          "f_low_hz": -907500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11398333333333333,
+          "t_end_s": 0.11431666666666666,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "threshold": 0.4,
+      "n_pred": 128,
+      "n_truth": 55,
+      "true_positive": 26,
+      "false_positive": 102,
+      "false_negative": 29,
+      "precision": 0.203125,
+      "recall": 0.4727272727272727,
+      "f1": 0.2841530054644809,
+      "mean_matched_iou": 0.43638029997966465,
+      "best_iou": 0.6479779411764687,
+      "semantic_packet_bits_per_frame": 10449,
+      "semantic_packet_bps": 72934.98334957175,
+      "raw_iq_32bit_iq_bps": 491520000.0,
+      "raw_iq_12bit_iq_bps": 184320000.0,
+      "stft_8bit_bps": 122824605.98833743,
+      "pred_boxes": [
+        {
+          "label": "occupied",
+          "t_start_s": 0.10998333333333334,
+          "t_end_s": 0.11105,
+          "f_low_hz": -2062500.0,
+          "f_high_hz": -277500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03911666666666667,
+          "t_end_s": 0.03948333333333333,
+          "f_low_hz": -2497500.0,
+          "f_high_hz": 2452500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06911666666666666,
+          "t_end_s": 0.06948333333333334,
+          "f_low_hz": -2467500.0,
+          "f_high_hz": 2212500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07911666666666667,
+          "t_end_s": 0.07948333333333334,
+          "f_low_hz": -2542500.0,
+          "f_high_hz": 2077500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.019116666666666664,
+          "t_end_s": 0.01948333333333333,
+          "f_low_hz": -2527500.0,
+          "f_high_hz": 2047500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.029116666666666666,
+          "t_end_s": 0.029483333333333334,
+          "f_low_hz": -2332500.0,
+          "f_high_hz": 2137500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12911666666666666,
+          "t_end_s": 0.12951666666666667,
+          "f_low_hz": -2272500.0,
+          "f_high_hz": 2212500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13908333333333334,
+          "t_end_s": 0.13948333333333335,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 2647500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10911666666666667,
+          "t_end_s": 0.10948333333333334,
+          "f_low_hz": -2362500.0,
+          "f_high_hz": 2092500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09911666666666666,
+          "t_end_s": 0.09948333333333334,
+          "f_low_hz": -2242500.0,
+          "f_high_hz": 2047500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.009116666666666667,
+          "t_end_s": 0.009516666666666666,
+          "f_low_hz": -2137500.0,
+          "f_high_hz": 1987500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11911666666666666,
+          "t_end_s": 0.11948333333333333,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 2257500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.059116666666666665,
+          "t_end_s": 0.05951666666666666,
+          "f_low_hz": -2152500.0,
+          "f_high_hz": 2002500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04911666666666667,
+          "t_end_s": 0.04948333333333334,
+          "f_low_hz": -1942500.0,
+          "f_high_hz": 2137500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08911666666666666,
+          "t_end_s": 0.08948333333333333,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 2017500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.041216666666666665,
+          "t_end_s": 0.04141666666666667,
+          "f_low_hz": -2302500.0,
+          "f_high_hz": 2407500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12121666666666667,
+          "t_end_s": 0.12141666666666667,
+          "f_low_hz": -2257500.0,
+          "f_high_hz": 2407500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.042216666666666666,
+          "t_end_s": 0.04241666666666667,
+          "f_low_hz": -2227500.0,
+          "f_high_hz": 2437500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12221666666666667,
+          "t_end_s": 0.12241666666666667,
+          "f_low_hz": -2197500.0,
+          "f_high_hz": 2437500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03125,
+          "t_end_s": 0.03145,
+          "f_low_hz": -2152500.0,
+          "f_high_hz": 2497500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.042550000000000004,
+          "t_end_s": 0.042749999999999996,
+          "f_low_hz": -2197500.0,
+          "f_high_hz": 2467500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12254999999999999,
+          "t_end_s": 0.12271666666666667,
+          "f_low_hz": -2182500.0,
+          "f_high_hz": 2437500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.041550000000000004,
+          "t_end_s": 0.041716666666666666,
+          "f_low_hz": -2152500.0,
+          "f_high_hz": 2407500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12154999999999999,
+          "t_end_s": 0.12171666666666667,
+          "f_low_hz": -2152500.0,
+          "f_high_hz": 2377500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11125,
+          "t_end_s": 0.11145,
+          "f_low_hz": 502500.0,
+          "f_high_hz": 2452500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10998333333333334,
+          "t_end_s": 0.11018333333333333,
+          "f_low_hz": 712500.0,
+          "f_high_hz": 1912500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08468333333333333,
+          "t_end_s": 0.08618333333333333,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -622500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09315,
+          "t_end_s": 0.09471666666666667,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11128333333333333,
+          "t_end_s": 0.11145,
+          "f_low_hz": -712500.0,
+          "f_high_hz": 472500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.023683333333333334,
+          "t_end_s": 0.024983333333333337,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13641666666666666,
+          "t_end_s": 0.13741666666666666,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.025683333333333336,
+          "t_end_s": 0.026683333333333337,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05388333333333334,
+          "t_end_s": 0.05498333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11128333333333333,
+          "t_end_s": 0.11145,
+          "f_low_hz": -2062500.0,
+          "f_high_hz": -1327500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.010683333333333333,
+          "t_end_s": 0.011616666666666668,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.046450000000000005,
+          "t_end_s": 0.047483333333333336,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07645,
+          "t_end_s": 0.07748333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12721666666666667,
+          "t_end_s": 0.12801666666666667,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12551666666666667,
+          "t_end_s": 0.12645,
+          "f_low_hz": -862500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.034916666666666665,
+          "t_end_s": 0.03571666666666667,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07471666666666667,
+          "t_end_s": 0.07565,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08225,
+          "t_end_s": 0.08318333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.01641666666666667,
+          "t_end_s": 0.017216666666666665,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06615,
+          "t_end_s": 0.06711666666666667,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08395,
+          "t_end_s": 0.08461666666666667,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06725,
+          "t_end_s": 0.06808333333333333,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13468333333333332,
+          "t_end_s": 0.13541666666666666,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 1.6666666666666667e-05,
+          "t_end_s": 0.0006833333333333333,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05795,
+          "t_end_s": 0.05881666666666667,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03311666666666667,
+          "t_end_s": 0.03381666666666666,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.014683333333333333,
+          "t_end_s": 0.015316666666666666,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09485,
+          "t_end_s": 0.09545000000000001,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07291666666666667,
+          "t_end_s": 0.07361666666666666,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.055650000000000005,
+          "t_end_s": 0.05628333333333334,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0036166666666666665,
+          "t_end_s": 0.0042833333333333334,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.004916666666666666,
+          "t_end_s": 0.005416666666666667,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08058333333333334,
+          "t_end_s": 0.08118333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13295,
+          "t_end_s": 0.13371666666666668,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10468333333333334,
+          "t_end_s": 0.10535,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09145,
+          "t_end_s": 0.09204999999999999,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06488333333333333,
+          "t_end_s": 0.06538333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13818333333333332,
+          "t_end_s": 0.13868333333333333,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.01315,
+          "t_end_s": 0.013683333333333334,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.019916666666666666,
+          "t_end_s": 0.020416666666666666,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.14218333333333333,
+          "t_end_s": 0.14295,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10638333333333333,
+          "t_end_s": 0.10695,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.007216666666666666,
+          "t_end_s": 0.007683333333333334,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.00715,
+          "t_end_s": 0.007483333333333333,
+          "f_low_hz": -37500.0,
+          "f_high_hz": 172500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.061483333333333334,
+          "t_end_s": 0.061983333333333335,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12661666666666666,
+          "t_end_s": 0.12705,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10295,
+          "t_end_s": 0.10348333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07991666666666666,
+          "t_end_s": 0.08038333333333333,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.022283333333333336,
+          "t_end_s": 0.02291666666666667,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05258333333333333,
+          "t_end_s": 0.05308333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10411666666666666,
+          "t_end_s": 0.10455,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.049883333333333335,
+          "t_end_s": 0.050416666666666665,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13235,
+          "t_end_s": 0.13268333333333332,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13991666666666666,
+          "t_end_s": 0.14038333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.014116666666666666,
+          "t_end_s": 0.014583333333333334,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11128333333333333,
+          "t_end_s": 0.11141666666666666,
+          "f_low_hz": -1297500.0,
+          "f_high_hz": -967500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.011816666666666666,
+          "t_end_s": 0.01225,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.020483333333333333,
+          "t_end_s": 0.020950000000000003,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.00665,
+          "t_end_s": 0.007116666666666667,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05055,
+          "t_end_s": 0.05111666666666667,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06211666666666667,
+          "t_end_s": 0.06238333333333333,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06551666666666667,
+          "t_end_s": 0.06591666666666667,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0020166666666666666,
+          "t_end_s": 0.002416666666666667,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.00275,
+          "t_end_s": 0.0030833333333333333,
+          "f_low_hz": -7500.0,
+          "f_high_hz": 157500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07135,
+          "t_end_s": 0.07161666666666666,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09668333333333333,
+          "t_end_s": 0.09708333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13128333333333334,
+          "t_end_s": 0.13158333333333333,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04521666666666667,
+          "t_end_s": 0.045649999999999996,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09728333333333333,
+          "t_end_s": 0.09768333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.00555,
+          "t_end_s": 0.005916666666666666,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.018216666666666666,
+          "t_end_s": 0.018683333333333337,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0015166666666666666,
+          "t_end_s": 0.0019166666666666668,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.045950000000000005,
+          "t_end_s": 0.046316666666666666,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11568333333333333,
+          "t_end_s": 0.11601666666666667,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05931666666666667,
+          "t_end_s": 0.05945,
+          "f_low_hz": 2167500.0,
+          "f_high_hz": 2437500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13421666666666668,
+          "t_end_s": 0.13458333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.037283333333333335,
+          "t_end_s": 0.037816666666666665,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.023383333333333332,
+          "t_end_s": 0.023649999999999997,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.056383333333333334,
+          "t_end_s": 0.056749999999999995,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.012383333333333333,
+          "t_end_s": 0.012716666666666666,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07068333333333333,
+          "t_end_s": 0.07101666666666667,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07821666666666667,
+          "t_end_s": 0.07865,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09101666666666666,
+          "t_end_s": 0.09131666666666667,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10245,
+          "t_end_s": 0.10275000000000001,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03668333333333333,
+          "t_end_s": 0.03708333333333333,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07365,
+          "t_end_s": 0.07395,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08928333333333333,
+          "t_end_s": 0.08941666666666667,
+          "f_low_hz": 2122500.0,
+          "f_high_hz": 2362500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13071666666666668,
+          "t_end_s": 0.13101666666666667,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11931666666666667,
+          "t_end_s": 0.11948333333333333,
+          "f_low_hz": 2392500.0,
+          "f_high_hz": 2572500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04811666666666667,
+          "t_end_s": 0.04841666666666666,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12491666666666666,
+          "t_end_s": 0.12515,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.02818333333333333,
+          "t_end_s": 0.02851666666666667,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.006016666666666667,
+          "t_end_s": 0.006416666666666667,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03925,
+          "t_end_s": 0.03941666666666667,
+          "f_low_hz": -2842500.0,
+          "f_high_hz": -2632500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08975,
+          "t_end_s": 0.09001666666666666,
+          "f_low_hz": -862500.0,
+          "f_high_hz": -742500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09595000000000001,
+          "t_end_s": 0.09618333333333333,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10541666666666666,
+          "t_end_s": 0.10565,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.027450000000000002,
+          "t_end_s": 0.02768333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08648333333333333,
+          "t_end_s": 0.08668333333333333,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.013716666666666667,
+          "t_end_s": 0.013916666666666667,
+          "f_low_hz": -877500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0027166666666666667,
+          "t_end_s": 0.0030833333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -727500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04468333333333333,
+          "t_end_s": 0.044983333333333334,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07245,
+          "t_end_s": 0.07268333333333334,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -727500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07198333333333333,
+          "t_end_s": 0.07221666666666667,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "threshold": 0.5,
+      "n_pred": 128,
+      "n_truth": 55,
+      "true_positive": 26,
+      "false_positive": 102,
+      "false_negative": 29,
+      "precision": 0.203125,
+      "recall": 0.4727272727272727,
+      "f1": 0.2841530054644809,
+      "mean_matched_iou": 0.468298130107797,
+      "best_iou": 0.6763980263157875,
+      "semantic_packet_bits_per_frame": 10449,
+      "semantic_packet_bps": 72934.98334957175,
+      "raw_iq_32bit_iq_bps": 491520000.0,
+      "raw_iq_12bit_iq_bps": 184320000.0,
+      "stft_8bit_bps": 122824605.98833743,
+      "pred_boxes": [
+        {
+          "label": "occupied",
+          "t_start_s": 0.10998333333333334,
+          "t_end_s": 0.11105,
+          "f_low_hz": -2002500.0,
+          "f_high_hz": -292500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03911666666666667,
+          "t_end_s": 0.03948333333333333,
+          "f_low_hz": -2362500.0,
+          "f_high_hz": 2437500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06911666666666666,
+          "t_end_s": 0.06948333333333334,
+          "f_low_hz": -2437500.0,
+          "f_high_hz": 2197500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.019116666666666664,
+          "t_end_s": 0.01948333333333333,
+          "f_low_hz": -2362500.0,
+          "f_high_hz": 1927500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07911666666666667,
+          "t_end_s": 0.07948333333333334,
+          "f_low_hz": -2227500.0,
+          "f_high_hz": 2062500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.029116666666666666,
+          "t_end_s": 0.029483333333333334,
+          "f_low_hz": -2287500.0,
+          "f_high_hz": 1942500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10911666666666667,
+          "t_end_s": 0.10948333333333334,
+          "f_low_hz": -2347500.0,
+          "f_high_hz": 1957500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11911666666666666,
+          "t_end_s": 0.11948333333333333,
+          "f_low_hz": -1912500.0,
+          "f_high_hz": 2167500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.009116666666666667,
+          "t_end_s": 0.009483333333333333,
+          "f_low_hz": -2107500.0,
+          "f_high_hz": 1972500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12911666666666666,
+          "t_end_s": 0.12948333333333334,
+          "f_low_hz": -2257500.0,
+          "f_high_hz": 1927500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13911666666666667,
+          "t_end_s": 0.13948333333333335,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 2347500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09911666666666666,
+          "t_end_s": 0.09948333333333334,
+          "f_low_hz": -2197500.0,
+          "f_high_hz": 2017500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04911666666666667,
+          "t_end_s": 0.04948333333333334,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 2107500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.059116666666666665,
+          "t_end_s": 0.05948333333333333,
+          "f_low_hz": -2062500.0,
+          "f_high_hz": 1972500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08911666666666666,
+          "t_end_s": 0.08948333333333333,
+          "f_low_hz": -1912500.0,
+          "f_high_hz": 2002500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12125,
+          "t_end_s": 0.12141666666666667,
+          "f_low_hz": -2242500.0,
+          "f_high_hz": 2392500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.041249999999999995,
+          "t_end_s": 0.04141666666666667,
+          "f_low_hz": -2212500.0,
+          "f_high_hz": 2407500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12221666666666667,
+          "t_end_s": 0.12241666666666667,
+          "f_low_hz": -2197500.0,
+          "f_high_hz": 2422500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.042249999999999996,
+          "t_end_s": 0.04241666666666667,
+          "f_low_hz": -2212500.0,
+          "f_high_hz": 2422500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.042583333333333334,
+          "t_end_s": 0.04271666666666667,
+          "f_low_hz": -2167500.0,
+          "f_high_hz": 2437500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12258333333333334,
+          "t_end_s": 0.12271666666666667,
+          "f_low_hz": -2152500.0,
+          "f_high_hz": 2407500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03125,
+          "t_end_s": 0.03145,
+          "f_low_hz": -2077500.0,
+          "f_high_hz": 472500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.041550000000000004,
+          "t_end_s": 0.041683333333333336,
+          "f_low_hz": -2122500.0,
+          "f_high_hz": 937500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12158333333333333,
+          "t_end_s": 0.12168333333333334,
+          "f_low_hz": -487500.0,
+          "f_high_hz": 2362500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03125,
+          "t_end_s": 0.03141666666666666,
+          "f_low_hz": 502500.0,
+          "f_high_hz": 2482500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11128333333333333,
+          "t_end_s": 0.11141666666666666,
+          "f_low_hz": 517500.0,
+          "f_high_hz": 2437500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10998333333333334,
+          "t_end_s": 0.11015,
+          "f_low_hz": 712500.0,
+          "f_high_hz": 1897500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12154999999999999,
+          "t_end_s": 0.12171666666666667,
+          "f_low_hz": -2122500.0,
+          "f_high_hz": -517500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04158333333333333,
+          "t_end_s": 0.041683333333333336,
+          "f_low_hz": 952500.0,
+          "f_high_hz": 2377500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08508333333333333,
+          "t_end_s": 0.08615,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13645,
+          "t_end_s": 0.13741666666666666,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12725,
+          "t_end_s": 0.12801666666666667,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12555,
+          "t_end_s": 0.12638333333333335,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.034916666666666665,
+          "t_end_s": 0.03568333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.02395,
+          "t_end_s": 0.02461666666666667,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08395,
+          "t_end_s": 0.08458333333333333,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.010716666666666666,
+          "t_end_s": 0.011483333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08225,
+          "t_end_s": 0.08315,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07475,
+          "t_end_s": 0.07558333333333334,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07648333333333333,
+          "t_end_s": 0.07718333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03315,
+          "t_end_s": 0.03378333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07291666666666667,
+          "t_end_s": 0.07361666666666666,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13471666666666665,
+          "t_end_s": 0.13538333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.014716666666666666,
+          "t_end_s": 0.015283333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06658333333333333,
+          "t_end_s": 0.06708333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.055650000000000005,
+          "t_end_s": 0.056216666666666665,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09488333333333333,
+          "t_end_s": 0.09541666666666666,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 5e-05,
+          "t_end_s": 0.0006833333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09315,
+          "t_end_s": 0.09368333333333334,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11128333333333333,
+          "t_end_s": 0.11141666666666666,
+          "f_low_hz": -2032500.0,
+          "f_high_hz": -1507500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0049499999999999995,
+          "t_end_s": 0.005383333333333334,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05391666666666667,
+          "t_end_s": 0.05441666666666667,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.046483333333333335,
+          "t_end_s": 0.04705,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10478333333333334,
+          "t_end_s": 0.10531666666666667,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06491666666666666,
+          "t_end_s": 0.06538333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06728333333333333,
+          "t_end_s": 0.06785,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09145,
+          "t_end_s": 0.09195,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0036833333333333336,
+          "t_end_s": 0.00425,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.019950000000000002,
+          "t_end_s": 0.020383333333333337,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.013183333333333333,
+          "t_end_s": 0.013583333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08061666666666667,
+          "t_end_s": 0.08111666666666667,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0072499999999999995,
+          "t_end_s": 0.00765,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13821666666666665,
+          "t_end_s": 0.13865,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.026216666666666666,
+          "t_end_s": 0.02665,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.016816666666666667,
+          "t_end_s": 0.017216666666666665,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10641666666666666,
+          "t_end_s": 0.10691666666666666,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.025683333333333336,
+          "t_end_s": 0.02598333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13238333333333333,
+          "t_end_s": 0.13268333333333332,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13991666666666666,
+          "t_end_s": 0.14035,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.052616666666666666,
+          "t_end_s": 0.05305,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10414999999999999,
+          "t_end_s": 0.10448333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -637500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12664999999999998,
+          "t_end_s": 0.12695,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07995,
+          "t_end_s": 0.08035,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.007183333333333333,
+          "t_end_s": 0.007483333333333333,
+          "f_low_hz": 52500.0,
+          "f_high_hz": 157500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.061649999999999996,
+          "t_end_s": 0.061950000000000005,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.02055,
+          "t_end_s": 0.020950000000000003,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11131666666666667,
+          "t_end_s": 0.11141666666666666,
+          "f_low_hz": -1282500.0,
+          "f_high_hz": -982500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06215,
+          "t_end_s": 0.06238333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10318333333333334,
+          "t_end_s": 0.10348333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.005583333333333333,
+          "t_end_s": 0.005883333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.01415,
+          "t_end_s": 0.014383333333333333,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12921666666666667,
+          "t_end_s": 0.12935,
+          "f_low_hz": 1942500.0,
+          "f_high_hz": 2167500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.022449999999999998,
+          "t_end_s": 0.022850000000000002,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0015166666666666666,
+          "t_end_s": 0.0018833333333333332,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06555,
+          "t_end_s": 0.06588333333333334,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0027833333333333334,
+          "t_end_s": 0.0030499999999999998,
+          "f_low_hz": 7500.0,
+          "f_high_hz": 142500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0020833333333333333,
+          "t_end_s": 0.0023833333333333332,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -727500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11571666666666666,
+          "t_end_s": 0.11598333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13308333333333333,
+          "t_end_s": 0.13348333333333334,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07138333333333333,
+          "t_end_s": 0.07158333333333333,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.011883333333333333,
+          "t_end_s": 0.012216666666666667,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04715,
+          "t_end_s": 0.04745,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04525,
+          "t_end_s": 0.045649999999999996,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13131666666666666,
+          "t_end_s": 0.13155,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09731666666666666,
+          "t_end_s": 0.09768333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.016483333333333336,
+          "t_end_s": 0.01678333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07931666666666667,
+          "t_end_s": 0.07941666666666666,
+          "f_low_hz": -2527500.0,
+          "f_high_hz": -2332500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09445,
+          "t_end_s": 0.09468333333333334,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -727500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09391666666666666,
+          "t_end_s": 0.09421666666666667,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.045950000000000005,
+          "t_end_s": 0.04625,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10248333333333333,
+          "t_end_s": 0.10271666666666666,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.006883333333333333,
+          "t_end_s": 0.007116666666666667,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.049883333333333335,
+          "t_end_s": 0.05011666666666667,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09104999999999999,
+          "t_end_s": 0.09128333333333333,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05645,
+          "t_end_s": 0.056716666666666665,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12491666666666666,
+          "t_end_s": 0.12511666666666665,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13071666666666668,
+          "t_end_s": 0.13098333333333334,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.01245,
+          "t_end_s": 0.012683333333333333,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07071666666666666,
+          "t_end_s": 0.07098333333333333,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.14221666666666666,
+          "t_end_s": 0.14245,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.02341666666666667,
+          "t_end_s": 0.023616666666666668,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05931666666666667,
+          "t_end_s": 0.05945,
+          "f_low_hz": 2182500.0,
+          "f_high_hz": 2362500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.028216666666666668,
+          "t_end_s": 0.028483333333333333,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11128333333333333,
+          "t_end_s": 0.11141666666666666,
+          "f_low_hz": -202500.0,
+          "f_high_hz": -52500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11128333333333333,
+          "t_end_s": 0.11141666666666666,
+          "f_low_hz": 157500.0,
+          "f_high_hz": 292500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05061666666666667,
+          "t_end_s": 0.05098333333333333,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07198333333333333,
+          "t_end_s": 0.07221666666666667,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08471666666666666,
+          "t_end_s": 0.08498333333333333,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08978333333333333,
+          "t_end_s": 0.08998333333333333,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -742500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09595000000000001,
+          "t_end_s": 0.09615,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07371666666666667,
+          "t_end_s": 0.07391666666666666,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11415,
+          "t_end_s": 0.11431666666666666,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.027483333333333332,
+          "t_end_s": 0.02765,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11935,
+          "t_end_s": 0.11948333333333333,
+          "f_low_hz": 2392500.0,
+          "f_high_hz": 2527500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04825,
+          "t_end_s": 0.04841666666666666,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08651666666666666,
+          "t_end_s": 0.08665,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.01375,
+          "t_end_s": 0.013883333333333333,
+          "f_low_hz": -847500.0,
+          "f_high_hz": -727500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05445,
+          "t_end_s": 0.054650000000000004,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "threshold": 0.6,
+      "n_pred": 128,
+      "n_truth": 55,
+      "true_positive": 26,
+      "false_positive": 102,
+      "false_negative": 29,
+      "precision": 0.203125,
+      "recall": 0.4727272727272727,
+      "f1": 0.2841530054644809,
+      "mean_matched_iou": 0.45316178779498667,
+      "best_iou": 0.7069866912110538,
+      "semantic_packet_bits_per_frame": 10449,
+      "semantic_packet_bps": 72934.98334957175,
+      "raw_iq_32bit_iq_bps": 491520000.0,
+      "raw_iq_12bit_iq_bps": 184320000.0,
+      "stft_8bit_bps": 122824605.98833743,
+      "pred_boxes": [
+        {
+          "label": "occupied",
+          "t_start_s": 0.10998333333333334,
+          "t_end_s": 0.11101666666666667,
+          "f_low_hz": -1957500.0,
+          "f_high_hz": -292500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03911666666666667,
+          "t_end_s": 0.03948333333333333,
+          "f_low_hz": -2317500.0,
+          "f_high_hz": 2377500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11915,
+          "t_end_s": 0.11948333333333333,
+          "f_low_hz": -1897500.0,
+          "f_high_hz": 2137500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.019116666666666664,
+          "t_end_s": 0.01948333333333333,
+          "f_low_hz": -2257500.0,
+          "f_high_hz": 1912500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06911666666666666,
+          "t_end_s": 0.06948333333333334,
+          "f_low_hz": -2182500.0,
+          "f_high_hz": 2167500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07911666666666667,
+          "t_end_s": 0.07948333333333334,
+          "f_low_hz": -2182500.0,
+          "f_high_hz": 2017500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.029116666666666666,
+          "t_end_s": 0.029483333333333334,
+          "f_low_hz": -2227500.0,
+          "f_high_hz": 1912500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13911666666666667,
+          "t_end_s": 0.13948333333333335,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 2242500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12911666666666666,
+          "t_end_s": 0.12948333333333334,
+          "f_low_hz": -2002500.0,
+          "f_high_hz": 1912500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08911666666666666,
+          "t_end_s": 0.08948333333333333,
+          "f_low_hz": -1912500.0,
+          "f_high_hz": 1972500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.009116666666666667,
+          "t_end_s": 0.009483333333333333,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 1957500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04911666666666667,
+          "t_end_s": 0.04948333333333334,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 2077500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10911666666666667,
+          "t_end_s": 0.10948333333333334,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 1912500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.059116666666666665,
+          "t_end_s": 0.05948333333333333,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 1957500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09911666666666666,
+          "t_end_s": 0.09948333333333334,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 1972500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.042249999999999996,
+          "t_end_s": 0.04241666666666667,
+          "f_low_hz": -2197500.0,
+          "f_high_hz": 2422500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12221666666666667,
+          "t_end_s": 0.12241666666666667,
+          "f_low_hz": -2182500.0,
+          "f_high_hz": 2422500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.041249999999999995,
+          "t_end_s": 0.04141666666666667,
+          "f_low_hz": -2182500.0,
+          "f_high_hz": 2392500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12125,
+          "t_end_s": 0.12141666666666667,
+          "f_low_hz": -2212500.0,
+          "f_high_hz": 2392500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.042583333333333334,
+          "t_end_s": 0.04271666666666667,
+          "f_low_hz": -2152500.0,
+          "f_high_hz": 2407500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12258333333333334,
+          "t_end_s": 0.12271666666666667,
+          "f_low_hz": -2137500.0,
+          "f_high_hz": 2392500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10998333333333334,
+          "t_end_s": 0.11015,
+          "f_low_hz": 727500.0,
+          "f_high_hz": 1897500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03128333333333333,
+          "t_end_s": 0.03141666666666666,
+          "f_low_hz": 1222500.0,
+          "f_high_hz": 2467500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03128333333333333,
+          "t_end_s": 0.03141666666666666,
+          "f_low_hz": -2047500.0,
+          "f_high_hz": -967500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11128333333333333,
+          "t_end_s": 0.11141666666666666,
+          "f_low_hz": 952500.0,
+          "f_high_hz": 1912500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03128333333333333,
+          "t_end_s": 0.03141666666666666,
+          "f_low_hz": -202500.0,
+          "f_high_hz": 472500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03125,
+          "t_end_s": 0.03141666666666666,
+          "f_low_hz": -937500.0,
+          "f_high_hz": -232500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03128333333333333,
+          "t_end_s": 0.03141666666666666,
+          "f_low_hz": 517500.0,
+          "f_high_hz": 1192500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12158333333333333,
+          "t_end_s": 0.12168333333333334,
+          "f_low_hz": 712500.0,
+          "f_high_hz": 1477500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.02395,
+          "t_end_s": 0.02445,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08511666666666667,
+          "t_end_s": 0.08558333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.010716666666666666,
+          "t_end_s": 0.01145,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08398333333333333,
+          "t_end_s": 0.08455,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12725,
+          "t_end_s": 0.12778333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08565,
+          "t_end_s": 0.08615,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11128333333333333,
+          "t_end_s": 0.11141666666666666,
+          "f_low_hz": 1927500.0,
+          "f_high_hz": 2287500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0049499999999999995,
+          "t_end_s": 0.005383333333333334,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09488333333333333,
+          "t_end_s": 0.09541666666666666,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12558333333333332,
+          "t_end_s": 0.12598333333333334,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03318333333333333,
+          "t_end_s": 0.033716666666666666,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06661666666666667,
+          "t_end_s": 0.06708333333333333,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04158333333333333,
+          "t_end_s": 0.04165,
+          "f_low_hz": 1807500.0,
+          "f_high_hz": 2347500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05391666666666667,
+          "t_end_s": 0.05441666666666667,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.041550000000000004,
+          "t_end_s": 0.041683333333333336,
+          "f_low_hz": -892500.0,
+          "f_high_hz": -502500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.055683333333333335,
+          "t_end_s": 0.05605,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.014783333333333334,
+          "t_end_s": 0.01525,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09318333333333334,
+          "t_end_s": 0.09365,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10481666666666667,
+          "t_end_s": 0.10528333333333334,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13651666666666668,
+          "t_end_s": 0.13708333333333333,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12158333333333333,
+          "t_end_s": 0.12168333333333334,
+          "f_low_hz": 1537500.0,
+          "f_high_hz": 1912500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04158333333333333,
+          "t_end_s": 0.041683333333333336,
+          "f_low_hz": -52500.0,
+          "f_high_hz": 427500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11128333333333333,
+          "t_end_s": 0.11141666666666666,
+          "f_low_hz": 532500.0,
+          "f_high_hz": 847500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08228333333333333,
+          "t_end_s": 0.08285000000000001,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12158333333333333,
+          "t_end_s": 0.12168333333333334,
+          "f_low_hz": -922500.0,
+          "f_high_hz": -577500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.046483333333333335,
+          "t_end_s": 0.04695,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.013183333333333333,
+          "t_end_s": 0.01355,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.019983333333333332,
+          "t_end_s": 0.020383333333333337,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07311666666666666,
+          "t_end_s": 0.07358333333333333,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.025683333333333336,
+          "t_end_s": 0.02595,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09151666666666666,
+          "t_end_s": 0.09191666666666667,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.016849999999999997,
+          "t_end_s": 0.017183333333333335,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03528333333333333,
+          "t_end_s": 0.03565,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12158333333333333,
+          "t_end_s": 0.12165000000000001,
+          "f_low_hz": 1942500.0,
+          "f_high_hz": 2332500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13241666666666665,
+          "t_end_s": 0.13268333333333332,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12668333333333334,
+          "t_end_s": 0.12691666666666668,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05265,
+          "t_end_s": 0.05301666666666667,
+          "f_low_hz": -757500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 8.333333333333334e-05,
+          "t_end_s": 0.00028333333333333335,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12158333333333333,
+          "t_end_s": 0.12165000000000001,
+          "f_low_hz": -1567500.0,
+          "f_high_hz": -1282500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12928333333333333,
+          "t_end_s": 0.12945,
+          "f_low_hz": -2212500.0,
+          "f_high_hz": -2092500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0072499999999999995,
+          "t_end_s": 0.007483333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.034949999999999995,
+          "t_end_s": 0.03521666666666667,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13995,
+          "t_end_s": 0.14031666666666667,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.007183333333333333,
+          "t_end_s": 0.007483333333333333,
+          "f_low_hz": 67500.0,
+          "f_high_hz": 157500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10418333333333334,
+          "t_end_s": 0.10441666666666667,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.01415,
+          "t_end_s": 0.014383333333333333,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06171666666666667,
+          "t_end_s": 0.061950000000000005,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.002816666666666667,
+          "t_end_s": 0.0030499999999999998,
+          "f_low_hz": 7500.0,
+          "f_high_hz": 127500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04158333333333333,
+          "t_end_s": 0.04165,
+          "f_low_hz": -1252500.0,
+          "f_high_hz": -982500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06728333333333333,
+          "t_end_s": 0.06758333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07688333333333333,
+          "t_end_s": 0.07715,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13508333333333333,
+          "t_end_s": 0.13535,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.026250000000000002,
+          "t_end_s": 0.026616666666666663,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -727500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12925,
+          "t_end_s": 0.12935,
+          "f_low_hz": 1957500.0,
+          "f_high_hz": 2152500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06495000000000001,
+          "t_end_s": 0.06511666666666667,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.00935,
+          "t_end_s": 0.009483333333333333,
+          "f_low_hz": -2092500.0,
+          "f_high_hz": -1942500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10931666666666667,
+          "t_end_s": 0.10941666666666666,
+          "f_low_hz": -2092500.0,
+          "f_high_hz": -1942500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06215,
+          "t_end_s": 0.06235,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07505,
+          "t_end_s": 0.07528333333333334,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10648333333333333,
+          "t_end_s": 0.10668333333333334,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12158333333333333,
+          "t_end_s": 0.12165000000000001,
+          "f_low_hz": -202500.0,
+          "f_high_hz": 37500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07138333333333333,
+          "t_end_s": 0.07158333333333333,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -727500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.020616666666666665,
+          "t_end_s": 0.020916666666666667,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07651666666666666,
+          "t_end_s": 0.07681666666666667,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07998333333333334,
+          "t_end_s": 0.08028333333333333,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10325000000000001,
+          "t_end_s": 0.10348333333333333,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12158333333333333,
+          "t_end_s": 0.12165000000000001,
+          "f_low_hz": 412500.0,
+          "f_high_hz": 682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04158333333333333,
+          "t_end_s": 0.04165,
+          "f_low_hz": 952500.0,
+          "f_high_hz": 1207500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13718333333333332,
+          "t_end_s": 0.13738333333333333,
+          "f_low_hz": -832500.0,
+          "f_high_hz": -742500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0056166666666666665,
+          "t_end_s": 0.00585,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11574999999999999,
+          "t_end_s": 0.11595,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09108333333333334,
+          "t_end_s": 0.09125,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04158333333333333,
+          "t_end_s": 0.04165,
+          "f_low_hz": 502500.0,
+          "f_high_hz": 712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13845,
+          "t_end_s": 0.13865,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0069166666666666664,
+          "t_end_s": 0.007083333333333334,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07931666666666667,
+          "t_end_s": 0.07941666666666666,
+          "f_low_hz": -2512500.0,
+          "f_high_hz": -2362500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0015833333333333333,
+          "t_end_s": 0.0018833333333333332,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.049916666666666665,
+          "t_end_s": 0.050083333333333334,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12158333333333333,
+          "t_end_s": 0.12165000000000001,
+          "f_low_hz": 82500.0,
+          "f_high_hz": 337500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06558333333333333,
+          "t_end_s": 0.06578333333333333,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12158333333333333,
+          "t_end_s": 0.12165000000000001,
+          "f_low_hz": -1177500.0,
+          "f_high_hz": -982500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.047183333333333334,
+          "t_end_s": 0.04741666666666666,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08061666666666667,
+          "t_end_s": 0.08081666666666666,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09395,
+          "t_end_s": 0.09418333333333334,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11131666666666667,
+          "t_end_s": 0.11138333333333333,
+          "f_low_hz": -2017500.0,
+          "f_high_hz": -1867500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11131666666666667,
+          "t_end_s": 0.11141666666666666,
+          "f_low_hz": -1642500.0,
+          "f_high_hz": -1522500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06931666666666667,
+          "t_end_s": 0.06941666666666667,
+          "f_low_hz": -2392500.0,
+          "f_high_hz": -2257500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0037166666666666667,
+          "t_end_s": 0.00385,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -727500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.016516666666666666,
+          "t_end_s": 0.016683333333333335,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10248333333333333,
+          "t_end_s": 0.10268333333333333,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.05648333333333333,
+          "t_end_s": 0.056716666666666665,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12495,
+          "t_end_s": 0.12508333333333332,
+          "f_low_hz": -757500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13475,
+          "t_end_s": 0.13488333333333333,
+          "f_low_hz": -757500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04158333333333333,
+          "t_end_s": 0.04165,
+          "f_low_hz": -487500.0,
+          "f_high_hz": -322500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11131666666666667,
+          "t_end_s": 0.11141666666666666,
+          "f_low_hz": -187500.0,
+          "f_high_hz": -82500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04158333333333333,
+          "t_end_s": 0.04165,
+          "f_low_hz": 1312500.0,
+          "f_high_hz": 1462500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.002116666666666667,
+          "t_end_s": 0.0022833333333333334,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -742500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07075000000000001,
+          "t_end_s": 0.07095,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.004083333333333333,
+          "t_end_s": 0.004216666666666667,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "threshold": 0.7,
+      "n_pred": 81,
+      "n_truth": 55,
+      "true_positive": 23,
+      "false_positive": 58,
+      "false_negative": 32,
+      "precision": 0.2839506172839506,
+      "recall": 0.41818181818181815,
+      "f1": 0.338235294117647,
+      "mean_matched_iou": 0.5260730046603459,
+      "best_iou": 0.7266252104113607,
+      "semantic_packet_bits_per_frame": 6689,
+      "semantic_packet_bps": 46689.83669492634,
+      "raw_iq_32bit_iq_bps": 491520000.0,
+      "raw_iq_12bit_iq_bps": 184320000.0,
+      "stft_8bit_bps": 122824605.98833743,
+      "pred_boxes": [
+        {
+          "label": "occupied",
+          "t_start_s": 0.10998333333333334,
+          "t_end_s": 0.11101666666666667,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": -307500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03911666666666667,
+          "t_end_s": 0.03948333333333333,
+          "f_low_hz": -2122500.0,
+          "f_high_hz": 2152500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13911666666666667,
+          "t_end_s": 0.13948333333333335,
+          "f_low_hz": -1912500.0,
+          "f_high_hz": 2212500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07911666666666667,
+          "t_end_s": 0.07948333333333334,
+          "f_low_hz": -2062500.0,
+          "f_high_hz": 2002500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11915,
+          "t_end_s": 0.11948333333333333,
+          "f_low_hz": -1882500.0,
+          "f_high_hz": 2002500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08911666666666666,
+          "t_end_s": 0.08948333333333333,
+          "f_low_hz": -1897500.0,
+          "f_high_hz": 1957500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06915,
+          "t_end_s": 0.06948333333333334,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 2062500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.029150000000000002,
+          "t_end_s": 0.029483333333333334,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 1912500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09911666666666666,
+          "t_end_s": 0.09948333333333334,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 1927500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.009116666666666667,
+          "t_end_s": 0.009483333333333333,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 1867500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.059116666666666665,
+          "t_end_s": 0.05948333333333333,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 1927500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04911666666666667,
+          "t_end_s": 0.04948333333333334,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 1987500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.01915,
+          "t_end_s": 0.01948333333333333,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 1897500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12915,
+          "t_end_s": 0.12948333333333334,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 1912500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10915,
+          "t_end_s": 0.10948333333333334,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": 1912500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12225,
+          "t_end_s": 0.12241666666666667,
+          "f_low_hz": -2182500.0,
+          "f_high_hz": 2407500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.042249999999999996,
+          "t_end_s": 0.04241666666666667,
+          "f_low_hz": -2182500.0,
+          "f_high_hz": 2407500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.041249999999999995,
+          "t_end_s": 0.04141666666666667,
+          "f_low_hz": -2182500.0,
+          "f_high_hz": 2392500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12125,
+          "t_end_s": 0.12141666666666667,
+          "f_low_hz": -2182500.0,
+          "f_high_hz": 2377500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.042583333333333334,
+          "t_end_s": 0.04271666666666667,
+          "f_low_hz": -2137500.0,
+          "f_high_hz": 2377500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12258333333333334,
+          "t_end_s": 0.12271666666666667,
+          "f_low_hz": -2122500.0,
+          "f_high_hz": 2377500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10998333333333334,
+          "t_end_s": 0.11015,
+          "f_low_hz": 742500.0,
+          "f_high_hz": 1882500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03128333333333333,
+          "t_end_s": 0.03141666666666666,
+          "f_low_hz": -1927500.0,
+          "f_high_hz": -967500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03128333333333333,
+          "t_end_s": 0.03141666666666666,
+          "f_low_hz": -187500.0,
+          "f_high_hz": 457500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03128333333333333,
+          "t_end_s": 0.03141666666666666,
+          "f_low_hz": 517500.0,
+          "f_high_hz": 1177500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03125,
+          "t_end_s": 0.03141666666666666,
+          "f_low_hz": -757500.0,
+          "f_high_hz": -247500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11128333333333333,
+          "t_end_s": 0.11141666666666666,
+          "f_low_hz": 952500.0,
+          "f_high_hz": 1372500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03128333333333333,
+          "t_end_s": 0.03141666666666666,
+          "f_low_hz": 1927500.0,
+          "f_high_hz": 2272500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.019283333333333333,
+          "t_end_s": 0.019450000000000002,
+          "f_low_hz": -2227500.0,
+          "f_high_hz": -1942500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03128333333333333,
+          "t_end_s": 0.03141666666666666,
+          "f_low_hz": 1582500.0,
+          "f_high_hz": 1912500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.023983333333333336,
+          "t_end_s": 0.024383333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11128333333333333,
+          "t_end_s": 0.11141666666666666,
+          "f_low_hz": 1942500.0,
+          "f_high_hz": 2257500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08515,
+          "t_end_s": 0.08555,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03128333333333333,
+          "t_end_s": 0.03141666666666666,
+          "f_low_hz": 1237500.0,
+          "f_high_hz": 1537500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12728333333333333,
+          "t_end_s": 0.12771666666666667,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12561666666666665,
+          "t_end_s": 0.12595,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0049833333333333335,
+          "t_end_s": 0.00535,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.055716666666666664,
+          "t_end_s": 0.056016666666666666,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06928333333333334,
+          "t_end_s": 0.06941666666666667,
+          "f_low_hz": -2152500.0,
+          "f_high_hz": -1972500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08568333333333333,
+          "t_end_s": 0.08598333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10495,
+          "t_end_s": 0.10525,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.025716666666666665,
+          "t_end_s": 0.02595,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.053983333333333335,
+          "t_end_s": 0.05438333333333333,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04158333333333333,
+          "t_end_s": 0.041683333333333336,
+          "f_low_hz": -862500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.08398333333333333,
+          "t_end_s": 0.08428333333333334,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.013216666666666666,
+          "t_end_s": 0.013483333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11131666666666667,
+          "t_end_s": 0.11138333333333333,
+          "f_low_hz": 562500.0,
+          "f_high_hz": 817500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 8.333333333333334e-05,
+          "t_end_s": 0.00025,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06668333333333333,
+          "t_end_s": 0.06691666666666667,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09318333333333334,
+          "t_end_s": 0.09341666666666666,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04158333333333333,
+          "t_end_s": 0.04161666666666666,
+          "f_low_hz": 7500.0,
+          "f_high_hz": 397500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09154999999999999,
+          "t_end_s": 0.09178333333333333,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12158333333333333,
+          "t_end_s": 0.12168333333333334,
+          "f_low_hz": -877500.0,
+          "f_high_hz": -652500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.13248333333333334,
+          "t_end_s": 0.13265,
+          "f_low_hz": -817500.0,
+          "f_high_hz": -727500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11128333333333333,
+          "t_end_s": 0.11141666666666666,
+          "f_low_hz": 1402500.0,
+          "f_high_hz": 1552500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12671666666666667,
+          "t_end_s": 0.12688333333333335,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11128333333333333,
+          "t_end_s": 0.11138333333333333,
+          "f_low_hz": 1747500.0,
+          "f_high_hz": 1912500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03128333333333333,
+          "t_end_s": 0.03141666666666666,
+          "f_low_hz": 2287500.0,
+          "f_high_hz": 2452500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03928333333333334,
+          "t_end_s": 0.03938333333333333,
+          "f_low_hz": -2287500.0,
+          "f_high_hz": -2152500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.01075,
+          "t_end_s": 0.01095,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03498333333333334,
+          "t_end_s": 0.03518333333333333,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.014183333333333333,
+          "t_end_s": 0.01435,
+          "f_low_hz": -757500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12158333333333333,
+          "t_end_s": 0.12161666666666666,
+          "f_low_hz": 1567500.0,
+          "f_high_hz": 1882500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.03128333333333333,
+          "t_end_s": 0.03141666666666666,
+          "f_low_hz": -922500.0,
+          "f_high_hz": -802500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.033216666666666665,
+          "t_end_s": 0.033416666666666664,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07335,
+          "t_end_s": 0.07351666666666667,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09491666666666666,
+          "t_end_s": 0.09511666666666667,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.02001666666666667,
+          "t_end_s": 0.020249999999999997,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06175,
+          "t_end_s": 0.06191666666666666,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.07688333333333333,
+          "t_end_s": 0.07711666666666667,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.10421666666666667,
+          "t_end_s": 0.10435,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -667500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.04158333333333333,
+          "t_end_s": 0.04161666666666666,
+          "f_low_hz": 1972500.0,
+          "f_high_hz": 2242500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.09525,
+          "t_end_s": 0.09538333333333333,
+          "f_low_hz": -802500.0,
+          "f_high_hz": -727500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.0072833333333333335,
+          "t_end_s": 0.00745,
+          "f_low_hz": -787500.0,
+          "f_high_hz": -712500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.016883333333333334,
+          "t_end_s": 0.017083333333333332,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -697500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.06495000000000001,
+          "t_end_s": 0.06508333333333333,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.00285,
+          "t_end_s": 0.0030166666666666666,
+          "f_low_hz": 22500.0,
+          "f_high_hz": 112500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.12158333333333333,
+          "t_end_s": 0.12161666666666666,
+          "f_low_hz": 1207500.0,
+          "f_high_hz": 1462500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.11128333333333333,
+          "t_end_s": 0.11138333333333333,
+          "f_low_hz": 1597500.0,
+          "f_high_hz": 1732500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.00935,
+          "t_end_s": 0.009483333333333333,
+          "f_low_hz": -2077500.0,
+          "f_high_hz": -1972500.0,
+          "confidence": 1.0
+        },
+        {
+          "label": "occupied",
+          "t_start_s": 0.046516666666666664,
+          "t_end_s": 0.04671666666666667,
+          "f_low_hz": -772500.0,
+          "f_high_hz": -682500.0,
+          "confidence": 1.0
+        }
+      ]
+    }
+  ],
+  "best": {
+    "threshold": 0.7,
+    "n_pred": 81,
+    "n_truth": 55,
+    "true_positive": 23,
+    "false_positive": 58,
+    "false_negative": 32,
+    "precision": 0.2839506172839506,
+    "recall": 0.41818181818181815,
+    "f1": 0.338235294117647,
+    "mean_matched_iou": 0.5260730046603459,
+    "best_iou": 0.7266252104113607,
+    "semantic_packet_bits_per_frame": 6689,
+    "semantic_packet_bps": 46689.83669492634,
+    "raw_iq_32bit_iq_bps": 491520000.0,
+    "raw_iq_12bit_iq_bps": 184320000.0,
+    "stft_8bit_bps": 122824605.98833743,
+    "pred_boxes": [
+      {
+        "label": "occupied",
+        "t_start_s": 0.10998333333333334,
+        "t_end_s": 0.11101666666666667,
+        "f_low_hz": -1927500.0,
+        "f_high_hz": -307500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.03911666666666667,
+        "t_end_s": 0.03948333333333333,
+        "f_low_hz": -2122500.0,
+        "f_high_hz": 2152500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.13911666666666667,
+        "t_end_s": 0.13948333333333335,
+        "f_low_hz": -1912500.0,
+        "f_high_hz": 2212500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.07911666666666667,
+        "t_end_s": 0.07948333333333334,
+        "f_low_hz": -2062500.0,
+        "f_high_hz": 2002500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.11915,
+        "t_end_s": 0.11948333333333333,
+        "f_low_hz": -1882500.0,
+        "f_high_hz": 2002500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.08911666666666666,
+        "t_end_s": 0.08948333333333333,
+        "f_low_hz": -1897500.0,
+        "f_high_hz": 1957500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.06915,
+        "t_end_s": 0.06948333333333334,
+        "f_low_hz": -1927500.0,
+        "f_high_hz": 2062500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.029150000000000002,
+        "t_end_s": 0.029483333333333334,
+        "f_low_hz": -1927500.0,
+        "f_high_hz": 1912500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.09911666666666666,
+        "t_end_s": 0.09948333333333334,
+        "f_low_hz": -1927500.0,
+        "f_high_hz": 1927500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.009116666666666667,
+        "t_end_s": 0.009483333333333333,
+        "f_low_hz": -1927500.0,
+        "f_high_hz": 1867500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.059116666666666665,
+        "t_end_s": 0.05948333333333333,
+        "f_low_hz": -1927500.0,
+        "f_high_hz": 1927500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.04911666666666667,
+        "t_end_s": 0.04948333333333334,
+        "f_low_hz": -1927500.0,
+        "f_high_hz": 1987500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.01915,
+        "t_end_s": 0.01948333333333333,
+        "f_low_hz": -1927500.0,
+        "f_high_hz": 1897500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.12915,
+        "t_end_s": 0.12948333333333334,
+        "f_low_hz": -1927500.0,
+        "f_high_hz": 1912500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.10915,
+        "t_end_s": 0.10948333333333334,
+        "f_low_hz": -1927500.0,
+        "f_high_hz": 1912500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.12225,
+        "t_end_s": 0.12241666666666667,
+        "f_low_hz": -2182500.0,
+        "f_high_hz": 2407500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.042249999999999996,
+        "t_end_s": 0.04241666666666667,
+        "f_low_hz": -2182500.0,
+        "f_high_hz": 2407500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.041249999999999995,
+        "t_end_s": 0.04141666666666667,
+        "f_low_hz": -2182500.0,
+        "f_high_hz": 2392500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.12125,
+        "t_end_s": 0.12141666666666667,
+        "f_low_hz": -2182500.0,
+        "f_high_hz": 2377500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.042583333333333334,
+        "t_end_s": 0.04271666666666667,
+        "f_low_hz": -2137500.0,
+        "f_high_hz": 2377500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.12258333333333334,
+        "t_end_s": 0.12271666666666667,
+        "f_low_hz": -2122500.0,
+        "f_high_hz": 2377500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.10998333333333334,
+        "t_end_s": 0.11015,
+        "f_low_hz": 742500.0,
+        "f_high_hz": 1882500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.03128333333333333,
+        "t_end_s": 0.03141666666666666,
+        "f_low_hz": -1927500.0,
+        "f_high_hz": -967500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.03128333333333333,
+        "t_end_s": 0.03141666666666666,
+        "f_low_hz": -187500.0,
+        "f_high_hz": 457500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.03128333333333333,
+        "t_end_s": 0.03141666666666666,
+        "f_low_hz": 517500.0,
+        "f_high_hz": 1177500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.03125,
+        "t_end_s": 0.03141666666666666,
+        "f_low_hz": -757500.0,
+        "f_high_hz": -247500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.11128333333333333,
+        "t_end_s": 0.11141666666666666,
+        "f_low_hz": 952500.0,
+        "f_high_hz": 1372500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.03128333333333333,
+        "t_end_s": 0.03141666666666666,
+        "f_low_hz": 1927500.0,
+        "f_high_hz": 2272500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.019283333333333333,
+        "t_end_s": 0.019450000000000002,
+        "f_low_hz": -2227500.0,
+        "f_high_hz": -1942500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.03128333333333333,
+        "t_end_s": 0.03141666666666666,
+        "f_low_hz": 1582500.0,
+        "f_high_hz": 1912500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.023983333333333336,
+        "t_end_s": 0.024383333333333333,
+        "f_low_hz": -802500.0,
+        "f_high_hz": -697500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.11128333333333333,
+        "t_end_s": 0.11141666666666666,
+        "f_low_hz": 1942500.0,
+        "f_high_hz": 2257500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.08515,
+        "t_end_s": 0.08555,
+        "f_low_hz": -802500.0,
+        "f_high_hz": -667500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.03128333333333333,
+        "t_end_s": 0.03141666666666666,
+        "f_low_hz": 1237500.0,
+        "f_high_hz": 1537500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.12728333333333333,
+        "t_end_s": 0.12771666666666667,
+        "f_low_hz": -787500.0,
+        "f_high_hz": -697500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.12561666666666665,
+        "t_end_s": 0.12595,
+        "f_low_hz": -817500.0,
+        "f_high_hz": -712500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.0049833333333333335,
+        "t_end_s": 0.00535,
+        "f_low_hz": -802500.0,
+        "f_high_hz": -682500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.055716666666666664,
+        "t_end_s": 0.056016666666666666,
+        "f_low_hz": -802500.0,
+        "f_high_hz": -697500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.06928333333333334,
+        "t_end_s": 0.06941666666666667,
+        "f_low_hz": -2152500.0,
+        "f_high_hz": -1972500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.08568333333333333,
+        "t_end_s": 0.08598333333333333,
+        "f_low_hz": -802500.0,
+        "f_high_hz": -712500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.10495,
+        "t_end_s": 0.10525,
+        "f_low_hz": -772500.0,
+        "f_high_hz": -667500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.025716666666666665,
+        "t_end_s": 0.02595,
+        "f_low_hz": -787500.0,
+        "f_high_hz": -682500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.053983333333333335,
+        "t_end_s": 0.05438333333333333,
+        "f_low_hz": -787500.0,
+        "f_high_hz": -697500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.04158333333333333,
+        "t_end_s": 0.041683333333333336,
+        "f_low_hz": -862500.0,
+        "f_high_hz": -652500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.08398333333333333,
+        "t_end_s": 0.08428333333333334,
+        "f_low_hz": -802500.0,
+        "f_high_hz": -712500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.013216666666666666,
+        "t_end_s": 0.013483333333333333,
+        "f_low_hz": -802500.0,
+        "f_high_hz": -712500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.11131666666666667,
+        "t_end_s": 0.11138333333333333,
+        "f_low_hz": 562500.0,
+        "f_high_hz": 817500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 8.333333333333334e-05,
+        "t_end_s": 0.00025,
+        "f_low_hz": -802500.0,
+        "f_high_hz": -682500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.06668333333333333,
+        "t_end_s": 0.06691666666666667,
+        "f_low_hz": -772500.0,
+        "f_high_hz": -697500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.09318333333333334,
+        "t_end_s": 0.09341666666666666,
+        "f_low_hz": -772500.0,
+        "f_high_hz": -697500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.04158333333333333,
+        "t_end_s": 0.04161666666666666,
+        "f_low_hz": 7500.0,
+        "f_high_hz": 397500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.09154999999999999,
+        "t_end_s": 0.09178333333333333,
+        "f_low_hz": -787500.0,
+        "f_high_hz": -712500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.12158333333333333,
+        "t_end_s": 0.12168333333333334,
+        "f_low_hz": -877500.0,
+        "f_high_hz": -652500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.13248333333333334,
+        "t_end_s": 0.13265,
+        "f_low_hz": -817500.0,
+        "f_high_hz": -727500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.11128333333333333,
+        "t_end_s": 0.11141666666666666,
+        "f_low_hz": 1402500.0,
+        "f_high_hz": 1552500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.12671666666666667,
+        "t_end_s": 0.12688333333333335,
+        "f_low_hz": -772500.0,
+        "f_high_hz": -697500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.11128333333333333,
+        "t_end_s": 0.11138333333333333,
+        "f_low_hz": 1747500.0,
+        "f_high_hz": 1912500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.03128333333333333,
+        "t_end_s": 0.03141666666666666,
+        "f_low_hz": 2287500.0,
+        "f_high_hz": 2452500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.03928333333333334,
+        "t_end_s": 0.03938333333333333,
+        "f_low_hz": -2287500.0,
+        "f_high_hz": -2152500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.01075,
+        "t_end_s": 0.01095,
+        "f_low_hz": -772500.0,
+        "f_high_hz": -697500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.03498333333333334,
+        "t_end_s": 0.03518333333333333,
+        "f_low_hz": -787500.0,
+        "f_high_hz": -682500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.014183333333333333,
+        "t_end_s": 0.01435,
+        "f_low_hz": -757500.0,
+        "f_high_hz": -667500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.12158333333333333,
+        "t_end_s": 0.12161666666666666,
+        "f_low_hz": 1567500.0,
+        "f_high_hz": 1882500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.03128333333333333,
+        "t_end_s": 0.03141666666666666,
+        "f_low_hz": -922500.0,
+        "f_high_hz": -802500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.033216666666666665,
+        "t_end_s": 0.033416666666666664,
+        "f_low_hz": -787500.0,
+        "f_high_hz": -697500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.07335,
+        "t_end_s": 0.07351666666666667,
+        "f_low_hz": -772500.0,
+        "f_high_hz": -697500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.09491666666666666,
+        "t_end_s": 0.09511666666666667,
+        "f_low_hz": -772500.0,
+        "f_high_hz": -697500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.02001666666666667,
+        "t_end_s": 0.020249999999999997,
+        "f_low_hz": -802500.0,
+        "f_high_hz": -712500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.06175,
+        "t_end_s": 0.06191666666666666,
+        "f_low_hz": -787500.0,
+        "f_high_hz": -712500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.07688333333333333,
+        "t_end_s": 0.07711666666666667,
+        "f_low_hz": -787500.0,
+        "f_high_hz": -712500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.10421666666666667,
+        "t_end_s": 0.10435,
+        "f_low_hz": -772500.0,
+        "f_high_hz": -667500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.04158333333333333,
+        "t_end_s": 0.04161666666666666,
+        "f_low_hz": 1972500.0,
+        "f_high_hz": 2242500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.09525,
+        "t_end_s": 0.09538333333333333,
+        "f_low_hz": -802500.0,
+        "f_high_hz": -727500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.0072833333333333335,
+        "t_end_s": 0.00745,
+        "f_low_hz": -787500.0,
+        "f_high_hz": -712500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.016883333333333334,
+        "t_end_s": 0.017083333333333332,
+        "f_low_hz": -772500.0,
+        "f_high_hz": -697500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.06495000000000001,
+        "t_end_s": 0.06508333333333333,
+        "f_low_hz": -772500.0,
+        "f_high_hz": -682500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.00285,
+        "t_end_s": 0.0030166666666666666,
+        "f_low_hz": 22500.0,
+        "f_high_hz": 112500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.12158333333333333,
+        "t_end_s": 0.12161666666666666,
+        "f_low_hz": 1207500.0,
+        "f_high_hz": 1462500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.11128333333333333,
+        "t_end_s": 0.11138333333333333,
+        "f_low_hz": 1597500.0,
+        "f_high_hz": 1732500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.00935,
+        "t_end_s": 0.009483333333333333,
+        "f_low_hz": -2077500.0,
+        "f_high_hz": -1972500.0,
+        "confidence": 1.0
+      },
+      {
+        "label": "occupied",
+        "t_start_s": 0.046516666666666664,
+        "t_end_s": 0.04671666666666667,
+        "f_low_hz": -772500.0,
+        "f_high_hz": -682500.0,
+        "confidence": 1.0
+      }
+    ]
+  }
+}

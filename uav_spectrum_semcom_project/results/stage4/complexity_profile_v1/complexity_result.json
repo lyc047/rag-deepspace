@@ -1,0 +1,57 @@
+{
+  "experiment_id": "stage4_complexity_profile_v1",
+  "device": "cpu_single_thread",
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "torch": "2.12.0+cpu",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "torch_num_threads": 1
+  },
+  "c1_variable_rate_head": {
+    "total_parameters": 1740,
+    "trainable_parameters": 1740,
+    "parameter_bytes_fp32": 6960,
+    "linear_MACs_per_scene": 1664,
+    "checkpoint_bytes": 10189,
+    "continuous_forward_latency": {
+      "repetitions": 2000,
+      "median_ms": 0.31495,
+      "p95_ms": 0.4349,
+      "mean_ms": 0.33576665
+    },
+    "discrete_infer_latency": {
+      "repetitions": 2000,
+      "median_ms": 0.42375,
+      "p95_ms": 0.7075,
+      "mean_ms": 0.46842860000000003
+    },
+    "scope": "trainable stage4 head only; frozen upstream detector excluded and reported separately in prior stages"
+  },
+  "c2_value_network": {
+    "total_parameters": 5697,
+    "trainable_parameters": 5697,
+    "parameter_bytes_fp32": 22788,
+    "linear_MACs_per_candidate": 5600,
+    "linear_MACs_for_8_candidates_one_seed": 44800,
+    "linear_MACs_for_8_candidates_5_seed_ensemble": 224000,
+    "checkpoint_bytes_per_seed": 26645,
+    "eight_candidate_one_seed_latency": {
+      "repetitions": 2000,
+      "median_ms": 0.0695,
+      "p95_ms": 0.1201,
+      "mean_ms": 0.07723485
+    },
+    "eight_candidate_five_seed_latency": {
+      "repetitions": 2000,
+      "median_ms": 0.3502,
+      "p95_ms": 0.5706,
+      "mean_ms": 0.38114925
+    },
+    "scope": "rejected Gate-B diagnostic model; profiled for completeness, not a deployment recommendation"
+  },
+  "mac_definition": "one multiply-accumulate per Linear weight; activations, softmax, quantization, Python control, detector, codec, and link simulation excluded",
+  "acceptance": {
+    "completed": true
+  },
+  "final_holdout_accessed": false
+}

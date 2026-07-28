@@ -1,0 +1,1478 @@
+{
+  "version": "1.0",
+  "status": "stage6_component_ablation_development_complete",
+  "protocol_sha256": "c8e0c2933282c42216d131ff2b4b877d928dbf4cb26cadb20b13bdb1eb3e18a0",
+  "split": {
+    "training_groups": [
+      "aerpaw_packapalooza_2023:20230826T1215",
+      "aerpaw_packapalooza_2023:20230826T1300",
+      "aerpaw_packapalooza_2023:20230826T1315",
+      "aerpaw_packapalooza_2023:20230826T1330"
+    ],
+    "evaluation_groups": [
+      "aerpaw_packapalooza_2023:20230826T1200",
+      "aerpaw_packapalooza_2023:20230826T1230",
+      "aerpaw_packapalooza_2023:20230826T1245"
+    ],
+    "evaluation_scene_count": 167
+  },
+  "comparison_sign": "Every paired difference is full_candidate minus named method.",
+  "results": {
+    "8": {
+      "n_channels": 8,
+      "demands": [
+        2,
+        4,
+        6
+      ],
+      "codebook_size": 3,
+      "learned_training_threshold": 0.8042382043633686,
+      "learned_candidate_count": 26,
+      "maximum_update_reservations": 17,
+      "reservation_equivalent_bits": 50,
+      "exact_query_bundle_bits": 56,
+      "methods": {
+        "full_candidate": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 34.93493013972056,
+          "mean_forward_bits_per_scene": 28.458283433133737,
+          "mean_ack_bits_per_scene": 6.476646706586826,
+          "mean_reserved_capacity_bits_per_scene": 5.089820359281437,
+          "mean_context_install_count": 9.533333333333333,
+          "mean_compact_update_count": 17.633333333333333,
+          "mean_update_reservation_count": 17.0,
+          "mean_protected_update_count": 3.6,
+          "mean_ack_frame_count": 40.333333333333336,
+          "mean_stale_ack_rejection_count": 16.45,
+          "mean_rejected_compact_count": 1.0,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 8,
+          "mean_heartbeat_probe_count": 5.95,
+          "mean_heartbeat_response_count": 3.55,
+          "mean_heartbeat_failure_count": 3.183333333333333,
+          "availability_rate": 0.8447105788423154,
+          "clean_rate": 0.8411177644710579,
+          "risk_violation_rate": 0.1588822355289421,
+          "conditional_mean_regret_db": 0.01680739976057258,
+          "conditional_maximum_regret_db": 0.9324798583984375,
+          "effective_mean_regret_db": 1.5670915999574337,
+          "effective_cvar_0_9_regret_db": 10.0
+        },
+        "minus_learned_update_protection": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 35.093313373253494,
+          "mean_forward_bits_per_scene": 28.54560878243513,
+          "mean_ack_bits_per_scene": 6.5477045908183635,
+          "mean_reserved_capacity_bits_per_scene": 0.0,
+          "mean_context_install_count": 9.916666666666666,
+          "mean_compact_update_count": 18.066666666666666,
+          "mean_update_reservation_count": 0.0,
+          "mean_protected_update_count": 0.0,
+          "mean_ack_frame_count": 40.85,
+          "mean_stale_ack_rejection_count": 16.45,
+          "mean_rejected_compact_count": 0.9833333333333333,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 8,
+          "mean_heartbeat_probe_count": 5.95,
+          "mean_heartbeat_response_count": 3.533333333333333,
+          "mean_heartbeat_failure_count": 3.183333333333333,
+          "availability_rate": 0.8442115768463074,
+          "clean_rate": 0.839620758483034,
+          "risk_violation_rate": 0.16037924151696603,
+          "conditional_mean_regret_db": 0.01732206767382443,
+          "conditional_maximum_regret_db": 0.9324798583984375,
+          "effective_mean_regret_db": 1.572507721602084,
+          "effective_cvar_0_9_regret_db": 10.0
+        },
+        "minus_fixed_heartbeat": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 19.977045908183634,
+          "mean_forward_bits_per_scene": 15.507584830339322,
+          "mean_ack_bits_per_scene": 4.469461077844311,
+          "mean_reserved_capacity_bits_per_scene": 5.089820359281437,
+          "mean_context_install_count": 5.066666666666666,
+          "mean_compact_update_count": 12.25,
+          "mean_update_reservation_count": 17.0,
+          "mean_protected_update_count": 2.966666666666667,
+          "mean_ack_frame_count": 31.1,
+          "mean_stale_ack_rejection_count": 16.45,
+          "mean_rejected_compact_count": 1.2833333333333334,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 8,
+          "mean_heartbeat_probe_count": 0.0,
+          "mean_heartbeat_response_count": 0.0,
+          "mean_heartbeat_failure_count": 0.0,
+          "availability_rate": 0.5989021956087824,
+          "clean_rate": 0.596307385229541,
+          "risk_violation_rate": 0.40369261477045904,
+          "conditional_mean_regret_db": 0.020053489111678,
+          "conditional_maximum_regret_db": 0.9324798583984375,
+          "effective_mean_regret_db": 4.022988122570776,
+          "effective_cvar_0_9_regret_db": 10.0
+        },
+        "minus_context_belief_recovery": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 8.473652694610777,
+          "mean_forward_bits_per_scene": 5.587425149700599,
+          "mean_ack_bits_per_scene": 2.8862275449101795,
+          "mean_reserved_capacity_bits_per_scene": 5.089820359281437,
+          "mean_context_install_count": 1.0,
+          "mean_compact_update_count": 10.766666666666667,
+          "mean_update_reservation_count": 17.0,
+          "mean_protected_update_count": 2.283333333333333,
+          "mean_ack_frame_count": 20.083333333333332,
+          "mean_stale_ack_rejection_count": 0.0,
+          "mean_rejected_compact_count": 4.95,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 1,
+          "mean_heartbeat_probe_count": 0.0,
+          "mean_heartbeat_response_count": 0.0,
+          "mean_heartbeat_failure_count": 0.0,
+          "availability_rate": 0.24930139720558883,
+          "clean_rate": 0.24171656686626747,
+          "risk_violation_rate": 0.7582834331337325,
+          "conditional_mean_regret_db": 0.04498495799813679,
+          "conditional_maximum_regret_db": 1.0012054443359375,
+          "effective_mean_regret_db": 7.518200840826282,
+          "effective_cvar_0_9_regret_db": 10.0
+        },
+        "ideal_feedback_upper_bound": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 6.005988023952096,
+          "mean_forward_bits_per_scene": 4.568862275449102,
+          "mean_ack_bits_per_scene": 1.437125748502994,
+          "mean_reserved_capacity_bits_per_scene": 0.0,
+          "mean_context_install_count": 1.0,
+          "mean_compact_update_count": 9.0,
+          "mean_update_reservation_count": 0.0,
+          "mean_protected_update_count": 0.0,
+          "mean_ack_frame_count": 10.0,
+          "mean_stale_ack_rejection_count": 0.0,
+          "mean_rejected_compact_count": 0.0,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 1,
+          "mean_heartbeat_probe_count": 0.0,
+          "mean_heartbeat_response_count": 0.0,
+          "mean_heartbeat_failure_count": 0.0,
+          "availability_rate": 1.0,
+          "clean_rate": 1.0,
+          "risk_violation_rate": 0.0,
+          "conditional_mean_regret_db": 0.015611682823318207,
+          "conditional_maximum_regret_db": 0.16602325439453125,
+          "effective_mean_regret_db": 0.015611682823318207,
+          "effective_cvar_0_9_regret_db": 0.114050813777718
+        },
+        "exact_query_bundle_reference": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 56.0,
+          "mean_forward_bits_per_scene": 56.0,
+          "mean_ack_bits_per_scene": 0.0,
+          "mean_reserved_capacity_bits_per_scene": 0.0,
+          "mean_context_install_count": 0.0,
+          "mean_compact_update_count": 167.0,
+          "mean_update_reservation_count": 0.0,
+          "mean_protected_update_count": 0.0,
+          "mean_ack_frame_count": 0.0,
+          "mean_stale_ack_rejection_count": 0.0,
+          "mean_rejected_compact_count": 0.0,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 0,
+          "mean_heartbeat_probe_count": 0.0,
+          "mean_heartbeat_response_count": 0.0,
+          "mean_heartbeat_failure_count": 0.0,
+          "availability_rate": 0.9971057884231537,
+          "clean_rate": 0.9827345309381238,
+          "risk_violation_rate": 0.017265469061876204,
+          "conditional_mean_regret_db": 0.008891865746799073,
+          "conditional_maximum_regret_db": 0.9324798583984375,
+          "effective_mean_regret_db": 0.037808246574478,
+          "effective_cvar_0_9_regret_db": 0.37808246574478
+        }
+      },
+      "paired_differences": {
+        "full_candidate_minus_minus_learned_update_protection": {
+          "clean_rate_percentage_points": {
+            "mean_difference": 0.14970059880239503,
+            "confidence_interval_lower": 0.07984031936127707,
+            "confidence_interval_upper": 0.2295409181636728
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": 0.04990019960079787,
+            "confidence_interval_lower": 0.009980039920159575,
+            "confidence_interval_upper": 0.09980039920159574
+          },
+          "application_bits_per_scene": {
+            "mean_difference": -0.15838323353293393,
+            "confidence_interval_lower": -0.7009031936127745,
+            "confidence_interval_upper": 0.3162125748502988
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 5.089820359281435,
+            "confidence_interval_lower": 5.089820359281435,
+            "confidence_interval_upper": 5.089820359281435
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": -0.005416121644650165,
+            "confidence_interval_lower": -0.01017858607088497,
+            "confidence_interval_upper": -0.0014385721735849732
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": -0.03124881071202895,
+            "confidence_interval_lower": -0.06939736796360392,
+            "confidence_interval_upper": -0.002134284786149559
+          }
+        },
+        "full_candidate_minus_minus_fixed_heartbeat": {
+          "clean_rate_percentage_points": {
+            "mean_difference": 24.4810379241517,
+            "confidence_interval_lower": 20.48877245508982,
+            "confidence_interval_upper": 28.333832335329333
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": 24.580838323353298,
+            "confidence_interval_lower": 20.608532934131738,
+            "confidence_interval_upper": 28.423403193612774
+          },
+          "application_bits_per_scene": {
+            "mean_difference": 14.957884231536926,
+            "confidence_interval_lower": 13.632245508982038,
+            "confidence_interval_upper": 16.367140718562872
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 0.0,
+            "confidence_interval_lower": 0.0,
+            "confidence_interval_upper": 0.0
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": -2.4558965226133425,
+            "confidence_interval_lower": -2.8399156562154158,
+            "confidence_interval_upper": -2.058943495807534
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": -1.2934513466030946,
+            "confidence_interval_lower": -1.9713858838174858,
+            "confidence_interval_upper": -0.6769721752989529
+          }
+        },
+        "full_candidate_minus_minus_context_belief_recovery": {
+          "clean_rate_percentage_points": {
+            "mean_difference": 59.94011976047905,
+            "confidence_interval_lower": 53.293413173652695,
+            "confidence_interval_upper": 65.77844311377245
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": 59.540918163672664,
+            "confidence_interval_lower": 52.73428143712575,
+            "confidence_interval_upper": 65.51896207584831
+          },
+          "application_bits_per_scene": {
+            "mean_difference": 26.46127744510978,
+            "confidence_interval_lower": 24.41442365269462,
+            "confidence_interval_upper": 28.50620259481038
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 0.0,
+            "confidence_interval_lower": 0.0,
+            "confidence_interval_upper": 0.0
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": -5.951109240868849,
+            "confidence_interval_lower": -6.5451426582374514,
+            "confidence_interval_upper": -5.273147610190386
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": -1.4965326421401077,
+            "confidence_interval_lower": -2.2427322544771084,
+            "confidence_interval_upper": -0.83131527115317
+          }
+        },
+        "full_candidate_minus_ideal_feedback_upper_bound": {
+          "clean_rate_percentage_points": {
+            "mean_difference": -15.88822355289421,
+            "confidence_interval_lower": -18.373502994011975,
+            "confidence_interval_upper": -13.532684630738522
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": -15.528942115768462,
+            "confidence_interval_lower": -18.02420159680639,
+            "confidence_interval_upper": -13.173652694610778
+          },
+          "application_bits_per_scene": {
+            "mean_difference": 28.928942115768464,
+            "confidence_interval_lower": 26.8637375249501,
+            "confidence_interval_upper": 31.033116267465065
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 5.089820359281435,
+            "confidence_interval_lower": 5.089820359281435,
+            "confidence_interval_upper": 5.089820359281435
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": 1.5514799171341156,
+            "confidence_interval_lower": 1.3161929372018446,
+            "confidence_interval_upper": 1.8007350769347537
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": 8.390200917861042,
+            "confidence_interval_lower": 7.635085372737812,
+            "confidence_interval_upper": 9.068601191838583
+          }
+        },
+        "full_candidate_minus_exact_query_bundle_reference": {
+          "clean_rate_percentage_points": {
+            "mean_difference": -14.16167664670658,
+            "confidence_interval_lower": -16.597055888223547,
+            "confidence_interval_upper": -11.846307385229538
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": -15.239520958083828,
+            "confidence_interval_lower": -17.69461077844311,
+            "confidence_interval_upper": -12.934131736526943
+          },
+          "application_bits_per_scene": {
+            "mean_difference": -21.06506986027944,
+            "confidence_interval_lower": -23.02392215568862,
+            "confidence_interval_upper": -19.050925648702606
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 5.089820359281435,
+            "confidence_interval_lower": 5.089820359281435,
+            "confidence_interval_upper": 5.089820359281435
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": 1.5292833533829555,
+            "confidence_interval_lower": 1.2994784804209027,
+            "confidence_interval_upper": 1.7734923425453624
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": 8.132056935628253,
+            "confidence_interval_lower": 7.361246374448141,
+            "confidence_interval_upper": 8.807339140667635
+          }
+        }
+      }
+    },
+    "16": {
+      "n_channels": 16,
+      "demands": [
+        4,
+        8,
+        12
+      ],
+      "codebook_size": 3,
+      "learned_training_threshold": 0.685854624324878,
+      "learned_candidate_count": 35,
+      "maximum_update_reservations": 17,
+      "reservation_equivalent_bits": 53,
+      "exact_query_bundle_bits": 59,
+      "methods": {
+        "full_candidate": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 42.207784431137725,
+          "mean_forward_bits_per_scene": 34.85688622754491,
+          "mean_ack_bits_per_scene": 7.350898203592814,
+          "mean_reserved_capacity_bits_per_scene": 5.395209580838324,
+          "mean_context_install_count": 10.916666666666666,
+          "mean_compact_update_count": 25.483333333333334,
+          "mean_update_reservation_count": 17.0,
+          "mean_protected_update_count": 7.683333333333334,
+          "mean_ack_frame_count": 48.15,
+          "mean_stale_ack_rejection_count": 16.45,
+          "mean_rejected_compact_count": 1.7666666666666666,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 8,
+          "mean_heartbeat_probe_count": 3.966666666666667,
+          "mean_heartbeat_response_count": 2.25,
+          "mean_heartbeat_failure_count": 2.0833333333333335,
+          "availability_rate": 0.8482035928143713,
+          "clean_rate": 0.8414171656686626,
+          "risk_violation_rate": 0.15858283433133735,
+          "conditional_mean_regret_db": 0.032096479482995245,
+          "conditional_maximum_regret_db": 0.8696403503417969,
+          "effective_mean_regret_db": 1.5451884210704567,
+          "effective_cvar_0_9_regret_db": 10.0
+        },
+        "minus_learned_update_protection": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 41.54530938123752,
+          "mean_forward_bits_per_scene": 34.15289421157685,
+          "mean_ack_bits_per_scene": 7.392415169660678,
+          "mean_reserved_capacity_bits_per_scene": 0.0,
+          "mean_context_install_count": 11.4,
+          "mean_compact_update_count": 25.833333333333332,
+          "mean_update_reservation_count": 0.0,
+          "mean_protected_update_count": 0.0,
+          "mean_ack_frame_count": 48.416666666666664,
+          "mean_stale_ack_rejection_count": 16.45,
+          "mean_rejected_compact_count": 1.75,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 10,
+          "mean_heartbeat_probe_count": 3.966666666666667,
+          "mean_heartbeat_response_count": 2.2666666666666666,
+          "mean_heartbeat_failure_count": 2.066666666666667,
+          "availability_rate": 0.8474051896207585,
+          "clean_rate": 0.8382235528942116,
+          "risk_violation_rate": 0.16177644710578842,
+          "conditional_mean_regret_db": 0.03360481181339582,
+          "conditional_maximum_regret_db": 0.9319725036621094,
+          "effective_mean_regret_db": 1.5544249957193157,
+          "effective_cvar_0_9_regret_db": 10.0
+        },
+        "minus_fixed_heartbeat": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 33.16467065868263,
+          "mean_forward_bits_per_scene": 27.068862275449103,
+          "mean_ack_bits_per_scene": 6.095808383233533,
+          "mean_reserved_capacity_bits_per_scene": 5.395209580838324,
+          "mean_context_install_count": 8.35,
+          "mean_compact_update_count": 22.183333333333334,
+          "mean_update_reservation_count": 17.0,
+          "mean_protected_update_count": 7.116666666666666,
+          "mean_ack_frame_count": 42.416666666666664,
+          "mean_stale_ack_rejection_count": 16.45,
+          "mean_rejected_compact_count": 2.2,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 8,
+          "mean_heartbeat_probe_count": 0.0,
+          "mean_heartbeat_response_count": 0.0,
+          "mean_heartbeat_failure_count": 0.0,
+          "availability_rate": 0.7666666666666667,
+          "clean_rate": 0.7605788423153692,
+          "risk_violation_rate": 0.2394211576846308,
+          "conditional_mean_regret_db": 0.03297304244315801,
+          "conditional_maximum_regret_db": 0.8696403503417969,
+          "effective_mean_regret_db": 2.3586126658730877,
+          "effective_cvar_0_9_regret_db": 10.0
+        },
+        "minus_context_belief_recovery": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 12.191017964071857,
+          "mean_forward_bits_per_scene": 8.818562874251498,
+          "mean_ack_bits_per_scene": 3.3724550898203596,
+          "mean_reserved_capacity_bits_per_scene": 5.395209580838324,
+          "mean_context_install_count": 1.0,
+          "mean_compact_update_count": 19.8,
+          "mean_update_reservation_count": 17.0,
+          "mean_protected_update_count": 5.883333333333334,
+          "mean_ack_frame_count": 23.466666666666665,
+          "mean_stale_ack_rejection_count": 0.0,
+          "mean_rejected_compact_count": 11.266666666666667,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 1,
+          "mean_heartbeat_probe_count": 0.0,
+          "mean_heartbeat_response_count": 0.0,
+          "mean_heartbeat_failure_count": 0.0,
+          "availability_rate": 0.23552894211576847,
+          "clean_rate": 0.22265469061876247,
+          "risk_violation_rate": 0.7773453093812375,
+          "conditional_mean_regret_db": 0.0638751232017905,
+          "conditional_maximum_regret_db": 0.9319725036621094,
+          "effective_mean_regret_db": 7.659755019037547,
+          "effective_cvar_0_9_regret_db": 10.0
+        },
+        "ideal_feedback_upper_bound": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 9.221556886227544,
+          "mean_forward_bits_per_scene": 6.634730538922156,
+          "mean_ack_bits_per_scene": 2.586826347305389,
+          "mean_reserved_capacity_bits_per_scene": 0.0,
+          "mean_context_install_count": 1.0,
+          "mean_compact_update_count": 17.0,
+          "mean_update_reservation_count": 0.0,
+          "mean_protected_update_count": 0.0,
+          "mean_ack_frame_count": 18.0,
+          "mean_stale_ack_rejection_count": 0.0,
+          "mean_rejected_compact_count": 0.0,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 1,
+          "mean_heartbeat_probe_count": 0.0,
+          "mean_heartbeat_response_count": 0.0,
+          "mean_heartbeat_failure_count": 0.0,
+          "availability_rate": 1.0,
+          "clean_rate": 1.0,
+          "risk_violation_rate": 0.0,
+          "conditional_mean_regret_db": 0.029156542109872053,
+          "conditional_maximum_regret_db": 0.19546890258789062,
+          "effective_mean_regret_db": 0.029156542109872053,
+          "effective_cvar_0_9_regret_db": 0.1482523843913735
+        },
+        "exact_query_bundle_reference": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 59.0,
+          "mean_forward_bits_per_scene": 59.0,
+          "mean_ack_bits_per_scene": 0.0,
+          "mean_reserved_capacity_bits_per_scene": 0.0,
+          "mean_context_install_count": 0.0,
+          "mean_compact_update_count": 167.0,
+          "mean_update_reservation_count": 0.0,
+          "mean_protected_update_count": 0.0,
+          "mean_ack_frame_count": 0.0,
+          "mean_stale_ack_rejection_count": 0.0,
+          "mean_rejected_compact_count": 0.0,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 0,
+          "mean_heartbeat_probe_count": 0.0,
+          "mean_heartbeat_response_count": 0.0,
+          "mean_heartbeat_failure_count": 0.0,
+          "availability_rate": 0.9972055888223553,
+          "clean_rate": 0.9765469061876247,
+          "risk_violation_rate": 0.02345309381237526,
+          "conditional_mean_regret_db": 0.013803187134363253,
+          "conditional_maximum_regret_db": 0.9061851501464844,
+          "effective_mean_regret_db": 0.041708727130394974,
+          "effective_cvar_0_9_regret_db": 0.41708727130394974
+        }
+      },
+      "paired_differences": {
+        "full_candidate_minus_minus_learned_update_protection": {
+          "clean_rate_percentage_points": {
+            "mean_difference": 0.31936127744511017,
+            "confidence_interval_lower": 0.16966067864271467,
+            "confidence_interval_upper": 0.5089820359281437
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": 0.0798403193612773,
+            "confidence_interval_lower": -0.03992015968063877,
+            "confidence_interval_upper": 0.2395209580838324
+          },
+          "application_bits_per_scene": {
+            "mean_difference": 0.6624750499001999,
+            "confidence_interval_lower": 0.04230538922155783,
+            "confidence_interval_upper": 1.202205588822355
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 5.395209580838323,
+            "confidence_interval_lower": 5.395209580838323,
+            "confidence_interval_upper": 5.395209580838323
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": -0.009236574648859018,
+            "confidence_interval_lower": -0.025232478539624837,
+            "confidence_interval_upper": 0.002754939482835453
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": 0.0059691073847752,
+            "confidence_interval_lower": -0.061816579594331615,
+            "confidence_interval_upper": 0.08277781972698134
+          }
+        },
+        "full_candidate_minus_minus_fixed_heartbeat": {
+          "clean_rate_percentage_points": {
+            "mean_difference": 8.083832335329342,
+            "confidence_interval_lower": 6.386976047904192,
+            "confidence_interval_upper": 9.940369261477043
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": 8.153692614770458,
+            "confidence_interval_lower": 6.457085828343315,
+            "confidence_interval_upper": 10.000000000000002
+          },
+          "application_bits_per_scene": {
+            "mean_difference": 9.04311377245509,
+            "confidence_interval_lower": 7.796966067864273,
+            "confidence_interval_upper": 10.421162674650699
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 0.0,
+            "confidence_interval_lower": 0.0,
+            "confidence_interval_upper": 0.0
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": -0.8134242448026311,
+            "confidence_interval_lower": -0.9978489780711557,
+            "confidence_interval_upper": -0.6440773000641022
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": -0.4987738179225548,
+            "confidence_interval_lower": -0.8048492633595188,
+            "confidence_interval_upper": -0.23835134506225597
+          }
+        },
+        "full_candidate_minus_minus_context_belief_recovery": {
+          "clean_rate_percentage_points": {
+            "mean_difference": 61.87624750499002,
+            "confidence_interval_lower": 56.456586826347305,
+            "confidence_interval_upper": 66.92614770459082
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": 61.26746506986028,
+            "confidence_interval_lower": 55.68837325349301,
+            "confidence_interval_upper": 66.53717564870259
+          },
+          "application_bits_per_scene": {
+            "mean_difference": 30.01676646706587,
+            "confidence_interval_lower": 27.505933133732537,
+            "confidence_interval_upper": 32.68783433133732
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 0.0,
+            "confidence_interval_lower": 0.0,
+            "confidence_interval_upper": 0.0
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": -6.11456659796709,
+            "confidence_interval_lower": -6.638324477158622,
+            "confidence_interval_upper": -5.5615623243649805
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": -0.8366300620284736,
+            "confidence_interval_lower": -1.2812479582954854,
+            "confidence_interval_upper": -0.45226035295748246
+          }
+        },
+        "full_candidate_minus_ideal_feedback_upper_bound": {
+          "clean_rate_percentage_points": {
+            "mean_difference": -15.858283433133732,
+            "confidence_interval_lower": -17.894211576846306,
+            "confidence_interval_upper": -13.922155688622752
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": -15.179640718562874,
+            "confidence_interval_lower": -17.195608782435126,
+            "confidence_interval_upper": -13.283183632734534
+          },
+          "application_bits_per_scene": {
+            "mean_difference": 32.98622754491018,
+            "confidence_interval_lower": 30.468532934131737,
+            "confidence_interval_upper": 35.80805888223552
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 5.395209580838323,
+            "confidence_interval_lower": 5.395209580838323,
+            "confidence_interval_upper": 5.395209580838323
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": 1.5160318789605847,
+            "confidence_interval_lower": 1.326678875063708,
+            "confidence_interval_upper": 1.7172958061985386
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": 8.853379526325302,
+            "confidence_interval_lower": 8.325270305895339,
+            "confidence_interval_upper": 9.322792120727836
+          }
+        },
+        "full_candidate_minus_exact_query_bundle_reference": {
+          "clean_rate_percentage_points": {
+            "mean_difference": -13.512974051896204,
+            "confidence_interval_lower": -15.518962075848302,
+            "confidence_interval_upper": -11.506736526946106
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": -14.9001996007984,
+            "confidence_interval_lower": -16.906437125748504,
+            "confidence_interval_upper": -12.943862275449101
+          },
+          "application_bits_per_scene": {
+            "mean_difference": -16.792215568862275,
+            "confidence_interval_lower": -19.334356287425152,
+            "confidence_interval_upper": -14.085229540918167
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 5.395209580838323,
+            "confidence_interval_lower": 5.395209580838323,
+            "confidence_interval_upper": 5.395209580838323
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": 1.5034796939400619,
+            "confidence_interval_lower": 1.308073711771213,
+            "confidence_interval_upper": 1.7036556874682567
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": 8.59133996963501,
+            "confidence_interval_lower": 8.058773541684245,
+            "confidence_interval_upper": 9.033498738653517
+          }
+        }
+      }
+    },
+    "32": {
+      "n_channels": 32,
+      "demands": [
+        8,
+        16,
+        24
+      ],
+      "codebook_size": 3,
+      "learned_training_threshold": 0.7196413077671046,
+      "learned_candidate_count": 12,
+      "maximum_update_reservations": 17,
+      "reservation_equivalent_bits": 56,
+      "exact_query_bundle_bits": 62,
+      "methods": {
+        "full_candidate": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 43.7377245508982,
+          "mean_forward_bits_per_scene": 36.3061876247505,
+          "mean_ack_bits_per_scene": 7.431536926147705,
+          "mean_reserved_capacity_bits_per_scene": 4.023952095808383,
+          "mean_context_install_count": 11.333333333333334,
+          "mean_compact_update_count": 26.5,
+          "mean_update_reservation_count": 12.0,
+          "mean_protected_update_count": 6.066666666666666,
+          "mean_ack_frame_count": 48.4,
+          "mean_stale_ack_rejection_count": 15.766666666666667,
+          "mean_rejected_compact_count": 1.5833333333333333,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 7,
+          "mean_heartbeat_probe_count": 4.0,
+          "mean_heartbeat_response_count": 2.4833333333333334,
+          "mean_heartbeat_failure_count": 2.05,
+          "availability_rate": 0.8659680638722554,
+          "clean_rate": 0.8580838323353294,
+          "risk_violation_rate": 0.14191616766467063,
+          "conditional_mean_regret_db": 0.02827254937543311,
+          "conditional_maximum_regret_db": 0.6519870758056641,
+          "effective_mean_regret_db": 1.3648024861208217,
+          "effective_cvar_0_9_regret_db": 10.0
+        },
+        "minus_learned_update_protection": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 43.46377245508982,
+          "mean_forward_bits_per_scene": 35.97954091816367,
+          "mean_ack_bits_per_scene": 7.484231536926147,
+          "mean_reserved_capacity_bits_per_scene": 0.0,
+          "mean_context_install_count": 11.783333333333333,
+          "mean_compact_update_count": 26.95,
+          "mean_update_reservation_count": 0.0,
+          "mean_protected_update_count": 0.0,
+          "mean_ack_frame_count": 48.766666666666666,
+          "mean_stale_ack_rejection_count": 15.766666666666667,
+          "mean_rejected_compact_count": 1.55,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 7,
+          "mean_heartbeat_probe_count": 4.0,
+          "mean_heartbeat_response_count": 2.4833333333333334,
+          "mean_heartbeat_failure_count": 2.05,
+          "availability_rate": 0.865568862275449,
+          "clean_rate": 0.8554890219560878,
+          "risk_violation_rate": 0.14451097804391222,
+          "conditional_mean_regret_db": 0.02967508460746064,
+          "conditional_maximum_regret_db": 0.8833141326904297,
+          "effective_mean_regret_db": 1.3699972064671164,
+          "effective_cvar_0_9_regret_db": 10.0
+        },
+        "minus_fixed_heartbeat": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 34.18323353293413,
+          "mean_forward_bits_per_scene": 28.063473053892217,
+          "mean_ack_bits_per_scene": 6.119760479041916,
+          "mean_reserved_capacity_bits_per_scene": 4.023952095808383,
+          "mean_context_install_count": 8.6,
+          "mean_compact_update_count": 22.983333333333334,
+          "mean_update_reservation_count": 12.0,
+          "mean_protected_update_count": 6.083333333333333,
+          "mean_ack_frame_count": 42.583333333333336,
+          "mean_stale_ack_rejection_count": 15.766666666666667,
+          "mean_rejected_compact_count": 1.95,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 7,
+          "mean_heartbeat_probe_count": 0.0,
+          "mean_heartbeat_response_count": 0.0,
+          "mean_heartbeat_failure_count": 0.0,
+          "availability_rate": 0.7826347305389222,
+          "clean_rate": 0.7750499001996008,
+          "risk_violation_rate": 0.22495009980039915,
+          "conditional_mean_regret_db": 0.03041217755391705,
+          "conditional_maximum_regret_db": 0.6414527893066406,
+          "effective_mean_regret_db": 2.19745432099579,
+          "effective_cvar_0_9_regret_db": 10.0
+        },
+        "minus_context_belief_recovery": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 11.629341317365268,
+          "mean_forward_bits_per_scene": 8.352694610778444,
+          "mean_ack_bits_per_scene": 3.2766467065868268,
+          "mean_reserved_capacity_bits_per_scene": 4.023952095808383,
+          "mean_context_install_count": 1.0,
+          "mean_compact_update_count": 19.5,
+          "mean_update_reservation_count": 12.0,
+          "mean_protected_update_count": 4.116666666666666,
+          "mean_ack_frame_count": 22.8,
+          "mean_stale_ack_rejection_count": 0.0,
+          "mean_rejected_compact_count": 9.983333333333333,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 1,
+          "mean_heartbeat_probe_count": 0.0,
+          "mean_heartbeat_response_count": 0.0,
+          "mean_heartbeat_failure_count": 0.0,
+          "availability_rate": 0.307185628742515,
+          "clean_rate": 0.29161676646706586,
+          "risk_violation_rate": 0.7083832335329341,
+          "conditional_mean_regret_db": 0.0581118705238076,
+          "conditional_maximum_regret_db": 0.8925914764404297,
+          "effective_mean_regret_db": 6.9459948440591095,
+          "effective_cvar_0_9_regret_db": 10.0
+        },
+        "ideal_feedback_upper_bound": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 9.275449101796408,
+          "mean_forward_bits_per_scene": 6.688622754491018,
+          "mean_ack_bits_per_scene": 2.586826347305389,
+          "mean_reserved_capacity_bits_per_scene": 0.0,
+          "mean_context_install_count": 1.0,
+          "mean_compact_update_count": 17.0,
+          "mean_update_reservation_count": 0.0,
+          "mean_protected_update_count": 0.0,
+          "mean_ack_frame_count": 18.0,
+          "mean_stale_ack_rejection_count": 0.0,
+          "mean_rejected_compact_count": 0.0,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 1,
+          "mean_heartbeat_probe_count": 0.0,
+          "mean_heartbeat_response_count": 0.0,
+          "mean_heartbeat_failure_count": 0.0,
+          "availability_rate": 1.0,
+          "clean_rate": 1.0,
+          "risk_violation_rate": 0.0,
+          "conditional_mean_regret_db": 0.025833342127695235,
+          "conditional_maximum_regret_db": 0.19598388671875,
+          "effective_mean_regret_db": 0.025833342127695235,
+          "effective_cvar_0_9_regret_db": 0.15427588274378976
+        },
+        "exact_query_bundle_reference": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 62.0,
+          "mean_forward_bits_per_scene": 62.0,
+          "mean_ack_bits_per_scene": 0.0,
+          "mean_reserved_capacity_bits_per_scene": 0.0,
+          "mean_context_install_count": 0.0,
+          "mean_compact_update_count": 167.0,
+          "mean_update_reservation_count": 0.0,
+          "mean_protected_update_count": 0.0,
+          "mean_ack_frame_count": 0.0,
+          "mean_stale_ack_rejection_count": 0.0,
+          "mean_rejected_compact_count": 0.0,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 0,
+          "mean_heartbeat_probe_count": 0.0,
+          "mean_heartbeat_response_count": 0.0,
+          "mean_heartbeat_failure_count": 0.0,
+          "availability_rate": 0.9970059880239521,
+          "clean_rate": 0.9722554890219561,
+          "risk_violation_rate": 0.027744510978043868,
+          "conditional_mean_regret_db": 0.016084211366670625,
+          "conditional_maximum_regret_db": 0.9056015014648438,
+          "effective_mean_regret_db": 0.04597617480569257,
+          "effective_cvar_0_9_regret_db": 0.4597617480569257
+        }
+      },
+      "paired_differences": {
+        "full_candidate_minus_minus_learned_update_protection": {
+          "clean_rate_percentage_points": {
+            "mean_difference": 0.2594810379241518,
+            "confidence_interval_lower": 0.17964071856287422,
+            "confidence_interval_upper": 0.34930139720558795
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": 0.03992015968063901,
+            "confidence_interval_lower": 0.009980039920159575,
+            "confidence_interval_upper": 0.07984031936127801
+          },
+          "application_bits_per_scene": {
+            "mean_difference": 0.27395209580838376,
+            "confidence_interval_lower": -0.25054391217564775,
+            "confidence_interval_upper": 0.7517090818363279
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 4.023952095808384,
+            "confidence_interval_lower": 4.023952095808384,
+            "confidence_interval_upper": 4.023952095808384
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": -0.005194720346294705,
+            "confidence_interval_lower": -0.009136898784104437,
+            "confidence_interval_upper": -0.002015704209219191
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": -0.004289490568871607,
+            "confidence_interval_lower": -0.007563268296858882,
+            "confidence_interval_upper": -0.0014769536373662121
+          }
+        },
+        "full_candidate_minus_minus_fixed_heartbeat": {
+          "clean_rate_percentage_points": {
+            "mean_difference": 8.303393213572855,
+            "confidence_interval_lower": 6.636477045908185,
+            "confidence_interval_upper": 10.059880239520961
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": 8.333333333333336,
+            "confidence_interval_lower": 6.666666666666667,
+            "confidence_interval_upper": 10.100049900199602
+          },
+          "application_bits_per_scene": {
+            "mean_difference": 9.554491017964072,
+            "confidence_interval_lower": 8.273994510978046,
+            "confidence_interval_upper": 10.871689121756487
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 0.0,
+            "confidence_interval_lower": 0.0,
+            "confidence_interval_upper": 0.0
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": -0.8326518348749684,
+            "confidence_interval_lower": -1.0094040825044956,
+            "confidence_interval_upper": -0.6657999212616535
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": -0.6991499134138519,
+            "confidence_interval_lower": -1.1193581089786455,
+            "confidence_interval_upper": -0.32537117584078923
+          }
+        },
+        "full_candidate_minus_minus_context_belief_recovery": {
+          "clean_rate_percentage_points": {
+            "mean_difference": 56.646706586826355,
+            "confidence_interval_lower": 50.05938123752495,
+            "confidence_interval_upper": 62.884481037924154
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": 55.878243512974066,
+            "confidence_interval_lower": 49.161676646706596,
+            "confidence_interval_upper": 62.35553892215569
+          },
+          "application_bits_per_scene": {
+            "mean_difference": 32.10838323353294,
+            "confidence_interval_lower": 29.45749500998004,
+            "confidence_interval_upper": 34.630546407185626
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 0.0,
+            "confidence_interval_lower": 0.0,
+            "confidence_interval_upper": 0.0
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": -5.5811923579382885,
+            "confidence_interval_lower": -6.225978769893973,
+            "confidence_interval_upper": -4.911435109693372
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": -1.1507078451268815,
+            "confidence_interval_lower": -1.750514567038592,
+            "confidence_interval_upper": -0.6229135484788935
+          }
+        },
+        "full_candidate_minus_ideal_feedback_upper_bound": {
+          "clean_rate_percentage_points": {
+            "mean_difference": -14.191616766467066,
+            "confidence_interval_lower": -16.437624750498998,
+            "confidence_interval_upper": -12.075848303393213
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": -13.403193612774452,
+            "confidence_interval_lower": -15.668662674650697,
+            "confidence_interval_upper": -11.277445109780437
+          },
+          "application_bits_per_scene": {
+            "mean_difference": 34.462275449101796,
+            "confidence_interval_lower": 32.09431886227545,
+            "confidence_interval_upper": 36.769064371257485
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 4.023952095808384,
+            "confidence_interval_lower": 4.023952095808384,
+            "confidence_interval_upper": 4.023952095808384
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": 1.3389691439931266,
+            "confidence_interval_lower": 1.1269349062605372,
+            "confidence_interval_upper": 1.565073405503037
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": 7.877751470079611,
+            "confidence_interval_lower": 7.023997977340923,
+            "confidence_interval_upper": 8.67415071594949
+          }
+        },
+        "full_candidate_minus_exact_query_bundle_reference": {
+          "clean_rate_percentage_points": {
+            "mean_difference": -11.417165668662673,
+            "confidence_interval_lower": -13.58283433133732,
+            "confidence_interval_upper": -9.361027944111777
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": -13.103792415169657,
+            "confidence_interval_lower": -15.279441117764467,
+            "confidence_interval_upper": -11.017964071856287
+          },
+          "application_bits_per_scene": {
+            "mean_difference": -18.262275449101796,
+            "confidence_interval_lower": -20.657035928143717,
+            "confidence_interval_upper": -15.884847804391217
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 4.023952095808384,
+            "confidence_interval_lower": 4.023952095808384,
+            "confidence_interval_upper": 4.023952095808384
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": 1.318826311315129,
+            "confidence_interval_lower": 1.1116939999505193,
+            "confidence_interval_upper": 1.5347210757968746
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": 7.579627002454273,
+            "confidence_interval_lower": 6.735431891703137,
+            "confidence_interval_upper": 8.346910444322754
+          }
+        }
+      }
+    },
+    "64": {
+      "n_channels": 64,
+      "demands": [
+        16,
+        32,
+        48
+      ],
+      "codebook_size": 3,
+      "learned_training_threshold": 0.6939188807102108,
+      "learned_candidate_count": 17,
+      "maximum_update_reservations": 17,
+      "reservation_equivalent_bits": 59,
+      "exact_query_bundle_bits": 65,
+      "methods": {
+        "full_candidate": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 41.53193612774451,
+          "mean_forward_bits_per_scene": 34.13792415169661,
+          "mean_ack_bits_per_scene": 7.394011976047904,
+          "mean_reserved_capacity_bits_per_scene": 6.005988023952096,
+          "mean_context_install_count": 10.283333333333333,
+          "mean_compact_update_count": 25.45,
+          "mean_update_reservation_count": 17.0,
+          "mean_protected_update_count": 6.366666666666666,
+          "mean_ack_frame_count": 48.31666666666667,
+          "mean_stale_ack_rejection_count": 16.75,
+          "mean_rejected_compact_count": 1.4166666666666667,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 8,
+          "mean_heartbeat_probe_count": 4.0,
+          "mean_heartbeat_response_count": 2.35,
+          "mean_heartbeat_failure_count": 2.033333333333333,
+          "availability_rate": 0.8667664670658682,
+          "clean_rate": 0.86187624750499,
+          "risk_violation_rate": 0.13812375249500997,
+          "conditional_mean_regret_db": 0.028293530155431616,
+          "conditional_maximum_regret_db": 0.6192407608032227,
+          "effective_mean_regret_db": 1.3568592125149626,
+          "effective_cvar_0_9_regret_db": 10.0
+        },
+        "minus_learned_update_protection": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 42.76107784431138,
+          "mean_forward_bits_per_scene": 35.22175648702595,
+          "mean_ack_bits_per_scene": 7.539321357285429,
+          "mean_reserved_capacity_bits_per_scene": 0.0,
+          "mean_context_install_count": 11.283333333333333,
+          "mean_compact_update_count": 26.316666666666666,
+          "mean_update_reservation_count": 0.0,
+          "mean_protected_update_count": 0.0,
+          "mean_ack_frame_count": 49.35,
+          "mean_stale_ack_rejection_count": 16.75,
+          "mean_rejected_compact_count": 1.3666666666666667,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 8,
+          "mean_heartbeat_probe_count": 4.0,
+          "mean_heartbeat_response_count": 2.3333333333333335,
+          "mean_heartbeat_failure_count": 2.066666666666667,
+          "availability_rate": 0.868562874251497,
+          "clean_rate": 0.860878243512974,
+          "risk_violation_rate": 0.13912175648702596,
+          "conditional_mean_regret_db": 0.029851889271505946,
+          "conditional_maximum_regret_db": 0.8642539978027344,
+          "effective_mean_regret_db": 1.3402995002325266,
+          "effective_cvar_0_9_regret_db": 10.0
+        },
+        "minus_fixed_heartbeat": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 31.42455089820359,
+          "mean_forward_bits_per_scene": 25.350299401197606,
+          "mean_ack_bits_per_scene": 6.074251497005988,
+          "mean_reserved_capacity_bits_per_scene": 6.005988023952096,
+          "mean_context_install_count": 7.45,
+          "mean_compact_update_count": 21.916666666666668,
+          "mean_update_reservation_count": 17.0,
+          "mean_protected_update_count": 5.8,
+          "mean_ack_frame_count": 42.266666666666666,
+          "mean_stale_ack_rejection_count": 16.75,
+          "mean_rejected_compact_count": 1.7666666666666666,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 8,
+          "mean_heartbeat_probe_count": 0.0,
+          "mean_heartbeat_response_count": 0.0,
+          "mean_heartbeat_failure_count": 0.0,
+          "availability_rate": 0.7851297405189621,
+          "clean_rate": 0.7806387225548902,
+          "risk_violation_rate": 0.2193612774451098,
+          "conditional_mean_regret_db": 0.029781343977227426,
+          "conditional_maximum_regret_db": 0.6192407608032227,
+          "effective_mean_regret_db": 2.172084813679526,
+          "effective_cvar_0_9_regret_db": 10.0
+        },
+        "minus_context_belief_recovery": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 11.731736526946108,
+          "mean_forward_bits_per_scene": 8.318562874251498,
+          "mean_ack_bits_per_scene": 3.413173652694611,
+          "mean_reserved_capacity_bits_per_scene": 6.005988023952096,
+          "mean_context_install_count": 1.0,
+          "mean_compact_update_count": 18.883333333333333,
+          "mean_update_reservation_count": 17.0,
+          "mean_protected_update_count": 4.383333333333334,
+          "mean_ack_frame_count": 23.75,
+          "mean_stale_ack_rejection_count": 0.0,
+          "mean_rejected_compact_count": 9.1,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 1,
+          "mean_heartbeat_probe_count": 0.0,
+          "mean_heartbeat_response_count": 0.0,
+          "mean_heartbeat_failure_count": 0.0,
+          "availability_rate": 0.30449101796407185,
+          "clean_rate": 0.2883233532934132,
+          "risk_violation_rate": 0.7116766467065868,
+          "conditional_mean_regret_db": 0.06039625400404434,
+          "conditional_maximum_regret_db": 0.7623696327209473,
+          "effective_mean_regret_db": 6.97347993722219,
+          "effective_cvar_0_9_regret_db": 10.0
+        },
+        "ideal_feedback_upper_bound": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 9.32934131736527,
+          "mean_forward_bits_per_scene": 6.74251497005988,
+          "mean_ack_bits_per_scene": 2.586826347305389,
+          "mean_reserved_capacity_bits_per_scene": 0.0,
+          "mean_context_install_count": 1.0,
+          "mean_compact_update_count": 17.0,
+          "mean_update_reservation_count": 0.0,
+          "mean_protected_update_count": 0.0,
+          "mean_ack_frame_count": 18.0,
+          "mean_stale_ack_rejection_count": 0.0,
+          "mean_rejected_compact_count": 0.0,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 1,
+          "mean_heartbeat_probe_count": 0.0,
+          "mean_heartbeat_response_count": 0.0,
+          "mean_heartbeat_failure_count": 0.0,
+          "availability_rate": 1.0,
+          "clean_rate": 1.0,
+          "risk_violation_rate": 0.0,
+          "conditional_mean_regret_db": 0.02666122994261123,
+          "conditional_maximum_regret_db": 0.1956624984741211,
+          "effective_mean_regret_db": 0.02666122994261123,
+          "effective_cvar_0_9_regret_db": 0.1560058136900028
+        },
+        "exact_query_bundle_reference": {
+          "trajectory_count": 60,
+          "scene_evaluations": 10020,
+          "mean_application_bits_per_scene": 65.0,
+          "mean_forward_bits_per_scene": 65.0,
+          "mean_ack_bits_per_scene": 0.0,
+          "mean_reserved_capacity_bits_per_scene": 0.0,
+          "mean_context_install_count": 0.0,
+          "mean_compact_update_count": 167.0,
+          "mean_update_reservation_count": 0.0,
+          "mean_protected_update_count": 0.0,
+          "mean_ack_frame_count": 0.0,
+          "mean_stale_ack_rejection_count": 0.0,
+          "mean_rejected_compact_count": 0.0,
+          "wrong_codebook_decode_count": 0,
+          "maximum_belief_size": 0,
+          "mean_heartbeat_probe_count": 0.0,
+          "mean_heartbeat_response_count": 0.0,
+          "mean_heartbeat_failure_count": 0.0,
+          "availability_rate": 0.9979041916167665,
+          "clean_rate": 0.9786427145708583,
+          "risk_violation_rate": 0.021357285429141726,
+          "conditional_mean_regret_db": 0.012585892607205057,
+          "conditional_maximum_regret_db": 0.843226432800293,
+          "effective_mean_regret_db": 0.03351759882030373,
+          "effective_cvar_0_9_regret_db": 0.3351759882030373
+        }
+      },
+      "paired_differences": {
+        "full_candidate_minus_minus_learned_update_protection": {
+          "clean_rate_percentage_points": {
+            "mean_difference": 0.09980039920159835,
+            "confidence_interval_lower": -0.4491017964071842,
+            "confidence_interval_upper": 0.45908183632734656
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": -0.179640718562874,
+            "confidence_interval_lower": -0.7185628742514969,
+            "confidence_interval_upper": 0.14970059880239503
+          },
+          "application_bits_per_scene": {
+            "mean_difference": -1.2291417165668663,
+            "confidence_interval_lower": -2.2517265469061867,
+            "confidence_interval_upper": -0.23871257485029976
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 6.005988023952097,
+            "confidence_interval_lower": 6.005988023952097,
+            "confidence_interval_upper": 6.005988023952097
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": 0.01655971228243587,
+            "confidence_interval_lower": -0.015794633443721968,
+            "confidence_interval_upper": 0.07038017888506967
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": -0.005891018287808242,
+            "confidence_interval_lower": -0.009724728102777433,
+            "confidence_interval_upper": -0.0026561935976439793
+          }
+        },
+        "full_candidate_minus_minus_fixed_heartbeat": {
+          "clean_rate_percentage_points": {
+            "mean_difference": 8.12375249500998,
+            "confidence_interval_lower": 6.546906187624751,
+            "confidence_interval_upper": 9.740518962075848
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": 8.16367265469062,
+            "confidence_interval_lower": 6.576846307385231,
+            "confidence_interval_upper": 9.790419161676649
+          },
+          "application_bits_per_scene": {
+            "mean_difference": 10.107385229540917,
+            "confidence_interval_lower": 8.630119760479042,
+            "confidence_interval_upper": 11.691442115768464
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 0.0,
+            "confidence_interval_lower": 0.0,
+            "confidence_interval_upper": 0.0
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": -0.8152256011645633,
+            "confidence_interval_lower": -0.9777713326831222,
+            "confidence_interval_upper": -0.6564852178969226
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": -0.6824724262835933,
+            "confidence_interval_lower": -1.0560097860588746,
+            "confidence_interval_upper": -0.346120694548476
+          }
+        },
+        "full_candidate_minus_minus_context_belief_recovery": {
+          "clean_rate_percentage_points": {
+            "mean_difference": 57.355289421157686,
+            "confidence_interval_lower": 50.69835329341318,
+            "confidence_interval_upper": 63.75274451097803
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": 56.227544910179645,
+            "confidence_interval_lower": 49.41117764471058,
+            "confidence_interval_upper": 63.00399201596805
+          },
+          "application_bits_per_scene": {
+            "mean_difference": 29.8001996007984,
+            "confidence_interval_lower": 27.50452095808383,
+            "confidence_interval_upper": 32.30022954091816
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 0.0,
+            "confidence_interval_lower": 0.0,
+            "confidence_interval_upper": 0.0
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": -5.616620724707229,
+            "confidence_interval_lower": -6.289922980778786,
+            "confidence_interval_upper": -4.938028909316359
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": -1.6098573731441126,
+            "confidence_interval_lower": -2.330168759425481,
+            "confidence_interval_upper": -0.9225117560227712
+          }
+        },
+        "full_candidate_minus_ideal_feedback_upper_bound": {
+          "clean_rate_percentage_points": {
+            "mean_difference": -13.812375249500999,
+            "confidence_interval_lower": -16.187624750499005,
+            "confidence_interval_upper": -11.506986027944114
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": -13.32335329341317,
+            "confidence_interval_lower": -15.698602794411178,
+            "confidence_interval_upper": -11.007984031936127
+          },
+          "application_bits_per_scene": {
+            "mean_difference": 32.20259481037924,
+            "confidence_interval_lower": 29.746142714570862,
+            "confidence_interval_upper": 34.667894211576844
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 6.005988023952097,
+            "confidence_interval_lower": 6.005988023952097,
+            "confidence_interval_upper": 6.005988023952097
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": 1.330197982572351,
+            "confidence_interval_lower": 1.0992572197246693,
+            "confidence_interval_upper": 1.5670481731319774
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": 7.565101165397495,
+            "confidence_interval_lower": 6.6598049520745,
+            "confidence_interval_upper": 8.413819361247265
+          }
+        },
+        "full_candidate_minus_exact_query_bundle_reference": {
+          "clean_rate_percentage_points": {
+            "mean_difference": -11.676646706586824,
+            "confidence_interval_lower": -13.962574850299397,
+            "confidence_interval_upper": -9.330838323353296
+          },
+          "availability_rate_percentage_points": {
+            "mean_difference": -13.11377245508982,
+            "confidence_interval_lower": -15.37949101796407,
+            "confidence_interval_upper": -10.798403193612772
+          },
+          "application_bits_per_scene": {
+            "mean_difference": -23.468063872255488,
+            "confidence_interval_lower": -25.78894710578842,
+            "confidence_interval_upper": -20.999785429141717
+          },
+          "reserved_capacity_bits_per_scene": {
+            "mean_difference": 6.005988023952097,
+            "confidence_interval_lower": 6.005988023952097,
+            "confidence_interval_upper": 6.005988023952097
+          },
+          "effective_mean_regret_db": {
+            "mean_difference": 1.323341613694659,
+            "confidence_interval_lower": 1.0923538985614452,
+            "confidence_interval_upper": 1.549811671950265
+          },
+          "effective_cvar_0_9_regret_db": {
+            "mean_difference": 7.3911623468586045,
+            "confidence_interval_lower": 6.466011829078196,
+            "confidence_interval_upper": 8.214391927047101
+          }
+        }
+      }
+    }
+  },
+  "component_support": {
+    "learned_update_protection": {
+      "point_positive_n": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "paired_interval_above_zero_n": [
+        8,
+        16,
+        32
+      ],
+      "support_count": 3,
+      "cross_n_support_threshold": 3,
+      "cross_n_support_met": true,
+      "architecture_change_authorized": false
+    },
+    "fixed_heartbeat": {
+      "point_positive_n": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "paired_interval_above_zero_n": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "support_count": 4,
+      "cross_n_support_threshold": 3,
+      "cross_n_support_met": true,
+      "architecture_change_authorized": false
+    },
+    "context_belief_recovery_dependency_group": {
+      "point_positive_n": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "paired_interval_above_zero_n": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "support_count": 4,
+      "cross_n_support_threshold": 3,
+      "cross_n_support_met": true,
+      "architecture_change_authorized": false
+    }
+  },
+  "reproduction_by_n": {
+    "8": {
+      "full_candidate_reproduces_learned_repetition": true,
+      "minus_learned_reproduces_no_repetition": true
+    },
+    "16": {
+      "full_candidate_reproduces_learned_repetition": true,
+      "minus_learned_reproduces_no_repetition": true
+    },
+    "32": {
+      "full_candidate_reproduces_learned_repetition": true,
+      "minus_learned_reproduces_no_repetition": true
+    },
+    "64": {
+      "full_candidate_reproduces_learned_repetition": true,
+      "minus_learned_reproduces_no_repetition": true
+    }
+  },
+  "checks": {
+    "all_frozen_predecessor_cells_reproduced": true,
+    "wrong_codebook_decode_count_equals_zero": true,
+    "final_access_state_unchanged": true,
+    "final_access_count_remains_zero": true,
+    "architecture_remains_frozen": true
+  },
+  "governance": {
+    "development_only": true,
+    "external_final_signal_values_loaded": false,
+    "external_final_access_consumed": false,
+    "architecture_change_authorized": false
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "scikit-learn": "1.5.1"
+    }
+  },
+  "claim_boundary": "Development-only paired component ablation on excluded fixed-site pilot spectra with controlled synthetic faults. It estimates within-activity module contributions and architecture dependencies; it is not cross-activity generalization, measured UAV mobility reliability, or external Final evidence."
+}

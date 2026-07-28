@@ -1,0 +1,67 @@
+{
+  "protocol_id": "stage5_multi_query_bundle_development_v1",
+  "status": "frozen_before_multi_query_bundle_metrics",
+  "created_date": "2026-07-23",
+  "purpose": "Address the rapid-query-switching failure by letting one successful update refresh the optimal block indices for all frozen demand widths.",
+  "development_source": {
+    "cache_result": "results/stage4/c1_v4_real_cache_v1/c1_v4_cache_result.json",
+    "cache_result_sha256": "858bdebbe54bcf9f5a1c96fce5d1af6b3d816563a934bac77797b938d97ae98d",
+    "split": "validation",
+    "cache_sha256": "28d271cf8b00b34c192b9c64e22bfbf4c8dc908cbe77d756bd4008745862bcc4",
+    "role": "already-seen development validation"
+  },
+  "s5_2_boundary_evidence": {
+    "schedule_protocol": "configs/stage5_dynamic_query_development_v1.json",
+    "schedule_protocol_sha256": "59b54d23e8058f7d8ddb38bb3df647c7c90300d1a66a7d6d61475e24f7464b21",
+    "source_result": "results/stage5/dynamic_query_development_v1/dynamic_query_result.json",
+    "source_result_sha256": "a7be8a5ec85e8b4db61a53c207d7c273051914fe5e1e37e4d431b51e08f97f16",
+    "observed_boundary": "per-query state passed the Markov schedule but failed the every-scene cyclic schedule"
+  },
+  "fixed_policy": {
+    "regret_threshold_db": 0.2,
+    "max_age_minutes": 120.0,
+    "parameters_may_be_retuned": false
+  },
+  "query_bundle": {
+    "n_channels": 8,
+    "demand_order": [2, 4, 6],
+    "payload_bits": 8,
+    "application_header_bits": 40,
+    "trigger": "current query reuse regret or current query state age",
+    "successful_update": "refresh all demand states using optimal indices computed from the same current sweep"
+  },
+  "methods": [
+    "query_absolute_index_always",
+    "query_event_delta_fixed",
+    "query_bundle_always",
+    "query_event_bundle_fixed"
+  ],
+  "link": {
+    "stage2_config": "configs/stage2_digital_link.json",
+    "stage2_config_sha256": "66fbe3cc3166225d8aa4bbcd82131a92c808196314045735019321b1791932a1",
+    "channel_models": ["awgn", "rayleigh", "rician"],
+    "ebn0_db": [0.0, 3.0, 6.0, 9.0],
+    "repeats": 10,
+    "paired_common_random_numbers": true
+  },
+  "statistics": {
+    "cvar_alpha": 0.9,
+    "paired_cluster_bootstrap_repetitions": 10000,
+    "bootstrap_seed": 20260803,
+    "one_sided_confidence": 0.95
+  },
+  "descriptive_gate_per_schedule": {
+    "minimum_actual_bit_reduction_pct_vs_always": 30.0,
+    "maximum_mean_regret_upper_bound_db_vs_always": 0.02,
+    "maximum_cvar_upper_bound_db_vs_always": 0.05,
+    "interpretation": "Development-only architecture test with no parameter search."
+  },
+  "governance": {
+    "stage4_final_measurements_may_be_loaded": false,
+    "stage4_final_metrics_may_be_loaded": false,
+    "fixed_policy_retuned": false,
+    "output_is_confirmatory_final": false,
+    "result_directory_must_not_exist_before_run": true
+  },
+  "claim_boundary": "Development-only multi-query semantic packet on generated demand schedules, fixed-site AERPAW power sweeps, and a simulated reporting link. It is not a multi-user allocation result and does not establish mobility, MIMO, measured-backhaul, or cross-dataset generalization."
+}

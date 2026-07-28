@@ -1,0 +1,150 @@
+{
+  "experiment_id": "stage4_G1_preview_identifiability_v1",
+  "protocol_sha256": "deb9941fa03d81277e37adb478089cb2d54300169d3d304e3fdbcb65a102a8a1",
+  "cache_result_sha256": "715db73c81216200098a70ed87b057184d82f38cb05a7431579ccc16e31a617c",
+  "only_material_change": "G1_probability_bits_and_resulting_codec_link_cost",
+  "splits": {
+    "calibration": {
+      "G1q1": {
+        "mean_regret": 0.028413225270342082,
+        "mean_expected_preview_bits": 1634.457806617036,
+        "clean_resource_rate": 0.44,
+        "brier": 0.009731365475028102,
+        "mean_one_step_oracle_regret": 0.0025545406504534187,
+        "mean_oracle_reduction": 0.025858684619888665,
+        "oracle_improved_scene_fraction": 0.54
+      },
+      "G1q2": {
+        "mean_regret": 0.02290745748905465,
+        "mean_expected_preview_bits": 1709.603932983743,
+        "clean_resource_rate": 0.56,
+        "brier": 0.017995267485508303,
+        "mean_one_step_oracle_regret": 0.016639972685370593,
+        "mean_oracle_reduction": 0.006267484803684056,
+        "oracle_improved_scene_fraction": 0.2
+      },
+      "paired_bootstrap": {
+        "regret": {
+          "treatment_minus_control_mean": -0.005505767781287431,
+          "ci95": [
+            -0.020021489163074876,
+            0.0093785881086369
+          ]
+        },
+        "bits": {
+          "treatment_minus_control_mean": 75.14612636670721,
+          "ci95": [
+            75.14612636670721,
+            75.14612636670721
+          ]
+        },
+        "clean": {
+          "treatment_minus_control_mean": 0.12,
+          "ci95": [
+            0.0,
+            0.24
+          ]
+        },
+        "brier": {
+          "treatment_minus_control_mean": 0.0082639020104802,
+          "ci95": [
+            0.005694343451146173,
+            0.010612925683656713
+          ]
+        },
+        "oracle_regret": {
+          "treatment_minus_control_mean": 0.014085432034917175,
+          "ci95": [
+            0.005052865923935315,
+            0.02648327374953078
+          ]
+        },
+        "oracle_reduction": {
+          "treatment_minus_control_mean": -0.019591199816204607,
+          "ci95": [
+            -0.031861602825170844,
+            -0.009788385177205783
+          ]
+        }
+      }
+    },
+    "validation": {
+      "G1q1": {
+        "mean_regret": 0.028171974765856856,
+        "mean_expected_preview_bits": 1634.457806617036,
+        "clean_resource_rate": 0.48,
+        "brier": 0.008060308114394411,
+        "mean_one_step_oracle_regret": 0.005499942453073648,
+        "mean_oracle_reduction": 0.022672032312783207,
+        "oracle_improved_scene_fraction": 0.5266666666666666
+      },
+      "G1q2": {
+        "mean_regret": 0.02659552149680773,
+        "mean_expected_preview_bits": 1709.6039329837433,
+        "clean_resource_rate": 0.48,
+        "brier": 0.017055705314052243,
+        "mean_one_step_oracle_regret": 0.016298995282231773,
+        "mean_oracle_reduction": 0.010296526214575958,
+        "oracle_improved_scene_fraction": 0.32666666666666666
+      },
+      "paired_bootstrap": {
+        "regret": {
+          "treatment_minus_control_mean": -0.001576453269049125,
+          "ci95": [
+            -0.00590081458185504,
+            0.002615043346297661
+          ]
+        },
+        "bits": {
+          "treatment_minus_control_mean": 75.14612636670721,
+          "ci95": [
+            75.14612636670721,
+            75.14612636670721
+          ]
+        },
+        "clean": {
+          "treatment_minus_control_mean": 0.0,
+          "ci95": [
+            -0.07333333333333333,
+            0.07333333333333333
+          ]
+        },
+        "brier": {
+          "treatment_minus_control_mean": 0.008995397199657832,
+          "ci95": [
+            0.00762850479269962,
+            0.010311025880944893
+          ]
+        },
+        "oracle_regret": {
+          "treatment_minus_control_mean": 0.010799052829158124,
+          "ci95": [
+            0.006683163806719373,
+            0.015580965282593751
+          ]
+        },
+        "oracle_reduction": {
+          "treatment_minus_control_mean": -0.01237550609820725,
+          "ci95": [
+            -0.017818697124295492,
+            -0.007511415929977981
+          ]
+        }
+      }
+    }
+  },
+  "truth_access_audit": {
+    "aggregate_calibration_validation_diagnostic_only": true,
+    "labels_saved": false,
+    "final_holdout_accessed": false
+  },
+  "decision_boundary": "Development diagnostic only; no final H2/H3 claim.",
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  }
+}

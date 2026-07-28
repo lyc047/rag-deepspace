@@ -1,0 +1,49 @@
+{
+  "experiment_id": "stage3_loraiq_real_multireceiver_pilot_v1",
+  "experiment_role": "real_multireceiver_pipeline_pilot_not_formal_h3_test",
+  "hypothesis_ids": ["H3", "H4"],
+  "seed": 20260716,
+  "repeat_count": 20,
+  "dataset_record": "https://zenodo.org/records/20341802",
+  "dataset_csv": "data/raw/loraiq/dataset.csv",
+  "iq_root": "data/raw/loraiq/pilot_iq",
+  "transmission_ids": [27429, 23039],
+  "reporting_ebn0_db_per_rrh": [3.0, 6.0, 9.0, 12.0],
+  "detector": {
+    "type": "off_frame_welch_channel_excess",
+    "n_channels": 4,
+    "nperseg": 1024,
+    "guard_samples": 1024,
+    "excess_threshold_db": 1.5,
+    "temperature_db": 1.0,
+    "binary_threshold": 0.5,
+    "selection_caveat": "threshold_inspected_on_the_same_two_pilot_events_and_is_not_a_frozen_test_threshold"
+  },
+  "semantic_payload": {
+    "probability_bits_per_channel": 8,
+    "metadata_bits": 160
+  },
+  "resource_task": {
+    "demand_channels": 1,
+    "clean_threshold": 0.1
+  },
+  "adaptive_policy": {
+    "initial_nodes": 2,
+    "target_delivered_reports": 3,
+    "ack_bits_per_attempted_node": 32,
+    "scheduler_feedback_delay_s": 0.001,
+    "scheduler_feedback_bitrate_bps": 100000.0,
+    "fusion_method": "robust_quality_weighted",
+    "disagreement_scale": 0.15,
+    "max_weight_ratio": 2.0
+  },
+  "claim_boundary": {
+    "real_iq": true,
+    "same_transmission_four_receivers": true,
+    "uav_transmitter": true,
+    "uav_receivers": false,
+    "event_count": 2,
+    "wideband_resource_evidence": false,
+    "formal_h3_evidence": false
+  }
+}

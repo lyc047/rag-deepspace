@@ -1,0 +1,62 @@
+{
+  "experiment_id": "stage4_scheduler_preview_top2_v1",
+  "protocol_sha256": "a2dd895cd72b1e5387957e5bba9f66b5b5e794193a873e0987d3549a19e7d538",
+  "base_labels_sha256": "494cc6a9d42198406b6cb9f673f63220eb3550473b7ad9996cc00ae4e190d054",
+  "sketch_labels": "results/stage4/scheduler_preview_v1/train_counterfactual_labels_with_sketch.npz",
+  "sketch_labels_sha256": "ebed996719e8b73ae79257d406c61125e09f0852956fa2e4fca5e0666d1f768e",
+  "splits": {
+    "train": {
+      "scene_count": 300,
+      "cache": "results/stage4/scheduler_preview_v1/scheduler_preview_train.npz",
+      "sha256": "14e7eecaae418b10ae315c5ffbcc15febb0fc50163c370401e5e7a496067c722",
+      "mean_application_bits_per_node": 113.0,
+      "mean_expected_bits_all_nodes": 2012.814208984375
+    },
+    "calibration": {
+      "scene_count": 50,
+      "cache": "results/stage4/scheduler_preview_v1/scheduler_preview_calibration.npz",
+      "sha256": "92661da2bf25fb5da3c2b84ad93f06ebf5f57a6f120747f68120e1861788c8c5",
+      "mean_application_bits_per_node": 113.0,
+      "mean_expected_bits_all_nodes": 2012.8140869140625
+    },
+    "validation": {
+      "scene_count": 150,
+      "cache": "results/stage4/scheduler_preview_v1/scheduler_preview_validation.npz",
+      "sha256": "648cdf09d13e64f3eefadc92d512e02604bf68b41bd62a84b7c0f6606450692e",
+      "mean_application_bits_per_node": 113.0,
+      "mean_expected_bits_all_nodes": 2012.814208984375
+    }
+  },
+  "quality_availability": [
+    true,
+    true,
+    false,
+    true,
+    false,
+    false,
+    false,
+    true,
+    true,
+    false
+  ],
+  "train_scheduler_report_audit": {
+    "all_nodes_identical_fraction": 0.0,
+    "mean_pair_absolute_difference": 0.05848710423645874,
+    "nonzero_pair_fraction": 0.9727777777777777
+  },
+  "truth_access_audit": {
+    "truth_read_for_preview_generation": false,
+    "base_train_labels_reused": true,
+    "calibration_validation_labels_saved": false,
+    "final_holdout_accessed": false
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": "Scheduler preview development artifact; not final H2/H3 evidence."
+}

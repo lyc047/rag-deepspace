@@ -1,0 +1,102 @@
+{
+  "protocol_id": "stage4_c1_v4_same_campaign_temporal_final_v1",
+  "status": "frozen_before_final_measurement_value_access",
+  "created_date": "2026-07-22",
+  "purpose": "Single-use time-separated confirmation of C1-v4 task-sufficient block semantics and age-guarded zero-bit receiver fallback.",
+  "dataset_doi": "10.5061/dryad.hmgqnk9zn",
+  "campaign_timezone": "America/New_York",
+  "archives": {
+    "CC1": {
+      "path": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsCC1Feb2022_SigMF.zip",
+      "size_bytes": 19084799397,
+      "sha256": "c2b1e6d9172f4738b11d78d874c2ca2e3d4232330a99d2b278eb1e05b642f747"
+    },
+    "CC2": {
+      "path": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsCC2Feb2022_SigMF.zip",
+      "size_bytes": 20662580993,
+      "sha256": "eec92ea4733c2ebc959dd9359ce81e0392af2f06dedff66dc6d3037691ce6b4d"
+    }
+  },
+  "final_partition": {
+    "start_local_inclusive": "2022-02-14T00:00:00",
+    "end_local_exclusive": "2022-02-15T13:00:00",
+    "minimum_separation_s": 900.0,
+    "selected_per_site": 140,
+    "selection": "greedy time thinning followed by deterministic even spacing",
+    "primary_cluster": "site_by_local_hour"
+  },
+  "permanent_exclusion_artifacts": [
+    "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/work/aerpaw_lw1_pilot_manifest_v1.json",
+    "configs/stage4_final_registry_v1.json",
+    "results/stage4/aerpaw_c1_temporal_prefinal_v1/prefinal_inventory.json",
+    "results/stage4/c1_v4_real_cache_v1/c1_v4_train_provenance.json",
+    "results/stage4/c1_v4_real_cache_v1/c1_v4_calibration_provenance.json",
+    "results/stage4/c1_v4_real_cache_v1/c1_v4_validation_provenance.json",
+    "results/stage4/c1_v4_temporal_fallback_cache_v1/c1_v4_temporal_fallback_validation_provenance.json"
+  ],
+  "resource_task": {
+    "frequency_low_mhz": 2400.0,
+    "frequency_high_mhz": 2483.5,
+    "n_channels": 8,
+    "demand_channels": 4,
+    "threshold_sigma_multiplier": 3.0,
+    "threshold_gaussian_mad_scale": 1.4826,
+    "threshold_sigma_floor_db": 0.25
+  },
+  "frozen_methods": {
+    "occupancy_stateless": {
+      "representation": "occupancy_fixed4",
+      "application_bits": 184,
+      "packet_failure_fallback": "block_start_zero"
+    },
+    "indicator_stateless": {
+      "representation": "best_block_indicator1",
+      "application_bits": 157,
+      "packet_failure_fallback": "block_start_zero"
+    },
+    "indicator_guarded_last_success": {
+      "representation": "best_block_indicator1",
+      "application_bits": 157,
+      "packet_failure_fallback": "last_success_same_site_and_link_stream_if_age_at_most_60_minutes_else_block_start_zero",
+      "max_state_age_minutes": 60.0,
+      "additional_transmitted_bits": 0
+    }
+  },
+  "link": {
+    "stage2_config": "configs/stage2_digital_link.json",
+    "channel_models": ["awgn", "rayleigh", "rician"],
+    "ebn0_db": [0.0, 3.0, 6.0, 9.0],
+    "repeats": 10,
+    "common_random_seed_across_representations": true,
+    "identical_indicator_packet_trace_for_state_comparison": true
+  },
+  "statistics": {
+    "paired_cluster_bootstrap_repetitions": 20000,
+    "bootstrap_seed_representation": 20260726,
+    "bootstrap_seed_fallback": 20260727,
+    "cvar_alpha": 0.9,
+    "one_sided_confidence": 0.95,
+    "fixed_sequence_hypotheses": [
+      {
+        "id": "H1_task_sufficient_representation",
+        "proposed": "indicator_stateless",
+        "baseline": "occupancy_stateless",
+        "gates": ["mean_regret_upper_bound_below_zero", "cvar_upper_bound_below_zero", "actual_bit_upper_bound_below_zero"]
+      },
+      {
+        "id": "H2_age_guarded_zero_bit_fallback",
+        "proposed": "indicator_guarded_last_success",
+        "baseline": "indicator_stateless",
+        "tested_confirmatorily_only_if_H1_passes": true,
+        "gates": ["mean_regret_upper_bound_below_zero", "cvar_upper_bound_below_zero", "actual_bits_exactly_equal"]
+      }
+    ]
+  },
+  "governance": {
+    "measurement_values_from_2022_02_14_or_15_seen_before_freeze": false,
+    "prior_repository_provenance_overlap_required": 0,
+    "access_limit": 1,
+    "post_access_algorithm_or_threshold_change_allowed": false
+  },
+  "claim_boundary": "Single-use temporal confirmation within the same AERPAW February 2022 fixed-site power-sweep campaign at two sites. It is not cross-dataset evidence, UAV mobility, raw-IQ detection, MIMO, or a measured reporting link."
+}

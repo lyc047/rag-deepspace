@@ -1,0 +1,113 @@
+{
+  "protocol_id": "stage5_ack_hysteresis_development_v1",
+  "status": "frozen_before_ack_hysteresis_metrics",
+  "created_date": "2026-07-24",
+  "purpose": "Reduce low-fault over-transmission by replacing immediate ACK-uncertainty recovery with count and state-age hysteresis.",
+  "development_source": {
+    "cache_result": "results/stage4/c1_v4_real_cache_v1/c1_v4_cache_result.json",
+    "cache_result_sha256": "858bdebbe54bcf9f5a1c96fce5d1af6b3d816563a934bac77797b938d97ae98d",
+    "split": "validation",
+    "cache_sha256": "28d271cf8b00b34c192b9c64e22bfbf4c8dc908cbe77d756bd4008745862bcc4",
+    "role": "already-seen development validation with deterministic abrupt-band-hop stress"
+  },
+  "schedule": {
+    "protocol": "configs/stage5_dynamic_query_development_v1.json",
+    "protocol_sha256": "59b54d23e8058f7d8ddb38bb3df647c7c90300d1a66a7d6d61475e24f7464b21",
+    "name": "markov"
+  },
+  "stress_predecessor": {
+    "protocol": "configs/stage5_spectrum_stress_development_v1.json",
+    "protocol_sha256": "958ea0835ca0cc84bcfb47fc378c20a6e6e5d7f8327a5a086d2b0ded1814ffa1",
+    "result": "results/stage5/spectrum_stress_development_v1/spectrum_stress_result.json",
+    "result_sha256": "a73c048e001559716efe8c87098ef2fb187071cad0d399efc690dfa49c3f2515",
+    "regime": "abrupt_band_hop",
+    "parameters": {
+      "period_scenes": 12,
+      "shift_channels": 3
+    }
+  },
+  "ack_recovery_predecessor": {
+    "protocol": "configs/stage5_ack_state_recovery_development_v1.json",
+    "protocol_sha256": "28f94c847e0bafe2185f6bde7904ec90de839b7848c668b0d7c6d99cdb0f8c42",
+    "result": "results/stage5/ack_state_recovery_development_v1/ack_state_recovery_result.json",
+    "result_sha256": "b6c43453fad767b7263bc30a1f2de561d73cb6c531d85a0cce0ea6a86d0a5356",
+    "observed_boundary": "Immediate recovery improved moderate and high ACK-loss conditions but over-transmitted in low-fault conditions; only four of eight strict gates passed."
+  },
+  "fixed_policy": {
+    "regret_threshold_db": 0.2,
+    "max_age_minutes": 120.0,
+    "parameters_may_be_retuned": false
+  },
+  "query_bundle": {
+    "n_channels": 8,
+    "demand_order": [2, 4, 6],
+    "payload_bits": 8,
+    "application_header_bits": 40,
+    "epoch_bits": 8
+  },
+  "methods": {
+    "ideal_ack": {
+      "faults_enabled": false,
+      "guard_stale_epochs": true,
+      "force_after_unconfirmed_count": null,
+      "age_guard_fraction": null
+    },
+    "epoch_guard": {
+      "faults_enabled": true,
+      "guard_stale_epochs": true,
+      "force_after_unconfirmed_count": null,
+      "age_guard_fraction": null
+    },
+    "immediate_recovery": {
+      "faults_enabled": true,
+      "guard_stale_epochs": true,
+      "force_after_unconfirmed_count": 1,
+      "age_guard_fraction": null
+    },
+    "hysteresis2": {
+      "faults_enabled": true,
+      "guard_stale_epochs": true,
+      "force_after_unconfirmed_count": 2,
+      "age_guard_fraction": null
+    },
+    "hysteresis2_age80": {
+      "faults_enabled": true,
+      "guard_stale_epochs": true,
+      "force_after_unconfirmed_count": 2,
+      "age_guard_fraction": 0.8
+    }
+  },
+  "ack_fault_grid": {
+    "ack_loss_probability": [0.0, 0.05, 0.1, 0.2],
+    "delayed_duplicate_probability": [0.0, 0.1]
+  },
+  "link": {
+    "stage2_config": "configs/stage2_digital_link.json",
+    "stage2_config_sha256": "66fbe3cc3166225d8aa4bbcd82131a92c808196314045735019321b1791932a1",
+    "channel_models": ["awgn", "rayleigh", "rician"],
+    "ebn0_db": [0.0, 3.0, 6.0, 9.0],
+    "repeats": 10,
+    "paired_common_random_numbers": true
+  },
+  "statistics": {
+    "cvar_alpha": 0.9,
+    "paired_cluster_bootstrap_repetitions": 10000,
+    "bootstrap_seed": 20260807,
+    "one_sided_confidence": 0.95
+  },
+  "hysteresis_gate_vs_immediate": {
+    "minimum_actual_bit_reduction_pct": 1.0,
+    "maximum_mean_regret_upper_bound_db": 0.005,
+    "maximum_cvar_upper_bound_db": 0.02,
+    "interpretation": "Hysteresis must save at least one percent actual bits and remain non-inferior to immediate recovery in mean and tail regret."
+  },
+  "governance": {
+    "stage4_final_measurements_may_be_loaded": false,
+    "stage4_final_metrics_may_be_loaded": false,
+    "fixed_policy_retuned": false,
+    "output_is_confirmatory_final": false,
+    "ack_faults_are_measured_claims": false,
+    "result_directory_must_not_exist_before_run": true
+  },
+  "claim_boundary": "Development-only ACK hysteresis on deterministic N=8 stress and a simulated reporting link. Threshold count two and age fraction 0.8 are architecture candidates, not independently validated deployment constants."
+}

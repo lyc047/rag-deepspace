@@ -1,0 +1,720 @@
+RadDet: A Wideband Dataset for Real-Time Radar
+Spectrum Detection
+Zi Huang∗†, Simon Denman∗, Akila Pemasiri∗, Terrence Martin∗†, Clinton Fookes∗
+∗School of Electrical Engineering & Robotics, Queensland University of Technology, Brisbane, Australia
+†Revolution Aerospace, Brisbane, Australia
+Email: {z37.huang, s.denman, a.thondilege, tl.martin, c.fookes}@qut.edu.au
+Abstract—Real-time detection of radar signals in a wideband
+radio frequency spectrum is a critical situational assessment
+function in electronic warfare. Compute-efficient detection mod-
+els have shown great promise in recent years, providing an
+opportunity to tackle the spectrum detection problem. However,
+progress in radar spectrum detection is limited by the scarcity of
+publicly available wideband radar signal datasets accompanied
+by corresponding annotations. To address this challenge, we
+introduce a novel and challenging dataset for radar detection
+(RadDet), comprising a large corpus of radar signals occupying
+a wideband spectrum across diverse radar density environments
+and signal-to-noise ratio (SNR) settings. RadDet contains 40,000
+frames, each generated from 1 million in-phase and quadrature
+(I/Q) samples across a 500 MHz frequency band. RadDet includes
+11 classes of radar signals across 6 different SNR settings, 2 radar
+density environments, and 3 different time-frequency resolutions,
+with corresponding time-frequency and class annotations. We
+evaluate the performance of state-of-the-art real-time detection
+models on RadDet and a modified radar classification dataset
+from NIST (NIST-CBRS) to establish a novel benchmark for
+wideband radar spectrum detection.
+Index Terms—spectrum sensing, radar signal recognition, real-
+time detection, wideband radar dataset
+I. INTRODUCTION
+Real-time detection and classification of complex radar
+waveforms in degraded signal-to-noise ratio (SNR) environ-
+ments are fundamental requirements in cognitive electronic
+warfare (CEW) [1], [2]. These functions must be performed at
+the front-end of a CEW system to detect and localise potential
+threats within the radar spectrum. Identifying the dwell time
+and bandwidth of a radar signal is a critical step in attaining
+situational awareness of the radar environment, enabling the
+development of effective radio frequency (RF) countermea-
+sures [1]. Furthermore, in a highly contested electronic warfare
+(EW) setting with numerous potential RF threats, these tasks
+must be executed in real-time across a large frequency band
+to ensure wide spectrum coverage and timely deployment of
+RF countermeasures [2]. However, the scarcity of publicly
+available wideband radar signal datasets has limited progress
+in real-time radar spectrum detection.
+In this work, we present a large-scale dataset to support the
+study of radar spectrum detection in CEW. We focus on the
+non-cooperative detection of synthetic radar threats across a
+wide frequency band with overlapping frequency content, and
+in degraded SNR settings. We then investigate the application
+of compute-efficient detection models to perform classification
+and localisation of time-frequency occupancy, and explore the
+impact of time-frequency resolution on detection performance
+and speed. To encourage future research in CEW, we present
+several variants of the dataset that explore different synthetic
+radar density environments. The main contributions of this
+paper are as follows: (i) we introduce a large-scale open-
+source dataset1 for wideband radar spectrum detection; and
+(ii) we establish of a new benchmark for wideband radar
+spectrum detection across different radar density environments
+and provide empirical results, analysing the impact of time-
+frequency resolution on detection performance.
+II. RELATED WORK
+Identifying an RF waveform in the presence of background
+noise through automatic signal recognition (ASR) has been
+an active research area over the past decade [3]–[10]. Recent
+advancements in ASR have employed various approaches,
+including the short-time Fourier transform (STFT) [11], along
+with task-specific representations such as the wavelet trans-
+form [12], Wigner-Ville distribution [13], and Choi-Williams
+distribution [14], to generate time-frequency representations
+from raw signals for subsequent analysis. The STFT is often
+preferred due to its consistent time-frequency resolution, while
+other transforms may introduce undesirable artefacts [15] in
+the time-frequency domain and require careful design to be
+tailored for specific tasks. Other approaches used statistical
+priors [16] and feature engineering [8], [9] for feature ex-
+traction, however they do not cater for non-cooperative and
+covert spectrum users encountered in an EW setting. Recent
+advances in deep convolutional neural networks (CNN) and
+transformer-based architectures [17], [18] have shown promise
+for ASR, with applications in automatic modulation classifica-
+tion (AMC) [7], [18], [19], radar pulse activity segmentation
+[20], and spectrum sensing [16], [21], [22]. However, research
+into radar spectrum detection is limited by the scarcity of
+publicly available radar detection datasets [23].
+The challenge of ASR in EW lies in detecting and clas-
+sifying low probability of intercept (LPI) [24], [25] radar
+signals across a wide frequency band [1], [26], requiring a
+careful trade-off between spectrum resolution and coverage.
+Furthermore, localising the occupancy of radar threats across
+1Our radar spectrum detection dataset and its variants can be accessed at:
+https://github.com/abcxyzi/RadDet
+ICASSP 2025 - 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) | 979-8-3503-6874-1/25/$31.00 ©2025 IEEE | DOI: 10.1109/ICASSP49660.2025.10887772
+Authorized licensed use limited to: Harbin Institute of Technology. Downloaded on July 07,2026 at 15:55:25 UTC from IEEE Xplore.  Restrictions apply. 
+
+a wide spectrum within an EW context is particularly difficult
+due to the need for near real-time performance [2]. While
+recent advancements in ASR have led to the development of
+several RF datasets, such as RadioML [7], RadarComms [19],
+[27], DeepRadar [25], and RadChar [18], they are constrained
+by short I/Q sequences, narrow frequency bands, and lack
+of annotations for time-frequency localisation. RadSeg [20]
+is a large-scale dataset that explores the segmentation of
+interleaved radar pulse activities while considering long I/Q
+sequences. This dataset focuses on 5 radar classes, however it
+provides only temporal annotations. Another dataset is the RF
+Dataset of Incumbent Radar Systems in the 3.5 GHz CBRS
+Band (NIST-CBRS), which was developed by the National
+Institute of Standards and Technology (NIST) [28], [29]. It
+provides 40, 000 long-duration waveforms containing 5 radar
+classes, sampled at 10 MHz. However, this dataset is limited
+to the detection of a single radar instance across a narrow SNR
+range. Other studies [11], [30], [31] have investigated the near
+real-time detection of multiple radar and telecommunications
+waveforms using CNNs, however the RF datasets used in these
+works are not publicly accessible.
+III. RADAR DATASETS
+We present two large-scale datasets for radar spectrum
+detection. The first dataset extends the existing work by NIST
+[29], providing a new baseline for real-time radar detection.
+The second dataset, developed in this work, intends to chal-
+lenge contemporary detection algorithms by exploring a wider
+radar spectrum, a broader range of radar waveforms, varied
+radar density environments, and lower SNR settings.
+A. NIST CBRS 3.5 GHz Dataset
+NIST-CBRS [28] is a synthetic radar dataset comprising
+5 radar classes, including two pulsed radars and three linear
+frequency-modulated (LFM) radars, sampled at 10 MHz with
+SNR levels ranging from 10 to 20 dB. The dataset includes
+40, 000 baseband I/Q signals, each 800, 000 samples in length.
+We transform the dataset into a spectrum detection dataset,
+providing time-frequency annotations as shown in Fig. 1. The
+dimensions of the time-frequency bounding box (bbox) for
+each signal are calculated by
+tbbox ∈
+
+ts, ts + N
+fprf
+
+,
+(1)
+fbbox ∈
+
+fc −B
+2 , fc + B
+2
+
+,
+(2)
+where tbbox denotes the bbox width (i.e., temporal occupancy),
+fbbox denotes the bbox height (i.e., frequency occupancy), N
+denotes the sample length, fc denotes the centre frequency, fprf
+denotes the pulse repetition frequency (PRF), and B denotes
+the signal bandwidth which is estimated by
+B =
+(
+Bchirp
+if frequency-modulated,
+t−1
+pw + ϵ
+if pulsed or phase-coded.
+(3)
+For LFM radars (i.e., Q3N classes), B is given by the
+chirp bandwidth Bchirp. For pulsed radars (i.e., P0N classes),
+(a) NIST-CBRS
+(b) RadDet-1T
+(c) RadDet-9T
+Fig. 1.
+Radar detection frames with time-frequency annotations (bounding
+boxes) shown at 10 dB SNR.
+TABLE I
+SUMMARY OF RADDET SIGNAL PARAMETERS
+Signal Type
+Param.
+Range of Value
+All
+SNR (dB)
+U(−20, 20, 8)
+fc (MHz)
+U(−fs/2, fs/2, 10)
+ϕ (rad)
+U(−π/4, π/4, π/180)
+Rect (and pulsed)
+tpw (µs)
+U(1, 100, 1)
+tprf (kHz)
+U(10, 50, 1)
+Npulse
+U(2, 10, 1)
+LFM, FMCW
+Bchirp (MHz)
+U(10, 100, 1)
+tchirp (µs)
+U(10, 100, 10)
+Nchirp
+U(1, 20, 1)
+Barker
+Nchip
+{5, 7, 11, 13}
+Frank, Px, P1
+Nchip
+{4, 9, 16}
+P2
+Nchip
+{4, 16}
+P3, P4
+Nchip
+U(4, 16, 1)
+Zadoff-Chu
+Nchip
+{3, 5, 7, 9, 11, 13, 15}
+the reciprocal of the signal’s pulse width tpw is used to
+estimate B. As a clean signal was not provided in the original
+dataset to precisely compute B for pulsed radars, a constant
+buffer ϵ estimated by 0.5 × t−1
+pw is added to account for any
+measurement uncertainty.
+B. Wideband Radar Detection Dataset
+While NIST-CBRS serves as a valuable baseline dataset,
+it is limited by a narrow 10 MHz band with SNR settings
+confined to 10 to 20 dB. Critically, it only features at most a
+single radar instance per frame, which limits its applicability in
+modelling dense RF scenarios. We introduce RadDet, a novel
+wideband dataset for radar spectrum detection. RadDet builds
+upon [20] and introduces 11 radar classes, including 6 new LPI
+polyphase codes (P1, P2, P3, P4, Px, Zadoff-Chu) and a new
+wideband frequency-modulated continuous wave (FMCW), all
+coexisting across a 500 MHz band. The key parameters used
+in RadDet are summarised in Table I. Here, U(a, b, c) denotes
+uniform random sampling from a to b with resolution c, while
+{·} denotes uniform random sampling from a discrete set. Ni
+denotes the quantity of the parameter i.
+Unlike existing RF classification datasets [7], [18], [19],
+RadDet provides long sequences, each consisting of 1 million
+complex baseband I/Q samples (⃗xi +j⃗xq). We generate a total
+of 40, 000 radar frames and distribute the dataset in three parts.
+The training set contains 20, 000 signals, while the validation
+Authorized licensed use limited to: Harbin Institute of Technology. Downloaded on July 07,2026 at 15:55:25 UTC from IEEE Xplore.  Restrictions apply. 
+
+(a) NIST-CBRS
+(b) RadDet-1T
+(c) RadDet-9T
+(d) NIST-CBRS
+(e) RadDet-1T
+(f) RadDet-9T
+Fig. 2. Radar detection results at 10 dB SNR. Ground truth frames in (a)–(c)
+correspond to model predictions in (d)–(f), respectively. The confidence scores
+of each bounding box prediction are also shown in (d)–(f).
+TABLE II
+RADAR DETECTION DATASET VARIANTS
+Dataset
+Size
+Npool
+Dim.
+Res. (µs, MHz)
+NIST-CBRS
+S
+60
+1282
+624,
+0.08
+(fs = 10 MHz)
+M
+30
+2562
+313,
+0.04
+L
+15
+5122
+157,
+0.02
+RadDet-9T/1T
+S
+75
+1282
+15.6,
+3.91
+(fs = 500 MHz)
+M
+19
+2562
+7.81,
+1.95
+L
+4
+5122
+3.91,
+0.98
+and test sets contain 14, 000 and 6, 000 signals, respectively.
+Additive white Gaussian noise (AWGN) is added to each
+signal to simulate varying SNR settings. We sample SNR from
+a uniform distribution to produce signal frames that fall within
+−20 and 20 dB at a resolution of 8 dB. This means that there
+are more than 6,500 unique signals generated per SNR. The
+data splits are carefully chosen to maintain a similar inter-class
+distribution to [28] across each SNR.
+To investigate wideband spectrum detection in different
+scenarios, we provide RadDet in two different radar environ-
+ments: dense and sparse. Similar to NIST-CBRS, our sparse
+dataset (RadDet-1T) provides at most a single radar instance
+per frame whereby the probability of a radar being present
+in a scene is 50%. Our dense dataset (RadDet-9T) contains
+up to 9 radar instances per frame where the probability of
+background (noise-only) frames is 10%. RadDet-9T repre-
+sents a conservative dense maritime radar environment, as
+described in [1], where up to 200 radars may be observed
+within a typical 2-second surveillance period. We consider
+uniform random sampling to independently generate different
+permutations of radar encounters and signal attributes for each
+frame. This means that radar activities in each frame are
+uniformly distributed across a fixed time horizon (2 ms) and
+a fixed frequency band (500 MHz). To ensure that the signal
+parameters chosen for each radar class reflect typical radars
+encountered in EW, we adopt the emitter parameter library
+from [32] to bound our sampling range. For example, we
+consider large sweep bandwidths of up to 100 MHz for LFM
+signals, whereas the bandwidths of LFM radars are typically
+much lower outside the context of EW [26]. We transform the
+baseband I/Q signals into spectrograms using the STFT. The
+approach in [29] is adapted to generate max-hold spectrograms
+as a compute-efficient way to represent wideband signals. Due
+to the large spread of signal parameters considered in RadDet,
+no window functions are applied to avoid introducing pre-
+processing bias towards certain classes. The size of each max-
+hold spectrogram is calculated by
+dim(t) =
+N −Noverlap
+Npool(Nseg −Noverlap),
+(4)
+dim(f) = Nnfft,
+(5)
+where Nnfft denotes the number of frequency bins computed
+by the STFT, Nseg denotes length of the time segment used
+for computing the STFT, Noverlap denotes the overlap between
+consecutive time segments, and Npool represents the number of
+time bins used in the max-hold operation which controls the
+level of compression applied. While the max-hold operation
+reduces temporal resolution, it is necessary to enable efficient
+processing of extremely long I/Q sequences. The degree of
+compression applied should be scenario-dependent in an EW
+context, and balance the trade-off between detection accuracy
+and speed. We provide the RadDet dataset as spectrograms in
+three resolutions as shown in Table II where bbox annotations
+are computed per (1) and (2). An example of resultant anno-
+tations is depicted in Fig. 1. Annotations are normalised and
+structured using the standard YOLO format [33].
+IV. EXPERIMENTS
+A. Detection Models
+We establish a performance baseline for wideband radar
+spectrum detection by considering real-time detection models,
+all targeting multi-class radar detection on both the NIST-
+CBRS and RadDet datasets. We consider real-time object de-
+tectors that are competitive in computer vision tasks, including
+YOLOv3 [34], YOLOv6 [35], YOLOv9 [36], and RT-DETR
+[37]. These detectors provide a comprehensive representation
+of baseline performance, allowing us to investigate the trade-
+off between detection performance and inference speed across
+different input resolutions and radar environments.
+We train and evaluate each model on a single Nvidia Tesla
+A100 GPU. The models are trained for 100 epochs using the
+AdamW optimiser with a linear learning rate scheduler, where
+the learning rate is bounded between 0.01 and 0.001, and a
+warm-up period of 3 epochs at 0.1. To improve generalisation
+and training stability, we normalise spectrogram inputs to
+the range [0, 1] and consider contemporary data augmenta-
+tion techniques, including translations (10%), scaling (50%),
+erasing (20%), mixup (20%), mosaic (2 × 2), and copy-paste
+(20%) [38]. We also train models without data augmentation
+to serve as a comparison. All models are evaluated on test
+Authorized licensed use limited to: Harbin Institute of Technology. Downloaded on July 07,2026 at 15:55:25 UTC from IEEE Xplore.  Restrictions apply. 
+
+TABLE III
+PERFORMANCE OF DETECTION MODELS ON NIST-CBRS AND RADDET-9T/1T TEST SETS
+Model
+Size
+#Param.
+NIST-CBRS (%)
+RadDet-9T (%)
+RadDet-1T (%)
+FPSavg
+(M)
+mAP50
+mAP50:95
+mAP50
+mAP50:95
+mAP50
+mAP50:95
+YOLOv3
+S
+103.67
+87.20
+67.28
+25.68
+19.10
+19.62
+13.28
+1023.0
+YOLOv6-M
+51.98
+86.57
+66.37
+23.02
+16.49
+10.41
+4.93
+1301.8
+YOLOv9-M
+20.02
+85.88
+67.72
+25.93
+19.47
+20.10
+13.29
+896.6
+RT-DETR-L
+31.99
+91.27
+73.29
+24.70
+17.77
+18.75
+12.52
+228.5
+YOLOv3
+M
+103.67
+93.52
+72.96
+35.69
+29.82
+24.81
+18.67
+688.2
+YOLOv6-M
+51.98
+92.97
+75.86
+31.45
+25.96
+22.68
+16.49
+921.3
+YOLOv9-M
+20.02
+93.81
+79.12
+35.10
+29.14
+26.03
+19.73
+579.2
+RT-DETR-L
+31.99
+94.69
+78.70
+26.20
+19.43
+20.07
+14.55
+210.5
+YOLOv3
+L
+103.67
+93.70
+72.62
+60.37
+53.97
+31.85
+25.41
+274.2
+YOLOv6-M
+51.98
+88.23
+70.82
+43.57
+38.14
+24.66
+18.18
+470.9
+YOLOv9-M
+20.02
+91.31
+72.97
+47.37
+40.85
+31.41
+24.56
+449.4
+RT-DETR-L
+31.99
+95.31
+80.96
+29.34
+19.90
+20.90
+15.25
+177.7
+sets where the best models are selected based on their best
+validation performance during training.
+B. Radar Detection Benchmark
+We evaluate the baseline performance of detection models
+suitable for real-time applications on the NIST-CBRS and
+RadDet-9T/1T test sets through the following experiments:
+(i) comparison of baseline architectures; (ii) impact of time-
+frequency resolution on detection accuracy and speed; and (iii)
+changes in detection performance across different radar density
+environments and SNR settings. Performance is measured
+using inference speed, represented by the average frame rate
+(FPSavg), and mean average precision (mAP) reported at two
+intersection-over-union (IoU) [39] settings: 50% (mAP50) and
+50 to 95% at 5% increments (mAP50:95).
+Table III presents a summary of results. The metrics mAP50
+and mAP50:95 presented in Table III are mean values computed
+across all 6 SNR intervals from the respective datasets. Several
+interesting observations can be made. First, data augmentation
+greatly enhances detection performance across all models
+without impacting inference speed, as shown in Fig. 3(a)–(b).
+Second, there is a distinct trade-off between mAP and FPSavg
+across all models. Higher time-frequency resolution inputs
+provide better mAP but at the cost of lower FPSavg due to
+increased computational demands. YOLOv3 at an input size
+of 1282 (S) is 49% faster than at 2562 (M), with a correspond-
+ing mAP50 reduction of 7% and 39% on NIST-CBRS and
+RadDet-9T, respectively. This trend is highlighted in Fig. 3(d).
+Third, the YOLO family of models outperforms RT-DETR on
+RadDet-9T, which is expected as the detection of small objects
+is a known limitation [37] of RT-DETR. Furthermore, RT-
+DETR relies on pre-trained embeddings from natural images,
+making it less suited for radar spectrum detection.
+Lastly, the sparse radar environment in RadDet-1T poses
+challenges for all models across all SNR settings, as shown in
+Fig. 2. This challenge stems from two key factors: the presence
+of small objects (e.g., LPI radar classes) and the infrequent
+occurrence of radar pulses in a sparse signal environment. In
+contrast, radar classes in NIST-CBRS typically occupy larger
+bounding box footprints due to the lower spectrum bandwidth,
+(a) NIST-CBRS
+(b) NIST-CBRS (w/o aug)
+(c) RadDet-9T/1T
+(d) mAP50 vs FPSavg
+Fig. 3. Comparison of detection performance of models evaluated on NIST-
+CBRS and RadDet-9T/1T across different SNR settings. Unless otherwise
+noted, results reflect the use of data augmentation during training.
+providing a higher ratio of useful signal pixels to noise pixels
+for detection models, leading to better detection performance
+(Fig. 3). These characteristics of RadDet make it a challenging
+dataset for real-time detection models.
+V. CONCLUSION
+We have introduced RadDet, an open-source radar dataset
+designed for the challenging task of wideband radar spectrum
+detection. This dataset presents 11 classes of radar signals
+across 6 different SNR settings, 2 radar density environments,
+and 3 different time-frequency resolutions with corresponding
+time-frequency annotations. Our baseline results demonstrate
+the feasibility of applying real-time detectors for wideband
+radar spectrum detection, establishing a first-of-its-kind bench-
+mark that explores the trade-off between time-frequency res-
+olution, detection accuracy, and inference speed for real-time
+radar spectrum detection.
+Authorized licensed use limited to: Harbin Institute of Technology. Downloaded on July 07,2026 at 15:55:25 UTC from IEEE Xplore.  Restrictions apply. 
+
+REFERENCES
+[1] Sue Robertson, Practical ESM Analysis, Artech House, 2019.
+[2] Karen Haigh and Julia Andrusenko, Cognitive Electronic Warfare: An
+Artificial Intelligence Approach, Artech House, 2021.
+[3] Bart Scheers, Djamel Teguig, and Vincent Le Nir, “Wideband Spec-
+trum Sensing Technique Based on Goodness-of-Fit Testing,” in 2015
+International Conference on Military Communications and Information
+Systems (ICMCIS). IEEE, 2015, pp. 1–6.
+[4] Alexander Schmidt, Christoph R¨ugheimer, Florian Particke, Thomas
+Mahr, Holger Appel, and Hans-Georg K¨olle, “Kurtosis-Based Approach
+for Detection of Targets in Noise,” in 2016 17th International Radar
+Symposium (IRS). IEEE, 2016, pp. 1–3.
+[5] Timothy J. O’Shea, Johnathan Corgan, and T. Charles Clancy, “Con-
+volutional Radio Modulation Recognition Networks,” in Engineering
+Applications of Neural Networks: 17th International Conference, EANN
+2016, Aberdeen, UK, September 2-5, 2016, Proceedings. 2016, pp. 213–
+226, Springer.
+[6] Timothy J. O’Shea, Johnathan Corgan, and T. Charles Clancy, “Unsu-
+pervised Representation Learning of Structured Radio Communication
+Signals,” in 2016 First International Workshop on Sensing, Processing
+and Learning for Intelligent Machines (SPLINE). 2016, pp. 1–5, IEEE.
+[7] Timothy J. O’Shea, Tamoghna Roy, and T. Charles Clancy, “Over-the-
+Air Deep Learning Based Radio Signal Classification,” IEEE Journal of
+Selected Topics in Signal Processing, vol. 12, no. 1, pp. 168–179, 2018,
+IEEE.
+[8] Andres Vila, Donna Branchevsky, Kyle Logue, Sebastian Olsen, Esteban
+Valles, Darren Semmen, Alex Utter, and Eugene Grayver, “Deep and
+Ensemble Learning to Win the Army RCO AI Signal Classification
+Challenge,” in Proceedings of the 18th Python in Science Conference,
+2019, pp. 21–26.
+[9] Kyle Logue, Esteban Valles, Andres Vila, Alex Utter, Darren Semmen,
+Eugene Grayver, Sebastian Olsen, and Donna Branchevsky,
+“Expert
+RF Feature Extraction to Win the Army RCO AI Signal Classification
+Challenge,” in Proceedings of the 18th Python in Science Conference,
+2019, pp. 8–14.
+[10] Thien Huynh-The, Quoc-Viet Pham, Toan-Van Nguyen, Thanh Thi
+Nguyen, Rukhsana Ruby, Ming Zeng, and Dong-Seong Kim, “Automatic
+Modulation Classification: A Deep Architecture Survey,” IEEE Access,
+vol. 9, pp. 142950–142971, 2021.
+[11] Tim O’Shea, Tamoghna Roy, and T. Charles Clancy, “Learning Robust
+General Radio Signal Detection Using Computer Vision Methods,” in
+2017 51st Asilomar Conference on Signals, Systems, and Computers.
+IEEE, 2017, pp. 829–832.
+[12] Tao Chen, Shilian Zheng, Kunfeng Qiu, Luxin Zhang, Qi Xuan, and
+Xiaoniu Yang, “Augmenting Radio Signals With Wavelet Transform
+for Deep Learning-Based Modulation Recognition,” IEEE Transactions
+on Cognitive Communications and Networking, 2024.
+[13] Thien Huynh-The, Van-Phuc Hoang, Jae-Woo Kim, Minh-Thanh Le, and
+Ming Zeng, “WaveNet: Towards Waveform Classification in Integrated
+Radar-Communication Systems with Improved Accuracy and Reduced
+Complexity,” IEEE Internet of Things Journal, 2024.
+[14] Thien Huynh-The, Van-Sang Doan, Cam-Hao Hua, Quoc-Viet Pham,
+Toan-Van Nguyen, and Dong-Seong Kim, “Accurate LPI Radar Wave-
+form Recognition With CWD-TFA for Deep Convolutional Network,”
+IEEE Wireless Communications Letters, vol. 10, no. 8, pp. 1638–1642,
+2021.
+[15] Stefan Scholl, “Fourier, Gabor, Morlet, or Wigner: Comparison of Time-
+Frequency Transforms,” arXiv Preprint arXiv:2101.06707, 2021.
+[16] Ioanna Kakalou, Danai Papadopoulou, Theofanis Xifilidis, Kostas E.
+Psannis, Katherine Siakavara, and Yutaka Ishibashi,
+“A Survey on
+Spectrum Sensing Algorithms for Cognitive Radio Networks,”
+in
+2018 7th International Conference on Modern Circuits and Systems
+Technologies (MOCAST). IEEE, 2018, pp. 1–4.
+[17] Yuan Gong, Yu-An Chung, and James Glass, “AST: Audio Spectrogram
+Transformer,” July 2021, arXiv:2104.01778 [cs].
+[18] Zi Huang, Akila Pemasiri, Simon Denman, Clinton Fookes, and Terrence
+Martin, “Multi-task Learning For Radar Signal Characterisation,” in
+2023 IEEE International Conference on Acoustics, Speech, and Signal
+Processing Workshops (ICASSPW), 2023, pp. 1–5.
+[19] Anu Jagannath and Jithin Jagannath, “Multi-task Learning Approach
+for Automatic Modulation and Wireless Signal Classification,” in ICC
+2021-IEEE International Conference on Communications. 2021, pp. 1–
+7, IEEE.
+[20] Zi Huang, Akila Pemasiri, Simon Denman, Clinton Fookes, and Terrence
+Martin, “Multi-stage Learning for Radar Pulse Activity Segmentation,”
+in ICASSP 2024-2024 IEEE International Conference on Acoustics,
+Speech and Signal Processing (ICASSP). IEEE, 2024, pp. 7340–7344.
+[21] W. Max Lees, Adam Wunderlich, Peter J. Jeavons, Paul D. Hale,
+and Michael R. Souryal,
+“Deep Learning Classification of 3.5-GHz
+Band Spectrograms With Applications to Spectrum Sensing,”
+IEEE
+Transactions on Cognitive Communications and Networking, vol. 5, no.
+2, pp. 224–236, 2019.
+[22] Akila Pemasiri, Zi Huang, Fraser Williams, Ethan Goan, Simon Den-
+man, Terrence Martin, and Clinton Fookes, “Automatic Radar Signal
+Detection and FFT Estimation using Deep Learning,”
+in 2024 17th
+International Conference on Signal Processing and Communication
+System (ICSPCS), 2024, pp. 1–5.
+[23] Zhe Geng, He Yan, Jindong Zhang, and Daiyin Zhu, “Deep Learning
+for Radar: A Survey,” IEEE Access, vol. 9, pp. 141800–141818, 2021.
+[24] Jian Wan, Xin Yu, and Qiang Guo, “LPI Radar Waveform Recognition
+Based on CNN and TPOT,” Symmetry, vol. 11, no. 5, pp. 725, 2019.
+[25] Victoria Clerico, Jorge Gonz´alez-L´opez, Gady Agam, and Jes´us Grajal,
+“LSTM Framework for Classification of Radar and Communications
+Signals,” in 2023 IEEE Radar Conference (RadarConf23). IEEE, 2023,
+pp. 1–6.
+[26] Phillip E Pace, Detecting and Classifying Low Probability of Intercept
+Radar, Artech House, 2009.
+[27] Anu Jagannath and Jithin Jagannath, “Multi-task Learning Approach for
+Modulation and Wireless Signal Classification for 5G and Beyond: Edge
+Deployment via Model Compression,” June 2022, arXiv:2203.00517 [cs,
+eess].
+[28] Raied Caromi, Michael Souryal, and Timothy A. Hall,
+“RF Dataset
+of Incumbent Radar Signals in the 3.5 GHz CBRS Band,” Journal of
+Research of the National Institute of Standards and Technology, vol.
+124, pp. 1, 2019.
+[29] Raied Caromi, Alex Lackpour, Kassem Kallas, Thao Nguyen, and
+Michael Souryal, “Deep Learning for Radar Signal Detection in the 3.5
+GHz CBRS Band,” in 2021 IEEE International Symposium on Dynamic
+Spectrum Access Networks (DySPAN). IEEE, 2021, pp. 1–8.
+[30] Sanjoy Basak, Sreeraj Rajendran, Sofie Pollin, and Bart Scheers, “Com-
+bined RF-Based Drone Detection and Classification,” IEEE Transactions
+on Cognitive Communications and Networking, vol. 8, no. 1, pp. 111–
+120, 2021.
+[31] Nasim Soltani, Vini Chaudhary, Debashri Roy, and Kaushik Chowdhury,
+“Finding Waldo in the CBRS Band: Signal Detection and Localization
+in the 3.5 GHz Spectrum,” in GLOBECOM 2022-2022 IEEE Global
+Communications Conference. IEEE, 2022, pp. 4570–4575.
+[32] David. Lynch Jr., An Introduction to RF Stealth., Radar, Sonar and
+Navigation. Institution of Engineering & Technology, Stevenage, 2nd
+ed. edition, 2021.
+[33] Joseph Redmon, Santosh Divvala, Ross Girshick, and Ali Farhadi, “You
+Only Look Once: Unified, Real-Time Object Detection,” in Proceedings
+of the IEEE Conference on Computer Vision and Pattern Recognition,
+2016, pp. 779–788.
+[34] Joseph Redmon and Ali Farhadi, “YOLOv3: An Incremental Improve-
+ment,” arXiv Preprint arXiv:1804.02767, 2018.
+[35] Chuyi Li, Lulu Li, Hongliang Jiang, Kaiheng Weng, Yifei Geng, Liang
+Li, Zaidan Ke, Qingyuan Li, Meng Cheng, Weiqiang Nie, et al.,
+“YOLOv6: A Single-Stage Object Detection Framework for Industrial
+Applications,” arXiv Preprint arXiv:2209.02976, 2022.
+[36] Chien-Yao Wang, I-Hau Yeh, and Hong-Yuan Mark Liao, “YOLOv9:
+Learning What You Want to Learn Using Programmable Gradient
+Information,” arXiv Preprint arXiv:2402.13616, 2024.
+[37] Yian Zhao, Wenyu Lv, Shangliang Xu, Jinman Wei, Guanzhong Wang,
+Qingqing Dang, Yi Liu, and Jie Chen, “DETRs Beat YOLOs on Real-
+Time Object Detection,” in Proceedings of the IEEE/CVF Conference
+on Computer Vision and Pattern Recognition, 2024, pp. 16965–16974.
+[38] Golnaz Ghiasi, Yin Cui, Aravind Srinivas, Rui Qian, Tsung-Yi Lin,
+Ekin D Cubuk, Quoc V Le, and Barret Zoph,
+“Simple Copy-Paste
+Is a Strong Data Augmentation Method for Instance Segmentation,”
+in Proceedings of the IEEE/CVF Conference on Computer Vision and
+Pattern Recognition, 2021, pp. 2918–2928.
+[39] Mark Everingham, Luc Van Gool, Christopher KI Williams, John Winn,
+and Andrew Zisserman, “The PASCAL Visual Object Classes (VOC)
+Challenge,” International Journal of Computer Vision, vol. 88, pp. 303–
+338, 2010.
+Authorized licensed use limited to: Harbin Institute of Technology. Downloaded on July 07,2026 at 15:55:25 UTC from IEEE Xplore.  Restrictions apply. 

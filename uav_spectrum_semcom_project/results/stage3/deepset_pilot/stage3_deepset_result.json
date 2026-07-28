@@ -1,0 +1,66 @@
+{
+  "config_sha256": "db8d515daee4afcc2e869b2277feaa02c853a2ef4453132c9e16db11f37ee5db",
+  "best_validation_loss": 0.012777743861079216,
+  "train_scene_hash": "b6e282499cfcd594c56877078f707b6506b881a6c07c1826e7d040c53fe450db",
+  "validation_scene_hash": "a3f8bee810041dc3bab94393e8d4d6f315fcec57b4e2fcc075d279b039963674",
+  "test_scene_hash": "e58feea379e22814d68dd1a977586bd019658ffa6f22f9b69f149c1c4a7d558a",
+  "summary": [
+    {
+      "method": "majority",
+      "clean_resource_rate": 0.71,
+      "mean_occupancy_regret": 0.013941380195319653,
+      "oracle_equivalent_rate": 0.495,
+      "mean_transmitted_bits": 3374.35
+    },
+    {
+      "method": "mean",
+      "clean_resource_rate": 0.805,
+      "mean_occupancy_regret": 0.008463609032332897,
+      "oracle_equivalent_rate": 0.64,
+      "mean_transmitted_bits": 3374.35
+    },
+    {
+      "method": "or",
+      "clean_resource_rate": 0.79,
+      "mean_occupancy_regret": 0.009076986461877823,
+      "oracle_equivalent_rate": 0.63,
+      "mean_transmitted_bits": 3374.35
+    },
+    {
+      "method": "snr_weighted",
+      "clean_resource_rate": 0.805,
+      "mean_occupancy_regret": 0.008463609032332897,
+      "oracle_equivalent_rate": 0.64,
+      "mean_transmitted_bits": 3374.35
+    },
+    {
+      "method": "quality_weighted",
+      "clean_resource_rate": 0.8,
+      "mean_occupancy_regret": 0.00865867082029581,
+      "oracle_equivalent_rate": 0.635,
+      "mean_transmitted_bits": 3374.35
+    },
+    {
+      "method": "deepset_resource_fusion",
+      "clean_resource_rate": 0.735,
+      "mean_occupancy_regret": 0.013131263665854931,
+      "oracle_equivalent_rate": 0.525,
+      "mean_transmitted_bits": 3374.35
+    }
+  ],
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "torch": "2.12.0"
+    }
+  },
+  "claim_boundary": {
+    "same_underlying_scene": true,
+    "synchronized_real_multi_sdr_capture": false,
+    "h3_status": "preliminary_semi_synthetic_only",
+    "required_next_evidence": "synchronized_multi_receiver_or_record_replay_capture"
+  }
+}

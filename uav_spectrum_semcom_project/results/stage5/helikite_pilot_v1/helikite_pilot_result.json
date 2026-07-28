@@ -1,0 +1,83 @@
+{
+  "version": "1.0",
+  "status": "stage5_helikite_pilot_adapter_complete",
+  "protocol_sha256": "6de351dc6c467d1e5616e0e91d37869945ea470ef9794b2f7c96991c2a0e7911",
+  "pilot_archive_sha256": "b1265fbe5e2c94385b37aff723ad881b0e59108710620096d4139ea093c6f9e6",
+  "cache": "results/stage5/helikite_pilot_v1/helikite_pilot_cache.npz",
+  "cache_sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+  "quality_gates": {
+    "expected_sweep_count": true,
+    "all_pairs_loaded": true,
+    "no_discovery_or_validation_errors": true,
+    "analysis_band_bin_count": true,
+    "frequency_grid_consistent": true,
+    "power_range_plausible": true,
+    "gps_alignment": true,
+    "sweep_spacing": true
+  },
+  "quality_summary": {
+    "power_sweep_count": 364,
+    "analysis_band_mhz": [
+      3550.0,
+      3700.0
+    ],
+    "analysis_band_bins": 2500,
+    "frequency_resolution_mhz": 0.06005859375,
+    "observed_power_range_dbm": [
+      -135.68739318847656,
+      -109.05891418457031
+    ],
+    "sweep_gap_range_s": [
+      15.0,
+      16.0
+    ],
+    "maximum_absolute_gps_offset_s": 0.5012600421905518,
+    "gps_clock_correction": {
+      "correction_hours": 13.0,
+      "correction_s": 46800.0,
+      "median_absolute_residual_s": 0.2533900737762451,
+      "maximum_absolute_residual_s": 0.5012600421905518
+    },
+    "altitude_range_m": [
+      3.717,
+      134.92
+    ],
+    "cluster_count_15_minute": 7,
+    "channel_cache_shapes": {
+      "8": [
+        364,
+        8
+      ],
+      "16": [
+        364,
+        16
+      ],
+      "32": [
+        364,
+        32
+      ],
+      "64": [
+        364,
+        64
+      ]
+    }
+  },
+  "validation_errors": [],
+  "governance": {
+    "pilot_permanently_excluded_from_final": true,
+    "external_final_archives_opened": false,
+    "external_final_sigmf_metadata_opened": false,
+    "external_final_signal_values_loaded": false,
+    "algorithm_or_success_threshold_retuned": false,
+    "final_access_consumed": false
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": "The output verifies an airborne spectrum-data adapter and a development-only task mapping. It cannot establish independent Final performance, measured reporting-link reliability, multi-node sensing, MIMO, or ACK-fault behavior."
+}

@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "purpose": "Prevent reuse of consumed Stage-3 test sources during robustness development.",
+  "consumed_test_sources": [
+    {
+      "experiment": "frozen_test_classical_and_deepset_pilot",
+      "split": "test",
+      "source_offset_inclusive": 0,
+      "source_stop_exclusive": 800,
+      "status": "consumed_no_further_tuning"
+    }
+  ],
+  "fresh_holdout": {
+    "split": "test",
+    "source_offset_inclusive": 1200,
+    "maximum_scene_count": 200,
+    "sources_per_scene": 4,
+    "construction": "sliding_max_hold_stride_1",
+    "status": "frozen_before_evaluation"
+  },
+  "calibration_data": {
+    "split": "val",
+    "source_offset_inclusive": 1200,
+    "maximum_scene_count": 80,
+    "status": "validation_only"
+  }
+}

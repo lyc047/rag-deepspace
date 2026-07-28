@@ -1,0 +1,81 @@
+{
+  "source": "Daniel Estévez annotated 5G SigMF recording",
+  "frame_id": "1876954_7680KSPS_srsRAN_Project_gnb_short",
+  "n_samples": 1100272,
+  "duration_s": 0.14326458333333333,
+  "sample_rate_hz": 7680000.0,
+  "center_freq_hz": 1876954000.0,
+  "metadata": {
+    "source_format": "sigmf",
+    "meta_path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\data\\raw\\sigmf_5g_short\\1876954_7680KSPS_srsRAN_Project_gnb_short.sigmf-meta",
+    "data_path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\data\\raw\\sigmf_5g_short\\1876954_7680KSPS_srsRAN_Project_gnb_short.sigmf-data",
+    "datatype": "ci32_le",
+    "author": "SDRangel",
+    "description": "SDRangel SigMF I/Q recording file",
+    "hardware": "PlutoSDR",
+    "start_sample": 0,
+    "loaded_samples": 1100272
+  },
+  "annotation_count": 72,
+  "annotation_label_counts": {
+    "CSI-RS": 2,
+    "CSI-RS (TRS)": 8,
+    "Frame 0": 1,
+    "Frame 1": 1,
+    "Frame 10": 1,
+    "Frame 11": 1,
+    "Frame 12": 1,
+    "Frame 13": 1,
+    "Frame 2": 1,
+    "Frame 3": 1,
+    "Frame 4": 1,
+    "Frame 5": 1,
+    "Frame 6": 1,
+    "Frame 7": 1,
+    "Frame 8": 1,
+    "Frame 9": 1,
+    "PBCH": 14,
+    "PDCCH": 2,
+    "PDSCH": 1,
+    "PSS": 14,
+    "SSS": 14,
+    "unknown": 3
+  },
+  "stft_shape": [
+    1024,
+    4294
+  ],
+  "energy_pred_boxes": [
+    {
+      "label": "occupied",
+      "t_start_s": 6.666666666666667e-05,
+      "t_end_s": 0.14316666666666666,
+      "f_low_hz": -3840000.0,
+      "f_high_hz": 3832500.0,
+      "confidence": 1.0
+    }
+  ],
+  "best_tf_iou_against_annotations": 0.05246213402025945,
+  "payloads": [
+    {
+      "name": "raw_iq_32bit_iq_from_sigmf",
+      "bits_per_frame": 70417408,
+      "bitrate_bps": 491520000.0
+    },
+    {
+      "name": "raw_iq_12bit_iq_if_requantized",
+      "bits_per_frame": 26406528,
+      "bitrate_bps": 184320000.0
+    },
+    {
+      "name": "stft_8bit",
+      "bits_per_frame": 35176448,
+      "bitrate_bps": 245534850.14614567
+    },
+    {
+      "name": "semantic_packet_energy_baseline",
+      "bits_per_frame": 289,
+      "bitrate_bps": 2017.2466444660956
+    }
+  ]
+}

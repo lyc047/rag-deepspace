@@ -1,0 +1,716 @@
+{
+  "experiment_id": "stage4_c1_v3_tail_ranking_temporal_calibration_v1",
+  "status": "one_candidate_selected_and_frozen_before_confirmation_access",
+  "config_sha256": "60ddc487346e1f3a176867367219c69377704b70d0585a4e0ff741036891ee49",
+  "protocol_sha256": "e53c75e1cbb1ed4b5e971c74c733c88d980a110d9318860849f81ff9f2def400",
+  "prefinal_inventory_sha256": "f81afa89d7c1d556284a58c70b05389161452b7441604c8f3f32e780002499e7",
+  "development_cache_metadata_sha256": "9330a2f07dc512a5b7e6bf02e89b50ecdff2546214368728e528d8a464cf441b",
+  "device": "cpu",
+  "baseline_calibration_metrics": {
+    "mean_regret_db": 0.9463217544555664,
+    "cvar_0_9_regret_db": 6.137363751729329,
+    "brier_to_input_proxy": 0.009043732623104006
+  },
+  "baseline_checkpoints": [
+    {
+      "seed": 20260716,
+      "path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage4\\c1_v2_paired_finetune_exploratory_v1\\checkpoints\\robust_detection_fixed4_seed20260716.pt",
+      "sha256": "5e4dc1e2b63ad13beeb2b7311aaf1db016740d1a68c998c37e9b327019dbafec"
+    },
+    {
+      "seed": 20260717,
+      "path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage4\\c1_v2_paired_finetune_exploratory_v1\\checkpoints\\robust_detection_fixed4_seed20260717.pt",
+      "sha256": "bda2e038e444e038a9c4e295a7160c344983ece511cf7f0be03c5f617c60b948"
+    },
+    {
+      "seed": 20260718,
+      "path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage4\\c1_v2_paired_finetune_exploratory_v1\\checkpoints\\robust_detection_fixed4_seed20260718.pt",
+      "sha256": "1e6dfbbb51e978255c978a2131b9b5c1a3e339918f75646975fd3a0b86ce9977"
+    },
+    {
+      "seed": 20260719,
+      "path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage4\\c1_v2_paired_finetune_exploratory_v1\\checkpoints\\robust_detection_fixed4_seed20260719.pt",
+      "sha256": "d13770e542d5f020afaa2e25cf36044635b3dc9e7094d7139a1a0d49fa1b21c7"
+    },
+    {
+      "seed": 20260720,
+      "path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage4\\c1_v2_paired_finetune_exploratory_v1\\checkpoints\\robust_detection_fixed4_seed20260720.pt",
+      "sha256": "8109467b813b1e06af0c9decdab6ae5d734e398053ff0cdba9103df61d42a2b7"
+    }
+  ],
+  "candidate_calibration_results": [
+    {
+      "candidate_id": "tail0.5_margin0.01",
+      "tail_ranking_weight": 0.5,
+      "ranking_margin": 0.01,
+      "mean_regret_db": 0.9434838231404623,
+      "cvar_0_9_regret_db": 6.137363751729329,
+      "brier_to_input_proxy": 0.008931079262401909,
+      "runs": [
+        {
+          "seed": 20260716,
+          "best_epoch": 2,
+          "development_calibration_score": [
+            0.019632309675216675,
+            0.10641391575336456,
+            0.008405810222029686
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail0.5_margin0.01_seed20260716.pt",
+          "checkpoint_sha256": "a624a808ae24793ee6a3905f1a1755b2f0fcae29b9588752ee5c0a1fc6a2711b"
+        },
+        {
+          "seed": 20260717,
+          "best_epoch": 2,
+          "development_calibration_score": [
+            0.019268479198217392,
+            0.10942838340997696,
+            0.008846938610076904
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail0.5_margin0.01_seed20260717.pt",
+          "checkpoint_sha256": "aca64eaaf9f3429178f1fb31c52ece026c34364fdb6d5212cf22a9c3c399c2cd"
+        },
+        {
+          "seed": 20260718,
+          "best_epoch": 74,
+          "development_calibration_score": [
+            0.02235972136259079,
+            0.11761530488729477,
+            0.008955595083534718
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail0.5_margin0.01_seed20260718.pt",
+          "checkpoint_sha256": "2f0ecbf84804ef633baa70a5dff0e68f7cee25ccb84a2321e5b894a89f321676"
+        },
+        {
+          "seed": 20260719,
+          "best_epoch": 3,
+          "development_calibration_score": [
+            0.01924734190106392,
+            0.10641391575336456,
+            0.008198524825274944
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail0.5_margin0.01_seed20260719.pt",
+          "checkpoint_sha256": "3f355791f8154da29f1f34e46388c474f750db7a9483183c80bed7d5d8cd571c"
+        },
+        {
+          "seed": 20260720,
+          "best_epoch": 7,
+          "development_calibration_score": [
+            0.020143475383520126,
+            0.10369087755680084,
+            0.008850607089698315
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail0.5_margin0.01_seed20260720.pt",
+          "checkpoint_sha256": "3436f17d2c6e4d360b00c81812fb1c69bd3863988a65656f72d004c6dda775de"
+        }
+      ]
+    },
+    {
+      "candidate_id": "tail0.5_margin0.02",
+      "tail_ranking_weight": 0.5,
+      "ranking_margin": 0.02,
+      "mean_regret_db": 0.9432649612426758,
+      "cvar_0_9_regret_db": 6.137363751729329,
+      "brier_to_input_proxy": 0.008769067691173405,
+      "runs": [
+        {
+          "seed": 20260716,
+          "best_epoch": 2,
+          "development_calibration_score": [
+            0.019632309675216675,
+            0.10641391575336456,
+            0.008405810222029686
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail0.5_margin0.02_seed20260716.pt",
+          "checkpoint_sha256": "39f9daf7e4fad42cca39c1a7c70a9ed5d54ac5c4b9530f245cc86865b92ff249"
+        },
+        {
+          "seed": 20260717,
+          "best_epoch": 2,
+          "development_calibration_score": [
+            0.019268479198217392,
+            0.10942838340997696,
+            0.008846938610076904
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail0.5_margin0.02_seed20260717.pt",
+          "checkpoint_sha256": "d545d0b2315018f470fbd0c97c02b4eced64b8002f0fb7b1491058d824c145b1"
+        },
+        {
+          "seed": 20260718,
+          "best_epoch": 71,
+          "development_calibration_score": [
+            0.021852081641554832,
+            0.11761530488729477,
+            0.008966292254626751
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail0.5_margin0.02_seed20260718.pt",
+          "checkpoint_sha256": "da9993ca7138a9f83c7d84ff082faaf3c4caf5842ff2b5da9456a7c1707e88dd"
+        },
+        {
+          "seed": 20260719,
+          "best_epoch": 3,
+          "development_calibration_score": [
+            0.01924734190106392,
+            0.10641391575336456,
+            0.008198524825274944
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail0.5_margin0.02_seed20260719.pt",
+          "checkpoint_sha256": "20b421d53ead03eca7897aa762090efe6c0d587bdafaf862425821d57307f8e6"
+        },
+        {
+          "seed": 20260720,
+          "best_epoch": 6,
+          "development_calibration_score": [
+            0.019442923367023468,
+            0.10369087755680084,
+            0.008883940055966377
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail0.5_margin0.02_seed20260720.pt",
+          "checkpoint_sha256": "571148711bfafce569030a4c9287723f393148f098cac2861b2dcc08206a13ce"
+        }
+      ]
+    },
+    {
+      "candidate_id": "tail0.5_margin0.05",
+      "tail_ranking_weight": 0.5,
+      "ranking_margin": 0.05,
+      "mean_regret_db": 0.9344607416788738,
+      "cvar_0_9_regret_db": 6.137363751729329,
+      "brier_to_input_proxy": 0.008588045719079673,
+      "runs": [
+        {
+          "seed": 20260716,
+          "best_epoch": 3,
+          "development_calibration_score": [
+            0.01880994252860546,
+            0.10641391575336456,
+            0.00836476031690836
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail0.5_margin0.05_seed20260716.pt",
+          "checkpoint_sha256": "f3a8f9987839978c9c20beb67c0e419370669e17bba4ebc0e3e552433e4ed04e"
+        },
+        {
+          "seed": 20260717,
+          "best_epoch": 2,
+          "development_calibration_score": [
+            0.019268479198217392,
+            0.10942838340997696,
+            0.008846938610076904
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail0.5_margin0.05_seed20260717.pt",
+          "checkpoint_sha256": "5f4f4b379c13f4bcf9df0e46e9af710f0068f1bf16fd581649ee8cb9903fac42"
+        },
+        {
+          "seed": 20260718,
+          "best_epoch": 63,
+          "development_calibration_score": [
+            0.022788817062973976,
+            0.11761530488729477,
+            0.008853010833263397
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail0.5_margin0.05_seed20260718.pt",
+          "checkpoint_sha256": "1d354544968942d80c947dd6374f38510a668949b0908f404423249463b4deac"
+        },
+        {
+          "seed": 20260719,
+          "best_epoch": 3,
+          "development_calibration_score": [
+            0.01880994252860546,
+            0.10641391575336456,
+            0.008231857791543007
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail0.5_margin0.05_seed20260719.pt",
+          "checkpoint_sha256": "317ba9fe7659ef76a37e7994e0666d0292412ae611852c3e5b1913041cb6645d"
+        },
+        {
+          "seed": 20260720,
+          "best_epoch": 5,
+          "development_calibration_score": [
+            0.019442923367023468,
+            0.10369087755680084,
+            0.008870775811374187
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail0.5_margin0.05_seed20260720.pt",
+          "checkpoint_sha256": "018ee9efd72b348f39031654b147b3e320a57533b7fb8e532b815d6cbe9a8317"
+        }
+      ]
+    },
+    {
+      "candidate_id": "tail1_margin0.01",
+      "tail_ranking_weight": 1.0,
+      "ranking_margin": 0.01,
+      "mean_regret_db": 0.9346796035766601,
+      "cvar_0_9_regret_db": 6.137363751729329,
+      "brier_to_input_proxy": 0.008954668487422168,
+      "runs": [
+        {
+          "seed": 20260716,
+          "best_epoch": 3,
+          "development_calibration_score": [
+            0.01880994252860546,
+            0.10641391575336456,
+            0.00836476031690836
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail1_margin0.01_seed20260716.pt",
+          "checkpoint_sha256": "5fa30c99c0fb22cfec1e699c7c040d03d7669427eb30253935decd623b8c5a64"
+        },
+        {
+          "seed": 20260717,
+          "best_epoch": 2,
+          "development_calibration_score": [
+            0.019268479198217392,
+            0.10942838340997696,
+            0.008846938610076904
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail1_margin0.01_seed20260717.pt",
+          "checkpoint_sha256": "f85c79f4b7835cef31bc4ff43fb9ceb5e37ac2dd72dbd19c9ce2db9b71730344"
+        },
+        {
+          "seed": 20260718,
+          "best_epoch": 59,
+          "development_calibration_score": [
+            0.022947141900658607,
+            0.11761530488729477,
+            0.009021750651299953
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail1_margin0.01_seed20260718.pt",
+          "checkpoint_sha256": "557a49e7dc9be42cb3ce808b35ac409e89f4454ffd674b802fffc67cc9c751f1"
+        },
+        {
+          "seed": 20260719,
+          "best_epoch": 3,
+          "development_calibration_score": [
+            0.01924734190106392,
+            0.10641391575336456,
+            0.008198524825274944
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail1_margin0.01_seed20260719.pt",
+          "checkpoint_sha256": "33c910023cd022204519a6ccbcc0807fd22df532a0eb3a545f41282cd0dcb8b9"
+        },
+        {
+          "seed": 20260720,
+          "best_epoch": 6,
+          "development_calibration_score": [
+            0.020143475383520126,
+            0.10369087755680084,
+            0.008864854462444782
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail1_margin0.01_seed20260720.pt",
+          "checkpoint_sha256": "27e91bdb775c6c67a8a07b2fe915404a7924e82a068441d81949d4a3e2c969e8"
+        }
+      ]
+    },
+    {
+      "candidate_id": "tail1_margin0.02",
+      "tail_ranking_weight": 1.0,
+      "ranking_margin": 0.02,
+      "mean_regret_db": 0.9339708455403647,
+      "cvar_0_9_regret_db": 6.137363751729329,
+      "brier_to_input_proxy": 0.008806575159542262,
+      "runs": [
+        {
+          "seed": 20260716,
+          "best_epoch": 3,
+          "development_calibration_score": [
+            0.01880994252860546,
+            0.10641391575336456,
+            0.00836476031690836
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail1_margin0.02_seed20260716.pt",
+          "checkpoint_sha256": "b7e449673cde4452a7b349703c26b1aaa54145159ee336cb09c4a8f570a3f549"
+        },
+        {
+          "seed": 20260717,
+          "best_epoch": 2,
+          "development_calibration_score": [
+            0.019268479198217392,
+            0.10942838340997696,
+            0.008846938610076904
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail1_margin0.02_seed20260717.pt",
+          "checkpoint_sha256": "678890b0d5d397b203e22180560b922b9ea3cfff76b039b1862fa1c9160d82a9"
+        },
+        {
+          "seed": 20260718,
+          "best_epoch": 64,
+          "development_calibration_score": [
+            0.022895904257893562,
+            0.11761530488729477,
+            0.008962143212556839
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail1_margin0.02_seed20260718.pt",
+          "checkpoint_sha256": "5ccb799311a04657773ff4f36eb52d96fd5e9618396918461458e5e96fd77540"
+        },
+        {
+          "seed": 20260719,
+          "best_epoch": 3,
+          "development_calibration_score": [
+            0.01880994252860546,
+            0.10641391575336456,
+            0.008265191689133644
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail1_margin0.02_seed20260719.pt",
+          "checkpoint_sha256": "0ef8f0123b679f252e434183746e203c6492be4bf5c401d6a50bce3251458d64"
+        },
+        {
+          "seed": 20260720,
+          "best_epoch": 6,
+          "development_calibration_score": [
+            0.020143475383520126,
+            0.10369087755680084,
+            0.008861717768013477
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail1_margin0.02_seed20260720.pt",
+          "checkpoint_sha256": "ee024a1ccb88f77b63ec0e1b777f24f3911f2eb88250456fcb3a7be8c9f51472"
+        }
+      ]
+    },
+    {
+      "candidate_id": "tail1_margin0.05",
+      "tail_ranking_weight": 1.0,
+      "ranking_margin": 0.05,
+      "mean_regret_db": 0.9344607416788738,
+      "cvar_0_9_regret_db": 6.137363751729329,
+      "brier_to_input_proxy": 0.008560274611227214,
+      "runs": [
+        {
+          "seed": 20260716,
+          "best_epoch": 3,
+          "development_calibration_score": [
+            0.01880994252860546,
+            0.10641391575336456,
+            0.00836476031690836
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail1_margin0.05_seed20260716.pt",
+          "checkpoint_sha256": "1f2f92e839140bb758552b790d4f2212eb6b2308952caf29dae08371be3f1d2c"
+        },
+        {
+          "seed": 20260717,
+          "best_epoch": 2,
+          "development_calibration_score": [
+            0.019268479198217392,
+            0.10942838340997696,
+            0.008846938610076904
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail1_margin0.05_seed20260717.pt",
+          "checkpoint_sha256": "52ab4470c9ef1e5862849e9db7c3fd71f564097d7fc90caf12847e651e4aa229"
+        },
+        {
+          "seed": 20260718,
+          "best_epoch": 55,
+          "development_calibration_score": [
+            0.022788817062973976,
+            0.11761530488729477,
+            0.008823573589324951
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail1_margin0.05_seed20260718.pt",
+          "checkpoint_sha256": "c162bd59c428736801943bc932c897c1ac4b8e67327722e53e0c93ad7991b555"
+        },
+        {
+          "seed": 20260719,
+          "best_epoch": 3,
+          "development_calibration_score": [
+            0.01880994252860546,
+            0.10641391575336456,
+            0.008235841058194637
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail1_margin0.05_seed20260719.pt",
+          "checkpoint_sha256": "5972ba5afef7f34a2a83c98f45bfcd2524043ad0cc163f8aa55d1bf88a38c540"
+        },
+        {
+          "seed": 20260720,
+          "best_epoch": 6,
+          "development_calibration_score": [
+            0.020143475383520126,
+            0.10369087755680084,
+            0.008857005275785923
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail1_margin0.05_seed20260720.pt",
+          "checkpoint_sha256": "9849d424413b38aa244978359645b8827b60c8cc71c6606d0ecc4b7226fc60ad"
+        }
+      ]
+    },
+    {
+      "candidate_id": "tail2_margin0.01",
+      "tail_ranking_weight": 2.0,
+      "ranking_margin": 0.01,
+      "mean_regret_db": 0.9346796035766601,
+      "cvar_0_9_regret_db": 6.137363751729329,
+      "brier_to_input_proxy": 0.009069061907939612,
+      "runs": [
+        {
+          "seed": 20260716,
+          "best_epoch": 3,
+          "development_calibration_score": [
+            0.01880994252860546,
+            0.10641391575336456,
+            0.008335410617291927
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.01_seed20260716.pt",
+          "checkpoint_sha256": "46cc6aa781625a083cc3989fe8501518d69dd10545290afef28fd890820d9d0b"
+        },
+        {
+          "seed": 20260717,
+          "best_epoch": 2,
+          "development_calibration_score": [
+            0.019268479198217392,
+            0.10942838340997696,
+            0.008846938610076904
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.01_seed20260717.pt",
+          "checkpoint_sha256": "7cf38e6995265922d696636e2314aa9fff8bc03429a28f0380299890dd7d0c46"
+        },
+        {
+          "seed": 20260718,
+          "best_epoch": 59,
+          "development_calibration_score": [
+            0.022409744560718536,
+            0.1171744242310524,
+            0.009153300896286964
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.01_seed20260718.pt",
+          "checkpoint_sha256": "09a9de893d47851422dc1d699a537aec0fc9325c68f3a6d64ae284ecd46e36bb"
+        },
+        {
+          "seed": 20260719,
+          "best_epoch": 4,
+          "development_calibration_score": [
+            0.019244587048888206,
+            0.10641391575336456,
+            0.008142969571053982
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.01_seed20260719.pt",
+          "checkpoint_sha256": "17cae51a2e590e62da0773489075655f9316082e21f66e2e9913ad2b0cc4c6cc"
+        },
+        {
+          "seed": 20260720,
+          "best_epoch": 17,
+          "development_calibration_score": [
+            0.020143475383520126,
+            0.10369087755680084,
+            0.008972465060651302
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.01_seed20260720.pt",
+          "checkpoint_sha256": "a90800c91e8745282cc4b809fd8e641466fcc6fd5d87c595a8227cc8c92a6c43"
+        }
+      ]
+    },
+    {
+      "candidate_id": "tail2_margin0.02",
+      "tail_ranking_weight": 2.0,
+      "ranking_margin": 0.02,
+      "mean_regret_db": 0.9361425018310547,
+      "cvar_0_9_regret_db": 6.137363751729329,
+      "brier_to_input_proxy": 0.009214798803441226,
+      "runs": [
+        {
+          "seed": 20260716,
+          "best_epoch": 3,
+          "development_calibration_score": [
+            0.01880994252860546,
+            0.10641391575336456,
+            0.008335410617291927
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.02_seed20260716.pt",
+          "checkpoint_sha256": "d880f1d980e620b452d0a5568cd66710423e4bbb8ee2f7d0bd7ad9d14f0e7848"
+        },
+        {
+          "seed": 20260717,
+          "best_epoch": 73,
+          "development_calibration_score": [
+            0.01895458996295929,
+            0.0978635773062706,
+            0.009005132131278515
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.02_seed20260717.pt",
+          "checkpoint_sha256": "872f8aca8a5bb0404ba4e29904cd10554db07f72bc3fff8177711289dda0cf43"
+        },
+        {
+          "seed": 20260718,
+          "best_epoch": 74,
+          "development_calibration_score": [
+            0.021098947152495384,
+            0.1147531270980835,
+            0.00900351908057928
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.02_seed20260718.pt",
+          "checkpoint_sha256": "3db9feb7087683dc644c06327c4cef7684220f3ada45c2058d7099468baed73c"
+        },
+        {
+          "seed": 20260719,
+          "best_epoch": 3,
+          "development_calibration_score": [
+            0.01880994252860546,
+            0.10641391575336456,
+            0.008235841058194637
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.02_seed20260719.pt",
+          "checkpoint_sha256": "9b8e4db5be8fcabbc891978e6d89718d049731cc5cbc899421b5d9e059e4a6ff"
+        },
+        {
+          "seed": 20260720,
+          "best_epoch": 5,
+          "development_calibration_score": [
+            0.020143475383520126,
+            0.10369087755680084,
+            0.00887596607208252
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.02_seed20260720.pt",
+          "checkpoint_sha256": "25185fdc8d9cc309fe22b4b0bfb44068601f1c36bda5e067c790c6a8fcfa4036"
+        }
+      ]
+    },
+    {
+      "candidate_id": "tail2_margin0.05",
+      "tail_ranking_weight": 2.0,
+      "ranking_margin": 0.05,
+      "mean_regret_db": 0.9292358779907226,
+      "cvar_0_9_regret_db": 6.137363751729329,
+      "brier_to_input_proxy": 0.008668639953248203,
+      "runs": [
+        {
+          "seed": 20260716,
+          "best_epoch": 3,
+          "development_calibration_score": [
+            0.01880994252860546,
+            0.10641391575336456,
+            0.008335410617291927
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.05_seed20260716.pt",
+          "checkpoint_sha256": "e3c23c256aa0664c57c4dd49404a17daecb98e9a3f9affc95b56364137cad22f"
+        },
+        {
+          "seed": 20260717,
+          "best_epoch": 2,
+          "development_calibration_score": [
+            0.019268479198217392,
+            0.10942838340997696,
+            0.008846938610076904
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.05_seed20260717.pt",
+          "checkpoint_sha256": "182a1b19d9e743b1dd4e6b4dfdd86dfa80a5105292e56b4f10051f94322f2811"
+        },
+        {
+          "seed": 20260718,
+          "best_epoch": 68,
+          "development_calibration_score": [
+            0.022251417860388756,
+            0.1171744242310524,
+            0.00897454097867012
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.05_seed20260718.pt",
+          "checkpoint_sha256": "2237ccbdf24f283adb82fb9fed57df71dc6a13fb912aa5947abfd6834ba78695"
+        },
+        {
+          "seed": 20260719,
+          "best_epoch": 3,
+          "development_calibration_score": [
+            0.01880994252860546,
+            0.10641391575336456,
+            0.008235841058194637
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.05_seed20260719.pt",
+          "checkpoint_sha256": "2c56fcf7da88acc0e304b4b1a39ca165d84f5affbdeb13982bf2fe7a114a1553"
+        },
+        {
+          "seed": 20260720,
+          "best_epoch": 15,
+          "development_calibration_score": [
+            0.01963583193719387,
+            0.10369087755680084,
+            0.008977031335234642
+          ],
+          "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.05_seed20260720.pt",
+          "checkpoint_sha256": "7cae7415e8f7d18a80ecf61f9c6a3e5f7921a93518d8469e59c6d9e561e152bc"
+        }
+      ]
+    }
+  ],
+  "selected_candidate_id": "tail2_margin0.05",
+  "selected_candidate": {
+    "candidate_id": "tail2_margin0.05",
+    "tail_ranking_weight": 2.0,
+    "ranking_margin": 0.05,
+    "mean_regret_db": 0.9292358779907226,
+    "cvar_0_9_regret_db": 6.137363751729329,
+    "brier_to_input_proxy": 0.008668639953248203,
+    "runs": [
+      {
+        "seed": 20260716,
+        "best_epoch": 3,
+        "development_calibration_score": [
+          0.01880994252860546,
+          0.10641391575336456,
+          0.008335410617291927
+        ],
+        "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.05_seed20260716.pt",
+        "checkpoint_sha256": "e3c23c256aa0664c57c4dd49404a17daecb98e9a3f9affc95b56364137cad22f"
+      },
+      {
+        "seed": 20260717,
+        "best_epoch": 2,
+        "development_calibration_score": [
+          0.019268479198217392,
+          0.10942838340997696,
+          0.008846938610076904
+        ],
+        "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.05_seed20260717.pt",
+        "checkpoint_sha256": "182a1b19d9e743b1dd4e6b4dfdd86dfa80a5105292e56b4f10051f94322f2811"
+      },
+      {
+        "seed": 20260718,
+        "best_epoch": 68,
+        "development_calibration_score": [
+          0.022251417860388756,
+          0.1171744242310524,
+          0.00897454097867012
+        ],
+        "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.05_seed20260718.pt",
+        "checkpoint_sha256": "2237ccbdf24f283adb82fb9fed57df71dc6a13fb912aa5947abfd6834ba78695"
+      },
+      {
+        "seed": 20260719,
+        "best_epoch": 3,
+        "development_calibration_score": [
+          0.01880994252860546,
+          0.10641391575336456,
+          0.008235841058194637
+        ],
+        "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.05_seed20260719.pt",
+        "checkpoint_sha256": "2c56fcf7da88acc0e304b4b1a39ca165d84f5affbdeb13982bf2fe7a114a1553"
+      },
+      {
+        "seed": 20260720,
+        "best_epoch": 15,
+        "development_calibration_score": [
+          0.01963583193719387,
+          0.10369087755680084,
+          0.008977031335234642
+        ],
+        "checkpoint": "results/stage4/c1_v3_temporal_calibration_v1/checkpoints/tail2_margin0.05_seed20260720.pt",
+        "checkpoint_sha256": "7cae7415e8f7d18a80ecf61f9c6a3e5f7921a93518d8469e59c6d9e561e152bc"
+      }
+    ]
+  },
+  "selection_order": [
+    "mean_regret",
+    "cvar_0_9_regret",
+    "brier_to_input_proxy"
+  ],
+  "governance": {
+    "original_development_validation_loaded": false,
+    "original_three_site_final_loaded": false,
+    "new_confirmation_measurement_values_loaded": false,
+    "new_confirmation_access_count": 0,
+    "all_nine_preregistered_candidates_disclosed": true
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "torch": "2.12.0"
+    }
+  },
+  "claim_boundary": "Calibration and candidate freezing only; no new confirmation claim is produced by this run."
+}

@@ -1,0 +1,3657 @@
+{
+  "version": "1.0",
+  "status": "c1_v4_last_success_fallback_development_complete",
+  "protocol_sha256": "bf3876204d8e30fe331ca2d101a9847be5f102f6e2a2ebdc53c83802654598a3",
+  "cache_result_sha256": "bf229569b54d5b12e571abec538081fc04e8efddb67fdd2c02da24bd0e23959b",
+  "summary": {
+    "stateless_block0": {
+      "mean_regret_db": 0.17346897690384477,
+      "cvar_0_9_regret_db": 0.669128887741654,
+      "mean_actual_bits": 692.5579629629628,
+      "mean_frame_success_rate": 0.6784259259259259
+    },
+    "last_success_same_site": {
+      "mean_regret_db": 0.1240601380666097,
+      "cvar_0_9_regret_db": 0.41809378023500793,
+      "mean_actual_bits": 692.5579629629628,
+      "mean_frame_success_rate": 0.6784259259259259
+    }
+  },
+  "paired_cluster_bootstrap": {
+    "cluster_count": 72,
+    "repetitions": 10000,
+    "seed": 20260725,
+    "one_sided_confidence": 0.95,
+    "mean_regret_difference": -0.04940883883723506,
+    "mean_regret_upper_bound": -0.029334072012704594,
+    "mean_regret_one_sided_p": 9.999000099990002e-05,
+    "cvar_difference": -0.2510351075066461,
+    "cvar_upper_bound": -0.1752507063194558,
+    "cvar_one_sided_p": 9.999000099990002e-05,
+    "actual_bit_difference": 0.0,
+    "actual_bit_upper_bound": 0.0,
+    "baseline_mean_actual_bits": 692.5579629629628
+  },
+  "gates": {
+    "mean_regret_superiority": true,
+    "cvar_superiority": true,
+    "actual_bits_exactly_equal": true
+  },
+  "development_success": true,
+  "rows": [
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_000004",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T00",
+      "method": "stateless_block0",
+      "regret_db": 0.10059261322021484,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.725,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_000004",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T00",
+      "method": "last_success_same_site",
+      "regret_db": 0.10059261322021484,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.725,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_000007",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T00",
+      "method": "stateless_block0",
+      "regret_db": 0.021289571126302084,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_000007",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T00",
+      "method": "last_success_same_site",
+      "regret_db": 0.021289571126302084,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_000015",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T00",
+      "method": "stateless_block0",
+      "regret_db": 0.006462860107421875,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_000015",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T00",
+      "method": "last_success_same_site",
+      "regret_db": 0.006462860107421875,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_001504",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T00",
+      "method": "stateless_block0",
+      "regret_db": 0.48415985107421877,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_001504",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T00",
+      "method": "last_success_same_site",
+      "regret_db": 0.36956024169921875,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_001511",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T00",
+      "method": "stateless_block0",
+      "regret_db": 0.05033035278320312,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_001511",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T00",
+      "method": "last_success_same_site",
+      "regret_db": 0.044446563720703124,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_001533",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T00",
+      "method": "stateless_block0",
+      "regret_db": 0.37076568603515625,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.625,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_001533",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T00",
+      "method": "last_success_same_site",
+      "regret_db": 0.35918731689453126,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.625,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_004519",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T00",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_004519",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T00",
+      "method": "last_success_same_site",
+      "regret_db": 0.04369697570800781,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_004520",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T00",
+      "method": "stateless_block0",
+      "regret_db": 0.43560536702473956,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_004520",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T00",
+      "method": "last_success_same_site",
+      "regret_db": 0.2548830032348633,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_004609",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T00",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_004609",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T00",
+      "method": "last_success_same_site",
+      "regret_db": 0.041858800252278644,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_010020",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T01",
+      "method": "stateless_block0",
+      "regret_db": 0.0777142842610677,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_010020",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T01",
+      "method": "last_success_same_site",
+      "regret_db": 0.11039848327636718,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_010022",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T01",
+      "method": "stateless_block0",
+      "regret_db": 0.10747019449869792,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_010022",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T01",
+      "method": "last_success_same_site",
+      "regret_db": 0.09415384928385416,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_010110",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T01",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_010110",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T01",
+      "method": "last_success_same_site",
+      "regret_db": 0.041506195068359376,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_013031",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T01",
+      "method": "stateless_block0",
+      "regret_db": 0.35834147135416666,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.6333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_013031",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T01",
+      "method": "last_success_same_site",
+      "regret_db": 0.21442616780598958,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.6333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_013053",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T01",
+      "method": "stateless_block0",
+      "regret_db": 0.12145360310872395,
+      "actual_bits": 662.4333333333333,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_013053",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T01",
+      "method": "last_success_same_site",
+      "regret_db": 0.07639617919921875,
+      "actual_bits": 662.4333333333333,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_013146",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T01",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_013146",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T01",
+      "method": "last_success_same_site",
+      "regret_db": 0.012491226196289062,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_014553",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T01",
+      "method": "stateless_block0",
+      "regret_db": 0.009709803263346355,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_014553",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T01",
+      "method": "last_success_same_site",
+      "regret_db": 0.10521361033121744,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_014646",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T01",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.6333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_014646",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T01",
+      "method": "last_success_same_site",
+      "regret_db": 0.008084360758463542,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.6333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_020038",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T02",
+      "method": "stateless_block0",
+      "regret_db": 0.06316413879394531,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_020038",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T02",
+      "method": "last_success_same_site",
+      "regret_db": 0.03850059509277344,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_021543",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T02",
+      "method": "stateless_block0",
+      "regret_db": 0.09988174438476563,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.7166666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_021543",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T02",
+      "method": "last_success_same_site",
+      "regret_db": 0.05287857055664062,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.7166666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_021608",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T02",
+      "method": "stateless_block0",
+      "regret_db": 0.06935335795084635,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_021608",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T02",
+      "method": "last_success_same_site",
+      "regret_db": 0.06758333841959635,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_021719",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T02",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_021719",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T02",
+      "method": "last_success_same_site",
+      "regret_db": 0.014627710978190104,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_024549",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T02",
+      "method": "stateless_block0",
+      "regret_db": 0.06940078735351562,
+      "actual_bits": 662.4333333333333,
+      "frame_success_rate": 0.75,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_024549",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T02",
+      "method": "last_success_same_site",
+      "regret_db": 0.032387034098307295,
+      "actual_bits": 662.4333333333333,
+      "frame_success_rate": 0.75,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_024641",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T02",
+      "method": "stateless_block0",
+      "regret_db": 0.20477848052978515,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_024641",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T02",
+      "method": "last_success_same_site",
+      "regret_db": 0.09509175618489583,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_024750",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T02",
+      "method": "stateless_block0",
+      "regret_db": 0.044261932373046875,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_024750",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T02",
+      "method": "last_success_same_site",
+      "regret_db": 0.04780298868815104,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_030053",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T03",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_030053",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T03",
+      "method": "last_success_same_site",
+      "regret_db": 0.08221435546875,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_030158",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T03",
+      "method": "stateless_block0",
+      "regret_db": 0.055492401123046875,
+      "actual_bits": 721.9333333333333,
+      "frame_success_rate": 0.625,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_030158",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T03",
+      "method": "last_success_same_site",
+      "regret_db": 0.019171905517578126,
+      "actual_bits": 721.9333333333333,
+      "frame_success_rate": 0.625,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_030251",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T03",
+      "method": "stateless_block0",
+      "regret_db": 0.7047262827555338,
+      "actual_bits": 721.9333333333333,
+      "frame_success_rate": 0.6083333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_030251",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T03",
+      "method": "last_success_same_site",
+      "regret_db": 0.565631357828776,
+      "actual_bits": 721.9333333333333,
+      "frame_success_rate": 0.6083333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_033101",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T03",
+      "method": "stateless_block0",
+      "regret_db": 0.09689992268880208,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_033101",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T03",
+      "method": "last_success_same_site",
+      "regret_db": 0.0637499491373698,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_033231",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T03",
+      "method": "stateless_block0",
+      "regret_db": 0.6227859497070313,
+      "actual_bits": 714.0,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_033231",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T03",
+      "method": "last_success_same_site",
+      "regret_db": 0.20296115875244142,
+      "actual_bits": 714.0,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_033324",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T03",
+      "method": "stateless_block0",
+      "regret_db": 0.03462918599446615,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_033324",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T03",
+      "method": "last_success_same_site",
+      "regret_db": 0.03788884480794271,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_034747",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T03",
+      "method": "stateless_block0",
+      "regret_db": 0.2350006103515625,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_034747",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T03",
+      "method": "last_success_same_site",
+      "regret_db": 0.11093597412109375,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_034841",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T03",
+      "method": "stateless_block0",
+      "regret_db": 0.0213958740234375,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_034841",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T03",
+      "method": "last_success_same_site",
+      "regret_db": 0.0127716064453125,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_040108",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T04",
+      "method": "stateless_block0",
+      "regret_db": 0.018849563598632813,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_040108",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T04",
+      "method": "last_success_same_site",
+      "regret_db": 0.0769830067952474,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_041611",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T04",
+      "method": "stateless_block0",
+      "regret_db": 0.016249847412109376,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_041611",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T04",
+      "method": "last_success_same_site",
+      "regret_db": 0.06848716735839844,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_041747",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T04",
+      "method": "stateless_block0",
+      "regret_db": 0.3436749776204427,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_041747",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T04",
+      "method": "last_success_same_site",
+      "regret_db": 0.16353836059570312,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_041859",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T04",
+      "method": "stateless_block0",
+      "regret_db": 0.3157099405924479,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_041859",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T04",
+      "method": "last_success_same_site",
+      "regret_db": 0.19276657104492187,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_044619",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T04",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 714.0,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_044619",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T04",
+      "method": "last_success_same_site",
+      "regret_db": 0.03693059285481771,
+      "actual_bits": 714.0,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_044749",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T04",
+      "method": "stateless_block0",
+      "regret_db": 0.3621837615966797,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.725,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_044749",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T04",
+      "method": "last_success_same_site",
+      "regret_db": 0.1316240946451823,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.725,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_044915",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T04",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_044915",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T04",
+      "method": "last_success_same_site",
+      "regret_db": 0.203411865234375,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_050123",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T05",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_050123",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T05",
+      "method": "last_success_same_site",
+      "regret_db": 0.024802271525065103,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_050250",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T05",
+      "method": "stateless_block0",
+      "regret_db": 0.35115509033203124,
+      "actual_bits": 666.4,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_050250",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T05",
+      "method": "last_success_same_site",
+      "regret_db": 0.13617769877115884,
+      "actual_bits": 666.4,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_050432",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T05",
+      "method": "stateless_block0",
+      "regret_db": 0.14592933654785156,
+      "actual_bits": 717.9666666666667,
+      "frame_success_rate": 0.625,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_050432",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T05",
+      "method": "last_success_same_site",
+      "regret_db": 0.14635213216145834,
+      "actual_bits": 717.9666666666667,
+      "frame_success_rate": 0.625,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_053130",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T05",
+      "method": "stateless_block0",
+      "regret_db": 0.024129231770833332,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_053130",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T05",
+      "method": "last_success_same_site",
+      "regret_db": 0.0349761962890625,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_053306",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T05",
+      "method": "stateless_block0",
+      "regret_db": 0.23745269775390626,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_053306",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T05",
+      "method": "last_success_same_site",
+      "regret_db": 0.0642834981282552,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_053503",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T05",
+      "method": "stateless_block0",
+      "regret_db": 0.2696540832519531,
+      "actual_bits": 670.3666666666667,
+      "frame_success_rate": 0.725,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_053503",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T05",
+      "method": "last_success_same_site",
+      "regret_db": 0.1859357198079427,
+      "actual_bits": 670.3666666666667,
+      "frame_success_rate": 0.725,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_054822",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T05",
+      "method": "stateless_block0",
+      "regret_db": 0.3829347610473633,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_054822",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T05",
+      "method": "last_success_same_site",
+      "regret_db": 0.18871548970540364,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_055021",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T05",
+      "method": "stateless_block0",
+      "regret_db": 0.022444407145182293,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_055021",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T05",
+      "method": "last_success_same_site",
+      "regret_db": 0.014143880208333333,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_060138",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T06",
+      "method": "stateless_block0",
+      "regret_db": 0.019330596923828124,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_060138",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T06",
+      "method": "last_success_same_site",
+      "regret_db": 0.02458216349283854,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_061641",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T06",
+      "method": "stateless_block0",
+      "regret_db": 0.18427886962890624,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_061641",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T06",
+      "method": "last_success_same_site",
+      "regret_db": 0.15290323893229166,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_061856",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T06",
+      "method": "stateless_block0",
+      "regret_db": 0.5014450073242187,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_061856",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T06",
+      "method": "last_success_same_site",
+      "regret_db": 0.2068206787109375,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_062056",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T06",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 670.3666666666667,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_062056",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T06",
+      "method": "last_success_same_site",
+      "regret_db": 0.047980244954427084,
+      "actual_bits": 670.3666666666667,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_064648",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T06",
+      "method": "stateless_block0",
+      "regret_db": 0.02019195556640625,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_064648",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T06",
+      "method": "last_success_same_site",
+      "regret_db": 0.041076405843098955,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_064912",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T06",
+      "method": "stateless_block0",
+      "regret_db": 0.12560017903645834,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_064912",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T06",
+      "method": "last_success_same_site",
+      "regret_db": 0.0979119618733724,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_065130",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T06",
+      "method": "stateless_block0",
+      "regret_db": 0.07904319763183594,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_065130",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T06",
+      "method": "last_success_same_site",
+      "regret_db": 0.05636469523111979,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_070152",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T07",
+      "method": "stateless_block0",
+      "regret_db": 0.038041305541992185,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_070152",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T07",
+      "method": "last_success_same_site",
+      "regret_db": 0.02540766398111979,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_070428",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T07",
+      "method": "stateless_block0",
+      "regret_db": 0.13464698791503907,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_070428",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T07",
+      "method": "last_success_same_site",
+      "regret_db": 0.126263427734375,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_070648",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T07",
+      "method": "stateless_block0",
+      "regret_db": 0.04421094258626302,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_070648",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T07",
+      "method": "last_success_same_site",
+      "regret_db": 0.023661168416341145,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_073200",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T07",
+      "method": "stateless_block0",
+      "regret_db": 0.1063568115234375,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_073200",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T07",
+      "method": "last_success_same_site",
+      "regret_db": 0.06831868489583333,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_073500",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T07",
+      "method": "stateless_block0",
+      "regret_db": 0.2592294692993164,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_073500",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T07",
+      "method": "last_success_same_site",
+      "regret_db": 0.11423912048339843,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_073720",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T07",
+      "method": "stateless_block0",
+      "regret_db": 0.4836527506510417,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_073720",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T07",
+      "method": "last_success_same_site",
+      "regret_db": 0.20555241902669272,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_075000",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T07",
+      "method": "stateless_block0",
+      "regret_db": 0.4461097081502279,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_075000",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T07",
+      "method": "last_success_same_site",
+      "regret_db": 0.30499483744303385,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_075221",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T07",
+      "method": "stateless_block0",
+      "regret_db": 0.6717282613118489,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_075221",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T07",
+      "method": "last_success_same_site",
+      "regret_db": 0.24575424194335938,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_080207",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T08",
+      "method": "stateless_block0",
+      "regret_db": 0.05690968831380208,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_080207",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T08",
+      "method": "last_success_same_site",
+      "regret_db": 0.024462890625,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_081711",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T08",
+      "method": "stateless_block0",
+      "regret_db": 0.12752342224121094,
+      "actual_bits": 717.9666666666667,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_081711",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T08",
+      "method": "last_success_same_site",
+      "regret_db": 0.06260363260904948,
+      "actual_bits": 717.9666666666667,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_082033",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T08",
+      "method": "stateless_block0",
+      "regret_db": 0.12831319173177083,
+      "actual_bits": 714.0,
+      "frame_success_rate": 0.6333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_082033",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T08",
+      "method": "last_success_same_site",
+      "regret_db": 0.09942461649576823,
+      "actual_bits": 714.0,
+      "frame_success_rate": 0.6333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_082255",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T08",
+      "method": "stateless_block0",
+      "regret_db": 0.39129638671875,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_082255",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T08",
+      "method": "last_success_same_site",
+      "regret_db": 0.1369537353515625,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_084719",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T08",
+      "method": "stateless_block0",
+      "regret_db": 0.3637682596842448,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.6416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_084719",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T08",
+      "method": "last_success_same_site",
+      "regret_db": 0.13228734334309897,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.6416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_085106",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T08",
+      "method": "stateless_block0",
+      "regret_db": 0.14400253295898438,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_085106",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T08",
+      "method": "last_success_same_site",
+      "regret_db": 0.07671152750651042,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_085329",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T08",
+      "method": "stateless_block0",
+      "regret_db": 0.25999120076497395,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6166666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_085329",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T08",
+      "method": "last_success_same_site",
+      "regret_db": 0.07347577412923177,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6166666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_090623",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T09",
+      "method": "stateless_block0",
+      "regret_db": 0.2862752278645833,
+      "actual_bits": 725.9,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_090623",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T09",
+      "method": "last_success_same_site",
+      "regret_db": 0.10257568359375,
+      "actual_bits": 725.9,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_090845",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T09",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 670.3666666666667,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_090845",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T09",
+      "method": "last_success_same_site",
+      "regret_db": 0.17396405537923176,
+      "actual_bits": 670.3666666666667,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_091727",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T09",
+      "method": "stateless_block0",
+      "regret_db": 0.10079625447591146,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_091727",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T09",
+      "method": "last_success_same_site",
+      "regret_db": 0.04255243937174479,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_093231",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T09",
+      "method": "stateless_block0",
+      "regret_db": 0.02532679239908854,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_093231",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T09",
+      "method": "last_success_same_site",
+      "regret_db": 0.043080647786458336,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_093654",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T09",
+      "method": "stateless_block0",
+      "regret_db": 0.12085800170898438,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.725,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_093654",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T09",
+      "method": "last_success_same_site",
+      "regret_db": 0.31370519002278646,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.725,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_093919",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T09",
+      "method": "stateless_block0",
+      "regret_db": 0.26227340698242185,
+      "actual_bits": 666.4,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_093919",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T09",
+      "method": "last_success_same_site",
+      "regret_db": 0.14885787963867186,
+      "actual_bits": 666.4,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_095211",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T09",
+      "method": "stateless_block0",
+      "regret_db": 0.1320089340209961,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_095211",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T09",
+      "method": "last_success_same_site",
+      "regret_db": 0.07548446655273437,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_095437",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T09",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 670.3666666666667,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_095437",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T09",
+      "method": "last_success_same_site",
+      "regret_db": 0.14457194010416666,
+      "actual_bits": 670.3666666666667,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_100239",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T10",
+      "method": "stateless_block0",
+      "regret_db": 0.014928309122721355,
+      "actual_bits": 714.0,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_100239",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T10",
+      "method": "last_success_same_site",
+      "regret_db": 0.06879564921061197,
+      "actual_bits": 714.0,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_101743",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T10",
+      "method": "stateless_block0",
+      "regret_db": 0.30254364013671875,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_101743",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T10",
+      "method": "last_success_same_site",
+      "regret_db": 0.26718114217122396,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_102243",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T10",
+      "method": "stateless_block0",
+      "regret_db": 0.38939253489176434,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_102243",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T10",
+      "method": "last_success_same_site",
+      "regret_db": 0.12834180196126302,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_102510",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T10",
+      "method": "stateless_block0",
+      "regret_db": 0.4050140380859375,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_102510",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T10",
+      "method": "last_success_same_site",
+      "regret_db": 0.298431396484375,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_104751",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T10",
+      "method": "stateless_block0",
+      "regret_db": 0.052172342936197914,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_104751",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T10",
+      "method": "last_success_same_site",
+      "regret_db": 0.023927052815755207,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_105315",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T10",
+      "method": "stateless_block0",
+      "regret_db": 0.35151214599609376,
+      "actual_bits": 666.4,
+      "frame_success_rate": 0.7166666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_105315",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T10",
+      "method": "last_success_same_site",
+      "regret_db": 0.18001365661621094,
+      "actual_bits": 666.4,
+      "frame_success_rate": 0.7166666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_105543",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T10",
+      "method": "stateless_block0",
+      "regret_db": 0.471551513671875,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_105543",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T10",
+      "method": "last_success_same_site",
+      "regret_db": 0.2418212890625,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_110831",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T11",
+      "method": "stateless_block0",
+      "regret_db": 0.30809574127197265,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_110831",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T11",
+      "method": "last_success_same_site",
+      "regret_db": 0.15320816040039062,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_111100",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T11",
+      "method": "stateless_block0",
+      "regret_db": 0.16170272827148438,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_111100",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T11",
+      "method": "last_success_same_site",
+      "regret_db": 0.06768951416015626,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_111800",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T11",
+      "method": "stateless_block0",
+      "regret_db": 0.01427764892578125,
+      "actual_bits": 670.3666666666667,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_111800",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T11",
+      "method": "last_success_same_site",
+      "regret_db": 0.0836700439453125,
+      "actual_bits": 670.3666666666667,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_113304",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T11",
+      "method": "stateless_block0",
+      "regret_db": 0.039586385091145836,
+      "actual_bits": 714.0,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_113304",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T11",
+      "method": "last_success_same_site",
+      "regret_db": 0.02317390441894531,
+      "actual_bits": 714.0,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_113904",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T11",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.7333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_113904",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T11",
+      "method": "last_success_same_site",
+      "regret_db": 0.09451815287272135,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.7333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_114134",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T11",
+      "method": "stateless_block0",
+      "regret_db": 0.41935704549153646,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_114134",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T11",
+      "method": "last_success_same_site",
+      "regret_db": 0.15342330932617188,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_115420",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T11",
+      "method": "stateless_block0",
+      "regret_db": 0.458070182800293,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_115420",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T11",
+      "method": "last_success_same_site",
+      "regret_db": 0.33836504618326824,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_115652",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T11",
+      "method": "stateless_block0",
+      "regret_db": 0.17780354817708333,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_115652",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T11",
+      "method": "last_success_same_site",
+      "regret_db": 0.07208251953125,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_120311",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T12",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.7166666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_120311",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T12",
+      "method": "last_success_same_site",
+      "regret_db": 0.020860799153645835,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.7166666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_121815",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T12",
+      "method": "stateless_block0",
+      "regret_db": 0.03573277791341146,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_121815",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T12",
+      "method": "last_success_same_site",
+      "regret_db": 0.024827067057291666,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_122435",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T12",
+      "method": "stateless_block0",
+      "regret_db": 0.5633926391601562,
+      "actual_bits": 670.3666666666667,
+      "frame_success_rate": 0.75,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_122435",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T12",
+      "method": "last_success_same_site",
+      "regret_db": 0.2720998764038086,
+      "actual_bits": 670.3666666666667,
+      "frame_success_rate": 0.75,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_122724",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T12",
+      "method": "stateless_block0",
+      "regret_db": 0.42397613525390626,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_122724",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T12",
+      "method": "last_success_same_site",
+      "regret_db": 0.14132537841796874,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_123951",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T12",
+      "method": "stateless_block0",
+      "regret_db": 0.4692737579345703,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_123951",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T12",
+      "method": "last_success_same_site",
+      "regret_db": 0.1841146469116211,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_124241",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T12",
+      "method": "stateless_block0",
+      "regret_db": 0.022374471028645832,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_124241",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T12",
+      "method": "last_success_same_site",
+      "regret_db": 0.006152979532877604,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_124823",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T12",
+      "method": "stateless_block0",
+      "regret_db": 0.14260406494140626,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_124823",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T12",
+      "method": "last_success_same_site",
+      "regret_db": 0.07970860799153646,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_131024",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T13",
+      "method": "stateless_block0",
+      "regret_db": 0.12253506978352864,
+      "actual_bits": 658.4666666666667,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_131024",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T13",
+      "method": "last_success_same_site",
+      "regret_db": 0.06358273824055989,
+      "actual_bits": 658.4666666666667,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_131316",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T13",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_131316",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T13",
+      "method": "last_success_same_site",
+      "regret_db": 0.12850850423177082,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_131831",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T13",
+      "method": "stateless_block0",
+      "regret_db": 0.012779617309570312,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_131831",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T13",
+      "method": "last_success_same_site",
+      "regret_db": 0.0785589853922526,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_133335",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T13",
+      "method": "stateless_block0",
+      "regret_db": 0.0307464599609375,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_133335",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T13",
+      "method": "last_success_same_site",
+      "regret_db": 0.014530181884765625,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_134057",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T13",
+      "method": "stateless_block0",
+      "regret_db": 0.17319679260253906,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_134057",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T13",
+      "method": "last_success_same_site",
+      "regret_db": 0.17027409871419272,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_134334",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T13",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 670.3666666666667,
+      "frame_success_rate": 0.7416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_134334",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T13",
+      "method": "last_success_same_site",
+      "regret_db": 0.12381591796875,
+      "actual_bits": 670.3666666666667,
+      "frame_success_rate": 0.7416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_135613",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T13",
+      "method": "stateless_block0",
+      "regret_db": 1.309079360961914,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_135613",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T13",
+      "method": "last_success_same_site",
+      "regret_db": 0.7727668126424153,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_135852",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T13",
+      "method": "stateless_block0",
+      "regret_db": 0.17455851236979167,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.7166666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_135852",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T13",
+      "method": "last_success_same_site",
+      "regret_db": 0.13348592122395833,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.7166666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_140342",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T14",
+      "method": "stateless_block0",
+      "regret_db": 0.08992258707682292,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_140342",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T14",
+      "method": "last_success_same_site",
+      "regret_db": 0.040939076741536455,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_141846",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T14",
+      "method": "stateless_block0",
+      "regret_db": 0.013163248697916666,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_141846",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T14",
+      "method": "last_success_same_site",
+      "regret_db": 0.10400238037109374,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_142645",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T14",
+      "method": "stateless_block0",
+      "regret_db": 1.0017695109049478,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_142645",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T14",
+      "method": "last_success_same_site",
+      "regret_db": 0.5146510442097981,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_142927",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T14",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_142927",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T14",
+      "method": "last_success_same_site",
+      "regret_db": 0.14739303588867186,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_144200",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T14",
+      "method": "stateless_block0",
+      "regret_db": 0.3263503392537435,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_144200",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T14",
+      "method": "last_success_same_site",
+      "regret_db": 0.212156613667806,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_144444",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T14",
+      "method": "stateless_block0",
+      "regret_db": 0.353302001953125,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_144444",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T14",
+      "method": "last_success_same_site",
+      "regret_db": 0.25614395141601565,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_144854",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T14",
+      "method": "stateless_block0",
+      "regret_db": 0.031646728515625,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_144854",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T14",
+      "method": "last_success_same_site",
+      "regret_db": 0.01447906494140625,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_151233",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T15",
+      "method": "stateless_block0",
+      "regret_db": 0.3692899703979492,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_151233",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T15",
+      "method": "last_success_same_site",
+      "regret_db": 0.12075424194335938,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_151501",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T15",
+      "method": "stateless_block0",
+      "regret_db": 0.05274009704589844,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_151501",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T15",
+      "method": "last_success_same_site",
+      "regret_db": 0.025693893432617188,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_151901",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T15",
+      "method": "stateless_block0",
+      "regret_db": 0.014336395263671874,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.6416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_151901",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T15",
+      "method": "last_success_same_site",
+      "regret_db": 0.11386922200520834,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.6416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_153405",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T15",
+      "method": "stateless_block0",
+      "regret_db": 0.06484146118164062,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_153405",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T15",
+      "method": "last_success_same_site",
+      "regret_db": 0.034400558471679686,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_154305",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T15",
+      "method": "stateless_block0",
+      "regret_db": 0.45899257659912107,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_154305",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T15",
+      "method": "last_success_same_site",
+      "regret_db": 0.23172842661539714,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_154519",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T15",
+      "method": "stateless_block0",
+      "regret_db": 0.04102109273274739,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_154519",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T15",
+      "method": "last_success_same_site",
+      "regret_db": 0.016630172729492188,
+      "actual_bits": 710.0333333333333,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_155821",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T15",
+      "method": "stateless_block0",
+      "regret_db": 0.11375134785970052,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_155821",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T15",
+      "method": "last_success_same_site",
+      "regret_db": 0.1317858378092448,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_160037",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T16",
+      "method": "stateless_block0",
+      "regret_db": 0.23564656575520834,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_160037",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T16",
+      "method": "last_success_same_site",
+      "regret_db": 0.07471720377604167,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_160412",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T16",
+      "method": "stateless_block0",
+      "regret_db": 0.013963826497395833,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_160412",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T16",
+      "method": "last_success_same_site",
+      "regret_db": 0.0561676025390625,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_162822",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T16",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_162822",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T16",
+      "method": "last_success_same_site",
+      "regret_db": 0.17352167765299478,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_163053",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T16",
+      "method": "stateless_block0",
+      "regret_db": 0.009258015950520834,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_163053",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T16",
+      "method": "last_success_same_site",
+      "regret_db": 0.036638895670572914,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_163420",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T16",
+      "method": "stateless_block0",
+      "regret_db": 0.03830795288085938,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_163420",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T16",
+      "method": "last_success_same_site",
+      "regret_db": 0.025905863444010416,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_164322",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T16",
+      "method": "stateless_block0",
+      "regret_db": 0.28620223999023436,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.7416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_164322",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T16",
+      "method": "last_success_same_site",
+      "regret_db": 0.24576263427734374,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.7416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_164609",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T16",
+      "method": "stateless_block0",
+      "regret_db": 0.039356231689453125,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_164609",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T16",
+      "method": "last_success_same_site",
+      "regret_db": 0.03775634765625,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_164924",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T16",
+      "method": "stateless_block0",
+      "regret_db": 0.016001001993815104,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_164924",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T16",
+      "method": "last_success_same_site",
+      "regret_db": 0.07136421203613282,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_171355",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T17",
+      "method": "stateless_block0",
+      "regret_db": 0.055880228678385414,
+      "actual_bits": 714.0,
+      "frame_success_rate": 0.6416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_171355",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T17",
+      "method": "last_success_same_site",
+      "regret_db": 0.09413719177246094,
+      "actual_bits": 714.0,
+      "frame_success_rate": 0.6416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_171643",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T17",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_171643",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T17",
+      "method": "last_success_same_site",
+      "regret_db": 0.0420752207438151,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_171931",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T17",
+      "method": "stateless_block0",
+      "regret_db": 0.010030110677083334,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.7166666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_171931",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T17",
+      "method": "last_success_same_site",
+      "regret_db": 0.042612711588541664,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.7166666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_173434",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T17",
+      "method": "stateless_block0",
+      "regret_db": 0.0031145731608072918,
+      "actual_bits": 714.0,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_173434",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T17",
+      "method": "last_success_same_site",
+      "regret_db": 0.016518656412760416,
+      "actual_bits": 714.0,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_174428",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T17",
+      "method": "stateless_block0",
+      "regret_db": 0.34363136291503904,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_174428",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T17",
+      "method": "last_success_same_site",
+      "regret_db": 0.15815334320068358,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_174719",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T17",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_174719",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T17",
+      "method": "last_success_same_site",
+      "regret_db": 0.01573499043782552,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_175945",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T17",
+      "method": "stateless_block0",
+      "regret_db": 0.6163202921549479,
+      "actual_bits": 666.4,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_175945",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T17",
+      "method": "last_success_same_site",
+      "regret_db": 0.23765316009521484,
+      "actual_bits": 666.4,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_180219",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T18",
+      "method": "stateless_block0",
+      "regret_db": 0.034802754720052086,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_180219",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T18",
+      "method": "last_success_same_site",
+      "regret_db": 0.027410888671875,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_180442",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T18",
+      "method": "stateless_block0",
+      "regret_db": 0.0135650634765625,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_180442",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T18",
+      "method": "last_success_same_site",
+      "regret_db": 0.0036296844482421875,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_183017",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T18",
+      "method": "stateless_block0",
+      "regret_db": 0.35448099772135416,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_183017",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T18",
+      "method": "last_success_same_site",
+      "regret_db": 0.41946868896484374,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_183253",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T18",
+      "method": "stateless_block0",
+      "regret_db": 0.378717041015625,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_183253",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T18",
+      "method": "last_success_same_site",
+      "regret_db": 0.32638448079427085,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_183450",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T18",
+      "method": "stateless_block0",
+      "regret_db": 0.017223358154296875,
+      "actual_bits": 717.9666666666667,
+      "frame_success_rate": 0.6416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_183450",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T18",
+      "method": "last_success_same_site",
+      "regret_db": 0.020853424072265626,
+      "actual_bits": 717.9666666666667,
+      "frame_success_rate": 0.6416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_184533",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T18",
+      "method": "stateless_block0",
+      "regret_db": 0.257928721110026,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_184533",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T18",
+      "method": "last_success_same_site",
+      "regret_db": 0.10326283772786458,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_184811",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T18",
+      "method": "stateless_block0",
+      "regret_db": 1.1215960184733074,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_184811",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T18",
+      "method": "last_success_same_site",
+      "regret_db": 0.6514951070149739,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_184953",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T18",
+      "method": "stateless_block0",
+      "regret_db": 0.07287216186523438,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_184953",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T18",
+      "method": "last_success_same_site",
+      "regret_db": 0.11027336120605469,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_191550",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T19",
+      "method": "stateless_block0",
+      "regret_db": 0.2953867594401042,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_191550",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T19",
+      "method": "last_success_same_site",
+      "regret_db": 0.09149068196614583,
+      "actual_bits": 702.1,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_191830",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T19",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_191830",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T19",
+      "method": "last_success_same_site",
+      "regret_db": 0.3308380126953125,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_192000",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T19",
+      "method": "stateless_block0",
+      "regret_db": 0.01396636962890625,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_192000",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T19",
+      "method": "last_success_same_site",
+      "regret_db": 0.06069526672363281,
+      "actual_bits": 674.3333333333334,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_193504",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T19",
+      "method": "stateless_block0",
+      "regret_db": 0.09783401489257812,
+      "actual_bits": 714.0,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_193504",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T19",
+      "method": "last_success_same_site",
+      "regret_db": 0.07250404357910156,
+      "actual_bits": 714.0,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_194606",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T19",
+      "method": "stateless_block0",
+      "regret_db": 0.44652048746744794,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_194606",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T19",
+      "method": "last_success_same_site",
+      "regret_db": 0.1364880879720052,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_194905",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T19",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 666.4,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_194905",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T19",
+      "method": "last_success_same_site",
+      "regret_db": 0.026944986979166665,
+      "actual_bits": 666.4,
+      "frame_success_rate": 0.7083333333333334,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_200122",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T20",
+      "method": "stateless_block0",
+      "regret_db": 0.547753651936849,
+      "actual_bits": 721.9333333333333,
+      "frame_success_rate": 0.6333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_200122",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T20",
+      "method": "last_success_same_site",
+      "regret_db": 0.3389319101969401,
+      "actual_bits": 721.9333333333333,
+      "frame_success_rate": 0.6333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_200405",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T20",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.725,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_200405",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T20",
+      "method": "last_success_same_site",
+      "regret_db": 0.035213470458984375,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.725,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_200512",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T20",
+      "method": "stateless_block0",
+      "regret_db": 0.056480662027994795,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_200512",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T20",
+      "method": "last_success_same_site",
+      "regret_db": 0.028952407836914062,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_203154",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T20",
+      "method": "stateless_block0",
+      "regret_db": 0.031490325927734375,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_203154",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T20",
+      "method": "last_success_same_site",
+      "regret_db": 0.531463623046875,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_203439",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T20",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_203439",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T20",
+      "method": "last_success_same_site",
+      "regret_db": 0.0364959716796875,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_203520",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T20",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.7166666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_203520",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T20",
+      "method": "last_success_same_site",
+      "regret_db": 0.06942520141601563,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.7166666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_204654",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T20",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_204654",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T20",
+      "method": "last_success_same_site",
+      "regret_db": 0.2656379699707031,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_204939",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T20",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_204939",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T20",
+      "method": "last_success_same_site",
+      "regret_db": 0.012348175048828125,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_205024",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T20",
+      "method": "stateless_block0",
+      "regret_db": 0.2592498779296875,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_205024",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T20",
+      "method": "last_success_same_site",
+      "regret_db": 0.20894521077473957,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.7,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_211726",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T21",
+      "method": "stateless_block0",
+      "regret_db": 0.05684738159179688,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.7166666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_211726",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T21",
+      "method": "last_success_same_site",
+      "regret_db": 0.10776964823404948,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.7166666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_212011",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T21",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.725,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_212011",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T21",
+      "method": "last_success_same_site",
+      "regret_db": 0.03358917236328125,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.725,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_212032",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T21",
+      "method": "stateless_block0",
+      "regret_db": 0.014271291097005208,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.7166666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_212032",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T21",
+      "method": "last_success_same_site",
+      "regret_db": 0.051470311482747395,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.7166666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_213535",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T21",
+      "method": "stateless_block0",
+      "regret_db": 0.13805274963378905,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_213535",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T21",
+      "method": "last_success_same_site",
+      "regret_db": 0.10166244506835938,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_214742",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T21",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_214742",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T21",
+      "method": "last_success_same_site",
+      "regret_db": 0.05491422017415364,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_215045",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T21",
+      "method": "stateless_block0",
+      "regret_db": 0.0432861328125,
+      "actual_bits": 662.4333333333333,
+      "frame_success_rate": 0.7333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_215045",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T21",
+      "method": "last_success_same_site",
+      "regret_db": 0.041076278686523436,
+      "actual_bits": 662.4333333333333,
+      "frame_success_rate": 0.7333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_220258",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T22",
+      "method": "stateless_block0",
+      "regret_db": 0.21935157775878905,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_220258",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T22",
+      "method": "last_success_same_site",
+      "regret_db": 0.16451492309570312,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_220543",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T22",
+      "method": "stateless_block0",
+      "regret_db": 0.03889007568359375,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_220543",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T22",
+      "method": "last_success_same_site",
+      "regret_db": 0.014504750569661459,
+      "actual_bits": 678.3,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_220546",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T22",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_220546",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T22",
+      "method": "last_success_same_site",
+      "regret_db": 0.04833780924479167,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_223331",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T22",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.725,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_223331",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T22",
+      "method": "last_success_same_site",
+      "regret_db": 0.013830757141113282,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.725,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_223550",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T22",
+      "method": "stateless_block0",
+      "regret_db": 0.35214691162109374,
+      "actual_bits": 714.0,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_223550",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T22",
+      "method": "last_success_same_site",
+      "regret_db": 0.17155431111653646,
+      "actual_bits": 714.0,
+      "frame_success_rate": 0.65,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_223602",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T22",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_223602",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T22",
+      "method": "last_success_same_site",
+      "regret_db": 0.04504877726236979,
+      "actual_bits": 698.1333333333333,
+      "frame_success_rate": 0.6833333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_224847",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T22",
+      "method": "stateless_block0",
+      "regret_db": 0.36889902750651044,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.6333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_224847",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T22",
+      "method": "last_success_same_site",
+      "regret_db": 0.29692859649658204,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.6333333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_225053",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T22",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 670.3666666666667,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_225053",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T22",
+      "method": "last_success_same_site",
+      "regret_db": 0.08213424682617188,
+      "actual_bits": 670.3666666666667,
+      "frame_success_rate": 0.6916666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_225120",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T22",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_225120",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T22",
+      "method": "last_success_same_site",
+      "regret_db": 0.0039398193359375,
+      "actual_bits": 686.2333333333333,
+      "frame_success_rate": 0.6583333333333333,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_231920",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T23",
+      "method": "stateless_block0",
+      "regret_db": 0.17058086395263672,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_231920",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T23",
+      "method": "last_success_same_site",
+      "regret_db": 0.08644771575927734,
+      "actual_bits": 682.2666666666667,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_232102",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T23",
+      "method": "stateless_block0",
+      "regret_db": 0.19452412923177084,
+      "actual_bits": 717.9666666666667,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_232102",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T23",
+      "method": "last_success_same_site",
+      "regret_db": 0.13764381408691406,
+      "actual_bits": 717.9666666666667,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_232155",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T23",
+      "method": "stateless_block0",
+      "regret_db": 0.0,
+      "actual_bits": 725.9,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_232155",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T23",
+      "method": "last_success_same_site",
+      "regret_db": 0.02370897928873698,
+      "actual_bits": 725.9,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_234936",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T23",
+      "method": "stateless_block0",
+      "regret_db": 1.1115018844604492,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC2:results_20220212_234936",
+      "site": "CC2",
+      "cluster_id": "CC2:20220212T23",
+      "method": "last_success_same_site",
+      "regret_db": 0.5207845052083333,
+      "actual_bits": 694.1666666666666,
+      "frame_success_rate": 0.675,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_235109",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T23",
+      "method": "stateless_block0",
+      "regret_db": 0.12074788411458333,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:LW1:results_20220212_235109",
+      "site": "LW1",
+      "cluster_id": "LW1:20220212T23",
+      "method": "last_success_same_site",
+      "regret_db": 0.061226908365885416,
+      "actual_bits": 706.0666666666667,
+      "frame_success_rate": 0.6666666666666666,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_235212",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T23",
+      "method": "stateless_block0",
+      "regret_db": 0.2811070760091146,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6416666666666667,
+      "application_bits": 157
+    },
+    {
+      "scene_id": "c1-v4-dev:CC1:results_20220212_235212",
+      "site": "CC1",
+      "cluster_id": "CC1:20220212T23",
+      "method": "last_success_same_site",
+      "regret_db": 0.2474644978841146,
+      "actual_bits": 690.2,
+      "frame_success_rate": 0.6416666666666667,
+      "application_bits": 157
+    }
+  ],
+  "governance": {
+    "feb12_used_once_after_method_freeze": true,
+    "prior_holdout_values_loaded": false,
+    "result_is_confirmatory": false
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": "Second disclosed C1-v4 development iteration on a new whole date; not a confirmatory Final and not evidence for UAV mobility, MIMO, or measured backhaul."
+}

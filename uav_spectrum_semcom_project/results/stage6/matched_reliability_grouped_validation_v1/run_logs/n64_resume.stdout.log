@@ -1,0 +1,4 @@
+N=64 group=LW1:20220219 excluded_too_short 24/27
+N=64 group=LW1:20220220 25/27 seconds=127.0
+N=64 group=LW1:20220221 26/27 seconds=258.7
+N=64 group=LW1:20220222 27/27 seconds=116.5

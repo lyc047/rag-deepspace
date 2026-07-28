@@ -1,0 +1,3 @@
+﻿hypothesis,clusters,bootstrap_repetitions,mean_regret_diff,mean_regret_one_sided_95_upper,mean_regret_one_sided_p,cvar_diff,cvar_one_sided_95_upper,cvar_one_sided_p,actual_bit_diff,actual_bit_one_sided_95_upper
+H1_task_sufficient_representation,74,20000,-0.4055210769744147,-0.3406009965794244,4.999750012499375e-05,-1.4579104128338043,-1.2215792931124492,4.999750012499375e-05,-64.24166666666667,-63.911007644282215
+H2_age_guarded_zero_bit_fallback,74,20000,-0.08494540736788796,-0.0678904740491326,4.999750012499375e-05,-0.30173385710943323,-0.2274927475221444,4.999750012499375e-05,0.0,0.0

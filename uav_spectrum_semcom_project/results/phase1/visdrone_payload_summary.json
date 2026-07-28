@@ -1,0 +1,33 @@
+{
+  "dataset": "VisDrone2019-DET-val",
+  "root": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\data\\raw\\visdrone\\VisDrone2019-DET-val",
+  "n_frames": 548,
+  "mean_width": 1291.094890510949,
+  "mean_height": 726.2408759124088,
+  "mean_boxes_per_frame": 70.78649635036497,
+  "median_boxes_per_frame": 65.0,
+  "nonempty_frame_ratio": 1.0,
+  "mean_jpeg_bits_per_frame": 1185557.2554744526,
+  "mean_raw_rgb_8bit_bits_per_frame": 23063124.087591242,
+  "mean_semantic_box_bits_per_frame": 5305.6277372262775,
+  "jpeg_to_semantic_ratio": 223.45277772809757,
+  "raw_rgb_to_semantic_ratio": 4346.917128348772,
+  "class_counts": {
+    "pedestrian": 8844,
+    "people": 5125,
+    "bicycle": 1287,
+    "car": 14064,
+    "van": 1975,
+    "truck": 750,
+    "tricycle": 1045,
+    "awning-tricycle": 532,
+    "bus": 251,
+    "motor": 4886,
+    "others": 32
+  },
+  "notes": [
+    "Visual semantics are represented as class labels plus bounding boxes.",
+    "Category 0 ignored regions are excluded.",
+    "This is a payload/statistics analysis using ground-truth annotations, not a trained visual detector yet."
+  ]
+}

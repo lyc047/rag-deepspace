@@ -1,0 +1,146 @@
+{
+  "version": "1.0",
+  "status": "pass",
+  "protocol_sha256": "5484758db98417f82c26bddef440123f5addf1b5f243e0f14f4f501388e64487",
+  "grid_point_id": "n8_e0p2_multi_025_050_075",
+  "outer_group_id": "CC1:20220208",
+  "trajectory_count": 2,
+  "session_scene_count": 20,
+  "representation": {
+    "grid_point_id": "n8_e0p2_multi_025_050_075",
+    "n_channels": 8,
+    "epsilon_db": 0.2,
+    "query_set_id": "multi_025_050_075",
+    "demand_ratios": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "demands": [
+      2,
+      4,
+      6
+    ],
+    "query_count": 3,
+    "pilot_train_scene_count": 197,
+    "pilot_evaluation_scene_count": 167,
+    "pilot_train_group_count": 4,
+    "pilot_evaluation_group_count": 3,
+    "training_exact_action_tuple_count": 11,
+    "codeword_count": 3,
+    "symbol_width_bits": 2,
+    "training_coverage_rate": 1.0,
+    "pilot_evaluation": {
+      "scene_count": 167,
+      "compact_scene_count": 167,
+      "escape_scene_count": 0,
+      "escape_rate": 0.0,
+      "used_codeword_count": 3,
+      "codeword_utilization_rate": 1.0,
+      "codeword_usage_entropy_bits": 0.9268797369483011,
+      "effective_codeword_perplexity": 1.9011597151892263,
+      "mean_max_query_regret_db": 0.005248086895057541,
+      "cvar_0_9_max_query_regret_db": 0.05149325202493107,
+      "maximum_max_query_regret_db": 0.14478302001953125
+    },
+    "fixed_site_2022": {
+      "scene_count": 89011,
+      "compact_scene_count": 56048,
+      "escape_scene_count": 32963,
+      "escape_rate": 0.37032501600925727,
+      "used_codeword_count": 3,
+      "codeword_utilization_rate": 1.0,
+      "codeword_usage_entropy_bits": 1.5464242067541734,
+      "effective_codeword_perplexity": 2.9209227565074425,
+      "mean_max_query_regret_db": 0.01299315371780524,
+      "cvar_0_9_max_query_regret_db": 0.09400542209293569,
+      "maximum_max_query_regret_db": 0.19999694824221592
+    },
+    "new_exact_action_tuple_rate_on_2022": 0.23049960117288876,
+    "decoder_actions": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        3,
+        1,
+        0
+      ]
+    ],
+    "deployable_in_current_context_codec": true,
+    "non_deployable_reason": null,
+    "context_install_bits": 385,
+    "compact_frame_bits": 42,
+    "exact_action_frame_bits": 56,
+    "codebook_manifest_sha256": "2c0e027e2ad6258e89103e5f15d6781aa3dc09c4f92a79b565f3bb078f0ac6ec"
+  },
+  "semantic_summary": {
+    "clean_rate": 0.940351711026616,
+    "availability_rate": 0.9420152091254753,
+    "actual_bits_per_scene": 30.981939163498097,
+    "resource_equivalent_bits_per_scene": 30.981939163498097,
+    "forward_bits_per_scene": 22.13022813688213,
+    "feedback_bits_per_scene": 8.85171102661597,
+    "task_frame_bits_per_scene": 21.3393536121673,
+    "heartbeat_bits_per_scene": 1.3612167300380227,
+    "effective_mean_regret_db": 0.6167911041825442,
+    "effective_cvar_0_9_regret_db": 5.863772080407888,
+    "conditional_mean_regret_db": 0.03921631402857796,
+    "conditional_cvar_0_9_regret_db": 0.1669435534015669,
+    "wrong_codebook_decode_count": 0.0,
+    "compact_refresh_count": 534.5,
+    "exact_refresh_count": 0.0,
+    "actual_action_reset_count": 43.5,
+    "actual_codebook_reset_count": 0.0,
+    "missing_update_ack_uncertainty_count": 111.0,
+    "failed_heartbeat_uncertainty_count": 21.0,
+    "maximum_belief_size": 5.0
+  },
+  "exact_summaries": [
+    {
+      "attempts": 1,
+      "summary": {
+        "clean_rate": 0.9738593155893536,
+        "availability_rate": 0.9926330798479087,
+        "actual_bits_per_scene": 56.0,
+        "effective_mean_regret_db": 0.08429749655632918,
+        "effective_cvar_0_9_regret_db": 0.8405778803531593
+      }
+    },
+    {
+      "attempts": 2,
+      "summary": {
+        "clean_rate": 0.997148288973384,
+        "availability_rate": 0.999287072243346,
+        "actual_bits_per_scene": 112.0,
+        "effective_mean_regret_db": 0.008301261713296289,
+        "effective_cvar_0_9_regret_db": 0.0827765622975137
+      }
+    },
+    {
+      "attempts": 3,
+      "summary": {
+        "clean_rate": 1.0,
+        "availability_rate": 1.0,
+        "actual_bits_per_scene": 168.0,
+        "effective_mean_regret_db": 3.635203430407854e-05,
+        "effective_cvar_0_9_regret_db": 0.00036248663590417656
+      }
+    }
+  ],
+  "checks": {
+    "wrong_codebook_actions_must_be_zero": true,
+    "all_bit_metrics_are_non_negative": true,
+    "all_clean_rates_are_probabilities": true,
+    "external_final_signal_values_loaded": false,
+    "external_final_access_count": 0
+  },
+  "claim_boundary": "Execution smoke only; not a sensitivity result."
+}

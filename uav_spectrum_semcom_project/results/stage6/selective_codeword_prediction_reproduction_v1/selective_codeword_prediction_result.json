@@ -1,0 +1,1293 @@
+{
+  "version": "1.0",
+  "status": "stage6_selective_codeword_prediction_development_complete",
+  "protocol_sha256": "ee216bff2b6e5437b3c15cf2a19d02ccb0037b53f9606a1cd0e9318467fdd7ba",
+  "results": {
+    "8": {
+      "n_channels": 8,
+      "demands": [
+        2,
+        4,
+        6
+      ],
+      "codebook_size": 3,
+      "class_count": 4,
+      "sample_count": 308,
+      "cluster_count": 7,
+      "class_counts": [
+        256,
+        12,
+        40,
+        0
+      ],
+      "outer_folds": [
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1200",
+          "training_sample_count": 265,
+          "evaluation_sample_count": 43,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.89,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 265,
+            "exact_class_accuracy": 0.8,
+            "macro_f1": 0.24286579038395018,
+            "transition_prevalence": 0.2188679245283019,
+            "trigger_rate": 0.12075471698113208,
+            "transition_recall": 0.3275862068965517,
+            "trigger_precision": 0.59375,
+            "false_switch_rate": 0.06280193236714976,
+            "transition_event_f1": 0.4222222222222222,
+            "changed_sample_exact_class_accuracy": 0.3103448275862069
+          },
+          "outer_metrics": {
+            "sample_count": 43,
+            "exact_class_accuracy": 0.6046511627906976,
+            "macro_f1": 0.2579957356076759,
+            "transition_prevalence": 0.5348837209302325,
+            "trigger_rate": 0.37209302325581395,
+            "transition_recall": 0.5217391304347826,
+            "trigger_precision": 0.75,
+            "false_switch_rate": 0.2,
+            "transition_event_f1": 0.6153846153846154,
+            "changed_sample_exact_class_accuracy": 0.43478260869565216
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1215",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.95,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.7674418604651163,
+            "macro_f1": 0.25160557644110276,
+            "transition_prevalence": 0.24031007751937986,
+            "trigger_rate": 0.13178294573643412,
+            "transition_recall": 0.3064516129032258,
+            "trigger_precision": 0.5588235294117647,
+            "false_switch_rate": 0.07653061224489796,
+            "transition_event_f1": 0.3958333333333333,
+            "changed_sample_exact_class_accuracy": 0.27419354838709675
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.72,
+            "macro_f1": 0.2467948717948718,
+            "transition_prevalence": 0.38,
+            "trigger_rate": 0.14,
+            "transition_recall": 0.3157894736842105,
+            "trigger_precision": 0.8571428571428571,
+            "false_switch_rate": 0.03225806451612903,
+            "transition_event_f1": 0.46153846153846156,
+            "changed_sample_exact_class_accuracy": 0.3157894736842105
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1230",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.9,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.7790697674418605,
+            "macro_f1": 0.2896097439721601,
+            "transition_prevalence": 0.2596899224806202,
+            "trigger_rate": 0.14728682170542637,
+            "transition_recall": 0.373134328358209,
+            "trigger_precision": 0.6578947368421053,
+            "false_switch_rate": 0.06806282722513089,
+            "transition_event_f1": 0.47619047619047616,
+            "changed_sample_exact_class_accuracy": 0.34328358208955223
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.8,
+            "macro_f1": 0.2715909090909091,
+            "transition_prevalence": 0.28,
+            "trigger_rate": 0.24,
+            "transition_recall": 0.5714285714285714,
+            "trigger_precision": 0.6666666666666666,
+            "false_switch_rate": 0.1111111111111111,
+            "transition_event_f1": 0.6153846153846154,
+            "changed_sample_exact_class_accuracy": 0.5714285714285714
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1245",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.94,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.7596899224806202,
+            "macro_f1": 0.326456709743185,
+            "transition_prevalence": 0.29069767441860467,
+            "trigger_rate": 0.12015503875968993,
+            "transition_recall": 0.30666666666666664,
+            "trigger_precision": 0.7419354838709677,
+            "false_switch_rate": 0.04371584699453552,
+            "transition_event_f1": 0.4339622641509434,
+            "changed_sample_exact_class_accuracy": 0.28
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.78,
+            "macro_f1": 0.21910112359550563,
+            "transition_prevalence": 0.12,
+            "trigger_rate": 0.1,
+            "transition_recall": 0.0,
+            "trigger_precision": 0.0,
+            "false_switch_rate": 0.11363636363636363,
+            "transition_event_f1": 0.0,
+            "changed_sample_exact_class_accuracy": 0.0
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1300",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.9,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.748062015503876,
+            "macro_f1": 0.30918088849429487,
+            "transition_prevalence": 0.29844961240310075,
+            "trigger_rate": 0.12790697674418605,
+            "transition_recall": 0.2987012987012987,
+            "trigger_precision": 0.696969696969697,
+            "false_switch_rate": 0.055248618784530384,
+            "transition_event_f1": 0.41818181818181815,
+            "changed_sample_exact_class_accuracy": 0.2857142857142857
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.9,
+            "macro_f1": 0.23684210526315788,
+            "transition_prevalence": 0.08,
+            "trigger_rate": 0.06,
+            "transition_recall": 0.25,
+            "trigger_precision": 0.3333333333333333,
+            "false_switch_rate": 0.043478260869565216,
+            "transition_event_f1": 0.2857142857142857,
+            "changed_sample_exact_class_accuracy": 0.25
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1315",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.92,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.7441860465116279,
+            "macro_f1": 0.2902809633027523,
+            "transition_prevalence": 0.28294573643410853,
+            "trigger_rate": 0.1744186046511628,
+            "transition_recall": 0.3698630136986301,
+            "trigger_precision": 0.6,
+            "false_switch_rate": 0.0972972972972973,
+            "transition_event_f1": 0.4576271186440678,
+            "changed_sample_exact_class_accuracy": 0.3424657534246575
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.84,
+            "macro_f1": 0.22826086956521738,
+            "transition_prevalence": 0.16,
+            "trigger_rate": 0.04,
+            "transition_recall": 0.125,
+            "trigger_precision": 0.5,
+            "false_switch_rate": 0.023809523809523808,
+            "transition_event_f1": 0.2,
+            "changed_sample_exact_class_accuracy": 0.125
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1330",
+          "training_sample_count": 293,
+          "evaluation_sample_count": 15,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.85,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 293,
+            "exact_class_accuracy": 0.7781569965870307,
+            "macro_f1": 0.29030826274598215,
+            "transition_prevalence": 0.2525597269624573,
+            "trigger_rate": 0.18088737201365188,
+            "transition_recall": 0.43243243243243246,
+            "trigger_precision": 0.6037735849056604,
+            "false_switch_rate": 0.0958904109589041,
+            "transition_event_f1": 0.5039370078740157,
+            "changed_sample_exact_class_accuracy": 0.40540540540540543
+          },
+          "outer_metrics": {
+            "sample_count": 15,
+            "exact_class_accuracy": 0.6666666666666666,
+            "macro_f1": 0.2670807453416149,
+            "transition_prevalence": 0.4666666666666667,
+            "trigger_rate": 0.13333333333333333,
+            "transition_recall": 0.2857142857142857,
+            "trigger_precision": 1.0,
+            "false_switch_rate": 0.0,
+            "transition_event_f1": 0.4444444444444444,
+            "changed_sample_exact_class_accuracy": 0.2857142857142857
+          }
+        }
+      ],
+      "selected_destination_method_fold_counts": {
+        "conditional_transition_markov": 7,
+        "changed_sample_logistic_regression": 0
+      },
+      "feasible_inner_policy_fold_count": 7,
+      "method_metrics": {
+        "selective_two_stage": {
+          "sample_count": 308,
+          "exact_class_accuracy": 0.7727272727272727,
+          "macro_f1": 0.2729156673462046,
+          "transition_prevalence": 0.262987012987013,
+          "trigger_rate": 0.1525974025974026,
+          "transition_recall": 0.37037037037037035,
+          "trigger_precision": 0.6382978723404256,
+          "false_switch_rate": 0.07488986784140969,
+          "transition_event_f1": 0.46875,
+          "changed_sample_exact_class_accuracy": 0.345679012345679
+        },
+        "current_codeword_persistence": {
+          "sample_count": 308,
+          "exact_class_accuracy": 0.737012987012987,
+          "macro_f1": 0.3196755126267871,
+          "transition_prevalence": 0.262987012987013,
+          "trigger_rate": 0.0,
+          "transition_recall": 0.0,
+          "trigger_precision": 0.0,
+          "false_switch_rate": 0.0,
+          "transition_event_f1": 0.0,
+          "changed_sample_exact_class_accuracy": 0.0
+        },
+        "first_order_markov": {
+          "sample_count": 308,
+          "exact_class_accuracy": 0.8311688311688312,
+          "macro_f1": 0.22695035460992907,
+          "transition_prevalence": 0.262987012987013,
+          "trigger_rate": 0.17207792207792208,
+          "transition_recall": 0.5185185185185185,
+          "trigger_precision": 0.7924528301886793,
+          "false_switch_rate": 0.048458149779735685,
+          "transition_event_f1": 0.6268656716417911,
+          "changed_sample_exact_class_accuracy": 0.49382716049382713
+        },
+        "one_stage_balanced_logistic_regression": {
+          "sample_count": 308,
+          "exact_class_accuracy": 0.6233766233766234,
+          "macro_f1": 0.2792548107557028,
+          "transition_prevalence": 0.262987012987013,
+          "trigger_rate": 0.35064935064935066,
+          "transition_recall": 0.5185185185185185,
+          "trigger_precision": 0.3888888888888889,
+          "false_switch_rate": 0.2907488986784141,
+          "transition_event_f1": 0.4444444444444444,
+          "changed_sample_exact_class_accuracy": 0.38271604938271603
+        }
+      },
+      "comparison_vs_persistence": {
+        "mean_accuracy_gain": 0.0357142857142857,
+        "confidence_interval_lower": -0.026239067055393583,
+        "confidence_interval_upper": 0.09740259740259738,
+        "bootstrap_unit": "cluster",
+        "replicates": 5000
+      },
+      "trigger_precision_lift_over_transition_prevalence": 0.3753108593534126,
+      "selective_safe_forecast": {
+        "triggered_destination_count": 47,
+        "safe_triggered_destination_count": 40,
+        "conditional_triggered_destination_safe_rate": 0.851063829787234
+      }
+    },
+    "16": {
+      "n_channels": 16,
+      "demands": [
+        4,
+        8,
+        12
+      ],
+      "codebook_size": 4,
+      "class_count": 5,
+      "sample_count": 308,
+      "cluster_count": 7,
+      "class_counts": [
+        246,
+        56,
+        5,
+        1,
+        0
+      ],
+      "outer_folds": [
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1200",
+          "training_sample_count": 265,
+          "evaluation_sample_count": 43,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.92,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 265,
+            "exact_class_accuracy": 0.7622641509433963,
+            "macro_f1": 0.21526235354049925,
+            "transition_prevalence": 0.2528301886792453,
+            "trigger_rate": 0.11320754716981132,
+            "transition_recall": 0.2537313432835821,
+            "trigger_precision": 0.5666666666666667,
+            "false_switch_rate": 0.06565656565656566,
+            "transition_event_f1": 0.35051546391752575,
+            "changed_sample_exact_class_accuracy": 0.2537313432835821
+          },
+          "outer_metrics": {
+            "sample_count": 43,
+            "exact_class_accuracy": 0.4883720930232558,
+            "macro_f1": 0.17476190476190476,
+            "transition_prevalence": 0.627906976744186,
+            "trigger_rate": 0.23255813953488372,
+            "transition_recall": 0.2962962962962963,
+            "trigger_precision": 0.8,
+            "false_switch_rate": 0.125,
+            "transition_event_f1": 0.43243243243243246,
+            "changed_sample_exact_class_accuracy": 0.25925925925925924
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1215",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "changed_sample_logistic_regression",
+          "selected_threshold": 0.95,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.7325581395348837,
+            "macro_f1": 0.23294679208198793,
+            "transition_prevalence": 0.28294573643410853,
+            "trigger_rate": 0.07751937984496124,
+            "transition_recall": 0.1643835616438356,
+            "trigger_precision": 0.6,
+            "false_switch_rate": 0.043243243243243246,
+            "transition_event_f1": 0.25806451612903225,
+            "changed_sample_exact_class_accuracy": 0.1643835616438356
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.62,
+            "macro_f1": 0.17094635322483426,
+            "transition_prevalence": 0.42,
+            "trigger_rate": 0.04,
+            "transition_recall": 0.09523809523809523,
+            "trigger_precision": 1.0,
+            "false_switch_rate": 0.0,
+            "transition_event_f1": 0.17391304347826086,
+            "changed_sample_exact_class_accuracy": 0.09523809523809523
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1230",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.87,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.7713178294573644,
+            "macro_f1": 0.2331475358211305,
+            "transition_prevalence": 0.29069767441860467,
+            "trigger_rate": 0.2054263565891473,
+            "transition_recall": 0.4666666666666667,
+            "trigger_precision": 0.660377358490566,
+            "false_switch_rate": 0.09836065573770492,
+            "transition_event_f1": 0.546875,
+            "changed_sample_exact_class_accuracy": 0.4533333333333333
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.66,
+            "macro_f1": 0.21866666666666665,
+            "transition_prevalence": 0.38,
+            "trigger_rate": 0.36,
+            "transition_recall": 0.5263157894736842,
+            "trigger_precision": 0.5555555555555556,
+            "false_switch_rate": 0.25806451612903225,
+            "transition_event_f1": 0.5405405405405406,
+            "changed_sample_exact_class_accuracy": 0.5263157894736842
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1245",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.92,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.6937984496124031,
+            "macro_f1": 0.21027935919502183,
+            "transition_prevalence": 0.3333333333333333,
+            "trigger_rate": 0.14728682170542637,
+            "transition_recall": 0.26744186046511625,
+            "trigger_precision": 0.6052631578947368,
+            "false_switch_rate": 0.0872093023255814,
+            "transition_event_f1": 0.3709677419354839,
+            "changed_sample_exact_class_accuracy": 0.2558139534883721
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.74,
+            "macro_f1": 0.20018099547511312,
+            "transition_prevalence": 0.16,
+            "trigger_rate": 0.1,
+            "transition_recall": 0.0,
+            "trigger_precision": 0.0,
+            "false_switch_rate": 0.11904761904761904,
+            "transition_event_f1": 0.0,
+            "changed_sample_exact_class_accuracy": 0.0
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1300",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.88,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.6782945736434108,
+            "macro_f1": 0.20928845765110168,
+            "transition_prevalence": 0.3488372093023256,
+            "trigger_rate": 0.1434108527131783,
+            "transition_recall": 0.24444444444444444,
+            "trigger_precision": 0.5945945945945946,
+            "false_switch_rate": 0.08928571428571429,
+            "transition_event_f1": 0.3464566929133858,
+            "changed_sample_exact_class_accuracy": 0.24444444444444444
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.94,
+            "macro_f1": 0.19381443298969073,
+            "transition_prevalence": 0.08,
+            "trigger_rate": 0.02,
+            "transition_recall": 0.25,
+            "trigger_precision": 1.0,
+            "false_switch_rate": 0.0,
+            "transition_event_f1": 0.4,
+            "changed_sample_exact_class_accuracy": 0.25
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1315",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.93,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.6744186046511628,
+            "macro_f1": 0.2021616451458632,
+            "transition_prevalence": 0.3333333333333333,
+            "trigger_rate": 0.13565891472868216,
+            "transition_recall": 0.22093023255813954,
+            "trigger_precision": 0.5428571428571428,
+            "false_switch_rate": 0.09302325581395349,
+            "transition_event_f1": 0.3140495867768595,
+            "changed_sample_exact_class_accuracy": 0.20930232558139536
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.86,
+            "macro_f1": 0.18494623655913978,
+            "transition_prevalence": 0.16,
+            "trigger_rate": 0.06,
+            "transition_recall": 0.25,
+            "trigger_precision": 0.6666666666666666,
+            "false_switch_rate": 0.023809523809523808,
+            "transition_event_f1": 0.36363636363636365,
+            "changed_sample_exact_class_accuracy": 0.25
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1330",
+          "training_sample_count": 293,
+          "evaluation_sample_count": 15,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.91,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 293,
+            "exact_class_accuracy": 0.7372013651877133,
+            "macro_f1": 0.22343509096515574,
+            "transition_prevalence": 0.29692832764505117,
+            "trigger_rate": 0.13993174061433447,
+            "transition_recall": 0.2988505747126437,
+            "trigger_precision": 0.6341463414634146,
+            "false_switch_rate": 0.07281553398058252,
+            "transition_event_f1": 0.40625,
+            "changed_sample_exact_class_accuracy": 0.28735632183908044
+          },
+          "outer_metrics": {
+            "sample_count": 15,
+            "exact_class_accuracy": 0.4666666666666667,
+            "macro_f1": 0.16,
+            "transition_prevalence": 0.4666666666666667,
+            "trigger_rate": 0.2,
+            "transition_recall": 0.14285714285714285,
+            "trigger_precision": 0.3333333333333333,
+            "false_switch_rate": 0.25,
+            "transition_event_f1": 0.2,
+            "changed_sample_exact_class_accuracy": 0.14285714285714285
+          }
+        }
+      ],
+      "selected_destination_method_fold_counts": {
+        "conditional_transition_markov": 6,
+        "changed_sample_logistic_regression": 1
+      },
+      "feasible_inner_policy_fold_count": 7,
+      "method_metrics": {
+        "selective_two_stage": {
+          "sample_count": 308,
+          "exact_class_accuracy": 0.711038961038961,
+          "macro_f1": 0.20831683168316834,
+          "transition_prevalence": 0.3051948051948052,
+          "trigger_rate": 0.13636363636363635,
+          "transition_recall": 0.2553191489361702,
+          "trigger_precision": 0.5714285714285714,
+          "false_switch_rate": 0.08411214953271028,
+          "transition_event_f1": 0.35294117647058826,
+          "changed_sample_exact_class_accuracy": 0.24468085106382978
+        },
+        "current_codeword_persistence": {
+          "sample_count": 308,
+          "exact_class_accuracy": 0.6948051948051948,
+          "macro_f1": 0.215689554844341,
+          "transition_prevalence": 0.3051948051948052,
+          "trigger_rate": 0.0,
+          "transition_recall": 0.0,
+          "trigger_precision": 0.0,
+          "false_switch_rate": 0.0,
+          "transition_event_f1": 0.0,
+          "changed_sample_exact_class_accuracy": 0.0
+        },
+        "first_order_markov": {
+          "sample_count": 308,
+          "exact_class_accuracy": 0.7954545454545454,
+          "macro_f1": 0.17721518987341772,
+          "transition_prevalence": 0.3051948051948052,
+          "trigger_rate": 0.20454545454545456,
+          "transition_recall": 0.5106382978723404,
+          "trigger_precision": 0.7619047619047619,
+          "false_switch_rate": 0.07009345794392523,
+          "transition_event_f1": 0.6114649681528662,
+          "changed_sample_exact_class_accuracy": 0.48936170212765956
+        },
+        "one_stage_balanced_logistic_regression": {
+          "sample_count": 308,
+          "exact_class_accuracy": 0.6396103896103896,
+          "macro_f1": 0.21628718433970073,
+          "transition_prevalence": 0.3051948051948052,
+          "trigger_rate": 0.34415584415584416,
+          "transition_recall": 0.4787234042553192,
+          "trigger_precision": 0.42452830188679247,
+          "false_switch_rate": 0.2850467289719626,
+          "transition_event_f1": 0.45,
+          "changed_sample_exact_class_accuracy": 0.46808510638297873
+        }
+      },
+      "comparison_vs_persistence": {
+        "mean_accuracy_gain": 0.016233766233766267,
+        "confidence_interval_lower": -0.03663003663003661,
+        "confidence_interval_upper": 0.061224489795918435,
+        "bootstrap_unit": "cluster",
+        "replicates": 5000
+      },
+      "trigger_precision_lift_over_transition_prevalence": 0.2662337662337662,
+      "selective_safe_forecast": {
+        "triggered_destination_count": 42,
+        "safe_triggered_destination_count": 33,
+        "conditional_triggered_destination_safe_rate": 0.7857142857142857
+      }
+    },
+    "32": {
+      "n_channels": 32,
+      "demands": [
+        8,
+        16,
+        24
+      ],
+      "codebook_size": 3,
+      "class_count": 4,
+      "sample_count": 308,
+      "cluster_count": 7,
+      "class_counts": [
+        245,
+        62,
+        1,
+        0
+      ],
+      "outer_folds": [
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1200",
+          "training_sample_count": 265,
+          "evaluation_sample_count": 43,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.95,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 265,
+            "exact_class_accuracy": 0.7547169811320755,
+            "macro_f1": 0.2541280353200883,
+            "transition_prevalence": 0.2528301886792453,
+            "trigger_rate": 0.11320754716981132,
+            "transition_recall": 0.23880597014925373,
+            "trigger_precision": 0.5333333333333333,
+            "false_switch_rate": 0.0707070707070707,
+            "transition_event_f1": 0.32989690721649484,
+            "changed_sample_exact_class_accuracy": 0.23880597014925373
+          },
+          "outer_metrics": {
+            "sample_count": 43,
+            "exact_class_accuracy": 0.5116279069767442,
+            "macro_f1": 0.241852487135506,
+            "transition_prevalence": 0.5813953488372093,
+            "trigger_rate": 0.2558139534883721,
+            "transition_recall": 0.32,
+            "trigger_precision": 0.7272727272727273,
+            "false_switch_rate": 0.16666666666666666,
+            "transition_event_f1": 0.4444444444444444,
+            "changed_sample_exact_class_accuracy": 0.28
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1215",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.93,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.7170542635658915,
+            "macro_f1": 0.2832660099685824,
+            "transition_prevalence": 0.2751937984496124,
+            "trigger_rate": 0.12015503875968993,
+            "transition_recall": 0.2112676056338028,
+            "trigger_precision": 0.4838709677419355,
+            "false_switch_rate": 0.0855614973262032,
+            "transition_event_f1": 0.29411764705882354,
+            "changed_sample_exact_class_accuracy": 0.19718309859154928
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.62,
+            "macro_f1": 0.2136829415310428,
+            "transition_prevalence": 0.42,
+            "trigger_rate": 0.04,
+            "transition_recall": 0.09523809523809523,
+            "trigger_precision": 1.0,
+            "false_switch_rate": 0.0,
+            "transition_event_f1": 0.17391304347826086,
+            "changed_sample_exact_class_accuracy": 0.09523809523809523
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1230",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.92,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.7596899224806202,
+            "macro_f1": 0.2811935411020777,
+            "transition_prevalence": 0.28294573643410853,
+            "trigger_rate": 0.17054263565891473,
+            "transition_recall": 0.3835616438356164,
+            "trigger_precision": 0.6363636363636364,
+            "false_switch_rate": 0.08648648648648649,
+            "transition_event_f1": 0.47863247863247865,
+            "changed_sample_exact_class_accuracy": 0.3698630136986301
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.7,
+            "macro_f1": 0.30974124809741244,
+            "transition_prevalence": 0.38,
+            "trigger_rate": 0.28,
+            "transition_recall": 0.47368421052631576,
+            "trigger_precision": 0.6428571428571429,
+            "false_switch_rate": 0.16129032258064516,
+            "transition_event_f1": 0.5454545454545454,
+            "changed_sample_exact_class_accuracy": 0.47368421052631576
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1245",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "changed_sample_logistic_regression",
+          "selected_threshold": 0.95,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.6821705426356589,
+            "macro_f1": 0.25825242718446606,
+            "transition_prevalence": 0.3178294573643411,
+            "trigger_rate": 0.13178294573643412,
+            "transition_recall": 0.2073170731707317,
+            "trigger_precision": 0.5,
+            "false_switch_rate": 0.09659090909090909,
+            "transition_event_f1": 0.29310344827586204,
+            "changed_sample_exact_class_accuracy": 0.2073170731707317
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.72,
+            "macro_f1": 0.23958333333333334,
+            "transition_prevalence": 0.2,
+            "trigger_rate": 0.12,
+            "transition_recall": 0.1,
+            "trigger_precision": 0.16666666666666666,
+            "false_switch_rate": 0.125,
+            "transition_event_f1": 0.125,
+            "changed_sample_exact_class_accuracy": 0.1
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1300",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.94,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.6550387596899225,
+            "macro_f1": 0.2450941040049951,
+            "transition_prevalence": 0.34108527131782945,
+            "trigger_rate": 0.12790697674418605,
+            "transition_recall": 0.18181818181818182,
+            "trigger_precision": 0.48484848484848486,
+            "false_switch_rate": 0.1,
+            "transition_event_f1": 0.2644628099173554,
+            "changed_sample_exact_class_accuracy": 0.18181818181818182
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.92,
+            "macro_f1": 0.23958333333333334,
+            "transition_prevalence": 0.08,
+            "trigger_rate": 0.04,
+            "transition_recall": 0.25,
+            "trigger_precision": 0.5,
+            "false_switch_rate": 0.021739130434782608,
+            "transition_event_f1": 0.3333333333333333,
+            "changed_sample_exact_class_accuracy": 0.25
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1315",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.95,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.6666666666666666,
+            "macro_f1": 0.2558730873087309,
+            "transition_prevalence": 0.3333333333333333,
+            "trigger_rate": 0.12015503875968993,
+            "transition_recall": 0.18604651162790697,
+            "trigger_precision": 0.5161290322580645,
+            "false_switch_rate": 0.0872093023255814,
+            "transition_event_f1": 0.27350427350427353,
+            "changed_sample_exact_class_accuracy": 0.1744186046511628
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.8,
+            "macro_f1": 0.2222222222222222,
+            "transition_prevalence": 0.12,
+            "trigger_rate": 0.08,
+            "transition_recall": 0.0,
+            "trigger_precision": 0.0,
+            "false_switch_rate": 0.09090909090909091,
+            "transition_event_f1": 0.0,
+            "changed_sample_exact_class_accuracy": 0.0
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1330",
+          "training_sample_count": 293,
+          "evaluation_sample_count": 15,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.95,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 293,
+            "exact_class_accuracy": 0.7167235494880546,
+            "macro_f1": 0.2705359729599227,
+            "transition_prevalence": 0.2901023890784983,
+            "trigger_rate": 0.11945392491467577,
+            "transition_recall": 0.2235294117647059,
+            "trigger_precision": 0.5428571428571428,
+            "false_switch_rate": 0.07692307692307693,
+            "transition_event_f1": 0.31666666666666665,
+            "changed_sample_exact_class_accuracy": 0.21176470588235294
+          },
+          "outer_metrics": {
+            "sample_count": 15,
+            "exact_class_accuracy": 0.5333333333333333,
+            "macro_f1": 0.17391304347826086,
+            "transition_prevalence": 0.4666666666666667,
+            "trigger_rate": 0.13333333333333333,
+            "transition_recall": 0.14285714285714285,
+            "trigger_precision": 0.5,
+            "false_switch_rate": 0.125,
+            "transition_event_f1": 0.2222222222222222,
+            "changed_sample_exact_class_accuracy": 0.14285714285714285
+          }
+        }
+      ],
+      "selected_destination_method_fold_counts": {
+        "conditional_transition_markov": 6,
+        "changed_sample_logistic_regression": 1
+      },
+      "feasible_inner_policy_fold_count": 7,
+      "method_metrics": {
+        "selective_two_stage": {
+          "sample_count": 308,
+          "exact_class_accuracy": 0.7077922077922078,
+          "macro_f1": 0.26516410469464063,
+          "transition_prevalence": 0.2987012987012987,
+          "trigger_rate": 0.1331168831168831,
+          "transition_recall": 0.2391304347826087,
+          "trigger_precision": 0.5365853658536586,
+          "false_switch_rate": 0.08796296296296297,
+          "transition_event_f1": 0.3308270676691729,
+          "changed_sample_exact_class_accuracy": 0.22826086956521738
+        },
+        "current_codeword_persistence": {
+          "sample_count": 308,
+          "exact_class_accuracy": 0.7012987012987013,
+          "macro_f1": 0.27202486971436113,
+          "transition_prevalence": 0.2987012987012987,
+          "trigger_rate": 0.0,
+          "transition_recall": 0.0,
+          "trigger_precision": 0.0,
+          "false_switch_rate": 0.0,
+          "transition_event_f1": 0.0,
+          "changed_sample_exact_class_accuracy": 0.0
+        },
+        "first_order_markov": {
+          "sample_count": 308,
+          "exact_class_accuracy": 0.7922077922077922,
+          "macro_f1": 0.2210144927536232,
+          "transition_prevalence": 0.2987012987012987,
+          "trigger_rate": 0.2077922077922078,
+          "transition_recall": 0.5108695652173914,
+          "trigger_precision": 0.734375,
+          "false_switch_rate": 0.0787037037037037,
+          "transition_event_f1": 0.6025641025641025,
+          "changed_sample_exact_class_accuracy": 0.4891304347826087
+        },
+        "one_stage_balanced_logistic_regression": {
+          "sample_count": 308,
+          "exact_class_accuracy": 0.6688311688311688,
+          "macro_f1": 0.2737441130298273,
+          "transition_prevalence": 0.2987012987012987,
+          "trigger_rate": 0.29545454545454547,
+          "transition_recall": 0.44565217391304346,
+          "trigger_precision": 0.45054945054945056,
+          "false_switch_rate": 0.23148148148148148,
+          "transition_event_f1": 0.44808743169398907,
+          "changed_sample_exact_class_accuracy": 0.43478260869565216
+        }
+      },
+      "comparison_vs_persistence": {
+        "mean_accuracy_gain": 0.00649350649350644,
+        "confidence_interval_lower": -0.04571428571428571,
+        "confidence_interval_upper": 0.05980066445182719,
+        "bootstrap_unit": "cluster",
+        "replicates": 5000
+      },
+      "trigger_precision_lift_over_transition_prevalence": 0.23788406715235988,
+      "selective_safe_forecast": {
+        "triggered_destination_count": 41,
+        "safe_triggered_destination_count": 28,
+        "conditional_triggered_destination_safe_rate": 0.6829268292682927
+      }
+    },
+    "64": {
+      "n_channels": 64,
+      "demands": [
+        16,
+        32,
+        48
+      ],
+      "codebook_size": 3,
+      "class_count": 4,
+      "sample_count": 308,
+      "cluster_count": 7,
+      "class_counts": [
+        245,
+        62,
+        1,
+        0
+      ],
+      "outer_folds": [
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1200",
+          "training_sample_count": 265,
+          "evaluation_sample_count": 43,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.95,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 265,
+            "exact_class_accuracy": 0.7433962264150943,
+            "macro_f1": 0.2452841173730787,
+            "transition_prevalence": 0.2528301886792453,
+            "trigger_rate": 0.1169811320754717,
+            "transition_recall": 0.22388059701492538,
+            "trigger_precision": 0.4838709677419355,
+            "false_switch_rate": 0.08080808080808081,
+            "transition_event_f1": 0.30612244897959184,
+            "changed_sample_exact_class_accuracy": 0.22388059701492538
+          },
+          "outer_metrics": {
+            "sample_count": 43,
+            "exact_class_accuracy": 0.46511627906976744,
+            "macro_f1": 0.21726700971983992,
+            "transition_prevalence": 0.5813953488372093,
+            "trigger_rate": 0.2558139534883721,
+            "transition_recall": 0.28,
+            "trigger_precision": 0.6363636363636364,
+            "false_switch_rate": 0.2222222222222222,
+            "transition_event_f1": 0.3888888888888889,
+            "changed_sample_exact_class_accuracy": 0.24
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1215",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.93,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.7054263565891473,
+            "macro_f1": 0.27890307066222714,
+            "transition_prevalence": 0.2751937984496124,
+            "trigger_rate": 0.11627906976744186,
+            "transition_recall": 0.18309859154929578,
+            "trigger_precision": 0.43333333333333335,
+            "false_switch_rate": 0.09090909090909091,
+            "transition_event_f1": 0.25742574257425743,
+            "changed_sample_exact_class_accuracy": 0.16901408450704225
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.54,
+            "macro_f1": 0.19333333333333333,
+            "transition_prevalence": 0.42,
+            "trigger_rate": 0.08,
+            "transition_recall": 0.047619047619047616,
+            "trigger_precision": 0.25,
+            "false_switch_rate": 0.10344827586206896,
+            "transition_event_f1": 0.08,
+            "changed_sample_exact_class_accuracy": 0.047619047619047616
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1230",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 0.93,
+          "inner_policy_feasible": true,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.748062015503876,
+            "macro_f1": 0.26802668719527845,
+            "transition_prevalence": 0.28294573643410853,
+            "trigger_rate": 0.1744186046511628,
+            "transition_recall": 0.3698630136986301,
+            "trigger_precision": 0.6,
+            "false_switch_rate": 0.0972972972972973,
+            "transition_event_f1": 0.4576271186440678,
+            "changed_sample_exact_class_accuracy": 0.3561643835616438
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.7,
+            "macro_f1": 0.30974124809741244,
+            "transition_prevalence": 0.38,
+            "trigger_rate": 0.28,
+            "transition_recall": 0.47368421052631576,
+            "trigger_precision": 0.6428571428571429,
+            "false_switch_rate": 0.16129032258064516,
+            "transition_event_f1": 0.5454545454545454,
+            "changed_sample_exact_class_accuracy": 0.47368421052631576
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1245",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 1.01,
+          "inner_policy_feasible": false,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.6821705426356589,
+            "macro_f1": 0.2709298183113644,
+            "transition_prevalence": 0.3178294573643411,
+            "trigger_rate": 0.0,
+            "transition_recall": 0.0,
+            "trigger_precision": 0.0,
+            "false_switch_rate": 0.0,
+            "transition_event_f1": 0.0,
+            "changed_sample_exact_class_accuracy": 0.0
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.8,
+            "macro_f1": 0.26325757575757575,
+            "transition_prevalence": 0.2,
+            "trigger_rate": 0.0,
+            "transition_recall": 0.0,
+            "trigger_precision": 0.0,
+            "false_switch_rate": 0.0,
+            "transition_event_f1": 0.0,
+            "changed_sample_exact_class_accuracy": 0.0
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1300",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 1.01,
+          "inner_policy_feasible": false,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.6589147286821705,
+            "macro_f1": 0.26432861969715926,
+            "transition_prevalence": 0.34108527131782945,
+            "trigger_rate": 0.0,
+            "transition_recall": 0.0,
+            "trigger_precision": 0.0,
+            "false_switch_rate": 0.0,
+            "transition_event_f1": 0.0,
+            "changed_sample_exact_class_accuracy": 0.0
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.92,
+            "macro_f1": 0.23958333333333334,
+            "transition_prevalence": 0.08,
+            "trigger_rate": 0.0,
+            "transition_recall": 0.0,
+            "trigger_precision": 0.0,
+            "false_switch_rate": 0.0,
+            "transition_event_f1": 0.0,
+            "changed_sample_exact_class_accuracy": 0.0
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1315",
+          "training_sample_count": 258,
+          "evaluation_sample_count": 50,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 1.01,
+          "inner_policy_feasible": false,
+          "inner_selected_metrics": {
+            "sample_count": 258,
+            "exact_class_accuracy": 0.6666666666666666,
+            "macro_f1": 0.26823642995065433,
+            "transition_prevalence": 0.3333333333333333,
+            "trigger_rate": 0.0,
+            "transition_recall": 0.0,
+            "trigger_precision": 0.0,
+            "false_switch_rate": 0.0,
+            "transition_event_f1": 0.0,
+            "changed_sample_exact_class_accuracy": 0.0
+          },
+          "outer_metrics": {
+            "sample_count": 50,
+            "exact_class_accuracy": 0.88,
+            "macro_f1": 0.23404255319148937,
+            "transition_prevalence": 0.12,
+            "trigger_rate": 0.0,
+            "transition_recall": 0.0,
+            "trigger_precision": 0.0,
+            "false_switch_rate": 0.0,
+            "transition_event_f1": 0.0,
+            "changed_sample_exact_class_accuracy": 0.0
+          }
+        },
+        {
+          "outer_group": "aerpaw_packapalooza_2023:20230826T1330",
+          "training_sample_count": 293,
+          "evaluation_sample_count": 15,
+          "selected_destination_method": "conditional_transition_markov",
+          "selected_threshold": 1.01,
+          "inner_policy_feasible": false,
+          "inner_selected_metrics": {
+            "sample_count": 293,
+            "exact_class_accuracy": 0.7098976109215017,
+            "macro_f1": 0.27469342251950946,
+            "transition_prevalence": 0.2901023890784983,
+            "trigger_rate": 0.0,
+            "transition_recall": 0.0,
+            "trigger_precision": 0.0,
+            "false_switch_rate": 0.0,
+            "transition_event_f1": 0.0,
+            "changed_sample_exact_class_accuracy": 0.0
+          },
+          "outer_metrics": {
+            "sample_count": 15,
+            "exact_class_accuracy": 0.5333333333333333,
+            "macro_f1": 0.2222222222222222,
+            "transition_prevalence": 0.4666666666666667,
+            "trigger_rate": 0.0,
+            "transition_recall": 0.0,
+            "trigger_precision": 0.0,
+            "false_switch_rate": 0.0,
+            "transition_event_f1": 0.0,
+            "changed_sample_exact_class_accuracy": 0.0
+          }
+        }
+      ],
+      "selected_destination_method_fold_counts": {
+        "conditional_transition_markov": 7,
+        "changed_sample_logistic_regression": 0
+      },
+      "feasible_inner_policy_fold_count": 3,
+      "method_metrics": {
+        "selective_two_stage": {
+          "sample_count": 308,
+          "exact_class_accuracy": 0.7142857142857143,
+          "macro_f1": 0.2674035087719298,
+          "transition_prevalence": 0.2987012987012987,
+          "trigger_rate": 0.09415584415584416,
+          "transition_recall": 0.18478260869565216,
+          "trigger_precision": 0.5862068965517241,
+          "false_switch_rate": 0.05555555555555555,
+          "transition_event_f1": 0.2809917355371901,
+          "changed_sample_exact_class_accuracy": 0.17391304347826086
+        },
+        "current_codeword_persistence": {
+          "sample_count": 308,
+          "exact_class_accuracy": 0.7012987012987013,
+          "macro_f1": 0.27202486971436113,
+          "transition_prevalence": 0.2987012987012987,
+          "trigger_rate": 0.0,
+          "transition_recall": 0.0,
+          "trigger_precision": 0.0,
+          "false_switch_rate": 0.0,
+          "transition_event_f1": 0.0,
+          "changed_sample_exact_class_accuracy": 0.0
+        },
+        "first_order_markov": {
+          "sample_count": 308,
+          "exact_class_accuracy": 0.7922077922077922,
+          "macro_f1": 0.2210144927536232,
+          "transition_prevalence": 0.2987012987012987,
+          "trigger_rate": 0.2077922077922078,
+          "transition_recall": 0.5108695652173914,
+          "trigger_precision": 0.734375,
+          "false_switch_rate": 0.0787037037037037,
+          "transition_event_f1": 0.6025641025641025,
+          "changed_sample_exact_class_accuracy": 0.4891304347826087
+        },
+        "one_stage_balanced_logistic_regression": {
+          "sample_count": 308,
+          "exact_class_accuracy": 0.6818181818181818,
+          "macro_f1": 0.271737470604404,
+          "transition_prevalence": 0.2987012987012987,
+          "trigger_rate": 0.275974025974026,
+          "transition_recall": 0.43478260869565216,
+          "trigger_precision": 0.47058823529411764,
+          "false_switch_rate": 0.20833333333333334,
+          "transition_event_f1": 0.4519774011299435,
+          "changed_sample_exact_class_accuracy": 0.42391304347826086
+        }
+      },
+      "comparison_vs_persistence": {
+        "mean_accuracy_gain": 0.012987012987012991,
+        "confidence_interval_lower": -0.014285714285714346,
+        "confidence_interval_upper": 0.0444444444444444,
+        "bootstrap_unit": "cluster",
+        "replicates": 5000
+      },
+      "trigger_precision_lift_over_transition_prevalence": 0.2875055978504254,
+      "selective_safe_forecast": {
+        "triggered_destination_count": 29,
+        "safe_triggered_destination_count": 24,
+        "conditional_triggered_destination_safe_rate": 0.8275862068965517
+      }
+    }
+  },
+  "retention_decision": {
+    "accuracy_point_gate_n_count": 4,
+    "accuracy_confidence_gate_n_count": 0,
+    "false_switch_gate_n_count": 4,
+    "transition_recall_gate_n_count": 4,
+    "trigger_precision_gate_n_count": 4,
+    "required_n_count_each_gate": 3,
+    "destination_prediction_retained": false,
+    "change_risk_may_continue_as_scheduler_only": true
+  },
+  "checks": {
+    "seven_outer_clusters_evaluated_once": true,
+    "all_outer_predictions_complete": true,
+    "final_access_state_unchanged": true,
+    "final_access_count_remains_zero": true
+  },
+  "safety_boundary": {
+    "low_confidence_prediction_must_abstain_to_current_codeword": true,
+    "prediction_may_not_execute_or_select_a_future_spectrum_action": true,
+    "actual_codeword_must_be_selected_after_observing_the_current_spectrum": true,
+    "hard_regret_constraint_remains_mandatory": true
+  },
+  "governance": {
+    "development_only": true,
+    "external_final_signal_values_loaded": false,
+    "external_final_access_consumed": false
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "scikit-learn": "1.5.1"
+    }
+  },
+  "claim_boundary": "Exploratory nested cross-validated development evidence on seven excluded fixed-site pilot clusters. It evaluates selective codeword forecasting and abstention, not direct future spectrum action execution, raw-IQ prediction, UAV mobility generalization, or external Final performance."
+}

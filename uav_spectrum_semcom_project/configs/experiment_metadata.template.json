@@ -1,0 +1,32 @@
+{
+  "experiment_id": "replace_with_unique_id",
+  "hypothesis_ids": [
+    "H1"
+  ],
+  "split_id": "replace_with_frozen_split_id",
+  "manifest_checksum": "replace_with_sha256",
+  "config_id": "replace_with_config_name_or_hash",
+  "code_version": "replace_with_git_commit_or_archive_hash",
+  "seed": 2026,
+  "baseline_or_method": "replace_with_method_name",
+  "fairness_budget_type": "bits",
+  "fairness_budget_value": 4096,
+  "sensing_channel": {
+    "model": "replace_with_sensing_channel",
+    "snr_db": 0.0
+  },
+  "reporting_channel": {
+    "model": "replace_with_reporting_channel",
+    "bler": 0.0,
+    "fec_rate": 0.5,
+    "max_retransmissions": 0
+  },
+  "metrics": {
+    "mean_occupancy_regret": null,
+    "clean_resource_rate": null,
+    "total_transmitted_bits_per_decision": null,
+    "end_to_end_latency": null
+  },
+  "repeat_count": 5,
+  "notes": "State whether this is a development, diagnostic, ablation, or main-claim experiment."
+}

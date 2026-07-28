@@ -1,0 +1,151 @@
+{
+  "config_id": "configs/stage2_digital_link.json",
+  "config_sha256": "982ca9b1b60048c7a38e36093a74afd8164033e0042fc1f756fa437bfea40162",
+  "selection_rule": "minimum_regret_then_maximum_clean_rate_then_minimum_bits",
+  "selected_bits": 1,
+  "selection_rows": [
+    {
+      "bits": 1,
+      "clean_resource_rate": 0.8,
+      "mean_occupancy_regret": 0.011454782448709011,
+      "mean_selected_occupancy": 0.016936466097831726,
+      "oracle_equivalent_rate": 0.6
+    },
+    {
+      "bits": 2,
+      "clean_resource_rate": 0.8,
+      "mean_occupancy_regret": 0.011454782448709011,
+      "mean_selected_occupancy": 0.016936466097831726,
+      "oracle_equivalent_rate": 0.6
+    },
+    {
+      "bits": 3,
+      "clean_resource_rate": 0.76,
+      "mean_occupancy_regret": 0.012333836406469345,
+      "mean_selected_occupancy": 0.017815520986914635,
+      "oracle_equivalent_rate": 0.56
+    },
+    {
+      "bits": 4,
+      "clean_resource_rate": 0.76,
+      "mean_occupancy_regret": 0.015888936817646027,
+      "mean_selected_occupancy": 0.021370621398091316,
+      "oracle_equivalent_rate": 0.52
+    },
+    {
+      "bits": 6,
+      "clean_resource_rate": 0.6,
+      "mean_occupancy_regret": 0.029816286638379097,
+      "mean_selected_occupancy": 0.03529797121882439,
+      "oracle_equivalent_rate": 0.44
+    },
+    {
+      "bits": 8,
+      "clean_resource_rate": 0.56,
+      "mean_occupancy_regret": 0.026058940216898918,
+      "mean_selected_occupancy": 0.031540628522634506,
+      "oracle_equivalent_rate": 0.44
+    }
+  ],
+  "test_direct": {
+    "clean_resource_rate": 0.64,
+    "mean_occupancy_regret": 0.013572677038609982,
+    "mean_selected_occupancy": 0.016210954636335373,
+    "oracle_equivalent_rate": 0.52
+  },
+  "link_summary": [
+    {
+      "ebn0_db": 3.0,
+      "repeat_count": 5,
+      "clean_resource_rate_mean": 0.64,
+      "clean_resource_rate_std": 0.0,
+      "clean_resource_rate_ci95_low": 0.64,
+      "clean_resource_rate_ci95_high": 0.64,
+      "mean_occupancy_regret_mean": 0.013572677038609982,
+      "mean_occupancy_regret_std": 0.0,
+      "mean_occupancy_regret_ci95_low": 0.013572677038609982,
+      "mean_occupancy_regret_ci95_high": 0.013572677038609982,
+      "mean_transmitted_bits_mean": 3577.168,
+      "mean_transmitted_bits_std": 95.22173869448082,
+      "mean_transmitted_bits_ci95_low": 3493.70246598262,
+      "mean_transmitted_bits_ci95_high": 3660.63353401738,
+      "mean_link_latency_s_mean": 0.0026312159999999996,
+      "mean_link_latency_s_std": 4.474457821904208e-05,
+      "mean_link_latency_s_ci95_low": 0.0025919956479392445,
+      "mean_link_latency_s_ci95_high": 0.0026704363520607547,
+      "mean_payload_delivery_ratio_mean": 0.68,
+      "mean_payload_delivery_ratio_std": 0.014142135623730925,
+      "mean_payload_delivery_ratio_ci95_low": 0.6676038715721401,
+      "mean_payload_delivery_ratio_ci95_high": 0.69239612842786
+    },
+    {
+      "ebn0_db": 6.0,
+      "repeat_count": 5,
+      "clean_resource_rate_mean": 0.64,
+      "clean_resource_rate_std": 0.0,
+      "clean_resource_rate_ci95_low": 0.64,
+      "clean_resource_rate_ci95_high": 0.64,
+      "mean_occupancy_regret_mean": 0.013572677038609982,
+      "mean_occupancy_regret_std": 0.0,
+      "mean_occupancy_regret_ci95_low": 0.013572677038609982,
+      "mean_occupancy_regret_ci95_high": 0.013572677038609982,
+      "mean_transmitted_bits_mean": 2318.96,
+      "mean_transmitted_bits_std": 22.960000000000036,
+      "mean_transmitted_bits_ci95_low": 2298.834672660749,
+      "mean_transmitted_bits_ci95_high": 2339.085327339251,
+      "mean_link_latency_s_mean": 0.00139048,
+      "mean_link_latency_s_std": 5.3480000000000064e-05,
+      "mean_link_latency_s_ci95_low": 0.001343602713148818,
+      "mean_link_latency_s_ci95_high": 0.001437357286851182,
+      "mean_payload_delivery_ratio_mean": 1.0,
+      "mean_payload_delivery_ratio_std": 0.0,
+      "mean_payload_delivery_ratio_ci95_low": 1.0,
+      "mean_payload_delivery_ratio_ci95_high": 1.0
+    },
+    {
+      "ebn0_db": 9.0,
+      "repeat_count": 5,
+      "clean_resource_rate_mean": 0.64,
+      "clean_resource_rate_std": 0.0,
+      "clean_resource_rate_ci95_low": 0.64,
+      "clean_resource_rate_ci95_high": 0.64,
+      "mean_occupancy_regret_mean": 0.013572677038609982,
+      "mean_occupancy_regret_std": 0.0,
+      "mean_occupancy_regret_ci95_low": 0.013572677038609982,
+      "mean_occupancy_regret_ci95_high": 0.013572677038609982,
+      "mean_transmitted_bits_mean": 2296.0,
+      "mean_transmitted_bits_std": 0.0,
+      "mean_transmitted_bits_ci95_low": 2296.0,
+      "mean_transmitted_bits_ci95_high": 2296.0,
+      "mean_link_latency_s_mean": 0.0013369999999999999,
+      "mean_link_latency_s_std": 0.0,
+      "mean_link_latency_s_ci95_low": 0.0013369999999999999,
+      "mean_link_latency_s_ci95_high": 0.0013369999999999999,
+      "mean_payload_delivery_ratio_mean": 1.0,
+      "mean_payload_delivery_ratio_std": 0.0,
+      "mean_payload_delivery_ratio_ci95_low": 1.0,
+      "mean_payload_delivery_ratio_ci95_high": 1.0
+    }
+  ],
+  "data": {
+    "selection_split": "val",
+    "selection_frame_ids_sha256": "fc02bbeac586cec9e721634139aaac46a126ad69b8504b51915d271f4c57d2f8",
+    "test_split": "test",
+    "test_frame_ids_sha256": "fc02bbeac586cec9e721634139aaac46a126ad69b8504b51915d271f4c57d2f8"
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "pillow": "10.4.0"
+    }
+  },
+  "claim_boundary": {
+    "full_split": false,
+    "calibrated_psd_dbm": false,
+    "test_tuning": false
+  }
+}

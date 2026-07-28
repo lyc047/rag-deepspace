@@ -1,0 +1,40 @@
+{
+  "protocol_id": "stage6_task_codec_development_v1",
+  "status": "development_protocol_fixed_before_result_access",
+  "created_date": "2026-07-26",
+  "purpose": "Validate a real versioned task-codeword bitstream with installed-codebook identity checks and exact-action escape fallback.",
+  "upstream_protocol": "configs/stage6_task_codebook_development_v1.json",
+  "development_source": {
+    "cache": "results/stage5/helikite_pilot_v1/helikite_pilot_cache.npz",
+    "cache_sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+    "role": "permanently_excluded_2023_adapter_pilot_development_only"
+  },
+  "task_grid": {
+    "n_channels": [8, 16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "epsilon_db": 0.2,
+    "stage5_header_bits": 40,
+    "stage6_codec_header_bits": 48,
+    "codebook_epoch": 1,
+    "codebook_packet_tag_bits": 16
+  },
+  "split": {
+    "group_field": "cluster_ids",
+    "seed": 20260726,
+    "train_group_fraction": 0.6
+  },
+  "session_identity": {
+    "full_manifest_sha256_verified_at_installation": true,
+    "per_packet_epoch_bits": 8,
+    "per_packet_truncated_manifest_tag_bits": 16,
+    "security_claim": "ordinary_stale_or_mismatched_context_detection_not_cryptographic_authentication"
+  },
+  "fallback": "escape_symbol_plus_exact_multi_query_action_ranks",
+  "governance": {
+    "external_final_archives_may_be_opened": false,
+    "external_final_signal_values_may_be_loaded": false,
+    "external_final_access_may_be_consumed": false,
+    "output_is_confirmatory_final": false
+  },
+  "claim_boundary": "Development-only codec correctness and bit accounting on excluded pilot data. The packet tag is not a cryptographic authenticator, and no noisy reporting-link result is claimed."
+}

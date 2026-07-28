@@ -1,0 +1,45 @@
+{
+  "audit_id": "stage4_thesis_materials_audit_v1",
+  "acceptance": true,
+  "items": [
+    {
+      "item_id": "T01_CHAPTER_DRAFT",
+      "status": "passed",
+      "errors": [],
+      "evidence": "docs/STAGE4_THESIS_CHAPTER_DRAFT.md"
+    },
+    {
+      "item_id": "T02_FINAL_TEMPLATE",
+      "status": "passed",
+      "errors": [],
+      "evidence": "docs/STAGE4_FINAL_RESULTS_TEMPLATE.md"
+    },
+    {
+      "item_id": "T03_CLAIM_MATRIX",
+      "status": "passed",
+      "errors": [],
+      "evidence": "docs/STAGE4_CLAIM_MATRIX.md"
+    },
+    {
+      "item_id": "T04_GENERATED_ASSETS",
+      "status": "passed",
+      "errors": [],
+      "evidence": "results/stage4/paper_assets_v1/paper_assets_manifest.json"
+    },
+    {
+      "item_id": "T05_FINAL_ACCESS_GUARD",
+      "status": "passed",
+      "errors": [],
+      "evidence": "configs/stage4_final_access_state.json"
+    },
+    {
+      "item_id": "T06_VERIFIED_RELATED_WORK",
+      "status": "passed",
+      "errors": [],
+      "evidence": "results/stage4/literature_audit_v1/verified_references.json"
+    }
+  ],
+  "failed_item_ids": [],
+  "claim_boundary": "Draft and assets are development-only; final placeholders must remain until the single preregistered run.",
+  "final_access_count": 0
+}

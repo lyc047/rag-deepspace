@@ -1,0 +1,24 @@
+{
+  "version": "3.0",
+  "purpose": "Fresh ranges for ACK-triggered candidate fallback and risk-adaptive node expansion.",
+  "consumed_test_source_ranges": [
+    {"start_inclusive": 0, "stop_exclusive": 800, "experiments": ["classical_frozen", "deepset_pilot"]},
+    {"start_inclusive": 1200, "stop_exclusive": 1403, "experiments": ["robustness_holdout_v1"]},
+    {"start_inclusive": 2000, "stop_exclusive": 2023, "experiments": ["value_bit_pipeline_diagnostic"]},
+    {"start_inclusive": 3000, "stop_exclusive": 3203, "experiments": ["value_bit_robust_holdout_v2"]}
+  ],
+  "new_validation": {
+    "split": "val",
+    "start_inclusive": 3000,
+    "stop_exclusive": 3083,
+    "role": "adaptive_threshold_selection_only"
+  },
+  "new_holdout_v3": {
+    "split": "test",
+    "start_inclusive": 4000,
+    "stop_exclusive": 4203,
+    "role": "single_frozen_adaptive_fallback_evaluation",
+    "status": "consumed_single_frozen_evaluation_no_retuning",
+    "result": "results/stage3/adaptive_fallback_holdout_v3/stage3_adaptive_fallback_result.json"
+  }
+}

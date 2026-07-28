@@ -1,0 +1,197 @@
+{
+  "experiment_id": "stage4_quality_diagnostics_v1",
+  "fit_split": "calibration",
+  "evaluation_split": "validation",
+  "calibration_target": "one_minus_node_occupancy_MAE_against_truth",
+  "calibration_scene_count": 50,
+  "validation_scene_count": 150,
+  "validation_node_rows": 600,
+  "quality_names": [
+    "sensing_snr_db",
+    "prediction_confidence",
+    "normalized_entropy",
+    "clipping_ratio",
+    "out_of_band_leakage_ratio",
+    "noise_floor_stability_db",
+    "peak_to_background_db",
+    "age_s",
+    "report_success_probability",
+    "calibration_error"
+  ],
+  "calibrator": {
+    "score_knots": [
+      0.4238778978586197,
+      0.45072763741016386,
+      0.469900444149971,
+      0.4824030414223671,
+      0.5177734225988389
+    ],
+    "quality_knots": [
+      0.8789908440245199,
+      0.8795385062022251,
+      0.8863849428889807,
+      0.8893786099710269,
+      0.895272235464654
+    ]
+  },
+  "calibration_metrics": {
+    "raw_brier": 0.1794716006098567,
+    "calibrated_brier": 0.000421467246254796,
+    "raw_ece": 0.42262454111647835,
+    "calibrated_ece": 0.002755688550386204,
+    "raw_reliability_table": [
+      {
+        "count": 60,
+        "mean_prediction": 0.41812438567479454,
+        "mean_target": 0.8720599580053336
+      },
+      {
+        "count": 60,
+        "mean_prediction": 0.4331043342749278,
+        "mean_target": 0.8809887421555079
+      },
+      {
+        "count": 60,
+        "mean_prediction": 0.4427028884490331,
+        "mean_target": 0.8838387037267997
+      },
+      {
+        "count": 60,
+        "mean_prediction": 0.4513529032468796,
+        "mean_target": 0.8816944388248279
+      },
+      {
+        "count": 60,
+        "mean_prediction": 0.45847892165184023,
+        "mean_target": 0.8836629321435946
+      },
+      {
+        "count": 60,
+        "mean_prediction": 0.46520186463991803,
+        "mean_target": 0.885462218026502
+      },
+      {
+        "count": 60,
+        "mean_prediction": 0.4723099668820699,
+        "mean_target": 0.8840097774269755
+      },
+      {
+        "count": 60,
+        "mean_prediction": 0.48041212260723115,
+        "mean_target": 0.8919831273703892
+      },
+      {
+        "count": 60,
+        "mean_prediction": 0.49097029864788055,
+        "mean_target": 0.8936545049664043
+      },
+      {
+        "count": 60,
+        "mean_prediction": 0.5104054113229116,
+        "mean_target": 0.8919541059159353
+      }
+    ],
+    "calibrated_reliability_table": [
+      {
+        "count": 60,
+        "mean_prediction": 0.8790038697863842,
+        "mean_target": 0.8720599580053336
+      },
+      {
+        "count": 60,
+        "mean_prediction": 0.8791790384109316,
+        "mean_target": 0.8809887421555079
+      },
+      {
+        "count": 60,
+        "mean_prediction": 0.8793748229946784,
+        "mean_target": 0.8838387037267997
+      },
+      {
+        "count": 60,
+        "mean_prediction": 0.880008946189727,
+        "mean_target": 0.8816944388248279
+      },
+      {
+        "count": 60,
+        "mean_prediction": 0.88230642002527,
+        "mean_target": 0.8836629321435946
+      },
+      {
+        "count": 60,
+        "mean_prediction": 0.8847071224441276,
+        "mean_target": 0.885462218026502
+      },
+      {
+        "count": 60,
+        "mean_prediction": 0.8869515313272582,
+        "mean_target": 0.8840097774269755
+      },
+      {
+        "count": 60,
+        "mean_prediction": 0.8888707109342834,
+        "mean_target": 0.8919831273703892
+      },
+      {
+        "count": 60,
+        "mean_prediction": 0.8908061378606142,
+        "mean_target": 0.8936545049664043
+      },
+      {
+        "count": 60,
+        "mean_prediction": 0.8935938573840706,
+        "mean_target": 0.8919541059159353
+      }
+    ]
+  },
+  "controlled_anomaly_metrics": {
+    "clipping": {
+      "pairwise_detection_rate": 1.0,
+      "quality_score_auc": 0.6613944444444444,
+      "healthy_mean_score": 0.15123377102057106,
+      "fault_mean_score": 0.10029395640869875
+    },
+    "out_of_band_leakage": {
+      "pairwise_detection_rate": 1.0,
+      "quality_score_auc": 0.6905972222222222,
+      "healthy_mean_score": 0.15123377102057106,
+      "fault_mean_score": 0.07561688551028553
+    },
+    "noise_instability": {
+      "pairwise_detection_rate": 1.0,
+      "quality_score_auc": 0.8079138888888889,
+      "healthy_mean_score": 0.15123377102057106,
+      "fault_mean_score": 0.03374481554767098
+    },
+    "stale_report": {
+      "pairwise_detection_rate": 1.0,
+      "quality_score_auc": 1.0,
+      "healthy_mean_score": 0.15123377102057106,
+      "fault_mean_score": 0.0027699431377942916
+    },
+    "report_failure_risk": {
+      "pairwise_detection_rate": 1.0,
+      "quality_score_auc": 0.7787472222222223,
+      "healthy_mean_score": 0.15123377102057106,
+      "fault_mean_score": 0.047009362235624
+    },
+    "calibration_failure": {
+      "pairwise_detection_rate": 1.0,
+      "quality_score_auc": 0.6905972222222222,
+      "healthy_mean_score": 0.15123377102057106,
+      "fault_mean_score": 0.07561688551028553
+    },
+    "high_confidence_miscalibrated": {
+      "pairwise_detection_rate": 1.0,
+      "quality_score_auc": 0.6805972222222222,
+      "healthy_mean_score": 0.15123377102057106,
+      "fault_mean_score": 0.08228013655317765
+    }
+  },
+  "acceptance": {
+    "completed": true,
+    "performance_gate": "diagnostic_only_no_posthoc_threshold_tuning"
+  },
+  "claim_boundary": "Calibration uses calibration truth and reports validation aggregates only. Injected faults validate score sensitivity, not real-world anomaly prevalence or H3.",
+  "final_holdout_accessed": false
+}

@@ -1,0 +1,126 @@
+{
+  "experiment_id": "stage4_c2_multinode_cache_v1",
+  "protocol_sha256": "2b2966fd9bb12ff74749846ade8b4fb4d616c96b4f5b72ff8deb761d157ac5c2",
+  "registry_sha256": "ff672ca5ceadde0652e9bfc05829f0e09e47a92a68449bd9c64447f0ca9e1b33",
+  "detector_sha256": "a91be5993b616a68a4a1632d87cae01f63260b273e48be62ddc5f06a0480f7b9",
+  "c1_checkpoint": "results/stage4/gate_a_training_v1/checkpoints/detection_plus_resource_seed20260716.pt",
+  "c1_checkpoint_sha256": "383ddb9a916e1ee8b969f2a3d1269c75327408d7a6fd4e8d99a6c620c8976cb7",
+  "task": {
+    "sources_per_scene": 8,
+    "n_channels": 8,
+    "demand_channels": 4,
+    "channel_axis": "y"
+  },
+  "node_settings": {
+    "status": "frozen_before_multinode_cache_and_label_generation",
+    "canonical_c1_checkpoint": "results/stage4/gate_a_training_v1/checkpoints/detection_plus_resource_seed20260716.pt",
+    "canonical_checkpoint_rule": "first_preregistered_training_seed_not_best_seed_cherry_pick",
+    "node_count": 4,
+    "sensing_snr_db": [
+      -6.0,
+      0.0,
+      6.0,
+      12.0
+    ],
+    "gain_db": [
+      -3.0,
+      -1.0,
+      0.0,
+      1.0
+    ],
+    "frequency_shift_bins": [
+      -1,
+      0,
+      0,
+      1
+    ],
+    "reporting_ebn0_db": [
+      2.0,
+      4.0,
+      6.0,
+      8.0
+    ],
+    "age_s": [
+      0.2,
+      0.1,
+      0.05,
+      0.01
+    ],
+    "preview_granularity": {
+      "name": "G1",
+      "probability_bits": 1
+    },
+    "candidate_granularities": [
+      {
+        "name": "G2",
+        "probability_bits": 4
+      },
+      {
+        "name": "G3",
+        "probability_bits": 8
+      }
+    ],
+    "maximum_current_upgraded_nodes": 1,
+    "fusion_for_label_generation": "unweighted_mean_to_isolate_conditional_information_value",
+    "label_truth_split": "train",
+    "calibration_role": "value_prediction_calibration_only",
+    "validation_role": "ranking_and_scheduler_evaluation_only_no_saved_supervision_labels",
+    "cost": "node_specific_truncated_arq_expected_transmitted_bits_under_stage2_awgn_link",
+    "final_holdout_accessed": false
+  },
+  "quality_names": [
+    "sensing_snr_db",
+    "prediction_confidence",
+    "normalized_entropy",
+    "clipping_ratio",
+    "out_of_band_leakage_ratio",
+    "noise_floor_stability_db",
+    "peak_to_background_db",
+    "age_s",
+    "report_success_probability",
+    "calibration_error"
+  ],
+  "quality_availability": [
+    true,
+    true,
+    true,
+    true,
+    false,
+    false,
+    true,
+    true,
+    true,
+    false
+  ],
+  "splits": {
+    "train": {
+      "scenes": 300,
+      "cache": "results/stage4/multinode_cache_v1/multinode_train.npz",
+      "sha256": "6c5a731ea3679ac1efc4d520cd709265e6c50b6bdf53d74c0af2342ea8bf4c7e",
+      "scene_ids_sha256": "9812dfa7cd9f8e612212c2804bc392a8149d5068443df6dc8b3501e6c0e7a9c3"
+    },
+    "calibration": {
+      "scenes": 50,
+      "cache": "results/stage4/multinode_cache_v1/multinode_calibration.npz",
+      "sha256": "b27fa05e19b3ca39336b17b267e76a7f317bd7cb7fd3c9500575db57868dc553",
+      "scene_ids_sha256": "7c7075b28903c99808c03a96a578aecd23d96fade8504f3501bcb8427a4081eb"
+    },
+    "validation": {
+      "scenes": 150,
+      "cache": "results/stage4/multinode_cache_v1/multinode_validation.npz",
+      "sha256": "7fa665887cd68b9fbe447e189d798ebf23f9f1b6afa5e28a99f2375c84d020d0",
+      "scene_ids_sha256": "03a36c26eaef7196a04962051ec82b1b59af946ed1dd5a4d77fcb9f856be4014"
+    }
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "torch": "2.12.0"
+    }
+  },
+  "final_holdout_accessed": false,
+  "claim_boundary": "Controlled same-scene C2/H2 development cache; not real H3 evidence."
+}

@@ -1,0 +1,57 @@
+{
+  "version": "1.0",
+  "status": "temporal_confirmation_statistics_complete",
+  "metrics_sha256": "80511fd6cd6773f5a5f67d92a11eeecce838e0fcb654f1493f22a248e49a740b",
+  "protocol_sha256": "e53c75e1cbb1ed4b5e971c74c733c88d980a110d9318860849f81ff9f2def400",
+  "descriptive": {
+    "baseline_fixed4": {
+      "mean_regret_db": 0.32046796307033965,
+      "cvar_0_9_regret_db": 1.1170975038740372,
+      "mean_actual_bits": 757.534711111111
+    },
+    "c1_v3_tail_ranking_fixed4": {
+      "mean_regret_db": 0.3254450082990858,
+      "cvar_0_9_regret_db": 1.122569709777832,
+      "mean_actual_bits": 757.534711111111
+    }
+  },
+  "paired_cluster_bootstrap": {
+    "cluster_count": 32,
+    "repetitions": 20000,
+    "seed": 20260723,
+    "one_sided_confidence": 0.95,
+    "mean_regret_difference": 0.004977045228746203,
+    "mean_regret_upper_bound": 0.013037432786371754,
+    "mean_regret_one_sided_p": 0.8470076496175192,
+    "cvar_difference": 0.0054722059037948245,
+    "cvar_upper_bound": 0.03157055719090568,
+    "cvar_one_sided_p": 0.5855207239638018,
+    "actual_bit_difference": 0.0,
+    "actual_bit_upper_bound": 0.0,
+    "baseline_mean_actual_bits": 757.534711111111
+  },
+  "bit_noninferiority_margin": 7.57534711111111,
+  "gates": {
+    "mean_regret_superiority": false,
+    "cvar_superiority": false,
+    "fixed_application_payload_equality": true,
+    "actual_bit_noninferiority_within_1pct": true
+  },
+  "overall_success": false,
+  "stratum_sensitivity": {
+    "later_time_same_site": {
+      "scenes": 270,
+      "baseline_mean_regret_db": 0.3365418864591622,
+      "proposed_mean_regret_db": 0.34163479670771846,
+      "mean_difference_db": 0.0050929102485562545
+    },
+    "later_time_second_site": {
+      "scenes": 30,
+      "baseline_mean_regret_db": 0.1758026525709364,
+      "proposed_mean_regret_db": 0.1797369126213922,
+      "mean_difference_db": 0.003934260050455728
+    }
+  },
+  "multiplicity_note": "Mean and CVaR are a conjunction claim evaluated as an intersection-union test; both one-sided gates must pass.",
+  "claim_boundary": "Secondary temporal and cross-fixed-site confirmation on real received-power sweeps with a simulated reporting link; not a new independent campaign, raw-IQ detector validation, UAV mobility, measured backhaul, or MIMO."
+}

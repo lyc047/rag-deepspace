@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "manifests": {
+    "data/frame_manifest.csv": {
+      "role": "real_iq_interface_validation",
+      "formal_eligible": false,
+      "source_group_key": "meta_path",
+      "reason": "All frames originate from one short SigMF recording; frame-level train/val/test labels cannot support independent generalization claims."
+    },
+    "data/synthetic_frame_manifest.csv": {
+      "role": "controlled_pipeline_and_channel_sweep",
+      "formal_eligible": false,
+      "source_group_key": "path",
+      "reason": "Controlled synthetic evidence is useful for diagnosis and sweeps but cannot replace primary real or benchmark evidence."
+    },
+    "data/manifest.csv": {
+      "role": "dataset_catalog",
+      "formal_eligible": false,
+      "source_group_key": "dataset_id",
+      "reason": "Catalog-level manifest rather than a sample-level formal split."
+    }
+  },
+  "raddet": {
+    "role": "primary_benchmark",
+    "formal_eligible": true,
+    "split_policy": "local_data_yaml_directory_split",
+    "limitations": [
+      "synthetically generated radar benchmark rather than real UAV measurement",
+      "independent frames are not correlated multi-UAV observations",
+      "observed local test/train/val counts are 20001/14001/6001 and must not be relabeled without provenance verification"
+    ]
+  }
+}

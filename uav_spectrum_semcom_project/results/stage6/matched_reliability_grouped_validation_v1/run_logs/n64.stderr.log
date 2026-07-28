@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\scripts\run_stage6_grouped_validation.py", line 631, in <module>
+    main()
+  File "C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\scripts\run_stage6_grouped_validation.py", line 619, in main
+    _run_n(
+  File "C:\Users\Lenovo\Desktop\项目\rag-deepspace\uav_spectrum_semcom_project\scripts\run_stage6_grouped_validation.py", line 424, in _run_n
+    raise ValueError(f"group {group_id} has fewer than two scenes")
+ValueError: group LW1:20220219 has fewer than two scenes

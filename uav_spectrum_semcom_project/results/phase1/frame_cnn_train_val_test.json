@@ -1,0 +1,211 @@
+{
+  "args": {
+    "manifest": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\data\\frame_manifest.csv",
+    "epochs": 12,
+    "patches_per_frame": 64,
+    "batch_size": 16,
+    "n_fft": 512,
+    "hop_length": 128,
+    "thresholds": [
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7
+    ],
+    "min_cells": 16,
+    "seed": 0,
+    "device": "cuda"
+  },
+  "device": "cuda",
+  "n_train_frames": 8,
+  "n_val_frames": 3,
+  "n_test_frames": 3,
+  "n_train_patches": 512,
+  "pos_weight": 12.691037166154187,
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 0.6243291618302464
+    },
+    {
+      "epoch": 2,
+      "loss": 0.2684880308806896
+    },
+    {
+      "epoch": 3,
+      "loss": 0.10037051455583423
+    },
+    {
+      "epoch": 4,
+      "loss": 0.05182831233832985
+    },
+    {
+      "epoch": 5,
+      "loss": 0.03324841824360192
+    },
+    {
+      "epoch": 6,
+      "loss": 0.02498833352001384
+    },
+    {
+      "epoch": 7,
+      "loss": 0.01905710357823409
+    },
+    {
+      "epoch": 8,
+      "loss": 0.015440547809703276
+    },
+    {
+      "epoch": 9,
+      "loss": 0.0292681792343501
+    },
+    {
+      "epoch": 10,
+      "loss": 0.01896923960885033
+    },
+    {
+      "epoch": 11,
+      "loss": 0.012332552680163644
+    },
+    {
+      "epoch": 12,
+      "loss": 0.009415220614755526
+    }
+  ],
+  "best_val": {
+    "threshold": 0.3,
+    "aggregate": {
+      "n_frames": 3,
+      "true_positive": 6,
+      "false_positive": 4,
+      "false_negative": 7,
+      "precision": 0.6,
+      "recall": 0.46153846153846156,
+      "f1": 0.5217391304347826,
+      "mean_frame_f1": 0.5111111111111111,
+      "mean_semantic_packet_bps": 47566.666666666664
+    },
+    "rows": [
+      {
+        "frame_id": "sigmf_5g_short_frame_008",
+        "threshold": 0.3,
+        "n_pred": 1,
+        "n_truth": 3,
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "mean_matched_iou": 0.6707033967775047,
+        "best_iou": 0.6707033967775047,
+        "semantic_packet_bps": 28900.0,
+        "semantic_packet_bits_per_frame": 289,
+        "raw_iq_12bit_iq_bps": 184320000.0
+      },
+      {
+        "frame_id": "sigmf_5g_short_frame_009",
+        "threshold": 0.3,
+        "n_pred": 1,
+        "n_truth": 3,
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "mean_matched_iou": 0.6542683893468612,
+        "best_iou": 0.6542683893468612,
+        "semantic_packet_bps": 28900.0,
+        "semantic_packet_bits_per_frame": 289,
+        "raw_iq_12bit_iq_bps": 184320000.0
+      },
+      {
+        "frame_id": "sigmf_5g_short_frame_010",
+        "threshold": 0.3,
+        "n_pred": 8,
+        "n_truth": 7,
+        "true_positive": 4,
+        "false_positive": 4,
+        "false_negative": 3,
+        "precision": 0.5,
+        "recall": 0.5714285714285714,
+        "f1": 0.5333333333333333,
+        "mean_matched_iou": 0.5252701824713257,
+        "best_iou": 0.897319587628866,
+        "semantic_packet_bps": 84900.0,
+        "semantic_packet_bits_per_frame": 849,
+        "raw_iq_12bit_iq_bps": 184320000.0
+      }
+    ]
+  },
+  "test": {
+    "threshold": 0.3,
+    "aggregate": {
+      "n_frames": 3,
+      "true_positive": 7,
+      "false_positive": 0,
+      "false_negative": 6,
+      "precision": 1.0,
+      "recall": 0.5384615384615384,
+      "f1": 0.7000000000000001,
+      "mean_frame_f1": 0.611111111111111,
+      "mean_semantic_packet_bps": 52645.92619880886
+    },
+    "rows": [
+      {
+        "frame_id": "sigmf_5g_short_frame_011",
+        "threshold": 0.3,
+        "n_pred": 5,
+        "n_truth": 7,
+        "true_positive": 5,
+        "false_positive": 0,
+        "false_negative": 2,
+        "precision": 1.0,
+        "recall": 0.7142857142857143,
+        "f1": 0.8333333333333333,
+        "mean_matched_iou": 0.7399815651421487,
+        "best_iou": 0.8340097402597454,
+        "semantic_packet_bps": 60900.0,
+        "semantic_packet_bits_per_frame": 609,
+        "raw_iq_12bit_iq_bps": 184320000.0
+      },
+      {
+        "frame_id": "sigmf_5g_short_frame_012",
+        "threshold": 0.3,
+        "n_pred": 1,
+        "n_truth": 3,
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "mean_matched_iou": 0.6490550954078423,
+        "best_iou": 0.6490550954078423,
+        "semantic_packet_bps": 28900.0,
+        "semantic_packet_bits_per_frame": 289,
+        "raw_iq_12bit_iq_bps": 184320000.0
+      },
+      {
+        "frame_id": "sigmf_5g_short_frame_013",
+        "threshold": 0.3,
+        "n_pred": 1,
+        "n_truth": 3,
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "mean_matched_iou": 0.6516513157894737,
+        "best_iou": 0.6516513157894737,
+        "semantic_packet_bps": 68137.7785964266,
+        "semantic_packet_bits_per_frame": 289,
+        "raw_iq_12bit_iq_bps": 184319999.99999997
+      }
+    ]
+  },
+  "note": "Frame-level split smoke result on one short recording; still not a final generalization claim."
+}

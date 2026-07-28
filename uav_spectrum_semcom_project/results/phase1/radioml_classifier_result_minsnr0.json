@@ -1,0 +1,98 @@
+{
+  "dataset": "RadioML2016.10A",
+  "classes": [
+    "8PSK",
+    "AM-DSB",
+    "AM-SSB",
+    "BPSK",
+    "CPFSK",
+    "GFSK",
+    "PAM4",
+    "QAM16",
+    "QAM64",
+    "QPSK",
+    "WBFM"
+  ],
+  "n_classes": 11,
+  "device": "cuda",
+  "args": {
+    "data": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\data\\raw\\radioml2016_10a\\RML2016.10a_dict_optimized.pkl",
+    "epochs": 10,
+    "batch_size": 512,
+    "train_per_group": 300,
+    "val_per_group": 100,
+    "test_per_group": 100,
+    "min_snr": 0,
+    "device": "cuda",
+    "seed": 0
+  },
+  "n_train": 33000,
+  "n_val": 11000,
+  "n_test": 11000,
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 1.7846147005374615
+    },
+    {
+      "epoch": 2,
+      "loss": 0.950077420931596
+    },
+    {
+      "epoch": 3,
+      "loss": 0.7102441567641038
+    },
+    {
+      "epoch": 4,
+      "loss": 0.6447102427482605
+    },
+    {
+      "epoch": 5,
+      "loss": 0.611984802209414
+    },
+    {
+      "epoch": 6,
+      "loss": 0.5865629223676828
+    },
+    {
+      "epoch": 7,
+      "loss": 0.5627001459781941
+    },
+    {
+      "epoch": 8,
+      "loss": 0.547140313570316
+    },
+    {
+      "epoch": 9,
+      "loss": 0.5220761111149421
+    },
+    {
+      "epoch": 10,
+      "loss": 0.5094400933155647
+    }
+  ],
+  "val_accuracy": 0.7592727272727273,
+  "test_accuracy": 0.759090909090909,
+  "test_accuracy_by_snr": {
+    "0": 0.6418181818181818,
+    "2": 0.71,
+    "4": 0.7172727272727273,
+    "6": 0.7454545454545455,
+    "8": 0.7736363636363637,
+    "10": 0.7845454545454545,
+    "12": 0.8090909090909091,
+    "14": 0.8127272727272727,
+    "16": 0.8027272727272727,
+    "18": 0.7936363636363636
+  },
+  "payload_bits": {
+    "raw_iq_12bit_iq_bits_per_sample": 3072,
+    "hard_class_bits_per_sample": 4,
+    "soft_prob_8bit_bits_per_sample": 88,
+    "feature_token_16d_6bit_bits_per_sample": 145,
+    "raw_to_hard_ratio": 768.0,
+    "raw_to_soft_ratio": 34.90909090909091,
+    "raw_to_token_ratio": 21.186206896551724
+  },
+  "note": "Medium dataset validation for class-level I/Q semantics; not a wideband detection benchmark."
+}

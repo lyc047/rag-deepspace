@@ -1,0 +1,100 @@
+{
+  "dataset": "RadioML2016.10A",
+  "classes": [
+    "8PSK",
+    "AM-DSB",
+    "AM-SSB",
+    "BPSK",
+    "CPFSK",
+    "GFSK",
+    "PAM4",
+    "QAM16",
+    "QAM64",
+    "QPSK",
+    "WBFM"
+  ],
+  "n_classes": 11,
+  "device": "cuda",
+  "args": {
+    "data": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\data\\raw\\radioml2016_10a\\RML2016.10a_dict_optimized.pkl",
+    "epochs": 8,
+    "batch_size": 512,
+    "train_per_group": 200,
+    "val_per_group": 50,
+    "test_per_group": 50,
+    "min_snr": null,
+    "device": "cuda",
+    "seed": 0
+  },
+  "n_train": 44000,
+  "n_val": 11000,
+  "n_test": 11000,
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 1.9909254090730535
+    },
+    {
+      "epoch": 2,
+      "loss": 1.558723977831907
+    },
+    {
+      "epoch": 3,
+      "loss": 1.4707288423249887
+    },
+    {
+      "epoch": 4,
+      "loss": 1.4366128721902536
+    },
+    {
+      "epoch": 5,
+      "loss": 1.4135760789693788
+    },
+    {
+      "epoch": 6,
+      "loss": 1.3957894042480823
+    },
+    {
+      "epoch": 7,
+      "loss": 1.3809183489444643
+    },
+    {
+      "epoch": 8,
+      "loss": 1.365031898021698
+    }
+  ],
+  "val_accuracy": 0.4631818181818182,
+  "test_accuracy": 0.4647272727272727,
+  "test_accuracy_by_snr": {
+    "-20": 0.09454545454545454,
+    "-18": 0.1,
+    "-16": 0.1,
+    "-14": 0.10181818181818182,
+    "-12": 0.10545454545454545,
+    "-10": 0.17454545454545456,
+    "-8": 0.2672727272727273,
+    "-6": 0.3690909090909091,
+    "-4": 0.4527272727272727,
+    "-2": 0.5509090909090909,
+    "0": 0.6290909090909091,
+    "2": 0.6472727272727272,
+    "4": 0.6363636363636364,
+    "6": 0.66,
+    "8": 0.7072727272727273,
+    "10": 0.7327272727272728,
+    "12": 0.7563636363636363,
+    "14": 0.730909090909091,
+    "16": 0.7345454545454545,
+    "18": 0.7436363636363637
+  },
+  "payload_bits": {
+    "raw_iq_12bit_iq_bits_per_sample": 3072,
+    "hard_class_bits_per_sample": 4,
+    "soft_prob_8bit_bits_per_sample": 88,
+    "feature_token_16d_6bit_bits_per_sample": 145,
+    "raw_to_hard_ratio": 768.0,
+    "raw_to_soft_ratio": 34.90909090909091,
+    "raw_to_token_ratio": 21.186206896551724
+  },
+  "note": "Medium dataset validation for class-level I/Q semantics; not a wideband detection benchmark."
+}

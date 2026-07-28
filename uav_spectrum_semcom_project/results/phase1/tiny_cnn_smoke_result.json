@@ -1,0 +1,54 @@
+{
+  "script": "train_tiny_cnn_smoke.py",
+  "n_patches": 128,
+  "patch_shape": [
+    128,
+    128
+  ],
+  "epochs": 8,
+  "pos_weight": 14.078637628432352,
+  "mask_positive_fraction_full_stft": 0.015852773562073708,
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 0.9727904722094536
+    },
+    {
+      "epoch": 2,
+      "loss": 0.724055141210556
+    },
+    {
+      "epoch": 3,
+      "loss": 0.6307131052017212
+    },
+    {
+      "epoch": 4,
+      "loss": 0.5432315766811371
+    },
+    {
+      "epoch": 5,
+      "loss": 0.46060891821980476
+    },
+    {
+      "epoch": 6,
+      "loss": 0.3740152344107628
+    },
+    {
+      "epoch": 7,
+      "loss": 0.29900234937667847
+    },
+    {
+      "epoch": 8,
+      "loss": 0.23096601851284504
+    }
+  ],
+  "metrics_on_training_patches": {
+    "pixel_precision": 0.7941703880237858,
+    "pixel_recall": 0.9871441821672263,
+    "pixel_f1": 0.8802046435886997,
+    "tp": 137293,
+    "fp": 35583,
+    "fn": 1788
+  },
+  "note": "Smoke/overfit experiment only; not a valid generalization result."
+}

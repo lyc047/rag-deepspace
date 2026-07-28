@@ -1,0 +1,564 @@
+{
+  "version": "1.0",
+  "audit_id": "stage6_s6_7a_governance_metadata_audit_v1",
+  "status": "s6_7a_governance_audit_complete",
+  "created_utc": "2026-07-27T10:00:18.675725+00:00",
+  "scope": {
+    "final_signal_values_loaded": false,
+    "external_final_zip_member_lists_opened": false,
+    "external_final_verification": "filesystem existence, size, and archive SHA-256 only",
+    "fixed_site_development_metadata_loaded": true,
+    "fixed_site_power_values_loaded": false
+  },
+  "freeze": {
+    "freeze_id": "stage6_candidate_architecture_freeze_v1",
+    "manifest_path": "configs/stage6_candidate_architecture_freeze_v1.json",
+    "manifest_sha256": "8409170d391af04d04c1ba0e16f937ab01749d8248d63b20dc25be43634da3dd",
+    "locked_artifact_count": 22,
+    "all_locked_artifacts_match": true,
+    "artifacts": [
+      {
+        "path": "src/spectrum_semcom/stage6_task_codebook.py",
+        "kind": "locked_code_or_config",
+        "exists": true,
+        "expected_sha256": "ea4dc1f26e96aabf8bbeeaa7779f54e2d1b44570ce5146c43ebba02ad4adc03c",
+        "actual_sha256": "ea4dc1f26e96aabf8bbeeaa7779f54e2d1b44570ce5146c43ebba02ad4adc03c",
+        "matches": true
+      },
+      {
+        "path": "src/spectrum_semcom/stage6_task_codec.py",
+        "kind": "locked_code_or_config",
+        "exists": true,
+        "expected_sha256": "d37dcbbd5370e2ef5a731c83517e0e73a03eed5ac0598ab7b515a33e88451bd3",
+        "actual_sha256": "d37dcbbd5370e2ef5a731c83517e0e73a03eed5ac0598ab7b515a33e88451bd3",
+        "matches": true
+      },
+      {
+        "path": "src/spectrum_semcom/stage6_context_codec.py",
+        "kind": "locked_code_or_config",
+        "exists": true,
+        "expected_sha256": "5eea3916b1ee3b7b43ec3bb0a070a6298210d62ff1d71f8b2ba964eee7dab0f5",
+        "actual_sha256": "5eea3916b1ee3b7b43ec3bb0a070a6298210d62ff1d71f8b2ba964eee7dab0f5",
+        "matches": true
+      },
+      {
+        "path": "src/spectrum_semcom/stage6_context_recovery.py",
+        "kind": "locked_code_or_config",
+        "exists": true,
+        "expected_sha256": "2e63202e1e19e8fe33039db6d327f1fc0177454439721c8d799304adb678f2be",
+        "actual_sha256": "2e63202e1e19e8fe33039db6d327f1fc0177454439721c8d799304adb678f2be",
+        "matches": true
+      },
+      {
+        "path": "src/spectrum_semcom/stage6_context_heartbeat.py",
+        "kind": "locked_code_or_config",
+        "exists": true,
+        "expected_sha256": "73413b4276974eb95396efa0eec09983b34e73cabe4b7a0379040c4c4dabb616",
+        "actual_sha256": "73413b4276974eb95396efa0eec09983b34e73cabe4b7a0379040c4c4dabb616",
+        "matches": true
+      },
+      {
+        "path": "src/spectrum_semcom/stage6_temporal_hazard.py",
+        "kind": "locked_code_or_config",
+        "exists": true,
+        "expected_sha256": "c6b06462b011ae36e25bedc5df5141eddbd5521b616795ee63815615f5ee08b2",
+        "actual_sha256": "c6b06462b011ae36e25bedc5df5141eddbd5521b616795ee63815615f5ee08b2",
+        "matches": true
+      },
+      {
+        "path": "src/spectrum_semcom/stage5_cumulative_ack.py",
+        "kind": "locked_code_or_config",
+        "exists": true,
+        "expected_sha256": "5a0ad147e9e209f68942a7d51e8a1de048cadf5a678d2fa4a08061f69a472a6e",
+        "actual_sha256": "5a0ad147e9e209f68942a7d51e8a1de048cadf5a678d2fa4a08061f69a472a6e",
+        "matches": true
+      },
+      {
+        "path": "scripts/run_stage6_context_recovery_development.py",
+        "kind": "locked_code_or_config",
+        "exists": true,
+        "expected_sha256": "e947e6e1e88e075c0209af3d7f0be845b0c0088922f8727bcea99f56cf8196dc",
+        "actual_sha256": "e947e6e1e88e075c0209af3d7f0be845b0c0088922f8727bcea99f56cf8196dc",
+        "matches": true
+      },
+      {
+        "path": "scripts/run_stage6_joint_predictive_recovery_development.py",
+        "kind": "locked_code_or_config",
+        "exists": true,
+        "expected_sha256": "6c1853740bfd7ba79e9b31edaff805ff227a4425d6d87c15f0fbc4238a62a3d5",
+        "actual_sha256": "6c1853740bfd7ba79e9b31edaff805ff227a4425d6d87c15f0fbc4238a62a3d5",
+        "matches": true
+      },
+      {
+        "path": "configs/stage6_joint_predictive_recovery_development_v1.json",
+        "kind": "locked_code_or_config",
+        "exists": true,
+        "expected_sha256": "714f02a445443c238bd15b1d406798ca279d6a4407998cbe45d35b719ce43303",
+        "actual_sha256": "714f02a445443c238bd15b1d406798ca279d6a4407998cbe45d35b719ce43303",
+        "matches": true
+      },
+      {
+        "path": "results/stage6/task_codebook_development_v1/task_codebook_result.json",
+        "kind": "locked_evidence",
+        "exists": true,
+        "expected_sha256": "89d596a3c2969ea985a2b19dd4016d3cfa2a16217c740cc91ee698565256620d",
+        "actual_sha256": "89d596a3c2969ea985a2b19dd4016d3cfa2a16217c740cc91ee698565256620d",
+        "matches": true
+      },
+      {
+        "path": "results/stage6/task_codec_development_v1/task_codec_result.json",
+        "kind": "locked_evidence",
+        "exists": true,
+        "expected_sha256": "d5460ae347559853259da3c6c40ce2f4907caa41e22a65ab5b7fb4e92145e730",
+        "actual_sha256": "d5460ae347559853259da3c6c40ce2f4907caa41e22a65ab5b7fb4e92145e730",
+        "matches": true
+      },
+      {
+        "path": "results/stage6/context_event_development_v1/context_event_result.json",
+        "kind": "locked_evidence",
+        "exists": true,
+        "expected_sha256": "9b52ef512d9831fdf407323ec6949cf6398813720ba5bf799053a03e2839d6f2",
+        "actual_sha256": "9b52ef512d9831fdf407323ec6949cf6398813720ba5bf799053a03e2839d6f2",
+        "matches": true
+      },
+      {
+        "path": "results/stage6/context_recovery_development_v1/context_recovery_result.json",
+        "kind": "locked_evidence",
+        "exists": true,
+        "expected_sha256": "137d5e4ce5b22339aea51f4a6c2bb75862d846aac7982f0092bb0cc9a36eb8a3",
+        "actual_sha256": "137d5e4ce5b22339aea51f4a6c2bb75862d846aac7982f0092bb0cc9a36eb8a3",
+        "matches": true
+      },
+      {
+        "path": "results/stage6/context_heartbeat_development_v1/context_heartbeat_result.json",
+        "kind": "locked_evidence",
+        "exists": true,
+        "expected_sha256": "e60e465ee31cc718becd1e4e4ac2e3343c4c5794e78220b22136945655efba8e",
+        "actual_sha256": "e60e465ee31cc718becd1e4e4ac2e3343c4c5794e78220b22136945655efba8e",
+        "matches": true
+      },
+      {
+        "path": "results/stage6/temporal_hazard_development_v1/temporal_hazard_result.json",
+        "kind": "locked_evidence",
+        "exists": true,
+        "expected_sha256": "3c36cb992e1696d4df80c077969e8f391c0a9fdae98f53b78fda7d1faf232b47",
+        "actual_sha256": "3c36cb992e1696d4df80c077969e8f391c0a9fdae98f53b78fda7d1faf232b47",
+        "matches": true
+      },
+      {
+        "path": "results/stage6/predictive_repetition_development_v1/predictive_repetition_result.json",
+        "kind": "locked_evidence",
+        "exists": true,
+        "expected_sha256": "4b77ba043bdab08c8984afdbbdd96bf4a87f86bed1fb589fcf4a96c0a01cd837",
+        "actual_sha256": "4b77ba043bdab08c8984afdbbdd96bf4a87f86bed1fb589fcf4a96c0a01cd837",
+        "matches": true
+      },
+      {
+        "path": "results/stage6/joint_predictive_recovery_development_v1/joint_predictive_recovery_result.json",
+        "kind": "locked_evidence",
+        "exists": true,
+        "expected_sha256": "bc082f81adbb74bc234989a50655178753dda506f04afc14210fb8c75dc5d671",
+        "actual_sha256": "bc082f81adbb74bc234989a50655178753dda506f04afc14210fb8c75dc5d671",
+        "matches": true
+      },
+      {
+        "path": "results/stage6/next_codeword_prediction_development_v1/next_codeword_prediction_result.json",
+        "kind": "locked_evidence",
+        "exists": true,
+        "expected_sha256": "c3499d21deb8ea8e80de00b10d414c8493c40602e4d33f02e2d99b94c85cbc55",
+        "actual_sha256": "c3499d21deb8ea8e80de00b10d414c8493c40602e4d33f02e2d99b94c85cbc55",
+        "matches": true
+      },
+      {
+        "path": "results/stage6/selective_codeword_prediction_development_v2/selective_codeword_prediction_result.json",
+        "kind": "locked_evidence",
+        "exists": true,
+        "expected_sha256": "00e80bfd81ad7ff8d3c07175974e97626bedce7485d020eb769632e2407890db",
+        "actual_sha256": "00e80bfd81ad7ff8d3c07175974e97626bedce7485d020eb769632e2407890db",
+        "matches": true
+      },
+      {
+        "path": "results/stage6/markov_probability_scheduler_development_v1/markov_probability_scheduler_result.json",
+        "kind": "locked_evidence",
+        "exists": true,
+        "expected_sha256": "d7ea76535a7c771aa102a3f2a025f44fa25f12cb418b3fcad4085b1aa47a09ac",
+        "actual_sha256": "d7ea76535a7c771aa102a3f2a025f44fa25f12cb418b3fcad4085b1aa47a09ac",
+        "matches": true
+      },
+      {
+        "path": "results/stage6/markov_token_bucket_scheduler_development_v1/markov_probability_scheduler_result.json",
+        "kind": "locked_evidence",
+        "exists": true,
+        "expected_sha256": "006603e6a0dfa2861411c12b7dd0a455fe257f35c942bdbc974d6db65859b3a3",
+        "actual_sha256": "006603e6a0dfa2861411c12b7dd0a455fe257f35c942bdbc974d6db65859b3a3",
+        "matches": true
+      }
+    ]
+  },
+  "development_acceptance": {
+    "verdict": "ready_for_stage6_final_protocol_registration_with_caution",
+    "all_acceptance_gates_passed": true,
+    "collected_test_count": 323,
+    "pytest_exit_code": 0,
+    "final_access_count": 0,
+    "main_result_sha256": "48bdebfee9862807be9a980fcc21e8c09800e4559b20e42dc657d2d5ec3e84e9",
+    "reproduction_result_sha256": "48bdebfee9862807be9a980fcc21e8c09800e4559b20e42dc657d2d5ec3e84e9",
+    "main_and_reproduction_byte_identical": true
+  },
+  "fixed_site_development_archives": [
+    {
+      "site": "LW1",
+      "path": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsLW1Feb2022_SigMF.zip",
+      "exists": true,
+      "archive_size_bytes": 12498435786,
+      "archive_sha256": null,
+      "archive_sha256_status": "not_recomputed_in_routine_audit_due_to_12_to_21_gb_size",
+      "primary_member_count": 43234,
+      "primary_uncompressed_bytes": 59460001221,
+      "sigmf_meta_count": 21617,
+      "sigmf_data_count": 21617,
+      "sigmf_data_size_counts": {
+        "395472": 21617
+      },
+      "all_sigmf_data_files_match_98868_float32_bins": true,
+      "paired_scene_count": 21617,
+      "orphan_meta_count": 0,
+      "orphan_data_count": 0,
+      "first_timestamp_local": "2022-02-08T12:57:56",
+      "last_timestamp_local": "2022-02-22T10:42:54",
+      "calendar_day_count": 10,
+      "scenes_by_day": {
+        "2022-02-08": 1319,
+        "2022-02-09": 2869,
+        "2022-02-10": 2868,
+        "2022-02-11": 2868,
+        "2022-02-12": 2868,
+        "2022-02-13": 828,
+        "2022-02-19": 1,
+        "2022-02-20": 1772,
+        "2022-02-21": 4302,
+        "2022-02-22": 1922
+      },
+      "median_gap_seconds": 30.0,
+      "p95_gap_seconds": 31.0,
+      "maximum_gap_seconds": 576057.0,
+      "sampled_frequency_metadata_count": 5,
+      "sampled_frequency_axes": [
+        {
+          "member": "ResultsLW1Feb2022_SigMF/results_20220208_125756.sigmf-meta",
+          "datatype": "rf32_le",
+          "declared_bins": 98868,
+          "axis_bins": 98868,
+          "first_mhz": 87.16000366210938,
+          "last_mhz": 6019.18017578125,
+          "median_step_mhz": 0.06005859375,
+          "axis_sha256_float64": "df21d4081cde1c5aeb3d2809aaa49a16fc7396eea75fe8b037fa6c50f3d8e66f"
+        },
+        {
+          "member": "ResultsLW1Feb2022_SigMF/results_20220210_101056.sigmf-meta",
+          "datatype": "rf32_le",
+          "declared_bins": 98868,
+          "axis_bins": 98868,
+          "first_mhz": 87.16000366210938,
+          "last_mhz": 6019.18017578125,
+          "median_step_mhz": 0.06005859375,
+          "axis_sha256_float64": "df21d4081cde1c5aeb3d2809aaa49a16fc7396eea75fe8b037fa6c50f3d8e66f"
+        },
+        {
+          "member": "ResultsLW1Feb2022_SigMF/results_20220212_072358.sigmf-meta",
+          "datatype": "rf32_le",
+          "declared_bins": 98868,
+          "axis_bins": 98868,
+          "first_mhz": 87.16000366210938,
+          "last_mhz": 6019.18017578125,
+          "median_step_mhz": 0.06005859375,
+          "axis_sha256_float64": "df21d4081cde1c5aeb3d2809aaa49a16fc7396eea75fe8b037fa6c50f3d8e66f"
+        },
+        {
+          "member": "ResultsLW1Feb2022_SigMF/results_20220221_043432.sigmf-meta",
+          "datatype": "rf32_le",
+          "declared_bins": 98868,
+          "axis_bins": 98868,
+          "first_mhz": 87.16000366210938,
+          "last_mhz": 6019.18017578125,
+          "median_step_mhz": 0.06005859375,
+          "axis_sha256_float64": "df21d4081cde1c5aeb3d2809aaa49a16fc7396eea75fe8b037fa6c50f3d8e66f"
+        },
+        {
+          "member": "ResultsLW1Feb2022_SigMF/results_20220222_104254.sigmf-meta",
+          "datatype": "rf32_le",
+          "declared_bins": 98868,
+          "axis_bins": 98868,
+          "first_mhz": 87.16000366210938,
+          "last_mhz": 6019.18017578125,
+          "median_step_mhz": 0.06005859375,
+          "axis_sha256_float64": "df21d4081cde1c5aeb3d2809aaa49a16fc7396eea75fe8b037fa6c50f3d8e66f"
+        }
+      ],
+      "sampled_axis_consistent_within_site": true,
+      "signal_power_values_loaded": false,
+      "audit_scope": "ZIP central directory, filenames, sizes, timestamps, and five frequency-axis metadata records only"
+    },
+    {
+      "site": "CC1",
+      "path": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsCC1Feb2022_SigMF.zip",
+      "exists": true,
+      "archive_size_bytes": 19084799397,
+      "archive_sha256": null,
+      "archive_sha256_status": "not_recomputed_in_routine_audit_due_to_12_to_21_gb_size",
+      "primary_member_count": 65059,
+      "primary_uncompressed_bytes": 89474924128,
+      "sigmf_meta_count": 32529,
+      "sigmf_data_count": 32529,
+      "sigmf_data_size_counts": {
+        "395472": 32529
+      },
+      "all_sigmf_data_files_match_98868_float32_bins": true,
+      "paired_scene_count": 32529,
+      "orphan_meta_count": 0,
+      "orphan_data_count": 0,
+      "first_timestamp_local": "2022-02-08T12:50:34",
+      "last_timestamp_local": "2022-02-24T19:59:48",
+      "calendar_day_count": 9,
+      "scenes_by_day": {
+        "2022-02-08": 2104,
+        "2022-02-09": 4525,
+        "2022-02-10": 4522,
+        "2022-02-11": 4522,
+        "2022-02-12": 4520,
+        "2022-02-13": 4518,
+        "2022-02-14": 4674,
+        "2022-02-15": 2633,
+        "2022-02-24": 511
+      },
+      "median_gap_seconds": 19.0,
+      "p95_gap_seconds": 20.0,
+      "maximum_gap_seconds": 793681.0,
+      "sampled_frequency_metadata_count": 5,
+      "sampled_frequency_axes": [
+        {
+          "member": "SigMF/results_20220208_125034.sigmf-meta",
+          "datatype": "rf32_le",
+          "declared_bins": 98868,
+          "axis_bins": 98868,
+          "first_mhz": 87.16000366210938,
+          "last_mhz": 6019.18017578125,
+          "median_step_mhz": 0.06005859375,
+          "axis_sha256_float64": "df21d4081cde1c5aeb3d2809aaa49a16fc7396eea75fe8b037fa6c50f3d8e66f"
+        },
+        {
+          "member": "SigMF/results_20220210_075852.sigmf-meta",
+          "datatype": "rf32_le",
+          "declared_bins": 98868,
+          "axis_bins": 98868,
+          "first_mhz": 87.16000366210938,
+          "last_mhz": 6019.18017578125,
+          "median_step_mhz": 0.06005859375,
+          "axis_sha256_float64": "df21d4081cde1c5aeb3d2809aaa49a16fc7396eea75fe8b037fa6c50f3d8e66f"
+        },
+        {
+          "member": "SigMF/results_20220212_030833.sigmf-meta",
+          "datatype": "rf32_le",
+          "declared_bins": 98868,
+          "axis_bins": 98868,
+          "first_mhz": 87.16000366210938,
+          "last_mhz": 6019.18017578125,
+          "median_step_mhz": 0.06005859375,
+          "axis_sha256_float64": "df21d4081cde1c5aeb3d2809aaa49a16fc7396eea75fe8b037fa6c50f3d8e66f"
+        },
+        {
+          "member": "SigMF/results_20220213_221936.sigmf-meta",
+          "datatype": "rf32_le",
+          "declared_bins": 98868,
+          "axis_bins": 98868,
+          "first_mhz": 87.16000366210938,
+          "last_mhz": 6019.18017578125,
+          "median_step_mhz": 0.06005859375,
+          "axis_sha256_float64": "df21d4081cde1c5aeb3d2809aaa49a16fc7396eea75fe8b037fa6c50f3d8e66f"
+        },
+        {
+          "member": "SigMF/results_20220224_195948.sigmf-meta",
+          "datatype": "rf32_le",
+          "declared_bins": 98868,
+          "axis_bins": 98868,
+          "first_mhz": 87.16000366210938,
+          "last_mhz": 6019.18017578125,
+          "median_step_mhz": 0.06005859375,
+          "axis_sha256_float64": "df21d4081cde1c5aeb3d2809aaa49a16fc7396eea75fe8b037fa6c50f3d8e66f"
+        }
+      ],
+      "sampled_axis_consistent_within_site": true,
+      "signal_power_values_loaded": false,
+      "audit_scope": "ZIP central directory, filenames, sizes, timestamps, and five frequency-axis metadata records only"
+    },
+    {
+      "site": "CC2",
+      "path": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsCC2Feb2022_SigMF.zip",
+      "exists": true,
+      "archive_size_bytes": 20662580993,
+      "archive_sha256": null,
+      "archive_sha256_status": "not_recomputed_in_routine_audit_due_to_12_to_21_gb_size",
+      "primary_member_count": 69730,
+      "primary_uncompressed_bytes": 95900366300,
+      "sigmf_meta_count": 34865,
+      "sigmf_data_count": 34865,
+      "sigmf_data_size_counts": {
+        "395472": 34865
+      },
+      "all_sigmf_data_files_match_98868_float32_bins": true,
+      "paired_scene_count": 34865,
+      "orphan_meta_count": 0,
+      "orphan_data_count": 0,
+      "first_timestamp_local": "2022-02-08T12:48:18",
+      "last_timestamp_local": "2022-02-15T12:47:53",
+      "calendar_day_count": 8,
+      "scenes_by_day": {
+        "2022-02-08": 2313,
+        "2022-02-09": 4978,
+        "2022-02-10": 4988,
+        "2022-02-11": 4976,
+        "2022-02-12": 4997,
+        "2022-02-13": 4986,
+        "2022-02-14": 4973,
+        "2022-02-15": 2654
+      },
+      "median_gap_seconds": 17.0,
+      "p95_gap_seconds": 18.0,
+      "maximum_gap_seconds": 19.0,
+      "sampled_frequency_metadata_count": 5,
+      "sampled_frequency_axes": [
+        {
+          "member": "ResultsCC2Feb2022_SigMF/results_20220208_124818.sigmf-meta",
+          "datatype": "rf32_le",
+          "declared_bins": 98868,
+          "axis_bins": 98868,
+          "first_mhz": 87.16000366210938,
+          "last_mhz": 6019.18017578125,
+          "median_step_mhz": 0.06005859375,
+          "axis_sha256_float64": "df21d4081cde1c5aeb3d2809aaa49a16fc7396eea75fe8b037fa6c50f3d8e66f"
+        },
+        {
+          "member": "ResultsCC2Feb2022_SigMF/results_20220210_065101.sigmf-meta",
+          "datatype": "rf32_le",
+          "declared_bins": 98868,
+          "axis_bins": 98868,
+          "first_mhz": 87.16000366210938,
+          "last_mhz": 6019.18017578125,
+          "median_step_mhz": 0.06005859375,
+          "axis_sha256_float64": "df21d4081cde1c5aeb3d2809aaa49a16fc7396eea75fe8b037fa6c50f3d8e66f"
+        },
+        {
+          "member": "ResultsCC2Feb2022_SigMF/results_20220212_005106.sigmf-meta",
+          "datatype": "rf32_le",
+          "declared_bins": 98868,
+          "axis_bins": 98868,
+          "first_mhz": 87.16000366210938,
+          "last_mhz": 6019.18017578125,
+          "median_step_mhz": 0.06005859375,
+          "axis_sha256_float64": "df21d4081cde1c5aeb3d2809aaa49a16fc7396eea75fe8b037fa6c50f3d8e66f"
+        },
+        {
+          "member": "ResultsCC2Feb2022_SigMF/results_20220213_184442.sigmf-meta",
+          "datatype": "rf32_le",
+          "declared_bins": 98868,
+          "axis_bins": 98868,
+          "first_mhz": 87.16000366210938,
+          "last_mhz": 6019.18017578125,
+          "median_step_mhz": 0.06005859375,
+          "axis_sha256_float64": "df21d4081cde1c5aeb3d2809aaa49a16fc7396eea75fe8b037fa6c50f3d8e66f"
+        },
+        {
+          "member": "ResultsCC2Feb2022_SigMF/results_20220215_124753.sigmf-meta",
+          "datatype": "rf32_le",
+          "declared_bins": 98868,
+          "axis_bins": 98868,
+          "first_mhz": 87.16000366210938,
+          "last_mhz": 6019.18017578125,
+          "median_step_mhz": 0.06005859375,
+          "axis_sha256_float64": "df21d4081cde1c5aeb3d2809aaa49a16fc7396eea75fe8b037fa6c50f3d8e66f"
+        }
+      ],
+      "sampled_axis_consistent_within_site": true,
+      "signal_power_values_loaded": false,
+      "audit_scope": "ZIP central directory, filenames, sizes, timestamps, and five frequency-axis metadata records only"
+    }
+  ],
+  "fixed_site_summary": {
+    "total_paired_scenes": 89011,
+    "sampled_frequency_axis_consistent_across_sites": true,
+    "unique_sampled_frequency_axis_hashes": [
+      "df21d4081cde1c5aeb3d2809aaa49a16fc7396eea75fe8b037fa6c50f3d8e66f"
+    ],
+    "metadata_integrity_pass": true
+  },
+  "external_final_registry": {
+    "registry_path": "configs/stage5_external_final_registry_v1.json",
+    "registry_sha256": "178e4b254b067d2696130742f3cd49d01d0bbf5afca6dfcfd371b9a94340915d",
+    "registry_status": "download_bundles_verified_inner_archives_ready_final_not_accessed",
+    "archives": [
+      {
+        "dataset_id": "aerpaw_packapalooza_2024",
+        "campaign": "Packapalooza urban helikite, August 2024",
+        "doi": "10.5061/dryad.0zpc8676n",
+        "path": "F:/uav_spectrum_final_data/aerpaw_helikite_external_v1/final/Packapalooza_2024/Packapalooza_2024_SigMF.zip",
+        "exists": true,
+        "size_bytes": 745874507,
+        "expected_sha256": "d6367101b05a8161880029274d619e8e823637e92e2c47751102f9be0f987617",
+        "actual_sha256": "d6367101b05a8161880029274d619e8e823637e92e2c47751102f9be0f987617",
+        "matches": true,
+        "source_values_or_method_outputs_accessed": false,
+        "verification_scope": "file size and whole-archive hash only"
+      },
+      {
+        "dataset_id": "aerpaw_lake_wheeler_2024",
+        "campaign": "Lake Wheeler rural helikite, August 2024",
+        "doi": "10.5061/dryad.pk0p2ngz8",
+        "path": "F:/uav_spectrum_final_data/aerpaw_helikite_external_v1/final/Lake_Wheeler_2024/Lake_Wheeler_2024_SigMF.zip",
+        "exists": true,
+        "size_bytes": 787189713,
+        "expected_sha256": "bee764cee4c99f7cddc35c9036ef5c38e6283516ebfe322f34d50297c3bbfa9b",
+        "actual_sha256": "bee764cee4c99f7cddc35c9036ef5c38e6283516ebfe322f34d50297c3bbfa9b",
+        "matches": true,
+        "source_values_or_method_outputs_accessed": false,
+        "verification_scope": "file size and whole-archive hash only"
+      },
+      {
+        "dataset_id": "aerpaw_packapalooza_2025",
+        "campaign": "Packapalooza urban helikite, August 2025",
+        "doi": "10.5061/dryad.tb2rbp0fw",
+        "path": "F:/uav_spectrum_final_data/aerpaw_helikite_external_v1/final/Packapalooza_2025/Dryad_submission_AERPAW_Pack2025_17Oct2025.zip",
+        "exists": true,
+        "size_bytes": 438557314,
+        "expected_sha256": "30490681c9f791a8d66ea18ad40ce4ad02d0d30322ee6bfb774b33153ea012c9",
+        "actual_sha256": "30490681c9f791a8d66ea18ad40ce4ad02d0d30322ee6bfb774b33153ea012c9",
+        "matches": true,
+        "source_values_or_method_outputs_accessed": false,
+        "verification_scope": "file size and whole-archive hash only"
+      }
+    ],
+    "all_archive_hashes_match_registry": true,
+    "final_access_count": 0
+  },
+  "gate_checks": {
+    "s6_fc0_uniquely_identified": true,
+    "acceptance_reproduced_byte_identically": true,
+    "fixed_site_development_metadata_ready": true,
+    "external_final_integrity_ready_without_signal_access": true,
+    "external_final_access_remains_zero": true,
+    "metric_dictionary_complete": true,
+    "s6_7b_protocol_complete": true
+  },
+  "next_actions": [
+    "implement a new versioned bit-instrumentation layer and run a small excluded-pilot dry-run",
+    "build a development-only fixed-site task cache using streaming reads after the dry-run"
+  ],
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": "This audit verifies frozen artifacts, development-archive directory metadata, sampled frequency axes, and Final archive integrity. It does not load external Final signal values, run Stage-6 Final, or establish matched-reliability performance."
+}

@@ -1,0 +1,219 @@
+{
+  "experiment_id": "stage2_fair_digital_link_v1",
+  "experiment_role": "method_validation",
+  "hypothesis_ids": [
+    "H1",
+    "H4"
+  ],
+  "split_id": "stage1_dataset_registry_v1",
+  "manifest_checksum": "registry:configs/dataset_registry.json",
+  "config_id": "configs/stage2_digital_link.json",
+  "code_version": "working-tree-stage2",
+  "seed": 20260711,
+  "baseline_or_method": "fair_packetized_digital_reporting_link",
+  "fairness_budget_type": "latency",
+  "fairness_budget_value": 0.25,
+  "sensing_channel": {
+    "model": "frozen_raddet_predictions",
+    "snr_db": null
+  },
+  "reporting_channel": {
+    "model": "packetized_qpsk_awgn",
+    "ebn0_db_values": [0.0, 3.0, 6.0, 9.0, 12.0],
+    "fec": "hamming74",
+    "fec_rate": 0.5714285714,
+    "max_retransmissions": 1
+  },
+  "metrics": {
+    "payload_delivery_ratio": null,
+    "packet_delivery_ratio": null,
+    "frame_success_rate": null,
+    "total_transmitted_bits_per_decision": null,
+    "goodput_bps": null,
+    "link_latency_s": null
+  },
+  "repeat_count": 30,
+  "packet": {
+    "payload_bits": 1024,
+    "header_bits": 96,
+    "crc_bits": 16,
+    "alignment_bits": 8
+  },
+  "physical_link": {
+    "modulation": "qpsk",
+    "channel": "awgn",
+    "rician_k_db": 6.0,
+    "symbol_rate_baud": 1000000.0,
+    "propagation_delay_s": 0.001,
+    "per_attempt_processing_s": 0.00005,
+    "latency_budget_s": 0.25
+  },
+  "source_representations": [
+    {
+      "name": "hard_semantic",
+      "application_bits": 262,
+      "source": "measured mean from frozen RadDet occupancy-mask predictions",
+      "recovery_semantics": "independent semantic packet"
+    },
+    {
+      "name": "quantized_soft_semantic",
+      "application_bits": 327,
+      "source": "measured mean soft box payload rounded to the nearest bit",
+      "recovery_semantics": "independent semantic packet"
+    },
+    {
+      "name": "compressed_spectrogram_png",
+      "application_bits": 116541,
+      "source": "measured mean RadDet 128x128 PNG file size",
+      "recovery_semantics": "independently recoverable byte-aligned fragments"
+    },
+    {
+      "name": "spectrogram_uint8",
+      "application_bits": 131072,
+      "source": "128x128x8-bit representation",
+      "recovery_semantics": "independently recoverable byte-aligned fragments"
+    },
+    {
+      "name": "iq_int12_complex",
+      "application_bits": 24000000,
+      "source": "theoretical 1,000,000 complex samples with 12-bit I and 12-bit Q",
+      "recovery_semantics": "independently recoverable sample-aligned fragments",
+      "caveat": "local RadDet copy does not contain raw IQ; this is a capacity reference, not a measured codec result"
+    }
+  ],
+  "waveform_validation": {
+    "application_bits": 128,
+    "trials": 2000,
+    "ebn0_db_values": [0.0, 3.0, 6.0, 9.0]
+  },
+  "task_validation": {
+    "split": "test",
+    "max_frames": 200,
+    "repeat_count": 5,
+    "ebn0_db_values": [3.0, 6.0, 9.0],
+    "schemes": [
+      "hard_semantic",
+      "quantized_soft_semantic",
+      "compressed_spectrogram_png",
+      "spectrogram_uint8_fragment"
+    ],
+    "observations_per_pressure_decision": 4,
+    "n_channels": 4,
+    "demand_channels": 2,
+    "channel_axis": "y",
+    "clean_threshold": 0.02,
+    "spectrogram_fragment_concealment": "fill_missing_bytes_with_received_mean"
+  },
+  "stage2_enhancement": {
+    "split": "test",
+    "max_frames": 100,
+    "observations_per_pressure_decision": 4,
+    "repeat_count": 10,
+    "robustness": {
+      "channel_models": ["awgn", "rayleigh", "rician"],
+      "ebn0_db_values": [3.0, 6.0, 9.0],
+      "schemes": ["hard_semantic", "compressed_spectrogram_png"]
+    },
+    "pareto": {
+      "channel": "awgn",
+      "ebn0_db": 6.0,
+      "latency_budget_s_values": [0.005, 0.025, 0.1, 0.25],
+      "repeat_count": 3,
+      "schemes": [
+        "hard_semantic",
+        "compressed_spectrogram_png",
+        "spectrogram_uint8_fragment"
+      ]
+    }
+  },
+  "classical_baseline_validation": {
+    "split": "test",
+    "max_frames": 100,
+    "observations_per_pressure_decision": 4,
+    "repeat_count": 5,
+    "channel": "awgn",
+    "ebn0_db_values": [3.0, 6.0, 9.0],
+    "schemes": [
+      "hard_semantic",
+      "quantized_psd_4bit",
+      "quantized_psd_8bit",
+      "spectrogram_tile16"
+    ],
+    "psd_fusion": "mean_received_node_energy",
+    "tile_size": 16,
+    "tile_header_bits": 32,
+    "tile_order": "seeded_random",
+    "missing_tile_concealment": "mean_received_pixels"
+  },
+  "psd_quantizer_selection": {
+    "selection_split": "val",
+    "test_split": "test",
+    "max_frames_per_split": 100,
+    "candidate_bits": [1, 2, 3, 4, 6, 8],
+    "selection_rule": "minimum_regret_then_maximum_clean_rate_then_minimum_bits",
+    "reporting_channel_ebn0_db_values": [3.0, 6.0, 9.0],
+    "repeat_count": 5
+  },
+  "full_test_validation": {
+    "split": "test",
+    "expected_frame_count": 20001,
+    "use_all_frames": true,
+    "observations_per_pressure_decision": 4,
+    "repeat_count": 5,
+    "channel": "awgn",
+    "ebn0_db_values": [3.0, 6.0, 9.0],
+    "schemes": ["hard_semantic", "frozen_quantized_psd"],
+    "psd_selection_result": "results/stage2/psd_quantizer/stage2_psd_quantizer_result.json",
+    "prediction_batch_size": 64,
+    "cache_predictions": true
+  },
+  "ldpc_validation": {
+    "library": "pyldpc",
+    "library_version": "0.7.9",
+    "code_length": 1200,
+    "variable_node_degree": 3,
+    "check_node_degree": 6,
+    "systematic": true,
+    "matrix_seed": 20260712,
+    "max_decoder_iterations": 20,
+    "application_header_bits": 96,
+    "crc_bits": 16,
+    "modulation": "bpsk",
+    "channel": "awgn",
+    "ebn0_db_values": [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0],
+    "waveform_trials": 50,
+    "batch_size": 50,
+    "task_ebn0_db_values": [2.0, 3.0, 4.0],
+    "task_repeat_count": 3,
+    "symbol_rate_baud": 1000000.0,
+    "propagation_delay_s": 0.001,
+    "per_attempt_processing_s": 0.00005,
+    "latency_budget_s": 0.25,
+    "max_retransmissions": 1,
+    "comparison_fec": "hamming74",
+    "energy_definition": "EbN0_per_transmitted_coded_bit"
+  },
+  "stage2_completion": {
+    "selection_split": "val",
+    "test_split": "test",
+    "selection_max_frames": 6000,
+    "observations_per_pressure_decision": 4,
+    "repeat_count": 3,
+    "psd_candidates": [
+      {"bins_per_channel": 2, "quantization_bits": 2, "mode": "mean"},
+      {"bins_per_channel": 4, "quantization_bits": 1, "mode": "max"},
+      {"bins_per_channel": 4, "quantization_bits": 2, "mode": "max"},
+      {"bins_per_channel": 8, "quantization_bits": 1, "mode": "max"},
+      {"bins_per_channel": 8, "quantization_bits": 2, "mode": "max"},
+      {"bins_per_channel": 8, "quantization_bits": 1, "mode": "p75"},
+      {"bins_per_channel": 8, "quantization_bits": 1, "mode": "cfar", "threshold_sigma": 3.0}
+    ],
+    "conditions": [
+      {"name": "awgn_3dB_250ms", "channel": "awgn", "ebn0_db": 3.0, "latency_budget_s": 0.25},
+      {"name": "rayleigh_6dB_250ms", "channel": "rayleigh", "ebn0_db": 6.0, "latency_budget_s": 0.25},
+      {"name": "rician_6dB_250ms", "channel": "rician", "ebn0_db": 6.0, "latency_budget_s": 0.25},
+      {"name": "burst_6dB_25ms", "channel": "burst", "ebn0_db": 6.0, "latency_budget_s": 0.025}
+    ]
+  },
+  "notes": "Stage-2 link validation. Link delivery metrics alone do not prove downstream task performance; H4 is fully tested only after the resource-selection adapter is evaluated."
+}

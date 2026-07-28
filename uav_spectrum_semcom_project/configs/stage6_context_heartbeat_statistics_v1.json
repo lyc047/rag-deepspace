@@ -1,0 +1,30 @@
+{
+  "analysis_id": "stage6_context_heartbeat_paired_cluster_bootstrap_v1",
+  "created_date": "2026-07-26",
+  "heartbeat_protocol": {
+    "path": "configs/stage6_context_heartbeat_development_v1.json",
+    "sha256": "a9abcbc6ed8ccc10c4161ccabb319c7aa7dbf441f0037c21dd81e8980fcd20e5"
+  },
+  "frozen_aggregate_result": {
+    "path": "results/stage6/context_heartbeat_development_v1/context_heartbeat_result.json",
+    "sha256": "e60e465ee31cc718becd1e4e4ac2e3343c4c5794e78220b22136945655efba8e"
+  },
+  "resampling": {
+    "unit": "complete_167_scene_trajectory",
+    "paired_across_policies": true,
+    "bootstrap_replicates": 10000,
+    "confidence_level": 0.95,
+    "seed": 20260728
+  },
+  "reported_paired_differences": [
+    "clean_rate_percentage_points",
+    "availability_rate_percentage_points",
+    "application_bits_per_scene"
+  ],
+  "governance": {
+    "external_final_signal_values_may_be_loaded": false,
+    "external_final_access_may_be_consumed": false,
+    "output_is_confirmatory_final": false
+  },
+  "claim_boundary": "Intervals quantify Monte Carlo trajectory uncertainty under the fixed synthetic fault model; they do not constitute population confidence intervals for measured UAV channels."
+}

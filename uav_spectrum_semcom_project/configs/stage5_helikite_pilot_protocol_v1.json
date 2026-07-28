@@ -1,0 +1,47 @@
+{
+  "protocol_id": "stage5_helikite_2023_adapter_pilot_v1",
+  "status": "frozen_before_pilot_signal_quality_metrics",
+  "created_date": "2026-07-25",
+  "purpose": "Validate the airborne helikite SigMF adapter, freeze a common spectrum-resource task band, and build development-only N-channel caches without using any external Final signal value.",
+  "source": {
+    "dataset_id": "aerpaw_packapalooza_2023",
+    "role": "adapter_and_quality_control_only_permanently_excluded_from_final",
+    "archive": "F:/uav_spectrum_final_data/aerpaw_helikite_external_v1/pilot/Packapalooza_2023/AERPAW_helikite_packapalooza_23.7z",
+    "archive_sha256": "b1265fbe5e2c94385b37aff723ad881b0e59108710620096d4139ea093c6f9e6",
+    "extracted_root": "F:/uav_spectrum_final_data/aerpaw_helikite_external_v1/pilot/Packapalooza_2023/extracted",
+    "site_id": "Packapalooza_2023_helikite",
+    "local_timezone": "America/New_York",
+    "expected_power_sweeps": 364
+  },
+  "resource_task": {
+    "analysis_band_mhz": [3550.0, 3700.0],
+    "band_selection_basis": "Externally defined 3550-3700 MHz CBRS resource-sharing band; selected independently of pilot method outputs.",
+    "primary_n_channels": 8,
+    "n_channels": [8, 16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "primary_demand_channels": [2, 4, 6],
+    "regret_threshold_db": 0.2,
+    "max_state_age_minutes": 120.0,
+    "parameters_may_be_retuned_from_pilot": false
+  },
+  "quality_gates": {
+    "power_range_dbm": [-200.0, 20.0],
+    "minimum_bins_in_analysis_band": 2000,
+    "maximum_frequency_grid_error_mhz": 0.00001,
+    "maximum_nearest_gps_offset_s": 2.0,
+    "gps_clock_correction_rule": "choose_integer_hour_offset_minimizing_median_absolute_sweep_to_gps_residual",
+    "gps_clock_correction_search_hours": [-14, 14],
+    "minimum_sweep_gap_s": 10.0,
+    "maximum_sweep_gap_s": 30.0,
+    "verify_sigmf_sha512": true
+  },
+  "governance": {
+    "external_final_archives_may_be_opened": false,
+    "external_final_sigmf_metadata_may_be_opened": false,
+    "external_final_signal_values_may_be_loaded": false,
+    "pilot_may_select_algorithm_or_success_thresholds": false,
+    "gps_clock_correction_may_use_timestamps_only": true,
+    "output_is_confirmatory_final": false
+  },
+  "claim_boundary": "The output verifies an airborne spectrum-data adapter and a development-only task mapping. It cannot establish independent Final performance, measured reporting-link reliability, multi-node sensing, MIMO, or ACK-fault behavior."
+}

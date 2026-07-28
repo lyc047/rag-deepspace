@@ -1,0 +1,81 @@
+{
+  "version": "1.0",
+  "status": "c1_v4_real_development_cache_complete",
+  "protocol_path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\configs\\stage4_c1_v4_temporal_fallback_protocol.json",
+  "protocol_sha256": "bf3876204d8e30fe331ca2d101a9847be5f102f6e2a2ebdc53c83802654598a3",
+  "verified_archive_audit_sha256": "ec4aa183a79712327abc7ddbd48496ee16a383dd62d3783770cda131595d3405",
+  "archive_audit": {
+    "LW1": {
+      "path": "F:\\uav_spectrum_final_data\\aerpaw_sub6_feb2022\\raw\\ResultsLW1Feb2022_SigMF.zip",
+      "size_bytes": 12498435786,
+      "verified_sha256": "595e7ea4c3164b43ba1e49f154ceec583c9f4f14c565b1525e49a27311401951",
+      "pair_count": 21617
+    },
+    "CC1": {
+      "path": "F:\\uav_spectrum_final_data\\aerpaw_sub6_feb2022\\raw\\ResultsCC1Feb2022_SigMF.zip",
+      "size_bytes": 19084799397,
+      "verified_sha256": "c2b1e6d9172f4738b11d78d874c2ca2e3d4232330a99d2b278eb1e05b642f747",
+      "pair_count": 32529
+    },
+    "CC2": {
+      "path": "F:\\uav_spectrum_final_data\\aerpaw_sub6_feb2022\\raw\\ResultsCC2Feb2022_SigMF.zip",
+      "size_bytes": 20662580993,
+      "verified_sha256": "eec92ea4733c2ebc959dd9359ce81e0392af2f06dedff66dc6d3037691ce6b4d",
+      "pair_count": 34865
+    }
+  },
+  "selection_audit": {
+    "temporal_fallback_validation": [
+      {
+        "site": "LW1",
+        "raw_window_pairs": 2868,
+        "permanent_exclusions": 45,
+        "after_thinning": 96,
+        "selected": 60,
+        "first_local": "2022-02-12T00:00:07",
+        "last_local": "2022-02-12T23:51:09"
+      },
+      {
+        "site": "CC1",
+        "raw_window_pairs": 4520,
+        "permanent_exclusions": 46,
+        "after_thinning": 95,
+        "selected": 60,
+        "first_local": "2022-02-12T00:00:15",
+        "last_local": "2022-02-12T23:52:12"
+      },
+      {
+        "site": "CC2",
+        "raw_window_pairs": 4997,
+        "permanent_exclusions": 52,
+        "after_thinning": 95,
+        "selected": 60,
+        "first_local": "2022-02-12T00:00:04",
+        "last_local": "2022-02-12T23:49:36"
+      }
+    ]
+  },
+  "splits": {
+    "temporal_fallback_validation": {
+      "scene_count": 180,
+      "site_counts": {
+        "LW1": 60,
+        "CC1": 60,
+        "CC2": 60
+      },
+      "cluster_count": 72,
+      "cache": "results/stage4/c1_v4_temporal_fallback_cache_v1/c1_v4_temporal_fallback_validation.npz",
+      "cache_sha256": "6e663e4af2d0468b0ab3d218c6971ff51f7c36ca503f34b5becbcb50be4fd5b0",
+      "provenance": "results/stage4/c1_v4_temporal_fallback_cache_v1/c1_v4_temporal_fallback_validation_provenance.json",
+      "provenance_sha256": "f5f1293f3fe8b620391ce0023410255ef40992866c7cdb1736dbe60e8e9d551e"
+    }
+  },
+  "governance": {
+    "prior_pilot_or_holdout_stem_overlap": 0,
+    "prior_holdout_measurement_values_loaded": false,
+    "prior_holdout_metrics_loaded": false,
+    "model_outputs_loaded": false,
+    "development_only": true
+  },
+  "claim_boundary": "Second disclosed C1-v4 development iteration on a new whole date; not a confirmatory Final and not evidence for UAV mobility, MIMO, or measured backhaul."
+}

@@ -1,0 +1,38 @@
+{
+  "experiment_id": "stage4_value_diagnostics_v1",
+  "evaluation_split": "validation_aggregate_metrics_only",
+  "scene_count": 150,
+  "candidate_count_per_scene": 8,
+  "regression": {
+    "value_per_expected_bit_MAE": 2.526389248345824e-05,
+    "value_per_expected_bit_RMSE": 5.293849417038372e-05,
+    "target_standard_deviation": 5.317081756639104e-05
+  },
+  "ranking": {
+    "pooled_spearman": 0.009377337502143162,
+    "mean_scene_spearman": 0.002735003392060112,
+    "defined_scene_spearman_count": 136,
+    "top_1_recall": 0.12,
+    "top_2_recall": 0.21333333333333335,
+    "top_3_recall": 0.3
+  },
+  "scheduler_effect": {
+    "mean_baseline_regret": 0.028171974765856856,
+    "mean_selected_regret": 0.025074534330281797,
+    "mean_oracle_regret": 0.005499942453073648,
+    "selected_regret_reduction": 0.003097440435575057,
+    "oracle_regret_reduction": 0.022672032312783207,
+    "mean_selected_incremental_expected_bits": 580.8719528499598
+  },
+  "truth_access_audit": {
+    "validation_truth_used_for_aggregate_metrics_only": true,
+    "validation_candidate_labels_saved": false,
+    "per_scene_rows_saved": false,
+    "final_holdout_accessed": false
+  },
+  "acceptance": {
+    "completed": true,
+    "gate_b_decision": "reject_C2_as_headline_algorithm_after_negative_system_level_result"
+  },
+  "claim_boundary": "These diagnostics complete the rejected C2 mechanism audit; they do not overturn Gate B or establish final H2/H3."
+}

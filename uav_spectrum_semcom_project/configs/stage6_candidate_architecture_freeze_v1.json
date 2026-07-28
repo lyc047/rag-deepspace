@@ -1,0 +1,190 @@
+{
+  "freeze_id": "stage6_candidate_architecture_freeze_v1",
+  "status": "candidate_architecture_frozen_before_s6_6_result_access",
+  "created_date": "2026-07-26",
+  "research_role": "Stage-6 candidate architecture for ablation, complexity, robustness, and later external-Final protocol consideration.",
+  "retained_components": [
+    "analytic_epsilon_task_equivalent_codebook",
+    "exact_action_escape_fallback",
+    "versioned_task_and_context_codec",
+    "preconfigured_codebook_with_runtime_install_recovery",
+    "hard_regret_and_state_age_event_trigger",
+    "cumulative_ack_context_belief_recovery",
+    "fixed_twenty_scene_silence_heartbeat",
+    "frozen_learned_one_step_hazard_ranking",
+    "budgeted_duplicate_compact_update_protection",
+    "codebook_identity_check_and_fail_closed_decode"
+  ],
+  "excluded_components": [
+    "adaptive_heartbeat",
+    "direct_next_codeword_multiclass_controller",
+    "selective_two_stage_destination_controller",
+    "markov_hard_spectrum_action",
+    "markov_update_reservation_controller",
+    "markov_token_bucket_controller",
+    "prediction_selected_future_spectrum_action",
+    "online_full_codebook_install_as_default_short_session_mode"
+  ],
+  "frozen_parameters": {
+    "epsilon_db": 0.2,
+    "maximum_state_age_minutes": 120.0,
+    "heartbeat_silence_scenes": 20,
+    "maximum_duplicate_update_reservation_fraction": 0.1,
+    "hazard_threshold_source": "training_out_of_fold_upper_0p1_quantile",
+    "n_channels_development_grid": [8, 16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "codebook_epoch": 1,
+    "task_header_bits": 48,
+    "codebook_epoch_bits": 8,
+    "codebook_tag_bits": 16,
+    "compact_update_bits_nominal": 40,
+    "outage_penalty_db": 10.0
+  },
+  "deployment_boundary": {
+    "default_codebook_deployment": "software_preconfigured_with_device",
+    "runtime_full_install_role": "initialization_or_context_recovery_only",
+    "prediction_role": "duplicate_update_capacity_scheduling_only",
+    "prediction_may_execute_spectrum_action": false,
+    "hard_trigger_may_be_suppressed": false,
+    "wrong_codebook_action_may_be_executed": false
+  },
+  "locked_code_artifacts": [
+    {
+      "path": "src/spectrum_semcom/stage6_task_codebook.py",
+      "sha256": "ea4dc1f26e96aabf8bbeeaa7779f54e2d1b44570ce5146c43ebba02ad4adc03c"
+    },
+    {
+      "path": "src/spectrum_semcom/stage6_task_codec.py",
+      "sha256": "d37dcbbd5370e2ef5a731c83517e0e73a03eed5ac0598ab7b515a33e88451bd3"
+    },
+    {
+      "path": "src/spectrum_semcom/stage6_context_codec.py",
+      "sha256": "5eea3916b1ee3b7b43ec3bb0a070a6298210d62ff1d71f8b2ba964eee7dab0f5"
+    },
+    {
+      "path": "src/spectrum_semcom/stage6_context_recovery.py",
+      "sha256": "2e63202e1e19e8fe33039db6d327f1fc0177454439721c8d799304adb678f2be"
+    },
+    {
+      "path": "src/spectrum_semcom/stage6_context_heartbeat.py",
+      "sha256": "73413b4276974eb95396efa0eec09983b34e73cabe4b7a0379040c4c4dabb616"
+    },
+    {
+      "path": "src/spectrum_semcom/stage6_temporal_hazard.py",
+      "sha256": "c6b06462b011ae36e25bedc5df5141eddbd5521b616795ee63815615f5ee08b2"
+    },
+    {
+      "path": "src/spectrum_semcom/stage5_cumulative_ack.py",
+      "sha256": "5a0ad147e9e209f68942a7d51e8a1de048cadf5a678d2fa4a08061f69a472a6e"
+    },
+    {
+      "path": "scripts/run_stage6_context_recovery_development.py",
+      "sha256": "e947e6e1e88e075c0209af3d7f0be845b0c0088922f8727bcea99f56cf8196dc"
+    },
+    {
+      "path": "scripts/run_stage6_joint_predictive_recovery_development.py",
+      "sha256": "6c1853740bfd7ba79e9b31edaff805ff227a4425d6d87c15f0fbc4238a62a3d5"
+    },
+    {
+      "path": "configs/stage6_joint_predictive_recovery_development_v1.json",
+      "sha256": "714f02a445443c238bd15b1d406798ca279d6a4407998cbe45d35b719ce43303"
+    }
+  ],
+  "locked_evidence_artifacts": [
+    {
+      "path": "results/stage6/task_codebook_development_v1/task_codebook_result.json",
+      "sha256": "89d596a3c2969ea985a2b19dd4016d3cfa2a16217c740cc91ee698565256620d"
+    },
+    {
+      "path": "results/stage6/task_codec_development_v1/task_codec_result.json",
+      "sha256": "d5460ae347559853259da3c6c40ce2f4907caa41e22a65ab5b7fb4e92145e730"
+    },
+    {
+      "path": "results/stage6/context_event_development_v1/context_event_result.json",
+      "sha256": "9b52ef512d9831fdf407323ec6949cf6398813720ba5bf799053a03e2839d6f2"
+    },
+    {
+      "path": "results/stage6/context_recovery_development_v1/context_recovery_result.json",
+      "sha256": "137d5e4ce5b22339aea51f4a6c2bb75862d846aac7982f0092bb0cc9a36eb8a3"
+    },
+    {
+      "path": "results/stage6/context_heartbeat_development_v1/context_heartbeat_result.json",
+      "sha256": "e60e465ee31cc718becd1e4e4ac2e3343c4c5794e78220b22136945655efba8e"
+    },
+    {
+      "path": "results/stage6/temporal_hazard_development_v1/temporal_hazard_result.json",
+      "sha256": "3c36cb992e1696d4df80c077969e8f391c0a9fdae98f53b78fda7d1faf232b47"
+    },
+    {
+      "path": "results/stage6/predictive_repetition_development_v1/predictive_repetition_result.json",
+      "sha256": "4b77ba043bdab08c8984afdbbdd96bf4a87f86bed1fb589fcf4a96c0a01cd837"
+    },
+    {
+      "path": "results/stage6/joint_predictive_recovery_development_v1/joint_predictive_recovery_result.json",
+      "sha256": "bc082f81adbb74bc234989a50655178753dda506f04afc14210fb8c75dc5d671"
+    },
+    {
+      "path": "results/stage6/next_codeword_prediction_development_v1/next_codeword_prediction_result.json",
+      "sha256": "c3499d21deb8ea8e80de00b10d414c8493c40602e4d33f02e2d99b94c85cbc55"
+    },
+    {
+      "path": "results/stage6/selective_codeword_prediction_development_v2/selective_codeword_prediction_result.json",
+      "sha256": "00e80bfd81ad7ff8d3c07175974e97626bedce7485d020eb769632e2407890db"
+    },
+    {
+      "path": "results/stage6/markov_probability_scheduler_development_v1/markov_probability_scheduler_result.json",
+      "sha256": "d7ea76535a7c771aa102a3f2a025f44fa25f12cb418b3fcad4085b1aa47a09ac"
+    },
+    {
+      "path": "results/stage6/markov_token_bucket_scheduler_development_v1/markov_probability_scheduler_result.json",
+      "sha256": "006603e6a0dfa2861411c12b7dd0a455fe257f35c942bdbc974d6db65859b3a3"
+    }
+  ],
+  "s6_6_validation_matrix": {
+    "ablation_cells": [
+      "full_candidate",
+      "minus_learned_update_protection",
+      "minus_fixed_heartbeat",
+      "minus_context_belief_recovery",
+      "ideal_feedback_upper_bound",
+      "exact_query_bundle_reference"
+    ],
+    "fault_stress_dimensions": [
+      "install_loss_probability",
+      "task_loss_probability",
+      "ack_loss_probability",
+      "receiver_context_reset_probability"
+    ],
+    "scale_dimensions": {
+      "n_channels": [8, 16, 32, 64],
+      "demand_ratios": [0.25, 0.5, 0.75]
+    },
+    "complexity_metrics": [
+      "wall_clock_runtime",
+      "peak_traced_memory",
+      "codebook_fit_runtime",
+      "per_scene_encode_runtime",
+      "per_scene_control_runtime"
+    ],
+    "primary_metrics": [
+      "clean_rate",
+      "availability_rate",
+      "application_bits_per_scene",
+      "reserved_capacity_bits_per_scene",
+      "effective_mean_regret_db",
+      "effective_cvar_0_9_regret_db",
+      "wrong_codebook_decode_count"
+    ]
+  },
+  "freeze_governance": {
+    "algorithm_modules_may_be_added_after_freeze": false,
+    "existing_parameters_may_be_tuned_after_freeze": false,
+    "defect_correction_requires_new_freeze_version": true,
+    "external_final_may_be_accessed_during_s6_6": false,
+    "minimum_full_regression_test_count": 312,
+    "final_access_state_path": "configs/stage5_external_final_access_state.json",
+    "final_access_state_sha256": "ba25a3cee598b87c8169f6769e02b3d60e0a5ddcb2375c783e8a9a9b13efb693",
+    "required_final_access_count": 0
+  },
+  "claim_boundary": "This freeze identifies the Stage-6 candidate architecture and its development evidence. It is not external Final registration, real-UAV mobility validation, or authorization to access held-out signal values."
+}

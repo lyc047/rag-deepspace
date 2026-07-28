@@ -1,0 +1,39 @@
+{
+  "protocol_id": "stage6_task_codebook_development_v1",
+  "status": "development_protocol_fixed_before_result_access",
+  "created_date": "2026-07-26",
+  "purpose": "Test whether epsilon-safe multi-query action codewords can group distinct measured spectrum scenes while preserving a frozen task-regret bound.",
+  "development_source": {
+    "cache": "results/stage5/helikite_pilot_v1/helikite_pilot_cache.npz",
+    "cache_sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+    "role": "permanently_excluded_2023_adapter_pilot_development_only"
+  },
+  "task_grid": {
+    "n_channels": [8, 16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "epsilon_db": 0.2,
+    "application_header_bits": 40
+  },
+  "split": {
+    "group_field": "cluster_ids",
+    "seed": 20260726,
+    "train_group_fraction": 0.6,
+    "all_scenes_in_one_cluster_must_share_split": true
+  },
+  "candidate_actions": "distinct_exact_multi_query_action_tuples_observed_in_training",
+  "selection": "greedy_maximum_new_coverage_then_minimum_mean_max_regret_then_lexicographic",
+  "unseen_policy": "reserved_escape_symbol_plus_exact_query_bundle_payload",
+  "primary_checks": {
+    "training_coverage_must_equal_one": true,
+    "all_decoded_actions_must_respect_epsilon_db": true,
+    "final_access_count_must_remain_zero": true
+  },
+  "governance": {
+    "stage5_frozen_baseline_files_modified": false,
+    "external_final_archives_may_be_opened": false,
+    "external_final_signal_values_may_be_loaded": false,
+    "external_final_access_may_be_consumed": false,
+    "output_is_confirmatory_final": false
+  },
+  "claim_boundary": "Development-only evidence for analytic task-equivalence codebook feasibility on the excluded 2023 pilot. It does not establish independent generalization, optimal codebook size, stochastic reporting-link robustness, or Final performance."
+}

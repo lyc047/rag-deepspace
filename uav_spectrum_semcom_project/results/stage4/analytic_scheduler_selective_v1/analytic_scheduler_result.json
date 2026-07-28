@@ -1,0 +1,714 @@
+{
+  "experiment_id": "stage4_c2_analytic_scheduler_sketch_v1",
+  "protocol_sha256": "1348f95620ef2aeff22f6066388fdb8d251845bec4b274f7242d585d70e72b63",
+  "labels_sha256": "e260482def15c5315a2e425216998e1467bd2dd2f883e498bc741289e1e19bf7",
+  "cache_result_sha256": "715db73c81216200098a70ed87b057184d82f38cb05a7431579ccc16e31a617c",
+  "train_calibration_audit": {
+    "rows": 2400,
+    "scene_count": 300,
+    "margin_temperature": 0.05,
+    "raw_score_unique_count": 699,
+    "raw_score_nonzero_fraction": 0.41083333333333333,
+    "raw_score_value_rank_correlation": 0.15894793992151732,
+    "score_knots": [
+      0.0,
+      0.002561494047048332,
+      0.012969943677857943,
+      0.029254291972948505
+    ],
+    "value_knots": [
+      0.0013674203806658624,
+      0.0018957698864849387,
+      0.002462420981222143,
+      0.008301180017588195
+    ],
+    "positive_calibrated_knot_fraction": 1.0
+  },
+  "budget_metrics": {
+    "calibration": {
+      "520": {
+        "no_upgrade": {
+          "mean_regret": 0.028413225270342082,
+          "cvar_0_9_regret": 0.15526314154267312,
+          "mean_expected_total_bits": 1775.341064453125,
+          "clean_resource_rate": 0.44,
+          "brier": 0.009731365475028102,
+          "no_upgrade_fraction": 1.0
+        },
+        "sensing_snr_G3": {
+          "mean_regret": 0.028413225270342082,
+          "cvar_0_9_regret": 0.15526314154267312,
+          "mean_expected_total_bits": 1775.341064453125,
+          "clean_resource_rate": 0.44,
+          "brier": 0.009731365475028102,
+          "no_upgrade_fraction": 1.0
+        },
+        "confidence_G3": {
+          "mean_regret": 0.028413225270342082,
+          "cvar_0_9_regret": 0.15526314154267312,
+          "mean_expected_total_bits": 1775.341064453125,
+          "clean_resource_rate": 0.44,
+          "brier": 0.009731365475028102,
+          "no_upgrade_fraction": 1.0
+        },
+        "stage3_prior_value_per_bit": {
+          "mean_regret": 0.023928679157979787,
+          "cvar_0_9_regret": 0.14189808756345884,
+          "mean_expected_total_bits": 2293.370382801538,
+          "clean_resource_rate": 0.54,
+          "brier": 0.007938594989237296,
+          "no_upgrade_fraction": 0.0
+        },
+        "analytic_greedy": {
+          "mean_regret": 0.023928679157979787,
+          "cvar_0_9_regret": 0.14189808756345884,
+          "mean_expected_total_bits": 2293.370382801538,
+          "clean_resource_rate": 0.54,
+          "brier": 0.007938594989237296,
+          "no_upgrade_fraction": 0.0
+        },
+        "analytic_exact_knapsack": {
+          "mean_regret": 0.023928679157979787,
+          "cvar_0_9_regret": 0.14189808756345884,
+          "mean_expected_total_bits": 2293.370382801538,
+          "clean_resource_rate": 0.54,
+          "brier": 0.007938594989237296,
+          "no_upgrade_fraction": 0.0
+        },
+        "budget_oracle": {
+          "mean_regret": 0.015814999433932827,
+          "cvar_0_9_regret": 0.09883198053576052,
+          "mean_expected_total_bits": 1910.0286872237123,
+          "clean_resource_rate": 0.6,
+          "brier": 0.009047723425649854,
+          "no_upgrade_fraction": 0.74
+        }
+      },
+      "600": {
+        "no_upgrade": {
+          "mean_regret": 0.028413225270342082,
+          "cvar_0_9_regret": 0.15526314154267312,
+          "mean_expected_total_bits": 1775.341064453125,
+          "clean_resource_rate": 0.44,
+          "brier": 0.009731365475028102,
+          "no_upgrade_fraction": 1.0
+        },
+        "sensing_snr_G3": {
+          "mean_regret": 0.02968024590925779,
+          "cvar_0_9_regret": 0.17332600188674405,
+          "mean_expected_total_bits": 2363.3788419321722,
+          "clean_resource_rate": 0.54,
+          "brier": 0.007968821168383142,
+          "no_upgrade_fraction": 0.0
+        },
+        "confidence_G3": {
+          "mean_regret": 0.03161996227980126,
+          "cvar_0_9_regret": 0.16601241255411878,
+          "mean_expected_total_bits": 2366.628377362708,
+          "clean_resource_rate": 0.5,
+          "brier": 0.008007917944801195,
+          "no_upgrade_fraction": 0.0
+        },
+        "stage3_prior_value_per_bit": {
+          "mean_regret": 0.023928679157979787,
+          "cvar_0_9_regret": 0.14189808756345884,
+          "mean_expected_total_bits": 2293.370382801538,
+          "clean_resource_rate": 0.54,
+          "brier": 0.007938594989237296,
+          "no_upgrade_fraction": 0.0
+        },
+        "analytic_greedy": {
+          "mean_regret": 0.025419439081451854,
+          "cvar_0_9_regret": 0.1446211303700693,
+          "mean_expected_total_bits": 2294.72220225079,
+          "clean_resource_rate": 0.5,
+          "brier": 0.007904876392465936,
+          "no_upgrade_fraction": 0.0
+        },
+        "analytic_exact_knapsack": {
+          "mean_regret": 0.026677266433252952,
+          "cvar_0_9_regret": 0.15393347676144914,
+          "mean_expected_total_bits": 2352.6082631373474,
+          "clean_resource_rate": 0.52,
+          "brier": 0.007880785457479538,
+          "no_upgrade_fraction": 0.0
+        },
+        "budget_oracle": {
+          "mean_regret": 0.009585387363331392,
+          "cvar_0_9_regret": 0.0669008070603013,
+          "mean_expected_total_bits": 1982.3156206740373,
+          "clean_resource_rate": 0.66,
+          "brier": 0.00891640571749348,
+          "no_upgrade_fraction": 0.62
+        }
+      },
+      "750": {
+        "no_upgrade": {
+          "mean_regret": 0.028413225270342082,
+          "cvar_0_9_regret": 0.15526314154267312,
+          "mean_expected_total_bits": 1775.341064453125,
+          "clean_resource_rate": 0.44,
+          "brier": 0.009731365475028102,
+          "no_upgrade_fraction": 1.0
+        },
+        "sensing_snr_G3": {
+          "mean_regret": 0.02968024590925779,
+          "cvar_0_9_regret": 0.17332600188674405,
+          "mean_expected_total_bits": 2363.3788419321722,
+          "clean_resource_rate": 0.54,
+          "brier": 0.007968821168383142,
+          "no_upgrade_fraction": 0.0
+        },
+        "confidence_G3": {
+          "mean_regret": 0.03161996227980126,
+          "cvar_0_9_regret": 0.16601241255411878,
+          "mean_expected_total_bits": 2366.628377362708,
+          "clean_resource_rate": 0.5,
+          "brier": 0.008007917944801195,
+          "no_upgrade_fraction": 0.0
+        },
+        "stage3_prior_value_per_bit": {
+          "mean_regret": 0.023928679157979787,
+          "cvar_0_9_regret": 0.14189808756345884,
+          "mean_expected_total_bits": 2293.370382801538,
+          "clean_resource_rate": 0.54,
+          "brier": 0.007938594989237296,
+          "no_upgrade_fraction": 0.0
+        },
+        "analytic_greedy": {
+          "mean_regret": 0.025419439081451854,
+          "cvar_0_9_regret": 0.1446211303700693,
+          "mean_expected_total_bits": 2294.72220225079,
+          "clean_resource_rate": 0.5,
+          "brier": 0.007904876392465936,
+          "no_upgrade_fraction": 0.0
+        },
+        "analytic_exact_knapsack": {
+          "mean_regret": 0.026677266433252952,
+          "cvar_0_9_regret": 0.15393347676144914,
+          "mean_expected_total_bits": 2352.6082631373474,
+          "clean_resource_rate": 0.52,
+          "brier": 0.007880785457479538,
+          "no_upgrade_fraction": 0.0
+        },
+        "budget_oracle": {
+          "mean_regret": 0.00826589658507146,
+          "cvar_0_9_regret": 0.06075960429152474,
+          "mean_expected_total_bits": 2041.1126763268942,
+          "clean_resource_rate": 0.68,
+          "brier": 0.008881338498507571,
+          "no_upgrade_fraction": 0.54
+        }
+      },
+      "950": {
+        "no_upgrade": {
+          "mean_regret": 0.028413225270342082,
+          "cvar_0_9_regret": 0.15526314154267312,
+          "mean_expected_total_bits": 1775.341064453125,
+          "clean_resource_rate": 0.44,
+          "brier": 0.009731365475028102,
+          "no_upgrade_fraction": 1.0
+        },
+        "sensing_snr_G3": {
+          "mean_regret": 0.02968024590925779,
+          "cvar_0_9_regret": 0.17332600188674405,
+          "mean_expected_total_bits": 2363.3788419321722,
+          "clean_resource_rate": 0.54,
+          "brier": 0.007968821168383142,
+          "no_upgrade_fraction": 0.0
+        },
+        "confidence_G3": {
+          "mean_regret": 0.03161996227980126,
+          "cvar_0_9_regret": 0.16601241255411878,
+          "mean_expected_total_bits": 2366.628377362708,
+          "clean_resource_rate": 0.5,
+          "brier": 0.008007917944801195,
+          "no_upgrade_fraction": 0.0
+        },
+        "stage3_prior_value_per_bit": {
+          "mean_regret": 0.023928679157979787,
+          "cvar_0_9_regret": 0.14189808756345884,
+          "mean_expected_total_bits": 2293.370382801538,
+          "clean_resource_rate": 0.54,
+          "brier": 0.007938594989237296,
+          "no_upgrade_fraction": 0.0
+        },
+        "analytic_greedy": {
+          "mean_regret": 0.025419439081451854,
+          "cvar_0_9_regret": 0.1446211303700693,
+          "mean_expected_total_bits": 2294.72220225079,
+          "clean_resource_rate": 0.5,
+          "brier": 0.007904876392465936,
+          "no_upgrade_fraction": 0.0
+        },
+        "analytic_exact_knapsack": {
+          "mean_regret": 0.026677266433252952,
+          "cvar_0_9_regret": 0.15393347676144914,
+          "mean_expected_total_bits": 2352.6082631373474,
+          "clean_resource_rate": 0.52,
+          "brier": 0.007880785457479538,
+          "no_upgrade_fraction": 0.0
+        },
+        "budget_oracle": {
+          "mean_regret": 0.00826589658507146,
+          "cvar_0_9_regret": 0.06075960429152474,
+          "mean_expected_total_bits": 2041.1126763268942,
+          "clean_resource_rate": 0.68,
+          "brier": 0.008881338498507571,
+          "no_upgrade_fraction": 0.54
+        }
+      }
+    },
+    "validation": {
+      "520": {
+        "no_upgrade": {
+          "mean_regret": 0.028171974765856856,
+          "cvar_0_9_regret": 0.14527516246695693,
+          "mean_expected_total_bits": 1775.341064453125,
+          "clean_resource_rate": 0.48,
+          "brier": 0.008060308114394411,
+          "no_upgrade_fraction": 1.0
+        },
+        "sensing_snr_G3": {
+          "mean_regret": 0.028171974765856856,
+          "cvar_0_9_regret": 0.14527516246695693,
+          "mean_expected_total_bits": 1775.341064453125,
+          "clean_resource_rate": 0.48,
+          "brier": 0.008060308114394411,
+          "no_upgrade_fraction": 1.0
+        },
+        "confidence_G3": {
+          "mean_regret": 0.028171974765856856,
+          "cvar_0_9_regret": 0.14527516246695693,
+          "mean_expected_total_bits": 1775.341064453125,
+          "clean_resource_rate": 0.48,
+          "brier": 0.008060308114394411,
+          "no_upgrade_fraction": 1.0
+        },
+        "stage3_prior_value_per_bit": {
+          "mean_regret": 0.02536816837840888,
+          "cvar_0_9_regret": 0.1367358567736422,
+          "mean_expected_total_bits": 2293.370382801538,
+          "clean_resource_rate": 0.5266666666666666,
+          "brier": 0.0066582674960166425,
+          "no_upgrade_fraction": 0.0
+        },
+        "analytic_greedy": {
+          "mean_regret": 0.02536816837840888,
+          "cvar_0_9_regret": 0.1367358567736422,
+          "mean_expected_total_bits": 2293.370382801538,
+          "clean_resource_rate": 0.5266666666666666,
+          "brier": 0.0066582674960166425,
+          "no_upgrade_fraction": 0.0
+        },
+        "analytic_exact_knapsack": {
+          "mean_regret": 0.02536816837840888,
+          "cvar_0_9_regret": 0.1367358567736422,
+          "mean_expected_total_bits": 2293.370382801538,
+          "clean_resource_rate": 0.5266666666666666,
+          "brier": 0.0066582674960166425,
+          "no_upgrade_fraction": 0.0
+        },
+        "budget_oracle": {
+          "mean_regret": 0.01994509998514938,
+          "cvar_0_9_regret": 0.12577667188985894,
+          "mean_expected_total_bits": 1889.307514489776,
+          "clean_resource_rate": 0.6,
+          "brier": 0.007742133744145289,
+          "no_upgrade_fraction": 0.78
+        }
+      },
+      "600": {
+        "no_upgrade": {
+          "mean_regret": 0.028171974765856856,
+          "cvar_0_9_regret": 0.14527516246695693,
+          "mean_expected_total_bits": 1775.341064453125,
+          "clean_resource_rate": 0.48,
+          "brier": 0.008060308114394411,
+          "no_upgrade_fraction": 1.0
+        },
+        "sensing_snr_G3": {
+          "mean_regret": 0.02497869930362261,
+          "cvar_0_9_regret": 0.13472393618430942,
+          "mean_expected_total_bits": 2363.378841932172,
+          "clean_resource_rate": 0.5266666666666666,
+          "brier": 0.006606330754079922,
+          "no_upgrade_fraction": 0.0
+        },
+        "confidence_G3": {
+          "mean_regret": 0.0261329249871172,
+          "cvar_0_9_regret": 0.13544538156517472,
+          "mean_expected_total_bits": 2367.4020762747396,
+          "clean_resource_rate": 0.5266666666666666,
+          "brier": 0.006709765832917164,
+          "no_upgrade_fraction": 0.0
+        },
+        "stage3_prior_value_per_bit": {
+          "mean_regret": 0.02536816837840888,
+          "cvar_0_9_regret": 0.1367358567736422,
+          "mean_expected_total_bits": 2293.370382801538,
+          "clean_resource_rate": 0.5266666666666666,
+          "brier": 0.0066582674960166425,
+          "no_upgrade_fraction": 0.0
+        },
+        "analytic_greedy": {
+          "mean_regret": 0.024436290169178393,
+          "cvar_0_9_regret": 0.13128639676142484,
+          "mean_expected_total_bits": 2294.812323547407,
+          "clean_resource_rate": 0.56,
+          "brier": 0.006676199648961039,
+          "no_upgrade_fraction": 0.0
+        },
+        "analytic_exact_knapsack": {
+          "mean_regret": 0.02412887352791586,
+          "cvar_0_9_regret": 0.12904426695313304,
+          "mean_expected_total_bits": 2354.111735751351,
+          "clean_resource_rate": 0.5466666666666666,
+          "brier": 0.00663082396659387,
+          "no_upgrade_fraction": 0.0
+        },
+        "budget_oracle": {
+          "mean_regret": 0.013465604859326656,
+          "cvar_0_9_regret": 0.09904175060025106,
+          "mean_expected_total_bits": 1999.4943157713728,
+          "clean_resource_rate": 0.6733333333333333,
+          "brier": 0.0073915260451564,
+          "no_upgrade_fraction": 0.5866666666666667
+        }
+      },
+      "750": {
+        "no_upgrade": {
+          "mean_regret": 0.028171974765856856,
+          "cvar_0_9_regret": 0.14527516246695693,
+          "mean_expected_total_bits": 1775.341064453125,
+          "clean_resource_rate": 0.48,
+          "brier": 0.008060308114394411,
+          "no_upgrade_fraction": 1.0
+        },
+        "sensing_snr_G3": {
+          "mean_regret": 0.02497869930362261,
+          "cvar_0_9_regret": 0.13472393618430942,
+          "mean_expected_total_bits": 2363.378841932172,
+          "clean_resource_rate": 0.5266666666666666,
+          "brier": 0.006606330754079922,
+          "no_upgrade_fraction": 0.0
+        },
+        "confidence_G3": {
+          "mean_regret": 0.0261329249871172,
+          "cvar_0_9_regret": 0.13544538156517472,
+          "mean_expected_total_bits": 2367.4020762747396,
+          "clean_resource_rate": 0.5266666666666666,
+          "brier": 0.006709765832917164,
+          "no_upgrade_fraction": 0.0
+        },
+        "stage3_prior_value_per_bit": {
+          "mean_regret": 0.02536816837840888,
+          "cvar_0_9_regret": 0.1367358567736422,
+          "mean_expected_total_bits": 2293.370382801538,
+          "clean_resource_rate": 0.5266666666666666,
+          "brier": 0.0066582674960166425,
+          "no_upgrade_fraction": 0.0
+        },
+        "analytic_greedy": {
+          "mean_regret": 0.024436290169178393,
+          "cvar_0_9_regret": 0.13128639676142484,
+          "mean_expected_total_bits": 2294.812323547407,
+          "clean_resource_rate": 0.56,
+          "brier": 0.006676199648961039,
+          "no_upgrade_fraction": 0.0
+        },
+        "analytic_exact_knapsack": {
+          "mean_regret": 0.02412887352791586,
+          "cvar_0_9_regret": 0.12904426695313304,
+          "mean_expected_total_bits": 2354.111735751351,
+          "clean_resource_rate": 0.5466666666666666,
+          "brier": 0.00663082396659387,
+          "no_upgrade_fraction": 0.0
+        },
+        "budget_oracle": {
+          "mean_regret": 0.006863506752027509,
+          "cvar_0_9_regret": 0.05605177159886807,
+          "mean_expected_total_bits": 2050.0145220524955,
+          "clean_resource_rate": 0.7133333333333334,
+          "brier": 0.007160049661052111,
+          "no_upgrade_fraction": 0.52
+        }
+      },
+      "950": {
+        "no_upgrade": {
+          "mean_regret": 0.028171974765856856,
+          "cvar_0_9_regret": 0.14527516246695693,
+          "mean_expected_total_bits": 1775.341064453125,
+          "clean_resource_rate": 0.48,
+          "brier": 0.008060308114394411,
+          "no_upgrade_fraction": 1.0
+        },
+        "sensing_snr_G3": {
+          "mean_regret": 0.02497869930362261,
+          "cvar_0_9_regret": 0.13472393618430942,
+          "mean_expected_total_bits": 2363.378841932172,
+          "clean_resource_rate": 0.5266666666666666,
+          "brier": 0.006606330754079922,
+          "no_upgrade_fraction": 0.0
+        },
+        "confidence_G3": {
+          "mean_regret": 0.0261329249871172,
+          "cvar_0_9_regret": 0.13544538156517472,
+          "mean_expected_total_bits": 2367.4020762747396,
+          "clean_resource_rate": 0.5266666666666666,
+          "brier": 0.006709765832917164,
+          "no_upgrade_fraction": 0.0
+        },
+        "stage3_prior_value_per_bit": {
+          "mean_regret": 0.02536816837840888,
+          "cvar_0_9_regret": 0.1367358567736422,
+          "mean_expected_total_bits": 2293.370382801538,
+          "clean_resource_rate": 0.5266666666666666,
+          "brier": 0.0066582674960166425,
+          "no_upgrade_fraction": 0.0
+        },
+        "analytic_greedy": {
+          "mean_regret": 0.024436290169178393,
+          "cvar_0_9_regret": 0.13128639676142484,
+          "mean_expected_total_bits": 2294.812323547407,
+          "clean_resource_rate": 0.56,
+          "brier": 0.006676199648961039,
+          "no_upgrade_fraction": 0.0
+        },
+        "analytic_exact_knapsack": {
+          "mean_regret": 0.02412887352791586,
+          "cvar_0_9_regret": 0.12904426695313304,
+          "mean_expected_total_bits": 2354.111735751351,
+          "clean_resource_rate": 0.5466666666666666,
+          "brier": 0.00663082396659387,
+          "no_upgrade_fraction": 0.0
+        },
+        "budget_oracle": {
+          "mean_regret": 0.006863506752027509,
+          "cvar_0_9_regret": 0.05605177159886807,
+          "mean_expected_total_bits": 2050.0145220524955,
+          "clean_resource_rate": 0.7133333333333334,
+          "brier": 0.007160049661052111,
+          "no_upgrade_fraction": 0.52
+        }
+      }
+    }
+  },
+  "validation_paired_bootstrap": {
+    "520": {
+      "no_upgrade": {
+        "regret_difference": -0.002803806387447973,
+        "regret_ci95": [
+          -0.008154536576060422,
+          0.002532936038145408
+        ],
+        "bit_difference": 518.0293183484126,
+        "bit_ci95": [
+          518.0293183484126,
+          518.0293183484126
+        ]
+      },
+      "sensing_snr_G3": {
+        "regret_difference": -0.002803806387447973,
+        "regret_ci95": [
+          -0.008290500140073239,
+          0.0025299312911939696
+        ],
+        "bit_difference": 518.0293183484126,
+        "bit_ci95": [
+          518.0293183484126,
+          518.0293183484126
+        ]
+      },
+      "confidence_G3": {
+        "regret_difference": -0.002803806387447973,
+        "regret_ci95": [
+          -0.008069996408920513,
+          0.0026198169866822425
+        ],
+        "bit_difference": 518.0293183484126,
+        "bit_ci95": [
+          518.0293183484126,
+          518.0293183484126
+        ]
+      },
+      "stage3_prior_value_per_bit": {
+        "regret_difference": 0.0,
+        "regret_ci95": [
+          0.0,
+          0.0
+        ],
+        "bit_difference": 0.0,
+        "bit_ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "600": {
+      "no_upgrade": {
+        "regret_difference": -0.004043101237940997,
+        "regret_ci95": [
+          -0.010481328174542984,
+          0.0023131904713547986
+        ],
+        "bit_difference": 578.7706712982263,
+        "bit_ci95": [
+          574.414519437183,
+          582.8551240092594
+        ]
+      },
+      "sensing_snr_G3": {
+        "regret_difference": -0.0008498257757067525,
+        "regret_ci95": [
+          -0.003944787357636718,
+          0.0016417441561158428
+        ],
+        "bit_difference": -9.267106180820969,
+        "bit_ci95": [
+          -13.58366856546387,
+          -5.220433884590605
+        ]
+      },
+      "confidence_G3": {
+        "regret_difference": -0.00200405145920134,
+        "regret_ci95": [
+          -0.007515367594329291,
+          0.003279793145192642
+        ],
+        "bit_difference": -13.290340523388513,
+        "bit_ci95": [
+          -17.76170528327915,
+          -9.285761417210063
+        ]
+      },
+      "stage3_prior_value_per_bit": {
+        "regret_difference": -0.0012392948504930245,
+        "regret_ci95": [
+          -0.0052038230506159374,
+          0.0024025868672470094
+        ],
+        "bit_difference": 60.74135294981354,
+        "bit_ci95": [
+          56.308735728365804,
+          64.78712071524515
+        ]
+      }
+    },
+    "750": {
+      "no_upgrade": {
+        "regret_difference": -0.004043101237940997,
+        "regret_ci95": [
+          -0.010561359055363028,
+          0.0024370916039428733
+        ],
+        "bit_difference": 578.7706712982263,
+        "bit_ci95": [
+          574.4531417899433,
+          582.8526202956078
+        ]
+      },
+      "sensing_snr_G3": {
+        "regret_difference": -0.0008498257757067525,
+        "regret_ci95": [
+          -0.0038303630481847603,
+          0.0017765480328974564
+        ],
+        "bit_difference": -9.267106180820969,
+        "bit_ci95": [
+          -13.619912390255205,
+          -5.146472237837685
+        ]
+      },
+      "confidence_G3": {
+        "regret_difference": -0.00200405145920134,
+        "regret_ci95": [
+          -0.007458543326061165,
+          0.0033437807598753933
+        ],
+        "bit_difference": -13.290340523388513,
+        "bit_ci95": [
+          -17.764146404089423,
+          -9.249517592418728
+        ]
+      },
+      "stage3_prior_value_per_bit": {
+        "regret_difference": -0.0012392948504930245,
+        "regret_ci95": [
+          -0.005192095576925567,
+          0.0024230028624224343
+        ],
+        "bit_difference": 60.74135294981354,
+        "bit_ci95": [
+          56.30873572836579,
+          64.9418604976516
+        ]
+      }
+    },
+    "950": {
+      "no_upgrade": {
+        "regret_difference": -0.004043101237940997,
+        "regret_ci95": [
+          -0.010414058288748303,
+          0.0023532114719058924
+        ],
+        "bit_difference": 578.7706712982263,
+        "bit_ci95": [
+          574.2993691311768,
+          582.929990186811
+        ]
+      },
+      "sensing_snr_G3": {
+        "regret_difference": -0.0008498257757067525,
+        "regret_ci95": [
+          -0.003890755412117869,
+          0.0017851459434665808
+        ],
+        "bit_difference": -9.267106180820969,
+        "bit_ci95": [
+          -13.699723402268704,
+          -5.1077872922360745
+        ]
+      },
+      "confidence_G3": {
+        "regret_difference": -0.00200405145920134,
+        "regret_ci95": [
+          -0.007423469791345875,
+          0.0033034551171416127
+        ],
+        "bit_difference": -13.290340523388513,
+        "bit_ci95": [
+          -17.72295774483625,
+          -9.169643987563942
+        ]
+      },
+      "stage3_prior_value_per_bit": {
+        "regret_difference": -0.0012392948504930245,
+        "regret_ci95": [
+          -0.005199112650955612,
+          0.0024135419598575627
+        ],
+        "bit_difference": 60.74135294981354,
+        "bit_ci95": [
+          56.38610561956902,
+          64.82330194719522
+        ]
+      }
+    }
+  },
+  "truth_access_audit": {
+    "train_truth_used_for_monotonic_value_calibration": true,
+    "calibration_validation_labels_saved": false,
+    "final_holdout_accessed": false
+  },
+  "claim_boundary": "Controlled one-step C2/H2 development result; not final H2 or real H3.",
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "scheduler_preview_used": true
+}

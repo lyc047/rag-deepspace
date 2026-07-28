@@ -1,0 +1,8 @@
+﻿scenario,comparison,regret_delta_mean,regret_delta_std,regret_delta_ci95_low,regret_delta_ci95_high,clean_rate_delta_mean,clean_rate_delta_std,clean_rate_delta_ci95_low,clean_rate_delta_ci95_high
+baseline_4_nodes,quality_weighted_minus_mean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+best_node_failure,quality_weighted_minus_mean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+best_single_node,quality_weighted_minus_mean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+combined_stale_failure_anomaly,quality_weighted_minus_mean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+heterogeneous_2_nodes,quality_weighted_minus_mean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+high_confidence_wrong,quality_weighted_minus_mean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+high_snr_stale,quality_weighted_minus_mean,-0.00019999966025352478,0.0,-0.00019999966025352478,-0.00019999966025352478,0.0,0.0,0.0,0.0

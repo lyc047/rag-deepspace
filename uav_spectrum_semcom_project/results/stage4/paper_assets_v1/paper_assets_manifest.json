@@ -1,0 +1,80 @@
+{
+  "asset_id": "stage4_paper_assets_v1",
+  "source_files": [
+    {
+      "path": "results/stage4/gate_a_training_v1/gate_a_paired_analysis.json",
+      "sha256": "cbb0bf094f386479c277614624ed80c60aff5e151016b3174d895f0e09a0164b"
+    },
+    {
+      "path": "results/stage4/value_diagnostics_v1/value_diagnostics_result.json",
+      "sha256": "dad22941b1a201dec2b42a5159935ab3c75bf089a192df3ebbab58df49ad9e5b"
+    },
+    {
+      "path": "results/stage4/quality_diagnostics_v1/quality_diagnostics_result.json",
+      "sha256": "755cdfb5fe016103fccf0a15c19397beb5bdb0eeda6aeeec38669086219287d9"
+    },
+    {
+      "path": "results/stage4/reliable_minority_v2/reliable_minority_result.json",
+      "sha256": "e31eea92a02d49d9103c9f9a33d772b8de780d840c519e7ff537d724eb68bbfc"
+    },
+    {
+      "path": "results/stage4/end_to_end_sweep_v1/end_to_end_sweep_result.json",
+      "sha256": "493b978dec66e85a55f197f97b1d9665140b5c702632c9b8e57f7f24560de9ee"
+    },
+    {
+      "path": "results/stage4/complexity_profile_v1/complexity_result.json",
+      "sha256": "548b9187bf725d3bb5e0ca9e84d042072fe35fb96f0455052f0709fe6be82fbf"
+    },
+    {
+      "path": "results/stage4/matrix_coverage_v1/matrix_coverage_result.json",
+      "sha256": "ae49c09c443b1494e5cf87b11fd78e3ea65724099d89b5501158adc9ac077ca0"
+    },
+    {
+      "path": "configs/stage4_protocol.json",
+      "sha256": "7c8e052c07b8d4a064d0dec46b39b544027829adc60016203de13067115805aa"
+    }
+  ],
+  "generated_files": [
+    {
+      "path": "results/stage4/paper_assets_v1/figure_end_to_end_selective_g2.png",
+      "sha256": "7e93ad0cc1a553ceccf0f42719ea4c04dd6369d09c424da79bbabcca24e89ed4",
+      "bytes": 150830
+    },
+    {
+      "path": "results/stage4/paper_assets_v1/figure_gate_a_forest.png",
+      "sha256": "fbf3645cb13f1c1fdbddc4142154cd5b45a02448858b199d6f3e3172e196b3e6",
+      "bytes": 50592
+    },
+    {
+      "path": "results/stage4/paper_assets_v1/figure_quality_reliability.png",
+      "sha256": "5f8687472c581b59649b53605593f5bbcc23b809894dab17285edceb5099df4b",
+      "bytes": 61547
+    },
+    {
+      "path": "results/stage4/paper_assets_v1/figure_value_diagnostic.png",
+      "sha256": "dbe624846e0427a494935bacc4863ec1987203f78322cc9d8385b248c4fec68c",
+      "bytes": 53769
+    },
+    {
+      "path": "results/stage4/paper_assets_v1/paper_tables.md",
+      "sha256": "dfad9880e4b33fb1d6157db0c7aca6557df5ec6a9ad110b4364b9e341d5a30b1",
+      "bytes": 1359
+    },
+    {
+      "path": "results/stage4/paper_assets_v1/table_end_to_end_selective_vs_all_g2.csv",
+      "sha256": "a75c68d7eb8153afc4946f73906b0dfc1f7588421caaed6e8d1af1c10e0fe833",
+      "bytes": 1668
+    },
+    {
+      "path": "results/stage4/paper_assets_v1/table_gate_a.csv",
+      "sha256": "a8fc9dfc9f2a972854748c80d065986c212b737b65faa5c23b2efa3d558e26e0",
+      "bytes": 435
+    }
+  ],
+  "claim_boundary": "All assets are generated from development/calibration/validation aggregates. Final H2/H3 remains untested.",
+  "final_access_count": 0,
+  "acceptance": {
+    "completed": true,
+    "final_flags_found": false
+  }
+}

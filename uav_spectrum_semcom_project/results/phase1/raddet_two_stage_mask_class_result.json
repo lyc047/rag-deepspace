@@ -1,0 +1,95 @@
+{
+  "dataset": "RadDet40k128HW001Tv2",
+  "model": "Two-stage TinyOccupancyCNN + crop classifier",
+  "device": "cuda",
+  "train_frames": 3000,
+  "val_frames": 1000,
+  "test_frames": 1000,
+  "epochs": 12,
+  "patch_size": 32,
+  "jitter_copies": 3,
+  "mask_threshold": 0.85,
+  "iou_threshold": 0.3,
+  "min_cells": 4,
+  "best_val_crop_accuracy": 0.302734375,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 2.1832278640646683,
+      "val_crop_accuracy": 0.205078125
+    },
+    {
+      "epoch": 2,
+      "train_loss": 2.03135034661544,
+      "val_crop_accuracy": 0.24609375
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.9639691766939664,
+      "val_crop_accuracy": 0.21484375
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.922793207670513,
+      "val_crop_accuracy": 0.17578125
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.8898902253100747,
+      "val_crop_accuracy": 0.263671875
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.857674557284305,
+      "val_crop_accuracy": 0.263671875
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1.848572796269467,
+      "val_crop_accuracy": 0.240234375
+    },
+    {
+      "epoch": 8,
+      "train_loss": 1.8096185972816066,
+      "val_crop_accuracy": 0.283203125
+    },
+    {
+      "epoch": 9,
+      "train_loss": 1.7916380982649953,
+      "val_crop_accuracy": 0.302734375
+    },
+    {
+      "epoch": 10,
+      "train_loss": 1.7716966641576666,
+      "val_crop_accuracy": 0.25390625
+    },
+    {
+      "epoch": 11,
+      "train_loss": 1.7553941563556068,
+      "val_crop_accuracy": 0.26953125
+    },
+    {
+      "epoch": 12,
+      "train_loss": 1.746666031134756,
+      "val_crop_accuracy": 0.283203125
+    }
+  ],
+  "test": {
+    "precision": 0.4388586956521739,
+    "recall": 0.625968992248062,
+    "f1": 0.5159744408945687,
+    "mean_iou": 0.5032999355911101,
+    "matched_class_accuracy": 0.20743034055727555,
+    "tp": 323,
+    "fp": 413,
+    "fn": 193,
+    "mean_hard_semantic_bits_per_frame": 261.992,
+    "mean_soft_semantic_bits_per_frame": 326.76,
+    "mean_raw_spectrogram_8bit_bits_per_frame": 131072.0,
+    "mean_raw_iq_12bit_bits_per_frame": 24000000.0,
+    "spectrogram8_to_hard_semantic_ratio": 500.290085193441,
+    "iq12_to_hard_semantic_ratio": 91605.85056032245,
+    "spectrogram8_to_soft_semantic_ratio": 401.1262088382911,
+    "iq12_to_soft_semantic_ratio": 73448.40249724568
+  }
+}

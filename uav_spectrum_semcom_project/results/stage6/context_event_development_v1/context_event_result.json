@@ -1,0 +1,182 @@
+{
+  "version": "1.0",
+  "status": "stage6_context_event_development_complete",
+  "protocol_sha256": "34ae2b0f1b3e4ec6e3b9870e66ad5d0a286744484b69bd3c503f68fdcaf5ec62",
+  "inputs": {
+    "cache_sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+    "train_scene_count": 197,
+    "evaluation_scene_count": 167,
+    "train_groups": [
+      "aerpaw_packapalooza_2023:20230826T1215",
+      "aerpaw_packapalooza_2023:20230826T1300",
+      "aerpaw_packapalooza_2023:20230826T1315",
+      "aerpaw_packapalooza_2023:20230826T1330"
+    ],
+    "evaluation_groups": [
+      "aerpaw_packapalooza_2023:20230826T1200",
+      "aerpaw_packapalooza_2023:20230826T1230",
+      "aerpaw_packapalooza_2023:20230826T1245"
+    ],
+    "evaluation_groups_form_one_logical_session": true
+  },
+  "n_results": {
+    "8": {
+      "n_channels": 8,
+      "demands": [
+        2,
+        4,
+        6
+      ],
+      "evaluation_scene_count": 167,
+      "codebook_size": 3,
+      "context_install_bits": 385,
+      "compact_regular_update_bits": 42,
+      "stage5_exact_update_bits": 48,
+      "install_break_even_regular_update_count": 65,
+      "semantic_update_count": 9,
+      "semantic_update_rate": 0.05389221556886228,
+      "semantic_fallback_update_count": 0,
+      "stage5_update_count": 10,
+      "stage5_update_rate": 0.059880239520958084,
+      "packet_round_trip_count": 9,
+      "preprovisioned_semantic_total_bits": 378,
+      "in_band_semantic_total_bits": 763,
+      "stage5_total_bits": 480,
+      "preprovisioned_mean_bits_per_scene": 2.2634730538922154,
+      "in_band_mean_bits_per_scene": 4.568862275449102,
+      "stage5_mean_bits_per_scene": 2.874251497005988,
+      "preprovisioned_bit_reduction_pct_vs_stage5": 21.25,
+      "in_band_bit_reduction_pct_vs_stage5": -58.958333333333336,
+      "semantic_mean_regret_db": 0.015611682823318207,
+      "semantic_cvar_0_9_regret_db": 0.11326643999885111,
+      "semantic_maximum_regret_db": 0.16602325439453125,
+      "stage5_mean_regret_db": 0.0142643180436003,
+      "stage5_cvar_0_9_regret_db": 0.10954239789177389,
+      "stage5_maximum_regret_db": 0.16602325439453125
+    },
+    "16": {
+      "n_channels": 16,
+      "demands": [
+        4,
+        8,
+        12
+      ],
+      "evaluation_scene_count": 167,
+      "codebook_size": 3,
+      "context_install_bits": 394,
+      "compact_regular_update_bits": 42,
+      "stage5_exact_update_bits": 51,
+      "install_break_even_regular_update_count": 44,
+      "semantic_update_count": 17,
+      "semantic_update_rate": 0.10179640718562874,
+      "semantic_fallback_update_count": 0,
+      "stage5_update_count": 18,
+      "stage5_update_rate": 0.10778443113772455,
+      "packet_round_trip_count": 17,
+      "preprovisioned_semantic_total_bits": 714,
+      "in_band_semantic_total_bits": 1108,
+      "stage5_total_bits": 918,
+      "preprovisioned_mean_bits_per_scene": 4.275449101796407,
+      "in_band_mean_bits_per_scene": 6.634730538922156,
+      "stage5_mean_bits_per_scene": 5.497005988023952,
+      "preprovisioned_bit_reduction_pct_vs_stage5": 22.22222222222222,
+      "in_band_bit_reduction_pct_vs_stage5": -20.697167755991284,
+      "semantic_mean_regret_db": 0.029156542109872053,
+      "semantic_cvar_0_9_regret_db": 0.14768735100241268,
+      "semantic_maximum_regret_db": 0.19546890258789062,
+      "stage5_mean_regret_db": 0.020840764759543412,
+      "stage5_cvar_0_9_regret_db": 0.14076726576861212,
+      "stage5_maximum_regret_db": 0.19546890258789062
+    },
+    "32": {
+      "n_channels": 32,
+      "demands": [
+        8,
+        16,
+        24
+      ],
+      "evaluation_scene_count": 167,
+      "codebook_size": 3,
+      "context_install_bits": 403,
+      "compact_regular_update_bits": 42,
+      "stage5_exact_update_bits": 54,
+      "install_break_even_regular_update_count": 34,
+      "semantic_update_count": 17,
+      "semantic_update_rate": 0.10179640718562874,
+      "semantic_fallback_update_count": 0,
+      "stage5_update_count": 18,
+      "stage5_update_rate": 0.10778443113772455,
+      "packet_round_trip_count": 17,
+      "preprovisioned_semantic_total_bits": 714,
+      "in_band_semantic_total_bits": 1117,
+      "stage5_total_bits": 972,
+      "preprovisioned_mean_bits_per_scene": 4.275449101796407,
+      "in_band_mean_bits_per_scene": 6.688622754491018,
+      "stage5_mean_bits_per_scene": 5.820359281437126,
+      "preprovisioned_bit_reduction_pct_vs_stage5": 26.54320987654321,
+      "in_band_bit_reduction_pct_vs_stage5": -14.91769547325103,
+      "semantic_mean_regret_db": 0.025833342127695235,
+      "semantic_cvar_0_9_regret_db": 0.15352383781881893,
+      "semantic_maximum_regret_db": 0.19598388671875,
+      "stage5_mean_regret_db": 0.021819345965356885,
+      "stage5_cvar_0_9_regret_db": 0.141847386079676,
+      "stage5_maximum_regret_db": 0.19598388671875
+    },
+    "64": {
+      "n_channels": 64,
+      "demands": [
+        16,
+        32,
+        48
+      ],
+      "evaluation_scene_count": 167,
+      "codebook_size": 3,
+      "context_install_bits": 412,
+      "compact_regular_update_bits": 42,
+      "stage5_exact_update_bits": 57,
+      "install_break_even_regular_update_count": 28,
+      "semantic_update_count": 17,
+      "semantic_update_rate": 0.10179640718562874,
+      "semantic_fallback_update_count": 0,
+      "stage5_update_count": 18,
+      "stage5_update_rate": 0.10778443113772455,
+      "packet_round_trip_count": 17,
+      "preprovisioned_semantic_total_bits": 714,
+      "in_band_semantic_total_bits": 1126,
+      "stage5_total_bits": 1026,
+      "preprovisioned_mean_bits_per_scene": 4.275449101796407,
+      "in_band_mean_bits_per_scene": 6.74251497005988,
+      "stage5_mean_bits_per_scene": 6.1437125748503,
+      "preprovisioned_bit_reduction_pct_vs_stage5": 30.4093567251462,
+      "in_band_bit_reduction_pct_vs_stage5": -9.746588693957115,
+      "semantic_mean_regret_db": 0.02666122994261123,
+      "semantic_cvar_0_9_regret_db": 0.15532229928409352,
+      "semantic_maximum_regret_db": 0.1956624984741211,
+      "stage5_mean_regret_db": 0.02263125830781674,
+      "stage5_cvar_0_9_regret_db": 0.14403646132525275,
+      "stage5_maximum_regret_db": 0.1956624984741211
+    }
+  },
+  "checks": {
+    "all_compact_packets_round_trip": true,
+    "all_semantic_regret_respects_epsilon": true,
+    "all_stage5_regret_respects_epsilon": true,
+    "final_access_state_unchanged": true,
+    "final_access_count_remains_zero": true
+  },
+  "governance": {
+    "development_only": true,
+    "ack_faults_injected": false,
+    "external_final_signal_values_loaded": false,
+    "external_final_access_consumed": false
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": "Development-only context amortization without ACK faults or stochastic reporting-link errors. Preprovisioned and in-band-install accounting must be reported separately."
+}

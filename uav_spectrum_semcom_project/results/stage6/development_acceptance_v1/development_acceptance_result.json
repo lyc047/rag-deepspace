@@ -1,0 +1,94 @@
+{
+  "version": "1.0",
+  "status": "stage6_development_acceptance_complete",
+  "protocol_sha256": "b9c39cc8477959e3e72782e21b301a98d685cae28ce81e0bfd0a18bb347b5383",
+  "verdict": "ready_for_stage6_final_protocol_registration_with_caution",
+  "all_acceptance_gates_passed": true,
+  "evidence_hash_checks": {
+    "architecture_freeze": true,
+    "component_ablation": true,
+    "component_ablation_reproduction": true,
+    "complexity_primary": true,
+    "complexity_reproduction": true,
+    "fault_stress_primary": true,
+    "fault_stress_reproduction": true,
+    "query_stress_primary": true,
+    "query_stress_reproduction": true
+  },
+  "gate_checks": {
+    "architecture_freeze_checks_all_true": true,
+    "component_ablation_checks_all_true": true,
+    "learned_auxiliary_cross_n_support_minimum": true,
+    "fault_stress_checks_all_true": true,
+    "query_stress_checks_all_true": true,
+    "all_query_epsilon_safe": true,
+    "wrong_codebook_decode_count_zero": true,
+    "deterministic_primary_reproduction_hashes_equal": true,
+    "complexity_timing_cells_within_25_percent_minimum": true,
+    "complexity_timing_cell_count": true,
+    "complexity_memory_exact_across_reproduction": true,
+    "minimum_full_regression_test_count": true,
+    "full_regression_must_pass": true,
+    "external_final_access_count_must_equal": true
+  },
+  "complexity_reproducibility": {
+    "classification": "partially_reproducible",
+    "timing_cell_count": 24,
+    "timing_cells_within_25_percent": 23,
+    "timing_cells_outside_25_percent": [
+      {
+        "n_channels": 16,
+        "metric": "task_state_build_microseconds_per_scene",
+        "primary_median": 110.44752747252748,
+        "reproduction_median": 187.04642857142858,
+        "relative_difference": 0.40951811635179014
+      }
+    ],
+    "memory_exact": true
+  },
+  "regression_validation": {
+    "collected_test_count": 323,
+    "pytest_exit_code": 0,
+    "passed": true
+  },
+  "caution_flags": {
+    "same_clean_rate_end_to_end_bit_saving_not_demonstrated": true,
+    "effective_cvar_0p9_is_outage_limited": true,
+    "receiver_reset_probability_0p05_causes_about_30pp_clean_drop": true,
+    "ack_loss_reliability_requires_large_signaling_growth": true,
+    "learned_component_is_auxiliary_not_primary": true,
+    "complexity_is_single_machine_python_only": true,
+    "development_activity_is_fixed_site_not_uav_mobility": true
+  },
+  "supported_development_claims": [
+    "The frozen joint task codebook satisfies the 0.2 dB constraint for all three registered demand ratios on the excluded development activity.",
+    "The learned duplicate-update protection is a small auxiliary reliability contribution with cross-N interval support in three of four N values.",
+    "Fixed heartbeat and context-belief recovery are the dominant reliability components under the registered synthetic mixed-fault model.",
+    "The frozen desktop Python implementation remains computationally modest over N = 8 to 64 in the measured environment.",
+    "Receiver context reset is the dominant registered synthetic-fault vulnerability."
+  ],
+  "prohibited_claims_before_external_final": [
+    "cross-activity or real-UAV mobility generalization",
+    "same-clean-rate end-to-end bit saving of at least 20 percent",
+    "measured field failure probabilities or measured UAV link reliability",
+    "machine learning as the primary source of Stage-6 gain",
+    "embedded latency, memory, or energy guarantees",
+    "external Final success"
+  ],
+  "authorization": {
+    "stage6_final_protocol_registration": true,
+    "external_final_execution": false,
+    "algorithm_or_parameter_change": false
+  },
+  "final_access_count": 0,
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "scikit-learn": "1.5.1"
+    }
+  },
+  "claim_boundary": "This acceptance audits development completeness and authorizes only protocol registration when all gates pass. It is not an external Final result, not real-UAV validation, and not evidence that all thesis targets have been achieved."
+}

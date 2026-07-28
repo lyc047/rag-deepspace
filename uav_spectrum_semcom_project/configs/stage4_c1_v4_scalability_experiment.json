@@ -1,0 +1,68 @@
+{
+  "protocol_id": "stage4_c1_v4_postfinal_scalability_development_v1",
+  "status": "frozen_before_scalability_outputs",
+  "created_date": "2026-07-23",
+  "purpose": "Measure how task-sufficient block reporting scales against per-channel 4-bit soft power as the channel grid and fixed contiguous demand grow.",
+  "development_source": {
+    "cache_result": "results/stage4/c1_v4_real_cache_v1/c1_v4_cache_result.json",
+    "cache_result_sha256": "858bdebbe54bcf9f5a1c96fce5d1af6b3d816563a934bac77797b938d97ae98d",
+    "split": "validation",
+    "provenance": "results/stage4/c1_v4_real_cache_v1/c1_v4_validation_provenance.json",
+    "provenance_sha256": "838b70dfeb592141ba1bcaac9f2d35bfac2a5c28ba2556a6f0cd45febca05973",
+    "scene_count": 180,
+    "cluster_count": 72,
+    "date": "2022-02-11",
+    "role": "already-seen development validation"
+  },
+  "frequency_band_mhz": [2400.0, 2483.5],
+  "channel_counts": [8, 16, 32, 64],
+  "demand_ratios": [0.25, 0.5, 0.75],
+  "demand_rounding": "all selected channel counts are divisible by four; demand_channels = exact ratio times n_channels",
+  "representations": [
+    {
+      "name": "soft_power_fixed4",
+      "description": "four-bit min-max-normalized mean power for every channel",
+      "payload_bits_formula": "4*N"
+    },
+    {
+      "name": "best_block_onehot",
+      "description": "current C1-v4 one-hot best-block indicator with zero at the selected candidate",
+      "payload_bits_formula": "N-D+1"
+    },
+    {
+      "name": "best_block_binary_index",
+      "description": "development-only compact integer index of the best candidate block",
+      "payload_bits_formula": "ceil(log2(N-D+1))"
+    }
+  ],
+  "application_overhead_bits": 152,
+  "failed_packet_fallback": "block_start_zero",
+  "link": {
+    "stage2_config": "configs/stage2_digital_link.json",
+    "stage2_config_sha256": "66fbe3cc3166225d8aa4bbcd82131a92c808196314045735019321b1791932a1",
+    "channel_models": ["awgn", "rayleigh", "rician"],
+    "ebn0_db": [0.0, 3.0, 6.0, 9.0],
+    "repeats": 10,
+    "paired_common_random_numbers": true
+  },
+  "statistics": {
+    "cvar_alpha": 0.9,
+    "paired_cluster_bootstrap_repetitions": 10000,
+    "bootstrap_seed": 20260810,
+    "one_sided_confidence": 0.95,
+    "comparison": "proposed minus four-bit soft power within each N,D task"
+  },
+  "descriptive_targets": {
+    "target_actual_bit_reduction_pct": 20.0,
+    "regret_noninferiority_rule": "one-sided 95% paired cluster upper bound <= 0",
+    "interpretation": "A task reaches the strong scalability target only when actual-bit reduction is at least 20% and mean regret is noninferior to soft power."
+  },
+  "governance": {
+    "post_final_supplementary_only": true,
+    "final_measurements_or_final_metrics_may_be_loaded": false,
+    "may_modify_final_algorithm_or_claim": false,
+    "compact_binary_index_is_confirmed": false,
+    "claim_level": "development-only scalability evidence"
+  },
+  "claim_boundary": "Fixed-task scaling on already-seen AERPAW development sweeps and a simulated reporting link. It does not alter the consumed Final, confirm the compact index, or establish dynamic-demand, mobility, MIMO, measured-backhaul, or cross-dataset generalization."
+}

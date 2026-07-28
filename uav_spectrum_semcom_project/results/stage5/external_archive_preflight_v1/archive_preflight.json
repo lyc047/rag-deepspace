@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "status": "download_bundles_and_inner_archives_verified",
+  "registry_id": "stage5_external_final_registry_v1",
+  "row_count": 4,
+  "rows": [
+    {
+      "dataset_id": "aerpaw_packapalooza_2023",
+      "role": "adapter_and_quality_control_only_permanently_excluded_from_final",
+      "download_bundle": "F:\\uav_spectrum_final_data\\doi_10_5061_dryad_mw6m9063f__v20231117.zip",
+      "normalized_archive": "F:\\uav_spectrum_final_data\\aerpaw_helikite_external_v1\\pilot\\Packapalooza_2023\\AERPAW_helikite_packapalooza_23.7z",
+      "normalized_archive_size_bytes": 80854632,
+      "normalized_archive_sha256": "b1265fbe5e2c94385b37aff723ad881b0e59108710620096d4139ea093c6f9e6",
+      "reused_existing_verified_archive": true,
+      "inner_archive_contents_opened": false,
+      "signal_values_loaded": false
+    },
+    {
+      "dataset_id": "aerpaw_packapalooza_2024",
+      "role": "single_access_external_final",
+      "download_bundle": "F:\\uav_spectrum_final_data\\doi_10_5061_dryad_0zpc8676n__v20241030.zip",
+      "normalized_archive": "F:\\uav_spectrum_final_data\\aerpaw_helikite_external_v1\\final\\Packapalooza_2024\\Packapalooza_2024_SigMF.zip",
+      "normalized_archive_size_bytes": 745874507,
+      "normalized_archive_sha256": "d6367101b05a8161880029274d619e8e823637e92e2c47751102f9be0f987617",
+      "reused_existing_verified_archive": false,
+      "inner_archive_contents_opened": false,
+      "signal_values_loaded": false
+    },
+    {
+      "dataset_id": "aerpaw_lake_wheeler_2024",
+      "role": "single_access_external_final",
+      "download_bundle": "F:\\uav_spectrum_final_data\\doi_10_5061_dryad_pk0p2ngz8__v20241031.zip",
+      "normalized_archive": "F:\\uav_spectrum_final_data\\aerpaw_helikite_external_v1\\final\\Lake_Wheeler_2024\\Lake_Wheeler_2024_SigMF.zip",
+      "normalized_archive_size_bytes": 787189713,
+      "normalized_archive_sha256": "bee764cee4c99f7cddc35c9036ef5c38e6283516ebfe322f34d50297c3bbfa9b",
+      "reused_existing_verified_archive": false,
+      "inner_archive_contents_opened": false,
+      "signal_values_loaded": false
+    },
+    {
+      "dataset_id": "aerpaw_packapalooza_2025",
+      "role": "single_access_external_final",
+      "download_bundle": "F:\\uav_spectrum_final_data\\doi_10_5061_dryad_tb2rbp0fw__v20251104.zip",
+      "normalized_archive": "F:\\uav_spectrum_final_data\\aerpaw_helikite_external_v1\\final\\Packapalooza_2025\\Dryad_submission_AERPAW_Pack2025_17Oct2025.zip",
+      "normalized_archive_size_bytes": 438557314,
+      "normalized_archive_sha256": "30490681c9f791a8d66ea18ad40ce4ad02d0d30322ee6bfb774b33153ea012c9",
+      "reused_existing_verified_archive": false,
+      "inner_archive_contents_opened": false,
+      "signal_values_loaded": false
+    }
+  ],
+  "governance": {
+    "outer_bundle_bytes_read_for_integrity": true,
+    "inner_archive_bytes_read_for_integrity": true,
+    "inner_archive_member_listing_opened": false,
+    "sigmf_metadata_opened": false,
+    "signal_values_loaded": false,
+    "method_outputs_loaded": false,
+    "final_access_consumed": false
+  }
+}

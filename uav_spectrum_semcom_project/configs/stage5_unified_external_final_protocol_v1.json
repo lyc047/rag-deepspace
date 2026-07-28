@@ -1,0 +1,102 @@
+{
+  "protocol_id": "stage5_unified_external_final_v1",
+  "status": "protocol_frozen_execution_not_started",
+  "created_date": "2026-07-25",
+  "purpose": "One unified, code-frozen, single-access external evaluation after all Stage-5 development is complete.",
+  "registry": "configs/stage5_external_final_registry_v1.json",
+  "access_state": "configs/stage5_external_final_access_state.json",
+  "sampling": {
+    "target_scene_count": 200,
+    "campaign_allocations": {
+      "aerpaw_packapalooza_2024": 67,
+      "aerpaw_lake_wheeler_2024": 67,
+      "aerpaw_packapalooza_2025": 66
+    },
+    "minimum_spacing_minutes": 5,
+    "cluster_minutes": 15,
+    "local_timezone": "America/New_York",
+    "selection_rule": "filename_timestamp_only_then_greedy_spacing_then_deterministic_even_spread",
+    "selection_may_use_signal_values": false,
+    "all_methods_use_identical_scene_catalog": true
+  },
+  "resource_task": {
+    "analysis_band_mhz": [3550.0, 3700.0],
+    "primary_n_channels": 8,
+    "secondary_n_channels": [16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "regret_threshold_db": 0.2,
+    "max_state_age_minutes": 120.0,
+    "application_header_bits": 40,
+    "soft_power_bits_per_channel": 4
+  },
+  "primary_methods": [
+    "occupancy_fixed4_always",
+    "soft_power_fixed4_always",
+    "absolute_index_current_query_always",
+    "query_bundle_always",
+    "query_event_bundle_fixed"
+  ],
+  "reporting_link": {
+    "stage2_config": "configs/stage2_digital_link.json",
+    "fec": "hamming74",
+    "channel_models": ["awgn", "rayleigh", "rician"],
+    "ebn0_db": [0.0, 3.0, 6.0, 9.0],
+    "repeats": 10,
+    "paired_common_random_numbers": true
+  },
+  "secondary_ack_fault_methods": [
+    "naive_ack",
+    "epoch_guard",
+    "immediate_uncertainty_recovery",
+    "belief_risk_recovery"
+  ],
+  "secondary_ack_evidence": {
+    "result": "results/stage5/belief_risk_recovery_development_v1/belief_risk_recovery_result.json",
+    "result_sha256": "c59b08afe58c7f12debaa79b9d21b95fff3a68a25e39f672fb9c46754bd7caea",
+    "role": "controlled_simulation_only_not_external_measured_ack_evidence"
+  },
+  "ack_claim_boundary": "ACK faults remain controlled injections because the external datasets contain no measured reporting-link or ACK trace.",
+  "statistics": {
+    "cvar_alpha": 0.9,
+    "paired_campaign_x_15_minute_cluster_bootstrap_repetitions": 10000,
+    "bootstrap_seed": 20261125,
+    "one_sided_confidence": 0.95,
+    "campaign_stratified_results_required": true,
+    "aggregate_result_requires_all_three_campaigns": true
+  },
+  "freeze": {
+    "include_globs": [
+      "src/spectrum_semcom/*.py"
+    ],
+    "include_files": [
+      "configs/stage2_digital_link.json",
+      "configs/stage5_unified_external_final_protocol_v1.json",
+      "configs/stage5_external_final_registry_v1.json",
+      "configs/stage5_helikite_pilot_protocol_v1.json",
+      "configs/stage5_helikite_scale_development_v1.json",
+      "scripts/build_stage5_external_final_catalog.py",
+      "scripts/consume_stage5_external_final_access.py",
+      "scripts/freeze_stage5_external_final.py",
+      "scripts/run_stage5_external_final.py",
+      "requirements-lock.txt"
+    ]
+  },
+  "execution_gates": {
+    "all_four_archives_sha256_verified": true,
+    "pilot_quality_gates_all_pass": true,
+    "measured_scale_checks_all_pass": true,
+    "snapshot_must_precede_catalog": true,
+    "catalog_must_have_exactly_200_scenes": true,
+    "access_state_must_transition_zero_to_one_before_signal_read": true,
+    "access_state_reset_after_failure_is_forbidden": true,
+    "existing_final_output_may_not_be_overwritten": true
+  },
+  "governance": {
+    "stage4_consumed_final_may_be_loaded": false,
+    "2023_pilot_is_final_eligible": false,
+    "final_signal_values_may_be_loaded_before_access_consumption": false,
+    "method_outputs_may_be_used_for_scene_selection": false,
+    "post_final_parameter_tuning_is_forbidden": true
+  },
+  "claim_boundary": "The external Final can test cross-campaign airborne spectrum-task performance and simulated reporting cost. It cannot by itself establish measured backhaul reliability, real ACK-fault recovery, simultaneous multi-node sensing, image semantics, MIMO, or causal deployment performance."
+}

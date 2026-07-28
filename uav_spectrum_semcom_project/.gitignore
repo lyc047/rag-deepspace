@@ -1,0 +1,39 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.venv/
+venv/
+
+# Datasets are identified by manifests/checksums, not committed as bulk files.
+data/raw/
+data/processed/
+*.sigmf-data
+*.sigmf-meta
+*.zip
+*.npz
+
+# Large raw Monte-Carlo trajectories and resumable local checkpoints.
+# Compact analyses, manifests, hashes, and human-readable reports remain tracked.
+results/**/checkpoints/
+results/**/logs/
+results/**/partial_*.json
+results/stage6/matched_reliability_coarse_grid_v1/result.json
+results/stage6/matched_reliability_grouped_validation_v1/result.json
+results/stage6/reliability_protocol_r1_grouped_v1/result.json
+results/stage6/task_scale_sensitivity_grouped_v1/
+results/phase1/fiesta_payload_summary.csv
+
+# Large learned artifacts and local training runs.
+*.pt
+*.pth
+*.ckpt
+*.npy
+runs/
+mobile_handoff_20260717/
+
+# Local editor and OS state.
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

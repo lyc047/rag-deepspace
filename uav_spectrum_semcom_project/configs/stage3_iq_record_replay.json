@@ -1,0 +1,56 @@
+{
+  "experiment_id": "stage3_same_source_sigmf_iq_replay_v1",
+  "experiment_role": "record_replay_interface_and_failure_diagnostic",
+  "hypothesis_ids": ["H3", "H4"],
+  "source_manifest": "data/frame_manifest.csv",
+  "source_recording_count": 1,
+  "source_frame_count": 14,
+  "source_limitation": "all_frames_are_slices_of_one_short_5g_nr_sigmf_recording_no_independent_generalization_claim",
+  "seed": 20260716,
+  "repeat_count": 5,
+  "stft": {
+    "n_fft": 512,
+    "hop_length": 256
+  },
+  "frozen_detector": {
+    "type": "connected_component_energy_detector",
+    "threshold_sigma": 7.0,
+    "min_cells": 16,
+    "enhancement": "freq_median",
+    "selection_source": "results/phase1/real_sigmf_energy_baseline.json",
+    "caveat": "selected_on_the_same_short_recording_before_stage3_and_used_only_for_diagnostic"
+  },
+  "sensing_nodes": [
+    {"sensing_snr_db": -3.0, "gain_db": -3.0, "frequency_offset_hz": -15000.0, "multipath_taps": [[1.0, 0.0], [0.0, 0.20]]},
+    {"sensing_snr_db": 3.0, "gain_db": -1.0, "frequency_offset_hz": 0.0, "multipath_taps": [[1.0, 0.0], [0.12, 0.08]]},
+    {"sensing_snr_db": 9.0, "gain_db": 0.0, "frequency_offset_hz": 10000.0, "multipath_taps": [[1.0, 0.0], [0.08, -0.05]]},
+    {"sensing_snr_db": 15.0, "gain_db": 1.0, "frequency_offset_hz": 25000.0, "multipath_taps": [[1.0, 0.0]]}
+  ],
+  "reporting_ebn0_db_per_node": [2.0, 4.0, 6.0, 8.0],
+  "resource_task": {
+    "n_channels": 4,
+    "demand_channels": 2,
+    "clean_threshold": 0.02
+  },
+  "adaptive_policy": {
+    "initial_nodes": 2,
+    "target_delivered_reports": 3,
+    "ack_bits_per_attempted_node": 32,
+    "scheduler_feedback_delay_s": 0.001,
+    "scheduler_feedback_bitrate_bps": 100000.0,
+    "fusion_method": "robust_quality_weighted",
+    "disagreement_scale": 0.05,
+    "max_weight_ratio": 2.0
+  },
+  "energy_model": {
+    "transmit_power_w_per_node": [1.0, 1.0, 1.0, 1.0],
+    "definition": "reference_RF_energy_from_modulation_airtime_at_assumed_1W_excludes_processing_and_receiver_energy",
+    "not_measured_hardware_energy": true
+  },
+  "claim_boundary": {
+    "same_source_raw_iq": true,
+    "independent_node_channel_replay": true,
+    "simultaneous_multi_receiver_capture": false,
+    "formal_h3_spatial_diversity_evidence": false
+  }
+}

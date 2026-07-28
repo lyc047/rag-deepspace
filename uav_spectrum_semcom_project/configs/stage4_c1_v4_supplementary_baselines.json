@@ -1,0 +1,65 @@
+{
+  "protocol_id": "stage4_c1_v4_postfinal_supplementary_baselines_v1",
+  "status": "frozen_before_new_supplementary_outputs_on_already_seen_development_data",
+  "created_date": "2026-07-23",
+  "purpose": "Add classical HDF/SDF, reference-bound, state-hold, and ARQ comparisons without accessing or rerunning the consumed Final.",
+  "representation_cache_result": {
+    "path": "results/stage4/c1_v4_real_cache_v1/c1_v4_cache_result.json",
+    "sha256": "858bdebbe54bcf9f5a1c96fce5d1af6b3d816563a934bac77797b938d97ae98d",
+    "split": "validation"
+  },
+  "reliability_cache_result": {
+    "path": "results/stage4/c1_v4_temporal_fallback_cache_v1/c1_v4_cache_result.json",
+    "sha256": "bf229569b54d5b12e571abec538081fc04e8efddb67fdd2c02da24bd0e23959b",
+    "split": "temporal_fallback_validation"
+  },
+  "resource_task": {
+    "n_channels": 8,
+    "demand_channels": 4,
+    "sigma_multiplier": 3.0,
+    "feature_mean_z_clip_scale": 8.0,
+    "hard_mean_z_threshold": 0.375
+  },
+  "application_overhead_bits": 152,
+  "representation_methods": [
+    {"name": "hard_mean_energy_1bit", "kind": "channel", "values": 8, "bits_per_value": 1, "application_bits": 160},
+    {"name": "occupancy_fraction_4bit", "kind": "channel", "values": 8, "bits_per_value": 4, "application_bits": 184},
+    {"name": "soft_channel_power_4bit", "kind": "channel", "values": 8, "bits_per_value": 4, "application_bits": 184},
+    {"name": "soft_channel_power_8bit", "kind": "channel", "values": 8, "bits_per_value": 8, "application_bits": 216},
+    {"name": "proposed_best_block_indicator_1bit", "kind": "block", "values": 5, "bits_per_value": 1, "application_bits": 157}
+  ],
+  "reference_methods": [
+    {"name": "static_block0_no_reporting", "role": "zero-communication lower-complexity reference"},
+    {"name": "uniform_random_block_no_reporting", "role": "expected random-decision reference"},
+    {"name": "oracle_best_block_free_information", "role": "infeasible regret lower bound"}
+  ],
+  "reliability_methods": [
+    {"name": "no_arq_stateless", "max_retransmissions": 0, "fallback": "block0"},
+    {"name": "standard_arq_stateless", "max_retransmissions": 1, "fallback": "block0"},
+    {"name": "extra_arq_stateless", "max_retransmissions": 2, "fallback": "block0"},
+    {"name": "standard_arq_unlimited_hold", "max_retransmissions": 1, "fallback": "last_success_without_expiry"},
+    {"name": "standard_arq_age60_hold", "max_retransmissions": 1, "fallback": "last_success_if_age_at_most_60_minutes", "max_state_age_minutes": 60.0}
+  ],
+  "link": {
+    "stage2_config": "configs/stage2_digital_link.json",
+    "channel_models": ["awgn", "rayleigh", "rician"],
+    "ebn0_db": [0.0, 3.0, 6.0, 9.0],
+    "repeats": 10,
+    "common_random_seed": true
+  },
+  "statistics": {
+    "paired_cluster_bootstrap_repetitions": 10000,
+    "representation_seed": 20260728,
+    "reliability_seed": 20260729,
+    "cvar_alpha": 0.9,
+    "one_sided_confidence": 0.95
+  },
+  "governance": {
+    "post_final_supplementary_only": true,
+    "final_measurements_or_final_metrics_may_be_loaded": false,
+    "may_change_final_claim_or_select_algorithm": false,
+    "allowed_data": "already-seen C1-v4 development validation caches only",
+    "claim_level": "descriptive and supplementary, not a new confirmatory Final"
+  },
+  "claim_boundary": "Classical and reliability baselines on already-seen AERPAW development dates with a simulated reporting link. They strengthen interpretation but do not alter or extend the consumed Final conclusion."
+}

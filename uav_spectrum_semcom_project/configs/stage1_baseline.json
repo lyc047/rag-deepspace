@@ -1,0 +1,35 @@
+{
+  "experiment_id": "stage1_reproducibility_smoke_v1",
+  "experiment_role": "development",
+  "hypothesis_ids": [
+    "H1"
+  ],
+  "split_id": "stage1_dataset_registry_v1",
+  "manifest_checksum": "registry:configs/dataset_registry.json",
+  "config_id": "configs/stage1_baseline.json",
+  "code_version": "working-tree-stage1",
+  "seed": 7,
+  "baseline_or_method": "synthetic_energy_detector_smoke",
+  "fairness_budget_type": "bits",
+  "fairness_budget_value": 1572864,
+  "sensing_channel": {
+    "model": "synthetic_awgn",
+    "snr_db": 8.0
+  },
+  "reporting_channel": {
+    "model": "identity_development_smoke",
+    "bler": 0.0,
+    "fec_rate": 1.0,
+    "max_retransmissions": 0
+  },
+  "metrics": {
+    "best_tf_iou": null,
+    "total_transmitted_bits_per_decision": null
+  },
+  "repeat_count": 1,
+  "command": [
+    "scripts/run_phase1_smoke.py"
+  ],
+  "output": "results/phase1/smoke_result.json",
+  "notes": "Development-only reproducibility check; not main evidence for H1."
+}

@@ -1,0 +1,1054 @@
+{
+  "version": "1.0",
+  "status": "stage6_next_codeword_prediction_development_complete",
+  "protocol_sha256": "3db762b2dc2612d5b6acfd612ede0a269a440187a68c0029b28d05e21f6e2b33",
+  "split": {
+    "training_groups": [
+      "aerpaw_packapalooza_2023:20230826T1215",
+      "aerpaw_packapalooza_2023:20230826T1300",
+      "aerpaw_packapalooza_2023:20230826T1315",
+      "aerpaw_packapalooza_2023:20230826T1330"
+    ],
+    "evaluation_groups": [
+      "aerpaw_packapalooza_2023:20230826T1200",
+      "aerpaw_packapalooza_2023:20230826T1230",
+      "aerpaw_packapalooza_2023:20230826T1245"
+    ]
+  },
+  "results": {
+    "8": {
+      "n_channels": 8,
+      "demands": [
+        2,
+        4,
+        6
+      ],
+      "codebook_size": 3,
+      "fallback_class": 3,
+      "class_count": 4,
+      "training_sample_count": 165,
+      "evaluation_sample_count": 143,
+      "training_class_counts": [
+        144,
+        17,
+        4,
+        0
+      ],
+      "evaluation_class_counts": [
+        112,
+        23,
+        8,
+        0
+      ],
+      "learned_window_cross_validation": {
+        "1": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.5696969696969697,
+          "balanced_accuracy": 0.3732298474945534,
+          "macro_f1": 0.2417285813791502,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.43859649122807015,
+          "changed_sample_exact_class_accuracy": 0.47368421052631576,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "2": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.6181818181818182,
+          "balanced_accuracy": 0.409041394335512,
+          "macro_f1": 0.25843893686217334,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.5365853658536586,
+          "changed_sample_exact_class_accuracy": 0.7105263157894737,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "4": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.7636363636363637,
+          "balanced_accuracy": 0.4300108932461873,
+          "macro_f1": 0.30150197628458497,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.5934065934065934,
+          "changed_sample_exact_class_accuracy": 0.6578947368421053,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "8": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.7818181818181819,
+          "balanced_accuracy": 0.4542483660130719,
+          "macro_f1": 0.31114130434782605,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.5977011494252874,
+          "changed_sample_exact_class_accuracy": 0.6578947368421053,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        }
+      },
+      "learned_window_evaluation": {
+        "1": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.34265734265734266,
+          "balanced_accuracy": 0.3614130434782609,
+          "macro_f1": 0.2037351443123939,
+          "transition_prevalence": 0.3006993006993007,
+          "transition_event_f1": 0.4585987261146497,
+          "changed_sample_exact_class_accuracy": 0.627906976744186,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "2": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.3986013986013986,
+          "balanced_accuracy": 0.4584627329192547,
+          "macro_f1": 0.24714972527472528,
+          "transition_prevalence": 0.3006993006993007,
+          "transition_event_f1": 0.49056603773584906,
+          "changed_sample_exact_class_accuracy": 0.7906976744186046,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "4": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.5174825174825175,
+          "balanced_accuracy": 0.35106107660455493,
+          "macro_f1": 0.24724184782608696,
+          "transition_prevalence": 0.3006993006993007,
+          "transition_event_f1": 0.5343511450381679,
+          "changed_sample_exact_class_accuracy": 0.627906976744186,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "8": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.6223776223776224,
+          "balanced_accuracy": 0.384187370600414,
+          "macro_f1": 0.2809898889591045,
+          "transition_prevalence": 0.3006993006993007,
+          "transition_event_f1": 0.5333333333333333,
+          "changed_sample_exact_class_accuracy": 0.5348837209302325,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        }
+      },
+      "selected_history_window": 8,
+      "baseline_cross_validation": {
+        "training_frequency_prior": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.8727272727272727,
+          "balanced_accuracy": 0.3333333333333333,
+          "macro_f1": 0.23300970873786409,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.6440677966101694,
+          "changed_sample_exact_class_accuracy": 0.5,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "current_codeword_persistence": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.7696969696969697,
+          "balanced_accuracy": 0.3922930283224401,
+          "macro_f1": 0.28772095959595956,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.0,
+          "changed_sample_exact_class_accuracy": 0.0,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "first_order_markov": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.8727272727272727,
+          "balanced_accuracy": 0.3333333333333333,
+          "macro_f1": 0.23300970873786409,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.6440677966101694,
+          "changed_sample_exact_class_accuracy": 0.5,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        }
+      },
+      "baseline_evaluation": {
+        "training_frequency_prior": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.7832167832167832,
+          "balanced_accuracy": 0.3333333333333333,
+          "macro_f1": 0.2196078431372549,
+          "transition_prevalence": 0.3006993006993007,
+          "transition_event_f1": 0.6133333333333333,
+          "changed_sample_exact_class_accuracy": 0.4883720930232558,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "current_codeword_persistence": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.6993006993006993,
+          "balanced_accuracy": 0.45561594202898553,
+          "macro_f1": 0.33894636037296577,
+          "transition_prevalence": 0.3006993006993007,
+          "transition_event_f1": 0.0,
+          "changed_sample_exact_class_accuracy": 0.0,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "first_order_markov": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.7832167832167832,
+          "balanced_accuracy": 0.3333333333333333,
+          "macro_f1": 0.2196078431372549,
+          "transition_prevalence": 0.3006993006993007,
+          "transition_event_f1": 0.6133333333333333,
+          "changed_sample_exact_class_accuracy": 0.4883720930232558,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        }
+      },
+      "selected_baseline": "current_codeword_persistence",
+      "selected_learned_metrics": {
+        "sample_count": 143,
+        "exact_class_accuracy": 0.6223776223776224,
+        "balanced_accuracy": 0.384187370600414,
+        "macro_f1": 0.2809898889591045,
+        "transition_prevalence": 0.3006993006993007,
+        "transition_event_f1": 0.5333333333333333,
+        "changed_sample_exact_class_accuracy": 0.5348837209302325,
+        "fallback_prevalence": 0.0,
+        "fallback_event_f1": 0.0,
+        "packet_type_accuracy": 1.0
+      },
+      "selected_baseline_metrics": {
+        "sample_count": 143,
+        "exact_class_accuracy": 0.6993006993006993,
+        "balanced_accuracy": 0.45561594202898553,
+        "macro_f1": 0.33894636037296577,
+        "transition_prevalence": 0.3006993006993007,
+        "transition_event_f1": 0.0,
+        "changed_sample_exact_class_accuracy": 0.0,
+        "fallback_prevalence": 0.0,
+        "fallback_event_f1": 0.0,
+        "packet_type_accuracy": 1.0
+      },
+      "selected_comparison": {
+        "macro_f1_lift": -0.05795647141386129,
+        "transition_event_f1_lift": 0.5333333333333333,
+        "cluster_bootstrap_accuracy_difference": {
+          "mean_accuracy_gain": -0.07692307692307687,
+          "confidence_interval_lower": -0.15999999999999992,
+          "confidence_interval_upper": 0.09302325581395349,
+          "bootstrap_unit": "evaluation_cluster",
+          "replicates": 5000
+        }
+      },
+      "selected_learned_safe_forecast": {
+        "predicted_codeword_count": 143,
+        "safe_predicted_codeword_count": 115,
+        "conditional_predicted_codeword_safe_rate": 0.8041958041958042,
+        "unconditional_safe_codeword_forecast_rate": 0.8041958041958042
+      },
+      "selected_baseline_safe_forecast": {
+        "predicted_codeword_count": 143,
+        "safe_predicted_codeword_count": 123,
+        "conditional_predicted_codeword_safe_rate": 0.8601398601398601,
+        "unconditional_safe_codeword_forecast_rate": 0.8601398601398601
+      }
+    },
+    "16": {
+      "n_channels": 16,
+      "demands": [
+        4,
+        8,
+        12
+      ],
+      "codebook_size": 3,
+      "fallback_class": 3,
+      "class_count": 4,
+      "training_sample_count": 165,
+      "evaluation_sample_count": 143,
+      "training_class_counts": [
+        144,
+        17,
+        4,
+        0
+      ],
+      "evaluation_class_counts": [
+        111,
+        24,
+        8,
+        0
+      ],
+      "learned_window_cross_validation": {
+        "1": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.5757575757575758,
+          "balanced_accuracy": 0.37554466230936817,
+          "macro_f1": 0.2406451254719076,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.42857142857142855,
+          "changed_sample_exact_class_accuracy": 0.47368421052631576,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "2": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.6909090909090909,
+          "balanced_accuracy": 0.38494008714596956,
+          "macro_f1": 0.2674808429118774,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.5436893203883495,
+          "changed_sample_exact_class_accuracy": 0.631578947368421,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "4": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.7818181818181819,
+          "balanced_accuracy": 0.4196623093681917,
+          "macro_f1": 0.30322299651567947,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.5882352941176471,
+          "changed_sample_exact_class_accuracy": 0.631578947368421,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "8": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.7696969696969697,
+          "balanced_accuracy": 0.4496187363834423,
+          "macro_f1": 0.3061172161172161,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.5869565217391305,
+          "changed_sample_exact_class_accuracy": 0.7105263157894737,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        }
+      },
+      "learned_window_evaluation": {
+        "1": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.38461538461538464,
+          "balanced_accuracy": 0.384009009009009,
+          "macro_f1": 0.22539893617021278,
+          "transition_prevalence": 0.3076923076923077,
+          "transition_event_f1": 0.4805194805194805,
+          "changed_sample_exact_class_accuracy": 0.6590909090909091,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "2": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.42657342657342656,
+          "balanced_accuracy": 0.4298048048048048,
+          "macro_f1": 0.25359768907563024,
+          "transition_prevalence": 0.3076923076923077,
+          "transition_event_f1": 0.4900662251655629,
+          "changed_sample_exact_class_accuracy": 0.7272727272727273,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "4": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.5664335664335665,
+          "balanced_accuracy": 0.3581081081081081,
+          "macro_f1": 0.26005814867201005,
+          "transition_prevalence": 0.3076923076923077,
+          "transition_event_f1": 0.56,
+          "changed_sample_exact_class_accuracy": 0.6363636363636364,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "8": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.6503496503496503,
+          "balanced_accuracy": 0.39414414414414417,
+          "macro_f1": 0.29372895622895623,
+          "transition_prevalence": 0.3076923076923077,
+          "transition_event_f1": 0.5631067961165048,
+          "changed_sample_exact_class_accuracy": 0.5454545454545454,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        }
+      },
+      "selected_history_window": 8,
+      "baseline_cross_validation": {
+        "training_frequency_prior": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.8727272727272727,
+          "balanced_accuracy": 0.3333333333333333,
+          "macro_f1": 0.23300970873786409,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.6440677966101694,
+          "changed_sample_exact_class_accuracy": 0.5,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "current_codeword_persistence": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.7696969696969697,
+          "balanced_accuracy": 0.3922930283224401,
+          "macro_f1": 0.28772095959595956,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.0,
+          "changed_sample_exact_class_accuracy": 0.0,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "first_order_markov": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.8727272727272727,
+          "balanced_accuracy": 0.3333333333333333,
+          "macro_f1": 0.23300970873786409,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.6440677966101694,
+          "changed_sample_exact_class_accuracy": 0.5,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        }
+      },
+      "baseline_evaluation": {
+        "training_frequency_prior": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.7762237762237763,
+          "balanced_accuracy": 0.3333333333333333,
+          "macro_f1": 0.21850393700787402,
+          "transition_prevalence": 0.3076923076923077,
+          "transition_event_f1": 0.6153846153846154,
+          "changed_sample_exact_class_accuracy": 0.5,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "current_codeword_persistence": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.6923076923076923,
+          "balanced_accuracy": 0.4617117117117117,
+          "macro_f1": 0.34272890974571646,
+          "transition_prevalence": 0.3076923076923077,
+          "transition_event_f1": 0.0,
+          "changed_sample_exact_class_accuracy": 0.0,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "first_order_markov": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.7762237762237763,
+          "balanced_accuracy": 0.3333333333333333,
+          "macro_f1": 0.21850393700787402,
+          "transition_prevalence": 0.3076923076923077,
+          "transition_event_f1": 0.6153846153846154,
+          "changed_sample_exact_class_accuracy": 0.5,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        }
+      },
+      "selected_baseline": "current_codeword_persistence",
+      "selected_learned_metrics": {
+        "sample_count": 143,
+        "exact_class_accuracy": 0.6503496503496503,
+        "balanced_accuracy": 0.39414414414414417,
+        "macro_f1": 0.29372895622895623,
+        "transition_prevalence": 0.3076923076923077,
+        "transition_event_f1": 0.5631067961165048,
+        "changed_sample_exact_class_accuracy": 0.5454545454545454,
+        "fallback_prevalence": 0.0,
+        "fallback_event_f1": 0.0,
+        "packet_type_accuracy": 1.0
+      },
+      "selected_baseline_metrics": {
+        "sample_count": 143,
+        "exact_class_accuracy": 0.6923076923076923,
+        "balanced_accuracy": 0.4617117117117117,
+        "macro_f1": 0.34272890974571646,
+        "transition_prevalence": 0.3076923076923077,
+        "transition_event_f1": 0.0,
+        "changed_sample_exact_class_accuracy": 0.0,
+        "fallback_prevalence": 0.0,
+        "fallback_event_f1": 0.0,
+        "packet_type_accuracy": 1.0
+      },
+      "selected_comparison": {
+        "macro_f1_lift": -0.04899995351676023,
+        "transition_event_f1_lift": 0.5631067961165048,
+        "cluster_bootstrap_accuracy_difference": {
+          "mean_accuracy_gain": -0.04195804195804198,
+          "confidence_interval_lower": -0.12,
+          "confidence_interval_upper": 0.09302325581395349,
+          "bootstrap_unit": "evaluation_cluster",
+          "replicates": 5000
+        }
+      },
+      "selected_learned_safe_forecast": {
+        "predicted_codeword_count": 143,
+        "safe_predicted_codeword_count": 118,
+        "conditional_predicted_codeword_safe_rate": 0.8251748251748252,
+        "unconditional_safe_codeword_forecast_rate": 0.8251748251748252
+      },
+      "selected_baseline_safe_forecast": {
+        "predicted_codeword_count": 143,
+        "safe_predicted_codeword_count": 120,
+        "conditional_predicted_codeword_safe_rate": 0.8391608391608392,
+        "unconditional_safe_codeword_forecast_rate": 0.8391608391608392
+      }
+    },
+    "32": {
+      "n_channels": 32,
+      "demands": [
+        8,
+        16,
+        24
+      ],
+      "codebook_size": 3,
+      "fallback_class": 3,
+      "class_count": 4,
+      "training_sample_count": 165,
+      "evaluation_sample_count": 143,
+      "training_class_counts": [
+        144,
+        20,
+        1,
+        0
+      ],
+      "evaluation_class_counts": [
+        101,
+        42,
+        0,
+        0
+      ],
+      "learned_window_cross_validation": {
+        "1": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.6242424242424243,
+          "balanced_accuracy": 0.425,
+          "macro_f1": 0.27416666666666667,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.4642857142857143,
+          "changed_sample_exact_class_accuracy": 0.631578947368421,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "2": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.7212121212121212,
+          "balanced_accuracy": 0.41898148148148145,
+          "macro_f1": 0.294158692185008,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.5208333333333334,
+          "changed_sample_exact_class_accuracy": 0.6578947368421053,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "4": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.7878787878787878,
+          "balanced_accuracy": 0.38703703703703707,
+          "macro_f1": 0.2857479387514723,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.5783132530120482,
+          "changed_sample_exact_class_accuracy": 0.631578947368421,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "8": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.7818181818181819,
+          "balanced_accuracy": 0.4277777777777778,
+          "macro_f1": 0.3015151515151515,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.6067415730337079,
+          "changed_sample_exact_class_accuracy": 0.6842105263157895,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        }
+      },
+      "learned_window_evaluation": {
+        "1": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.5524475524475524,
+          "balanced_accuracy": 0.5788543140028288,
+          "macro_f1": 0.27114121510673234,
+          "transition_prevalence": 0.3776223776223776,
+          "transition_event_f1": 0.6272189349112426,
+          "changed_sample_exact_class_accuracy": 0.9629629629629629,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "2": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.5314685314685315,
+          "balanced_accuracy": 0.5222772277227723,
+          "macro_f1": 0.2553672316384181,
+          "transition_prevalence": 0.3776223776223776,
+          "transition_event_f1": 0.5962732919254659,
+          "changed_sample_exact_class_accuracy": 0.8518518518518519,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "4": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.6013986013986014,
+          "balanced_accuracy": 0.523102310231023,
+          "macro_f1": 0.2614574187884109,
+          "transition_prevalence": 0.3776223776223776,
+          "transition_event_f1": 0.5757575757575758,
+          "changed_sample_exact_class_accuracy": 0.6851851851851852,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "8": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.6013986013986014,
+          "balanced_accuracy": 0.4813767090994814,
+          "macro_f1": 0.23789311209724098,
+          "transition_prevalence": 0.3776223776223776,
+          "transition_event_f1": 0.4909090909090909,
+          "changed_sample_exact_class_accuracy": 0.48148148148148145,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        }
+      },
+      "selected_history_window": 8,
+      "baseline_cross_validation": {
+        "training_frequency_prior": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.8727272727272727,
+          "balanced_accuracy": 0.3333333333333333,
+          "macro_f1": 0.23300970873786409,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.6440677966101694,
+          "changed_sample_exact_class_accuracy": 0.5,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "current_codeword_persistence": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.7696969696969697,
+          "balanced_accuracy": 0.3226851851851852,
+          "macro_f1": 0.2420138888888889,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.0,
+          "changed_sample_exact_class_accuracy": 0.0,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "first_order_markov": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.8727272727272727,
+          "balanced_accuracy": 0.3333333333333333,
+          "macro_f1": 0.23300970873786409,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.6440677966101694,
+          "changed_sample_exact_class_accuracy": 0.5,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        }
+      },
+      "baseline_evaluation": {
+        "training_frequency_prior": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.7062937062937062,
+          "balanced_accuracy": 0.5,
+          "macro_f1": 0.2069672131147541,
+          "transition_prevalence": 0.3776223776223776,
+          "transition_event_f1": 0.5773195876288659,
+          "changed_sample_exact_class_accuracy": 0.5,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "current_codeword_persistence": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.6223776223776224,
+          "balanced_accuracy": 0.5449080622347949,
+          "macro_f1": 0.27336531627576405,
+          "transition_prevalence": 0.3776223776223776,
+          "transition_event_f1": 0.0,
+          "changed_sample_exact_class_accuracy": 0.0,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "first_order_markov": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.7062937062937062,
+          "balanced_accuracy": 0.5,
+          "macro_f1": 0.2069672131147541,
+          "transition_prevalence": 0.3776223776223776,
+          "transition_event_f1": 0.5773195876288659,
+          "changed_sample_exact_class_accuracy": 0.5,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        }
+      },
+      "selected_baseline": "current_codeword_persistence",
+      "selected_learned_metrics": {
+        "sample_count": 143,
+        "exact_class_accuracy": 0.6013986013986014,
+        "balanced_accuracy": 0.4813767090994814,
+        "macro_f1": 0.23789311209724098,
+        "transition_prevalence": 0.3776223776223776,
+        "transition_event_f1": 0.4909090909090909,
+        "changed_sample_exact_class_accuracy": 0.48148148148148145,
+        "fallback_prevalence": 0.0,
+        "fallback_event_f1": 0.0,
+        "packet_type_accuracy": 1.0
+      },
+      "selected_baseline_metrics": {
+        "sample_count": 143,
+        "exact_class_accuracy": 0.6223776223776224,
+        "balanced_accuracy": 0.5449080622347949,
+        "macro_f1": 0.27336531627576405,
+        "transition_prevalence": 0.3776223776223776,
+        "transition_event_f1": 0.0,
+        "changed_sample_exact_class_accuracy": 0.0,
+        "fallback_prevalence": 0.0,
+        "fallback_event_f1": 0.0,
+        "packet_type_accuracy": 1.0
+      },
+      "selected_comparison": {
+        "macro_f1_lift": -0.035472204178523065,
+        "transition_event_f1_lift": 0.4909090909090909,
+        "cluster_bootstrap_accuracy_difference": {
+          "mean_accuracy_gain": -0.020979020979021046,
+          "confidence_interval_lower": -0.06000000000000005,
+          "confidence_interval_upper": 0.020000000000000018,
+          "bootstrap_unit": "evaluation_cluster",
+          "replicates": 5000
+        }
+      },
+      "selected_learned_safe_forecast": {
+        "predicted_codeword_count": 143,
+        "safe_predicted_codeword_count": 116,
+        "conditional_predicted_codeword_safe_rate": 0.8111888111888111,
+        "unconditional_safe_codeword_forecast_rate": 0.8111888111888111
+      },
+      "selected_baseline_safe_forecast": {
+        "predicted_codeword_count": 143,
+        "safe_predicted_codeword_count": 112,
+        "conditional_predicted_codeword_safe_rate": 0.7832167832167832,
+        "unconditional_safe_codeword_forecast_rate": 0.7832167832167832
+      }
+    },
+    "64": {
+      "n_channels": 64,
+      "demands": [
+        16,
+        32,
+        48
+      ],
+      "codebook_size": 3,
+      "fallback_class": 3,
+      "class_count": 4,
+      "training_sample_count": 165,
+      "evaluation_sample_count": 143,
+      "training_class_counts": [
+        144,
+        20,
+        1,
+        0
+      ],
+      "evaluation_class_counts": [
+        101,
+        42,
+        0,
+        0
+      ],
+      "learned_window_cross_validation": {
+        "1": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.6181818181818182,
+          "balanced_accuracy": 0.3652777777777778,
+          "macro_f1": 0.25542328841621853,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.41904761904761906,
+          "changed_sample_exact_class_accuracy": 0.5263157894736842,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "2": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.7515151515151515,
+          "balanced_accuracy": 0.4018518518518519,
+          "macro_f1": 0.29166666666666663,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.5454545454545454,
+          "changed_sample_exact_class_accuracy": 0.6052631578947368,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "4": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.793939393939394,
+          "balanced_accuracy": 0.40370370370370373,
+          "macro_f1": 0.2959451125501079,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.6046511627906976,
+          "changed_sample_exact_class_accuracy": 0.6842105263157895,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "8": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.7818181818181819,
+          "balanced_accuracy": 0.4134259259259259,
+          "macro_f1": 0.2960572718295952,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.5813953488372093,
+          "changed_sample_exact_class_accuracy": 0.6578947368421053,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        }
+      },
+      "learned_window_evaluation": {
+        "1": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.5384615384615384,
+          "balanced_accuracy": 0.5550447901933051,
+          "macro_f1": 0.2616368286445013,
+          "transition_prevalence": 0.3776223776223776,
+          "transition_event_f1": 0.6060606060606061,
+          "changed_sample_exact_class_accuracy": 0.9074074074074074,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "2": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.5454545454545454,
+          "balanced_accuracy": 0.5113154172560113,
+          "macro_f1": 0.25494566731680135,
+          "transition_prevalence": 0.3776223776223776,
+          "transition_event_f1": 0.5935483870967742,
+          "changed_sample_exact_class_accuracy": 0.8148148148148148,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "4": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.6223776223776224,
+          "balanced_accuracy": 0.530999528524281,
+          "macro_f1": 0.26571601941747575,
+          "transition_prevalence": 0.3776223776223776,
+          "transition_event_f1": 0.5891472868217055,
+          "changed_sample_exact_class_accuracy": 0.6851851851851852,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "8": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.6013986013986014,
+          "balanced_accuracy": 0.46746817538896746,
+          "macro_f1": 0.22781005810458826,
+          "transition_prevalence": 0.3776223776223776,
+          "transition_event_f1": 0.4716981132075472,
+          "changed_sample_exact_class_accuracy": 0.4444444444444444,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        }
+      },
+      "selected_history_window": 8,
+      "baseline_cross_validation": {
+        "training_frequency_prior": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.8727272727272727,
+          "balanced_accuracy": 0.3333333333333333,
+          "macro_f1": 0.23300970873786409,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.6440677966101694,
+          "changed_sample_exact_class_accuracy": 0.5,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "current_codeword_persistence": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.7696969696969697,
+          "balanced_accuracy": 0.3226851851851852,
+          "macro_f1": 0.2420138888888889,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.0,
+          "changed_sample_exact_class_accuracy": 0.0,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "first_order_markov": {
+          "sample_count": 165,
+          "exact_class_accuracy": 0.8727272727272727,
+          "balanced_accuracy": 0.3333333333333333,
+          "macro_f1": 0.23300970873786409,
+          "transition_prevalence": 0.23030303030303031,
+          "transition_event_f1": 0.6440677966101694,
+          "changed_sample_exact_class_accuracy": 0.5,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        }
+      },
+      "baseline_evaluation": {
+        "training_frequency_prior": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.7062937062937062,
+          "balanced_accuracy": 0.5,
+          "macro_f1": 0.2069672131147541,
+          "transition_prevalence": 0.3776223776223776,
+          "transition_event_f1": 0.5773195876288659,
+          "changed_sample_exact_class_accuracy": 0.5,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "current_codeword_persistence": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.6223776223776224,
+          "balanced_accuracy": 0.5449080622347949,
+          "macro_f1": 0.27336531627576405,
+          "transition_prevalence": 0.3776223776223776,
+          "transition_event_f1": 0.0,
+          "changed_sample_exact_class_accuracy": 0.0,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        },
+        "first_order_markov": {
+          "sample_count": 143,
+          "exact_class_accuracy": 0.7062937062937062,
+          "balanced_accuracy": 0.5,
+          "macro_f1": 0.2069672131147541,
+          "transition_prevalence": 0.3776223776223776,
+          "transition_event_f1": 0.5773195876288659,
+          "changed_sample_exact_class_accuracy": 0.5,
+          "fallback_prevalence": 0.0,
+          "fallback_event_f1": 0.0,
+          "packet_type_accuracy": 1.0
+        }
+      },
+      "selected_baseline": "current_codeword_persistence",
+      "selected_learned_metrics": {
+        "sample_count": 143,
+        "exact_class_accuracy": 0.6013986013986014,
+        "balanced_accuracy": 0.46746817538896746,
+        "macro_f1": 0.22781005810458826,
+        "transition_prevalence": 0.3776223776223776,
+        "transition_event_f1": 0.4716981132075472,
+        "changed_sample_exact_class_accuracy": 0.4444444444444444,
+        "fallback_prevalence": 0.0,
+        "fallback_event_f1": 0.0,
+        "packet_type_accuracy": 1.0
+      },
+      "selected_baseline_metrics": {
+        "sample_count": 143,
+        "exact_class_accuracy": 0.6223776223776224,
+        "balanced_accuracy": 0.5449080622347949,
+        "macro_f1": 0.27336531627576405,
+        "transition_prevalence": 0.3776223776223776,
+        "transition_event_f1": 0.0,
+        "changed_sample_exact_class_accuracy": 0.0,
+        "fallback_prevalence": 0.0,
+        "fallback_event_f1": 0.0,
+        "packet_type_accuracy": 1.0
+      },
+      "selected_comparison": {
+        "macro_f1_lift": -0.04555525817117578,
+        "transition_event_f1_lift": 0.4716981132075472,
+        "cluster_bootstrap_accuracy_difference": {
+          "mean_accuracy_gain": -0.020979020979021046,
+          "confidence_interval_lower": -0.06000000000000005,
+          "confidence_interval_upper": 0.020000000000000018,
+          "bootstrap_unit": "evaluation_cluster",
+          "replicates": 5000
+        }
+      },
+      "selected_learned_safe_forecast": {
+        "predicted_codeword_count": 143,
+        "safe_predicted_codeword_count": 117,
+        "conditional_predicted_codeword_safe_rate": 0.8181818181818182,
+        "unconditional_safe_codeword_forecast_rate": 0.8181818181818182
+      },
+      "selected_baseline_safe_forecast": {
+        "predicted_codeword_count": 143,
+        "safe_predicted_codeword_count": 112,
+        "conditional_predicted_codeword_safe_rate": 0.7832167832167832,
+        "unconditional_safe_codeword_forecast_rate": 0.7832167832167832
+      }
+    }
+  },
+  "retention_decision": {
+    "macro_f1_gate_n_count": 0,
+    "transition_event_f1_gate_n_count": 4,
+    "accuracy_noninferiority_gate_n_count": 0,
+    "required_n_count_each_gate": 3,
+    "learning_model_retained_for_controller_integration": false
+  },
+  "checks": {
+    "train_and_evaluation_groups_disjoint": true,
+    "all_windows_use_identical_samples": true,
+    "final_access_state_unchanged": true,
+    "final_access_count_remains_zero": true
+  },
+  "safety_boundary": {
+    "prediction_may_only_schedule_packet_type_reservation_or_recovery": true,
+    "prediction_may_not_execute_or_select_a_future_spectrum_action": true,
+    "actual_codeword_must_be_selected_after_observing_the_current_spectrum": true,
+    "hard_regret_constraint_remains_mandatory": true
+  },
+  "governance": {
+    "development_only": true,
+    "external_final_signal_values_loaded": false,
+    "external_final_access_consumed": false
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "scikit-learn": "1.5.1"
+    }
+  },
+  "claim_boundary": "Development-only one-step codeword forecasting on excluded fixed-site pilot spectra. The forecast is evaluated as a scheduler input, not as permission to execute a future frequency allocation. It is not raw-IQ prediction, measured UAV mobility generalization, or external Final evidence."
+}

@@ -1,0 +1,125 @@
+{
+  "protocol_id": "aerpaw_three_site_prefinal_protocol_v1",
+  "status": "pilot_frozen_pending_CC1_CC2_integrity_and_alignment_audit",
+  "base_stage4_protocol": "configs/stage4_protocol.json",
+  "dataset_doi": "10.5061/dryad.hmgqnk9zn",
+  "dryad_version": 3,
+  "official_archives": {
+    "LW1": {
+      "filename": "ResultsLW1Feb2022_SigMF.zip",
+      "size_bytes": 12498435786,
+      "sha256": "595e7ea4c3164b43ba1e49f154ceec583c9f4f14c565b1525e49a27311401951"
+    },
+    "CC1": {
+      "filename": "ResultsCC1Feb2022_SigMF.zip",
+      "size_bytes": 19084799397,
+      "sha256": "c2b1e6d9172f4738b11d78d874c2ca2e3d4232330a99d2b278eb1e05b642f747"
+    },
+    "CC2": {
+      "filename": "ResultsCC2Feb2022_SigMF.zip",
+      "size_bytes": 20662580993,
+      "sha256": "eec92ea4733c2ebc959dd9359ce81e0392af2f06dedff66dc6d3037691ce6b4d"
+    }
+  },
+  "campaign_timezone": "America/New_York",
+  "sites": ["LW1", "CC1", "CC2"],
+  "anchor_site": "LW1",
+  "pilot_governance": {
+    "site": "LW1",
+    "scene_count": 20,
+    "manifest_path": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/work/aerpaw_lw1_pilot_manifest_v1.json",
+    "manifest_sha256": "289f90d510da5d16827407a368d2a37b57719d80ca232cb0e43826fbb0ab7045",
+    "status": "permanently_excluded_from_every_final_family",
+    "model_outputs_used_for_freezing": false
+  },
+  "resource_proxy": {
+    "physical_scope": "2.4_GHz_ISM_power_sweep_resource_proxy",
+    "frequency_low_mhz_inclusive": 2400.0,
+    "frequency_high_mhz_exclusive": 2483.5,
+    "frequency_selection_rationale": "The globally recognized 2.4 GHz ISM band is directly relevant to unlicensed UAV/WLAN resource coexistence and is fully covered by every deposited sweep; it was not selected using model outputs.",
+    "n_equal_width_channels": 8,
+    "channel_width_mhz": 10.4375,
+    "input_mapping": "fraction_of_bins_above_per_sweep_robust_threshold",
+    "threshold_rule": {
+      "estimator": "median_plus_scaled_MAD",
+      "sigma_multiplier": 3.0,
+      "gaussian_mad_scale": 1.4826,
+      "sigma_floor_db": 0.25,
+      "uses_only_current_sweep": true,
+      "uses_labels_or_model_outputs": false
+    },
+    "resource_cost": "mean_received_power_dbm_per_channel",
+    "resource_demand_channels": 4,
+    "oracle_rule": "minimum_mean_power_contiguous_block",
+    "label_boundary": "No independent occupancy labels exist. Occupancy is a deterministic proxy input and received power supplies the resource-cost reference; this cannot validate raw-IQ detection accuracy."
+  },
+  "three_site_alignment": {
+    "matching_rule": "nearest_unused_filename_timestamp_to_LW1_anchor",
+    "max_absolute_offset_from_anchor_s": 10.0,
+    "max_three_site_span_s": 20.0,
+    "pair_reuse": false,
+    "measurement_interpolation": false,
+    "frequency_grid_atol_mhz": 0.00001,
+    "required_site_count": 3,
+    "missing_site_policy": "drop_scene",
+    "timezone_conversion": "filename_local_America_New_York_to_UTC"
+  },
+  "three_site_reporting_link": {
+    "source": "configs/stage4_protocol.json:end_to_end_link_sweep",
+    "channel_models": ["awgn", "rayleigh", "rician"],
+    "global_ebn0_db": [0.0, 3.0, 6.0, 9.0],
+    "relative_offset_values_db": [-1.0, 0.0, 1.0],
+    "site_offset_assignment": "all_six_permutations_nested_within_scene",
+    "link_repeats_per_assignment": 5,
+    "fusion": "mean_of_successfully_decoded_latest_report_per_site",
+    "no_report_fallback": 0.5,
+    "measurement_boundary": "The deposited files contain sensing power only; every reporting link remains a controlled simulation."
+  },
+  "scene_independence": {
+    "minimum_utc_separation_s": 1800.0,
+    "selection_rule": "greedy_30_minute_thinning_then_deterministic_even_spacing_across_campaign",
+    "minimum_scene_count": 200,
+    "pilot_scene_or_collection_event_overlap_allowed": false,
+    "note": "Thirty-minute thinning is a conservative anti-pseudoreplication rule, not proof of stochastic independence. Scene-level paired inference remains the declared statistical unit."
+  },
+  "integrity_gates_before_any_final_registration": {
+    "official_archive_sha256_required": true,
+    "all_sigmf_pairs_valid": true,
+    "metadata_site_matches_directory": true,
+    "power_range_dbm": [-200.0, 20.0],
+    "constant_sweep_rejected": true,
+    "identical_frequency_grid_required": true,
+    "minimum_aligned_thinned_scenes": 200,
+    "pilot_overlap_count": 0
+  },
+  "claim_families": {
+    "C1_resource_loss": {
+      "role": "confirmatory_conditional_external_proxy",
+      "methods": ["detection_plus_resource", "detection_only"],
+      "statistics": "unchanged_from_stage4_final_statistics_v1",
+      "claim_limit": "resource-selection transfer on real received-power sweeps only"
+    },
+    "selective_G2_digital_reporting": {
+      "role": "three_site_external_transfer_check",
+      "methods": ["G1_plus_stage3_prior_G2", "all_G2"],
+      "frozen_regret_noninferiority_margin": 0.0026813,
+      "reporting_link": "frozen_simulated_digital_link_not_measured_AERPAW_backhaul",
+      "claim_limit": "three fixed sensing sites; not the original four-node condition and not proof of H3 UAV spatial collaboration"
+    }
+  },
+  "M1_time_alignment_decision": {
+    "pass_condition": "at_least_200_three_site_scenes_after_pilot_exclusion_and_30_minute_thinning",
+    "pass_action": "run_C1_and_three_site_selective_G2_once_on_the_same_catalog_with_stage4_final_statistics_v1",
+    "fail_action": "forbid_asynchronous_fusion_and_run_only_LW1_C1_proxy_final_once",
+    "fail_statistics_engine": "aerpaw_c1_only_final_statistics_v1",
+    "fail_statistics_rule": "same_C1_bootstrap_randomization_IUT_and_CI_gates; one_available_family_so_Holm_adjusted_p_equals_raw_family_p",
+    "decision_uses_model_outputs": false
+  },
+  "pre_final_rules": {
+    "C1_C2_C3_weight_or_checkpoint_changes_allowed": false,
+    "pilot_mapping_changes_after_this_freeze_allowed": false,
+    "nonpilot_model_output_access_before_single_final_run_allowed": false,
+    "final_catalog_generation_before_CC1_CC2_audit_allowed": false,
+    "final_access_count_expected": 0
+  }
+}

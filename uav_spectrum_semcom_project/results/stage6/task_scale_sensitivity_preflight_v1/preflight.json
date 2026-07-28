@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "status": "pass",
+  "protocol_sha256": "5484758db98417f82c26bddef440123f5addf1b5f243e0f14f4f501388e64487",
+  "registered_grid_point_count": 140,
+  "grid_point_count_by_n": {
+    "8": 35,
+    "16": 35,
+    "32": 35,
+    "64": 35
+  },
+  "fixed_site_scene_count": 89011,
+  "fixed_site_outer_group_count": 27,
+  "pilot_scene_count": 364,
+  "checks": {
+    "complete_query_lattice": true,
+    "r1_gate_passed": true,
+    "frozen_input_hashes_match": true,
+    "external_final_signal_values_loaded": false,
+    "external_final_access_count": 0
+  },
+  "claim_boundary": "Preflight only; no sensitivity result was inspected."
+}

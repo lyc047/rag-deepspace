@@ -1,0 +1,41 @@
+completed 10/200 scenes
+completed 20/200 scenes
+completed 30/200 scenes
+completed 40/200 scenes
+completed 50/200 scenes
+completed 60/200 scenes
+completed 70/200 scenes
+completed 80/200 scenes
+completed 90/200 scenes
+completed 100/200 scenes
+completed 110/200 scenes
+completed 120/200 scenes
+completed 130/200 scenes
+completed 140/200 scenes
+completed 150/200 scenes
+completed 160/200 scenes
+completed 170/200 scenes
+completed 180/200 scenes
+completed 190/200 scenes
+completed 200/200 scenes
+{
+  "output": "C:\\Users\\Lenovo\\Desktop\\\u9879\u76ee\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage4\\final_holdout_v1\\final_scene_metrics.json",
+  "scenes": 200,
+  "final_access_count": 1
+}
+{
+  "output": "C:\\Users\\Lenovo\\Desktop\\\u9879\u76ee\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage4\\final_holdout_v1\\final_statistics_result.json",
+  "scene_count": 200,
+  "family_decisions": {
+    "C1_resource_loss": false,
+    "selective_G2_digital_reporting": true
+  }
+}
+{
+  "development_acceptance": true,
+  "final_acceptance": false,
+  "blocking_item_ids": [
+    "F02_SINGLE_USE_FINAL_EVALUATION"
+  ],
+  "failed_item_ids": []
+}

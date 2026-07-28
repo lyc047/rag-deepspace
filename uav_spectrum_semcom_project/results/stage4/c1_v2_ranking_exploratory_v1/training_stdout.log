@@ -1,0 +1,5 @@
+{
+  "output": "results\\stage4\\c1_v2_ranking_exploratory_v1\\c1_v2_result.json",
+  "exploratory_success": false,
+  "final_data_loaded": false
+}

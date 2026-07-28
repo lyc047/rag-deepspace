@@ -1,0 +1,244 @@
+{
+  "version": "1.0",
+  "status": "stage6_query_demand_stress_complete",
+  "protocol_sha256": "8bc129e47aee65a6afc09853de2473f1541ea37b38ec2d8d9c9140b5da6aae3a",
+  "split": {
+    "training_groups": [
+      "aerpaw_packapalooza_2023:20230826T1215",
+      "aerpaw_packapalooza_2023:20230826T1300",
+      "aerpaw_packapalooza_2023:20230826T1315",
+      "aerpaw_packapalooza_2023:20230826T1330"
+    ],
+    "evaluation_groups": [
+      "aerpaw_packapalooza_2023:20230826T1200",
+      "aerpaw_packapalooza_2023:20230826T1230",
+      "aerpaw_packapalooza_2023:20230826T1245"
+    ],
+    "evaluation_scene_count": 167
+  },
+  "results": {
+    "8": {
+      "n_channels": 8,
+      "demands": [
+        2,
+        4,
+        6
+      ],
+      "joint_codebook_size": 3,
+      "joint_symbol_width_bits": 2,
+      "joint_exact_index_bundle_bits": 8,
+      "joint_fallback_count": 0,
+      "joint_fallback_rate": 0.0,
+      "query_results": {
+        "0.25": {
+          "demand_ratio": 0.25,
+          "demand_channels": 2,
+          "candidate_block_count": 7,
+          "standalone_exact_index_bits": 3,
+          "mean_regret_db": 0.004883086609983159,
+          "cvar_0_9_regret_db": 0.04796914493336397,
+          "p95_regret_db": 0.02583465576171851,
+          "maximum_regret_db": 0.14478302001953125,
+          "epsilon_safe_rate": 1.0,
+          "exact_optimum_rate": 0.9221556886227545
+        },
+        "0.50": {
+          "demand_ratio": 0.5,
+          "demand_channels": 4,
+          "candidate_block_count": 5,
+          "standalone_exact_index_bits": 3,
+          "mean_regret_db": 0.0025355401867164108,
+          "cvar_0_9_regret_db": 0.024907953598920035,
+          "p95_regret_db": 0.007981109619140624,
+          "maximum_regret_db": 0.08829498291015625,
+          "epsilon_safe_rate": 1.0,
+          "exact_optimum_rate": 0.9101796407185628
+        },
+        "0.75": {
+          "demand_ratio": 0.75,
+          "demand_channels": 6,
+          "candidate_block_count": 3,
+          "standalone_exact_index_bits": 2,
+          "mean_regret_db": 0.0007268330770100991,
+          "cvar_0_9_regret_db": 0.00714006610945215,
+          "p95_regret_db": 0.0,
+          "maximum_regret_db": 0.04244740804037406,
+          "epsilon_safe_rate": 1.0,
+          "exact_optimum_rate": 0.9760479041916168
+        }
+      }
+    },
+    "16": {
+      "n_channels": 16,
+      "demands": [
+        4,
+        8,
+        12
+      ],
+      "joint_codebook_size": 3,
+      "joint_symbol_width_bits": 2,
+      "joint_exact_index_bundle_bits": 11,
+      "joint_fallback_count": 0,
+      "joint_fallback_rate": 0.0,
+      "query_results": {
+        "0.25": {
+          "demand_ratio": 0.25,
+          "demand_channels": 4,
+          "candidate_block_count": 13,
+          "standalone_exact_index_bits": 4,
+          "mean_regret_db": 0.0226009163313997,
+          "cvar_0_9_regret_db": 0.11178633745978861,
+          "p95_regret_db": 0.10524177551269531,
+          "maximum_regret_db": 0.14516448974609375,
+          "epsilon_safe_rate": 1.0,
+          "exact_optimum_rate": 0.7125748502994012
+        },
+        "0.50": {
+          "demand_ratio": 0.5,
+          "demand_channels": 8,
+          "candidate_block_count": 9,
+          "standalone_exact_index_bits": 4,
+          "mean_regret_db": 0.002874522865889315,
+          "cvar_0_9_regret_db": 0.02324508218204274,
+          "p95_regret_db": 0.018262100219726532,
+          "maximum_regret_db": 0.05513191223144531,
+          "epsilon_safe_rate": 1.0,
+          "exact_optimum_rate": 0.8083832335329342
+        },
+        "0.75": {
+          "demand_ratio": 0.75,
+          "demand_channels": 12,
+          "candidate_block_count": 5,
+          "standalone_exact_index_bits": 3,
+          "mean_regret_db": 0.0013810879218123411,
+          "cvar_0_9_regret_db": 0.013567157820156528,
+          "p95_regret_db": 0.0,
+          "maximum_regret_db": 0.07151667277017282,
+          "epsilon_safe_rate": 1.0,
+          "exact_optimum_rate": 0.9760479041916168
+        }
+      }
+    },
+    "32": {
+      "n_channels": 32,
+      "demands": [
+        8,
+        16,
+        24
+      ],
+      "joint_codebook_size": 3,
+      "joint_symbol_width_bits": 2,
+      "joint_exact_index_bundle_bits": 14,
+      "joint_fallback_count": 0,
+      "joint_fallback_rate": 0.0,
+      "query_results": {
+        "0.25": {
+          "demand_ratio": 0.25,
+          "demand_channels": 8,
+          "candidate_block_count": 25,
+          "standalone_exact_index_bits": 5,
+          "mean_regret_db": 0.006826138068102077,
+          "cvar_0_9_regret_db": 0.05592009600471048,
+          "p95_regret_db": 0.0321817398071289,
+          "maximum_regret_db": 0.16266632080078125,
+          "epsilon_safe_rate": 1.0,
+          "exact_optimum_rate": 0.7724550898203593
+        },
+        "0.50": {
+          "demand_ratio": 0.5,
+          "demand_channels": 16,
+          "candidate_block_count": 17,
+          "standalone_exact_index_bits": 5,
+          "mean_regret_db": 0.0047909314047076745,
+          "cvar_0_9_regret_db": 0.03451226739322438,
+          "p95_regret_db": 0.024462413787841798,
+          "maximum_regret_db": 0.08911895751953125,
+          "epsilon_safe_rate": 1.0,
+          "exact_optimum_rate": 0.718562874251497
+        },
+        "0.75": {
+          "demand_ratio": 0.75,
+          "demand_channels": 24,
+          "candidate_block_count": 9,
+          "standalone_exact_index_bits": 4,
+          "mean_regret_db": 0.0013971461983258908,
+          "cvar_0_9_regret_db": 0.013724906771789632,
+          "p95_regret_db": 0.0,
+          "maximum_regret_db": 0.07397969563800189,
+          "epsilon_safe_rate": 1.0,
+          "exact_optimum_rate": 0.9760479041916168
+        }
+      }
+    },
+    "64": {
+      "n_channels": 64,
+      "demands": [
+        16,
+        32,
+        48
+      ],
+      "joint_codebook_size": 3,
+      "joint_symbol_width_bits": 2,
+      "joint_exact_index_bundle_bits": 17,
+      "joint_fallback_count": 0,
+      "joint_fallback_rate": 0.0,
+      "query_results": {
+        "0.25": {
+          "demand_ratio": 0.25,
+          "demand_channels": 16,
+          "candidate_block_count": 49,
+          "standalone_exact_index_bits": 6,
+          "mean_regret_db": 0.007702604739251965,
+          "cvar_0_9_regret_db": 0.05616580738740809,
+          "p95_regret_db": 0.03218107223510741,
+          "maximum_regret_db": 0.16269493103027344,
+          "epsilon_safe_rate": 1.0,
+          "exact_optimum_rate": 0.7005988023952096
+        },
+        "0.50": {
+          "demand_ratio": 0.5,
+          "demand_channels": 32,
+          "candidate_block_count": 33,
+          "standalone_exact_index_bits": 6,
+          "mean_regret_db": 0.005069645578989725,
+          "cvar_0_9_regret_db": 0.03535322582020479,
+          "p95_regret_db": 0.02447071075439453,
+          "maximum_regret_db": 0.09116315841674805,
+          "epsilon_safe_rate": 1.0,
+          "exact_optimum_rate": 0.7125748502994012
+        },
+        "0.75": {
+          "demand_ratio": 0.75,
+          "demand_channels": 48,
+          "candidate_block_count": 17,
+          "standalone_exact_index_bits": 5,
+          "mean_regret_db": 0.0014170401110623959,
+          "cvar_0_9_regret_db": 0.013920335208671772,
+          "p95_regret_db": 0.0,
+          "maximum_regret_db": 0.07559744517010358,
+          "epsilon_safe_rate": 1.0,
+          "exact_optimum_rate": 0.9700598802395209
+        }
+      }
+    }
+  },
+  "checks": {
+    "all_query_regrets_within_frozen_epsilon": true,
+    "final_access_state_unchanged": true,
+    "final_access_count_remains_zero": true
+  },
+  "governance": {
+    "development_only": true,
+    "external_final_signal_values_loaded": false,
+    "external_final_access_consumed": false
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": "Deterministic task-codebook decomposition on excluded fixed-site development spectra. It measures the frozen joint codebook before channel faults and does not establish real UAV generalization or external Final performance."
+}

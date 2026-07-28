@@ -1,0 +1,278 @@
+{
+  "version": "1.0",
+  "status": "stage6_task_codebook_development_complete",
+  "protocol_sha256": "d42a86ed6633add49ba834460d0f91e442936bc776c3e6e711bffa1715746a8d",
+  "inputs": {
+    "cache_sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+    "scene_count": 364,
+    "cluster_count": 7,
+    "train_scene_count": 197,
+    "evaluation_scene_count": 167,
+    "train_groups": [
+      "aerpaw_packapalooza_2023:20230826T1215",
+      "aerpaw_packapalooza_2023:20230826T1300",
+      "aerpaw_packapalooza_2023:20230826T1315",
+      "aerpaw_packapalooza_2023:20230826T1330"
+    ],
+    "evaluation_groups": [
+      "aerpaw_packapalooza_2023:20230826T1200",
+      "aerpaw_packapalooza_2023:20230826T1230",
+      "aerpaw_packapalooza_2023:20230826T1245"
+    ]
+  },
+  "task_grid": {
+    "n_channels": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "demand_ratios": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "epsilon_db": 0.2,
+    "application_header_bits": 40
+  },
+  "n_results": {
+    "8": {
+      "n_channels": 8,
+      "demands": [
+        2,
+        4,
+        6
+      ],
+      "training_scene_count": 197,
+      "evaluation_scene_count": 167,
+      "training_exact_action_tuple_count": 11,
+      "codebook_size": 3,
+      "codebook_symbol_width_bits": 2,
+      "training_coverage_rate": 1.0,
+      "evaluation_codeword_coverage_rate": 1.0,
+      "evaluation_fallback_rate": 0.0,
+      "evaluation_mean_max_query_regret_db": 0.005248086895057541,
+      "evaluation_cvar_0_9_max_query_regret_db": 0.05149325202493107,
+      "evaluation_maximum_max_query_regret_db": 0.14478302001953125,
+      "exact_query_bundle_payload_bits": 8,
+      "exact_query_bundle_application_bits": 48,
+      "semantic_mean_payload_bits": 2.0,
+      "semantic_mean_application_bits": 42.0,
+      "application_bit_reduction_pct_vs_exact_query_bundle": 12.5,
+      "payload_bit_reduction_pct_vs_exact_query_bundle": 75.0,
+      "codewords": [
+        {
+          "codeword_id": 0,
+          "decoder_actions": [
+            0,
+            0,
+            0
+          ],
+          "training_coverage_count": 189
+        },
+        {
+          "codeword_id": 1,
+          "decoder_actions": [
+            1,
+            1,
+            0
+          ],
+          "training_coverage_count": 7
+        },
+        {
+          "codeword_id": 2,
+          "decoder_actions": [
+            3,
+            1,
+            0
+          ],
+          "training_coverage_count": 1
+        }
+      ]
+    },
+    "16": {
+      "n_channels": 16,
+      "demands": [
+        4,
+        8,
+        12
+      ],
+      "training_scene_count": 197,
+      "evaluation_scene_count": 167,
+      "training_exact_action_tuple_count": 16,
+      "codebook_size": 3,
+      "codebook_symbol_width_bits": 2,
+      "training_coverage_rate": 1.0,
+      "evaluation_codeword_coverage_rate": 1.0,
+      "evaluation_fallback_rate": 0.0,
+      "evaluation_mean_max_query_regret_db": 0.02273221501333271,
+      "evaluation_cvar_0_9_max_query_regret_db": 0.11178633745978861,
+      "evaluation_maximum_max_query_regret_db": 0.14516448974609375,
+      "exact_query_bundle_payload_bits": 11,
+      "exact_query_bundle_application_bits": 51,
+      "semantic_mean_payload_bits": 2.0,
+      "semantic_mean_application_bits": 42.0,
+      "application_bit_reduction_pct_vs_exact_query_bundle": 17.647058823529413,
+      "payload_bit_reduction_pct_vs_exact_query_bundle": 81.81818181818181,
+      "codewords": [
+        {
+          "codeword_id": 0,
+          "decoder_actions": [
+            0,
+            0,
+            0
+          ],
+          "training_coverage_count": 187
+        },
+        {
+          "codeword_id": 1,
+          "decoder_actions": [
+            2,
+            2,
+            0
+          ],
+          "training_coverage_count": 9
+        },
+        {
+          "codeword_id": 2,
+          "decoder_actions": [
+            6,
+            3,
+            0
+          ],
+          "training_coverage_count": 1
+        }
+      ]
+    },
+    "32": {
+      "n_channels": 32,
+      "demands": [
+        8,
+        16,
+        24
+      ],
+      "training_scene_count": 197,
+      "evaluation_scene_count": 167,
+      "training_exact_action_tuple_count": 20,
+      "codebook_size": 3,
+      "codebook_symbol_width_bits": 2,
+      "training_coverage_rate": 1.0,
+      "evaluation_codeword_coverage_rate": 1.0,
+      "evaluation_fallback_rate": 0.0,
+      "evaluation_mean_max_query_regret_db": 0.008317657097608925,
+      "evaluation_cvar_0_9_max_query_regret_db": 0.05967887242635035,
+      "evaluation_maximum_max_query_regret_db": 0.16266632080078125,
+      "exact_query_bundle_payload_bits": 14,
+      "exact_query_bundle_application_bits": 54,
+      "semantic_mean_payload_bits": 2.0,
+      "semantic_mean_application_bits": 42.0,
+      "application_bit_reduction_pct_vs_exact_query_bundle": 22.22222222222222,
+      "payload_bit_reduction_pct_vs_exact_query_bundle": 85.71428571428571,
+      "codewords": [
+        {
+          "codeword_id": 0,
+          "decoder_actions": [
+            0,
+            0,
+            0
+          ],
+          "training_coverage_count": 187
+        },
+        {
+          "codeword_id": 1,
+          "decoder_actions": [
+            5,
+            4,
+            0
+          ],
+          "training_coverage_count": 9
+        },
+        {
+          "codeword_id": 2,
+          "decoder_actions": [
+            13,
+            6,
+            0
+          ],
+          "training_coverage_count": 1
+        }
+      ]
+    },
+    "64": {
+      "n_channels": 64,
+      "demands": [
+        16,
+        32,
+        48
+      ],
+      "training_scene_count": 197,
+      "evaluation_scene_count": 167,
+      "training_exact_action_tuple_count": 22,
+      "codebook_size": 3,
+      "codebook_symbol_width_bits": 2,
+      "training_coverage_rate": 1.0,
+      "evaluation_codeword_coverage_rate": 1.0,
+      "evaluation_fallback_rate": 0.0,
+      "evaluation_mean_max_query_regret_db": 0.008729782884944337,
+      "evaluation_cvar_0_9_max_query_regret_db": 0.05987618483749202,
+      "evaluation_maximum_max_query_regret_db": 0.16269493103027344,
+      "exact_query_bundle_payload_bits": 17,
+      "exact_query_bundle_application_bits": 57,
+      "semantic_mean_payload_bits": 2.0,
+      "semantic_mean_application_bits": 42.0,
+      "application_bit_reduction_pct_vs_exact_query_bundle": 26.31578947368421,
+      "payload_bit_reduction_pct_vs_exact_query_bundle": 88.23529411764706,
+      "codewords": [
+        {
+          "codeword_id": 0,
+          "decoder_actions": [
+            0,
+            0,
+            0
+          ],
+          "training_coverage_count": 187
+        },
+        {
+          "codeword_id": 1,
+          "decoder_actions": [
+            10,
+            8,
+            0
+          ],
+          "training_coverage_count": 9
+        },
+        {
+          "codeword_id": 2,
+          "decoder_actions": [
+            27,
+            11,
+            0
+          ],
+          "training_coverage_count": 1
+        }
+      ]
+    }
+  },
+  "checks": {
+    "training_coverage_equals_one": true,
+    "all_evaluation_actions_respect_epsilon": true,
+    "external_final_access_state_unchanged": true,
+    "external_final_access_count_remains_zero": true
+  },
+  "governance": {
+    "development_only": true,
+    "pilot_permanently_excluded_from_final": true,
+    "external_final_archives_opened": false,
+    "external_final_signal_values_loaded": false,
+    "external_final_access_consumed": false
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": "Development-only evidence for analytic task-equivalence codebook feasibility on the excluded 2023 pilot. It does not establish independent generalization, optimal codebook size, stochastic reporting-link robustness, or Final performance."
+}

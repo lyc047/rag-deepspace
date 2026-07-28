@@ -1,0 +1,55 @@
+{
+  "version": "1.0",
+  "status": "stage4_closeout_complete",
+  "passed": true,
+  "items": [
+    {
+      "id": "immutable_snapshot",
+      "passed": true,
+      "evidence": "changed=[]"
+    },
+    {
+      "id": "single_use_access",
+      "passed": true,
+      "evidence": "2ac71dcf093ea14e0d06b7454e58c7b508f19291f222c4079f8b2df8f0393d96"
+    },
+    {
+      "id": "registered_independence",
+      "passed": true,
+      "evidence": "280 scenes, 74 clusters, overlap 0"
+    },
+    {
+      "id": "H1_confirmed",
+      "passed": true,
+      "evidence": "{'mean_regret_superiority': True, 'cvar_superiority': True, 'actual_bit_superiority': True}"
+    },
+    {
+      "id": "H2_confirmed",
+      "passed": true,
+      "evidence": "{'mean_regret_superiority': True, 'cvar_superiority': True, 'actual_bits_exactly_equal': True}"
+    },
+    {
+      "id": "overall_final",
+      "passed": true,
+      "evidence": "c1_v4_single_use_temporal_final_complete"
+    },
+    {
+      "id": "paper_assets_integrity",
+      "passed": true,
+      "evidence": "sources=True, outputs=True, files=6"
+    },
+    {
+      "id": "authoritative_docs",
+      "passed": true,
+      "evidence": "docs=4"
+    },
+    {
+      "id": "claim_boundary",
+      "passed": true,
+      "evidence": "Single-use temporal confirmation within the same AERPAW February 2022 fixed-site power-sweep campaign at two sites. It is not cross-dataset evidence, UAV mobility, raw-IQ detection, MIMO, or a measured reporting link."
+    }
+  ],
+  "final_result_sha256": "8999ff2cb9d9ee9eeee0800cc79e9e05a5b704a1aaa83bb88bf2583a603fece2",
+  "paper_assets_manifest_sha256": "0a17707e0043bedfda46b4c1c78e8216bc371186905f9b239a8e4658c3ad196d",
+  "claim_boundary": "Single-use temporal confirmation within the same AERPAW February 2022 fixed-site power-sweep campaign at two sites. It is not cross-dataset evidence, UAV mobility, raw-IQ detection, MIMO, or a measured reporting link."
+}

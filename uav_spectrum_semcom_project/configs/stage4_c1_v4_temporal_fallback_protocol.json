@@ -1,0 +1,84 @@
+{
+  "protocol_id": "stage4_c1_v4_last_success_fallback_development_v1",
+  "status": "frozen_before_2022_02_12_measurement_or_model_output_access",
+  "created_date": "2026-07-22",
+  "motivation": "C1-v4 block semantics removed clean mapping regret; remaining development regret is dominated by CRC-visible packet failure.",
+  "base_representation_result": {
+    "path": "results/stage4/c1_v4_representation_v1/c1_v4_representation_result.json",
+    "sha256": "b34dcde8068e9ca2cd9bd3118792f41ed286013b88ae77ee1ea19e7e52fd50bb",
+    "selected_representation": "best_block_indicator1"
+  },
+  "verified_archive_audit": {
+    "path": "results/stage4/aerpaw_three_site_prefinal_v1/prefinal_inventory.json",
+    "sha256": "ec4aa183a79712327abc7ddbd48496ee16a383dd62d3783770cda131595d3405"
+  },
+  "archives": {
+    "LW1": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsLW1Feb2022_SigMF.zip",
+    "CC1": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsCC1Feb2022_SigMF.zip",
+    "CC2": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/raw/ResultsCC2Feb2022_SigMF.zip"
+  },
+  "permanent_exclusions": {
+    "pilot_manifest": "F:/uav_spectrum_final_data/aerpaw_sub6_feb2022/work/aerpaw_lw1_pilot_manifest_v1.json",
+    "pilot_manifest_sha256": "289f90d510da5d16827407a368d2a37b57719d80ca232cb0e43826fbb0ab7045",
+    "pilot_stems": [
+      "results_20220208_125756", "results_20220208_222848", "results_20220209_080009",
+      "results_20220209_173128", "results_20220210_030211", "results_20220210_123329",
+      "results_20220210_220442", "results_20220211_073529", "results_20220211_170652",
+      "results_20220212_023818", "results_20220212_120913", "results_20220212_214037",
+      "results_20220220_141455", "results_20220220_203822", "results_20220221_025905",
+      "results_20220221_092006", "results_20220221_154045", "results_20220221_220127",
+      "results_20220222_042215", "results_20220222_104254"
+    ],
+    "original_final_registry": "configs/stage4_final_registry_v1.json",
+    "original_final_registry_sha256": "1b1cf853817b707d28d626f1103f4113c53e0fed989bc3c00d4960fa4e04f48b",
+    "c1_temporal_inventory": "results/stage4/aerpaw_c1_temporal_prefinal_v1/prefinal_inventory.json",
+    "c1_temporal_inventory_sha256": "f81afa89d7c1d556284a58c70b05389161452b7441604c8f3f32e780002499e7"
+  },
+  "splits": {
+    "temporal_fallback_validation": {
+      "start_local_inclusive": "2022-02-12T00:00:00",
+      "end_local_exclusive": "2022-02-13T00:00:00",
+      "minimum_separation_s": 900.0,
+      "selected_per_site": 60
+    }
+  },
+  "selection_rule": "exclude all prior pilot/final stems, greedy 15-minute thinning within each site on a new whole date, deterministic even spacing to 60 per site",
+  "resource_task": {
+    "frequency_low_mhz": 2400.0,
+    "frequency_high_mhz": 2483.5,
+    "n_channels": 8,
+    "demand_channels": 4,
+    "threshold_sigma_multiplier": 3.0,
+    "threshold_gaussian_mad_scale": 1.4826,
+    "threshold_sigma_floor_db": 0.25
+  },
+  "methods": {
+    "baseline": "best_block_indicator1 with block-start-zero on failed packet",
+    "proposed": "same exact payload and link trace; on failure use the last successfully decoded block from the same site and link-condition stream, otherwise block-start-zero"
+  },
+  "application_bits": 157,
+  "development_link": {
+    "stage2_config": "configs/stage2_digital_link.json",
+    "channel_models": ["awgn", "rayleigh", "rician"],
+    "ebn0_db": [0.0, 3.0, 6.0, 9.0],
+    "repeats": 10,
+    "paired_identical_packet_trace": true
+  },
+  "development_statistics": {
+    "paired_cluster_bootstrap_repetitions": 10000,
+    "bootstrap_seed": 20260725,
+    "cvar_alpha": 0.9,
+    "success_gates": [
+      "mean_regret_one_sided_95pct_cluster_upper_bound_below_zero",
+      "cvar_one_sided_95pct_cluster_upper_bound_below_zero",
+      "actual_transmitted_bits_exactly_equal"
+    ]
+  },
+  "governance": {
+    "feb12_values_or_outputs_seen_before_freeze": false,
+    "prior_holdout_values_loaded": false,
+    "development_only": true,
+    "future_independent_confirmation_required": true
+  },
+  "claim_boundary": "Second disclosed C1-v4 development iteration on a new whole date; not a confirmatory Final and not evidence for UAV mobility, MIMO, or measured backhaul."
+}

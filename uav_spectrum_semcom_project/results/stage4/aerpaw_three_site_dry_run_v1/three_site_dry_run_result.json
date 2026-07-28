@@ -1,0 +1,256 @@
+{
+  "experiment_id": "aerpaw_three_site_prefinal_dry_run_v1",
+  "role": "synthetic_cardinality_interface_test_not_performance_evaluation",
+  "protocol_sha256": "5c6c3ebd33cd5ba3978c1644bc1461d66823c00739e04f03e709c9e6c77fe838",
+  "site_count": 3,
+  "sites": [
+    "LW1",
+    "CC1",
+    "CC2"
+  ],
+  "frequency_band_mhz": [
+    2400.0,
+    2483.5
+  ],
+  "thresholds_dbm": [
+    -129.86154703674316,
+    -129.12165599060057,
+    -128.37199192504883
+  ],
+  "base_occupancy_shape": [
+    3,
+    8
+  ],
+  "C1_interfaces": {
+    "detection_only": {
+      "shape": [
+        3,
+        8
+      ],
+      "selected_blocks": [
+        {
+          "site": "LW1",
+          "selected_block_start": 0
+        },
+        {
+          "site": "CC1",
+          "selected_block_start": 0
+        },
+        {
+          "site": "CC2",
+          "selected_block_start": 0
+        }
+      ],
+      "probability_bits": [
+        1,
+        1,
+        1
+      ],
+      "application_bits": [
+        159,
+        159,
+        159
+      ]
+    },
+    "detection_plus_resource": {
+      "shape": [
+        3,
+        8
+      ],
+      "selected_blocks": [
+        {
+          "site": "LW1",
+          "selected_block_start": 0
+        },
+        {
+          "site": "CC1",
+          "selected_block_start": 0
+        },
+        {
+          "site": "CC2",
+          "selected_block_start": 0
+        }
+      ],
+      "probability_bits": [
+        1,
+        1,
+        1
+      ],
+      "application_bits": [
+        159,
+        159,
+        159
+      ]
+    }
+  },
+  "selective_G2_interface": {
+    "offset_permutation_count": 6,
+    "all_runs_completed": true,
+    "rows": [
+      {
+        "relative_offset_assignment_db": [
+          -1.0,
+          0.0,
+          1.0
+        ],
+        "method": "G1_plus_stage3_prior_G2",
+        "regret_proxy": 0.0,
+        "transmitted_bits": 1526,
+        "latency_s": 0.0049629999999999995,
+        "delivered_reports": 4,
+        "attempted_reports": 4
+      },
+      {
+        "relative_offset_assignment_db": [
+          -1.0,
+          0.0,
+          1.0
+        ],
+        "method": "all_G2",
+        "regret_proxy": 0.0,
+        "transmitted_bits": 1554,
+        "latency_s": 0.003927,
+        "delivered_reports": 3,
+        "attempted_reports": 3
+      },
+      {
+        "relative_offset_assignment_db": [
+          -1.0,
+          1.0,
+          0.0
+        ],
+        "method": "G1_plus_stage3_prior_G2",
+        "regret_proxy": 0.0,
+        "transmitted_bits": 1526,
+        "latency_s": 0.0049629999999999995,
+        "delivered_reports": 4,
+        "attempted_reports": 4
+      },
+      {
+        "relative_offset_assignment_db": [
+          -1.0,
+          1.0,
+          0.0
+        ],
+        "method": "all_G2",
+        "regret_proxy": 0.0,
+        "transmitted_bits": 1554,
+        "latency_s": 0.003927,
+        "delivered_reports": 3,
+        "attempted_reports": 3
+      },
+      {
+        "relative_offset_assignment_db": [
+          0.0,
+          -1.0,
+          1.0
+        ],
+        "method": "G1_plus_stage3_prior_G2",
+        "regret_proxy": 0.0,
+        "transmitted_bits": 1526,
+        "latency_s": 0.0049629999999999995,
+        "delivered_reports": 4,
+        "attempted_reports": 4
+      },
+      {
+        "relative_offset_assignment_db": [
+          0.0,
+          -1.0,
+          1.0
+        ],
+        "method": "all_G2",
+        "regret_proxy": 0.0,
+        "transmitted_bits": 1554,
+        "latency_s": 0.003927,
+        "delivered_reports": 3,
+        "attempted_reports": 3
+      },
+      {
+        "relative_offset_assignment_db": [
+          0.0,
+          1.0,
+          -1.0
+        ],
+        "method": "G1_plus_stage3_prior_G2",
+        "regret_proxy": 0.0,
+        "transmitted_bits": 1526,
+        "latency_s": 0.0049629999999999995,
+        "delivered_reports": 4,
+        "attempted_reports": 4
+      },
+      {
+        "relative_offset_assignment_db": [
+          0.0,
+          1.0,
+          -1.0
+        ],
+        "method": "all_G2",
+        "regret_proxy": 0.0,
+        "transmitted_bits": 1554,
+        "latency_s": 0.003927,
+        "delivered_reports": 3,
+        "attempted_reports": 3
+      },
+      {
+        "relative_offset_assignment_db": [
+          1.0,
+          -1.0,
+          0.0
+        ],
+        "method": "G1_plus_stage3_prior_G2",
+        "regret_proxy": 0.0,
+        "transmitted_bits": 1526,
+        "latency_s": 0.0049629999999999995,
+        "delivered_reports": 4,
+        "attempted_reports": 4
+      },
+      {
+        "relative_offset_assignment_db": [
+          1.0,
+          -1.0,
+          0.0
+        ],
+        "method": "all_G2",
+        "regret_proxy": 0.0,
+        "transmitted_bits": 1554,
+        "latency_s": 0.003927,
+        "delivered_reports": 3,
+        "attempted_reports": 3
+      },
+      {
+        "relative_offset_assignment_db": [
+          1.0,
+          0.0,
+          -1.0
+        ],
+        "method": "G1_plus_stage3_prior_G2",
+        "regret_proxy": 0.0,
+        "transmitted_bits": 1526,
+        "latency_s": 0.0049629999999999995,
+        "delivered_reports": 4,
+        "attempted_reports": 4
+      },
+      {
+        "relative_offset_assignment_db": [
+          1.0,
+          0.0,
+          -1.0
+        ],
+        "method": "all_G2",
+        "regret_proxy": 0.0,
+        "transmitted_bits": 1554,
+        "latency_s": 0.003927,
+        "delivered_reports": 3,
+        "attempted_reports": 3
+      }
+    ]
+  },
+  "checkpoint_sha256": {
+    "detection_only": "418808efa3a3c7816b2b20d1980b3bc5ae5c102fc29876f489646d968eed7a39",
+    "detection_plus_resource": "383ddb9a916e1ee8b969f2a3d1269c75327408d7a6fd4e8d99a6c620c8976cb7"
+  },
+  "nonpilot_real_data_accessed": false,
+  "final_catalog_created": false,
+  "final_access_consumed": false,
+  "claim_boundary": "Only proves that frozen C1 and digital selective-G2 code execute with three sites."
+}

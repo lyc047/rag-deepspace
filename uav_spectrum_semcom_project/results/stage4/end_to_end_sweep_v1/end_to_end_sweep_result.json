@@ -1,0 +1,898 @@
+{
+  "experiment_id": "stage4_end_to_end_decoder_sweep_v1",
+  "protocol_sha256": "c14526a50e9b547980e176f792b9db2e2f06985f53073812ada66cffc717109f",
+  "stage2_config_sha256": "66fbe3cc3166225d8aa4bbcd82131a92c808196314045735019321b1791932a1",
+  "cache_result_sha256": "715db73c81216200098a70ed87b057184d82f38cb05a7431579ccc16e31a617c",
+  "scene_count": 150,
+  "link_repeats_per_scene": 5,
+  "summary": [
+    {
+      "channel": "awgn",
+      "ebn0_db": 0.0,
+      "method": "all_G1",
+      "mean_regret": 0.028171974765856856,
+      "cvar_0_9_regret": 0.14527516246695693,
+      "clean_resource_rate": 0.48,
+      "brier": 0.18946929557333753,
+      "mean_actual_transmitted_bits": 2668.736,
+      "mean_latency_s": 0.009674168000000002,
+      "mean_delivered_reports": 0.13733333333333334,
+      "report_delivery_ratio": 0.034333333333333334
+    },
+    {
+      "channel": "awgn",
+      "ebn0_db": 0.0,
+      "method": "G1_plus_stage3_prior_G2",
+      "mean_regret": 0.027818726072017245,
+      "cvar_0_9_regret": 0.14367358775809408,
+      "clean_resource_rate": 0.484,
+      "brier": 0.1834555034825498,
+      "mean_actual_transmitted_bits": 3692.248,
+      "mean_latency_s": 0.012253724,
+      "mean_delivered_reports": 0.17333333333333334,
+      "report_delivery_ratio": 0.034666666666666665
+    },
+    {
+      "channel": "awgn",
+      "ebn0_db": 0.0,
+      "method": "all_G2",
+      "mean_regret": 0.027892849663371636,
+      "cvar_0_9_regret": 0.14484533844282851,
+      "clean_resource_rate": 0.488,
+      "brier": 0.2101891572899317,
+      "mean_actual_transmitted_bits": 4132.949333333333,
+      "mean_latency_s": 0.010444074666666666,
+      "mean_delivered_reports": 0.04133333333333333,
+      "report_delivery_ratio": 0.010333333333333333
+    },
+    {
+      "channel": "awgn",
+      "ebn0_db": 3.0,
+      "method": "all_G1",
+      "mean_regret": 0.028171974765856856,
+      "cvar_0_9_regret": 0.14527516246695693,
+      "clean_resource_rate": 0.48,
+      "brier": 0.008373719358702056,
+      "mean_actual_transmitted_bits": 2099.328,
+      "mean_latency_s": 0.007610063999999999,
+      "mean_delivered_reports": 2.312,
+      "report_delivery_ratio": 0.578
+    },
+    {
+      "channel": "awgn",
+      "ebn0_db": 3.0,
+      "method": "G1_plus_stage3_prior_G2",
+      "mean_regret": 0.025821869792048043,
+      "cvar_0_9_regret": 0.13801455760219444,
+      "clean_resource_rate": 0.5213333333333333,
+      "brier": 0.008325289677045121,
+      "mean_actual_transmitted_bits": 2741.498666666667,
+      "mean_latency_s": 0.009238749333333334,
+      "mean_delivered_reports": 3.3093333333333335,
+      "report_delivery_ratio": 0.6618666666666667
+    },
+    {
+      "channel": "awgn",
+      "ebn0_db": 3.0,
+      "method": "all_G2",
+      "mean_regret": 0.024800350284863572,
+      "cvar_0_9_regret": 0.13461386520027493,
+      "clean_resource_rate": 0.54,
+      "brier": 0.019127029769261512,
+      "mean_actual_transmitted_bits": 3407.749333333333,
+      "mean_latency_s": 0.008611474666666665,
+      "mean_delivered_reports": 1.98,
+      "report_delivery_ratio": 0.495
+    },
+    {
+      "channel": "awgn",
+      "ebn0_db": 6.0,
+      "method": "all_G1",
+      "mean_regret": 0.028171974765856856,
+      "cvar_0_9_regret": 0.14527516246695693,
+      "clean_resource_rate": 0.48,
+      "brier": 0.008060308114394411,
+      "mean_actual_transmitted_bits": 1497.664,
+      "mean_latency_s": 0.005429032,
+      "mean_delivered_reports": 3.8386666666666667,
+      "report_delivery_ratio": 0.9596666666666667
+    },
+    {
+      "channel": "awgn",
+      "ebn0_db": 6.0,
+      "method": "G1_plus_stage3_prior_G2",
+      "mean_regret": 0.02541144266833726,
+      "cvar_0_9_regret": 0.13716209038315963,
+      "clean_resource_rate": 0.528,
+      "brier": 0.006682464461378354,
+      "mean_actual_transmitted_bits": 1999.984,
+      "mean_latency_s": 0.006681192000000001,
+      "mean_delivered_reports": 4.841333333333333,
+      "report_delivery_ratio": 0.9682666666666667
+    },
+    {
+      "channel": "awgn",
+      "ebn0_db": 6.0,
+      "method": "all_G2",
+      "mean_regret": 0.026382680973506163,
+      "cvar_0_9_regret": 0.13923844447592273,
+      "clean_resource_rate": 0.5213333333333333,
+      "brier": 0.016661954909496856,
+      "mean_actual_transmitted_bits": 2377.9653333333335,
+      "mean_latency_s": 0.006009182666666667,
+      "mean_delivered_reports": 3.684,
+      "report_delivery_ratio": 0.921
+    },
+    {
+      "channel": "awgn",
+      "ebn0_db": 9.0,
+      "method": "all_G1",
+      "mean_regret": 0.028171974765856856,
+      "cvar_0_9_regret": 0.14527516246695693,
+      "clean_resource_rate": 0.48,
+      "brier": 0.008060308114394411,
+      "mean_actual_transmitted_bits": 1345.792,
+      "mean_latency_s": 0.004878496,
+      "mean_delivered_reports": 4.0,
+      "report_delivery_ratio": 1.0
+    },
+    {
+      "channel": "awgn",
+      "ebn0_db": 9.0,
+      "method": "G1_plus_stage3_prior_G2",
+      "mean_regret": 0.02536816837840888,
+      "cvar_0_9_regret": 0.1367358567736422,
+      "clean_resource_rate": 0.5266666666666666,
+      "brier": 0.006658267496016642,
+      "mean_actual_transmitted_bits": 1863.344,
+      "mean_latency_s": 0.006185872,
+      "mean_delivered_reports": 5.0,
+      "report_delivery_ratio": 1.0
+    },
+    {
+      "channel": "awgn",
+      "ebn0_db": 9.0,
+      "method": "all_G2",
+      "mean_regret": 0.026257930899118945,
+      "cvar_0_9_regret": 0.14018650631963586,
+      "clean_resource_rate": 0.5266666666666666,
+      "brier": 0.016440833208386563,
+      "mean_actual_transmitted_bits": 2075.4533333333334,
+      "mean_latency_s": 0.005244726666666666,
+      "mean_delivered_reports": 4.0,
+      "report_delivery_ratio": 1.0
+    },
+    {
+      "channel": "rayleigh",
+      "ebn0_db": 0.0,
+      "method": "all_G1",
+      "mean_regret": 0.028171974765856856,
+      "cvar_0_9_regret": 0.14527516246695693,
+      "clean_resource_rate": 0.48,
+      "brier": 0.07274281775352959,
+      "mean_actual_transmitted_bits": 2511.04,
+      "mean_latency_s": 0.009102520000000001,
+      "mean_delivered_reports": 0.996,
+      "report_delivery_ratio": 0.249
+    },
+    {
+      "channel": "rayleigh",
+      "ebn0_db": 0.0,
+      "method": "G1_plus_stage3_prior_G2",
+      "mean_regret": 0.02761764748861636,
+      "cvar_0_9_regret": 0.14250949670172608,
+      "clean_resource_rate": 0.5,
+      "brier": 0.051612398140677744,
+      "mean_actual_transmitted_bits": 3452.232,
+      "mean_latency_s": 0.011488316,
+      "mean_delivered_reports": 1.3626666666666667,
+      "report_delivery_ratio": 0.27253333333333335
+    },
+    {
+      "channel": "rayleigh",
+      "ebn0_db": 0.0,
+      "method": "all_G2",
+      "mean_regret": 0.027472393741698093,
+      "cvar_0_9_regret": 0.14119492151619245,
+      "clean_resource_rate": 0.492,
+      "brier": 0.09431556605839886,
+      "mean_actual_transmitted_bits": 3921.6053333333334,
+      "mean_latency_s": 0.009910002666666666,
+      "mean_delivered_reports": 0.8333333333333334,
+      "report_delivery_ratio": 0.20833333333333334
+    },
+    {
+      "channel": "rayleigh",
+      "ebn0_db": 3.0,
+      "method": "all_G1",
+      "mean_regret": 0.028171974765856856,
+      "cvar_0_9_regret": 0.14527516246695693,
+      "clean_resource_rate": 0.48,
+      "brier": 0.015827773186406584,
+      "mean_actual_transmitted_bits": 2223.872,
+      "mean_latency_s": 0.008061536000000001,
+      "mean_delivered_reports": 2.216,
+      "report_delivery_ratio": 0.554
+    },
+    {
+      "channel": "rayleigh",
+      "ebn0_db": 3.0,
+      "method": "G1_plus_stage3_prior_G2",
+      "mean_regret": 0.02707341913201132,
+      "cvar_0_9_regret": 0.14286788675313195,
+      "clean_resource_rate": 0.5173333333333333,
+      "brier": 0.011380522321736135,
+      "mean_actual_transmitted_bits": 3053.0453333333335,
+      "mean_latency_s": 0.010178522666666665,
+      "mean_delivered_reports": 2.884,
+      "report_delivery_ratio": 0.5768
+    },
+    {
+      "channel": "rayleigh",
+      "ebn0_db": 3.0,
+      "method": "all_G2",
+      "mean_regret": 0.026697745965951373,
+      "cvar_0_9_regret": 0.13731083699114,
+      "clean_resource_rate": 0.49866666666666665,
+      "brier": 0.026003464417075357,
+      "mean_actual_transmitted_bits": 3535.5226666666667,
+      "mean_latency_s": 0.008934361333333333,
+      "mean_delivered_reports": 1.9946666666666666,
+      "report_delivery_ratio": 0.49866666666666665
+    },
+    {
+      "channel": "rayleigh",
+      "ebn0_db": 6.0,
+      "method": "all_G1",
+      "mean_regret": 0.028171974765856856,
+      "cvar_0_9_regret": 0.14527516246695693,
+      "clean_resource_rate": 0.48,
+      "brier": 0.008578421722633628,
+      "mean_actual_transmitted_bits": 1928.64,
+      "mean_latency_s": 0.00699132,
+      "mean_delivered_reports": 3.1613333333333333,
+      "report_delivery_ratio": 0.7903333333333333
+    },
+    {
+      "channel": "rayleigh",
+      "ebn0_db": 6.0,
+      "method": "G1_plus_stage3_prior_G2",
+      "mean_regret": 0.026638329424512146,
+      "cvar_0_9_regret": 0.13886137379255767,
+      "clean_resource_rate": 0.5106666666666667,
+      "brier": 0.007216523637787373,
+      "mean_actual_transmitted_bits": 2626.922666666667,
+      "mean_latency_s": 0.008764261333333334,
+      "mean_delivered_reports": 4.029333333333334,
+      "report_delivery_ratio": 0.8058666666666666
+    },
+    {
+      "channel": "rayleigh",
+      "ebn0_db": 6.0,
+      "method": "all_G2",
+      "mean_regret": 0.02562553693823914,
+      "cvar_0_9_regret": 0.13823914932319895,
+      "clean_resource_rate": 0.52,
+      "brier": 0.01782055353688769,
+      "mean_actual_transmitted_bits": 3043.077333333333,
+      "mean_latency_s": 0.0076899386666666675,
+      "mean_delivered_reports": 3.064,
+      "report_delivery_ratio": 0.766
+    },
+    {
+      "channel": "rayleigh",
+      "ebn0_db": 9.0,
+      "method": "all_G1",
+      "mean_regret": 0.028171974765856856,
+      "cvar_0_9_regret": 0.14527516246695693,
+      "clean_resource_rate": 0.48,
+      "brier": 0.008060308114394411,
+      "mean_actual_transmitted_bits": 1679.104,
+      "mean_latency_s": 0.006086751999999999,
+      "mean_delivered_reports": 3.7026666666666666,
+      "report_delivery_ratio": 0.9256666666666666
+    },
+    {
+      "channel": "rayleigh",
+      "ebn0_db": 9.0,
+      "method": "G1_plus_stage3_prior_G2",
+      "mean_regret": 0.02492993832892292,
+      "cvar_0_9_regret": 0.1357684370363131,
+      "clean_resource_rate": 0.5306666666666666,
+      "brier": 0.006758001001609258,
+      "mean_actual_transmitted_bits": 2312.3893333333335,
+      "mean_latency_s": 0.007698394666666668,
+      "mean_delivered_reports": 4.682666666666667,
+      "report_delivery_ratio": 0.9365333333333333
+    },
+    {
+      "channel": "rayleigh",
+      "ebn0_db": 9.0,
+      "method": "all_G2",
+      "mean_regret": 0.02622089041459306,
+      "cvar_0_9_regret": 0.13975788726781804,
+      "clean_resource_rate": 0.528,
+      "brier": 0.016584316248537186,
+      "mean_actual_transmitted_bits": 2638.346666666667,
+      "mean_latency_s": 0.006667173333333333,
+      "mean_delivered_reports": 3.696,
+      "report_delivery_ratio": 0.924
+    },
+    {
+      "channel": "rician",
+      "ebn0_db": 0.0,
+      "method": "all_G1",
+      "mean_regret": 0.028171974765856856,
+      "cvar_0_9_regret": 0.14527516246695693,
+      "clean_resource_rate": 0.48,
+      "brier": 0.09761551198108502,
+      "mean_actual_transmitted_bits": 2555.392,
+      "mean_latency_s": 0.009263296,
+      "mean_delivered_reports": 0.7146666666666667,
+      "report_delivery_ratio": 0.17866666666666667
+    },
+    {
+      "channel": "rician",
+      "ebn0_db": 0.0,
+      "method": "G1_plus_stage3_prior_G2",
+      "mean_regret": 0.026345959943412406,
+      "cvar_0_9_regret": 0.13860476123867557,
+      "clean_resource_rate": 0.5,
+      "brier": 0.07542913856085136,
+      "mean_actual_transmitted_bits": 3517.752,
+      "mean_latency_s": 0.011703076,
+      "mean_delivered_reports": 0.9893333333333333,
+      "report_delivery_ratio": 0.19786666666666666
+    },
+    {
+      "channel": "rician",
+      "ebn0_db": 0.0,
+      "method": "all_G2",
+      "mean_regret": 0.028070060203946923,
+      "cvar_0_9_regret": 0.14301884288045888,
+      "clean_resource_rate": 0.47733333333333333,
+      "brier": 0.13263444408533506,
+      "mean_actual_transmitted_bits": 4010.7013333333334,
+      "mean_latency_s": 0.010135150666666665,
+      "mean_delivered_reports": 0.5186666666666667,
+      "report_delivery_ratio": 0.12966666666666668
+    },
+    {
+      "channel": "rician",
+      "ebn0_db": 3.0,
+      "method": "all_G1",
+      "mean_regret": 0.028171974765856856,
+      "cvar_0_9_regret": 0.14527516246695693,
+      "clean_resource_rate": 0.48,
+      "brier": 0.012047886606191148,
+      "mean_actual_transmitted_bits": 2162.496,
+      "mean_latency_s": 0.007839048,
+      "mean_delivered_reports": 2.3613333333333335,
+      "report_delivery_ratio": 0.5903333333333334
+    },
+    {
+      "channel": "rician",
+      "ebn0_db": 3.0,
+      "method": "G1_plus_stage3_prior_G2",
+      "mean_regret": 0.025463013713426033,
+      "cvar_0_9_regret": 0.1395377577895609,
+      "clean_resource_rate": 0.5293333333333333,
+      "brier": 0.0086201031794231,
+      "mean_actual_transmitted_bits": 2922.0613333333336,
+      "mean_latency_s": 0.009774230666666666,
+      "mean_delivered_reports": 3.1586666666666665,
+      "report_delivery_ratio": 0.6317333333333334
+    },
+    {
+      "channel": "rician",
+      "ebn0_db": 3.0,
+      "method": "all_G2",
+      "mean_regret": 0.026104853139516004,
+      "cvar_0_9_regret": 0.13750853297378246,
+      "clean_resource_rate": 0.52,
+      "brier": 0.023438026852380126,
+      "mean_actual_transmitted_bits": 3436.0666666666666,
+      "mean_latency_s": 0.008683033333333333,
+      "mean_delivered_reports": 2.148,
+      "report_delivery_ratio": 0.537
+    },
+    {
+      "channel": "rician",
+      "ebn0_db": 6.0,
+      "method": "all_G1",
+      "mean_regret": 0.028171974765856856,
+      "cvar_0_9_regret": 0.14527516246695693,
+      "clean_resource_rate": 0.48,
+      "brier": 0.008060308114394411,
+      "mean_actual_transmitted_bits": 1731.52,
+      "mean_latency_s": 0.006276760000000001,
+      "mean_delivered_reports": 3.572,
+      "report_delivery_ratio": 0.893
+    },
+    {
+      "channel": "rician",
+      "ebn0_db": 6.0,
+      "method": "G1_plus_stage3_prior_G2",
+      "mean_regret": 0.0256446256365986,
+      "cvar_0_9_regret": 0.13863402989227325,
+      "clean_resource_rate": 0.532,
+      "brier": 0.006837714712399095,
+      "mean_actual_transmitted_bits": 2337.5146666666665,
+      "mean_latency_s": 0.007806157333333335,
+      "mean_delivered_reports": 4.529333333333334,
+      "report_delivery_ratio": 0.9058666666666667
+    },
+    {
+      "channel": "rician",
+      "ebn0_db": 6.0,
+      "method": "all_G2",
+      "mean_regret": 0.025794438589257576,
+      "cvar_0_9_regret": 0.13692272591482227,
+      "clean_resource_rate": 0.5133333333333333,
+      "brier": 0.016772709334316887,
+      "mean_actual_transmitted_bits": 2752.306666666667,
+      "mean_latency_s": 0.006955153333333334,
+      "mean_delivered_reports": 3.469333333333333,
+      "report_delivery_ratio": 0.8673333333333333
+    },
+    {
+      "channel": "rician",
+      "ebn0_db": 9.0,
+      "method": "all_G1",
+      "mean_regret": 0.028171974765856856,
+      "cvar_0_9_regret": 0.14527516246695693,
+      "clean_resource_rate": 0.48,
+      "brier": 0.008060308114394411,
+      "mean_actual_transmitted_bits": 1491.392,
+      "mean_latency_s": 0.005406296,
+      "mean_delivered_reports": 3.9346666666666668,
+      "report_delivery_ratio": 0.9836666666666667
+    },
+    {
+      "channel": "rician",
+      "ebn0_db": 9.0,
+      "method": "G1_plus_stage3_prior_G2",
+      "mean_regret": 0.025273761604606988,
+      "cvar_0_9_regret": 0.1367358567736422,
+      "clean_resource_rate": 0.528,
+      "brier": 0.006696659838660325,
+      "mean_actual_transmitted_bits": 2030.1306666666667,
+      "mean_latency_s": 0.006757865333333335,
+      "mean_delivered_reports": 4.925333333333334,
+      "report_delivery_ratio": 0.9850666666666666
+    },
+    {
+      "channel": "rician",
+      "ebn0_db": 9.0,
+      "method": "all_G2",
+      "mean_regret": 0.026243528752978213,
+      "cvar_0_9_regret": 0.14018650631963586,
+      "clean_resource_rate": 0.5266666666666666,
+      "brier": 0.016478211586116908,
+      "mean_actual_transmitted_bits": 2319.2586666666666,
+      "mean_latency_s": 0.005860829333333333,
+      "mean_delivered_reports": 3.9106666666666667,
+      "report_delivery_ratio": 0.9776666666666667
+    }
+  ],
+  "claim_boundary": "validation decoder-path robustness only; no final H2/H3 claim",
+  "final_holdout_accessed": false,
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "paired_scene_bootstrap": {
+    "awgn_0": {
+      "all_G1": {
+        "regret": {
+          "difference": -0.000353248693839608,
+          "ci95": [
+            -0.0010114313823675425,
+            9.656927204341627e-05
+          ]
+        },
+        "transmitted_bits": {
+          "difference": 1023.512,
+          "ci95": [
+            1013.8986666666668,
+            1032.9956
+          ]
+        }
+      },
+      "all_G2": {
+        "regret": {
+          "difference": -7.412359135438845e-05,
+          "ci95": [
+            -0.0008296867779177167,
+            0.0005765516577689896
+          ]
+        },
+        "transmitted_bits": {
+          "difference": -440.7013333333332,
+          "ci95": [
+            -450.5577999999999,
+            -430.696
+          ]
+        }
+      }
+    },
+    "awgn_3": {
+      "all_G1": {
+        "regret": {
+          "difference": -0.0023501049738088114,
+          "ci95": [
+            -0.007560350084714878,
+            0.0029763142495966644
+          ]
+        },
+        "transmitted_bits": {
+          "difference": 642.1706666666668,
+          "ci95": [
+            611.3319333333334,
+            673.5306666666667
+          ]
+        }
+      },
+      "all_G2": {
+        "regret": {
+          "difference": 0.0010215195071844698,
+          "ci95": [
+            -0.002864942429196526,
+            0.005127469282101327
+          ]
+        },
+        "transmitted_bits": {
+          "difference": -666.2506666666667,
+          "ci95": [
+            -703.0809333333334,
+            -628.9920000000001
+          ]
+        }
+      }
+    },
+    "awgn_6": {
+      "all_G1": {
+        "regret": {
+          "difference": -0.002760532097519596,
+          "ci95": [
+            -0.008254494986896678,
+            0.0025998707634581173
+          ]
+        },
+        "transmitted_bits": {
+          "difference": 502.32,
+          "ci95": [
+            483.9520000000001,
+            520.6880000000001
+          ]
+        }
+      },
+      "all_G2": {
+        "regret": {
+          "difference": -0.0009712383051689054,
+          "ci95": [
+            -0.005817910785515657,
+            0.0037822742402816066
+          ]
+        },
+        "transmitted_bits": {
+          "difference": -377.98133333333334,
+          "ci95": [
+            -401.61333333333334,
+            -353.8822
+          ]
+        }
+      }
+    },
+    "awgn_9": {
+      "all_G1": {
+        "regret": {
+          "difference": -0.002803806387447973,
+          "ci95": [
+            -0.008322448196743722,
+            0.0026533785502815513
+          ]
+        },
+        "transmitted_bits": {
+          "difference": 517.552,
+          "ci95": [
+            515.3119999999999,
+            519.792
+          ]
+        }
+      },
+      "all_G2": {
+        "regret": {
+          "difference": -0.0008897625207100646,
+          "ci95": [
+            -0.005711142500821855,
+            0.004037220181309444
+          ]
+        },
+        "transmitted_bits": {
+          "difference": -212.10933333333335,
+          "ci95": [
+            -215.76799999999997,
+            -208.93599999999998
+          ]
+        }
+      }
+    },
+    "rayleigh_0": {
+      "all_G1": {
+        "regret": {
+          "difference": -0.0005543272772404938,
+          "ci95": [
+            -0.002510153053163397,
+            0.0011835500536555626
+          ]
+        },
+        "transmitted_bits": {
+          "difference": 941.1919999999999,
+          "ci95": [
+            914.1440000000002,
+            967.4
+          ]
+        }
+      },
+      "all_G2": {
+        "regret": {
+          "difference": 0.00014525374691826677,
+          "ci95": [
+            -0.0021204966086936115,
+            0.0025183687329311654
+          ]
+        },
+        "transmitted_bits": {
+          "difference": -469.37333333333333,
+          "ci95": [
+            -501.6862666666666,
+            -436.1275333333334
+          ]
+        }
+      }
+    },
+    "rayleigh_3": {
+      "all_G1": {
+        "regret": {
+          "difference": -0.0010985556338455355,
+          "ci95": [
+            -0.005221546694009096,
+            0.003388017537896545
+          ]
+        },
+        "transmitted_bits": {
+          "difference": 829.1733333333333,
+          "ci95": [
+            791.8563333333333,
+            866.9733333333334
+          ]
+        }
+      },
+      "all_G2": {
+        "regret": {
+          "difference": 0.00037567316605994464,
+          "ci95": [
+            -0.0029580065462528255,
+            0.0038178726965343605
+          ]
+        },
+        "transmitted_bits": {
+          "difference": -482.4773333333334,
+          "ci95": [
+            -523.6196,
+            -442.02666666666664
+          ]
+        }
+      }
+    },
+    "rayleigh_6": {
+      "all_G1": {
+        "regret": {
+          "difference": -0.001533645341344709,
+          "ci95": [
+            -0.006102668433419473,
+            0.0029172610153367098
+          ]
+        },
+        "transmitted_bits": {
+          "difference": 698.2826666666667,
+          "ci95": [
+            664.6430000000001,
+            732.6489333333334
+          ]
+        }
+      },
+      "all_G2": {
+        "regret": {
+          "difference": 0.0010127924862730045,
+          "ci95": [
+            -0.0030544515771437244,
+            0.005134957967458104
+          ]
+        },
+        "transmitted_bits": {
+          "difference": -416.1546666666667,
+          "ci95": [
+            -462.87826666666666,
+            -368.9088666666667
+          ]
+        }
+      }
+    },
+    "rayleigh_9": {
+      "all_G1": {
+        "regret": {
+          "difference": -0.003242036436933934,
+          "ci95": [
+            -0.008632540697929902,
+            0.0017841807129802033
+          ]
+        },
+        "transmitted_bits": {
+          "difference": 633.2853333333333,
+          "ci95": [
+            598.9008666666667,
+            668.4729333333333
+          ]
+        }
+      },
+      "all_G2": {
+        "regret": {
+          "difference": -0.001290952085670142,
+          "ci95": [
+            -0.005952047171449037,
+            0.003119540536789888
+          ]
+        },
+        "transmitted_bits": {
+          "difference": -325.95733333333334,
+          "ci95": [
+            -369.3391333333334,
+            -283.15186666666665
+          ]
+        }
+      }
+    },
+    "rician_0": {
+      "all_G1": {
+        "regret": {
+          "difference": -0.001826014822444449,
+          "ci95": [
+            -0.004796727888521369,
+            0.00043210224918782317
+          ]
+        },
+        "transmitted_bits": {
+          "difference": 962.36,
+          "ci95": [
+            939.0635333333332,
+            985.7497999999999
+          ]
+        }
+      },
+      "all_G2": {
+        "regret": {
+          "difference": -0.001724100260534518,
+          "ci95": [
+            -0.00427686570183881,
+            0.0008849472977868568
+          ]
+        },
+        "transmitted_bits": {
+          "difference": -492.9493333333333,
+          "ci95": [
+            -520.1840000000001,
+            -465.7888666666667
+          ]
+        }
+      }
+    },
+    "rician_3": {
+      "all_G1": {
+        "regret": {
+          "difference": -0.002708961052430823,
+          "ci95": [
+            -0.007270028118633945,
+            0.001856151179769707
+          ]
+        },
+        "transmitted_bits": {
+          "difference": 759.5653333333332,
+          "ci95": [
+            725.5919999999999,
+            793.1284666666667
+          ]
+        }
+      },
+      "all_G2": {
+        "regret": {
+          "difference": -0.0006418394260899729,
+          "ci95": [
+            -0.004443509349784813,
+            0.0030951611855971565
+          ]
+        },
+        "transmitted_bits": {
+          "difference": -514.0053333333333,
+          "ci95": [
+            -559.7965333333333,
+            -469.18666666666667
+          ]
+        }
+      }
+    },
+    "rician_6": {
+      "all_G1": {
+        "regret": {
+          "difference": -0.0025273491292582546,
+          "ci95": [
+            -0.007763645183401415,
+            0.002804958995383405
+          ]
+        },
+        "transmitted_bits": {
+          "difference": 605.9946666666666,
+          "ci95": [
+            574.224,
+            638.4191333333333
+          ]
+        }
+      },
+      "all_G2": {
+        "regret": {
+          "difference": -0.00014981295265897624,
+          "ci95": [
+            -0.004896504724265711,
+            0.0045436291767461294
+          ]
+        },
+        "transmitted_bits": {
+          "difference": -414.79200000000003,
+          "ci95": [
+            -455.9146666666666,
+            -372.6604
+          ]
+        }
+      }
+    },
+    "rician_9": {
+      "all_G1": {
+        "regret": {
+          "difference": -0.0028982131612498656,
+          "ci95": [
+            -0.008531756173313677,
+            0.002486817912232557
+          ]
+        },
+        "transmitted_bits": {
+          "difference": 538.7386666666666,
+          "ci95": [
+            518.0177333333332,
+            559.6089333333333
+          ]
+        }
+      },
+      "all_G2": {
+        "regret": {
+          "difference": -0.000969767148371223,
+          "ci95": [
+            -0.005876727981524043,
+            0.0038945767985471918
+          ]
+        },
+        "transmitted_bits": {
+          "difference": -289.128,
+          "ci95": [
+            -318.7333333333333,
+            -260.2128666666666
+          ]
+        }
+      }
+    }
+  }
+}
