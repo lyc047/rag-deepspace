@@ -1,0 +1,3554 @@
+{
+  "version": "1.0",
+  "status": "stage6r_regret_candidate_ranker_complete",
+  "verification_status": "ANALYZED",
+  "experiment_id": "stage6r_regret_candidate_ranker_v1",
+  "config_sha256": "052e6e307c9cd0b9925dc939323aeb90e721da32f3c94c73ff0efc786dade3ef",
+  "input_hashes": {
+    "adaptation_config": "b5771f520b619c9e967f5b505f01e5d4cb0d856b15e2a8ddca789d6e7b839dff",
+    "adaptation_result": "d5f7fe958261cdf4a5bb3be921112e7081ca90370f764f57b5463cf16b4475bb",
+    "temporal_gate_config": "078259805887731292d24a5acb3a36968b8ba94acffc2d29ff46ecbec173dc46",
+    "temporal_gate_result": "eb4298131e1f72a9b01698d2725b56b14bd3b5e280ba0b754608c6d1f1592c99"
+  },
+  "n_results": {
+    "8": {
+      "n_channels": 8,
+      "rows": [
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "method": "ridge",
+          "calibration_scenes": 4,
+          "temporal_decision": "OOD",
+          "ranker_applied": true,
+          "codebook_source": "learned_ood:ridge",
+          "selected_actions": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ]
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 347,
+            "coverage_rate": 0.9638888888888889,
+            "escape_count": 13,
+            "escape_rate": 0.036111111111111094,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 0.75,
+            "codeword_usage_entropy_bits": 0.3800800094789841,
+            "covered_mean_max_regret_db": 0.01026552623561892,
+            "covered_cvar_max_regret_db": 0.12564404805501303,
+            "covered_maximum_max_regret_db": 0.19748687744140625,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 3.2888888888888888,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 58.88888888888889,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              23,
+              323,
+              1,
+              0
+            ],
+            "calibration_exact_payload_bits": 32,
+            "adaptation_control_bits": 48,
+            "evaluation_semantic_payload_bits": 1184.0,
+            "full_session_accounted_bits": 1264.0,
+            "full_session_bits_per_scene": 3.4725274725274726,
+            "full_session_exact_baseline_bits": 2912,
+            "full_session_payload_savings_percentage": 56.59340659340659
+          },
+          "model": {
+            "training_mae": 0.012381668374519197,
+            "serialized_size_bytes": 1422,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": 0.3652000000329281,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 2835
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "method": "hist_gradient_boosting",
+          "calibration_scenes": 4,
+          "temporal_decision": "OOD",
+          "ranker_applied": true,
+          "codebook_source": "learned_ood:hist_gradient_boosting",
+          "selected_actions": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 154,
+            "coverage_rate": 0.42777777777777776,
+            "escape_count": 206,
+            "escape_rate": 0.5722222222222222,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 0.75,
+            "codeword_usage_entropy_bits": 0.8988807425028904,
+            "covered_mean_max_regret_db": 0.09405632355770507,
+            "covered_cvar_max_regret_db": 0.19788233563303947,
+            "covered_maximum_max_regret_db": 0.1998291015625,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 7.5777777777777775,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 5.277777777777781,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              42,
+              1,
+              0,
+              111
+            ],
+            "calibration_exact_payload_bits": 32,
+            "adaptation_control_bits": 48,
+            "evaluation_semantic_payload_bits": 2728.0,
+            "full_session_accounted_bits": 2808.0,
+            "full_session_bits_per_scene": 7.714285714285714,
+            "full_session_exact_baseline_bits": 2912,
+            "full_session_payload_savings_percentage": 3.57142857142857
+          },
+          "model": {
+            "training_mae": 0.0036919613290506024,
+            "serialized_size_bytes": 186490,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": 1.9626000000698696,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 2835
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "method": "mlp_32",
+          "calibration_scenes": 4,
+          "temporal_decision": "OOD",
+          "ranker_applied": true,
+          "codebook_source": "learned_ood:mlp_32",
+          "selected_actions": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              2,
+              2
+            ]
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 124,
+            "coverage_rate": 0.34444444444444444,
+            "escape_count": 236,
+            "escape_rate": 0.6555555555555556,
+            "used_codeword_count": 4,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.1940349199702003,
+            "covered_mean_max_regret_db": 0.0996818233641886,
+            "covered_cvar_max_regret_db": 0.19662402995995112,
+            "covered_maximum_max_regret_db": 0.1998291015625,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 8.244444444444444,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": -3.0555555555555447,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              86,
+              27,
+              1,
+              10
+            ],
+            "calibration_exact_payload_bits": 32,
+            "adaptation_control_bits": 48,
+            "evaluation_semantic_payload_bits": 2967.9999999999995,
+            "full_session_accounted_bits": 3047.9999999999995,
+            "full_session_bits_per_scene": 8.373626373626372,
+            "full_session_exact_baseline_bits": 2912,
+            "full_session_payload_savings_percentage": -4.670329670329654
+          },
+          "model": {
+            "training_mae": 0.012211929801261446,
+            "serialized_size_bytes": 26755,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": 0.527700000020559,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 2835
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "method": "ridge",
+          "calibration_scenes": 6,
+          "temporal_decision": "BANK:aerpaw_packapalooza_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_packapalooza_2024",
+          "selected_actions": [
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              6,
+              4,
+              2
+            ],
+            [
+              4,
+              3,
+              1
+            ]
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 61,
+            "coverage_rate": 1.0,
+            "escape_count": 0,
+            "escape_rate": 0.0,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 0.6666666666666666,
+            "codeword_usage_entropy_bits": 0.9669852958320848,
+            "covered_mean_max_regret_db": 0.0,
+            "covered_cvar_max_regret_db": 0.0,
+            "covered_maximum_max_regret_db": 0.0,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 2.0,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 75.0,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              37,
+              24,
+              0
+            ],
+            "calibration_exact_payload_bits": 48,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 122.0,
+            "full_session_accounted_bits": 178.0,
+            "full_session_bits_per_scene": 2.656716417910448,
+            "full_session_exact_baseline_bits": 536,
+            "full_session_payload_savings_percentage": 66.7910447761194
+          },
+          "model": {
+            "training_mae": 0.04139858560140494,
+            "serialized_size_bytes": 1422,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 2835
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "method": "hist_gradient_boosting",
+          "calibration_scenes": 6,
+          "temporal_decision": "BANK:aerpaw_packapalooza_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_packapalooza_2024",
+          "selected_actions": [
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              6,
+              4,
+              2
+            ],
+            [
+              4,
+              3,
+              1
+            ]
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 61,
+            "coverage_rate": 1.0,
+            "escape_count": 0,
+            "escape_rate": 0.0,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 0.6666666666666666,
+            "codeword_usage_entropy_bits": 0.9669852958320848,
+            "covered_mean_max_regret_db": 0.0,
+            "covered_cvar_max_regret_db": 0.0,
+            "covered_maximum_max_regret_db": 0.0,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 2.0,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 75.0,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              37,
+              24,
+              0
+            ],
+            "calibration_exact_payload_bits": 48,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 122.0,
+            "full_session_accounted_bits": 178.0,
+            "full_session_bits_per_scene": 2.656716417910448,
+            "full_session_exact_baseline_bits": 536,
+            "full_session_payload_savings_percentage": 66.7910447761194
+          },
+          "model": {
+            "training_mae": 0.008887869274017647,
+            "serialized_size_bytes": 187138,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 2835
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "method": "mlp_32",
+          "calibration_scenes": 6,
+          "temporal_decision": "BANK:aerpaw_packapalooza_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_packapalooza_2024",
+          "selected_actions": [
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              6,
+              4,
+              2
+            ],
+            [
+              4,
+              3,
+              1
+            ]
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 61,
+            "coverage_rate": 1.0,
+            "escape_count": 0,
+            "escape_rate": 0.0,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 0.6666666666666666,
+            "codeword_usage_entropy_bits": 0.9669852958320848,
+            "covered_mean_max_regret_db": 0.0,
+            "covered_cvar_max_regret_db": 0.0,
+            "covered_maximum_max_regret_db": 0.0,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 2.0,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 75.0,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              37,
+              24,
+              0
+            ],
+            "calibration_exact_payload_bits": 48,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 122.0,
+            "full_session_accounted_bits": 178.0,
+            "full_session_bits_per_scene": 2.656716417910448,
+            "full_session_exact_baseline_bits": 536,
+            "full_session_payload_savings_percentage": 66.7910447761194
+          },
+          "model": {
+            "training_mae": 0.019782601134263264,
+            "serialized_size_bytes": 27482,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 2835
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "method": "ridge",
+          "calibration_scenes": 8,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              6,
+              4,
+              2
+            ]
+          ],
+          "future": {
+            "scene_count": 59,
+            "codeword_count": 2,
+            "symbol_width_bits": 2,
+            "covered_count": 58,
+            "coverage_rate": 0.9830508474576272,
+            "escape_count": 1,
+            "escape_rate": 0.016949152542372836,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 0.9293636260137187,
+            "covered_mean_max_regret_db": 0.005423447181438577,
+            "covered_cvar_max_regret_db": 0.10335032145182292,
+            "covered_maximum_max_regret_db": 0.12970733642578125,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 2.1355932203389827,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 73.30508474576271,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              38,
+              20
+            ],
+            "calibration_exact_payload_bits": 64,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 125.99999999999997,
+            "full_session_accounted_bits": 197.99999999999997,
+            "full_session_bits_per_scene": 2.9552238805970146,
+            "full_session_exact_baseline_bits": 536,
+            "full_session_payload_savings_percentage": 63.05970149253732
+          },
+          "model": {
+            "training_mae": 0.03976170405664181,
+            "serialized_size_bytes": 1422,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 2835
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "method": "hist_gradient_boosting",
+          "calibration_scenes": 8,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              6,
+              4,
+              2
+            ]
+          ],
+          "future": {
+            "scene_count": 59,
+            "codeword_count": 2,
+            "symbol_width_bits": 2,
+            "covered_count": 58,
+            "coverage_rate": 0.9830508474576272,
+            "escape_count": 1,
+            "escape_rate": 0.016949152542372836,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 0.9293636260137187,
+            "covered_mean_max_regret_db": 0.005423447181438577,
+            "covered_cvar_max_regret_db": 0.10335032145182292,
+            "covered_maximum_max_regret_db": 0.12970733642578125,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 2.1355932203389827,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 73.30508474576271,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              38,
+              20
+            ],
+            "calibration_exact_payload_bits": 64,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 125.99999999999997,
+            "full_session_accounted_bits": 197.99999999999997,
+            "full_session_bits_per_scene": 2.9552238805970146,
+            "full_session_exact_baseline_bits": 536,
+            "full_session_payload_savings_percentage": 63.05970149253732
+          },
+          "model": {
+            "training_mae": 0.00671163112357843,
+            "serialized_size_bytes": 187002,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 2835
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "method": "mlp_32",
+          "calibration_scenes": 8,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              6,
+              4,
+              2
+            ]
+          ],
+          "future": {
+            "scene_count": 59,
+            "codeword_count": 2,
+            "symbol_width_bits": 2,
+            "covered_count": 58,
+            "coverage_rate": 0.9830508474576272,
+            "escape_count": 1,
+            "escape_rate": 0.016949152542372836,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 0.9293636260137187,
+            "covered_mean_max_regret_db": 0.005423447181438577,
+            "covered_cvar_max_regret_db": 0.10335032145182292,
+            "covered_maximum_max_regret_db": 0.12970733642578125,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 2.1355932203389827,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 73.30508474576271,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              38,
+              20
+            ],
+            "calibration_exact_payload_bits": 64,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 125.99999999999997,
+            "full_session_accounted_bits": 197.99999999999997,
+            "full_session_bits_per_scene": 2.9552238805970146,
+            "full_session_exact_baseline_bits": 536,
+            "full_session_payload_savings_percentage": 63.05970149253732
+          },
+          "model": {
+            "training_mae": 0.018823671203999262,
+            "serialized_size_bytes": 26083,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 2835
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "method": "ridge",
+          "calibration_scenes": 4,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              6,
+              4,
+              2
+            ]
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 2,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 0.6565402813869459,
+            "covered_mean_max_regret_db": 0.0006125498626191737,
+            "covered_cvar_max_regret_db": 0.01204681396484375,
+            "covered_maximum_max_regret_db": 0.03614044189453125,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 2.387096774193548,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 70.16129032258065,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              10,
+              49
+            ],
+            "calibration_exact_payload_bits": 32,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 147.99999999999997,
+            "full_session_accounted_bits": 187.99999999999997,
+            "full_session_bits_per_scene": 2.848484848484848,
+            "full_session_exact_baseline_bits": 528,
+            "full_session_payload_savings_percentage": 64.3939393939394
+          },
+          "model": {
+            "training_mae": 0.04085140149868388,
+            "serialized_size_bytes": 1422,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 2835
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "method": "hist_gradient_boosting",
+          "calibration_scenes": 4,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              6,
+              4,
+              2
+            ]
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 2,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 0.6565402813869459,
+            "covered_mean_max_regret_db": 0.0006125498626191737,
+            "covered_cvar_max_regret_db": 0.01204681396484375,
+            "covered_maximum_max_regret_db": 0.03614044189453125,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 2.387096774193548,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 70.16129032258065,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              10,
+              49
+            ],
+            "calibration_exact_payload_bits": 32,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 147.99999999999997,
+            "full_session_accounted_bits": 187.99999999999997,
+            "full_session_bits_per_scene": 2.848484848484848,
+            "full_session_exact_baseline_bits": 528,
+            "full_session_payload_savings_percentage": 64.3939393939394
+          },
+          "model": {
+            "training_mae": 0.007808196957404569,
+            "serialized_size_bytes": 186946,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 2835
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "method": "mlp_32",
+          "calibration_scenes": 4,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              6,
+              4,
+              2
+            ]
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 2,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 0.6565402813869459,
+            "covered_mean_max_regret_db": 0.0006125498626191737,
+            "covered_cvar_max_regret_db": 0.01204681396484375,
+            "covered_maximum_max_regret_db": 0.03614044189453125,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 2.387096774193548,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 70.16129032258065,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              10,
+              49
+            ],
+            "calibration_exact_payload_bits": 32,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 147.99999999999997,
+            "full_session_accounted_bits": 187.99999999999997,
+            "full_session_bits_per_scene": 2.848484848484848,
+            "full_session_exact_baseline_bits": 528,
+            "full_session_payload_savings_percentage": 64.3939393939394
+          },
+          "model": {
+            "training_mae": 0.020260865842406495,
+            "serialized_size_bytes": 26783,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 2835
+          }
+        }
+      ],
+      "baseline_temporal_gate": {
+        "k": 4,
+        "fold_count": 4,
+        "macro_compact_future_coverage": 0.9746381598930807,
+        "worst_activity_compact_future_coverage": 0.9516129032258065,
+        "macro_full_session_payload_savings_percentage": 69.09688570136332,
+        "worst_full_session_payload_savings_percentage": 63.05970149253732,
+        "mean_calibration_scenes": 5.5,
+        "maximum_calibration_scenes": 8,
+        "unresolved_fold_count": 0,
+        "ood_adaptation_fold_count": 1,
+        "bank_reuse_fold_count": 3,
+        "all_unsafe_coded_action_counts_zero": true
+      },
+      "aggregate_by_method": {
+        "ridge": {
+          "method": "ridge",
+          "fold_count": 4,
+          "macro_future_coverage": 0.9746381598930807,
+          "worst_activity_future_coverage": 0.9516129032258065,
+          "macro_full_session_payload_savings_percentage": 62.709523064000685,
+          "worst_full_session_payload_savings_percentage": 56.59340659340659,
+          "maximum_serialized_model_size_bytes": 1422,
+          "mean_training_mae": 0.03359833988281246,
+          "mean_full_action_prediction_ms": 0.3652000000329281,
+          "all_unsafe_coded_action_counts_zero": true
+        },
+        "hist_gradient_boosting": {
+          "method": "hist_gradient_boosting",
+          "fold_count": 4,
+          "macro_future_coverage": 0.8406103821153029,
+          "worst_activity_future_coverage": 0.42777777777777776,
+          "macro_full_session_payload_savings_percentage": 49.454028558506174,
+          "worst_full_session_payload_savings_percentage": 3.57142857142857,
+          "maximum_serialized_model_size_bytes": 187138,
+          "mean_training_mae": 0.006774914671012811,
+          "mean_full_action_prediction_ms": 1.9626000000698696,
+          "all_unsafe_coded_action_counts_zero": true
+        },
+        "mlp_32": {
+          "method": "mlp_32",
+          "fold_count": 4,
+          "macro_future_coverage": 0.8197770487819696,
+          "worst_activity_future_coverage": 0.34444444444444444,
+          "macro_full_session_payload_savings_percentage": 47.39358899806662,
+          "worst_full_session_payload_savings_percentage": -4.670329670329654,
+          "maximum_serialized_model_size_bytes": 27482,
+          "mean_training_mae": 0.017769766995482616,
+          "mean_full_action_prediction_ms": 0.527700000020559,
+          "all_unsafe_coded_action_counts_zero": true
+        }
+      },
+      "comparison_by_method": {
+        "ridge": {
+          "absolute_macro_coverage_gain": 0.0,
+          "macro_payload_savings_loss_percentage_points": 6.387362637362635,
+          "gate_passed": false
+        },
+        "hist_gradient_boosting": {
+          "absolute_macro_coverage_gain": -0.13402777777777775,
+          "macro_payload_savings_loss_percentage_points": 19.642857142857146,
+          "gate_passed": false
+        },
+        "mlp_32": {
+          "absolute_macro_coverage_gain": -0.15486111111111112,
+          "macro_payload_savings_loss_percentage_points": 21.7032967032967,
+          "gate_passed": false
+        }
+      }
+    },
+    "16": {
+      "n_channels": 16,
+      "rows": [
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "method": "ridge",
+          "calibration_scenes": 4,
+          "temporal_decision": "OOD",
+          "ranker_applied": true,
+          "codebook_source": "learned_ood:ridge",
+          "selected_actions": [
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 187,
+            "coverage_rate": 0.5194444444444445,
+            "escape_count": 173,
+            "escape_rate": 0.4805555555555555,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 0.5,
+            "codeword_usage_entropy_bits": 0.7488786391045347,
+            "covered_mean_max_regret_db": 0.1229293947033385,
+            "covered_cvar_max_regret_db": 0.18117408752441405,
+            "covered_maximum_max_regret_db": 0.19546890258789062,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 8.286111111111111,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 24.671717171717166,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              40,
+              0,
+              147,
+              0
+            ],
+            "calibration_exact_payload_bits": 44,
+            "adaptation_control_bits": 60,
+            "evaluation_semantic_payload_bits": 2983.0,
+            "full_session_accounted_bits": 3087.0,
+            "full_session_bits_per_scene": 8.48076923076923,
+            "full_session_exact_baseline_bits": 4004,
+            "full_session_payload_savings_percentage": 22.902097902097907
+          },
+          "model": {
+            "training_mae": 0.009900356458920243,
+            "serialized_size_bytes": 1422,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": 0.5185999998502666,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 15795
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "method": "hist_gradient_boosting",
+          "calibration_scenes": 4,
+          "temporal_decision": "OOD",
+          "ranker_applied": true,
+          "codebook_source": "learned_ood:hist_gradient_boosting",
+          "selected_actions": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 340,
+            "coverage_rate": 0.9444444444444444,
+            "escape_count": 20,
+            "escape_rate": 0.05555555555555558,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 0.5,
+            "codeword_usage_entropy_bits": 0.05204608477482437,
+            "covered_mean_max_regret_db": 0.016575089622946345,
+            "covered_cvar_max_regret_db": 0.15501314051011028,
+            "covered_maximum_max_regret_db": 0.19546890258789062,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 3.6111111111111116,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 67.17171717171718,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              338,
+              2,
+              0,
+              0
+            ],
+            "calibration_exact_payload_bits": 44,
+            "adaptation_control_bits": 60,
+            "evaluation_semantic_payload_bits": 1300.0000000000002,
+            "full_session_accounted_bits": 1404.0000000000002,
+            "full_session_bits_per_scene": 3.8571428571428577,
+            "full_session_exact_baseline_bits": 4004,
+            "full_session_payload_savings_percentage": 64.93506493506493
+          },
+          "model": {
+            "training_mae": 0.002217424111394835,
+            "serialized_size_bytes": 172074,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": 3.226900000072419,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 15795
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "method": "mlp_32",
+          "calibration_scenes": 4,
+          "temporal_decision": "OOD",
+          "ranker_applied": true,
+          "codebook_source": "learned_ood:mlp_32",
+          "selected_actions": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              7,
+              0
+            ],
+            [
+              0,
+              8,
+              1
+            ]
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 340,
+            "coverage_rate": 0.9444444444444444,
+            "escape_count": 20,
+            "escape_rate": 0.05555555555555558,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 0.5,
+            "codeword_usage_entropy_bits": 0.028970477304700044,
+            "covered_mean_max_regret_db": 0.016559976689955767,
+            "covered_cvar_max_regret_db": 0.15501314051011028,
+            "covered_maximum_max_regret_db": 0.19546890258789062,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 3.6111111111111116,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 67.17171717171718,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              339,
+              1,
+              0,
+              0
+            ],
+            "calibration_exact_payload_bits": 44,
+            "adaptation_control_bits": 60,
+            "evaluation_semantic_payload_bits": 1300.0000000000002,
+            "full_session_accounted_bits": 1404.0000000000002,
+            "full_session_bits_per_scene": 3.8571428571428577,
+            "full_session_exact_baseline_bits": 4004,
+            "full_session_payload_savings_percentage": 64.93506493506493
+          },
+          "model": {
+            "training_mae": 0.0067111796517046645,
+            "serialized_size_bytes": 24319,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": 0.8540999999695487,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 15795
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "method": "ridge",
+          "calibration_scenes": 6,
+          "temporal_decision": "BANK:aerpaw_packapalooza_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_packapalooza_2024",
+          "selected_actions": [
+            [
+              10,
+              8,
+              4
+            ],
+            [
+              11,
+              8,
+              4
+            ],
+            [
+              8,
+              5,
+              3
+            ],
+            [
+              12,
+              8,
+              4
+            ]
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 61,
+            "coverage_rate": 1.0,
+            "escape_count": 0,
+            "escape_rate": 0.0,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 0.75,
+            "codeword_usage_entropy_bits": 1.542279235137156,
+            "covered_mean_max_regret_db": 0.0,
+            "covered_cvar_max_regret_db": 0.0,
+            "covered_maximum_max_regret_db": 0.0,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 3.0,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 72.72727272727273,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              27,
+              19,
+              0,
+              15
+            ],
+            "calibration_exact_payload_bits": 66,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 183.0,
+            "full_session_accounted_bits": 257.0,
+            "full_session_bits_per_scene": 3.8358208955223883,
+            "full_session_exact_baseline_bits": 737,
+            "full_session_payload_savings_percentage": 65.12890094979646
+          },
+          "model": {
+            "training_mae": 0.03585494398953341,
+            "serialized_size_bytes": 1422,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 15795
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "method": "hist_gradient_boosting",
+          "calibration_scenes": 6,
+          "temporal_decision": "BANK:aerpaw_packapalooza_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_packapalooza_2024",
+          "selected_actions": [
+            [
+              10,
+              8,
+              4
+            ],
+            [
+              11,
+              8,
+              4
+            ],
+            [
+              8,
+              5,
+              3
+            ],
+            [
+              12,
+              8,
+              4
+            ]
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 61,
+            "coverage_rate": 1.0,
+            "escape_count": 0,
+            "escape_rate": 0.0,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 0.75,
+            "codeword_usage_entropy_bits": 1.542279235137156,
+            "covered_mean_max_regret_db": 0.0,
+            "covered_cvar_max_regret_db": 0.0,
+            "covered_maximum_max_regret_db": 0.0,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 3.0,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 72.72727272727273,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              27,
+              19,
+              0,
+              15
+            ],
+            "calibration_exact_payload_bits": 66,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 183.0,
+            "full_session_accounted_bits": 257.0,
+            "full_session_bits_per_scene": 3.8358208955223883,
+            "full_session_exact_baseline_bits": 737,
+            "full_session_payload_savings_percentage": 65.12890094979646
+          },
+          "model": {
+            "training_mae": 0.009155816320366146,
+            "serialized_size_bytes": 190658,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 15795
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "method": "mlp_32",
+          "calibration_scenes": 6,
+          "temporal_decision": "BANK:aerpaw_packapalooza_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_packapalooza_2024",
+          "selected_actions": [
+            [
+              10,
+              8,
+              4
+            ],
+            [
+              11,
+              8,
+              4
+            ],
+            [
+              8,
+              5,
+              3
+            ],
+            [
+              12,
+              8,
+              4
+            ]
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 61,
+            "coverage_rate": 1.0,
+            "escape_count": 0,
+            "escape_rate": 0.0,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 0.75,
+            "codeword_usage_entropy_bits": 1.542279235137156,
+            "covered_mean_max_regret_db": 0.0,
+            "covered_cvar_max_regret_db": 0.0,
+            "covered_maximum_max_regret_db": 0.0,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 3.0,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 72.72727272727273,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              27,
+              19,
+              0,
+              15
+            ],
+            "calibration_exact_payload_bits": 66,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 183.0,
+            "full_session_accounted_bits": 257.0,
+            "full_session_bits_per_scene": 3.8358208955223883,
+            "full_session_exact_baseline_bits": 737,
+            "full_session_payload_savings_percentage": 65.12890094979646
+          },
+          "model": {
+            "training_mae": 0.01836271750498965,
+            "serialized_size_bytes": 24934,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 15795
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "method": "ridge",
+          "calibration_scenes": 8,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              11,
+              8,
+              4
+            ],
+            [
+              10,
+              8,
+              4
+            ],
+            [
+              12,
+              8,
+              4
+            ]
+          ],
+          "future": {
+            "scene_count": 59,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 57,
+            "coverage_rate": 0.9661016949152542,
+            "escape_count": 2,
+            "escape_rate": 0.03389830508474578,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.432983121056005,
+            "covered_mean_max_regret_db": 0.006496228669819079,
+            "covered_cvar_max_regret_db": 0.11508941650390625,
+            "covered_maximum_max_regret_db": 0.1388397216796875,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 2.3728813559322037,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 78.42835130970724,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              18,
+              30,
+              9
+            ],
+            "calibration_exact_payload_bits": 88,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 140.00000000000003,
+            "full_session_accounted_bits": 236.00000000000003,
+            "full_session_bits_per_scene": 3.522388059701493,
+            "full_session_exact_baseline_bits": 737,
+            "full_session_payload_savings_percentage": 67.97829036635005
+          },
+          "model": {
+            "training_mae": 0.03159286611325453,
+            "serialized_size_bytes": 1422,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 15795
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "method": "hist_gradient_boosting",
+          "calibration_scenes": 8,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              11,
+              8,
+              4
+            ],
+            [
+              10,
+              8,
+              4
+            ],
+            [
+              12,
+              8,
+              4
+            ]
+          ],
+          "future": {
+            "scene_count": 59,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 57,
+            "coverage_rate": 0.9661016949152542,
+            "escape_count": 2,
+            "escape_rate": 0.03389830508474578,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.432983121056005,
+            "covered_mean_max_regret_db": 0.006496228669819079,
+            "covered_cvar_max_regret_db": 0.11508941650390625,
+            "covered_maximum_max_regret_db": 0.1388397216796875,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 2.3728813559322037,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 78.42835130970724,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              18,
+              30,
+              9
+            ],
+            "calibration_exact_payload_bits": 88,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 140.00000000000003,
+            "full_session_accounted_bits": 236.00000000000003,
+            "full_session_bits_per_scene": 3.522388059701493,
+            "full_session_exact_baseline_bits": 737,
+            "full_session_payload_savings_percentage": 67.97829036635005
+          },
+          "model": {
+            "training_mae": 0.005959555275222853,
+            "serialized_size_bytes": 190170,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 15795
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "method": "mlp_32",
+          "calibration_scenes": 8,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              11,
+              8,
+              4
+            ],
+            [
+              10,
+              8,
+              4
+            ],
+            [
+              12,
+              8,
+              4
+            ]
+          ],
+          "future": {
+            "scene_count": 59,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 57,
+            "coverage_rate": 0.9661016949152542,
+            "escape_count": 2,
+            "escape_rate": 0.03389830508474578,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.432983121056005,
+            "covered_mean_max_regret_db": 0.006496228669819079,
+            "covered_cvar_max_regret_db": 0.11508941650390625,
+            "covered_maximum_max_regret_db": 0.1388397216796875,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 2.3728813559322037,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 78.42835130970724,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              18,
+              30,
+              9
+            ],
+            "calibration_exact_payload_bits": 88,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 140.00000000000003,
+            "full_session_accounted_bits": 236.00000000000003,
+            "full_session_bits_per_scene": 3.522388059701493,
+            "full_session_exact_baseline_bits": 737,
+            "full_session_payload_savings_percentage": 67.97829036635005
+          },
+          "model": {
+            "training_mae": 0.015741808795226676,
+            "serialized_size_bytes": 24515,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 15795
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "method": "ridge",
+          "calibration_scenes": 4,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              11,
+              8,
+              4
+            ],
+            [
+              10,
+              8,
+              4
+            ],
+            [
+              12,
+              8,
+              4
+            ]
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.3411245074345444,
+            "covered_mean_max_regret_db": 0.0006186921717756885,
+            "covered_cvar_max_regret_db": 0.012167612711588541,
+            "covered_maximum_max_regret_db": 0.036502838134765625,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 2.5322580645161286,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 76.97947214076247,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              14,
+              9,
+              36
+            ],
+            "calibration_exact_payload_bits": 44,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 156.99999999999997,
+            "full_session_accounted_bits": 208.99999999999997,
+            "full_session_bits_per_scene": 3.166666666666666,
+            "full_session_exact_baseline_bits": 726,
+            "full_session_payload_savings_percentage": 71.21212121212122
+          },
+          "model": {
+            "training_mae": 0.037309348922080786,
+            "serialized_size_bytes": 1422,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 15795
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "method": "hist_gradient_boosting",
+          "calibration_scenes": 4,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              11,
+              8,
+              4
+            ],
+            [
+              10,
+              8,
+              4
+            ],
+            [
+              12,
+              8,
+              4
+            ]
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.3411245074345444,
+            "covered_mean_max_regret_db": 0.0006186921717756885,
+            "covered_cvar_max_regret_db": 0.012167612711588541,
+            "covered_maximum_max_regret_db": 0.036502838134765625,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 2.5322580645161286,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 76.97947214076247,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              14,
+              9,
+              36
+            ],
+            "calibration_exact_payload_bits": 44,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 156.99999999999997,
+            "full_session_accounted_bits": 208.99999999999997,
+            "full_session_bits_per_scene": 3.166666666666666,
+            "full_session_exact_baseline_bits": 726,
+            "full_session_payload_savings_percentage": 71.21212121212122
+          },
+          "model": {
+            "training_mae": 0.009074878877786555,
+            "serialized_size_bytes": 190202,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 15795
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "method": "mlp_32",
+          "calibration_scenes": 4,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              11,
+              8,
+              4
+            ],
+            [
+              10,
+              8,
+              4
+            ],
+            [
+              12,
+              8,
+              4
+            ]
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.3411245074345444,
+            "covered_mean_max_regret_db": 0.0006186921717756885,
+            "covered_cvar_max_regret_db": 0.012167612711588541,
+            "covered_maximum_max_regret_db": 0.036502838134765625,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 2.5322580645161286,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 76.97947214076247,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              14,
+              9,
+              36
+            ],
+            "calibration_exact_payload_bits": 44,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 156.99999999999997,
+            "full_session_accounted_bits": 208.99999999999997,
+            "full_session_bits_per_scene": 3.166666666666666,
+            "full_session_exact_baseline_bits": 726,
+            "full_session_payload_savings_percentage": 71.21212121212122
+          },
+          "model": {
+            "training_mae": 0.017479232467100127,
+            "serialized_size_bytes": 24655,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 15795
+          }
+        }
+      ],
+      "baseline_temporal_gate": {
+        "k": 4,
+        "fold_count": 4,
+        "macro_compact_future_coverage": 0.9655397606463763,
+        "worst_activity_compact_future_coverage": 0.9444444444444444,
+        "macro_full_session_payload_savings_percentage": 72.01514281738162,
+        "worst_full_session_payload_savings_percentage": 65.12890094979646,
+        "mean_calibration_scenes": 5.5,
+        "maximum_calibration_scenes": 8,
+        "unresolved_fold_count": 0,
+        "ood_adaptation_fold_count": 1,
+        "bank_reuse_fold_count": 3,
+        "all_unsafe_coded_action_counts_zero": true
+      },
+      "aggregate_by_method": {
+        "ridge": {
+          "method": "ridge",
+          "fold_count": 4,
+          "macro_future_coverage": 0.8592897606463763,
+          "worst_activity_future_coverage": 0.5194444444444445,
+          "macro_full_session_payload_savings_percentage": 56.80535260759141,
+          "worst_full_session_payload_savings_percentage": 22.902097902097907,
+          "maximum_serialized_model_size_bytes": 1422,
+          "mean_training_mae": 0.028664378870947242,
+          "mean_full_action_prediction_ms": 0.5185999998502666,
+          "all_unsafe_coded_action_counts_zero": true
+        },
+        "hist_gradient_boosting": {
+          "method": "hist_gradient_boosting",
+          "fold_count": 4,
+          "macro_future_coverage": 0.9655397606463763,
+          "worst_activity_future_coverage": 0.9444444444444444,
+          "macro_full_session_payload_savings_percentage": 67.31359436583315,
+          "worst_full_session_payload_savings_percentage": 64.93506493506493,
+          "maximum_serialized_model_size_bytes": 190658,
+          "mean_training_mae": 0.006601918646192598,
+          "mean_full_action_prediction_ms": 3.226900000072419,
+          "all_unsafe_coded_action_counts_zero": true
+        },
+        "mlp_32": {
+          "method": "mlp_32",
+          "fold_count": 4,
+          "macro_future_coverage": 0.9655397606463763,
+          "worst_activity_future_coverage": 0.9444444444444444,
+          "macro_full_session_payload_savings_percentage": 67.31359436583315,
+          "worst_full_session_payload_savings_percentage": 64.93506493506493,
+          "maximum_serialized_model_size_bytes": 24934,
+          "mean_training_mae": 0.01457373460475528,
+          "mean_full_action_prediction_ms": 0.8540999999695487,
+          "all_unsafe_coded_action_counts_zero": true
+        }
+      },
+      "comparison_by_method": {
+        "ridge": {
+          "absolute_macro_coverage_gain": -0.10624999999999996,
+          "macro_payload_savings_loss_percentage_points": 15.209790209790206,
+          "gate_passed": false
+        },
+        "hist_gradient_boosting": {
+          "absolute_macro_coverage_gain": 0.0,
+          "macro_payload_savings_loss_percentage_points": 4.701548451548462,
+          "gate_passed": false
+        },
+        "mlp_32": {
+          "absolute_macro_coverage_gain": 0.0,
+          "macro_payload_savings_loss_percentage_points": 4.701548451548462,
+          "gate_passed": false
+        }
+      }
+    },
+    "32": {
+      "n_channels": 32,
+      "rows": [
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "method": "ridge",
+          "calibration_scenes": 4,
+          "temporal_decision": "OOD",
+          "ranker_applied": true,
+          "codebook_source": "learned_ood:ridge",
+          "selected_actions": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              10,
+              7
+            ],
+            [
+              0,
+              0,
+              7
+            ],
+            [
+              0,
+              10,
+              0
+            ]
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 340,
+            "coverage_rate": 0.9444444444444444,
+            "escape_count": 20,
+            "escape_rate": 0.05555555555555558,
+            "used_codeword_count": 1,
+            "codeword_utilization_rate": 0.25,
+            "codeword_usage_entropy_bits": -0.0,
+            "covered_mean_max_regret_db": 0.017316699028015137,
+            "covered_cvar_max_regret_db": 0.1565107457778033,
+            "covered_maximum_max_regret_db": 0.19598388671875,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 3.777777777777778,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 73.01587301587301,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              340,
+              0,
+              0,
+              0
+            ],
+            "calibration_exact_payload_bits": 56,
+            "adaptation_control_bits": 72,
+            "evaluation_semantic_payload_bits": 1360.0000000000002,
+            "full_session_accounted_bits": 1488.0000000000002,
+            "full_session_bits_per_scene": 4.0879120879120885,
+            "full_session_exact_baseline_bits": 5096,
+            "full_session_payload_savings_percentage": 70.80062794348508
+          },
+          "model": {
+            "training_mae": 0.009656087975386626,
+            "serialized_size_bytes": 1422,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": 1.5393999999560037,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "method": "hist_gradient_boosting",
+          "calibration_scenes": 4,
+          "temporal_decision": "OOD",
+          "ranker_applied": true,
+          "codebook_source": "learned_ood:hist_gradient_boosting",
+          "selected_actions": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              8
+            ],
+            [
+              5,
+              9,
+              0
+            ]
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 355,
+            "coverage_rate": 0.9861111111111112,
+            "escape_count": 5,
+            "escape_rate": 0.01388888888888884,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 0.75,
+            "codeword_usage_entropy_bits": 0.8828299517678504,
+            "covered_mean_max_regret_db": 0.007440116141043918,
+            "covered_cvar_max_regret_db": 0.08386763806144397,
+            "covered_maximum_max_regret_db": 0.16266632080078125,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 3.1944444444444438,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 77.18253968253968,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              286,
+              48,
+              0,
+              21
+            ],
+            "calibration_exact_payload_bits": 56,
+            "adaptation_control_bits": 72,
+            "evaluation_semantic_payload_bits": 1149.9999999999998,
+            "full_session_accounted_bits": 1277.9999999999998,
+            "full_session_bits_per_scene": 3.5109890109890105,
+            "full_session_exact_baseline_bits": 5096,
+            "full_session_payload_savings_percentage": 74.9215070643642
+          },
+          "model": {
+            "training_mae": 0.0020718454676777864,
+            "serialized_size_bytes": 190706,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": 9.256600000071558,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "method": "mlp_32",
+          "calibration_scenes": 4,
+          "temporal_decision": "OOD",
+          "ranker_applied": true,
+          "codebook_source": "learned_ood:mlp_32",
+          "selected_actions": [
+            [
+              0,
+              3,
+              5
+            ],
+            [
+              0,
+              2,
+              5
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              0,
+              1,
+              5
+            ]
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 112,
+            "coverage_rate": 0.3111111111111111,
+            "escape_count": 248,
+            "escape_rate": 0.6888888888888889,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 0.75,
+            "codeword_usage_entropy_bits": 0.9255132746075956,
+            "covered_mean_max_regret_db": 0.12106532749852963,
+            "covered_cvar_max_regret_db": 0.19633982082207999,
+            "covered_maximum_max_regret_db": 0.19958560168743134,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 12.644444444444444,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 9.682539682539682,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              86,
+              4,
+              22,
+              0
+            ],
+            "calibration_exact_payload_bits": 56,
+            "adaptation_control_bits": 72,
+            "evaluation_semantic_payload_bits": 4552.0,
+            "full_session_accounted_bits": 4680.0,
+            "full_session_bits_per_scene": 12.857142857142858,
+            "full_session_exact_baseline_bits": 5096,
+            "full_session_payload_savings_percentage": 8.163265306122447
+          },
+          "model": {
+            "training_mae": 0.004998736950921485,
+            "serialized_size_bytes": 22275,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": 1.5521000000262575,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "method": "ridge",
+          "calibration_scenes": 6,
+          "temporal_decision": "BANK:aerpaw_packapalooza_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_packapalooza_2024",
+          "selected_actions": [
+            [
+              21,
+              16,
+              8
+            ],
+            [
+              17,
+              16,
+              8
+            ],
+            [
+              23,
+              16,
+              8
+            ],
+            [
+              15,
+              9,
+              6
+            ]
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 60,
+            "coverage_rate": 0.9836065573770492,
+            "escape_count": 1,
+            "escape_rate": 0.016393442622950838,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 0.75,
+            "codeword_usage_entropy_bits": 1.5481336895881137,
+            "covered_mean_max_regret_db": 0.010210037231445312,
+            "covered_cvar_max_regret_db": 0.06608835856119792,
+            "covered_maximum_max_regret_db": 0.10562896728515625,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 3.2295081967213117,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 76.93208430913349,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              26,
+              15,
+              19,
+              0
+            ],
+            "calibration_exact_payload_bits": 84,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 197.00000000000003,
+            "full_session_accounted_bits": 289.0,
+            "full_session_bits_per_scene": 4.313432835820896,
+            "full_session_exact_baseline_bits": 938,
+            "full_session_payload_savings_percentage": 69.18976545842217
+          },
+          "model": {
+            "training_mae": 0.036327882397122965,
+            "serialized_size_bytes": 1422,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "method": "hist_gradient_boosting",
+          "calibration_scenes": 6,
+          "temporal_decision": "BANK:aerpaw_packapalooza_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_packapalooza_2024",
+          "selected_actions": [
+            [
+              21,
+              16,
+              8
+            ],
+            [
+              17,
+              16,
+              8
+            ],
+            [
+              23,
+              16,
+              8
+            ],
+            [
+              15,
+              9,
+              6
+            ]
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 60,
+            "coverage_rate": 0.9836065573770492,
+            "escape_count": 1,
+            "escape_rate": 0.016393442622950838,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 0.75,
+            "codeword_usage_entropy_bits": 1.5481336895881137,
+            "covered_mean_max_regret_db": 0.010210037231445312,
+            "covered_cvar_max_regret_db": 0.06608835856119792,
+            "covered_maximum_max_regret_db": 0.10562896728515625,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 3.2295081967213117,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 76.93208430913349,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              26,
+              15,
+              19,
+              0
+            ],
+            "calibration_exact_payload_bits": 84,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 197.00000000000003,
+            "full_session_accounted_bits": 289.0,
+            "full_session_bits_per_scene": 4.313432835820896,
+            "full_session_exact_baseline_bits": 938,
+            "full_session_payload_savings_percentage": 69.18976545842217
+          },
+          "model": {
+            "training_mae": 0.01000501178521861,
+            "serialized_size_bytes": 191354,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "method": "mlp_32",
+          "calibration_scenes": 6,
+          "temporal_decision": "BANK:aerpaw_packapalooza_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_packapalooza_2024",
+          "selected_actions": [
+            [
+              21,
+              16,
+              8
+            ],
+            [
+              17,
+              16,
+              8
+            ],
+            [
+              23,
+              16,
+              8
+            ],
+            [
+              15,
+              9,
+              6
+            ]
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 60,
+            "coverage_rate": 0.9836065573770492,
+            "escape_count": 1,
+            "escape_rate": 0.016393442622950838,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 0.75,
+            "codeword_usage_entropy_bits": 1.5481336895881137,
+            "covered_mean_max_regret_db": 0.010210037231445312,
+            "covered_cvar_max_regret_db": 0.06608835856119792,
+            "covered_maximum_max_regret_db": 0.10562896728515625,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 3.2295081967213117,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 76.93208430913349,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              26,
+              15,
+              19,
+              0
+            ],
+            "calibration_exact_payload_bits": 84,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 197.00000000000003,
+            "full_session_accounted_bits": 289.0,
+            "full_session_bits_per_scene": 4.313432835820896,
+            "full_session_exact_baseline_bits": 938,
+            "full_session_payload_savings_percentage": 69.18976545842217
+          },
+          "model": {
+            "training_mae": 0.01606689224703215,
+            "serialized_size_bytes": 24543,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "method": "ridge",
+          "calibration_scenes": 8,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              21,
+              16,
+              8
+            ],
+            [
+              24,
+              16,
+              8
+            ],
+            [
+              17,
+              16,
+              8
+            ]
+          ],
+          "future": {
+            "scene_count": 59,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 57,
+            "coverage_rate": 0.9661016949152542,
+            "escape_count": 2,
+            "escape_rate": 0.03389830508474578,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.4149489635857697,
+            "covered_mean_max_regret_db": 0.02486971804970189,
+            "covered_cvar_max_regret_db": 0.1604480743408203,
+            "covered_maximum_max_regret_db": 0.1936931610107422,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 2.474576271186441,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 82.32445520581113,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              32,
+              10,
+              15
+            ],
+            "calibration_exact_payload_bits": 112,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 146.00000000000003,
+            "full_session_accounted_bits": 266.0,
+            "full_session_bits_per_scene": 3.970149253731343,
+            "full_session_exact_baseline_bits": 938,
+            "full_session_payload_savings_percentage": 71.64179104477613
+          },
+          "model": {
+            "training_mae": 0.03413211158232271,
+            "serialized_size_bytes": 1422,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "method": "hist_gradient_boosting",
+          "calibration_scenes": 8,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              21,
+              16,
+              8
+            ],
+            [
+              24,
+              16,
+              8
+            ],
+            [
+              17,
+              16,
+              8
+            ]
+          ],
+          "future": {
+            "scene_count": 59,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 57,
+            "coverage_rate": 0.9661016949152542,
+            "escape_count": 2,
+            "escape_rate": 0.03389830508474578,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.4149489635857697,
+            "covered_mean_max_regret_db": 0.02486971804970189,
+            "covered_cvar_max_regret_db": 0.1604480743408203,
+            "covered_maximum_max_regret_db": 0.1936931610107422,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 2.474576271186441,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 82.32445520581113,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              32,
+              10,
+              15
+            ],
+            "calibration_exact_payload_bits": 112,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 146.00000000000003,
+            "full_session_accounted_bits": 266.0,
+            "full_session_bits_per_scene": 3.970149253731343,
+            "full_session_exact_baseline_bits": 938,
+            "full_session_payload_savings_percentage": 71.64179104477613
+          },
+          "model": {
+            "training_mae": 0.007311439157838517,
+            "serialized_size_bytes": 191146,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "method": "mlp_32",
+          "calibration_scenes": 8,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              21,
+              16,
+              8
+            ],
+            [
+              24,
+              16,
+              8
+            ],
+            [
+              17,
+              16,
+              8
+            ]
+          ],
+          "future": {
+            "scene_count": 59,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 57,
+            "coverage_rate": 0.9661016949152542,
+            "escape_count": 2,
+            "escape_rate": 0.03389830508474578,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.4149489635857697,
+            "covered_mean_max_regret_db": 0.02486971804970189,
+            "covered_cvar_max_regret_db": 0.1604480743408203,
+            "covered_maximum_max_regret_db": 0.1936931610107422,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 2.474576271186441,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 82.32445520581113,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              32,
+              10,
+              15
+            ],
+            "calibration_exact_payload_bits": 112,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 146.00000000000003,
+            "full_session_accounted_bits": 266.0,
+            "full_session_bits_per_scene": 3.970149253731343,
+            "full_session_exact_baseline_bits": 938,
+            "full_session_payload_savings_percentage": 71.64179104477613
+          },
+          "model": {
+            "training_mae": 0.014941429008738107,
+            "serialized_size_bytes": 23227,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "method": "ridge",
+          "calibration_scenes": 4,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              21,
+              16,
+              8
+            ],
+            [
+              24,
+              16,
+              8
+            ],
+            [
+              17,
+              16,
+              8
+            ]
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.13056775547969,
+            "covered_mean_max_regret_db": 0.007857759120100635,
+            "covered_cvar_max_regret_db": 0.07717386881510417,
+            "covered_maximum_max_regret_db": 0.12726593017578125,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 2.677419354838709,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 80.87557603686636,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              17,
+              39,
+              3
+            ],
+            "calibration_exact_payload_bits": 56,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 165.99999999999997,
+            "full_session_accounted_bits": 229.99999999999997,
+            "full_session_bits_per_scene": 3.4848484848484844,
+            "full_session_exact_baseline_bits": 924,
+            "full_session_payload_savings_percentage": 75.10822510822511
+          },
+          "model": {
+            "training_mae": 0.03908361301512317,
+            "serialized_size_bytes": 1422,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "method": "hist_gradient_boosting",
+          "calibration_scenes": 4,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              21,
+              16,
+              8
+            ],
+            [
+              24,
+              16,
+              8
+            ],
+            [
+              17,
+              16,
+              8
+            ]
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.13056775547969,
+            "covered_mean_max_regret_db": 0.007857759120100635,
+            "covered_cvar_max_regret_db": 0.07717386881510417,
+            "covered_maximum_max_regret_db": 0.12726593017578125,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 2.677419354838709,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 80.87557603686636,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              17,
+              39,
+              3
+            ],
+            "calibration_exact_payload_bits": 56,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 165.99999999999997,
+            "full_session_accounted_bits": 229.99999999999997,
+            "full_session_bits_per_scene": 3.4848484848484844,
+            "full_session_exact_baseline_bits": 924,
+            "full_session_payload_savings_percentage": 75.10822510822511
+          },
+          "model": {
+            "training_mae": 0.010573418368800665,
+            "serialized_size_bytes": 191218,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "method": "mlp_32",
+          "calibration_scenes": 4,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              21,
+              16,
+              8
+            ],
+            [
+              24,
+              16,
+              8
+            ],
+            [
+              17,
+              16,
+              8
+            ]
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.13056775547969,
+            "covered_mean_max_regret_db": 0.007857759120100635,
+            "covered_cvar_max_regret_db": 0.07717386881510417,
+            "covered_maximum_max_regret_db": 0.12726593017578125,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 2.677419354838709,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 80.87557603686636,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              17,
+              39,
+              3
+            ],
+            "calibration_exact_payload_bits": 56,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 165.99999999999997,
+            "full_session_accounted_bits": 229.99999999999997,
+            "full_session_bits_per_scene": 3.4848484848484844,
+            "full_session_exact_baseline_bits": 924,
+            "full_session_payload_savings_percentage": 75.10822510822511
+          },
+          "model": {
+            "training_mae": 0.01696783181123344,
+            "serialized_size_bytes": 23255,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        }
+      ],
+      "baseline_temporal_gate": {
+        "k": 4,
+        "fold_count": 4,
+        "macro_compact_future_coverage": 0.9614413999906386,
+        "worst_activity_compact_future_coverage": 0.9444444444444444,
+        "macro_full_session_payload_savings_percentage": 75.42332844838175,
+        "worst_full_session_payload_savings_percentage": 69.18976545842217,
+        "mean_calibration_scenes": 5.5,
+        "maximum_calibration_scenes": 8,
+        "unresolved_fold_count": 0,
+        "ood_adaptation_fold_count": 1,
+        "bank_reuse_fold_count": 3,
+        "all_unsafe_coded_action_counts_zero": true
+      },
+      "aggregate_by_method": {
+        "ridge": {
+          "method": "ridge",
+          "fold_count": 4,
+          "macro_future_coverage": 0.9614413999906386,
+          "worst_activity_future_coverage": 0.9444444444444444,
+          "macro_full_session_payload_savings_percentage": 71.68510238872712,
+          "worst_full_session_payload_savings_percentage": 69.18976545842217,
+          "maximum_serialized_model_size_bytes": 1422,
+          "mean_training_mae": 0.029799923742488868,
+          "mean_full_action_prediction_ms": 1.5393999999560037,
+          "all_unsafe_coded_action_counts_zero": true
+        },
+        "hist_gradient_boosting": {
+          "method": "hist_gradient_boosting",
+          "fold_count": 4,
+          "macro_future_coverage": 0.9718580666573052,
+          "worst_activity_future_coverage": 0.9516129032258065,
+          "macro_full_session_payload_savings_percentage": 72.7153221689469,
+          "worst_full_session_payload_savings_percentage": 69.18976545842217,
+          "maximum_serialized_model_size_bytes": 191354,
+          "mean_training_mae": 0.007490428694883895,
+          "mean_full_action_prediction_ms": 9.256600000071558,
+          "all_unsafe_coded_action_counts_zero": true
+        },
+        "mlp_32": {
+          "method": "mlp_32",
+          "fold_count": 4,
+          "macro_future_coverage": 0.8031080666573053,
+          "worst_activity_future_coverage": 0.3111111111111111,
+          "macro_full_session_payload_savings_percentage": 56.02576172938646,
+          "worst_full_session_payload_savings_percentage": 8.163265306122447,
+          "maximum_serialized_model_size_bytes": 24543,
+          "mean_training_mae": 0.013243722504481296,
+          "mean_full_action_prediction_ms": 1.5521000000262575,
+          "all_unsafe_coded_action_counts_zero": true
+        }
+      },
+      "comparison_by_method": {
+        "ridge": {
+          "absolute_macro_coverage_gain": 0.0,
+          "macro_payload_savings_loss_percentage_points": 3.738226059654636,
+          "gate_passed": false
+        },
+        "hist_gradient_boosting": {
+          "absolute_macro_coverage_gain": 0.01041666666666663,
+          "macro_payload_savings_loss_percentage_points": 2.708006279434855,
+          "gate_passed": false
+        },
+        "mlp_32": {
+          "absolute_macro_coverage_gain": -0.15833333333333333,
+          "macro_payload_savings_loss_percentage_points": 19.397566718995293,
+          "gate_passed": false
+        }
+      }
+    },
+    "64": {
+      "n_channels": 64,
+      "rows": [
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "method": "ridge",
+          "calibration_scenes": 4,
+          "temporal_decision": "OOD",
+          "ranker_applied": true,
+          "codebook_source": "learned_ood:ridge",
+          "selected_actions": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              19,
+              14
+            ],
+            [
+              0,
+              0,
+              14
+            ],
+            [
+              0,
+              19,
+              12
+            ]
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 340,
+            "coverage_rate": 0.9444444444444444,
+            "escape_count": 20,
+            "escape_rate": 0.05555555555555558,
+            "used_codeword_count": 1,
+            "codeword_utilization_rate": 0.25,
+            "codeword_usage_entropy_bits": -0.0,
+            "covered_mean_max_regret_db": 0.018061568456537582,
+            "covered_cvar_max_regret_db": 0.15991940217859604,
+            "covered_maximum_max_regret_db": 0.1956624984741211,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 3.9444444444444446,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 76.79738562091502,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              340,
+              0,
+              0,
+              0
+            ],
+            "calibration_exact_payload_bits": 68,
+            "adaptation_control_bits": 84,
+            "evaluation_semantic_payload_bits": 1420.0,
+            "full_session_accounted_bits": 1572.0,
+            "full_session_bits_per_scene": 4.318681318681318,
+            "full_session_exact_baseline_bits": 6188,
+            "full_session_payload_savings_percentage": 74.59599224305107
+          },
+          "model": {
+            "training_mae": 0.021398705783038256,
+            "serialized_size_bytes": 1422,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": 5.460200000015902,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "method": "hist_gradient_boosting",
+          "calibration_scenes": 4,
+          "temporal_decision": "OOD",
+          "ranker_applied": true,
+          "codebook_source": "learned_ood:hist_gradient_boosting",
+          "selected_actions": [
+            [
+              0,
+              5,
+              0
+            ],
+            [
+              3,
+              19,
+              14
+            ],
+            [
+              0,
+              5,
+              1
+            ],
+            [
+              1,
+              5,
+              0
+            ]
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 253,
+            "coverage_rate": 0.7027777777777777,
+            "escape_count": 107,
+            "escape_rate": 0.2972222222222223,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 0.5,
+            "codeword_usage_entropy_bits": 0.0928712084188745,
+            "covered_mean_max_regret_db": 0.1251604688968583,
+            "covered_cvar_max_regret_db": 0.19548658224252555,
+            "covered_maximum_max_regret_db": 0.199676513671875,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 8.052777777777779,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 52.63071895424836,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              250,
+              0,
+              0,
+              3
+            ],
+            "calibration_exact_payload_bits": 68,
+            "adaptation_control_bits": 84,
+            "evaluation_semantic_payload_bits": 2899.0000000000005,
+            "full_session_accounted_bits": 3051.0000000000005,
+            "full_session_bits_per_scene": 8.381868131868133,
+            "full_session_exact_baseline_bits": 6188,
+            "full_session_payload_savings_percentage": 50.69489334195217
+          },
+          "model": {
+            "training_mae": 0.004351200322403973,
+            "serialized_size_bytes": 192154,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": 60.631300000295596,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "method": "mlp_32",
+          "calibration_scenes": 4,
+          "temporal_decision": "OOD",
+          "ranker_applied": true,
+          "codebook_source": "learned_ood:mlp_32",
+          "selected_actions": [
+            [
+              0,
+              6,
+              11
+            ],
+            [
+              1,
+              6,
+              11
+            ],
+            [
+              0,
+              5,
+              11
+            ],
+            [
+              0,
+              6,
+              10
+            ]
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 104,
+            "coverage_rate": 0.28888888888888886,
+            "escape_count": 256,
+            "escape_rate": 0.7111111111111111,
+            "used_codeword_count": 4,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.2710916224312254,
+            "covered_mean_max_regret_db": 0.11749661742494656,
+            "covered_cvar_max_regret_db": 0.19324466834465662,
+            "covered_maximum_max_regret_db": 0.19982464611530304,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 15.088888888888889,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 11.241830065359482,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              45,
+              2,
+              3,
+              54
+            ],
+            "calibration_exact_payload_bits": 68,
+            "adaptation_control_bits": 84,
+            "evaluation_semantic_payload_bits": 5432.0,
+            "full_session_accounted_bits": 5584.0,
+            "full_session_bits_per_scene": 15.340659340659341,
+            "full_session_exact_baseline_bits": 6188,
+            "full_session_payload_savings_percentage": 9.76082740788623
+          },
+          "model": {
+            "training_mae": 0.007916550388529314,
+            "serialized_size_bytes": 23255,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": 11.839700000109588,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "method": "ridge",
+          "calibration_scenes": 6,
+          "temporal_decision": "BANK:aerpaw_packapalooza_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_packapalooza_2024",
+          "selected_actions": [
+            [
+              42,
+              32,
+              16
+            ],
+            [
+              34,
+              32,
+              16
+            ],
+            [
+              46,
+              32,
+              16
+            ],
+            [
+              31,
+              18,
+              11
+            ]
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 60,
+            "coverage_rate": 0.9836065573770492,
+            "escape_count": 1,
+            "escape_rate": 0.016393442622950838,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 0.75,
+            "codeword_usage_entropy_bits": 1.5481336895881137,
+            "covered_mean_max_regret_db": 0.016818650563557944,
+            "covered_cvar_max_regret_db": 0.0699014663696289,
+            "covered_maximum_max_regret_db": 0.10542583465576172,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 3.278688524590164,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 80.7135969141755,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              26,
+              15,
+              19,
+              0
+            ],
+            "calibration_exact_payload_bits": 102,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 200.0,
+            "full_session_accounted_bits": 310.0,
+            "full_session_bits_per_scene": 4.626865671641791,
+            "full_session_exact_baseline_bits": 1139,
+            "full_session_payload_savings_percentage": 72.78314310798946
+          },
+          "model": {
+            "training_mae": 0.04529114087449682,
+            "serialized_size_bytes": 1422,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "method": "hist_gradient_boosting",
+          "calibration_scenes": 6,
+          "temporal_decision": "BANK:aerpaw_packapalooza_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_packapalooza_2024",
+          "selected_actions": [
+            [
+              42,
+              32,
+              16
+            ],
+            [
+              34,
+              32,
+              16
+            ],
+            [
+              46,
+              32,
+              16
+            ],
+            [
+              31,
+              18,
+              11
+            ]
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 60,
+            "coverage_rate": 0.9836065573770492,
+            "escape_count": 1,
+            "escape_rate": 0.016393442622950838,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 0.75,
+            "codeword_usage_entropy_bits": 1.5481336895881137,
+            "covered_mean_max_regret_db": 0.016818650563557944,
+            "covered_cvar_max_regret_db": 0.0699014663696289,
+            "covered_maximum_max_regret_db": 0.10542583465576172,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 3.278688524590164,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 80.7135969141755,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              26,
+              15,
+              19,
+              0
+            ],
+            "calibration_exact_payload_bits": 102,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 200.0,
+            "full_session_accounted_bits": 310.0,
+            "full_session_bits_per_scene": 4.626865671641791,
+            "full_session_exact_baseline_bits": 1139,
+            "full_session_payload_savings_percentage": 72.78314310798946
+          },
+          "model": {
+            "training_mae": 0.011322941227582685,
+            "serialized_size_bytes": 193170,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "method": "mlp_32",
+          "calibration_scenes": 6,
+          "temporal_decision": "BANK:aerpaw_packapalooza_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_packapalooza_2024",
+          "selected_actions": [
+            [
+              42,
+              32,
+              16
+            ],
+            [
+              34,
+              32,
+              16
+            ],
+            [
+              46,
+              32,
+              16
+            ],
+            [
+              31,
+              18,
+              11
+            ]
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 60,
+            "coverage_rate": 0.9836065573770492,
+            "escape_count": 1,
+            "escape_rate": 0.016393442622950838,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 0.75,
+            "codeword_usage_entropy_bits": 1.5481336895881137,
+            "covered_mean_max_regret_db": 0.016818650563557944,
+            "covered_cvar_max_regret_db": 0.0699014663696289,
+            "covered_maximum_max_regret_db": 0.10542583465576172,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 3.278688524590164,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 80.7135969141755,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              26,
+              15,
+              19,
+              0
+            ],
+            "calibration_exact_payload_bits": 102,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 200.0,
+            "full_session_accounted_bits": 310.0,
+            "full_session_bits_per_scene": 4.626865671641791,
+            "full_session_exact_baseline_bits": 1139,
+            "full_session_payload_savings_percentage": 72.78314310798946
+          },
+          "model": {
+            "training_mae": 0.017080915319121606,
+            "serialized_size_bytes": 23311,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "method": "ridge",
+          "calibration_scenes": 6,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              42,
+              32,
+              16
+            ],
+            [
+              48,
+              32,
+              16
+            ],
+            [
+              34,
+              32,
+              16
+            ]
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9672131147540983,
+            "escape_count": 2,
+            "escape_rate": 0.032786885245901676,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.422946224311553,
+            "covered_mean_max_regret_db": 0.02967167708833339,
+            "covered_cvar_max_regret_db": 0.1604776382446289,
+            "covered_maximum_max_regret_db": 0.1936931610107422,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 2.5573770491803285,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 84.95660559305689,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              33,
+              11,
+              15
+            ],
+            "calibration_exact_payload_bits": 102,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 156.00000000000003,
+            "full_session_accounted_bits": 266.0,
+            "full_session_bits_per_scene": 3.970149253731343,
+            "full_session_exact_baseline_bits": 1139,
+            "full_session_payload_savings_percentage": 76.64618086040387
+          },
+          "model": {
+            "training_mae": 0.04570622376413858,
+            "serialized_size_bytes": 1422,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "method": "hist_gradient_boosting",
+          "calibration_scenes": 6,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              42,
+              32,
+              16
+            ],
+            [
+              48,
+              32,
+              16
+            ],
+            [
+              34,
+              32,
+              16
+            ]
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9672131147540983,
+            "escape_count": 2,
+            "escape_rate": 0.032786885245901676,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.422946224311553,
+            "covered_mean_max_regret_db": 0.02967167708833339,
+            "covered_cvar_max_regret_db": 0.1604776382446289,
+            "covered_maximum_max_regret_db": 0.1936931610107422,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 2.5573770491803285,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 84.95660559305689,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              33,
+              11,
+              15
+            ],
+            "calibration_exact_payload_bits": 102,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 156.00000000000003,
+            "full_session_accounted_bits": 266.0,
+            "full_session_bits_per_scene": 3.970149253731343,
+            "full_session_exact_baseline_bits": 1139,
+            "full_session_payload_savings_percentage": 76.64618086040387
+          },
+          "model": {
+            "training_mae": 0.009992748317239418,
+            "serialized_size_bytes": 192154,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "method": "mlp_32",
+          "calibration_scenes": 6,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              42,
+              32,
+              16
+            ],
+            [
+              48,
+              32,
+              16
+            ],
+            [
+              34,
+              32,
+              16
+            ]
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9672131147540983,
+            "escape_count": 2,
+            "escape_rate": 0.032786885245901676,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.422946224311553,
+            "covered_mean_max_regret_db": 0.02967167708833339,
+            "covered_cvar_max_regret_db": 0.1604776382446289,
+            "covered_maximum_max_regret_db": 0.1936931610107422,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 2.5573770491803285,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 84.95660559305689,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              33,
+              11,
+              15
+            ],
+            "calibration_exact_payload_bits": 102,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 156.00000000000003,
+            "full_session_accounted_bits": 266.0,
+            "full_session_bits_per_scene": 3.970149253731343,
+            "full_session_exact_baseline_bits": 1139,
+            "full_session_payload_savings_percentage": 76.64618086040387
+          },
+          "model": {
+            "training_mae": 0.019528764304695346,
+            "serialized_size_bytes": 24179,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "method": "ridge",
+          "calibration_scenes": 4,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              42,
+              32,
+              16
+            ],
+            [
+              48,
+              32,
+              16
+            ],
+            [
+              34,
+              32,
+              16
+            ]
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.13056775547969,
+            "covered_mean_max_regret_db": 0.01320114782301046,
+            "covered_cvar_max_regret_db": 0.09011300404866536,
+            "covered_maximum_max_regret_db": 0.12726497650146484,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 2.8225806451612896,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 83.39658444022771,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              17,
+              39,
+              3
+            ],
+            "calibration_exact_payload_bits": 68,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 174.99999999999994,
+            "full_session_accounted_bits": 250.99999999999994,
+            "full_session_bits_per_scene": 3.8030303030303023,
+            "full_session_exact_baseline_bits": 1122,
+            "full_session_payload_savings_percentage": 77.62923351158646
+          },
+          "model": {
+            "training_mae": 0.051932452325474,
+            "serialized_size_bytes": 1422,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "method": "hist_gradient_boosting",
+          "calibration_scenes": 4,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              42,
+              32,
+              16
+            ],
+            [
+              48,
+              32,
+              16
+            ],
+            [
+              34,
+              32,
+              16
+            ]
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.13056775547969,
+            "covered_mean_max_regret_db": 0.01320114782301046,
+            "covered_cvar_max_regret_db": 0.09011300404866536,
+            "covered_maximum_max_regret_db": 0.12726497650146484,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 2.8225806451612896,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 83.39658444022771,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              17,
+              39,
+              3
+            ],
+            "calibration_exact_payload_bits": 68,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 174.99999999999994,
+            "full_session_accounted_bits": 250.99999999999994,
+            "full_session_bits_per_scene": 3.8030303030303023,
+            "full_session_exact_baseline_bits": 1122,
+            "full_session_payload_savings_percentage": 77.62923351158646
+          },
+          "model": {
+            "training_mae": 0.013549615951065732,
+            "serialized_size_bytes": 193154,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "method": "mlp_32",
+          "calibration_scenes": 4,
+          "temporal_decision": "BANK:aerpaw_lake_wheeler_2024",
+          "ranker_applied": false,
+          "codebook_source": "BANK:aerpaw_lake_wheeler_2024",
+          "selected_actions": [
+            [
+              42,
+              32,
+              16
+            ],
+            [
+              48,
+              32,
+              16
+            ],
+            [
+              34,
+              32,
+              16
+            ]
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.13056775547969,
+            "covered_mean_max_regret_db": 0.01320114782301046,
+            "covered_cvar_max_regret_db": 0.09011300404866536,
+            "covered_maximum_max_regret_db": 0.12726497650146484,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 2.8225806451612896,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 83.39658444022771,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              17,
+              39,
+              3
+            ],
+            "calibration_exact_payload_bits": 68,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 174.99999999999994,
+            "full_session_accounted_bits": 250.99999999999994,
+            "full_session_bits_per_scene": 3.8030303030303023,
+            "full_session_exact_baseline_bits": 1122,
+            "full_session_payload_savings_percentage": 77.62923351158646
+          },
+          "model": {
+            "training_mae": 0.01879439657854143,
+            "serialized_size_bytes": 24179,
+            "convergence_warning_count": 0,
+            "full_action_prediction_ms": null,
+            "training_context_count": 27,
+            "training_candidate_pair_count": 82944
+          }
+        }
+      ],
+      "baseline_temporal_gate": {
+        "k": 4,
+        "fold_count": 4,
+        "macro_compact_future_coverage": 0.9617192549503496,
+        "worst_activity_compact_future_coverage": 0.9444444444444444,
+        "macro_full_session_payload_savings_percentage": 78.528537236834,
+        "worst_full_session_payload_savings_percentage": 72.78314310798946,
+        "mean_calibration_scenes": 5.0,
+        "maximum_calibration_scenes": 6,
+        "unresolved_fold_count": 0,
+        "ood_adaptation_fold_count": 1,
+        "bank_reuse_fold_count": 3,
+        "all_unsafe_coded_action_counts_zero": true
+      },
+      "aggregate_by_method": {
+        "ridge": {
+          "method": "ridge",
+          "fold_count": 4,
+          "macro_future_coverage": 0.9617192549503496,
+          "worst_activity_future_coverage": 0.9444444444444444,
+          "macro_full_session_payload_savings_percentage": 75.41363743075772,
+          "worst_full_session_payload_savings_percentage": 72.78314310798946,
+          "maximum_serialized_model_size_bytes": 1422,
+          "mean_training_mae": 0.041082130686786913,
+          "mean_full_action_prediction_ms": 5.460200000015902,
+          "all_unsafe_coded_action_counts_zero": true
+        },
+        "hist_gradient_boosting": {
+          "method": "hist_gradient_boosting",
+          "fold_count": 4,
+          "macro_future_coverage": 0.9013025882836829,
+          "worst_activity_future_coverage": 0.7027777777777777,
+          "macro_full_session_payload_savings_percentage": 69.43836270548299,
+          "worst_full_session_payload_savings_percentage": 50.69489334195217,
+          "maximum_serialized_model_size_bytes": 193170,
+          "mean_training_mae": 0.009804126454572952,
+          "mean_full_action_prediction_ms": 60.631300000295596,
+          "all_unsafe_coded_action_counts_zero": true
+        },
+        "mlp_32": {
+          "method": "mlp_32",
+          "fold_count": 4,
+          "macro_future_coverage": 0.7978303660614607,
+          "worst_activity_future_coverage": 0.28888888888888886,
+          "macro_full_session_payload_savings_percentage": 59.204846221966505,
+          "worst_full_session_payload_savings_percentage": 9.76082740788623,
+          "maximum_serialized_model_size_bytes": 24179,
+          "mean_training_mae": 0.015830156647721923,
+          "mean_full_action_prediction_ms": 11.839700000109588,
+          "all_unsafe_coded_action_counts_zero": true
+        }
+      },
+      "comparison_by_method": {
+        "ridge": {
+          "absolute_macro_coverage_gain": 0.0,
+          "macro_payload_savings_loss_percentage_points": 3.1148998060762807,
+          "gate_passed": false
+        },
+        "hist_gradient_boosting": {
+          "absolute_macro_coverage_gain": -0.060416666666666674,
+          "macro_payload_savings_loss_percentage_points": 9.09017453135101,
+          "gate_passed": false
+        },
+        "mlp_32": {
+          "absolute_macro_coverage_gain": -0.16388888888888886,
+          "macro_payload_savings_loss_percentage_points": 19.323691014867492,
+          "gate_passed": false
+        }
+      }
+    }
+  },
+  "decision_summary": {
+    "retention_gate_passed": false,
+    "retained_methods": [],
+    "gate_passing_n_values_by_method": {
+      "ridge": [],
+      "hist_gradient_boosting": [],
+      "mlp_32": []
+    },
+    "recommended_next_route": "retain_temporal_analytic_codebook_and_record_ai_negative"
+  },
+  "checks": {
+    "all_unsafe_coded_action_counts_zero": true,
+    "heldout_future_used_for_training": false,
+    "ranker_bypasses_exact_regret_projection": false,
+    "new_final_data_accessed": false
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "scikit-learn": "1.5.1"
+    }
+  },
+  "claim_boundary": [
+    "All campaigns are already-consumed development data.",
+    "Model architectures and hyperparameters are fixed for screening; no heldout activity selects a model inside its fold.",
+    "Training-label candidate sampling may use future labels only inside training activities.",
+    "The model proposes a ranking but cannot authorize an unsafe action.",
+    "Payload accounting excludes the full Stage-6 reliability protocol.",
+    "A positive screening result still requires nested selection and a new external Final."
+  ]
+}

@@ -5,7 +5,7 @@
 - Origin Skill：academic-research-suite / experiment-agent
 - Origin Mode：plan + run
 - Origin Date：2026-07-28
-- Verification Status：S6R.0、S6R.1与首个上下文适配原型已完成
+- Verification Status：S6R.0—S6R.3b已完成；学习排序器为负结果
 - Version Label：S6R-AICB-v1
 - Parent Evidence：阶段6外部修复性验证
 - Data Role：2022—2025已消费数据仅用于开发；未来新Final不得参与本计划训练与选择
@@ -28,6 +28,8 @@
 > 如何利用多活动数据和人工智能优化任务动作码本，使码本在未参与训练的完整活动上降低escape和总bit，同时保持错误动作执行次数为0。
 
 截至2026-07-28，固定码本可行性、时间前缀少样本适配和轻量频谱上下文OOD适配已经完成。核心证据见`docs/STAGE6R_CODEBOOK_FEASIBILITY_REPORT.md`。
+
+2026-07-29更新：时间一致性门控已经通过开发门槛；Ridge、梯度提升树和小型MLP候选排序器均未通过覆盖—载荷联合门槛，作为负结果冻结。主线不再扩大模型，而是保留解析码本并进入完整可靠性协议回接。证据见`docs/STAGE6R_TEMPORAL_CONTEXT_GATE_REPORT.md`和`docs/STAGE6R_REGRET_CANDIDATE_RANKER_REPORT.md`。
 
 ---
 

@@ -1,0 +1,89 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage6r_regret_candidate_ranker_v1",
+  "status": "registered_before_scripted_execution",
+  "created_date": "2026-07-29",
+  "purpose": "Screen lightweight models that rank fixed action tuples by future epsilon-safe task coverage while retaining exact regret projection.",
+  "evidence_role": "development_model_screening_not_confirmatory",
+  "inputs": {
+    "adaptation_config": "configs/stage6r_few_shot_adaptation_v1.json",
+    "adaptation_result": "results/stage6r/few_shot_adaptation_v1/result.json",
+    "temporal_gate_config": "configs/stage6r_temporal_context_gate_v1.json",
+    "temporal_gate_result": "results/stage6r/temporal_context_gate_v1/result.json"
+  },
+  "outer_split": {
+    "unit": "complete_airborne_activity",
+    "leave_one_activity_out": true,
+    "heldout_future_used_for_training_or_model_selection": false
+  },
+  "training_contexts": {
+    "calibration_budgets": [4, 8, 16],
+    "origins_per_training_activity": 3,
+    "future_horizon_scenes": 32,
+    "minimum_future_scenes": 16,
+    "maximum_candidate_rows_per_context": 3072
+  },
+  "features": {
+    "pooled_spectral_shape_bins": 8,
+    "candidate_action_coordinates": "normalized_by_legal_start_maximum",
+    "candidate_delta": "relative_to_mean_calibration_optimal_action",
+    "calibration_statistics": [
+      "epsilon_coverage",
+      "mean_regret",
+      "regret_standard_deviation",
+      "maximum_regret",
+      "regret_0_9_quantile"
+    ],
+    "future_values_in_feature_matrix": false
+  },
+  "label": {
+    "name": "future_epsilon_safe_coverage",
+    "range": [0.0, 1.0],
+    "epsilon_db": 0.2
+  },
+  "models": {
+    "ridge": {
+      "alpha": 1.0,
+      "standardize_features": true
+    },
+    "hist_gradient_boosting": {
+      "learning_rate": 0.05,
+      "max_iter": 100,
+      "max_leaf_nodes": 15,
+      "l2_regularization": 1.0,
+      "random_state": 20260729
+    },
+    "mlp_32": {
+      "hidden_layer_sizes": [32],
+      "alpha": 0.001,
+      "max_iter": 300,
+      "early_stopping": true,
+      "random_state": 20260729,
+      "standardize_features": true
+    }
+  },
+  "selection": {
+    "codeword_count": 4,
+    "prediction_weight": 0.5,
+    "redundancy_weight": 0.05,
+    "apply_ranker_only_when_temporal_gate_decision_is_ood": true,
+    "known_context_action": "reuse_temporal_gate_bank",
+    "fallback": "exact_regret_projection_then_escape"
+  },
+  "primary_gate": {
+    "minimum_n_values_passing": 3,
+    "minimum_absolute_macro_coverage_gain": 0.005,
+    "minimum_worst_activity_coverage": 0.94,
+    "maximum_macro_payload_savings_loss_percentage_points": 2.0,
+    "maximum_serialized_model_size_bytes": 5242880,
+    "unsafe_coded_action_count": 0
+  },
+  "claim_boundary": [
+    "All campaigns are already-consumed development data.",
+    "Model architectures and hyperparameters are fixed for screening; no heldout activity selects a model inside its fold.",
+    "Training-label candidate sampling may use future labels only inside training activities.",
+    "The model proposes a ranking but cannot authorize an unsafe action.",
+    "Payload accounting excludes the full Stage-6 reliability protocol.",
+    "A positive screening result still requires nested selection and a new external Final."
+  ]
+}

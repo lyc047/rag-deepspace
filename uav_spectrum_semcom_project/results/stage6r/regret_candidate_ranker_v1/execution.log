@@ -1,0 +1,29 @@
+Stage-6R ranker N=8 holdout=aerpaw_packapalooza_2023 complete
+Stage-6R ranker N=8 holdout=aerpaw_lake_wheeler_2024 complete
+Stage-6R ranker N=8 holdout=aerpaw_packapalooza_2024 complete
+Stage-6R ranker N=8 holdout=aerpaw_packapalooza_2025 complete
+Stage-6R ranker N=16 holdout=aerpaw_packapalooza_2023 complete
+Stage-6R ranker N=16 holdout=aerpaw_lake_wheeler_2024 complete
+Stage-6R ranker N=16 holdout=aerpaw_packapalooza_2024 complete
+Stage-6R ranker N=16 holdout=aerpaw_packapalooza_2025 complete
+Stage-6R ranker N=32 holdout=aerpaw_packapalooza_2023 complete
+Stage-6R ranker N=32 holdout=aerpaw_lake_wheeler_2024 complete
+Stage-6R ranker N=32 holdout=aerpaw_packapalooza_2024 complete
+Stage-6R ranker N=32 holdout=aerpaw_packapalooza_2025 complete
+Stage-6R ranker N=64 holdout=aerpaw_packapalooza_2023 complete
+Stage-6R ranker N=64 holdout=aerpaw_lake_wheeler_2024 complete
+Stage-6R ranker N=64 holdout=aerpaw_packapalooza_2024 complete
+Stage-6R ranker N=64 holdout=aerpaw_packapalooza_2025 complete
+{
+  "output": "C:\\Users\\Lenovo\\Desktop\\\u9879\u76ee\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage6r\\regret_candidate_ranker_v1\\result.json",
+  "decision_summary": {
+    "retention_gate_passed": false,
+    "retained_methods": [],
+    "gate_passing_n_values_by_method": {
+      "ridge": [],
+      "hist_gradient_boosting": [],
+      "mlp_32": []
+    },
+    "recommended_next_route": "retain_temporal_analytic_codebook_and_record_ai_negative"
+  }
+}
