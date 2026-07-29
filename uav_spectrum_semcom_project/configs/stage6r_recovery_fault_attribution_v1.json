@@ -1,0 +1,83 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage6r_recovery_fault_attribution_v1",
+  "status": "registered_after_activity_diagnostic_before_execution",
+  "created_date": "2026-07-29",
+  "purpose": "Attribute Stage-6R recovery-install overhead to link and context faults and test whether a versioned short codebook activation protocol has enough counterfactual value to justify implementation.",
+  "evidence_role": "development_only_fault_attribution_and_engineering_counterfactual",
+  "inputs": {
+    "adaptation_config": "configs/stage6r_few_shot_adaptation_v1.json",
+    "temporal_gate_result": "results/stage6r/temporal_context_gate_v1/result.json",
+    "matched_scan_config": "configs/stage6r_matched_clean_scan_v1.json",
+    "matched_scan_result": "results/stage6r/matched_clean_scan_v1/result.json",
+    "activity_diagnostic_result": "results/stage6r/activity_session_diagnostic_v1/result.json",
+    "external_final_access_state": "configs/stage6_external_final_access_state.json"
+  },
+  "frozen_selection": {
+    "matched_clean_target": 0.9,
+    "primary_k": 4,
+    "session_length": "whole_activity",
+    "workpoints_and_action_tuples_may_be_reselected": false
+  },
+  "fault_factors": {
+    "install_loss": {
+      "condition_key": "install_loss_probability",
+      "off": 0.0,
+      "on": 0.1
+    },
+    "task_loss": {
+      "condition_key": "task_loss_probability",
+      "off": 0.0,
+      "on": 0.1
+    },
+    "ack_loss": {
+      "condition_key": "ack_loss_probability",
+      "off": 0.0,
+      "on": 0.2
+    },
+    "delayed_duplicate_ack": {
+      "condition_key": "delayed_duplicate_probability",
+      "off": 0.0,
+      "on": 0.1
+    },
+    "receiver_context_reset": {
+      "condition_key": "receiver_context_reset_probability",
+      "off": 0.0,
+      "on": 0.02
+    }
+  },
+  "attribution_metrics": [
+    "recovery_install_bits_per_scene",
+    "total_bits_per_scene",
+    "task_failure_probability",
+    "unavailability_probability"
+  ],
+  "short_activation_counterfactual": {
+    "candidate_frame_bits": [32, 48, 64, 96, 128],
+    "ack_and_delivery_behavior": "unchanged_from_full_install",
+    "known_bank_only": "Replace every full install attempt only for BANK decisions; leave OOD adapted-codebook installs unchanged.",
+    "cached_all": "Replace all BANK install attempts and OOD recovery attempts; retain the first OOD full install.",
+    "not_an_implemented_protocol": true
+  },
+  "monte_carlo": {
+    "trajectories": 60,
+    "random_seed_must_equal_matched_scan": true,
+    "bootstrap_replicates": 5000,
+    "bootstrap_seed": 20260801,
+    "confidence_level": 0.95
+  },
+  "decision_rules": {
+    "shapley_efficiency_absolute_tolerance": 1e-10,
+    "activation_protocol_entry": "At 64 bits, cached-all equal-activity macro savings is positive for at least three N values and scene-weighted savings lower bound is above zero for all four N values.",
+    "known_bank_protocol_entry": "At 64 bits, known-bank-only equal-activity macro savings is positive for at least three N values.",
+    "counterfactual_cannot_be_reported_as_implemented_gain": true,
+    "negative_attributions_and_interactions_must_be_retained": true
+  },
+  "claim_boundary": [
+    "Fault attribution uses the same four development activities and frozen clean-0.90 workpoints.",
+    "Shapley values describe the registered simulator under the chosen primary fault levels, not causal effects in a deployed radio.",
+    "Short activation accounting is an engineering counterfactual with unchanged delivery behavior; no activation codec or receiver state transition exists yet.",
+    "An activation protocol may be implemented only after this counterfactual passes its preregistered entry rule.",
+    "No new Final signal values may be accessed."
+  ]
+}
