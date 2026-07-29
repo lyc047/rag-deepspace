@@ -1,0 +1,88 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage6r_matched_clean_scan_v1",
+  "status": "registered_after_positive_dry_run_before_scan_execution",
+  "created_date": "2026-07-29",
+  "purpose": "Estimate the Stage-6R matched-clean total-bit Pareto frontier under the primary fault condition after the full-protocol dry-run passed its scan-entry gate.",
+  "evidence_role": "development_only_fair_reliability_scan",
+  "inputs": {
+    "adaptation_config": "configs/stage6r_few_shot_adaptation_v1.json",
+    "temporal_gate_config": "configs/stage6r_temporal_context_gate_v1.json",
+    "temporal_gate_result": "results/stage6r/temporal_context_gate_v1/result.json",
+    "external_final_access_state": "configs/stage6_external_final_access_state.json",
+    "entry_dry_run": "results/stage6r/full_protocol_dry_run_v1/result.json"
+  },
+  "task": {
+    "primary_k": 4,
+    "n_channels": [8, 16, 32, 64],
+    "epsilon_db": 0.2,
+    "outage_penalty_db": 10.0,
+    "codebook_epoch": 2,
+    "exact_action_header_bits": 48
+  },
+  "protocol_freeze": {
+    "calibration_message": "self_contained_exact_multi_query_action_packet",
+    "post_calibration_context_control": "full_hash_verified_codebook_install",
+    "preinstalled_bank_short_activation_is_counted": false,
+    "semantic_suffix": "frozen_stage6_event_trigger_ack_belief_heartbeat_recovery",
+    "analytic_regret_safety_projection": true,
+    "exact_escape_enabled": true,
+    "ai_candidate_ranker_enabled": false,
+    "risk_reservation_enabled": false,
+    "temporal_gate_or_selected_actions_may_be_retuned": false
+  },
+  "conditions": {
+    "primary_fault": {
+      "install_loss_probability": 0.1,
+      "task_loss_probability": 0.1,
+      "ack_loss_probability": 0.2,
+      "delayed_duplicate_probability": 0.1,
+      "receiver_context_reset_probability": 0.02,
+      "include_reset_hypothesis_after_missing_ack": true
+    }
+  },
+  "semantic_working_point_grid": {
+    "heartbeat_silence_scenes": [4, 6, 8, 10, 12, 16, 20, 30, null],
+    "maximum_state_age_minutes": [30.0, 60.0, 120.0],
+    "task_update_open_loop_attempts": [1, 2, 3],
+    "calibration_attempts_equal_task_attempts": true
+  },
+  "exact_reference_grid": {
+    "task_packet_open_loop_attempts": [1, 2, 3],
+    "transmission_rule": "self_contained_exact_actions_every_scene",
+    "feedback_policy": "none"
+  },
+  "matched_clean": {
+    "targets": [0.85, 0.9, 0.92, 0.95, 0.97],
+    "eligibility": "bootstrap_95_percent_lower_confidence_bound_of_mean_clean_rate_reaches_target",
+    "selection": "minimum_mean_resource_equivalent_bits_per_scene",
+    "interpolation": false
+  },
+  "monte_carlo": {
+    "trajectories": 60,
+    "seed": 20260730,
+    "paired_common_random_numbers": true,
+    "bootstrap_replicates": 5000,
+    "confidence_level": 0.95
+  },
+  "decision_rules": {
+    "primary_success": "At one or more matched clean targets of at least 0.90, paired total-bit savings has a 95 percent lower confidence bound above zero.",
+    "strong_effect": "At a matched clean target of at least 0.90, mean total-bit savings is at least 15 percent.",
+    "high_reliability_support": "At least one real non-interpolated semantic workpoint has a 95 percent clean lower bound of at least 0.95.",
+    "protocol_bottleneck": "If high reliability is unavailable or savings collapses, decompose recovery-install, heartbeat, ACK, duplicate, compact, and escape bits before proposing a protocol change.",
+    "negative_results_must_be_retained": true
+  },
+  "safety_gates": {
+    "all_bit_identities_valid": true,
+    "wrong_codebook_decode_count": 0,
+    "all_four_n_values_required": true,
+    "external_final_access_count_must_not_increase": true
+  },
+  "claim_boundary": [
+    "This is a development-only matched-reliability scan, not external Final evidence.",
+    "The four activities and temporal gate were already used during development, so the scan cannot establish external generalization.",
+    "No temporal-gate threshold, selected action tuple, or codebook size may be retuned from this result.",
+    "Full codebook installation is conservatively counted after every independent activity calibration.",
+    "Only real simulated workpoints are eligible; curve interpolation is not used for success claims."
+  ]
+}
