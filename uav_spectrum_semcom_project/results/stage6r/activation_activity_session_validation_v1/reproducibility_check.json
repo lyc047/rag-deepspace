@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage6r_activation_activity_session_validation_v1",
+  "verification_status": "VERIFIED",
+  "verification_date": "2026-07-29",
+  "method": "deterministic_rerun_with_identical_frozen_config_seed_and_environment",
+  "original_result": "results/stage6r/activation_activity_session_validation_v1/result.json",
+  "rerun_result": "results/stage6r/activation_activity_session_validation_v1/repro_result.json",
+  "comparison": {
+    "excluded_field": "elapsed_seconds",
+    "all_other_fields_exactly_equal": true,
+    "canonical_sha256_excluding_elapsed_seconds": "a1815953c2e61be017c8b57e11425d24eb5d5d77d453c02fb45d68d90e144833",
+    "original_elapsed_seconds": 61.718435700000555,
+    "rerun_elapsed_seconds": 59.4909688000007
+  },
+  "verdict": "REPRODUCIBLE",
+  "claim_boundary": [
+    "This verifies deterministic software reproducibility in the same environment.",
+    "It does not provide independent-data generalization evidence.",
+    "The external Final access count remained unchanged."
+  ]
+}

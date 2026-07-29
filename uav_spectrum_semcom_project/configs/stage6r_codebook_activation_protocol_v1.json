@@ -1,0 +1,80 @@
+{
+  "version": "1.0",
+  "protocol_id": "stage6r_codebook_activation_protocol_v1",
+  "status": "registered_before_codec_and_state_machine_implementation",
+  "created_date": "2026-07-29",
+  "purpose": "Replace repeated full manifests for known preinstalled activity codebooks with a fail-closed fixed-width activation message.",
+  "scope": {
+    "primary": "known_BANK_codebooks_only",
+    "ood_adapted_codebook": "full_install_only",
+    "dynamic_ood_cache": "deferred",
+    "external_final_access": false
+  },
+  "activation_frame": {
+    "total_bits": 64,
+    "fields": [
+      {"name": "magic", "bits": 8},
+      {"name": "version", "bits": 2},
+      {"name": "node_id", "bits": 6},
+      {"name": "catalog_epoch", "bits": 8},
+      {"name": "bank_id", "bits": 8},
+      {"name": "codebook_epoch", "bits": 8},
+      {"name": "codebook_tag", "bits": 16},
+      {"name": "activation_epoch", "bits": 8}
+    ],
+    "codebook_tag": "first_16_bits_of_full_manifest_sha256",
+    "ack": "existing_24_bit_cumulative_ack_of_activation_epoch",
+    "epoch_namespace": "activation_and_compact_updates_share_one_modulo_256_epoch_space"
+  },
+  "catalog": {
+    "storage": "receiver_nonvolatile_preinstalled_registry",
+    "context_reset_retains_catalog": true,
+    "catalog_epoch_wrap_requires_reprovisioning": true,
+    "bank_ids_unique_within_catalog": true,
+    "full_manifest_sha256_verified_when_catalog_is_provisioned": true
+  },
+  "receiver_acceptance": [
+    "frame_identity_and_width_are_valid",
+    "catalog_epoch_matches",
+    "bank_id_exists",
+    "declared_codebook_tag_matches_the_preinstalled_full_manifest",
+    "codebook_epoch_is_accepted_by_the_sender_receiver_session"
+  ],
+  "fail_closed": {
+    "mismatch_action": "reject_activation_and_send_no_ack",
+    "compact_update_before_confirmed_activation": "reject",
+    "maximum_activation_attempts_before_full_install_fallback": 2,
+    "full_install_fallback_mandatory": true,
+    "wrong_codebook_action_execution_allowed": false
+  },
+  "bit_accounting": {
+    "activation_attempt_bits": 64,
+    "activation_ack_bits": 24,
+    "fallback_full_install_counted_at_actual_manifest_width": true,
+    "repeated_activation_attempts_counted_as_actual_forward_bits": true,
+    "no_counterfactual_bit_substitution_after_implementation": true
+  },
+  "implementation_stages": [
+    "codec_and_catalog_unit_tests",
+    "activation_state_machine_unit_tests",
+    "full_reliability_simulator_integration",
+    "small_protocol_dry_run",
+    "frozen_activity_and_session_length_revalidation"
+  ],
+  "safety_gates": {
+    "activation_frame_exactly_64_bits": true,
+    "wrong_catalog_epoch_rejected": true,
+    "wrong_bank_id_rejected": true,
+    "wrong_codebook_tag_rejected": true,
+    "activation_ack_only_after_successful_catalog_resolution": true,
+    "wrong_codebook_decode_count": 0,
+    "bit_ledger_identity_required": true
+  },
+  "claim_boundary": [
+    "The previous 64-bit result was a counterfactual; only results from this implemented state machine may be reported as protocol performance.",
+    "A 16-bit tag is an in-session identity guard, not a replacement for full SHA-256 verification during catalog provisioning.",
+    "This protocol assumes the preinstalled catalog survives the registered context-reset event.",
+    "Hard device loss of the nonvolatile catalog is outside v1 and must force full provisioning.",
+    "No new Final data may be accessed during development."
+  ]
+}

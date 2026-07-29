@@ -1,0 +1,1934 @@
+{
+  "version": "1.0",
+  "status": "stage6r_activation_protocol_dry_run_complete",
+  "verification_status": "ANALYZED",
+  "experiment_id": "stage6r_activation_protocol_dry_run_v1",
+  "config_sha256": "a960f5e20efac0b595ae9443e39ef7c03d6151257f781032444bd415bbc08661",
+  "input_hashes": {
+    "activation_protocol": "4f89d46baea177a3bc6ca958a46dbf27dc8e772c21aa0b32cf21e5115b6afc36",
+    "adaptation_config": "b5771f520b619c9e967f5b505f01e5d4cb0d856b15e2a8ddca789d6e7b839dff",
+    "temporal_gate_result": "eb4298131e1f72a9b01698d2725b56b14bd3b5e280ba0b754608c6d1f1592c99",
+    "matched_scan_config": "6598125579d0e935a6003ce4d3b5c2997fab1746ffeda5ba51c94b93e3405fb3",
+    "matched_scan_result": "47ab34451eb2565c5dc0e4d482ab48cd0c1aebec7404ea399791e2241891cd88",
+    "external_final_access_state": "1b19c8500adaf7cfeeccc151c1e98bc54eb0e93d90c411f78f5429f827f8ece5"
+  },
+  "external_access_status_before_run": "access_consumed_final_execution_failed",
+  "external_access_count_before_run": 1,
+  "n_results": {
+    "8": {
+      "n_channels": 8,
+      "activity_results": {
+        "aerpaw_packapalooza_2023": {
+          "decision": "OOD",
+          "scene_count": 364,
+          "full_manifest": {
+            "clean_rate": {
+              "mean": 0.8965201465201464,
+              "ci_lower": 0.8775125915750914,
+              "ci_upper": 0.9157509157509157
+            },
+            "availability_rate": {
+              "mean": 0.9047619047619048,
+              "ci_lower": 0.8850675366300366,
+              "ci_upper": 0.923076923076923
+            },
+            "total_bits_per_scene": {
+              "mean": 44.97962454212453,
+              "ci_lower": 42.61671245421246,
+              "ci_upper": 47.163478708791196
+            },
+            "context_bits_per_scene": {
+              "mean": 28.215659340659343,
+              "ci_lower": 26.10370879120879,
+              "ci_upper": 30.074175824175825
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation": {
+            "clean_rate": {
+              "mean": 0.8965201465201464,
+              "ci_lower": 0.8768315018315018,
+              "ci_upper": 0.9162087912087912
+            },
+            "availability_rate": {
+              "mean": 0.9047619047619048,
+              "ci_lower": 0.8841575091575091,
+              "ci_upper": 0.9251373626373627
+            },
+            "total_bits_per_scene": {
+              "mean": 44.97962454212453,
+              "ci_lower": 42.51354739010989,
+              "ci_upper": 47.18411172161172
+            },
+            "context_bits_per_scene": {
+              "mean": 28.215659340659343,
+              "ci_lower": 26.10370879120879,
+              "ci_upper": 30.158653846153843
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "exact": {
+            "clean_rate": {
+              "mean": 0.9814560439560439,
+              "ci_lower": 0.9780219780219778,
+              "ci_upper": 0.9846611721611721
+            },
+            "availability_rate": {
+              "mean": 0.9967948717948718,
+              "ci_lower": 0.9945054945054945,
+              "ci_upper": 0.9988553113553115
+            },
+            "total_bits_per_scene": {
+              "mean": 56.0,
+              "ci_lower": 56.0,
+              "ci_upper": 56.0
+            },
+            "context_bits_per_scene": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation_savings_vs_exact_percentage": {
+            "mean": 19.679241889063317,
+            "ci_lower": 15.669816604526428,
+            "ci_upper": 23.890561633307165
+          },
+          "mean_activation_attempt_count": 0.0,
+          "mean_full_fallback_count": 0.0
+        },
+        "aerpaw_lake_wheeler_2024": {
+          "decision": "BANK:aerpaw_packapalooza_2024",
+          "scene_count": 67,
+          "full_manifest": {
+            "clean_rate": {
+              "mean": 0.8905472636815919,
+              "ci_lower": 0.829570895522388,
+              "ci_upper": 0.9427860696517413
+            },
+            "availability_rate": {
+              "mean": 0.9067164179104478,
+              "ci_lower": 0.8407960199004973,
+              "ci_upper": 0.9601990049751242
+            },
+            "total_bits_per_scene": {
+              "mean": 68.33582089552239,
+              "ci_lower": 58.02322761194029,
+              "ci_upper": 78.40332711442785
+            },
+            "context_bits_per_scene": {
+              "mean": 43.09701492537314,
+              "ci_lower": 34.47761194029851,
+              "ci_upper": 52.20724502487556
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation": {
+            "clean_rate": {
+              "mean": 0.8905472636815919,
+              "ci_lower": 0.8320584577114428,
+              "ci_upper": 0.945273631840796
+            },
+            "availability_rate": {
+              "mean": 0.9067164179104478,
+              "ci_lower": 0.8383084577114429,
+              "ci_upper": 0.9639303482587064
+            },
+            "total_bits_per_scene": {
+              "mean": 34.39925373134328,
+              "ci_lower": 30.150217661691542,
+              "ci_upper": 39.88973880597014
+            },
+            "context_bits_per_scene": {
+              "mean": 9.16044776119403,
+              "ci_lower": 6.129353233830845,
+              "ci_upper": 13.390547263681592
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "exact": {
+            "clean_rate": {
+              "mean": 0.9776119402985074,
+              "ci_lower": 0.9689054726368158,
+              "ci_upper": 0.9850746268656715
+            },
+            "availability_rate": {
+              "mean": 0.9962686567164178,
+              "ci_lower": 0.990049751243781,
+              "ci_upper": 1.0
+            },
+            "total_bits_per_scene": {
+              "mean": 56.0,
+              "ci_lower": 56.0,
+              "ci_upper": 56.0
+            },
+            "context_bits_per_scene": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation_savings_vs_exact_percentage": {
+            "mean": 38.572761194029844,
+            "ci_lower": 29.428415955934614,
+            "ci_upper": 46.57527096659559
+          },
+          "mean_activation_attempt_count": 7.083333333333333,
+          "mean_full_fallback_count": 0.75
+        },
+        "aerpaw_packapalooza_2024": {
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "scene_count": 67,
+          "full_manifest": {
+            "clean_rate": {
+              "mean": 0.9241293532338309,
+              "ci_lower": 0.8880597014925375,
+              "ci_upper": 0.9564987562189055
+            },
+            "availability_rate": {
+              "mean": 0.9427860696517413,
+              "ci_lower": 0.9092039800995023,
+              "ci_upper": 0.9763681592039801
+            },
+            "total_bits_per_scene": {
+              "mean": 71.6679104477612,
+              "ci_lower": 62.51738184079602,
+              "ci_upper": 81.16206467661691
+            },
+            "context_bits_per_scene": {
+              "mean": 40.79477611940298,
+              "ci_lower": 32.81166044776121,
+              "ci_upper": 48.777891791044716
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation": {
+            "clean_rate": {
+              "mean": 0.9241293532338309,
+              "ci_lower": 0.8893034825870646,
+              "ci_upper": 0.9577114427860695
+            },
+            "availability_rate": {
+              "mean": 0.9427860696517413,
+              "ci_lower": 0.9079601990049752,
+              "ci_upper": 0.9763681592039801
+            },
+            "total_bits_per_scene": {
+              "mean": 39.745024875621894,
+              "ci_lower": 35.8181592039801,
+              "ci_upper": 43.48644278606965
+            },
+            "context_bits_per_scene": {
+              "mean": 8.871890547263682,
+              "ci_lower": 6.279633084577113,
+              "ci_upper": 11.70273631840796
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "exact": {
+            "clean_rate": {
+              "mean": 0.9800995024875622,
+              "ci_lower": 0.9713930348258705,
+              "ci_upper": 0.9888059701492535
+            },
+            "availability_rate": {
+              "mean": 0.9975124378109452,
+              "ci_lower": 0.9925373134328357,
+              "ci_upper": 1.0
+            },
+            "total_bits_per_scene": {
+              "mean": 56.0,
+              "ci_lower": 56.0,
+              "ci_upper": 56.0
+            },
+            "context_bits_per_scene": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation_savings_vs_exact_percentage": {
+            "mean": 29.02674129353234,
+            "ci_lower": 21.6439565565032,
+            "ci_upper": 35.79107809168442
+          },
+          "mean_activation_attempt_count": 6.833333333333333,
+          "mean_full_fallback_count": 0.5833333333333334
+        },
+        "aerpaw_packapalooza_2025": {
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "scene_count": 66,
+          "full_manifest": {
+            "clean_rate": {
+              "mean": 0.9141414141414144,
+              "ci_lower": 0.88510101010101,
+              "ci_upper": 0.943181818181818
+            },
+            "availability_rate": {
+              "mean": 0.9482323232323231,
+              "ci_lower": 0.9166666666666666,
+              "ci_upper": 0.9747474747474748
+            },
+            "total_bits_per_scene": {
+              "mean": 82.04040404040404,
+              "ci_lower": 71.64453914141414,
+              "ci_upper": 93.1960227272727
+            },
+            "context_bits_per_scene": {
+              "mean": 50.457070707070706,
+              "ci_lower": 41.88888888888888,
+              "ci_upper": 59.02525252525252
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation": {
+            "clean_rate": {
+              "mean": 0.9141414141414144,
+              "ci_lower": 0.883838383838384,
+              "ci_upper": 0.941919191919192
+            },
+            "availability_rate": {
+              "mean": 0.9482323232323231,
+              "ci_lower": 0.9179292929292929,
+              "ci_upper": 0.9772727272727272
+            },
+            "total_bits_per_scene": {
+              "mean": 41.33459595959596,
+              "ci_lower": 36.9302398989899,
+              "ci_upper": 46.38778409090909
+            },
+            "context_bits_per_scene": {
+              "mean": 9.751262626262625,
+              "ci_lower": 7.263888888888888,
+              "ci_upper": 12.553030303030303
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "exact": {
+            "clean_rate": {
+              "mean": 0.9595959595959594,
+              "ci_lower": 0.9457070707070706,
+              "ci_upper": 0.9722222222222223
+            },
+            "availability_rate": {
+              "mean": 0.9962121212121211,
+              "ci_lower": 0.9924242424242423,
+              "ci_upper": 1.0
+            },
+            "total_bits_per_scene": {
+              "mean": 56.0,
+              "ci_lower": 56.0,
+              "ci_upper": 56.0
+            },
+            "context_bits_per_scene": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation_savings_vs_exact_percentage": {
+            "mean": 26.1882215007215,
+            "ci_lower": 17.69198683261184,
+            "ci_upper": 33.956135010822514
+          },
+          "mean_activation_attempt_count": 8.583333333333334,
+          "mean_full_fallback_count": 0.9166666666666666
+        }
+      },
+      "scene_weighted": {
+        "full_manifest": {
+          "clean_rate": {
+            "mean": 0.9011524822695035,
+            "ci_lower": 0.8844525709219858,
+            "ci_upper": 0.9185874704491725
+          },
+          "availability_rate": {
+            "mean": 0.9145981087470448,
+            "ci_lower": 0.8967198581560282,
+            "ci_upper": 0.9320367907801419
+          },
+          "total_bits_per_scene": {
+            "mean": 55.26152482269503,
+            "ci_lower": 51.8896978427896,
+            "ci_upper": 58.009810874704485
+          },
+          "context_bits_per_scene": {
+            "mean": 34.080526004728135,
+            "ci_lower": 31.234600325059105,
+            "ci_upper": 36.44875886524823
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0
+          }
+        },
+        "activation": {
+          "clean_rate": {
+            "mean": 0.9011524822695035,
+            "ci_lower": 0.8838615543735224,
+            "ci_upper": 0.9175568853427898
+          },
+          "availability_rate": {
+            "mean": 0.9145981087470448,
+            "ci_lower": 0.8981937056737587,
+            "ci_upper": 0.9324837470449171
+          },
+          "total_bits_per_scene": {
+            "mean": 42.674349881796694,
+            "ci_lower": 40.454909131205675,
+            "ci_upper": 44.52543956855792
+          },
+          "context_bits_per_scene": {
+            "mean": 21.493351063829788,
+            "ci_lower": 19.672044917257683,
+            "ci_upper": 23.03758865248227
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0
+          }
+        },
+        "exact": {
+          "clean_rate": {
+            "mean": 0.9782801418439716,
+            "ci_lower": 0.975177304964539,
+            "ci_upper": 0.9812352245862885
+          },
+          "availability_rate": {
+            "mean": 0.9967494089834515,
+            "ci_lower": 0.9949726654846336,
+            "ci_upper": 0.9985224586288416
+          },
+          "total_bits_per_scene": {
+            "mean": 56.0,
+            "ci_lower": 56.0,
+            "ci_upper": 56.0
+          },
+          "context_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0
+          }
+        },
+        "activation_savings_vs_exact_percentage": {
+          "mean": 23.79580378250591,
+          "ci_lower": 20.401587829280647,
+          "ci_upper": 27.69693515704154
+        }
+      },
+      "equal_activity_macro_activation_savings_vs_exact_percentage": {
+        "mean": 28.36674146933675,
+        "ci_lower": 24.22635946813677,
+        "ci_upper": 32.73279785893891
+      },
+      "checks": {
+        "activation_bits_below_full_manifest": true,
+        "activation_clean_loss_vs_full_manifest": 0.0,
+        "all_wrong_codebook_decode_counts_zero": true,
+        "ood_activation_attempt_count_zero": true
+      }
+    },
+    "16": {
+      "n_channels": 16,
+      "activity_results": {
+        "aerpaw_packapalooza_2023": {
+          "decision": "OOD",
+          "scene_count": 364,
+          "full_manifest": {
+            "clean_rate": {
+              "mean": 0.9008699633699634,
+              "ci_lower": 0.8717891483516482,
+              "ci_upper": 0.9278846153846153
+            },
+            "availability_rate": {
+              "mean": 0.9015567765567766,
+              "ci_lower": 0.8729395604395606,
+              "ci_upper": 0.9285714285714285
+            },
+            "total_bits_per_scene": {
+              "mean": 41.183608058608066,
+              "ci_lower": 37.8743131868132,
+              "ci_upper": 45.20987866300367
+            },
+            "context_bits_per_scene": {
+              "mean": 19.41758241758242,
+              "ci_lower": 16.692307692307693,
+              "ci_upper": 22.994505494505493
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation": {
+            "clean_rate": {
+              "mean": 0.9008699633699634,
+              "ci_lower": 0.8715602106227107,
+              "ci_upper": 0.9285714285714285
+            },
+            "availability_rate": {
+              "mean": 0.9015567765567766,
+              "ci_lower": 0.8740842490842491,
+              "ci_upper": 0.9276556776556776
+            },
+            "total_bits_per_scene": {
+              "mean": 41.183608058608066,
+              "ci_lower": 37.89714972527473,
+              "ci_upper": 45.2321314102564
+            },
+            "context_bits_per_scene": {
+              "mean": 19.41758241758242,
+              "ci_lower": 16.60714285714286,
+              "ci_upper": 22.90934065934066
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "exact": {
+            "clean_rate": {
+              "mean": 0.9791666666666665,
+              "ci_lower": 0.9743589743589743,
+              "ci_upper": 0.9837454212454214
+            },
+            "availability_rate": {
+              "mean": 0.9977106227106228,
+              "ci_lower": 0.9958791208791209,
+              "ci_upper": 0.9993131868131867
+            },
+            "total_bits_per_scene": {
+              "mean": 59.0,
+              "ci_lower": 59.0,
+              "ci_upper": 59.0
+            },
+            "context_bits_per_scene": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation_savings_vs_exact_percentage": {
+            "mean": 30.19727447693549,
+            "ci_lower": 23.55567455143726,
+            "ci_upper": 35.7381495623021
+          },
+          "mean_activation_attempt_count": 0.0,
+          "mean_full_fallback_count": 0.0
+        },
+        "aerpaw_lake_wheeler_2024": {
+          "decision": "BANK:aerpaw_packapalooza_2024",
+          "scene_count": 67,
+          "full_manifest": {
+            "clean_rate": {
+              "mean": 0.9390547263681593,
+              "ci_lower": 0.9066853233830846,
+              "ci_upper": 0.9689054726368159
+            },
+            "availability_rate": {
+              "mean": 0.9415422885572141,
+              "ci_lower": 0.9067164179104479,
+              "ci_upper": 0.9714241293532337
+            },
+            "total_bits_per_scene": {
+              "mean": 68.4452736318408,
+              "ci_lower": 58.769465174129365,
+              "ci_upper": 78.08392412935324
+            },
+            "context_bits_per_scene": {
+              "mean": 30.223880597014926,
+              "ci_lower": 22.16417910447761,
+              "ci_upper": 38.29617537313427
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation": {
+            "clean_rate": {
+              "mean": 0.9390547263681593,
+              "ci_lower": 0.9079601990049753,
+              "ci_upper": 0.9676616915422884
+            },
+            "availability_rate": {
+              "mean": 0.9415422885572141,
+              "ci_lower": 0.9092039800995027,
+              "ci_upper": 0.9713930348258707
+            },
+            "total_bits_per_scene": {
+              "mean": 43.42164179104478,
+              "ci_lower": 40.17823383084578,
+              "ci_upper": 46.78659825870646
+            },
+            "context_bits_per_scene": {
+              "mean": 5.200248756218905,
+              "ci_lower": 3.661691542288557,
+              "ci_upper": 6.764925373134328
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "exact": {
+            "clean_rate": {
+              "mean": 0.9751243781094527,
+              "ci_lower": 0.962686567164179,
+              "ci_upper": 0.9875621890547263
+            },
+            "availability_rate": {
+              "mean": 0.9975124378109452,
+              "ci_lower": 0.9937810945273631,
+              "ci_upper": 1.0
+            },
+            "total_bits_per_scene": {
+              "mean": 59.0,
+              "ci_lower": 59.0,
+              "ci_upper": 59.0
+            },
+            "context_bits_per_scene": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation_savings_vs_exact_percentage": {
+            "mean": 26.40399696433089,
+            "ci_lower": 20.54130828906316,
+            "ci_upper": 31.985306518256174
+          },
+          "mean_activation_attempt_count": 4.916666666666667,
+          "mean_full_fallback_count": 0.5
+        },
+        "aerpaw_packapalooza_2024": {
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "scene_count": 67,
+          "full_manifest": {
+            "clean_rate": {
+              "mean": 0.9701492537313432,
+              "ci_lower": 0.9465174129353233,
+              "ci_upper": 0.9900808457711441
+            },
+            "availability_rate": {
+              "mean": 0.9701492537313432,
+              "ci_lower": 0.9452736318407959,
+              "ci_upper": 0.9912935323383084
+            },
+            "total_bits_per_scene": {
+              "mean": 75.181592039801,
+              "ci_lower": 67.1087686567164,
+              "ci_upper": 84.38333333333334
+            },
+            "context_bits_per_scene": {
+              "mean": 28.912935323383085,
+              "ci_lower": 22.05223880597015,
+              "ci_upper": 36.263681592039795
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation": {
+            "clean_rate": {
+              "mean": 0.9701492537313432,
+              "ci_lower": 0.9465174129353233,
+              "ci_upper": 0.990049751243781
+            },
+            "availability_rate": {
+              "mean": 0.9701492537313432,
+              "ci_lower": 0.9465174129353233,
+              "ci_upper": 0.990049751243781
+            },
+            "total_bits_per_scene": {
+              "mean": 51.786069651741286,
+              "ci_lower": 48.52207711442786,
+              "ci_upper": 55.32356965174129
+            },
+            "context_bits_per_scene": {
+              "mean": 5.5174129353233825,
+              "ci_lower": 3.6616915422885565,
+              "ci_upper": 7.7838930348258675
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "exact": {
+            "clean_rate": {
+              "mean": 0.9639303482587066,
+              "ci_lower": 0.9539800995024876,
+              "ci_upper": 0.972636815920398
+            },
+            "availability_rate": {
+              "mean": 0.9962686567164178,
+              "ci_lower": 0.9925373134328357,
+              "ci_upper": 1.0
+            },
+            "total_bits_per_scene": {
+              "mean": 59.0,
+              "ci_lower": 59.0,
+              "ci_upper": 59.0
+            },
+            "context_bits_per_scene": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation_savings_vs_exact_percentage": {
+            "mean": 12.227000590268995,
+            "ci_lower": 6.146281305337723,
+            "ci_upper": 17.966312505270256
+          },
+          "mean_activation_attempt_count": 4.75,
+          "mean_full_fallback_count": 0.25
+        },
+        "aerpaw_packapalooza_2025": {
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "scene_count": 66,
+          "full_manifest": {
+            "clean_rate": {
+              "mean": 0.9191919191919191,
+              "ci_lower": 0.8800189393939393,
+              "ci_upper": 0.9545454545454546
+            },
+            "availability_rate": {
+              "mean": 0.9267676767676769,
+              "ci_lower": 0.8863636363636364,
+              "ci_upper": 0.9633838383838383
+            },
+            "total_bits_per_scene": {
+              "mean": 105.61868686868685,
+              "ci_lower": 96.87411616161617,
+              "ci_upper": 115.21319444444443
+            },
+            "context_bits_per_scene": {
+              "mean": 51.23989898989899,
+              "ci_lower": 43.77777777777778,
+              "ci_upper": 59.199494949494955
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation": {
+            "clean_rate": {
+              "mean": 0.9191919191919191,
+              "ci_lower": 0.8813131313131314,
+              "ci_upper": 0.9583333333333331
+            },
+            "availability_rate": {
+              "mean": 0.9267676767676769,
+              "ci_lower": 0.883838383838384,
+              "ci_upper": 0.9646464646464646
+            },
+            "total_bits_per_scene": {
+              "mean": 62.70202020202021,
+              "ci_lower": 60.14633838383838,
+              "ci_upper": 65.6415404040404
+            },
+            "context_bits_per_scene": {
+              "mean": 8.323232323232324,
+              "ci_lower": 7.03030303030303,
+              "ci_upper": 9.696969696969697
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "exact": {
+            "clean_rate": {
+              "mean": 0.960858585858586,
+              "ci_lower": 0.9482323232323232,
+              "ci_upper": 0.9734848484848485
+            },
+            "availability_rate": {
+              "mean": 0.9987373737373737,
+              "ci_lower": 0.9962121212121211,
+              "ci_upper": 1.0
+            },
+            "total_bits_per_scene": {
+              "mean": 59.0,
+              "ci_lower": 59.0,
+              "ci_upper": 59.0
+            },
+            "context_bits_per_scene": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation_savings_vs_exact_percentage": {
+            "mean": -6.274610511898648,
+            "ci_lower": -11.009030987844543,
+            "ci_upper": -1.8316640986132524
+          },
+          "mean_activation_attempt_count": 8.583333333333334,
+          "mean_full_fallback_count": 0.25
+        }
+      },
+      "scene_weighted": {
+        "full_manifest": {
+          "clean_rate": {
+            "mean": 0.9157801418439715,
+            "ci_lower": 0.8953826832151298,
+            "ci_upper": 0.933658392434988
+          },
+          "availability_rate": {
+            "mean": 0.9174054373522457,
+            "ci_lower": 0.8976063829787234,
+            "ci_upper": 0.935582890070922
+          },
+          "total_bits_per_scene": {
+            "mean": 56.00118203309694,
+            "ci_lower": 53.09776152482269,
+            "ci_upper": 59.72095892434987
+          },
+          "context_bits_per_scene": {
+            "mean": 25.553191489361705,
+            "ci_lower": 23.110043587470454,
+            "ci_upper": 28.591825502364067
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0
+          }
+        },
+        "activation": {
+          "clean_rate": {
+            "mean": 0.9157801418439715,
+            "ci_lower": 0.8956818853427895,
+            "ci_upper": 0.9338098404255318
+          },
+          "availability_rate": {
+            "mean": 0.9174054373522457,
+            "ci_lower": 0.8968676122931442,
+            "ci_upper": 0.9348441193853427
+          },
+          "total_bits_per_scene": {
+            "mean": 45.22709810874705,
+            "ci_lower": 42.83813164893617,
+            "ci_upper": 48.21966976950354
+          },
+          "context_bits_per_scene": {
+            "mean": 14.77910756501182,
+            "ci_lower": 12.971490839243499,
+            "ci_upper": 17.129465868794323
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0
+          }
+        },
+        "exact": {
+          "clean_rate": {
+            "mean": 0.9747340425531915,
+            "ci_lower": 0.9714834515366432,
+            "ci_upper": 0.9785756501182035
+          },
+          "availability_rate": {
+            "mean": 0.9976359338061466,
+            "ci_lower": 0.9958628841607565,
+            "ci_upper": 0.9989657210401891
+          },
+          "total_bits_per_scene": {
+            "mean": 59.0,
+            "ci_lower": 59.0,
+            "ci_upper": 59.0
+          },
+          "context_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0
+          }
+        },
+        "activation_savings_vs_exact_percentage": {
+          "mean": 23.34390151059823,
+          "ci_lower": 18.267670393076088,
+          "ci_upper": 27.38365613855832
+        }
+      },
+      "equal_activity_macro_activation_savings_vs_exact_percentage": {
+        "mean": 15.638415379909183,
+        "ci_lower": 12.071256338999982,
+        "ci_upper": 18.86351585450766
+      },
+      "checks": {
+        "activation_bits_below_full_manifest": true,
+        "activation_clean_loss_vs_full_manifest": 0.0,
+        "all_wrong_codebook_decode_counts_zero": true,
+        "ood_activation_attempt_count_zero": true
+      }
+    },
+    "32": {
+      "n_channels": 32,
+      "activity_results": {
+        "aerpaw_packapalooza_2023": {
+          "decision": "OOD",
+          "scene_count": 364,
+          "full_manifest": {
+            "clean_rate": {
+              "mean": 0.8848443223443224,
+              "ci_lower": 0.8569081959706959,
+              "ci_upper": 0.913003663003663
+            },
+            "availability_rate": {
+              "mean": 0.8853021978021979,
+              "ci_lower": 0.8555345695970695,
+              "ci_upper": 0.913003663003663
+            },
+            "total_bits_per_scene": {
+              "mean": 42.75915750915751,
+              "ci_lower": 40.743692765567765,
+              "ci_upper": 44.74013850732601
+            },
+            "context_bits_per_scene": {
+              "mean": 19.91758241758242,
+              "ci_lower": 18.114697802197803,
+              "ci_upper": 21.377060439560438
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation": {
+            "clean_rate": {
+              "mean": 0.8848443223443224,
+              "ci_lower": 0.855992445054945,
+              "ci_upper": 0.9125457875457875
+            },
+            "availability_rate": {
+              "mean": 0.8853021978021979,
+              "ci_lower": 0.8580528846153845,
+              "ci_upper": 0.9127861721611721
+            },
+            "total_bits_per_scene": {
+              "mean": 42.75915750915751,
+              "ci_lower": 40.668017399267406,
+              "ci_upper": 44.690922619047626
+            },
+            "context_bits_per_scene": {
+              "mean": 19.91758241758242,
+              "ci_lower": 18.200549450549453,
+              "ci_upper": 21.377060439560438
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "exact": {
+            "clean_rate": {
+              "mean": 0.975503663003663,
+              "ci_lower": 0.9711538461538461,
+              "ci_upper": 0.9796245421245421
+            },
+            "availability_rate": {
+              "mean": 0.9972527472527476,
+              "ci_lower": 0.995650183150183,
+              "ci_upper": 0.9984031593406595
+            },
+            "total_bits_per_scene": {
+              "mean": 62.0,
+              "ci_lower": 62.0,
+              "ci_upper": 62.0
+            },
+            "context_bits_per_scene": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation_savings_vs_exact_percentage": {
+            "mean": 31.033616920713698,
+            "ci_lower": 27.8217036659577,
+            "ci_upper": 34.51566746425617
+          },
+          "mean_activation_attempt_count": 0.0,
+          "mean_full_fallback_count": 0.0
+        },
+        "aerpaw_lake_wheeler_2024": {
+          "decision": "BANK:aerpaw_packapalooza_2024",
+          "scene_count": 67,
+          "full_manifest": {
+            "clean_rate": {
+              "mean": 0.9104477611940297,
+              "ci_lower": 0.8706467661691542,
+              "ci_upper": 0.949004975124378
+            },
+            "availability_rate": {
+              "mean": 0.9154228855721392,
+              "ci_lower": 0.876865671641791,
+              "ci_upper": 0.9539800995024875
+            },
+            "total_bits_per_scene": {
+              "mean": 69.54726368159203,
+              "ci_lower": 62.79965796019901,
+              "ci_upper": 77.78414179104476
+            },
+            "context_bits_per_scene": {
+              "mean": 29.044776119402986,
+              "ci_lower": 23.339552238805975,
+              "ci_upper": 36.30597014925373
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation": {
+            "clean_rate": {
+              "mean": 0.9104477611940297,
+              "ci_lower": 0.8718905472636815,
+              "ci_upper": 0.9502487562189055
+            },
+            "availability_rate": {
+              "mean": 0.9154228855721392,
+              "ci_lower": 0.8780783582089552,
+              "ci_upper": 0.9527363184079601
+            },
+            "total_bits_per_scene": {
+              "mean": 46.277363184079604,
+              "ci_lower": 42.981312189054734,
+              "ci_upper": 50.65450870646765
+            },
+            "context_bits_per_scene": {
+              "mean": 5.774875621890547,
+              "ci_lower": 3.6616915422885565,
+              "ci_upper": 9.08457711442786
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "exact": {
+            "clean_rate": {
+              "mean": 0.9713930348258707,
+              "ci_lower": 0.9614427860696516,
+              "ci_upper": 0.9800995024875622
+            },
+            "availability_rate": {
+              "mean": 0.9937810945273631,
+              "ci_lower": 0.990049751243781,
+              "ci_upper": 0.9975124378109452
+            },
+            "total_bits_per_scene": {
+              "mean": 62.0,
+              "ci_lower": 62.0,
+              "ci_upper": 62.0
+            },
+            "context_bits_per_scene": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation_savings_vs_exact_percentage": {
+            "mean": 25.359091638581287,
+            "ci_lower": 17.651259829882846,
+            "ci_upper": 30.767583453699245
+          },
+          "mean_activation_attempt_count": 4.416666666666667,
+          "mean_full_fallback_count": 0.3333333333333333
+        },
+        "aerpaw_packapalooza_2024": {
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "scene_count": 67,
+          "full_manifest": {
+            "clean_rate": {
+              "mean": 0.9228855721393034,
+              "ci_lower": 0.8930348258706468,
+              "ci_upper": 0.9502487562189054
+            },
+            "availability_rate": {
+              "mean": 0.9291044776119403,
+              "ci_lower": 0.8992537313432836,
+              "ci_upper": 0.9589552238805971
+            },
+            "total_bits_per_scene": {
+              "mean": 86.69527363184079,
+              "ci_lower": 80.73255597014925,
+              "ci_upper": 93.31380597014925
+            },
+            "context_bits_per_scene": {
+              "mean": 36.590796019900495,
+              "ci_lower": 31.077114427860696,
+              "ci_upper": 42.1170087064676
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation": {
+            "clean_rate": {
+              "mean": 0.9228855721393034,
+              "ci_lower": 0.8942786069651741,
+              "ci_upper": 0.9514925373134328
+            },
+            "availability_rate": {
+              "mean": 0.9291044776119403,
+              "ci_lower": 0.8992537313432836,
+              "ci_upper": 0.9589552238805968
+            },
+            "total_bits_per_scene": {
+              "mean": 55.915422885572134,
+              "ci_lower": 53.7660447761194,
+              "ci_upper": 58.01504975124379
+            },
+            "context_bits_per_scene": {
+              "mean": 5.810945273631841,
+              "ci_lower": 4.935323383084577,
+              "ci_upper": 6.686567164179105
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "exact": {
+            "clean_rate": {
+              "mean": 0.966417910447761,
+              "ci_lower": 0.9552238805970149,
+              "ci_upper": 0.9788557213930348
+            },
+            "availability_rate": {
+              "mean": 0.9975124378109452,
+              "ci_lower": 0.9937810945273631,
+              "ci_upper": 1.0
+            },
+            "total_bits_per_scene": {
+              "mean": 62.0,
+              "ci_lower": 62.0,
+              "ci_upper": 62.0
+            },
+            "context_bits_per_scene": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation_savings_vs_exact_percentage": {
+            "mean": 9.813834055528808,
+            "ci_lower": 6.466658642272511,
+            "ci_upper": 13.377066281495749
+          },
+          "mean_activation_attempt_count": 6.083333333333333,
+          "mean_full_fallback_count": 0.3333333333333333
+        },
+        "aerpaw_packapalooza_2025": {
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "scene_count": 66,
+          "full_manifest": {
+            "clean_rate": {
+              "mean": 0.9040404040404041,
+              "ci_lower": 0.8598484848484849,
+              "ci_upper": 0.9419507575757574
+            },
+            "availability_rate": {
+              "mean": 0.9053030303030303,
+              "ci_lower": 0.8573232323232324,
+              "ci_upper": 0.9431818181818182
+            },
+            "total_bits_per_scene": {
+              "mean": 90.40151515151517,
+              "ci_lower": 82.13914141414143,
+              "ci_upper": 98.88311237373736
+            },
+            "context_bits_per_scene": {
+              "mean": 39.68939393939394,
+              "ci_lower": 32.56565656565656,
+              "ci_upper": 46.813131313131315
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation": {
+            "clean_rate": {
+              "mean": 0.9040404040404041,
+              "ci_lower": 0.8585858585858586,
+              "ci_upper": 0.9419191919191917
+            },
+            "availability_rate": {
+              "mean": 0.9053030303030303,
+              "ci_lower": 0.8598484848484849,
+              "ci_upper": 0.9444760101010101
+            },
+            "total_bits_per_scene": {
+              "mean": 57.871212121212125,
+              "ci_lower": 54.91388888888889,
+              "ci_upper": 60.99507575757575
+            },
+            "context_bits_per_scene": {
+              "mean": 7.159090909090909,
+              "ci_lower": 5.414141414141414,
+              "ci_upper": 9.356060606060604
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "exact": {
+            "clean_rate": {
+              "mean": 0.9633838383838386,
+              "ci_lower": 0.9520202020202021,
+              "ci_upper": 0.9734848484848486
+            },
+            "availability_rate": {
+              "mean": 0.9924242424242425,
+              "ci_lower": 0.9848484848484849,
+              "ci_upper": 0.9987373737373737
+            },
+            "total_bits_per_scene": {
+              "mean": 62.0,
+              "ci_lower": 62.0,
+              "ci_upper": 62.0
+            },
+            "context_bits_per_scene": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation_savings_vs_exact_percentage": {
+            "mean": 6.659335288367546,
+            "ci_lower": 1.6413123167155432,
+            "ci_upper": 11.388074291300095
+          },
+          "mean_activation_attempt_count": 6.333333333333333,
+          "mean_full_fallback_count": 0.5
+        }
+      },
+      "scene_weighted": {
+        "full_manifest": {
+          "clean_rate": {
+            "mean": 0.8946513002364066,
+            "ci_lower": 0.8736665189125296,
+            "ci_upper": 0.9172613770685578
+          },
+          "availability_rate": {
+            "mean": 0.8964243498817969,
+            "ci_lower": 0.8757313829787233,
+            "ci_upper": 0.9185985520094563
+          },
+          "total_bits_per_scene": {
+            "mean": 56.735963356974,
+            "ci_lower": 54.45890957446808,
+            "ci_upper": 59.246324615839235
+          },
+          "context_bits_per_scene": {
+            "mean": 25.296247044917255,
+            "ci_lower": 23.36682180851064,
+            "ci_upper": 27.283540189125294
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0
+          }
+        },
+        "activation": {
+          "clean_rate": {
+            "mean": 0.8946513002364066,
+            "ci_lower": 0.8735150709219857,
+            "ci_upper": 0.9165189125295509
+          },
+          "availability_rate": {
+            "mean": 0.8964243498817969,
+            "ci_lower": 0.8757313829787233,
+            "ci_upper": 0.9181479018912531
+          },
+          "total_bits_per_scene": {
+            "mean": 46.508421985815595,
+            "ci_lower": 44.83400930851064,
+            "ci_upper": 48.04662012411348
+          },
+          "context_bits_per_scene": {
+            "mean": 15.068705673758865,
+            "ci_lower": 13.704063238770686,
+            "ci_upper": 16.188272015366426
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0
+          }
+        },
+        "exact": {
+          "clean_rate": {
+            "mean": 0.972517730496454,
+            "ci_lower": 0.9698581560283689,
+            "ci_upper": 0.9753287529550828
+          },
+          "availability_rate": {
+            "mean": 0.996306146572104,
+            "ci_lower": 0.9951241134751774,
+            "ci_upper": 0.9974881796690308
+          },
+          "total_bits_per_scene": {
+            "mean": 62.0,
+            "ci_lower": 62.0,
+            "ci_upper": 62.0
+          },
+          "context_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0
+          }
+        },
+        "activation_savings_vs_exact_percentage": {
+          "mean": 24.986416151910316,
+          "ci_lower": 22.551052629070387,
+          "ci_upper": 27.55299488103409
+        }
+      },
+      "equal_activity_macro_activation_savings_vs_exact_percentage": {
+        "mean": 18.21646947579783,
+        "ci_lower": 15.322461754345927,
+        "ci_upper": 20.320304534559614
+      },
+      "checks": {
+        "activation_bits_below_full_manifest": true,
+        "activation_clean_loss_vs_full_manifest": 0.0,
+        "all_wrong_codebook_decode_counts_zero": true,
+        "ood_activation_attempt_count_zero": true
+      }
+    },
+    "64": {
+      "n_channels": 64,
+      "activity_results": {
+        "aerpaw_packapalooza_2023": {
+          "decision": "OOD",
+          "scene_count": 364,
+          "full_manifest": {
+            "clean_rate": {
+              "mean": 0.9029304029304029,
+              "ci_lower": 0.8781994047619047,
+              "ci_upper": 0.9258241758241758
+            },
+            "availability_rate": {
+              "mean": 0.9127747252747253,
+              "ci_lower": 0.8907967032967031,
+              "ci_upper": 0.9345238095238094
+            },
+            "total_bits_per_scene": {
+              "mean": 48.64537545787547,
+              "ci_lower": 44.19582188644689,
+              "ci_upper": 53.083877060439555
+            },
+            "context_bits_per_scene": {
+              "mean": 29.59615384615385,
+              "ci_lower": 25.70192307692308,
+              "ci_upper": 33.40600961538461
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation": {
+            "clean_rate": {
+              "mean": 0.9029304029304029,
+              "ci_lower": 0.8788862179487178,
+              "ci_upper": 0.9260531135531136
+            },
+            "availability_rate": {
+              "mean": 0.9127747252747253,
+              "ci_lower": 0.890562042124542,
+              "ci_upper": 0.9347527472527472
+            },
+            "total_bits_per_scene": {
+              "mean": 48.64537545787547,
+              "ci_lower": 44.11502403846154,
+              "ci_upper": 53.021108058608064
+            },
+            "context_bits_per_scene": {
+              "mean": 29.59615384615385,
+              "ci_lower": 25.788461538461537,
+              "ci_upper": 33.40384615384615
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "exact": {
+            "clean_rate": {
+              "mean": 0.9805402930402929,
+              "ci_lower": 0.9761904761904762,
+              "ci_upper": 0.9848901098901099
+            },
+            "availability_rate": {
+              "mean": 0.9986263736263737,
+              "ci_lower": 0.9979395604395606,
+              "ci_upper": 0.9993131868131867
+            },
+            "total_bits_per_scene": {
+              "mean": 65.0,
+              "ci_lower": 65.0,
+              "ci_upper": 65.0
+            },
+            "context_bits_per_scene": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation_savings_vs_exact_percentage": {
+            "mean": 25.160960834037763,
+            "ci_lower": 18.685871020005635,
+            "ci_upper": 32.09764194139194
+          },
+          "mean_activation_attempt_count": 0.0,
+          "mean_full_fallback_count": 0.0
+        },
+        "aerpaw_lake_wheeler_2024": {
+          "decision": "BANK:aerpaw_packapalooza_2024",
+          "scene_count": 67,
+          "full_manifest": {
+            "clean_rate": {
+              "mean": 0.9278606965174129,
+              "ci_lower": 0.8756218905472636,
+              "ci_upper": 0.9664490049751242
+            },
+            "availability_rate": {
+              "mean": 0.9402985074626865,
+              "ci_lower": 0.8843283582089553,
+              "ci_upper": 0.9825870646766169
+            },
+            "total_bits_per_scene": {
+              "mean": 62.407960199004975,
+              "ci_lower": 54.65024875621891,
+              "ci_upper": 70.03392412935324
+            },
+            "context_bits_per_scene": {
+              "mean": 37.350746268656714,
+              "ci_lower": 30.41417910447761,
+              "ci_upper": 43.75373134328358
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation": {
+            "clean_rate": {
+              "mean": 0.9278606965174129,
+              "ci_lower": 0.8743781094527362,
+              "ci_upper": 0.9664490049751242
+            },
+            "availability_rate": {
+              "mean": 0.9402985074626865,
+              "ci_lower": 0.8843283582089553,
+              "ci_upper": 0.9825870646766169
+            },
+            "total_bits_per_scene": {
+              "mean": 30.629353233830845,
+              "ci_lower": 28.57335199004975,
+              "ci_upper": 32.676648009950256
+            },
+            "context_bits_per_scene": {
+              "mean": 5.572139303482587,
+              "ci_lower": 4.537313432835821,
+              "ci_upper": 6.527363184079601
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "exact": {
+            "clean_rate": {
+              "mean": 0.9800995024875622,
+              "ci_lower": 0.9701492537313432,
+              "ci_upper": 0.9888059701492536
+            },
+            "availability_rate": {
+              "mean": 1.0,
+              "ci_lower": 1.0,
+              "ci_upper": 1.0
+            },
+            "total_bits_per_scene": {
+              "mean": 65.0,
+              "ci_lower": 65.0,
+              "ci_upper": 65.0
+            },
+            "context_bits_per_scene": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation_savings_vs_exact_percentage": {
+            "mean": 52.877918101798706,
+            "ci_lower": 49.77138346727899,
+            "ci_upper": 56.01425564485265
+          },
+          "mean_activation_attempt_count": 5.833333333333333,
+          "mean_full_fallback_count": 0.08333333333333333
+        },
+        "aerpaw_packapalooza_2024": {
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "scene_count": 67,
+          "full_manifest": {
+            "clean_rate": {
+              "mean": 0.9415422885572139,
+              "ci_lower": 0.9054726368159202,
+              "ci_upper": 0.9713930348258706
+            },
+            "availability_rate": {
+              "mean": 0.955223880597015,
+              "ci_lower": 0.9241293532338308,
+              "ci_upper": 0.9800995024875623
+            },
+            "total_bits_per_scene": {
+              "mean": 59.885572139303484,
+              "ci_lower": 53.281902985074616,
+              "ci_upper": 66.31361940298508
+            },
+            "context_bits_per_scene": {
+              "mean": 31.771144278606968,
+              "ci_lower": 25.621890547263686,
+              "ci_upper": 37.920398009950254
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation": {
+            "clean_rate": {
+              "mean": 0.9415422885572139,
+              "ci_lower": 0.9054726368159204,
+              "ci_upper": 0.9726368159203979
+            },
+            "availability_rate": {
+              "mean": 0.955223880597015,
+              "ci_lower": 0.9241293532338308,
+              "ci_upper": 0.9838308457711443
+            },
+            "total_bits_per_scene": {
+              "mean": 34.348258706467654,
+              "ci_lower": 31.91529850746268,
+              "ci_upper": 36.925684079601986
+            },
+            "context_bits_per_scene": {
+              "mean": 6.233830845771144,
+              "ci_lower": 4.537313432835821,
+              "ci_upper": 8.443905472636809
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "exact": {
+            "clean_rate": {
+              "mean": 0.9788557213930348,
+              "ci_lower": 0.9639303482587066,
+              "ci_upper": 0.9912935323383084
+            },
+            "availability_rate": {
+              "mean": 0.9937810945273631,
+              "ci_lower": 0.9888059701492535,
+              "ci_upper": 0.9987562189054726
+            },
+            "total_bits_per_scene": {
+              "mean": 65.0,
+              "ci_lower": 65.0,
+              "ci_upper": 65.0
+            },
+            "context_bits_per_scene": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation_savings_vs_exact_percentage": {
+            "mean": 47.15652506697282,
+            "ci_lower": 43.4618254879449,
+            "ci_upper": 50.82338308457712
+          },
+          "mean_activation_attempt_count": 4.916666666666667,
+          "mean_full_fallback_count": 0.16666666666666666
+        },
+        "aerpaw_packapalooza_2025": {
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "scene_count": 66,
+          "full_manifest": {
+            "clean_rate": {
+              "mean": 0.9482323232323232,
+              "ci_lower": 0.9267676767676768,
+              "ci_upper": 0.9672032828282827
+            },
+            "availability_rate": {
+              "mean": 0.9772727272727272,
+              "ci_lower": 0.9558080808080808,
+              "ci_upper": 0.9936868686868685
+            },
+            "total_bits_per_scene": {
+              "mean": 84.83838383838383,
+              "ci_lower": 71.36123737373737,
+              "ci_upper": 98.60252525252524
+            },
+            "context_bits_per_scene": {
+              "mean": 52.54040404040404,
+              "ci_lower": 41.61616161616161,
+              "ci_upper": 64.50505050505049
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation": {
+            "clean_rate": {
+              "mean": 0.9482323232323232,
+              "ci_lower": 0.9267676767676768,
+              "ci_upper": 0.9671717171717171
+            },
+            "availability_rate": {
+              "mean": 0.9772727272727272,
+              "ci_lower": 0.9545454545454546,
+              "ci_upper": 0.9936868686868685
+            },
+            "total_bits_per_scene": {
+              "mean": 43.095959595959606,
+              "ci_lower": 38.269002525252525,
+              "ci_upper": 48.26912878787877
+            },
+            "context_bits_per_scene": {
+              "mean": 10.797979797979798,
+              "ci_lower": 7.423106060606063,
+              "ci_upper": 14.565656565656566
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "exact": {
+            "clean_rate": {
+              "mean": 0.970959595959596,
+              "ci_lower": 0.9583333333333334,
+              "ci_upper": 0.981060606060606
+            },
+            "availability_rate": {
+              "mean": 0.9962121212121211,
+              "ci_lower": 0.98989898989899,
+              "ci_upper": 1.0
+            },
+            "total_bits_per_scene": {
+              "mean": 65.0,
+              "ci_lower": 65.0,
+              "ci_upper": 65.0
+            },
+            "context_bits_per_scene": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            },
+            "wrong_codebook_decode_count": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0
+            }
+          },
+          "activation_savings_vs_exact_percentage": {
+            "mean": 33.698523698523694,
+            "ci_lower": 25.78078865578866,
+            "ci_upper": 40.98125485625484
+          },
+          "mean_activation_attempt_count": 7.916666666666667,
+          "mean_full_fallback_count": 0.5833333333333334
+        }
+      },
+      "scene_weighted": {
+        "full_manifest": {
+          "clean_rate": {
+            "mean": 0.9157801418439715,
+            "ci_lower": 0.8959773936170212,
+            "ci_upper": 0.9335106382978723
+          },
+          "availability_rate": {
+            "mean": 0.9286347517730498,
+            "ci_lower": 0.9085364952718675,
+            "ci_upper": 0.9462174940898347
+          },
+          "total_bits_per_scene": {
+            "mean": 55.85091607565011,
+            "ci_lower": 52.93836436170213,
+            "ci_upper": 58.661144355791954
+          },
+          "context_bits_per_scene": {
+            "mean": 33.46069739952719,
+            "ci_lower": 30.954713356973997,
+            "ci_upper": 35.79419695626477
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0
+          }
+        },
+        "activation": {
+          "clean_rate": {
+            "mean": 0.9157801418439715,
+            "ci_lower": 0.8970079787234042,
+            "ci_upper": 0.9327718676122929
+          },
+          "availability_rate": {
+            "mean": 0.9286347517730498,
+            "ci_lower": 0.9082409869976358,
+            "ci_upper": 0.9454787234042555
+          },
+          "total_bits_per_scene": {
+            "mean": 44.15735815602837,
+            "ci_lower": 41.39029624704492,
+            "ci_upper": 46.981674793144215
+          },
+          "context_bits_per_scene": {
+            "mean": 21.76713947990544,
+            "ci_lower": 19.40548906619385,
+            "ci_upper": 24.061923758865245
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0
+          }
+        },
+        "exact": {
+          "clean_rate": {
+            "mean": 0.9791666666666669,
+            "ci_lower": 0.9750295508274233,
+            "ci_upper": 0.9831560283687945
+          },
+          "availability_rate": {
+            "mean": 0.9979314420803783,
+            "ci_lower": 0.9967494089834515,
+            "ci_upper": 0.9989657210401891
+          },
+          "total_bits_per_scene": {
+            "mean": 65.0,
+            "ci_lower": 65.0,
+            "ci_upper": 65.0
+          },
+          "context_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0
+          }
+        },
+        "activation_savings_vs_exact_percentage": {
+          "mean": 32.06560283687943,
+          "ci_lower": 27.91806464811784,
+          "ci_upper": 36.37336333878887
+        }
+      },
+      "equal_activity_macro_activation_savings_vs_exact_percentage": {
+        "mean": 39.72348192533324,
+        "ci_lower": 37.3227053783616,
+        "ci_upper": 42.27308408141323
+      },
+      "checks": {
+        "activation_bits_below_full_manifest": true,
+        "activation_clean_loss_vs_full_manifest": 0.0,
+        "all_wrong_codebook_decode_counts_zero": true,
+        "ood_activation_attempt_count_zero": true
+      }
+    }
+  },
+  "checks": {
+    "all_bit_identities_valid": true,
+    "activation_total_bits_below_full_manifest_all_n": true,
+    "activation_clean_loss_within_gate_all_n": true,
+    "all_wrong_codebook_decode_counts_zero": true,
+    "all_ood_activation_attempt_counts_zero": true,
+    "macro_positive_n_count": 4,
+    "weighted_savings_lower_positive_n_count": 4,
+    "full_revalidation_entry_passed": true,
+    "external_final_access_count_unchanged": true
+  },
+  "elapsed_seconds": 4.559892600000239,
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": [
+    "This is a 12-trajectory development dry-run, not the final activation result.",
+    "Only BANK decisions use activation; OOD continues to transmit the full manifest.",
+    "The receiver catalog is provisioned correctly in the primary dry-run; mismatch behavior is covered by unit tests.",
+    "A larger activity/session revalidation may run only if this dry-run passes every safety gate.",
+    "No new Final signal values may be accessed."
+  ]
+}

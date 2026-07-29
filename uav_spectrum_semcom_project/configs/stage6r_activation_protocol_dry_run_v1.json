@@ -1,0 +1,58 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage6r_activation_protocol_dry_run_v1",
+  "status": "registered_before_execution",
+  "created_date": "2026-07-29",
+  "purpose": "Verify that the implemented 64-bit known-bank activation state machine reduces actual full-protocol bits without changing the frozen clean-0.90 task decision.",
+  "inputs": {
+    "activation_protocol": "configs/stage6r_codebook_activation_protocol_v1.json",
+    "adaptation_config": "configs/stage6r_few_shot_adaptation_v1.json",
+    "temporal_gate_result": "results/stage6r/temporal_context_gate_v1/result.json",
+    "matched_scan_config": "configs/stage6r_matched_clean_scan_v1.json",
+    "matched_scan_result": "results/stage6r/matched_clean_scan_v1/result.json",
+    "external_final_access_state": "configs/stage6_external_final_access_state.json"
+  },
+  "frozen_selection": {
+    "matched_clean_target": 0.9,
+    "primary_k": 4,
+    "maximum_activation_attempts": 2,
+    "catalog_epoch": 1,
+    "codebook_epoch": 2,
+    "workpoints_and_action_tuples_may_be_reselected": false
+  },
+  "catalog_bank_ids": {
+    "aerpaw_packapalooza_2023": 1,
+    "aerpaw_lake_wheeler_2024": 2,
+    "aerpaw_packapalooza_2024": 3,
+    "aerpaw_packapalooza_2025": 4
+  },
+  "monte_carlo": {
+    "trajectories": 12,
+    "random_seed": 20260802,
+    "bootstrap_replicates": 2000,
+    "confidence_level": 0.95,
+    "paired_common_random_numbers": true
+  },
+  "comparisons": [
+    "frozen_full_manifest_protocol",
+    "implemented_known_bank_activation_protocol",
+    "self_contained_exact_action_reference"
+  ],
+  "gates": {
+    "all_bit_identities_valid": true,
+    "wrong_codebook_decode_count": 0,
+    "ood_activation_attempt_count": 0,
+    "activation_total_bits_below_full_manifest_all_n": true,
+    "activation_clean_loss_vs_full_manifest_maximum": 0.01,
+    "equal_activity_macro_savings_positive_minimum_n_count": 3,
+    "scene_weighted_savings_lower_positive_minimum_n_count": 3,
+    "full_revalidation_entry_requires_all_safety_gates": true
+  },
+  "claim_boundary": [
+    "This is a 12-trajectory development dry-run, not the final activation result.",
+    "Only BANK decisions use activation; OOD continues to transmit the full manifest.",
+    "The receiver catalog is provisioned correctly in the primary dry-run; mismatch behavior is covered by unit tests.",
+    "A larger activity/session revalidation may run only if this dry-run passes every safety gate.",
+    "No new Final signal values may be accessed."
+  ]
+}

@@ -1,0 +1,169 @@
+from __future__ import annotations
+
+import numpy as np
+
+from spectrum_semcom.stage5_cumulative_ack import (
+    cumulative_ack_payload_bits,
+)
+from spectrum_semcom.stage6_bit_accounting import validate_breakdown_identity
+from spectrum_semcom.stage6_context_codec import (
+    decode_context_install,
+    encode_compact_update,
+    encode_context_install,
+)
+from spectrum_semcom.stage6_matched_reliability import RANDOM_STREAM_COUNT
+from spectrum_semcom.stage6_task_codebook import (
+    SpectrumTaskQuery,
+    build_task_state,
+    fit_greedy_task_codebook,
+)
+from spectrum_semcom.stage6_task_codec import install_codebook
+from spectrum_semcom.stage6r_activation_reliability import (
+    simulate_activation_semantic_trajectory,
+)
+from spectrum_semcom.stage6r_codebook_activation import (
+    build_preinstalled_catalog,
+)
+
+
+def _fixture():
+    queries = (SpectrumTaskQuery(1), SpectrumTaskQuery(2))
+    rows = np.asarray(
+        [
+            [-90.0, -89.0, -80.0, -79.0],
+            [-91.0, -90.0, -80.0, -79.0],
+            [-90.0, -89.0, -81.0, -80.0],
+            [-89.0, -88.0, -80.0, -79.0],
+        ]
+    )
+    states = [
+        build_task_state(row, queries, epsilon_db=0.2) for row in rows
+    ]
+    codebook = fit_greedy_task_codebook(states)
+    sender = install_codebook(codebook, epoch=2)
+    install_packet = encode_context_install(sender, node_id=1)
+    receiver = decode_context_install(install_packet).session
+    catalog = build_preinstalled_catalog([(7, codebook)], catalog_epoch=3)
+    compact_packet, decision = encode_compact_update(
+        states[0], sender, node_id=1, update_epoch=1
+    )
+    assert not decision.uses_fallback
+    return states, sender, receiver, install_packet, catalog, compact_packet.size
+
+
+def _condition(**overrides):
+    value = {
+        "install_loss_probability": 0.0,
+        "task_loss_probability": 0.0,
+        "ack_loss_probability": 0.0,
+        "delayed_duplicate_probability": 0.0,
+        "receiver_context_reset_probability": 0.0,
+        "include_reset_hypothesis_after_missing_ack": True,
+    }
+    value.update(overrides)
+    return value
+
+
+def _run(*, receiver_catalog=None, condition=None):
+    states, sender, receiver, install_packet, catalog, compact_bits = _fixture()
+    random = np.ones((len(states), RANDOM_STREAM_COUNT), dtype=np.float64)
+    result = simulate_activation_semantic_trajectory(
+        states,
+        np.asarray(
+            [f"2026-01-01T00:0{i}:00" for i in range(len(states))]
+        ),
+        np.arange(len(states)),
+        sender_session=sender,
+        receiver_session=receiver,
+        full_install_packet=install_packet,
+        sender_catalog=catalog,
+        receiver_catalog=(
+            catalog if receiver_catalog is None else receiver_catalog
+        ),
+        bank_id=7,
+        catalog_node_id=1,
+        maximum_activation_attempts=2,
+        condition=_condition() if condition is None else condition,
+        random_values=random,
+        epsilon_db=0.2,
+        max_age_minutes=60.0,
+        ack_frame_bits=cumulative_ack_payload_bits(),
+        outage_penalty_db=10.0,
+        heartbeat_interval_scenes=None,
+        heartbeat_request_frame_bits=32,
+        heartbeat_response_frame_bits=32,
+        task_open_loop_attempts=1,
+        compact_codeword_frame_bits=int(compact_bits),
+    )
+    return result, catalog
+
+
+def test_no_fault_activation_uses_64_bits_and_stays_clean() -> None:
+    result, _ = _run()
+    validate_breakdown_identity(result.matched.bit_breakdown)
+    assert result.activation_attempt_count == 1
+    assert result.activation_bits == 64
+    assert result.full_install_attempt_count == 0
+    assert result.matched.bit_breakdown.initial_install_bits == 64
+    assert result.matched.wrong_codebook_decode_count == 0
+    assert all(result.matched.clean)
+
+
+def test_catalog_mismatch_falls_back_to_full_install() -> None:
+    states, _, _, _, _, _ = _fixture()
+    wrong_codebook = fit_greedy_task_codebook(
+        [
+            build_task_state(
+                np.asarray([-70.0, -90.0, -80.0, -79.0]),
+                states[0].queries,
+                epsilon_db=0.2,
+            )
+        ]
+    )
+    wrong_catalog = build_preinstalled_catalog(
+        [(7, wrong_codebook)],
+        catalog_epoch=3,
+    )
+    result, _ = _run(receiver_catalog=wrong_catalog)
+    validate_breakdown_identity(result.matched.bit_breakdown)
+    assert result.activation_attempt_count == 2
+    assert result.activation_rejection_count == 2
+    assert result.full_install_fallback_count == 1
+    assert result.full_install_attempt_count >= 1
+    assert result.matched.wrong_codebook_decode_count == 0
+    assert result.matched.available[-1]
+
+
+def test_ood_path_uses_full_install_only() -> None:
+    states, sender, receiver, install_packet, _, compact_bits = _fixture()
+    random = np.ones((len(states), RANDOM_STREAM_COUNT), dtype=np.float64)
+    result = simulate_activation_semantic_trajectory(
+        states,
+        np.asarray(
+            [f"2026-01-01T00:0{i}:00" for i in range(len(states))]
+        ),
+        np.arange(len(states)),
+        sender_session=sender,
+        receiver_session=receiver,
+        full_install_packet=install_packet,
+        sender_catalog=None,
+        receiver_catalog=None,
+        bank_id=None,
+        catalog_node_id=1,
+        maximum_activation_attempts=2,
+        condition=_condition(),
+        random_values=random,
+        epsilon_db=0.2,
+        max_age_minutes=60.0,
+        ack_frame_bits=cumulative_ack_payload_bits(),
+        outage_penalty_db=10.0,
+        heartbeat_interval_scenes=None,
+        heartbeat_request_frame_bits=32,
+        heartbeat_response_frame_bits=32,
+        task_open_loop_attempts=1,
+        compact_codeword_frame_bits=int(compact_bits),
+    )
+    assert result.activation_attempt_count == 0
+    assert result.full_install_attempt_count == 1
+    assert result.full_initial_install_bits == install_packet.size
+    assert all(result.matched.clean)
