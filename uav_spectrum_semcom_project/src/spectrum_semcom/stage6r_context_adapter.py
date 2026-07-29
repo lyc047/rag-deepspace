@@ -65,3 +65,30 @@ def leave_one_context_novelty_threshold(
         nearest_distances.append(min(distances))
     return float(max(nearest_distances))
 
+
+def context_signature(
+    power_dbm: np.ndarray,
+    prototypes: Mapping[str, np.ndarray],
+    novelty_threshold: float,
+) -> tuple[str, str | None, float]:
+    """Classify a calibration window as a known context or OOD."""
+    if not np.isfinite(novelty_threshold) or novelty_threshold < 0.0:
+        raise ValueError("novelty threshold must be finite and non-negative")
+    feature = robust_spectral_shape_features(power_dbm)
+    name, distance = nearest_context(feature, prototypes)
+    if distance > float(novelty_threshold):
+        return "OOD", None, distance
+    return f"BANK:{name}", name, distance
+
+
+def stable_signature(
+    signatures: Sequence[str], required_consecutive: int
+) -> str | None:
+    """Return the latest decision only after consecutive agreement."""
+    values = tuple(map(str, signatures))
+    if required_consecutive < 2:
+        raise ValueError("required_consecutive must be at least two")
+    if len(values) < required_consecutive:
+        return None
+    tail = values[-required_consecutive:]
+    return tail[0] if len(set(tail)) == 1 else None

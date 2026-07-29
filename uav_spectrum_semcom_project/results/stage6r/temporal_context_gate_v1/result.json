@@ -1,0 +1,3028 @@
+{
+  "version": "1.0",
+  "status": "stage6r_temporal_context_gate_complete",
+  "verification_status": "ANALYZED",
+  "experiment_id": "stage6r_temporal_context_gate_v1",
+  "config_sha256": "078259805887731292d24a5acb3a36968b8ba94acffc2d29ff46ecbec173dc46",
+  "input_hashes": {
+    "adaptation_config": "b5771f520b619c9e967f5b505f01e5d4cb0d856b15e2a8ddca789d6e7b839dff",
+    "adaptation_result": "d5f7fe958261cdf4a5bb3be921112e7081ca90370f764f57b5463cf16b4475bb",
+    "context_config": "ceddae8bb05800398a5f2fcef26d076e7803861817a67fa86abfba0c853b71a3",
+    "context_result": "34a2bd1ce156bcfbb4c63fc1853c0e7f19890b5ed9c215a98276f8cfae992a91"
+  },
+  "n_results": {
+    "8": {
+      "n_channels": 8,
+      "rows": [
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "k": 3,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "future_scene_count": 360,
+          "decision": "OOD",
+          "adapted": true,
+          "selected_actions": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "OOD",
+              "nearest_source": null,
+              "context_distance": 1.4795313934046659,
+              "novelty_threshold": 0.23556644097094645,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "OOD",
+              "nearest_source": null,
+              "context_distance": 1.6285678910805672,
+              "novelty_threshold": 0.23556644097094645,
+              "stable_signature": "OOD",
+              "accumulated_bank_coverage": null,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 1,
+            "symbol_width_bits": 1,
+            "covered_count": 347,
+            "coverage_rate": 0.9638888888888889,
+            "escape_count": 13,
+            "escape_rate": 0.036111111111111094,
+            "used_codeword_count": 1,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": -0.0,
+            "covered_mean_max_regret_db": 0.010273188610241804,
+            "covered_cvar_max_regret_db": 0.12579176161024305,
+            "covered_maximum_max_regret_db": 0.19748687744140625,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 1.2888888888888888,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 83.88888888888889,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              347
+            ],
+            "calibration_exact_payload_bits": 32,
+            "adaptation_control_bits": 24,
+            "evaluation_semantic_payload_bits": 463.99999999999994,
+            "full_session_accounted_bits": 520.0,
+            "full_session_bits_per_scene": 1.4285714285714286,
+            "full_session_exact_baseline_bits": 2912,
+            "full_session_payload_savings_percentage": 82.14285714285714
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "k": 4,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "future_scene_count": 360,
+          "decision": "OOD",
+          "adapted": true,
+          "selected_actions": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "OOD",
+              "nearest_source": null,
+              "context_distance": 1.4795313934046659,
+              "novelty_threshold": 0.23556644097094645,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "OOD",
+              "nearest_source": null,
+              "context_distance": 1.6285678910805672,
+              "novelty_threshold": 0.23556644097094645,
+              "stable_signature": "OOD",
+              "accumulated_bank_coverage": null,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 1,
+            "symbol_width_bits": 1,
+            "covered_count": 347,
+            "coverage_rate": 0.9638888888888889,
+            "escape_count": 13,
+            "escape_rate": 0.036111111111111094,
+            "used_codeword_count": 1,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": -0.0,
+            "covered_mean_max_regret_db": 0.010273188610241804,
+            "covered_cvar_max_regret_db": 0.12579176161024305,
+            "covered_maximum_max_regret_db": 0.19748687744140625,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 1.2888888888888888,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 83.88888888888889,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              347
+            ],
+            "calibration_exact_payload_bits": 32,
+            "adaptation_control_bits": 24,
+            "evaluation_semantic_payload_bits": 463.99999999999994,
+            "full_session_accounted_bits": 520.0,
+            "full_session_bits_per_scene": 1.4285714285714286,
+            "full_session_exact_baseline_bits": 2912,
+            "full_session_payload_savings_percentage": 82.14285714285714
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "k": 3,
+          "resolved": true,
+          "calibration_scenes": 6,
+          "future_scene_count": 61,
+          "decision": "BANK:aerpaw_packapalooza_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              6,
+              4,
+              2
+            ],
+            [
+              4,
+              3,
+              1
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.31823213988182253,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.160604431106052,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.15020670518610524,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 61,
+            "coverage_rate": 1.0,
+            "escape_count": 0,
+            "escape_rate": 0.0,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 0.6666666666666666,
+            "codeword_usage_entropy_bits": 0.9669852958320848,
+            "covered_mean_max_regret_db": 0.0,
+            "covered_cvar_max_regret_db": 0.0,
+            "covered_maximum_max_regret_db": 0.0,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 2.0,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 75.0,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              37,
+              24,
+              0
+            ],
+            "calibration_exact_payload_bits": 48,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 122.0,
+            "full_session_accounted_bits": 178.0,
+            "full_session_bits_per_scene": 2.656716417910448,
+            "full_session_exact_baseline_bits": 536,
+            "full_session_payload_savings_percentage": 66.7910447761194
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "k": 4,
+          "resolved": true,
+          "calibration_scenes": 6,
+          "future_scene_count": 61,
+          "decision": "BANK:aerpaw_packapalooza_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              6,
+              4,
+              2
+            ],
+            [
+              4,
+              3,
+              1
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.31823213988182253,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.160604431106052,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.15020670518610524,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 61,
+            "coverage_rate": 1.0,
+            "escape_count": 0,
+            "escape_rate": 0.0,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 0.6666666666666666,
+            "codeword_usage_entropy_bits": 0.9669852958320848,
+            "covered_mean_max_regret_db": 0.0,
+            "covered_cvar_max_regret_db": 0.0,
+            "covered_maximum_max_regret_db": 0.0,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 2.0,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 75.0,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              37,
+              24,
+              0
+            ],
+            "calibration_exact_payload_bits": 48,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 122.0,
+            "full_session_accounted_bits": 178.0,
+            "full_session_bits_per_scene": 2.656716417910448,
+            "full_session_exact_baseline_bits": 536,
+            "full_session_payload_savings_percentage": 66.7910447761194
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "k": 3,
+          "resolved": true,
+          "calibration_scenes": 8,
+          "future_scene_count": 59,
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              6,
+              4,
+              2
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2023",
+              "nearest_source": "aerpaw_packapalooza_2023",
+              "context_distance": 1.1575226005805728,
+              "novelty_threshold": 1.597574490629949,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.4175991446168284,
+              "novelty_threshold": 1.597574490629949,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.4017237582068378,
+              "novelty_threshold": 1.597574490629949,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 8,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.3113681037525165,
+              "novelty_threshold": 1.597574490629949,
+              "stable_signature": "BANK:aerpaw_lake_wheeler_2024",
+              "accumulated_bank_coverage": 0.75,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 59,
+            "codeword_count": 2,
+            "symbol_width_bits": 2,
+            "covered_count": 58,
+            "coverage_rate": 0.9830508474576272,
+            "escape_count": 1,
+            "escape_rate": 0.016949152542372836,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 0.9293636260137187,
+            "covered_mean_max_regret_db": 0.005423447181438577,
+            "covered_cvar_max_regret_db": 0.10335032145182292,
+            "covered_maximum_max_regret_db": 0.12970733642578125,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 2.1355932203389827,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 73.30508474576271,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              38,
+              20
+            ],
+            "calibration_exact_payload_bits": 64,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 125.99999999999997,
+            "full_session_accounted_bits": 197.99999999999997,
+            "full_session_bits_per_scene": 2.9552238805970146,
+            "full_session_exact_baseline_bits": 536,
+            "full_session_payload_savings_percentage": 63.05970149253732
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "k": 4,
+          "resolved": true,
+          "calibration_scenes": 8,
+          "future_scene_count": 59,
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              6,
+              4,
+              2
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2023",
+              "nearest_source": "aerpaw_packapalooza_2023",
+              "context_distance": 1.1575226005805728,
+              "novelty_threshold": 1.597574490629949,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.4175991446168284,
+              "novelty_threshold": 1.597574490629949,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.4017237582068378,
+              "novelty_threshold": 1.597574490629949,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 8,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.3113681037525165,
+              "novelty_threshold": 1.597574490629949,
+              "stable_signature": "BANK:aerpaw_lake_wheeler_2024",
+              "accumulated_bank_coverage": 0.75,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 59,
+            "codeword_count": 2,
+            "symbol_width_bits": 2,
+            "covered_count": 58,
+            "coverage_rate": 0.9830508474576272,
+            "escape_count": 1,
+            "escape_rate": 0.016949152542372836,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 0.9293636260137187,
+            "covered_mean_max_regret_db": 0.005423447181438577,
+            "covered_cvar_max_regret_db": 0.10335032145182292,
+            "covered_maximum_max_regret_db": 0.12970733642578125,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 2.1355932203389827,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 73.30508474576271,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              38,
+              20
+            ],
+            "calibration_exact_payload_bits": 64,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 125.99999999999997,
+            "full_session_accounted_bits": 197.99999999999997,
+            "full_session_bits_per_scene": 2.9552238805970146,
+            "full_session_exact_baseline_bits": 536,
+            "full_session_payload_savings_percentage": 63.05970149253732
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "k": 3,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "future_scene_count": 62,
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              6,
+              4,
+              2
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.9694098235710717,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.763607223713903,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": "BANK:aerpaw_lake_wheeler_2024",
+              "accumulated_bank_coverage": 0.75,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 2,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 0.6565402813869459,
+            "covered_mean_max_regret_db": 0.0006125498626191737,
+            "covered_cvar_max_regret_db": 0.01204681396484375,
+            "covered_maximum_max_regret_db": 0.03614044189453125,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 2.387096774193548,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 70.16129032258065,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              10,
+              49
+            ],
+            "calibration_exact_payload_bits": 32,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 147.99999999999997,
+            "full_session_accounted_bits": 187.99999999999997,
+            "full_session_bits_per_scene": 2.848484848484848,
+            "full_session_exact_baseline_bits": 528,
+            "full_session_payload_savings_percentage": 64.3939393939394
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "k": 4,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "future_scene_count": 62,
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              6,
+              4,
+              2
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.9694098235710717,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.763607223713903,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": "BANK:aerpaw_lake_wheeler_2024",
+              "accumulated_bank_coverage": 0.75,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 2,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 0.6565402813869459,
+            "covered_mean_max_regret_db": 0.0006125498626191737,
+            "covered_cvar_max_regret_db": 0.01204681396484375,
+            "covered_maximum_max_regret_db": 0.03614044189453125,
+            "exact_action_payload_bits": 8,
+            "expected_semantic_payload_bits_per_scene": 2.387096774193548,
+            "exact_payload_bits_per_scene": 8,
+            "payload_savings_percentage": 70.16129032258065,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              10,
+              49
+            ],
+            "calibration_exact_payload_bits": 32,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 147.99999999999997,
+            "full_session_accounted_bits": 187.99999999999997,
+            "full_session_bits_per_scene": 2.848484848484848,
+            "full_session_exact_baseline_bits": 528,
+            "full_session_payload_savings_percentage": 64.3939393939394
+          }
+        }
+      ],
+      "aggregate_by_k": {
+        "3": {
+          "k": 3,
+          "fold_count": 4,
+          "macro_compact_future_coverage": 0.9746381598930807,
+          "worst_activity_compact_future_coverage": 0.9516129032258065,
+          "macro_full_session_payload_savings_percentage": 69.09688570136332,
+          "worst_full_session_payload_savings_percentage": 63.05970149253732,
+          "mean_calibration_scenes": 5.5,
+          "maximum_calibration_scenes": 8,
+          "unresolved_fold_count": 0,
+          "ood_adaptation_fold_count": 1,
+          "bank_reuse_fold_count": 3,
+          "all_unsafe_coded_action_counts_zero": true
+        },
+        "4": {
+          "k": 4,
+          "fold_count": 4,
+          "macro_compact_future_coverage": 0.9746381598930807,
+          "worst_activity_compact_future_coverage": 0.9516129032258065,
+          "macro_full_session_payload_savings_percentage": 69.09688570136332,
+          "worst_full_session_payload_savings_percentage": 63.05970149253732,
+          "mean_calibration_scenes": 5.5,
+          "maximum_calibration_scenes": 8,
+          "unresolved_fold_count": 0,
+          "ood_adaptation_fold_count": 1,
+          "bank_reuse_fold_count": 3,
+          "all_unsafe_coded_action_counts_zero": true
+        }
+      },
+      "primary_comparison": {
+        "worst_coverage_gain_over_single_prefix_B2": 0.9208436724565757,
+        "macro_coverage_loss_vs_single_prefix_B4": 0.0002690341673392549,
+        "single_prefix_B2": {
+          "k": 4,
+          "calibration_budget": 2,
+          "method": "spectral_context_ood_adapter",
+          "fold_count": 4,
+          "macro_future_coverage": 0.7369956571398215,
+          "worst_activity_future_coverage": 0.03076923076923077,
+          "macro_full_session_payload_savings_percentage": 46.417722513804605,
+          "worst_full_session_payload_savings_percentage": -22.76119402985075,
+          "all_unsafe_coded_action_counts_zero": true,
+          "ood_adaptation_count": 1
+        },
+        "single_prefix_B4": {
+          "k": 4,
+          "calibration_budget": 4,
+          "method": "spectral_context_ood_adapter",
+          "fold_count": 4,
+          "macro_future_coverage": 0.9749071940604199,
+          "worst_activity_future_coverage": 0.9516129032258065,
+          "macro_full_session_payload_savings_percentage": 64.89912450733345,
+          "worst_full_session_payload_savings_percentage": 55.78358208955223,
+          "all_unsafe_coded_action_counts_zero": true,
+          "ood_adaptation_count": 1
+        },
+        "single_prefix_B8": {
+          "k": 4,
+          "calibration_budget": 8,
+          "method": "spectral_context_ood_adapter",
+          "fold_count": 4,
+          "macro_future_coverage": 0.9779159470445695,
+          "worst_activity_future_coverage": 0.9482758620689655,
+          "macro_full_session_payload_savings_percentage": 61.69565819752386,
+          "worst_full_session_payload_savings_percentage": 52.05223880597014,
+          "all_unsafe_coded_action_counts_zero": true,
+          "ood_adaptation_count": 1
+        }
+      },
+      "primary_gate_passed": true
+    },
+    "16": {
+      "n_channels": 16,
+      "rows": [
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "k": 3,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "future_scene_count": 360,
+          "decision": "OOD",
+          "adapted": true,
+          "selected_actions": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "OOD",
+              "nearest_source": null,
+              "context_distance": 1.4342956605276553,
+              "novelty_threshold": 0.3024083753911268,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "OOD",
+              "nearest_source": null,
+              "context_distance": 1.6383552175144473,
+              "novelty_threshold": 0.3024083753911268,
+              "stable_signature": "OOD",
+              "accumulated_bank_coverage": null,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 1,
+            "symbol_width_bits": 1,
+            "covered_count": 340,
+            "coverage_rate": 0.9444444444444444,
+            "escape_count": 20,
+            "escape_rate": 0.05555555555555558,
+            "used_codeword_count": 1,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": -0.0,
+            "covered_mean_max_regret_db": 0.016616092008702895,
+            "covered_cvar_max_regret_db": 0.15501314051011028,
+            "covered_maximum_max_regret_db": 0.19546890258789062,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 1.6111111111111114,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 85.35353535353535,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              340
+            ],
+            "calibration_exact_payload_bits": 44,
+            "adaptation_control_bits": 27,
+            "evaluation_semantic_payload_bits": 580.0000000000001,
+            "full_session_accounted_bits": 651.0000000000001,
+            "full_session_bits_per_scene": 1.7884615384615388,
+            "full_session_exact_baseline_bits": 4004,
+            "full_session_payload_savings_percentage": 83.74125874125873
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "k": 4,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "future_scene_count": 360,
+          "decision": "OOD",
+          "adapted": true,
+          "selected_actions": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "OOD",
+              "nearest_source": null,
+              "context_distance": 1.4342956605276553,
+              "novelty_threshold": 0.3024083753911268,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "OOD",
+              "nearest_source": null,
+              "context_distance": 1.6383552175144473,
+              "novelty_threshold": 0.3024083753911268,
+              "stable_signature": "OOD",
+              "accumulated_bank_coverage": null,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 1,
+            "symbol_width_bits": 1,
+            "covered_count": 340,
+            "coverage_rate": 0.9444444444444444,
+            "escape_count": 20,
+            "escape_rate": 0.05555555555555558,
+            "used_codeword_count": 1,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": -0.0,
+            "covered_mean_max_regret_db": 0.016616092008702895,
+            "covered_cvar_max_regret_db": 0.15501314051011028,
+            "covered_maximum_max_regret_db": 0.19546890258789062,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 1.6111111111111114,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 85.35353535353535,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              340
+            ],
+            "calibration_exact_payload_bits": 44,
+            "adaptation_control_bits": 27,
+            "evaluation_semantic_payload_bits": 580.0000000000001,
+            "full_session_accounted_bits": 651.0000000000001,
+            "full_session_bits_per_scene": 1.7884615384615388,
+            "full_session_exact_baseline_bits": 4004,
+            "full_session_payload_savings_percentage": 83.74125874125873
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "k": 3,
+          "resolved": true,
+          "calibration_scenes": 6,
+          "future_scene_count": 61,
+          "decision": "BANK:aerpaw_packapalooza_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              10,
+              8,
+              4
+            ],
+            [
+              11,
+              8,
+              4
+            ],
+            [
+              8,
+              5,
+              3
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.40535829699339115,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.21532562755877419,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.1527946204489296,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9672131147540983,
+            "escape_count": 2,
+            "escape_rate": 0.032786885245901676,
+            "used_codeword_count": 2,
+            "codeword_utilization_rate": 0.6666666666666666,
+            "codeword_usage_entropy_bits": 0.9948131754904235,
+            "covered_mean_max_regret_db": 0.009543790655621028,
+            "covered_cvar_max_regret_db": 0.09118270874023438,
+            "covered_maximum_max_regret_db": 0.12262344360351562,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 2.3606557377049184,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 78.53949329359165,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              27,
+              32,
+              0
+            ],
+            "calibration_exact_payload_bits": 66,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 144.00000000000003,
+            "full_session_accounted_bits": 218.00000000000003,
+            "full_session_bits_per_scene": 3.2537313432835826,
+            "full_session_exact_baseline_bits": 737,
+            "full_session_payload_savings_percentage": 70.42062415196743
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "k": 4,
+          "resolved": true,
+          "calibration_scenes": 6,
+          "future_scene_count": 61,
+          "decision": "BANK:aerpaw_packapalooza_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              10,
+              8,
+              4
+            ],
+            [
+              11,
+              8,
+              4
+            ],
+            [
+              8,
+              5,
+              3
+            ],
+            [
+              12,
+              8,
+              4
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.40535829699339115,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.21532562755877419,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.1527946204489296,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 61,
+            "coverage_rate": 1.0,
+            "escape_count": 0,
+            "escape_rate": 0.0,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 0.75,
+            "codeword_usage_entropy_bits": 1.542279235137156,
+            "covered_mean_max_regret_db": 0.0,
+            "covered_cvar_max_regret_db": 0.0,
+            "covered_maximum_max_regret_db": 0.0,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 3.0,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 72.72727272727273,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              27,
+              19,
+              0,
+              15
+            ],
+            "calibration_exact_payload_bits": 66,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 183.0,
+            "full_session_accounted_bits": 257.0,
+            "full_session_bits_per_scene": 3.8358208955223883,
+            "full_session_exact_baseline_bits": 737,
+            "full_session_payload_savings_percentage": 65.12890094979646
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "k": 3,
+          "resolved": true,
+          "calibration_scenes": 8,
+          "future_scene_count": 59,
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              11,
+              8,
+              4
+            ],
+            [
+              10,
+              8,
+              4
+            ],
+            [
+              12,
+              8,
+              4
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2023",
+              "nearest_source": "aerpaw_packapalooza_2023",
+              "context_distance": 1.0868875998839282,
+              "novelty_threshold": 1.5218927491677836,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.435573855345265,
+              "novelty_threshold": 1.5218927491677836,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.41157854497064406,
+              "novelty_threshold": 1.5218927491677836,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 8,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.3229718277953825,
+              "novelty_threshold": 1.5218927491677836,
+              "stable_signature": "BANK:aerpaw_lake_wheeler_2024",
+              "accumulated_bank_coverage": 0.75,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 59,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 57,
+            "coverage_rate": 0.9661016949152542,
+            "escape_count": 2,
+            "escape_rate": 0.03389830508474578,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.432983121056005,
+            "covered_mean_max_regret_db": 0.006496228669819079,
+            "covered_cvar_max_regret_db": 0.11508941650390625,
+            "covered_maximum_max_regret_db": 0.1388397216796875,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 2.3728813559322037,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 78.42835130970724,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              18,
+              30,
+              9
+            ],
+            "calibration_exact_payload_bits": 88,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 140.00000000000003,
+            "full_session_accounted_bits": 236.00000000000003,
+            "full_session_bits_per_scene": 3.522388059701493,
+            "full_session_exact_baseline_bits": 737,
+            "full_session_payload_savings_percentage": 67.97829036635005
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "k": 4,
+          "resolved": true,
+          "calibration_scenes": 8,
+          "future_scene_count": 59,
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              11,
+              8,
+              4
+            ],
+            [
+              10,
+              8,
+              4
+            ],
+            [
+              12,
+              8,
+              4
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2023",
+              "nearest_source": "aerpaw_packapalooza_2023",
+              "context_distance": 1.0868875998839282,
+              "novelty_threshold": 1.5218927491677836,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.435573855345265,
+              "novelty_threshold": 1.5218927491677836,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.41157854497064406,
+              "novelty_threshold": 1.5218927491677836,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 8,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.3229718277953825,
+              "novelty_threshold": 1.5218927491677836,
+              "stable_signature": "BANK:aerpaw_lake_wheeler_2024",
+              "accumulated_bank_coverage": 0.75,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 59,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 57,
+            "coverage_rate": 0.9661016949152542,
+            "escape_count": 2,
+            "escape_rate": 0.03389830508474578,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.432983121056005,
+            "covered_mean_max_regret_db": 0.006496228669819079,
+            "covered_cvar_max_regret_db": 0.11508941650390625,
+            "covered_maximum_max_regret_db": 0.1388397216796875,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 2.3728813559322037,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 78.42835130970724,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              18,
+              30,
+              9
+            ],
+            "calibration_exact_payload_bits": 88,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 140.00000000000003,
+            "full_session_accounted_bits": 236.00000000000003,
+            "full_session_bits_per_scene": 3.522388059701493,
+            "full_session_exact_baseline_bits": 737,
+            "full_session_payload_savings_percentage": 67.97829036635005
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "k": 3,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "future_scene_count": 62,
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              11,
+              8,
+              4
+            ],
+            [
+              10,
+              8,
+              4
+            ],
+            [
+              12,
+              8,
+              4
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.95833751496105,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.770681141552166,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": "BANK:aerpaw_lake_wheeler_2024",
+              "accumulated_bank_coverage": 0.75,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.3411245074345444,
+            "covered_mean_max_regret_db": 0.0006186921717756885,
+            "covered_cvar_max_regret_db": 0.012167612711588541,
+            "covered_maximum_max_regret_db": 0.036502838134765625,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 2.5322580645161286,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 76.97947214076247,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              14,
+              9,
+              36
+            ],
+            "calibration_exact_payload_bits": 44,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 156.99999999999997,
+            "full_session_accounted_bits": 208.99999999999997,
+            "full_session_bits_per_scene": 3.166666666666666,
+            "full_session_exact_baseline_bits": 726,
+            "full_session_payload_savings_percentage": 71.21212121212122
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "k": 4,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "future_scene_count": 62,
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              11,
+              8,
+              4
+            ],
+            [
+              10,
+              8,
+              4
+            ],
+            [
+              12,
+              8,
+              4
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.95833751496105,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.770681141552166,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": "BANK:aerpaw_lake_wheeler_2024",
+              "accumulated_bank_coverage": 0.75,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.3411245074345444,
+            "covered_mean_max_regret_db": 0.0006186921717756885,
+            "covered_cvar_max_regret_db": 0.012167612711588541,
+            "covered_maximum_max_regret_db": 0.036502838134765625,
+            "exact_action_payload_bits": 11,
+            "expected_semantic_payload_bits_per_scene": 2.5322580645161286,
+            "exact_payload_bits_per_scene": 11,
+            "payload_savings_percentage": 76.97947214076247,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              14,
+              9,
+              36
+            ],
+            "calibration_exact_payload_bits": 44,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 156.99999999999997,
+            "full_session_accounted_bits": 208.99999999999997,
+            "full_session_bits_per_scene": 3.166666666666666,
+            "full_session_exact_baseline_bits": 726,
+            "full_session_payload_savings_percentage": 71.21212121212122
+          }
+        }
+      ],
+      "aggregate_by_k": {
+        "3": {
+          "k": 3,
+          "fold_count": 4,
+          "macro_compact_future_coverage": 0.9573430393349008,
+          "worst_activity_compact_future_coverage": 0.9444444444444444,
+          "macro_full_session_payload_savings_percentage": 73.33807361792435,
+          "worst_full_session_payload_savings_percentage": 67.97829036635005,
+          "mean_calibration_scenes": 5.5,
+          "maximum_calibration_scenes": 8,
+          "unresolved_fold_count": 0,
+          "ood_adaptation_fold_count": 1,
+          "bank_reuse_fold_count": 3,
+          "all_unsafe_coded_action_counts_zero": true
+        },
+        "4": {
+          "k": 4,
+          "fold_count": 4,
+          "macro_compact_future_coverage": 0.9655397606463763,
+          "worst_activity_compact_future_coverage": 0.9444444444444444,
+          "macro_full_session_payload_savings_percentage": 72.01514281738162,
+          "worst_full_session_payload_savings_percentage": 65.12890094979646,
+          "mean_calibration_scenes": 5.5,
+          "maximum_calibration_scenes": 8,
+          "unresolved_fold_count": 0,
+          "ood_adaptation_fold_count": 1,
+          "bank_reuse_fold_count": 3,
+          "all_unsafe_coded_action_counts_zero": true
+        }
+      },
+      "primary_comparison": {
+        "worst_coverage_gain_over_single_prefix_B2": 0.9136752136752136,
+        "macro_coverage_loss_vs_single_prefix_B4": 0.0005380683346785098,
+        "single_prefix_B2": {
+          "k": 4,
+          "calibration_budget": 2,
+          "method": "spectral_context_ood_adapter",
+          "fold_count": 4,
+          "macro_future_coverage": 0.732161402996175,
+          "worst_activity_future_coverage": 0.03076923076923077,
+          "macro_full_session_payload_savings_percentage": 50.711005977288195,
+          "worst_full_session_payload_savings_percentage": -24.559023066485764,
+          "all_unsafe_coded_action_counts_zero": true,
+          "ood_adaptation_count": 1
+        },
+        "single_prefix_B4": {
+          "k": 4,
+          "calibration_budget": 4,
+          "method": "spectral_context_ood_adapter",
+          "fold_count": 4,
+          "macro_future_coverage": 0.9660778289810548,
+          "worst_activity_future_coverage": 0.9444444444444444,
+          "macro_full_session_payload_savings_percentage": 73.77905055143862,
+          "worst_full_session_payload_savings_percentage": 67.29986431478969,
+          "all_unsafe_coded_action_counts_zero": true,
+          "ood_adaptation_count": 1
+        },
+        "single_prefix_B8": {
+          "k": 4,
+          "calibration_budget": 8,
+          "method": "spectral_context_ood_adapter",
+          "fold_count": 4,
+          "macro_future_coverage": 0.9701674229539201,
+          "worst_activity_future_coverage": 0.9482758620689655,
+          "macro_full_session_payload_savings_percentage": 68.24097431288747,
+          "worst_full_session_payload_savings_percentage": 62.95793758480326,
+          "all_unsafe_coded_action_counts_zero": true,
+          "ood_adaptation_count": 1
+        }
+      },
+      "primary_gate_passed": true
+    },
+    "32": {
+      "n_channels": 32,
+      "rows": [
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "k": 3,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "future_scene_count": 360,
+          "decision": "OOD",
+          "adapted": true,
+          "selected_actions": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "OOD",
+              "nearest_source": null,
+              "context_distance": 1.454213880965015,
+              "novelty_threshold": 0.30796583012065887,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "OOD",
+              "nearest_source": null,
+              "context_distance": 1.5679503804708586,
+              "novelty_threshold": 0.30796583012065887,
+              "stable_signature": "OOD",
+              "accumulated_bank_coverage": null,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 1,
+            "symbol_width_bits": 1,
+            "covered_count": 340,
+            "coverage_rate": 0.9444444444444444,
+            "escape_count": 20,
+            "escape_rate": 0.05555555555555558,
+            "used_codeword_count": 1,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": -0.0,
+            "covered_mean_max_regret_db": 0.017316699028015137,
+            "covered_cvar_max_regret_db": 0.1565107457778033,
+            "covered_maximum_max_regret_db": 0.19598388671875,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 1.7777777777777781,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 87.3015873015873,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              340
+            ],
+            "calibration_exact_payload_bits": 56,
+            "adaptation_control_bits": 30,
+            "evaluation_semantic_payload_bits": 640.0000000000001,
+            "full_session_accounted_bits": 726.0000000000001,
+            "full_session_bits_per_scene": 1.9945054945054947,
+            "full_session_exact_baseline_bits": 5096,
+            "full_session_payload_savings_percentage": 85.75353218210361
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "k": 4,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "future_scene_count": 360,
+          "decision": "OOD",
+          "adapted": true,
+          "selected_actions": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "OOD",
+              "nearest_source": null,
+              "context_distance": 1.454213880965015,
+              "novelty_threshold": 0.30796583012065887,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "OOD",
+              "nearest_source": null,
+              "context_distance": 1.5679503804708586,
+              "novelty_threshold": 0.30796583012065887,
+              "stable_signature": "OOD",
+              "accumulated_bank_coverage": null,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 1,
+            "symbol_width_bits": 1,
+            "covered_count": 340,
+            "coverage_rate": 0.9444444444444444,
+            "escape_count": 20,
+            "escape_rate": 0.05555555555555558,
+            "used_codeword_count": 1,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": -0.0,
+            "covered_mean_max_regret_db": 0.017316699028015137,
+            "covered_cvar_max_regret_db": 0.1565107457778033,
+            "covered_maximum_max_regret_db": 0.19598388671875,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 1.7777777777777781,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 87.3015873015873,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              340
+            ],
+            "calibration_exact_payload_bits": 56,
+            "adaptation_control_bits": 30,
+            "evaluation_semantic_payload_bits": 640.0000000000001,
+            "full_session_accounted_bits": 726.0000000000001,
+            "full_session_bits_per_scene": 1.9945054945054947,
+            "full_session_exact_baseline_bits": 5096,
+            "full_session_payload_savings_percentage": 85.75353218210361
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "k": 3,
+          "resolved": true,
+          "calibration_scenes": 6,
+          "future_scene_count": 61,
+          "decision": "BANK:aerpaw_packapalooza_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              21,
+              16,
+              8
+            ],
+            [
+              17,
+              16,
+              8
+            ],
+            [
+              23,
+              16,
+              8
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.4364568340130466,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.2336367002285319,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.20784298608748528,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 60,
+            "coverage_rate": 0.9836065573770492,
+            "escape_count": 1,
+            "escape_rate": 0.016393442622950838,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.5481336895881137,
+            "covered_mean_max_regret_db": 0.010210037231445312,
+            "covered_cvar_max_regret_db": 0.06608835856119792,
+            "covered_maximum_max_regret_db": 0.10562896728515625,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 2.2295081967213117,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 84.07494145199064,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              26,
+              15,
+              19
+            ],
+            "calibration_exact_payload_bits": 84,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 136.00000000000003,
+            "full_session_accounted_bits": 228.00000000000003,
+            "full_session_bits_per_scene": 3.402985074626866,
+            "full_session_exact_baseline_bits": 938,
+            "full_session_payload_savings_percentage": 75.69296375266525
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "k": 4,
+          "resolved": true,
+          "calibration_scenes": 6,
+          "future_scene_count": 61,
+          "decision": "BANK:aerpaw_packapalooza_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              21,
+              16,
+              8
+            ],
+            [
+              17,
+              16,
+              8
+            ],
+            [
+              23,
+              16,
+              8
+            ],
+            [
+              15,
+              9,
+              6
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.4364568340130466,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.2336367002285319,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.20784298608748528,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 60,
+            "coverage_rate": 0.9836065573770492,
+            "escape_count": 1,
+            "escape_rate": 0.016393442622950838,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 0.75,
+            "codeword_usage_entropy_bits": 1.5481336895881137,
+            "covered_mean_max_regret_db": 0.010210037231445312,
+            "covered_cvar_max_regret_db": 0.06608835856119792,
+            "covered_maximum_max_regret_db": 0.10562896728515625,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 3.2295081967213117,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 76.93208430913349,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              26,
+              15,
+              19,
+              0
+            ],
+            "calibration_exact_payload_bits": 84,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 197.00000000000003,
+            "full_session_accounted_bits": 289.0,
+            "full_session_bits_per_scene": 4.313432835820896,
+            "full_session_exact_baseline_bits": 938,
+            "full_session_payload_savings_percentage": 69.18976545842217
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "k": 3,
+          "resolved": true,
+          "calibration_scenes": 8,
+          "future_scene_count": 59,
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              21,
+              16,
+              8
+            ],
+            [
+              24,
+              16,
+              8
+            ],
+            [
+              17,
+              16,
+              8
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2023",
+              "nearest_source": "aerpaw_packapalooza_2023",
+              "context_distance": 1.0560159551401769,
+              "novelty_threshold": 1.4746135348379168,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.44517707627769004,
+              "novelty_threshold": 1.4746135348379168,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.4259339091148497,
+              "novelty_threshold": 1.4746135348379168,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 8,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.3327209149420627,
+              "novelty_threshold": 1.4746135348379168,
+              "stable_signature": "BANK:aerpaw_lake_wheeler_2024",
+              "accumulated_bank_coverage": 0.875,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 59,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 57,
+            "coverage_rate": 0.9661016949152542,
+            "escape_count": 2,
+            "escape_rate": 0.03389830508474578,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.4149489635857697,
+            "covered_mean_max_regret_db": 0.02486971804970189,
+            "covered_cvar_max_regret_db": 0.1604480743408203,
+            "covered_maximum_max_regret_db": 0.1936931610107422,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 2.474576271186441,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 82.32445520581113,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              32,
+              10,
+              15
+            ],
+            "calibration_exact_payload_bits": 112,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 146.00000000000003,
+            "full_session_accounted_bits": 266.0,
+            "full_session_bits_per_scene": 3.970149253731343,
+            "full_session_exact_baseline_bits": 938,
+            "full_session_payload_savings_percentage": 71.64179104477613
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "k": 4,
+          "resolved": true,
+          "calibration_scenes": 8,
+          "future_scene_count": 59,
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              21,
+              16,
+              8
+            ],
+            [
+              24,
+              16,
+              8
+            ],
+            [
+              17,
+              16,
+              8
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2023",
+              "nearest_source": "aerpaw_packapalooza_2023",
+              "context_distance": 1.0560159551401769,
+              "novelty_threshold": 1.4746135348379168,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.44517707627769004,
+              "novelty_threshold": 1.4746135348379168,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.4259339091148497,
+              "novelty_threshold": 1.4746135348379168,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 8,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.3327209149420627,
+              "novelty_threshold": 1.4746135348379168,
+              "stable_signature": "BANK:aerpaw_lake_wheeler_2024",
+              "accumulated_bank_coverage": 0.875,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 59,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 57,
+            "coverage_rate": 0.9661016949152542,
+            "escape_count": 2,
+            "escape_rate": 0.03389830508474578,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.4149489635857697,
+            "covered_mean_max_regret_db": 0.02486971804970189,
+            "covered_cvar_max_regret_db": 0.1604480743408203,
+            "covered_maximum_max_regret_db": 0.1936931610107422,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 2.474576271186441,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 82.32445520581113,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              32,
+              10,
+              15
+            ],
+            "calibration_exact_payload_bits": 112,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 146.00000000000003,
+            "full_session_accounted_bits": 266.0,
+            "full_session_bits_per_scene": 3.970149253731343,
+            "full_session_exact_baseline_bits": 938,
+            "full_session_payload_savings_percentage": 71.64179104477613
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "k": 3,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "future_scene_count": 62,
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              21,
+              16,
+              8
+            ],
+            [
+              24,
+              16,
+              8
+            ],
+            [
+              17,
+              16,
+              8
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.9598838603642635,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.8021918197748872,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": "BANK:aerpaw_lake_wheeler_2024",
+              "accumulated_bank_coverage": 0.75,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.13056775547969,
+            "covered_mean_max_regret_db": 0.007857759120100635,
+            "covered_cvar_max_regret_db": 0.07717386881510417,
+            "covered_maximum_max_regret_db": 0.12726593017578125,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 2.677419354838709,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 80.87557603686636,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              17,
+              39,
+              3
+            ],
+            "calibration_exact_payload_bits": 56,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 165.99999999999997,
+            "full_session_accounted_bits": 229.99999999999997,
+            "full_session_bits_per_scene": 3.4848484848484844,
+            "full_session_exact_baseline_bits": 924,
+            "full_session_payload_savings_percentage": 75.10822510822511
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "k": 4,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "future_scene_count": 62,
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              21,
+              16,
+              8
+            ],
+            [
+              24,
+              16,
+              8
+            ],
+            [
+              17,
+              16,
+              8
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.9598838603642635,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.8021918197748872,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": "BANK:aerpaw_lake_wheeler_2024",
+              "accumulated_bank_coverage": 0.75,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.13056775547969,
+            "covered_mean_max_regret_db": 0.007857759120100635,
+            "covered_cvar_max_regret_db": 0.07717386881510417,
+            "covered_maximum_max_regret_db": 0.12726593017578125,
+            "exact_action_payload_bits": 14,
+            "expected_semantic_payload_bits_per_scene": 2.677419354838709,
+            "exact_payload_bits_per_scene": 14,
+            "payload_savings_percentage": 80.87557603686636,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              17,
+              39,
+              3
+            ],
+            "calibration_exact_payload_bits": 56,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 165.99999999999997,
+            "full_session_accounted_bits": 229.99999999999997,
+            "full_session_bits_per_scene": 3.4848484848484844,
+            "full_session_exact_baseline_bits": 924,
+            "full_session_payload_savings_percentage": 75.10822510822511
+          }
+        }
+      ],
+      "aggregate_by_k": {
+        "3": {
+          "k": 3,
+          "fold_count": 4,
+          "macro_compact_future_coverage": 0.9614413999906386,
+          "worst_activity_compact_future_coverage": 0.9444444444444444,
+          "macro_full_session_payload_savings_percentage": 77.04912802194252,
+          "worst_full_session_payload_savings_percentage": 71.64179104477613,
+          "mean_calibration_scenes": 5.5,
+          "maximum_calibration_scenes": 8,
+          "unresolved_fold_count": 0,
+          "ood_adaptation_fold_count": 1,
+          "bank_reuse_fold_count": 3,
+          "all_unsafe_coded_action_counts_zero": true
+        },
+        "4": {
+          "k": 4,
+          "fold_count": 4,
+          "macro_compact_future_coverage": 0.9614413999906386,
+          "worst_activity_compact_future_coverage": 0.9444444444444444,
+          "macro_full_session_payload_savings_percentage": 75.42332844838175,
+          "worst_full_session_payload_savings_percentage": 69.18976545842217,
+          "mean_calibration_scenes": 5.5,
+          "maximum_calibration_scenes": 8,
+          "unresolved_fold_count": 0,
+          "ood_adaptation_fold_count": 1,
+          "bank_reuse_fold_count": 3,
+          "all_unsafe_coded_action_counts_zero": true
+        }
+      },
+      "primary_comparison": {
+        "worst_coverage_gain_over_single_prefix_B2": 0.9136752136752136,
+        "macro_coverage_loss_vs_single_prefix_B4": 0.0006681750221622096,
+        "single_prefix_B2": {
+          "k": 4,
+          "calibration_budget": 2,
+          "method": "spectral_context_ood_adapter",
+          "fold_count": 4,
+          "macro_future_coverage": 0.732161402996175,
+          "worst_activity_future_coverage": 0.03076923076923077,
+          "macro_full_session_payload_savings_percentage": 56.903854851616046,
+          "worst_full_session_payload_savings_percentage": -11.727078891257992,
+          "all_unsafe_coded_action_counts_zero": true,
+          "ood_adaptation_count": 1
+        },
+        "single_prefix_B4": {
+          "k": 4,
+          "calibration_budget": 4,
+          "method": "spectral_context_ood_adapter",
+          "fold_count": 4,
+          "macro_future_coverage": 0.9621095750128008,
+          "worst_activity_future_coverage": 0.9444444444444444,
+          "macro_full_session_payload_savings_percentage": 77.28900009017279,
+          "worst_full_session_payload_savings_percentage": 71.53518123667378,
+          "all_unsafe_coded_action_counts_zero": true,
+          "ood_adaptation_count": 1
+        },
+        "single_prefix_B8": {
+          "k": 4,
+          "calibration_budget": 8,
+          "method": "spectral_context_ood_adapter",
+          "fold_count": 4,
+          "macro_future_coverage": 0.9659301348183269,
+          "worst_activity_future_coverage": 0.9482758620689655,
+          "macro_full_session_payload_savings_percentage": 72.01747257717408,
+          "worst_full_session_payload_savings_percentage": 66.84434968017058,
+          "all_unsafe_coded_action_counts_zero": true,
+          "ood_adaptation_count": 1
+        }
+      },
+      "primary_gate_passed": true
+    },
+    "64": {
+      "n_channels": 64,
+      "rows": [
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "k": 3,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "future_scene_count": 360,
+          "decision": "OOD",
+          "adapted": true,
+          "selected_actions": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "OOD",
+              "nearest_source": null,
+              "context_distance": 1.4394041530519255,
+              "novelty_threshold": 0.31542099823551023,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "OOD",
+              "nearest_source": null,
+              "context_distance": 1.5294811979712173,
+              "novelty_threshold": 0.31542099823551023,
+              "stable_signature": "OOD",
+              "accumulated_bank_coverage": null,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 1,
+            "symbol_width_bits": 1,
+            "covered_count": 340,
+            "coverage_rate": 0.9444444444444444,
+            "escape_count": 20,
+            "escape_rate": 0.05555555555555558,
+            "used_codeword_count": 1,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": -0.0,
+            "covered_mean_max_regret_db": 0.018061568456537582,
+            "covered_cvar_max_regret_db": 0.15991940217859604,
+            "covered_maximum_max_regret_db": 0.1956624984741211,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 1.9444444444444449,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 88.56209150326796,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              340
+            ],
+            "calibration_exact_payload_bits": 68,
+            "adaptation_control_bits": 33,
+            "evaluation_semantic_payload_bits": 700.0000000000001,
+            "full_session_accounted_bits": 801.0000000000001,
+            "full_session_bits_per_scene": 2.2005494505494507,
+            "full_session_exact_baseline_bits": 6188,
+            "full_session_payload_savings_percentage": 87.05559146735618
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2023",
+          "k": 4,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "future_scene_count": 360,
+          "decision": "OOD",
+          "adapted": true,
+          "selected_actions": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "OOD",
+              "nearest_source": null,
+              "context_distance": 1.4394041530519255,
+              "novelty_threshold": 0.31542099823551023,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "OOD",
+              "nearest_source": null,
+              "context_distance": 1.5294811979712173,
+              "novelty_threshold": 0.31542099823551023,
+              "stable_signature": "OOD",
+              "accumulated_bank_coverage": null,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 360,
+            "codeword_count": 1,
+            "symbol_width_bits": 1,
+            "covered_count": 340,
+            "coverage_rate": 0.9444444444444444,
+            "escape_count": 20,
+            "escape_rate": 0.05555555555555558,
+            "used_codeword_count": 1,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": -0.0,
+            "covered_mean_max_regret_db": 0.018061568456537582,
+            "covered_cvar_max_regret_db": 0.15991940217859604,
+            "covered_maximum_max_regret_db": 0.1956624984741211,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 1.9444444444444449,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 88.56209150326796,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              340
+            ],
+            "calibration_exact_payload_bits": 68,
+            "adaptation_control_bits": 33,
+            "evaluation_semantic_payload_bits": 700.0000000000001,
+            "full_session_accounted_bits": 801.0000000000001,
+            "full_session_bits_per_scene": 2.2005494505494507,
+            "full_session_exact_baseline_bits": 6188,
+            "full_session_payload_savings_percentage": 87.05559146735618
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "k": 3,
+          "resolved": true,
+          "calibration_scenes": 6,
+          "future_scene_count": 61,
+          "decision": "BANK:aerpaw_packapalooza_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              42,
+              32,
+              16
+            ],
+            [
+              34,
+              32,
+              16
+            ],
+            [
+              46,
+              32,
+              16
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.4453915968945847,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.2633003872904528,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.2014312940794964,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 60,
+            "coverage_rate": 0.9836065573770492,
+            "escape_count": 1,
+            "escape_rate": 0.016393442622950838,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.5481336895881137,
+            "covered_mean_max_regret_db": 0.016818650563557944,
+            "covered_cvar_max_regret_db": 0.0699014663696289,
+            "covered_maximum_max_regret_db": 0.10542583465576172,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 2.278688524590164,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 86.59594985535198,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              26,
+              15,
+              19
+            ],
+            "calibration_exact_payload_bits": 102,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 139.0,
+            "full_session_accounted_bits": 249.0,
+            "full_session_bits_per_scene": 3.716417910447761,
+            "full_session_exact_baseline_bits": 1139,
+            "full_session_payload_savings_percentage": 78.1387181738367
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_lake_wheeler_2024",
+          "k": 4,
+          "resolved": true,
+          "calibration_scenes": 6,
+          "future_scene_count": 61,
+          "decision": "BANK:aerpaw_packapalooza_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              42,
+              32,
+              16
+            ],
+            [
+              34,
+              32,
+              16
+            ],
+            [
+              46,
+              32,
+              16
+            ],
+            [
+              31,
+              18,
+              11
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.4453915968945847,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.2633003872904528,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.2014312940794964,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 4,
+            "symbol_width_bits": 3,
+            "covered_count": 60,
+            "coverage_rate": 0.9836065573770492,
+            "escape_count": 1,
+            "escape_rate": 0.016393442622950838,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 0.75,
+            "codeword_usage_entropy_bits": 1.5481336895881137,
+            "covered_mean_max_regret_db": 0.016818650563557944,
+            "covered_cvar_max_regret_db": 0.0699014663696289,
+            "covered_maximum_max_regret_db": 0.10542583465576172,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 3.278688524590164,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 80.7135969141755,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              26,
+              15,
+              19,
+              0
+            ],
+            "calibration_exact_payload_bits": 102,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 200.0,
+            "full_session_accounted_bits": 310.0,
+            "full_session_bits_per_scene": 4.626865671641791,
+            "full_session_exact_baseline_bits": 1139,
+            "full_session_payload_savings_percentage": 72.78314310798946
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "k": 3,
+          "resolved": true,
+          "calibration_scenes": 6,
+          "future_scene_count": 61,
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              42,
+              32,
+              16
+            ],
+            [
+              48,
+              32,
+              16
+            ],
+            [
+              34,
+              32,
+              16
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2023",
+              "nearest_source": "aerpaw_packapalooza_2023",
+              "context_distance": 1.0242318411150049,
+              "novelty_threshold": 1.4492223977319656,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.4437964969557443,
+              "novelty_threshold": 1.4492223977319656,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.41614895767221904,
+              "novelty_threshold": 1.4492223977319656,
+              "stable_signature": "BANK:aerpaw_lake_wheeler_2024",
+              "accumulated_bank_coverage": 0.8333333333333334,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9672131147540983,
+            "escape_count": 2,
+            "escape_rate": 0.032786885245901676,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.422946224311553,
+            "covered_mean_max_regret_db": 0.02967167708833339,
+            "covered_cvar_max_regret_db": 0.1604776382446289,
+            "covered_maximum_max_regret_db": 0.1936931610107422,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 2.5573770491803285,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 84.95660559305689,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              33,
+              11,
+              15
+            ],
+            "calibration_exact_payload_bits": 102,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 156.00000000000003,
+            "full_session_accounted_bits": 266.0,
+            "full_session_bits_per_scene": 3.970149253731343,
+            "full_session_exact_baseline_bits": 1139,
+            "full_session_payload_savings_percentage": 76.64618086040387
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2024",
+          "k": 4,
+          "resolved": true,
+          "calibration_scenes": 6,
+          "future_scene_count": 61,
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              42,
+              32,
+              16
+            ],
+            [
+              48,
+              32,
+              16
+            ],
+            [
+              34,
+              32,
+              16
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2023",
+              "nearest_source": "aerpaw_packapalooza_2023",
+              "context_distance": 1.0242318411150049,
+              "novelty_threshold": 1.4492223977319656,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.4437964969557443,
+              "novelty_threshold": 1.4492223977319656,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.41614895767221904,
+              "novelty_threshold": 1.4492223977319656,
+              "stable_signature": "BANK:aerpaw_lake_wheeler_2024",
+              "accumulated_bank_coverage": 0.8333333333333334,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 61,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9672131147540983,
+            "escape_count": 2,
+            "escape_rate": 0.032786885245901676,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.422946224311553,
+            "covered_mean_max_regret_db": 0.02967167708833339,
+            "covered_cvar_max_regret_db": 0.1604776382446289,
+            "covered_maximum_max_regret_db": 0.1936931610107422,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 2.5573770491803285,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 84.95660559305689,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              33,
+              11,
+              15
+            ],
+            "calibration_exact_payload_bits": 102,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 156.00000000000003,
+            "full_session_accounted_bits": 266.0,
+            "full_session_bits_per_scene": 3.970149253731343,
+            "full_session_exact_baseline_bits": 1139,
+            "full_session_payload_savings_percentage": 76.64618086040387
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "k": 3,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "future_scene_count": 62,
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              42,
+              32,
+              16
+            ],
+            [
+              48,
+              32,
+              16
+            ],
+            [
+              34,
+              32,
+              16
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.9688428870321423,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.8308854446447155,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": "BANK:aerpaw_lake_wheeler_2024",
+              "accumulated_bank_coverage": 0.75,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.13056775547969,
+            "covered_mean_max_regret_db": 0.01320114782301046,
+            "covered_cvar_max_regret_db": 0.09011300404866536,
+            "covered_maximum_max_regret_db": 0.12726497650146484,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 2.8225806451612896,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 83.39658444022771,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              17,
+              39,
+              3
+            ],
+            "calibration_exact_payload_bits": 68,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 174.99999999999994,
+            "full_session_accounted_bits": 250.99999999999994,
+            "full_session_bits_per_scene": 3.8030303030303023,
+            "full_session_exact_baseline_bits": 1122,
+            "full_session_payload_savings_percentage": 77.62923351158646
+          }
+        },
+        {
+          "holdout_campaign": "aerpaw_packapalooza_2025",
+          "k": 4,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "future_scene_count": 62,
+          "decision": "BANK:aerpaw_lake_wheeler_2024",
+          "adapted": false,
+          "selected_actions": [
+            [
+              42,
+              32,
+              16
+            ],
+            [
+              48,
+              32,
+              16
+            ],
+            [
+              34,
+              32,
+              16
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.9688428870321423,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_lake_wheeler_2024",
+              "nearest_source": "aerpaw_lake_wheeler_2024",
+              "context_distance": 0.8308854446447155,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": "BANK:aerpaw_lake_wheeler_2024",
+              "accumulated_bank_coverage": 0.75,
+              "accepted": true
+            }
+          ],
+          "future": {
+            "scene_count": 62,
+            "codeword_count": 3,
+            "symbol_width_bits": 2,
+            "covered_count": 59,
+            "coverage_rate": 0.9516129032258065,
+            "escape_count": 3,
+            "escape_rate": 0.048387096774193505,
+            "used_codeword_count": 3,
+            "codeword_utilization_rate": 1.0,
+            "codeword_usage_entropy_bits": 1.13056775547969,
+            "covered_mean_max_regret_db": 0.01320114782301046,
+            "covered_cvar_max_regret_db": 0.09011300404866536,
+            "covered_maximum_max_regret_db": 0.12726497650146484,
+            "exact_action_payload_bits": 17,
+            "expected_semantic_payload_bits_per_scene": 2.8225806451612896,
+            "exact_payload_bits_per_scene": 17,
+            "payload_savings_percentage": 83.39658444022771,
+            "unsafe_coded_action_count": 0,
+            "usage_counts": [
+              17,
+              39,
+              3
+            ],
+            "calibration_exact_payload_bits": 68,
+            "adaptation_control_bits": 8,
+            "evaluation_semantic_payload_bits": 174.99999999999994,
+            "full_session_accounted_bits": 250.99999999999994,
+            "full_session_bits_per_scene": 3.8030303030303023,
+            "full_session_exact_baseline_bits": 1122,
+            "full_session_payload_savings_percentage": 77.62923351158646
+          }
+        }
+      ],
+      "aggregate_by_k": {
+        "3": {
+          "k": 3,
+          "fold_count": 4,
+          "macro_compact_future_coverage": 0.9617192549503496,
+          "worst_activity_compact_future_coverage": 0.9444444444444444,
+          "macro_full_session_payload_savings_percentage": 79.8674310032958,
+          "worst_full_session_payload_savings_percentage": 76.64618086040387,
+          "mean_calibration_scenes": 5.0,
+          "maximum_calibration_scenes": 6,
+          "unresolved_fold_count": 0,
+          "ood_adaptation_fold_count": 1,
+          "bank_reuse_fold_count": 3,
+          "all_unsafe_coded_action_counts_zero": true
+        },
+        "4": {
+          "k": 4,
+          "fold_count": 4,
+          "macro_compact_future_coverage": 0.9617192549503496,
+          "worst_activity_compact_future_coverage": 0.9444444444444444,
+          "macro_full_session_payload_savings_percentage": 78.528537236834,
+          "worst_full_session_payload_savings_percentage": 72.78314310798946,
+          "mean_calibration_scenes": 5.0,
+          "maximum_calibration_scenes": 6,
+          "unresolved_fold_count": 0,
+          "ood_adaptation_fold_count": 1,
+          "bank_reuse_fold_count": 3,
+          "all_unsafe_coded_action_counts_zero": true
+        }
+      },
+      "primary_comparison": {
+        "worst_coverage_gain_over_single_prefix_B2": 0.9136752136752136,
+        "macro_coverage_loss_vs_single_prefix_B4": 0.004358574030705165,
+        "single_prefix_B2": {
+          "k": 4,
+          "calibration_budget": 2,
+          "method": "spectral_context_ood_adapter",
+          "fold_count": 4,
+          "macro_future_coverage": 0.732161402996175,
+          "worst_activity_future_coverage": 0.03076923076923077,
+          "macro_full_session_payload_savings_percentage": 59.48430227951738,
+          "worst_full_session_payload_savings_percentage": -9.13081650570675,
+          "all_unsafe_coded_action_counts_zero": true,
+          "ood_adaptation_count": 1
+        },
+        "single_prefix_B4": {
+          "k": 4,
+          "calibration_budget": 4,
+          "method": "spectral_context_ood_adapter",
+          "fold_count": 4,
+          "macro_future_coverage": 0.9660778289810548,
+          "worst_activity_future_coverage": 0.9444444444444444,
+          "macro_full_session_payload_savings_percentage": 80.17471809723786,
+          "worst_full_session_payload_savings_percentage": 76.73397717295873,
+          "all_unsafe_coded_action_counts_zero": true,
+          "ood_adaptation_count": 1
+        },
+        "single_prefix_B8": {
+          "k": 4,
+          "calibration_budget": 8,
+          "method": "spectral_context_ood_adapter",
+          "fold_count": 4,
+          "macro_future_coverage": 0.9659301348183269,
+          "worst_activity_future_coverage": 0.9482758620689655,
+          "macro_full_session_payload_savings_percentage": 74.70252896065013,
+          "worst_full_session_payload_savings_percentage": 70.32484635645304,
+          "all_unsafe_coded_action_counts_zero": true,
+          "ood_adaptation_count": 1
+        }
+      },
+      "primary_gate_passed": true
+    }
+  },
+  "decision_summary": {
+    "retention_gate_passed": true,
+    "gate_passing_n_values": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "recommended_next_route": "regret_aware_candidate_ranker_with_temporal_context"
+  },
+  "checks": {
+    "all_unsafe_coded_action_counts_zero": true,
+    "future_suffix_used_for_online_decision": false,
+    "unresolved_sessions_fail_closed": true,
+    "new_final_data_accessed": false
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": [
+    "The gate was designed after inspecting the B=2 failure pattern, so this experiment is development evidence.",
+    "No new Final signal values are accessed.",
+    "The future suffix remains untouched by the online decision at each fold, but the same four campaigns were used to design the protocol.",
+    "If temporal agreement is absent, the system fails closed to exact actions.",
+    "Payload accounting still excludes the complete Stage-6 reliability protocol."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage6r_temporal_context_gate_v1",
+  "status": "registered_after_failure_diagnostic_before_scripted_full_execution",
+  "created_date": "2026-07-29",
+  "purpose": "Prevent short-prefix context errors from installing or selecting a codebook until two adjacent calibration windows agree.",
+  "evidence_role": "post_diagnostic_development_not_confirmatory",
+  "inputs": {
+    "adaptation_config": "configs/stage6r_few_shot_adaptation_v1.json",
+    "adaptation_result": "results/stage6r/few_shot_adaptation_v1/result.json",
+    "context_config": "configs/stage6r_context_adapter_v1.json",
+    "context_result": "results/stage6r/context_adapter_v1/result.json"
+  },
+  "task": {
+    "primary_k": 4,
+    "secondary_k": 3,
+    "window_size_scenes": 2,
+    "required_consecutive_matching_windows": 2,
+    "checkpoints_scenes": [2, 4, 6, 8, 10, 12, 16],
+    "minimum_accumulated_bank_coverage": 0.75,
+    "maximum_calibration_scenes": 16,
+    "fallback_if_unresolved": "exact_action_for_remaining_session"
+  },
+  "comparisons": [
+    "single_prefix_context_B2",
+    "single_prefix_context_B4",
+    "single_prefix_context_B8",
+    "temporal_consistency_dynamic",
+    "exact_action_payload_baseline"
+  ],
+  "primary_gate": {
+    "primary_k": 4,
+    "minimum_macro_compact_future_coverage": 0.95,
+    "minimum_worst_activity_compact_future_coverage": 0.90,
+    "maximum_mean_calibration_scenes": 8.0,
+    "maximum_unresolved_fold_count": 0,
+    "minimum_macro_full_session_payload_savings_percentage": 0.0,
+    "unsafe_coded_action_count": 0
+  },
+  "secondary_checks": {
+    "minimum_worst_coverage_gain_over_single_prefix_B2": 0.50,
+    "maximum_macro_coverage_loss_vs_single_prefix_B4": 0.02,
+    "all_n_values_required_for_primary_gate": true
+  },
+  "claim_boundary": [
+    "The gate was designed after inspecting the B=2 failure pattern, so this experiment is development evidence.",
+    "No new Final signal values are accessed.",
+    "The future suffix remains untouched by the online decision at each fold, but the same four campaigns were used to design the protocol.",
+    "If temporal agreement is absent, the system fails closed to exact actions.",
+    "Payload accounting still excludes the complete Stage-6 reliability protocol."
+  ]
+}
