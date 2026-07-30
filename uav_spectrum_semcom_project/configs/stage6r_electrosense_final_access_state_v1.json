@@ -12,10 +12,19 @@
       "member_count": 4
     },
     "stage6_final": {
-      "access_count": 0,
-      "signal_values_accessed": false,
-      "first_access_at_utc": null,
-      "purpose": "single Stage-6R external Final"
+      "access_count": 1,
+      "signal_values_accessed": true,
+      "first_access_at_utc": "2026-07-30T01:51:22.812915+00:00",
+      "purpose": "single Stage-6R external Final",
+      "actor": "Codex Stage-6R confirmatory executor",
+      "declared_purpose": "single 24-site Stage-6R ElectroSense external Final",
+      "member_count": 24,
+      "evidence": {
+        "protocol_sha256": "8aeffb02c98b561026854cea4b11d6daf7277504abd9c6786b500707dd8ffd68",
+        "freeze_result_sha256": "41fd5bdf0e3f57b2f0ee571dec848585462216083f4ca9f851d0759e12bfcc0f",
+        "code_snapshot_sha256": "998e6c99200416ff4875e7aee3cdbf40f59a1817fc7b28ea9733f587266f7e06",
+        "output_path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage6r\\electrosense_external_final_v1\\result.json"
+      }
     },
     "confirmation_lockbox": {
       "access_count": 0,
