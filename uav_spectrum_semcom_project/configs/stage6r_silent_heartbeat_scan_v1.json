@@ -1,0 +1,76 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage6r_silent_heartbeat_scan_v1",
+  "status": "registered_before_execution",
+  "created_date": "2026-07-30",
+  "purpose": "Test whether shorter fixed silent-heartbeat intervals recover the N=16/32 clean-rate failure without sacrificing the positive total-bit margin.",
+  "evidence_role": "post_final_failure_development_not_confirmatory",
+  "inputs": {
+    "adaptation_config": "configs/stage6r_few_shot_adaptation_v1.json",
+    "temporal_gate_result": "results/stage6r/temporal_context_gate_v1/result.json",
+    "matched_scan_config": "configs/stage6r_matched_clean_scan_v1.json",
+    "matched_scan_result": "results/stage6r/matched_clean_scan_v1/result.json",
+    "activation_protocol": "configs/stage6r_codebook_activation_protocol_v1.json",
+    "electrosense_protocol": "configs/stage6r_electrosense_external_final_protocol_v1.json",
+    "electrosense_registry": "results/stage6r/electrosense_final_registry_v1/registry.json",
+    "electrosense_access_state": "configs/stage6r_electrosense_final_access_state_v1.json",
+    "electrosense_freeze": "results/stage6r/electrosense_final_freeze_v1/result.json"
+  },
+  "development_data": {
+    "aerpaw_activities": [
+      "aerpaw_packapalooza_2023",
+      "aerpaw_lake_wheeler_2024",
+      "aerpaw_packapalooza_2024",
+      "aerpaw_packapalooza_2025"
+    ],
+    "electrosense_role": "pilot",
+    "electrosense_site_count": 4,
+    "main_final_values_may_be_read": false,
+    "confirmation_lockbox_values_may_be_read": false,
+    "reserve_values_may_be_read": false
+  },
+  "frozen_task": {
+    "n_channels": [16, 32],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "epsilon_db": 0.2,
+    "primary_k": 4,
+    "matched_clean_target": 0.9,
+    "maximum_activation_attempts": 2,
+    "catalog_epoch": 1,
+    "codebook_epoch": 2
+  },
+  "intervention": {
+    "only_changed_field": "heartbeat_silence_scenes",
+    "heartbeat_candidates_scenes": [16, 10, 8, 6],
+    "selection_order": "largest_interval_first",
+    "other_semantic_workpoint_fields_frozen": true,
+    "exact_baseline_workpoint_frozen": true
+  },
+  "monte_carlo": {
+    "trajectories": 60,
+    "random_seed": 20260730,
+    "bootstrap_replicates": 5000,
+    "bootstrap_seed": 20260811,
+    "confidence_level": 0.95,
+    "paired_common_random_numbers": true,
+    "hierarchical_bootstrap_unit": "activity_or_site_then_paired_trajectory"
+  },
+  "selection_gate": {
+    "required_n_values": [16, 32],
+    "combined_scene_weighted_clean_ci_lower_minimum": 0.9,
+    "pilot_scene_weighted_clean_ci_lower_minimum": 0.9,
+    "combined_scene_weighted_savings_ci_lower_minimum": 0.0,
+    "pilot_scene_weighted_savings_ci_lower_minimum": 0.0,
+    "wrong_codebook_decode_count": 0,
+    "select_largest_interval_passing_all_n": true,
+    "if_none_pass": "design_risk_aware_silent_context_watchdog"
+  },
+  "claim_boundary": [
+    "This experiment is motivated by the failed Final and is development evidence only.",
+    "The consumed 24-site main Final is not read or rerun.",
+    "Only the four Pilot sites and four existing AERPAW development activities are evaluated.",
+    "Only heartbeat_silence_scenes changes; codebooks, epsilon, activation attempts, fault probabilities, and all other workpoint fields remain frozen.",
+    "The six-site confirmation lockbox and reserve signal values remain unread.",
+    "A selected interval requires both N=16 and N=32 to pass all registered gates."
+  ]
+}
