@@ -1,11 +1,11 @@
 # 离散任务导向频谱语义通信系统主线研究计划书
 
-版本：2.2
+版本：2.3
 生效日期：2026-07-27；最近更新：2026-07-30
 状态：正式主线  
 适用范围：阶段6收尾、外部确认性验证、后续频谱预测与最小工程验证  
-当前入口：S7.5“冻结架构复杂度与会话开销审计”
-当前进度：S7.4C证明即使采用不可实现的0-bit身份上界，12/16/24景半无状态候选仍为0/4种N通过。可靠性协议分支正式收口，固定10景心跳冻结为阶段7工程边界，后续只做复杂度、会话摊销和论文证据整合。
+当前入口：S7.6“阶段7论文证据整合与候选冻结清单”
+当前进度：S7.5复杂度审计完成。在线codec四种N两轮p95均低于1 ms，Python分配峰值低于6 MiB；无界码本拟合在N = 32/64超过5 s，但K = 3有界拟合在1024景下四种N均低于4 s。下一步整合阶段7正负证据、限制和未来外部验证条件。
 
 ## Material Passport
 
@@ -18,7 +18,7 @@
 - Stage 6R ElectroSense Main Final Access Count：1
 - Stage 6R Confirmation Lockbox Access Count：1
 - Stage 6 Closeout：COMPLETE
-- Stage 7 Research：ACTIVE AT S7.5
+- Stage 7 Research：ACTIVE AT S7.6
 - Stage 7 S7.0 Oracle Headroom：PASSED 4/4 N（development upper bound）
 - Stage 7 S7.1 Aggregate Gate：PASSED 3/4 N（development validation）
 - Stage 7 S7.1 Site Robustness：CAUTION；未打开内部开发测试集
@@ -28,6 +28,7 @@
 - Stage 7 S7.4A Periodic Checkpoint：FAILED 0/4 N；保留codec与协议负结果
 - Stage 7 S7.4B Event Piggyback：FAILED 0/4 N；停止增加有状态上下文组件
 - Stage 7 S7.4C Semi-Stateless Bound：FAILED 0/4 N；固定10景心跳冻结
+- Stage 7 S7.5 Complexity：ONLINE PASS 4/4 N；UNBOUNDED OFFLINE FAIL 2/4；K=3 OFFLINE PASS 4/4
 - Supersession Rule：本文件是后续研究的唯一主线入口；既有阶段计划继续作为历史证据，不得用其旧顺序覆盖本文件
 
 ---
@@ -1276,3 +1277,24 @@ S7.4C在不读取原始信号的条件下，将S7.4B实测24-bit身份增量反�
 6. 不因可靠性分支负结果打开关闭数据或重新运行Final。
 
 完整证据见 `docs/STAGE7_S7_4C_SEMI_STATELESS_BOUNDARY_RESULTS.md`。
+
+---
+
+## 31. 2026-07-30 阶段7 S7.5复杂度与会话开销
+
+当前Windows桌面CPU基准显示：
+
+- N = 8/16/32/64紧凑编码加解码p95为0.28—0.73 ms，独立复测为0.31—0.94 ms，四种N均低于1 ms；
+- 峰值Python分配为1.86—5.83 MiB；
+- 1024景无界贪心拟合在N = 32/64分别约9.84/14.37 s，超过5 s；
+- 固定K = 3后，1024景拟合为0.35—3.63 s，四种N通过；64景拟合均低于0.03 s；
+- 64-bit激活加24-bit ACK的88-bit启动成本，在10/100/1000/10000景会话中分别摊销为8.8/0.88/0.088/0.0088 bit/景。
+
+工程边界：
+
+1. 在线codec不是当前桌面Python原型瓶颈；
+2. 码本拟合必须限制K并作为离线或低频校准，不允许在线无界重建；
+3. 结果不能替代真实板载CPU、RSS、功耗和硬件在环测试；
+4. 当前进入S7.6，整合阶段7的正结果、负结果、冻结候选和未来外部验证条件。
+
+完整证据见 `docs/STAGE7_S7_5_COMPLEXITY_AND_SESSION_COST_RESULTS.md`。

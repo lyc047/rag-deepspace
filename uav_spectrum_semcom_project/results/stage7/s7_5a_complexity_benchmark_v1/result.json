@@ -1,0 +1,175 @@
+{
+  "version": "1.0",
+  "status": "stage7_s7_5a_complexity_benchmark_complete",
+  "verification_status": "ANALYZED",
+  "experiment_id": "stage7_s7_5a_complexity_benchmark_v1",
+  "config_sha256": "f07991cd2741bcd28ff4c8b0ed16673dc22b1c2b884aee4dbb8ff61127ee1ed5",
+  "n_results": {
+    "8": {
+      "n_channels": 8,
+      "query_demands": [
+        2,
+        4,
+        6
+      ],
+      "training_scenes": 1024,
+      "codeword_count": 45,
+      "symbol_width_bits": 6,
+      "codebook_fit_seconds": 1.3717059000045992,
+      "compact_encode_decode_ms": {
+        "median": 0.26044599999999996,
+        "p95": 0.28017652,
+        "maximum": 0.2907202,
+        "batch_count": 30,
+        "calls_per_batch": 500
+      },
+      "peak_python_allocation_mib": 1.8639678955078125,
+      "pickle_codebook_bytes": 1680,
+      "context_install_bits": 721,
+      "compact_example_bits": 46,
+      "compact_example_uses_escape": false,
+      "session_start_amortized_bits_per_scene": {
+        "10": 8.8,
+        "100": 0.88,
+        "1000": 0.088,
+        "10000": 0.0088
+      },
+      "gates": {
+        "latency_passed": true,
+        "fit_passed": true,
+        "memory_passed": true
+      },
+      "n_gate_passed": true
+    },
+    "16": {
+      "n_channels": 16,
+      "query_demands": [
+        4,
+        8,
+        12
+      ],
+      "training_scenes": 1024,
+      "codeword_count": 101,
+      "symbol_width_bits": 7,
+      "codebook_fit_seconds": 4.1247556999951485,
+      "compact_encode_decode_ms": {
+        "median": 0.5032533,
+        "p95": 0.52431683,
+        "maximum": 0.5337946,
+        "batch_count": 30,
+        "calls_per_batch": 500
+      },
+      "peak_python_allocation_mib": 2.3202285766601562,
+      "pickle_codebook_bytes": 3248,
+      "context_install_bits": 1472,
+      "compact_example_bits": 47,
+      "compact_example_uses_escape": false,
+      "session_start_amortized_bits_per_scene": {
+        "10": 8.8,
+        "100": 0.88,
+        "1000": 0.088,
+        "10000": 0.0088
+      },
+      "gates": {
+        "latency_passed": true,
+        "fit_passed": true,
+        "memory_passed": true
+      },
+      "n_gate_passed": true
+    },
+    "32": {
+      "n_channels": 32,
+      "query_demands": [
+        8,
+        16,
+        24
+      ],
+      "training_scenes": 1024,
+      "codeword_count": 143,
+      "symbol_width_bits": 8,
+      "codebook_fit_seconds": 9.841361999999208,
+      "compact_encode_decode_ms": {
+        "median": 0.7104195,
+        "p95": 0.7245691099999999,
+        "maximum": 0.7375155999999999,
+        "batch_count": 30,
+        "calls_per_batch": 500
+      },
+      "peak_python_allocation_mib": 3.611053466796875,
+      "pickle_codebook_bytes": 4425,
+      "context_install_bits": 2363,
+      "compact_example_bits": 48,
+      "compact_example_uses_escape": false,
+      "session_start_amortized_bits_per_scene": {
+        "10": 8.8,
+        "100": 0.88,
+        "1000": 0.088,
+        "10000": 0.0088
+      },
+      "gates": {
+        "latency_passed": true,
+        "fit_passed": false,
+        "memory_passed": true
+      },
+      "n_gate_passed": false
+    },
+    "64": {
+      "n_channels": 64,
+      "query_demands": [
+        16,
+        32,
+        48
+      ],
+      "training_scenes": 1024,
+      "codeword_count": 129,
+      "symbol_width_bits": 8,
+      "codebook_fit_seconds": 14.36599450000358,
+      "compact_encode_decode_ms": {
+        "median": 0.6933498,
+        "p95": 0.7097319499999999,
+        "maximum": 0.7128555999999999,
+        "batch_count": 30,
+        "calls_per_batch": 500
+      },
+      "peak_python_allocation_mib": 5.830818176269531,
+      "pickle_codebook_bytes": 4033,
+      "context_install_bits": 2554,
+      "compact_example_bits": 48,
+      "compact_example_uses_escape": false,
+      "session_start_amortized_bits_per_scene": {
+        "10": 8.8,
+        "100": 0.88,
+        "1000": 0.088,
+        "10000": 0.0088
+      },
+      "gates": {
+        "latency_passed": true,
+        "fit_passed": false,
+        "memory_passed": true
+      },
+      "n_gate_passed": false
+    }
+  },
+  "decision": {
+    "passing_n_count": 2,
+    "required_n_count": 4,
+    "development_gate_passed": false,
+    "next_action": "profile_failed_complexity_dimension_before_claiming_feasibility"
+  },
+  "elapsed_seconds": 64.7588906000019,
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": [
+    "Latency is measured on the current Windows desktop CPU and Python runtime, not an embedded UAV processor.",
+    "Synthetic spectra are used only to exercise frozen algorithmic paths and do not support performance or generalization claims.",
+    "tracemalloc reports Python-managed allocation and is not total process RSS.",
+    "No closed development-test, reserve, or external Final signal data are loaded.",
+    "Session amortization includes the 64-bit activation and 24-bit ACK only; recurring traffic remains reported separately in prior full-protocol results."
+  ]
+}

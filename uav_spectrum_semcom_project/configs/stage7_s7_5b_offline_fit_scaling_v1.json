@@ -1,0 +1,28 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage7_s7_5b_offline_fit_scaling_v1",
+  "status": "registered_before_execution",
+  "created_date": "2026-07-30",
+  "evidence_role": "offline_complexity_diagnostic_on_synthetic_spectra",
+  "objective": "Separate calibration-set size and bounded codeword selection costs after S7.5A exceeded the offline five-second fit gate at N=32 and N=64.",
+  "task": {
+    "n_channels": [8, 16, 32, 64],
+    "scene_counts": [16, 64, 256, 1024],
+    "max_codewords": [3],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "epsilon_db": 0.2,
+    "random_seed": 20260730
+  },
+  "gates": {
+    "maximum_bounded_fit_seconds_at_1024_scenes": 5.0,
+    "maximum_fit_seconds_at_64_calibration_scenes": 1.0,
+    "minimum_passing_n_count": 4
+  },
+  "claim_boundary": [
+    "This is an offline Python calibration benchmark, not online inference.",
+    "Synthetic spectra exercise computational scaling only.",
+    "max_codewords=3 matches the compact codeword-budget intent but does not reproduce a particular external site codebook.",
+    "No closed or external signal data are loaded.",
+    "Failure does not imply that compact encoding or decoding is too slow."
+  ]
+}

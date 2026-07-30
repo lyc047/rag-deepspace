@@ -1,0 +1,189 @@
+{
+  "version": "1.0",
+  "status": "stage7_s7_5b_offline_fit_scaling_complete",
+  "verification_status": "ANALYZED",
+  "experiment_id": "stage7_s7_5b_offline_fit_scaling_v1",
+  "config_sha256": "95b220458ee809b9e4f962cf66a484da7d0462d2468e8be3593fa907e48f5acd",
+  "n_results": {
+    "8": {
+      "16": {
+        "3": {
+          "fit_seconds": 0.0007253999938257039,
+          "selected_codewords": 3,
+          "exact_action_tuple_count": 4,
+          "training_coverage_fraction": 0.875
+        }
+      },
+      "64": {
+        "3": {
+          "fit_seconds": 0.006110899994382635,
+          "selected_codewords": 3,
+          "exact_action_tuple_count": 16,
+          "training_coverage_fraction": 0.53125
+        }
+      },
+      "256": {
+        "3": {
+          "fit_seconds": 0.05535690000397153,
+          "selected_codewords": 3,
+          "exact_action_tuple_count": 42,
+          "training_coverage_fraction": 0.3046875
+        }
+      },
+      "1024": {
+        "3": {
+          "fit_seconds": 0.35441330000321614,
+          "selected_codewords": 3,
+          "exact_action_tuple_count": 58,
+          "training_coverage_fraction": 0.2666015625
+        }
+      }
+    },
+    "16": {
+      "16": {
+        "3": {
+          "fit_seconds": 0.0013366999992285855,
+          "selected_codewords": 3,
+          "exact_action_tuple_count": 10,
+          "training_coverage_fraction": 0.8125
+        }
+      },
+      "64": {
+        "3": {
+          "fit_seconds": 0.011376299997209571,
+          "selected_codewords": 3,
+          "exact_action_tuple_count": 28,
+          "training_coverage_fraction": 0.515625
+        }
+      },
+      "256": {
+        "3": {
+          "fit_seconds": 0.13131450000219047,
+          "selected_codewords": 3,
+          "exact_action_tuple_count": 84,
+          "training_coverage_fraction": 0.34375
+        }
+      },
+      "1024": {
+        "3": {
+          "fit_seconds": 1.0252065999957267,
+          "selected_codewords": 3,
+          "exact_action_tuple_count": 179,
+          "training_coverage_fraction": 0.234375
+        }
+      }
+    },
+    "32": {
+      "16": {
+        "3": {
+          "fit_seconds": 0.0020615999965230003,
+          "selected_codewords": 3,
+          "exact_action_tuple_count": 12,
+          "training_coverage_fraction": 0.8125
+        }
+      },
+      "64": {
+        "3": {
+          "fit_seconds": 0.029303800001798663,
+          "selected_codewords": 3,
+          "exact_action_tuple_count": 45,
+          "training_coverage_fraction": 0.546875
+        }
+      },
+      "256": {
+        "3": {
+          "fit_seconds": 0.19228470000234665,
+          "selected_codewords": 3,
+          "exact_action_tuple_count": 133,
+          "training_coverage_fraction": 0.27734375
+        }
+      },
+      "1024": {
+        "3": {
+          "fit_seconds": 2.3083839000028092,
+          "selected_codewords": 3,
+          "exact_action_tuple_count": 428,
+          "training_coverage_fraction": 0.212890625
+        }
+      }
+    },
+    "64": {
+      "16": {
+        "3": {
+          "fit_seconds": 0.002306399997905828,
+          "selected_codewords": 3,
+          "exact_action_tuple_count": 15,
+          "training_coverage_fraction": 0.8125
+        }
+      },
+      "64": {
+        "3": {
+          "fit_seconds": 0.027321300003677607,
+          "selected_codewords": 3,
+          "exact_action_tuple_count": 59,
+          "training_coverage_fraction": 0.5
+        }
+      },
+      "256": {
+        "3": {
+          "fit_seconds": 0.25846889999957057,
+          "selected_codewords": 3,
+          "exact_action_tuple_count": 174,
+          "training_coverage_fraction": 0.3515625
+        }
+      },
+      "1024": {
+        "3": {
+          "fit_seconds": 3.6270024000041303,
+          "selected_codewords": 3,
+          "exact_action_tuple_count": 612,
+          "training_coverage_fraction": 0.2314453125
+        }
+      }
+    }
+  },
+  "n_checks": {
+    "8": {
+      "fit_64_passed": true,
+      "fit_1024_passed": true,
+      "n_gate_passed": true
+    },
+    "16": {
+      "fit_64_passed": true,
+      "fit_1024_passed": true,
+      "n_gate_passed": true
+    },
+    "32": {
+      "fit_64_passed": true,
+      "fit_1024_passed": true,
+      "n_gate_passed": true
+    },
+    "64": {
+      "fit_64_passed": true,
+      "fit_1024_passed": true,
+      "n_gate_passed": true
+    }
+  },
+  "decision": {
+    "passing_n_count": 4,
+    "required_n_count": 4,
+    "gate_passed": true,
+    "next_action": "freeze_complexity_evidence_and_write_report"
+  },
+  "elapsed_seconds": 8.555122400000982,
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": [
+    "This is an offline Python calibration benchmark, not online inference.",
+    "Synthetic spectra exercise computational scaling only.",
+    "max_codewords=3 matches the compact codeword-budget intent but does not reproduce a particular external site codebook.",
+    "No closed or external signal data are loaded.",
+    "Failure does not imply that compact encoding or decoding is too slow."
+  ]
+}

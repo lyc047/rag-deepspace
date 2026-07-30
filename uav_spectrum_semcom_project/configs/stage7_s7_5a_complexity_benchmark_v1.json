@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage7_s7_5a_complexity_benchmark_v1",
+  "status": "registered_before_execution",
+  "created_date": "2026-07-30",
+  "evidence_role": "current_desktop_cpu_engineering_benchmark_not_uav_hardware_validation",
+  "objective": "Measure frozen task-codebook construction, compact codec latency, peak Python allocation, and session-start amortization for N in {8,16,32,64}.",
+  "task": {
+    "n_channels": [8, 16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "epsilon_db": 0.2,
+    "synthetic_scene_count": 1024,
+    "random_seed": 20260730
+  },
+  "benchmark": {
+    "warmup_calls": 200,
+    "timed_batches": 30,
+    "calls_per_batch": 500,
+    "session_lengths_scenes": [10, 100, 1000, 10000],
+    "startup_activation_bits": 64,
+    "startup_ack_bits": 24
+  },
+  "development_gates": {
+    "maximum_compact_encode_decode_p95_ms": 1.0,
+    "maximum_codebook_fit_seconds": 5.0,
+    "maximum_peak_python_allocation_mib": 64.0,
+    "minimum_passing_n_count": 4
+  },
+  "claim_boundary": [
+    "Latency is measured on the current Windows desktop CPU and Python runtime, not an embedded UAV processor.",
+    "Synthetic spectra are used only to exercise frozen algorithmic paths and do not support performance or generalization claims.",
+    "tracemalloc reports Python-managed allocation and is not total process RSS.",
+    "No closed development-test, reserve, or external Final signal data are loaded.",
+    "Session amortization includes the 64-bit activation and 24-bit ACK only; recurring traffic remains reported separately in prior full-protocol results."
+  ]
+}
