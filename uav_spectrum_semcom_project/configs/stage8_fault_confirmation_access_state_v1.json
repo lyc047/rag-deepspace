@@ -1,0 +1,25 @@
+{
+  "schema_version": "stage8-fault-confirmation-access-state-v1",
+  "experiment_id": "stage8_fault_confirmation_v1",
+  "execution_started": false,
+  "roles": {
+    "aadm_confirmation": {
+      "access_count": 0,
+      "signal_values_accessed": false,
+      "first_access_at_utc": null,
+      "unit_count": 20
+    },
+    "alfa_confirmation": {
+      "access_count": 0,
+      "signal_values_accessed": false,
+      "first_access_at_utc": null,
+      "unit_count": 20
+    }
+  },
+  "evidence": null,
+  "prohibitions": [
+    "Do not reset access_count.",
+    "Do not rerun after execution_started becomes true.",
+    "Do not tune the fault estimator, heartbeat interval, or protocol after confirmation access."
+  ]
+}

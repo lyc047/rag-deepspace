@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage8_fault_confirmation_v1",
+  "registration_date": "2026-07-30",
+  "status": "REGISTERED_BEFORE_CONFIRMATION_ACCESS",
+  "purpose": "Single-use confirmation of the Stage-8 public-data fault-model conclusions after the heartbeat development replay selected no candidate.",
+  "inputs": {
+    "fault_protocol": "configs/stage8_fault_calibration_protocol_v1.json",
+    "split": "results/stage8/stage8_fault_split_freeze_v1/result.json",
+    "aadm_development": "results/stage8/stage8_aadm_development_v1/result.json",
+    "alfa_development": "results/stage8/stage8_alfa_development_v1/result.json",
+    "fault_model": "results/stage8/stage8_empirical_fault_model_v1/result.json",
+    "development_replay": "results/stage8/stage8_empirical_fault_replay_v1/result.json",
+    "access_state": "configs/stage8_fault_confirmation_access_state_v1.json",
+    "aadm_archive": "F:\\uav_spectrum_stage8_fault_data\\source_archives\\aadm\\AADM2025Dryad.zip",
+    "alfa_processed_archive": "F:\\uav_spectrum_stage8_fault_data\\source_archives\\alfa\\processed.zip"
+  },
+  "frozen_input_hashes": {
+    "split": "70a0b4f03c15f7df1d7ddb4fcec2a35622de14e5f417b47b850120870955a3e0",
+    "fault_model": "88bac200f95964c8888755959f82a94a134701e3ef02e9dc46f985b78ed4d605",
+    "development_replay": "5a6f8f7117acccbf42fc6b71f68830de4bfee50db6f1d93e99cf3dbda8172859"
+  },
+  "confirmation_units": {
+    "aadm_physical_testbed_flights": 20,
+    "alfa_raw_flights": 20,
+    "processed_segments_inherit_raw_flight_group": true
+  },
+  "hypotheses": {
+    "h1": "A homogeneous Bernoulli loss model is inadequate across AADM flights.",
+    "h1_test": "Monte Carlo Pearson overdispersion test at alpha 0.05, with complete flight as the independent unit.",
+    "h2": "The exact 10 percent task-loss assumption is not necessarily representative.",
+    "h2_test": "Report whether 0.10 lies inside the flight-cluster bootstrap 95 percent interval; do not substitute this test for the heterogeneity test.",
+    "h3": "ALFA does not identify semantic receiver-context reset probability even when FCU boot markers are observable.",
+    "h3_test": "Audit SYSTEM_TIME boot-time decreases and MAVROS reconnects; preserve the semantic-observability boundary regardless of event count."
+  },
+  "statistics": {
+    "confidence_level": 0.95,
+    "cluster_bootstrap_replicates": 10000,
+    "cluster_bootstrap_seed": 20261201,
+    "overdispersion_monte_carlo_replicates": 20000,
+    "overdispersion_seed": 20261202,
+    "alpha": 0.05,
+    "lag1_absolute_threshold": 0.1
+  },
+  "execution_rule": {
+    "mark_both_confirmation_roles_consumed_before_opening_any_value": true,
+    "rerun_after_started_access": false,
+    "post_confirmation_retuning": false,
+    "candidate_replay_required": false,
+    "reason_no_candidate_replay": "The frozen development replay selected NO_CANDIDATE for all alternatives."
+  },
+  "claim_boundary": [
+    "This confirms a public-data fault model, not the spectrum-selection algorithm.",
+    "AADM internal frame gaps are lower-bound uplink loss proxies.",
+    "ALFA FCU boot evidence is not semantic receiver-process evidence.",
+    "No board-level context persistence, process restart, power interruption, or recovery claim is permitted.",
+    "No heartbeat candidate is selected or tuned with confirmation values."
+  ]
+}
