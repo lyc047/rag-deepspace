@@ -1,0 +1,2166 @@
+{
+  "version": "1.0",
+  "status": "AADM_DEVELOPMENT_ANALYZED",
+  "protocol_id": "stage8_fault_calibration_protocol_v1",
+  "access_log": {
+    "development_flights_opened": 13,
+    "development_flight_ids": [
+      "792vol2_flight32",
+      "932vol2_flight2",
+      "928vol1_flight25",
+      "828vol2_flight11",
+      "1050vol3_flight18",
+      "928vol2_flight26",
+      "779vol2_flight5",
+      "1047vol3_flight9",
+      "934vol2_flight20",
+      "792vol3_flight33",
+      "934vol3_flight21",
+      "828vol3_flight12",
+      "1050vol2_flight17"
+    ],
+    "confirmation_flights_opened": 0,
+    "confirmation_flight_ids_remain_unread": [
+      "1004vol1_flight28",
+      "1004vol2_flight29",
+      "1004vol3_flight30",
+      "1047vol1_flight7",
+      "1047vol2_flight8",
+      "1050vol1_flight16",
+      "779vol1_flight4",
+      "779vol3_flight6",
+      "792vol1_flight31",
+      "799vol1_flight13",
+      "799vol2_flight14",
+      "799vol3_flight15",
+      "828vol1_flight10",
+      "866vol1_flight22",
+      "866vol2_flight23",
+      "866vol3_flight24",
+      "928vol3_flight27",
+      "932vol1_flight1",
+      "932vol3_flight3",
+      "934vol1_flight19"
+    ]
+  },
+  "estimator": {
+    "unit": "complete physical-testbed flight",
+    "packet_identity": "LoRa deduplication_id",
+    "loss_definition": "missing internal frame counter within each monotonic counter segment",
+    "counter_restart_rule": "start a new segment whenever chronological frame counter decreases",
+    "boundary_loss_observability": "leading and trailing losses are unobservable; estimate is a lower bound"
+  },
+  "aggregate": {
+    "flight_count": 13,
+    "received_unique_packets": 1767,
+    "internal_frame_span": 2512,
+    "internal_gap_count": 745,
+    "pooled_internal_gap_fraction_lower_bound": 0.2965764331210191,
+    "cluster_bootstrap_95_ci": [
+      0.11951968190099513,
+      0.47445673374378905
+    ],
+    "flights_with_any_internal_gap": 8,
+    "flights_with_counter_restart": 4,
+    "counter_restart_events": 4,
+    "mean_flight_gap_fraction": 0.27812608968525043,
+    "median_flight_gap_fraction": 0.10077519379844961,
+    "mean_flight_lag1_failure_correlation": 0.019759309805961398,
+    "mean_segment_lag1_failure_correlation": 0.019759309805961398,
+    "maximum_absolute_segment_lag1_failure_correlation": 0.08365817091454272,
+    "maximum_observed_loss_run": 20,
+    "gilbert_elliott_proxy": {
+      "p_success_to_failure": 0.1,
+      "p_failure_to_success": 0.2348993288590604,
+      "stationary_failure_probability": 0.2985971943887776,
+      "mean_failure_run_implied": 4.257142857142857,
+      "transition_counts": {
+        "success_to_success": 1575,
+        "success_to_failure": 175,
+        "failure_to_success": 175,
+        "failure_to_failure": 570
+      }
+    },
+    "short_range_burst_failure_evidence": false,
+    "between_flight_rate_heterogeneity_evidence": true
+  },
+  "per_flight": [
+    {
+      "flight_id": "792vol2_flight32",
+      "member": "AADM2025Dryad/LORA/792vol2_flight32/LORAlog.csv",
+      "row_count": 493,
+      "malformed_row_count": 0,
+      "unique_packet_count": 133,
+      "gateway_count": 6,
+      "segment_count": 2,
+      "counter_restart_events": 1,
+      "duplicate_counter_packets_within_segments": 0,
+      "internal_frame_span": 161,
+      "internal_gap_count": 28,
+      "internal_gap_fraction_lower_bound": 0.17391304347826086,
+      "transition_counts": {
+        "success_to_success": 124,
+        "success_to_failure": 7,
+        "failure_to_success": 7,
+        "failure_to_failure": 21
+      },
+      "lag1_failure_correlation": 0.05,
+      "loss_run_count": 7,
+      "maximum_loss_run": 10,
+      "mean_loss_run": 4.0,
+      "median_observed_interarrival_seconds": 2.4586000442504883,
+      "median_best_gateway_snr_db": 13.0,
+      "median_best_gateway_rssi_dbm": -69.0,
+      "mean_gateways_per_received_packet": 3.706766917293233,
+      "segments": [
+        {
+          "start_counter": 1,
+          "end_counter": 122,
+          "received_packet_count": 122,
+          "internal_frame_span": 122,
+          "internal_gap_count": 0,
+          "internal_gap_fraction_lower_bound": 0.0,
+          "lag1_failure_correlation": null,
+          "maximum_loss_run": 0,
+          "loss_trace_rle": [
+            [
+              0,
+              122
+            ]
+          ]
+        },
+        {
+          "start_counter": 6,
+          "end_counter": 44,
+          "received_packet_count": 11,
+          "internal_frame_span": 39,
+          "internal_gap_count": 28,
+          "internal_gap_fraction_lower_bound": 0.717948717948718,
+          "lag1_failure_correlation": 0.05,
+          "maximum_loss_run": 10,
+          "loss_trace_rle": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "flight_id": "932vol2_flight2",
+      "member": "AADM2025Dryad/LORA/932vol2_flight2/LORAlog.csv",
+      "row_count": 401,
+      "malformed_row_count": 0,
+      "unique_packet_count": 106,
+      "gateway_count": 6,
+      "segment_count": 2,
+      "counter_restart_events": 1,
+      "duplicate_counter_packets_within_segments": 0,
+      "internal_frame_span": 294,
+      "internal_gap_count": 188,
+      "internal_gap_fraction_lower_bound": 0.6394557823129252,
+      "transition_counts": {
+        "success_to_success": 58,
+        "success_to_failure": 46,
+        "failure_to_success": 46,
+        "failure_to_failure": 142
+      },
+      "lag1_failure_correlation": 0.06875198475706576,
+      "loss_run_count": 46,
+      "maximum_loss_run": 12,
+      "mean_loss_run": 4.086956521739131,
+      "median_observed_interarrival_seconds": 2.826575517654419,
+      "median_best_gateway_snr_db": 12.5,
+      "median_best_gateway_rssi_dbm": -72.5,
+      "mean_gateways_per_received_packet": 3.7830188679245285,
+      "segments": [
+        {
+          "start_counter": 26,
+          "end_counter": 63,
+          "received_packet_count": 38,
+          "internal_frame_span": 38,
+          "internal_gap_count": 0,
+          "internal_gap_fraction_lower_bound": 0.0,
+          "lag1_failure_correlation": null,
+          "maximum_loss_run": 0,
+          "loss_trace_rle": [
+            [
+              0,
+              38
+            ]
+          ]
+        },
+        {
+          "start_counter": 1,
+          "end_counter": 256,
+          "received_packet_count": 68,
+          "internal_frame_span": 256,
+          "internal_gap_count": 188,
+          "internal_gap_fraction_lower_bound": 0.734375,
+          "lag1_failure_correlation": 0.06875198475706576,
+          "maximum_loss_run": 12,
+          "loss_trace_rle": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              11
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              12
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "flight_id": "928vol1_flight25",
+      "member": "AADM2025Dryad/LORA/928vol1_flight25/LORAlog.csv",
+      "row_count": 810,
+      "malformed_row_count": 0,
+      "unique_packet_count": 239,
+      "gateway_count": 6,
+      "segment_count": 1,
+      "counter_restart_events": 0,
+      "duplicate_counter_packets_within_segments": 0,
+      "internal_frame_span": 240,
+      "internal_gap_count": 1,
+      "internal_gap_fraction_lower_bound": 0.004166666666666667,
+      "transition_counts": {
+        "success_to_success": 237,
+        "success_to_failure": 1,
+        "failure_to_success": 1,
+        "failure_to_failure": 0
+      },
+      "lag1_failure_correlation": -0.004201680672268908,
+      "loss_run_count": 1,
+      "maximum_loss_run": 1,
+      "mean_loss_run": 1.0,
+      "median_observed_interarrival_seconds": 2.453338861465454,
+      "median_best_gateway_snr_db": 13.0,
+      "median_best_gateway_rssi_dbm": -67.0,
+      "mean_gateways_per_received_packet": 3.3891213389121337,
+      "segments": [
+        {
+          "start_counter": 3,
+          "end_counter": 242,
+          "received_packet_count": 239,
+          "internal_frame_span": 240,
+          "internal_gap_count": 1,
+          "internal_gap_fraction_lower_bound": 0.004166666666666667,
+          "lag1_failure_correlation": -0.004201680672268908,
+          "maximum_loss_run": 1,
+          "loss_trace_rle": [
+            [
+              0,
+              192
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              47
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "flight_id": "828vol2_flight11",
+      "member": "AADM2025Dryad/LORA/828vol2_flight11/LORAlog.csv",
+      "row_count": 652,
+      "malformed_row_count": 0,
+      "unique_packet_count": 192,
+      "gateway_count": 6,
+      "segment_count": 1,
+      "counter_restart_events": 0,
+      "duplicate_counter_packets_within_segments": 0,
+      "internal_frame_span": 192,
+      "internal_gap_count": 0,
+      "internal_gap_fraction_lower_bound": 0.0,
+      "transition_counts": {
+        "success_to_success": 191,
+        "success_to_failure": 0,
+        "failure_to_success": 0,
+        "failure_to_failure": 0
+      },
+      "lag1_failure_correlation": null,
+      "loss_run_count": 0,
+      "maximum_loss_run": 0,
+      "mean_loss_run": 0.0,
+      "median_observed_interarrival_seconds": 2.456101179122925,
+      "median_best_gateway_snr_db": 13.0,
+      "median_best_gateway_rssi_dbm": -69.0,
+      "mean_gateways_per_received_packet": 3.3958333333333335,
+      "segments": [
+        {
+          "start_counter": 1,
+          "end_counter": 192,
+          "received_packet_count": 192,
+          "internal_frame_span": 192,
+          "internal_gap_count": 0,
+          "internal_gap_fraction_lower_bound": 0.0,
+          "lag1_failure_correlation": null,
+          "maximum_loss_run": 0,
+          "loss_trace_rle": [
+            [
+              0,
+              192
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "flight_id": "1050vol3_flight18",
+      "member": "AADM2025Dryad/LORA/1050vol3_flight18/LORAlog.csv",
+      "row_count": 282,
+      "malformed_row_count": 0,
+      "unique_packet_count": 76,
+      "gateway_count": 5,
+      "segment_count": 1,
+      "counter_restart_events": 0,
+      "duplicate_counter_packets_within_segments": 0,
+      "internal_frame_span": 262,
+      "internal_gap_count": 186,
+      "internal_gap_fraction_lower_bound": 0.7099236641221374,
+      "transition_counts": {
+        "success_to_success": 25,
+        "success_to_failure": 50,
+        "failure_to_success": 50,
+        "failure_to_failure": 136
+      },
+      "lag1_failure_correlation": 0.06451612903225806,
+      "loss_run_count": 50,
+      "maximum_loss_run": 13,
+      "mean_loss_run": 3.72,
+      "median_observed_interarrival_seconds": 5.291200876235962,
+      "median_best_gateway_snr_db": 11.800000190734863,
+      "median_best_gateway_rssi_dbm": -75.0,
+      "mean_gateways_per_received_packet": 3.710526315789474,
+      "segments": [
+        {
+          "start_counter": 0,
+          "end_counter": 261,
+          "received_packet_count": 76,
+          "internal_frame_span": 262,
+          "internal_gap_count": 186,
+          "internal_gap_fraction_lower_bound": 0.7099236641221374,
+          "lag1_failure_correlation": 0.06451612903225806,
+          "maximum_loss_run": 13,
+          "loss_trace_rle": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              13
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              11
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "flight_id": "928vol2_flight26",
+      "member": "AADM2025Dryad/LORA/928vol2_flight26/LORAlog.csv",
+      "row_count": 153,
+      "malformed_row_count": 0,
+      "unique_packet_count": 47,
+      "gateway_count": 5,
+      "segment_count": 1,
+      "counter_restart_events": 0,
+      "duplicate_counter_packets_within_segments": 0,
+      "internal_frame_span": 192,
+      "internal_gap_count": 145,
+      "internal_gap_fraction_lower_bound": 0.7552083333333334,
+      "transition_counts": {
+        "success_to_success": 14,
+        "success_to_failure": 32,
+        "failure_to_success": 32,
+        "failure_to_failure": 113
+      },
+      "lag1_failure_correlation": 0.08365817091454272,
+      "loss_run_count": 32,
+      "maximum_loss_run": 13,
+      "mean_loss_run": 4.53125,
+      "median_observed_interarrival_seconds": 7.602144479751587,
+      "median_best_gateway_snr_db": 13.0,
+      "median_best_gateway_rssi_dbm": -66.0,
+      "mean_gateways_per_received_packet": 3.25531914893617,
+      "segments": [
+        {
+          "start_counter": 0,
+          "end_counter": 191,
+          "received_packet_count": 47,
+          "internal_frame_span": 192,
+          "internal_gap_count": 145,
+          "internal_gap_fraction_lower_bound": 0.7552083333333334,
+          "lag1_failure_correlation": 0.08365817091454272,
+          "maximum_loss_run": 13,
+          "loss_trace_rle": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              11
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              13
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              11
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "flight_id": "779vol2_flight5",
+      "member": "AADM2025Dryad/LORA/779vol2_flight5/LORAlog.csv",
+      "row_count": 600,
+      "malformed_row_count": 0,
+      "unique_packet_count": 139,
+      "gateway_count": 6,
+      "segment_count": 2,
+      "counter_restart_events": 1,
+      "duplicate_counter_packets_within_segments": 0,
+      "internal_frame_span": 252,
+      "internal_gap_count": 113,
+      "internal_gap_fraction_lower_bound": 0.44841269841269843,
+      "transition_counts": {
+        "success_to_success": 119,
+        "success_to_failure": 18,
+        "failure_to_success": 18,
+        "failure_to_failure": 95
+      },
+      "lag1_failure_correlation": -0.05929203539823008,
+      "loss_run_count": 18,
+      "maximum_loss_run": 20,
+      "mean_loss_run": 6.277777777777778,
+      "median_observed_interarrival_seconds": 2.461832046508789,
+      "median_best_gateway_snr_db": 13.300000190734863,
+      "median_best_gateway_rssi_dbm": -62.0,
+      "mean_gateways_per_received_packet": 4.316546762589928,
+      "segments": [
+        {
+          "start_counter": 7,
+          "end_counter": 124,
+          "received_packet_count": 118,
+          "internal_frame_span": 118,
+          "internal_gap_count": 0,
+          "internal_gap_fraction_lower_bound": 0.0,
+          "lag1_failure_correlation": null,
+          "maximum_loss_run": 0,
+          "loss_trace_rle": [
+            [
+              0,
+              118
+            ]
+          ]
+        },
+        {
+          "start_counter": 1,
+          "end_counter": 134,
+          "received_packet_count": 21,
+          "internal_frame_span": 134,
+          "internal_gap_count": 113,
+          "internal_gap_fraction_lower_bound": 0.8432835820895522,
+          "lag1_failure_correlation": -0.05929203539823008,
+          "maximum_loss_run": 20,
+          "loss_trace_rle": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              20
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              16
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              15
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "flight_id": "1047vol3_flight9",
+      "member": "AADM2025Dryad/LORA/1047vol3_flight9/LORAlog.csv",
+      "row_count": 291,
+      "malformed_row_count": 0,
+      "unique_packet_count": 86,
+      "gateway_count": 6,
+      "segment_count": 1,
+      "counter_restart_events": 0,
+      "duplicate_counter_packets_within_segments": 0,
+      "internal_frame_span": 86,
+      "internal_gap_count": 0,
+      "internal_gap_fraction_lower_bound": 0.0,
+      "transition_counts": {
+        "success_to_success": 85,
+        "success_to_failure": 0,
+        "failure_to_success": 0,
+        "failure_to_failure": 0
+      },
+      "lag1_failure_correlation": null,
+      "loss_run_count": 0,
+      "maximum_loss_run": 0,
+      "mean_loss_run": 0.0,
+      "median_observed_interarrival_seconds": 2.4367480278015137,
+      "median_best_gateway_snr_db": 13.25,
+      "median_best_gateway_rssi_dbm": -67.0,
+      "mean_gateways_per_received_packet": 3.383720930232558,
+      "segments": [
+        {
+          "start_counter": 0,
+          "end_counter": 85,
+          "received_packet_count": 86,
+          "internal_frame_span": 86,
+          "internal_gap_count": 0,
+          "internal_gap_fraction_lower_bound": 0.0,
+          "lag1_failure_correlation": null,
+          "maximum_loss_run": 0,
+          "loss_trace_rle": [
+            [
+              0,
+              86
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "flight_id": "934vol2_flight20",
+      "member": "AADM2025Dryad/LORA/934vol2_flight20/LORAlog.csv",
+      "row_count": 52,
+      "malformed_row_count": 0,
+      "unique_packet_count": 16,
+      "gateway_count": 5,
+      "segment_count": 1,
+      "counter_restart_events": 0,
+      "duplicate_counter_packets_within_segments": 0,
+      "internal_frame_span": 74,
+      "internal_gap_count": 58,
+      "internal_gap_fraction_lower_bound": 0.7837837837837838,
+      "transition_counts": {
+        "success_to_success": 3,
+        "success_to_failure": 12,
+        "failure_to_success": 12,
+        "failure_to_failure": 46
+      },
+      "lag1_failure_correlation": -0.006896551724137912,
+      "loss_run_count": 12,
+      "maximum_loss_run": 10,
+      "mean_loss_run": 4.833333333333333,
+      "median_observed_interarrival_seconds": 10.049168109893799,
+      "median_best_gateway_snr_db": 12.650000095367432,
+      "median_best_gateway_rssi_dbm": -73.0,
+      "mean_gateways_per_received_packet": 3.25,
+      "segments": [
+        {
+          "start_counter": 0,
+          "end_counter": 73,
+          "received_packet_count": 16,
+          "internal_frame_span": 74,
+          "internal_gap_count": 58,
+          "internal_gap_fraction_lower_bound": 0.7837837837837838,
+          "lag1_failure_correlation": -0.006896551724137912,
+          "maximum_loss_run": 10,
+          "loss_trace_rle": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "flight_id": "792vol3_flight33",
+      "member": "AADM2025Dryad/LORA/792vol3_flight33/LORAlog.csv",
+      "row_count": 586,
+      "malformed_row_count": 0,
+      "unique_packet_count": 160,
+      "gateway_count": 6,
+      "segment_count": 1,
+      "counter_restart_events": 0,
+      "duplicate_counter_packets_within_segments": 0,
+      "internal_frame_span": 160,
+      "internal_gap_count": 0,
+      "internal_gap_fraction_lower_bound": 0.0,
+      "transition_counts": {
+        "success_to_success": 159,
+        "success_to_failure": 0,
+        "failure_to_success": 0,
+        "failure_to_failure": 0
+      },
+      "lag1_failure_correlation": null,
+      "loss_run_count": 0,
+      "maximum_loss_run": 0,
+      "mean_loss_run": 0.0,
+      "median_observed_interarrival_seconds": 2.4418389797210693,
+      "median_best_gateway_snr_db": 13.199999809265137,
+      "median_best_gateway_rssi_dbm": -69.0,
+      "mean_gateways_per_received_packet": 3.6625,
+      "segments": [
+        {
+          "start_counter": 0,
+          "end_counter": 159,
+          "received_packet_count": 160,
+          "internal_frame_span": 160,
+          "internal_gap_count": 0,
+          "internal_gap_fraction_lower_bound": 0.0,
+          "lag1_failure_correlation": null,
+          "maximum_loss_run": 0,
+          "loss_trace_rle": [
+            [
+              0,
+              160
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "flight_id": "934vol3_flight21",
+      "member": "AADM2025Dryad/LORA/934vol3_flight21/LORAlog.csv",
+      "row_count": 861,
+      "malformed_row_count": 0,
+      "unique_packet_count": 232,
+      "gateway_count": 6,
+      "segment_count": 2,
+      "counter_restart_events": 1,
+      "duplicate_counter_packets_within_segments": 0,
+      "internal_frame_span": 258,
+      "internal_gap_count": 26,
+      "internal_gap_fraction_lower_bound": 0.10077519379844961,
+      "transition_counts": {
+        "success_to_success": 221,
+        "success_to_failure": 9,
+        "failure_to_success": 9,
+        "failure_to_failure": 17
+      },
+      "lag1_failure_correlation": -0.03846153846153847,
+      "loss_run_count": 9,
+      "maximum_loss_run": 7,
+      "mean_loss_run": 2.888888888888889,
+      "median_observed_interarrival_seconds": 2.456152558326721,
+      "median_best_gateway_snr_db": 13.0,
+      "median_best_gateway_rssi_dbm": -67.0,
+      "mean_gateways_per_received_packet": 3.711206896551724,
+      "segments": [
+        {
+          "start_counter": 1,
+          "end_counter": 218,
+          "received_packet_count": 218,
+          "internal_frame_span": 218,
+          "internal_gap_count": 0,
+          "internal_gap_fraction_lower_bound": 0.0,
+          "lag1_failure_correlation": null,
+          "maximum_loss_run": 0,
+          "loss_trace_rle": [
+            [
+              0,
+              218
+            ]
+          ]
+        },
+        {
+          "start_counter": 1,
+          "end_counter": 40,
+          "received_packet_count": 14,
+          "internal_frame_span": 40,
+          "internal_gap_count": 26,
+          "internal_gap_fraction_lower_bound": 0.65,
+          "lag1_failure_correlation": -0.03846153846153847,
+          "maximum_loss_run": 7,
+          "loss_trace_rle": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "flight_id": "828vol3_flight12",
+      "member": "AADM2025Dryad/LORA/828vol3_flight12/LORAlog.csv",
+      "row_count": 264,
+      "malformed_row_count": 0,
+      "unique_packet_count": 80,
+      "gateway_count": 5,
+      "segment_count": 1,
+      "counter_restart_events": 0,
+      "duplicate_counter_packets_within_segments": 0,
+      "internal_frame_span": 80,
+      "internal_gap_count": 0,
+      "internal_gap_fraction_lower_bound": 0.0,
+      "transition_counts": {
+        "success_to_success": 79,
+        "success_to_failure": 0,
+        "failure_to_success": 0,
+        "failure_to_failure": 0
+      },
+      "lag1_failure_correlation": null,
+      "loss_run_count": 0,
+      "maximum_loss_run": 0,
+      "mean_loss_run": 0.0,
+      "median_observed_interarrival_seconds": 2.4534950256347656,
+      "median_best_gateway_snr_db": 13.0,
+      "median_best_gateway_rssi_dbm": -69.0,
+      "mean_gateways_per_received_packet": 3.3,
+      "segments": [
+        {
+          "start_counter": 2,
+          "end_counter": 81,
+          "received_packet_count": 80,
+          "internal_frame_span": 80,
+          "internal_gap_count": 0,
+          "internal_gap_fraction_lower_bound": 0.0,
+          "lag1_failure_correlation": null,
+          "maximum_loss_run": 0,
+          "loss_trace_rle": [
+            [
+              0,
+              80
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "flight_id": "1050vol2_flight17",
+      "member": "AADM2025Dryad/LORA/1050vol2_flight17/LORAlog.csv",
+      "row_count": 986,
+      "malformed_row_count": 0,
+      "unique_packet_count": 261,
+      "gateway_count": 5,
+      "segment_count": 1,
+      "counter_restart_events": 0,
+      "duplicate_counter_packets_within_segments": 0,
+      "internal_frame_span": 261,
+      "internal_gap_count": 0,
+      "internal_gap_fraction_lower_bound": 0.0,
+      "transition_counts": {
+        "success_to_success": 260,
+        "success_to_failure": 0,
+        "failure_to_success": 0,
+        "failure_to_failure": 0
+      },
+      "lag1_failure_correlation": null,
+      "loss_run_count": 0,
+      "maximum_loss_run": 0,
+      "mean_loss_run": 0.0,
+      "median_observed_interarrival_seconds": 2.4456039667129517,
+      "median_best_gateway_snr_db": 13.0,
+      "median_best_gateway_rssi_dbm": -69.0,
+      "mean_gateways_per_received_packet": 3.7777777777777777,
+      "segments": [
+        {
+          "start_counter": 4,
+          "end_counter": 264,
+          "received_packet_count": 261,
+          "internal_frame_span": 261,
+          "internal_gap_count": 0,
+          "internal_gap_fraction_lower_bound": 0.0,
+          "lag1_failure_correlation": null,
+          "maximum_loss_run": 0,
+          "loss_trace_rle": [
+            [
+              0,
+              261
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "development_decision": {
+    "homogeneous_iid_loss_supported": false,
+    "within_segment_short_range_iid_diagnostic_supported": true,
+    "empirical_hierarchical_trace_model_should_be_evaluated": true,
+    "task_loss_10_percent_empirically_supported": false,
+    "ack_loss_calibrated": false,
+    "context_reset_calibrated": false
+  },
+  "claim_boundary": [
+    "This is an exploratory development estimate and not a confirmation result.",
+    "Frame-counter gaps estimate only internal LoRa uplink losses.",
+    "Pooled Markov transitions mix low-loss and high-loss flights; they are a proxy and are not interpreted as a stationary channel.",
+    "The logs do not identify semantic ACK loss.",
+    "A LoRa sender counter restart is not a semantic receiver-context reset."
+  ]
+}

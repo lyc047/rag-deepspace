@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage8_empirical_fault_replay_v1",
+  "registration_date": "2026-07-30",
+  "status": "REGISTERED_BEFORE_REPLAY_AND_CONFIRMATION_ACCESS",
+  "purpose": "Evaluate the frozen fixed-10 heartbeat against alternative fixed intervals under a development-fitted flight-hierarchical task-link loss model.",
+  "inputs": {
+    "stage8_fault_protocol": "configs/stage8_fault_calibration_protocol_v1.json",
+    "stage8_split": "results/stage8/stage8_fault_split_freeze_v1/result.json",
+    "aadm_development": "results/stage8/stage8_aadm_development_v1/result.json",
+    "alfa_development": "results/stage8/stage8_alfa_development_v1/result.json",
+    "adaptation_config": "configs/stage6r_few_shot_adaptation_v1.json",
+    "temporal_gate_result": "results/stage6r/temporal_context_gate_v1/result.json",
+    "matched_scan_config": "configs/stage6r_matched_clean_scan_v1.json",
+    "activation_protocol": "configs/stage6r_codebook_activation_protocol_v1.json",
+    "electrosense_protocol": "configs/stage6r_electrosense_external_final_protocol_v1.json",
+    "electrosense_registry": "results/stage6r/electrosense_final_registry_v1/registry.json",
+    "electrosense_access_state": "configs/stage6r_electrosense_final_access_state_v1.json",
+    "electrosense_freeze": "results/stage6r/electrosense_final_freeze_v1/result.json"
+  },
+  "fault_model": {
+    "task_link": "For every spectrum-session trajectory, uniformly sample one independent AADM development flight and use that flight's internal frame-gap lower-bound as a fixed Bernoulli task/heartbeat-request loss probability for the trajectory.",
+    "why_hierarchical": "Development segments pass the registered short-range lag-1 diagnostic but flight loss rates are strongly heterogeneous.",
+    "posterior_smoothing": "none",
+    "installation_loss_probability": 0.1,
+    "ack_and_heartbeat_response_loss_probability": 0.2,
+    "delayed_duplicate_probability": 0.1,
+    "receiver_context_reset_probability_per_scene": 0.02,
+    "unobserved_parameters_role": "stress_only_not_empirically_calibrated",
+    "random_seed": 20261101
+  },
+  "development_spectrum_sessions": {
+    "aerpaw_activities": [
+      "aerpaw_packapalooza_2023",
+      "aerpaw_lake_wheeler_2024",
+      "aerpaw_packapalooza_2024",
+      "aerpaw_packapalooza_2025"
+    ],
+    "electrosense_role": "pilot",
+    "electrosense_site_count": 4,
+    "stage6_main_final_may_be_rerun": false,
+    "stage7_closed_development_test_may_be_opened": false,
+    "stage7_reserve_may_be_opened": false
+  },
+  "frozen_task": {
+    "n_channels": [8, 16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "epsilon_db": 0.2,
+    "primary_k": 4,
+    "maximum_activation_attempts": 2,
+    "catalog_epoch": 1,
+    "codebook_epoch": 2
+  },
+  "intervention": {
+    "baseline_heartbeat_scenes": 10,
+    "candidate_heartbeat_scenes": [null, 30, 20, 16, 6],
+    "selection_order": [null, 30, 20, 16, 6],
+    "only_changed_field": "heartbeat_silence_scenes",
+    "all_codebook_task_and_fail_closed_logic_frozen": true
+  },
+  "monte_carlo": {
+    "trajectories": 60,
+    "random_seed": 20261102,
+    "bootstrap_replicates": 5000,
+    "bootstrap_seed": 20261103,
+    "confidence_level": 0.95,
+    "paired_common_random_numbers": true,
+    "hierarchical_bootstrap_unit": "spectrum session then paired trajectory"
+  },
+  "selection_gate": {
+    "minimum_passing_n_values": 3,
+    "clean_difference_ci_lower_percentage_points_minimum": -0.5,
+    "relative_total_bit_saving_ci_lower_strictly_greater_than": 0.0,
+    "wrong_codebook_decode_count": 0,
+    "confirmation_required_before_new_candidate": true,
+    "if_none_pass": "retain_S6R-FH10-v1_as_stress_model_boundary"
+  },
+  "claim_boundary": [
+    "This is a mechanism-development replay and not an algorithm Final.",
+    "The AADM frame-gap estimator is a lower bound because leading and trailing losses are unobservable.",
+    "ACK loss and semantic receiver reset remain stress assumptions.",
+    "No confirmation AADM or ALFA value may be opened until this model and any development selection are frozen.",
+    "The Stage-6 Final failure and Stage-7 conclusion remain unchanged."
+  ]
+}

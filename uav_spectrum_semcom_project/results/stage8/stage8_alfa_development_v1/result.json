@@ -1,0 +1,1514 @@
+{
+  "version": "1.0",
+  "status": "ALFA_DEVELOPMENT_AUDITED",
+  "protocol_id": "stage8_fault_calibration_protocol_v1",
+  "access_log": {
+    "development_raw_flights_registered": 19,
+    "development_raw_flights_with_processed_values_opened": 16,
+    "development_processed_sequences_opened": 23,
+    "confirmation_raw_flights_opened": 0,
+    "confirmation_raw_flight_ids_remain_unread": [
+      "carbonZ_2018-07-18-16-22-01",
+      "carbonZ_2018-07-18-16-37-39",
+      "carbonZ_2018-07-30-17-02-48",
+      "carbonZ_2018-07-30-17-10-45",
+      "carbonZ_2018-07-30-17-36-35",
+      "carbonZ_2018-07-30-17-46-31",
+      "carbonZ_2018-09-11-11-33-39",
+      "carbonZ_2018-09-11-13-57-47",
+      "carbonZ_2018-09-11-14-16-55",
+      "carbonZ_2018-09-11-14-22-07",
+      "carbonZ_2018-09-11-14-42-06",
+      "carbonZ_2018-09-11-14-52-54",
+      "carbonZ_2018-09-11-15-05-11",
+      "carbonZ_2018-09-11-15-06-34",
+      "carbonZ_2018-09-11-17-25-17",
+      "carbonZ_2018-09-11-17-55-30",
+      "carbonZ_2018-10-05-14-34-20",
+      "carbonZ_2018-10-05-14-37-22",
+      "carbonZ_2018-10-05-15-55-10",
+      "carbonZ_2018-10-18-11-04-35"
+    ],
+    "raw_bag_payloads_opened": 0,
+    "telemetry_payloads_opened": 0,
+    "dataflash_payloads_opened": 0
+  },
+  "detectors": {
+    "fcu_boot_reset": "MAVLink SYSTEM_TIME (message 2) time_boot_ms decreases by more than 1000 ms within a processed sequence",
+    "transport_reconnect": "MAVROS state field.connected transitions from 0 to 1",
+    "large_gap": "timestamp gap exceeds max(fixed minimum, 10 times the within-sequence median interval)",
+    "segment_start_not_counted_as_reset": true
+  },
+  "aggregate": {
+    "raw_flights_registered": 19,
+    "raw_flights_with_processed_coverage": 16,
+    "coverage_fraction": 0.8421052631578947,
+    "processed_sequence_count": 23,
+    "merged_observed_duration_hours": 0.6791518408077778,
+    "system_time_boot_sample_count": 3802,
+    "fcu_boot_reset_event_count": 0,
+    "mavros_reconnect_transition_count": 0,
+    "mavros_disconnect_sample_count": 0,
+    "mavlink_large_gap_count": 0,
+    "mavlink_sequence_inferred_missing_messages": 1453,
+    "descriptive_zero_event_poisson_95_upper_rate_per_hour": 4.410990434761821
+  },
+  "per_raw_flight": [
+    {
+      "raw_flight_id": "carbonZ_2018-09-11-14-41-51",
+      "processed_sequence_count": 1,
+      "processed_sequence_ids": [
+        "carbonZ_2018-09-11-14-41-51_elevator_failure"
+      ],
+      "merged_observed_duration_seconds": 128.412139744,
+      "system_time_boot_sample_count": 272,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 45
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-07-30-16-28-00",
+      "processed_sequence_count": 0,
+      "processed_sequence_ids": [],
+      "merged_observed_duration_seconds": 0,
+      "system_time_boot_sample_count": 0,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 0
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-07-30-16-39-00",
+      "processed_sequence_count": 3,
+      "processed_sequence_ids": [
+        "carbonZ_2018-07-30-16-39-00_1_engine_failure",
+        "carbonZ_2018-07-30-16-39-00_2_engine_failure",
+        "carbonZ_2018-07-30-16-39-00_3_no_failure"
+      ],
+      "merged_observed_duration_seconds": 316.90287427199996,
+      "system_time_boot_sample_count": 227,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 241
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-10-18-11-08-24",
+      "processed_sequence_count": 1,
+      "processed_sequence_ids": [
+        "carbonZ_2018-10-18-11-08-24_no_failure"
+      ],
+      "merged_observed_duration_seconds": 26.397976896,
+      "system_time_boot_sample_count": 56,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 0
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-07-18-12-10-11",
+      "processed_sequence_count": 1,
+      "processed_sequence_ids": [
+        "carbonZ_2018-07-18-12-10-11_no_ground_truth"
+      ],
+      "merged_observed_duration_seconds": 205.51294784,
+      "system_time_boot_sample_count": 437,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 179
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-10-18-11-04-08",
+      "processed_sequence_count": 2,
+      "processed_sequence_ids": [
+        "carbonZ_2018-10-18-11-04-08_1_engine_failure_with_emr_traj",
+        "carbonZ_2018-10-18-11-04-08_2_engine_failure_with_emr_traj"
+      ],
+      "merged_observed_duration_seconds": 232.419910656,
+      "system_time_boot_sample_count": 248,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 95
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-10-18-11-04-00",
+      "processed_sequence_count": 1,
+      "processed_sequence_ids": [
+        "carbonZ_2018-10-18-11-04-00_engine_failure_with_emr_traj"
+      ],
+      "merged_observed_duration_seconds": 122.5131032,
+      "system_time_boot_sample_count": 0,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 52
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-09-11-11-56-30",
+      "processed_sequence_count": 1,
+      "processed_sequence_ids": [
+        "carbonZ_2018-09-11-11-56-30_engine_failure"
+      ],
+      "merged_observed_duration_seconds": 124.390462304,
+      "system_time_boot_sample_count": 264,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 55
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-09-11-17-10-10",
+      "processed_sequence_count": 0,
+      "processed_sequence_ids": [],
+      "merged_observed_duration_seconds": 0,
+      "system_time_boot_sample_count": 0,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 0
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-07-30-16-29-45",
+      "processed_sequence_count": 1,
+      "processed_sequence_ids": [
+        "carbonZ_2018-07-30-16-29-45_engine_failure_with_emr_traj"
+      ],
+      "merged_observed_duration_seconds": 142.285966176,
+      "system_time_boot_sample_count": 0,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 115
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-10-18-11-06-47",
+      "processed_sequence_count": 0,
+      "processed_sequence_ids": [],
+      "merged_observed_duration_seconds": 0,
+      "system_time_boot_sample_count": 0,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 0
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-09-11-17-27-13",
+      "processed_sequence_count": 2,
+      "processed_sequence_ids": [
+        "carbonZ_2018-09-11-17-27-13_1_rudder_zero__left_aileron_failure",
+        "carbonZ_2018-09-11-17-27-13_2_both_ailerons_failure"
+      ],
+      "merged_observed_duration_seconds": 245.13581052799998,
+      "system_time_boot_sample_count": 531,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 99
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-07-18-15-53-31",
+      "processed_sequence_count": 2,
+      "processed_sequence_ids": [
+        "carbonZ_2018-07-18-15-53-31_1_engine_failure",
+        "carbonZ_2018-07-18-15-53-31_2_engine_failure"
+      ],
+      "merged_observed_duration_seconds": 221.11329347100002,
+      "system_time_boot_sample_count": 457,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 191
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-10-05-16-04-46",
+      "processed_sequence_count": 1,
+      "processed_sequence_ids": [
+        "carbonZ_2018-10-05-16-04-46_engine_failure_with_emr_traj"
+      ],
+      "merged_observed_duration_seconds": 92.251330368,
+      "system_time_boot_sample_count": 194,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 47
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-09-11-14-41-38",
+      "processed_sequence_count": 1,
+      "processed_sequence_ids": [
+        "carbonZ_2018-09-11-14-41-38_no_failure"
+      ],
+      "merged_observed_duration_seconds": 43.271291616,
+      "system_time_boot_sample_count": 93,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 24
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-07-30-17-20-01",
+      "processed_sequence_count": 1,
+      "processed_sequence_ids": [
+        "carbonZ_2018-07-30-17-20-01_engine_failure_with_emr_traj"
+      ],
+      "merged_observed_duration_seconds": 106.699355709,
+      "system_time_boot_sample_count": 222,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 91
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-10-18-11-06-06",
+      "processed_sequence_count": 1,
+      "processed_sequence_ids": [
+        "carbonZ_2018-10-18-11-06-06_engine_failure_with_emr_traj"
+      ],
+      "merged_observed_duration_seconds": 116.496099264,
+      "system_time_boot_sample_count": 254,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 49
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-10-18-11-03-57",
+      "processed_sequence_count": 1,
+      "processed_sequence_ids": [
+        "carbonZ_2018-10-18-11-03-57_engine_failure_with_emr_traj"
+      ],
+      "merged_observed_duration_seconds": 116.404236832,
+      "system_time_boot_sample_count": 250,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 57
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-10-05-15-52-12",
+      "processed_sequence_count": 3,
+      "processed_sequence_ids": [
+        "carbonZ_2018-10-05-15-52-12_1_no_failure",
+        "carbonZ_2018-10-05-15-52-12_2_no_failure",
+        "carbonZ_2018-10-05-15-52-12_3_engine_failure_with_emr_traj"
+      ],
+      "merged_observed_duration_seconds": 204.739828032,
+      "system_time_boot_sample_count": 297,
+      "system_time_boot_reset_event_count": 0,
+      "mavros_reconnect_transition_count": 0,
+      "mavros_disconnect_sample_count": 0,
+      "mavlink_large_gap_count": 0,
+      "mavlink_inferred_missing_messages": 113
+    }
+  ],
+  "per_processed_sequence": [
+    {
+      "raw_flight_id": "carbonZ_2018-09-11-14-41-51",
+      "sequence_id": "carbonZ_2018-09-11-14-41-51_elevator_failure",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 129,
+        "median_interval_seconds": 1.001033952,
+        "large_gap_threshold_seconds": 10.01033952,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.085184192,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 25730,
+        "median_interval_seconds": 0.001691072,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.079541216,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 45,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 272,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": true
+      },
+      "time_reference": {
+        "sample_count": 272,
+        "median_interval_seconds": 0.474033376,
+        "large_gap_threshold_seconds": 4.74033376,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.701803968,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1536691595305636696,
+        1536691723717776440
+      ],
+      "observed_duration_seconds": 128.412139744
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-07-30-16-39-00",
+      "sequence_id": "carbonZ_2018-07-30-16-39-00_1_engine_failure",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 131,
+        "median_interval_seconds": 1.0013442879999999,
+        "large_gap_threshold_seconds": 10.01344288,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.060061056,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 26191,
+        "median_interval_seconds": 0.001702992,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.0847624,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 94,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 0,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": false
+      },
+      "time_reference": {
+        "sample_count": 276,
+        "median_interval_seconds": 0.466669568,
+        "large_gap_threshold_seconds": 4.66669568,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.70581824,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1532134704586617008,
+        1532134836164908784
+      ],
+      "observed_duration_seconds": 131.578291776
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-07-30-16-39-00",
+      "sequence_id": "carbonZ_2018-07-30-16-39-00_2_engine_failure",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 106,
+        "median_interval_seconds": 1.000789888,
+        "large_gap_threshold_seconds": 10.007898879999999,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.04321296,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 21095,
+        "median_interval_seconds": 0.001732288,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.08132496,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 87,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 227,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": true
+      },
+      "time_reference": {
+        "sample_count": 227,
+        "median_interval_seconds": 0.477398304,
+        "large_gap_threshold_seconds": 4.77398304,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.722549792,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1532134948975434992,
+        1532135055198183056
+      ],
+      "observed_duration_seconds": 106.222748064
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-07-30-16-39-00",
+      "sequence_id": "carbonZ_2018-07-30-16-39-00_3_no_failure",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 79,
+        "median_interval_seconds": 1.001639184,
+        "large_gap_threshold_seconds": 10.01639184,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.087263296,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 15671,
+        "median_interval_seconds": 0.001685168,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.094399008,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 60,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 0,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": false
+      },
+      "time_reference": {
+        "sample_count": 168,
+        "median_interval_seconds": 0.469335456,
+        "large_gap_threshold_seconds": 4.6933545599999995,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.7402512,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1532135124998888368,
+        1532135204100722800
+      ],
+      "observed_duration_seconds": 79.101834432
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-10-18-11-08-24",
+      "sequence_id": "carbonZ_2018-10-18-11-08-24_no_failure",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 27,
+        "median_interval_seconds": 0.99770384,
+        "large_gap_threshold_seconds": 9.9770384,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.022627584,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 5284,
+        "median_interval_seconds": 0.0016328,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.08724624,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 0,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 56,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": true
+      },
+      "time_reference": {
+        "sample_count": 56,
+        "median_interval_seconds": 0.462461696,
+        "large_gap_threshold_seconds": 4.62461696,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.731798688,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1539875881011215080,
+        1539875907409191976
+      ],
+      "observed_duration_seconds": 26.397976896
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-07-18-12-10-11",
+      "sequence_id": "carbonZ_2018-07-18-12-10-11_no_ground_truth",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 205,
+        "median_interval_seconds": 1.001202976,
+        "large_gap_threshold_seconds": 10.01202976,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.066663488,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 40885,
+        "median_interval_seconds": 0.00157584,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.093193728,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 179,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 437,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": true
+      },
+      "time_reference": {
+        "sample_count": 437,
+        "median_interval_seconds": 0.47030543999999996,
+        "large_gap_threshold_seconds": 4.703054399999999,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.755571488,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1531930511163520584,
+        1531930716676468424
+      ],
+      "observed_duration_seconds": 205.51294784
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-10-18-11-04-08",
+      "sequence_id": "carbonZ_2018-10-18-11-04-08_1_engine_failure_with_emr_traj",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 115,
+        "median_interval_seconds": 1.000868272,
+        "large_gap_threshold_seconds": 10.00868272,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.082104384,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 22926,
+        "median_interval_seconds": 0.001750016,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.08321552,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 47,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 0,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": false
+      },
+      "time_reference": {
+        "sample_count": 241,
+        "median_interval_seconds": 0.481808992,
+        "large_gap_threshold_seconds": 4.81808992,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.755838496,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1539875278907065576,
+        1539875393509170696
+      ],
+      "observed_duration_seconds": 114.60210512
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-10-18-11-04-08",
+      "sequence_id": "carbonZ_2018-10-18-11-04-08_2_engine_failure_with_emr_traj",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 118,
+        "median_interval_seconds": 1.000793728,
+        "large_gap_threshold_seconds": 10.00793728,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.094656832,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 23664,
+        "median_interval_seconds": 0.001707008,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.09148816,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 48,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 248,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": true
+      },
+      "time_reference": {
+        "sample_count": 248,
+        "median_interval_seconds": 0.479742464,
+        "large_gap_threshold_seconds": 4.79742464,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.702330624,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1539875887015791752,
+        1539876004833597288
+      ],
+      "observed_duration_seconds": 117.817805536
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-10-18-11-04-00",
+      "sequence_id": "carbonZ_2018-10-18-11-04-00_engine_failure_with_emr_traj",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 123,
+        "median_interval_seconds": 1.000845408,
+        "large_gap_threshold_seconds": 10.00845408,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.059896896,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 24601,
+        "median_interval_seconds": 0.0016878879999999998,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.092413216,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 52,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 0,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": false
+      },
+      "time_reference": {
+        "sample_count": 261,
+        "median_interval_seconds": 0.462007088,
+        "large_gap_threshold_seconds": 4.62007088,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.749572192,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1539875256460393352,
+        1539875378973496552
+      ],
+      "observed_duration_seconds": 122.5131032
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-09-11-11-56-30",
+      "sequence_id": "carbonZ_2018-09-11-11-56-30_engine_failure",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 125,
+        "median_interval_seconds": 0.998176432,
+        "large_gap_threshold_seconds": 9.98176432,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.070084192,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 24805,
+        "median_interval_seconds": 0.0014768,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.087188832,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 55,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 264,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": true
+      },
+      "time_reference": {
+        "sample_count": 264,
+        "median_interval_seconds": 0.478176032,
+        "large_gap_threshold_seconds": 4.78176032,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.711723456,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1536681798845643424,
+        1536681923236105728
+      ],
+      "observed_duration_seconds": 124.390462304
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-07-30-16-29-45",
+      "sequence_id": "carbonZ_2018-07-30-16-29-45_engine_failure_with_emr_traj",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 142,
+        "median_interval_seconds": 1.000809824,
+        "large_gap_threshold_seconds": 10.00809824,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.050920384,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 28052,
+        "median_interval_seconds": 0.001821664,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.078120768,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 115,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 0,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": false
+      },
+      "time_reference": {
+        "sample_count": 297,
+        "median_interval_seconds": 0.47724225600000003,
+        "large_gap_threshold_seconds": 4.772422560000001,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.70785456,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1532133199017556624,
+        1532133341303522800
+      ],
+      "observed_duration_seconds": 142.285966176
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-09-11-17-27-13",
+      "sequence_id": "carbonZ_2018-09-11-17-27-13_1_rudder_zero__left_aileron_failure",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 144,
+        "median_interval_seconds": 1.001500533,
+        "large_gap_threshold_seconds": 10.01500533,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.061488135,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 28951,
+        "median_interval_seconds": 0.0017419225,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.07970283,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 65,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 311,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": true
+      },
+      "time_reference": {
+        "sample_count": 311,
+        "median_interval_seconds": 0.4584554155,
+        "large_gap_threshold_seconds": 4.584554155,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.743399103,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1536701658930090319,
+        1536701802398088039
+      ],
+      "observed_duration_seconds": 143.46799772
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-09-11-17-27-13",
+      "sequence_id": "carbonZ_2018-09-11-17-27-13_2_both_ailerons_failure",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 102,
+        "median_interval_seconds": 1.001497076,
+        "large_gap_threshold_seconds": 10.014970759999999,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.068482811,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 20507,
+        "median_interval_seconds": 0.001694881,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.077113532,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 34,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 220,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": true
+      },
+      "time_reference": {
+        "sample_count": 220,
+        "median_interval_seconds": 0.46007598,
+        "large_gap_threshold_seconds": 4.6007598,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.698955904,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1536701837972463998,
+        1536701939640276806
+      ],
+      "observed_duration_seconds": 101.667812808
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-07-18-15-53-31",
+      "sequence_id": "carbonZ_2018-07-18-15-53-31_1_engine_failure",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 133,
+        "median_interval_seconds": 1.000889127,
+        "large_gap_threshold_seconds": 10.00889127,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.068006476,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 26183,
+        "median_interval_seconds": 0.0019117704999999999,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.091511679,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 117,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 270,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": true
+      },
+      "time_reference": {
+        "sample_count": 270,
+        "median_interval_seconds": 0.493217446,
+        "large_gap_threshold_seconds": 4.93217446,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.72019926,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1531943810860944664,
+        1531943943207966970
+      ],
+      "observed_duration_seconds": 132.347022306
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-07-18-15-53-31",
+      "sequence_id": "carbonZ_2018-07-18-15-53-31_2_engine_failure",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 89,
+        "median_interval_seconds": 1.0003906555,
+        "large_gap_threshold_seconds": 10.003906555,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.060508677,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 17613,
+        "median_interval_seconds": 0.001909342,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.078966995,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 74,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 187,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": true
+      },
+      "time_reference": {
+        "sample_count": 187,
+        "median_interval_seconds": 0.47479658950000003,
+        "large_gap_threshold_seconds": 4.747965895,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.697571209,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1531944031311250521,
+        1531944120077521686
+      ],
+      "observed_duration_seconds": 88.766271165
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-10-05-16-04-46",
+      "sequence_id": "carbonZ_2018-10-05-16-04-46_engine_failure_with_emr_traj",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 93,
+        "median_interval_seconds": 0.998839984,
+        "large_gap_threshold_seconds": 9.98839984,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.048844896,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 18298,
+        "median_interval_seconds": 0.001687168,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.084473344,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 47,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 194,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": true
+      },
+      "time_reference": {
+        "sample_count": 194,
+        "median_interval_seconds": 0.477813856,
+        "large_gap_threshold_seconds": 4.7781385599999995,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.722826528,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1538770094246629728,
+        1538770186497960096
+      ],
+      "observed_duration_seconds": 92.251330368
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-09-11-14-41-38",
+      "sequence_id": "carbonZ_2018-09-11-14-41-38_no_failure",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 44,
+        "median_interval_seconds": 0.999905952,
+        "large_gap_threshold_seconds": 9.99905952,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.060601344,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 8708,
+        "median_interval_seconds": 0.001241216,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.085410176,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 24,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 93,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": true
+      },
+      "time_reference": {
+        "sample_count": 93,
+        "median_interval_seconds": 0.457970352,
+        "large_gap_threshold_seconds": 4.579703520000001,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.720295104,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1536691717720310424,
+        1536691760991602040
+      ],
+      "observed_duration_seconds": 43.271291616
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-07-30-17-20-01",
+      "sequence_id": "carbonZ_2018-07-30-17-20-01_engine_failure_with_emr_traj",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 107,
+        "median_interval_seconds": 0.998728124,
+        "large_gap_threshold_seconds": 9.98728124,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.065384029,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 21031,
+        "median_interval_seconds": 0.0018264294999999998,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.09291483,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 91,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 222,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": true
+      },
+      "time_reference": {
+        "sample_count": 222,
+        "median_interval_seconds": 0.475348916,
+        "large_gap_threshold_seconds": 4.75348916,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.732439353,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1532985838057585211,
+        1532985944756940920
+      ],
+      "observed_duration_seconds": 106.699355709
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-10-18-11-06-06",
+      "sequence_id": "carbonZ_2018-10-18-11-06-06_engine_failure_with_emr_traj",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 117,
+        "median_interval_seconds": 0.9994139200000001,
+        "large_gap_threshold_seconds": 9.994139200000001,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.057589152,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 23696,
+        "median_interval_seconds": 0.001629632,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.075232736,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 49,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 254,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": true
+      },
+      "time_reference": {
+        "sample_count": 254,
+        "median_interval_seconds": 0.464648928,
+        "large_gap_threshold_seconds": 4.64648928,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.767324672,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1539875435213454536,
+        1539875551709553800
+      ],
+      "observed_duration_seconds": 116.496099264
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-10-18-11-03-57",
+      "sequence_id": "carbonZ_2018-10-18-11-03-57_engine_failure_with_emr_traj",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 117,
+        "median_interval_seconds": 1.00281824,
+        "large_gap_threshold_seconds": 10.0281824,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.074239328,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 23289,
+        "median_interval_seconds": 0.0017004,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.081952064,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 57,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 250,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": true
+      },
+      "time_reference": {
+        "sample_count": 250,
+        "median_interval_seconds": 0.470900832,
+        "large_gap_threshold_seconds": 4.70900832,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.7056952,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1539875267191044424,
+        1539875383595281256
+      ],
+      "observed_duration_seconds": 116.404236832
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-10-05-15-52-12",
+      "sequence_id": "carbonZ_2018-10-05-15-52-12_1_no_failure",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 90,
+        "median_interval_seconds": 0.998448704,
+        "large_gap_threshold_seconds": 9.98448704,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.064537696,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 17806,
+        "median_interval_seconds": 0.001838784,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.122564416,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 46,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 192,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": true
+      },
+      "time_reference": {
+        "sample_count": 192,
+        "median_interval_seconds": 0.468744992,
+        "large_gap_threshold_seconds": 4.687449920000001,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.729359136,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1538769412743914272,
+        1538769502409358976
+      ],
+      "observed_duration_seconds": 89.665444704
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-10-05-15-52-12",
+      "sequence_id": "carbonZ_2018-10-05-15-52-12_2_no_failure",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 49,
+        "median_interval_seconds": 0.9981087040000001,
+        "large_gap_threshold_seconds": 9.98108704,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.083932288,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 9585,
+        "median_interval_seconds": 0.001785824,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.080083072,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 30,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 105,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": true
+      },
+      "time_reference": {
+        "sample_count": 105,
+        "median_interval_seconds": 0.47704464,
+        "large_gap_threshold_seconds": 4.7704464,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.699266528,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1538769532830804416,
+        1538769581289077120
+      ],
+      "observed_duration_seconds": 48.458272704
+    },
+    {
+      "raw_flight_id": "carbonZ_2018-10-05-15-52-12",
+      "sequence_id": "carbonZ_2018-10-05-15-52-12_3_engine_failure_with_emr_traj",
+      "members_present": {
+        "mavros_state": true,
+        "mavlink_from": true,
+        "time_reference": true
+      },
+      "mavros_state": {
+        "sample_count": 67,
+        "median_interval_seconds": 1.001774256,
+        "large_gap_threshold_seconds": 10.01774256,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 1.044836192,
+        "disconnect_sample_count": 0,
+        "reconnect_transition_count": 0,
+        "header_sequence_decrease_count": 0,
+        "system_status_values": [
+          4
+        ]
+      },
+      "mavlink": {
+        "sample_count": 13300,
+        "median_interval_seconds": 0.00176032,
+        "large_gap_threshold_seconds": 1.0,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.083055392,
+        "malformed_row_count": 0,
+        "ros_header_sequence_decrease_count": 0,
+        "component_stream_count": 2,
+        "mavlink_sequence_inferred_missing_messages": 37,
+        "mavlink_sequence_duplicate_count": 0,
+        "mavlink_sequence_backward_or_reordered_count": 0,
+        "system_time_boot_sample_count": 0,
+        "system_time_boot_reset_event_count": 0,
+        "system_time_boot_observable": false
+      },
+      "time_reference": {
+        "sample_count": 146,
+        "median_interval_seconds": 0.4647072,
+        "large_gap_threshold_seconds": 4.647072,
+        "large_gap_count": 0,
+        "maximum_gap_seconds": 0.765436032,
+        "source_time_backward_count": 0
+      },
+      "observed_interval_ns": [
+        1538769975594562144,
+        1538770042210672768
+      ],
+      "observed_duration_seconds": 66.616110624
+    }
+  ],
+  "development_decision": {
+    "fcu_boot_marker_observable": true,
+    "fcu_boot_reset_observed": false,
+    "semantic_receiver_context_reset_probability_calibratable": false,
+    "reason": "ALFA observes the Pixhawk/MAVLink source and selected ROS processed clips, not the semantic receiver process, its codebook catalog, or its volatile action cache.",
+    "retain_two_percent_context_reset_as_empirical_value": false,
+    "retain_two_percent_context_reset_as_stress_only": true
+  },
+  "claim_boundary": [
+    "Processed clips from the same raw flight were not treated as independent.",
+    "No confirmation processed value or raw bag payload was opened.",
+    "A detected FCU boot reset would still not equal a semantic receiver-context reset.",
+    "A zero event count cannot be generalized beyond the detector coverage and selected clips."
+  ]
+}

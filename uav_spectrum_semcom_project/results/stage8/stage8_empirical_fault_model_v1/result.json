@@ -1,0 +1,144 @@
+{
+  "version": "1.0",
+  "status": "EMPIRICAL_FAULT_MODEL_FROZEN_BEFORE_CONFIRMATION_ACCESS",
+  "experiment_id": "stage8_empirical_fault_replay_v1",
+  "config_sha256": "c3649e1b73be6715f33786bf4f7527a475d9c17b9f9ed75dfa5992187efeb59b",
+  "input_hashes": {
+    "stage8_fault_protocol": "9a1da0dacdb120c87d82ed36684496b544a202f4b91b31882e8d7db798035362",
+    "stage8_split": "70a0b4f03c15f7df1d7ddb4fcec2a35622de14e5f417b47b850120870955a3e0",
+    "aadm_development": "7816bf70c6a1bd8e3b349e33f63a7fece48e6292a945c2ce7ad86c1e8ce78be5",
+    "alfa_development": "52100c9c3f420cb18fce8c081d0d3a2fce3353c5363f25bff63108e47bc054df",
+    "matched_scan_config": "6598125579d0e935a6003ce4d3b5c2997fab1746ffeda5ba51c94b93e3405fb3"
+  },
+  "confirmation_access_at_freeze": {
+    "aadm_flights_opened": 0,
+    "alfa_raw_flights_opened": 0
+  },
+  "task_link_model": {
+    "family": "flight_hierarchical_bernoulli",
+    "independent_sampling_unit": "AADM physical-testbed flight",
+    "flight_sampling": "uniform_with_replacement_per_spectrum_session_trajectory",
+    "within_trajectory_probability": "sampled flight internal-gap lower-bound",
+    "flight_rates": [
+      {
+        "flight_id": "792vol2_flight32",
+        "internal_gap_count": 28,
+        "internal_frame_span": 161,
+        "loss_probability_lower_bound": 0.17391304347826086
+      },
+      {
+        "flight_id": "932vol2_flight2",
+        "internal_gap_count": 188,
+        "internal_frame_span": 294,
+        "loss_probability_lower_bound": 0.6394557823129252
+      },
+      {
+        "flight_id": "928vol1_flight25",
+        "internal_gap_count": 1,
+        "internal_frame_span": 240,
+        "loss_probability_lower_bound": 0.004166666666666667
+      },
+      {
+        "flight_id": "828vol2_flight11",
+        "internal_gap_count": 0,
+        "internal_frame_span": 192,
+        "loss_probability_lower_bound": 0.0
+      },
+      {
+        "flight_id": "1050vol3_flight18",
+        "internal_gap_count": 186,
+        "internal_frame_span": 262,
+        "loss_probability_lower_bound": 0.7099236641221374
+      },
+      {
+        "flight_id": "928vol2_flight26",
+        "internal_gap_count": 145,
+        "internal_frame_span": 192,
+        "loss_probability_lower_bound": 0.7552083333333334
+      },
+      {
+        "flight_id": "779vol2_flight5",
+        "internal_gap_count": 113,
+        "internal_frame_span": 252,
+        "loss_probability_lower_bound": 0.44841269841269843
+      },
+      {
+        "flight_id": "1047vol3_flight9",
+        "internal_gap_count": 0,
+        "internal_frame_span": 86,
+        "loss_probability_lower_bound": 0.0
+      },
+      {
+        "flight_id": "934vol2_flight20",
+        "internal_gap_count": 58,
+        "internal_frame_span": 74,
+        "loss_probability_lower_bound": 0.7837837837837838
+      },
+      {
+        "flight_id": "792vol3_flight33",
+        "internal_gap_count": 0,
+        "internal_frame_span": 160,
+        "loss_probability_lower_bound": 0.0
+      },
+      {
+        "flight_id": "934vol3_flight21",
+        "internal_gap_count": 26,
+        "internal_frame_span": 258,
+        "loss_probability_lower_bound": 0.10077519379844961
+      },
+      {
+        "flight_id": "828vol3_flight12",
+        "internal_gap_count": 0,
+        "internal_frame_span": 80,
+        "loss_probability_lower_bound": 0.0
+      },
+      {
+        "flight_id": "1050vol2_flight17",
+        "internal_gap_count": 0,
+        "internal_frame_span": 261,
+        "loss_probability_lower_bound": 0.0
+      }
+    ],
+    "rate_count": 13,
+    "mean_rate": 0.27812608968525043,
+    "random_seed": 20261101,
+    "posterior_smoothing": "none"
+  },
+  "fixed_stress_parameters": {
+    "installation_loss_probability": 0.1,
+    "ack_and_heartbeat_response_loss_probability": 0.2,
+    "delayed_duplicate_probability": 0.1,
+    "receiver_context_reset_probability_per_scene": 0.02
+  },
+  "evidence_interpretation": {
+    "short_range_burst_supported": false,
+    "between_flight_heterogeneity_supported": true,
+    "ack_empirically_calibrated": false,
+    "semantic_context_reset_empirically_calibrated": false,
+    "two_percent_reset_role": "stress_only"
+  },
+  "replay_candidates": {
+    "baseline": 10,
+    "candidates": [
+      null,
+      30,
+      20,
+      16,
+      6
+    ],
+    "selection_order": [
+      null,
+      30,
+      20,
+      16,
+      6
+    ]
+  },
+  "claim_boundary": [
+    "This is a mechanism-development replay and not an algorithm Final.",
+    "The AADM frame-gap estimator is a lower bound because leading and trailing losses are unobservable.",
+    "ACK loss and semantic receiver reset remain stress assumptions.",
+    "No confirmation AADM or ALFA value may be opened until this model and any development selection are frozen.",
+    "The Stage-6 Final failure and Stage-7 conclusion remain unchanged."
+  ]
+}
