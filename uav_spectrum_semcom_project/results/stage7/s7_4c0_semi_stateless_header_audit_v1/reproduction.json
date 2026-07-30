@@ -1,0 +1,704 @@
+{
+  "version": "1.0",
+  "status": "stage7_s7_4c0_semi_stateless_header_audit_complete",
+  "verification_status": "ANALYZED",
+  "experiment_id": "stage7_s7_4c0_semi_stateless_header_audit_v1",
+  "config_sha256": "fad050538115039ba82ab33d089de57cdce4c7933bfa9762b33d8b91bed5763b",
+  "input_hashes": {
+    "s7_4b_result": "ded6bd42874fac3ed77534f8b9c5781b8f80270805cfe53767ee903fb5b5b987",
+    "s7_4b_reproduction": "a9be3bef6b1f4f77e2b3b39ddc88774d71772477019fbee1db954ef838cf8fed"
+  },
+  "raw_signal_files_loaded": 0,
+  "n_results": {
+    "8": {
+      "piggyback12": {
+        "0": {
+          "adjusted_total_bits_per_scene": 26.28177817962628,
+          "point_total_bit_reduction_percent": 5.64157776678892,
+          "conservative_total_bit_reduction_lower_percent": -160.51069091020094,
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.605183845690175,
+            "ci_lower": -1.4093572703540003,
+            "ci_upper": 0.2617994848103244,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "8": {
+          "adjusted_total_bits_per_scene": 27.139306811332126,
+          "point_total_bit_reduction_percent": 2.5628268483943004,
+          "conservative_total_bit_reduction_lower_percent": -161.9094419993735,
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.605183845690175,
+            "ci_lower": -1.4093572703540003,
+            "ci_upper": 0.2617994848103244,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "16": {
+          "adjusted_total_bits_per_scene": 27.996835443037973,
+          "point_total_bit_reduction_percent": -0.5159240700003187,
+          "conservative_total_bit_reduction_lower_percent": -163.308193088546,
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.605183845690175,
+            "ci_lower": -1.4093572703540003,
+            "ci_upper": 0.2617994848103244,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "24": {
+          "adjusted_total_bits_per_scene": 28.85436407474382,
+          "point_total_bit_reduction_percent": -3.594674988394938,
+          "conservative_total_bit_reduction_lower_percent": -164.70694417771858,
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.605183845690175,
+            "ci_lower": -1.4093572703540003,
+            "ci_upper": 0.2617994848103244,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        }
+      },
+      "piggyback16": {
+        "0": {
+          "adjusted_total_bits_per_scene": 24.598589511754067,
+          "point_total_bit_reduction_percent": 11.68466305332263,
+          "conservative_total_bit_reduction_lower_percent": -157.63662297789037,
+          "paired_clean_gain_percentage_points": {
+            "mean": -2.6992163954189268,
+            "ci_lower": -4.426500310326489,
+            "ci_upper": -0.8573005329464868,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "8": {
+          "adjusted_total_bits_per_scene": 25.41001808318264,
+          "point_total_bit_reduction_percent": 8.77142334664624,
+          "conservative_total_bit_reduction_lower_percent": -158.83155675852902,
+          "paired_clean_gain_percentage_points": {
+            "mean": -2.6992163954189268,
+            "ci_lower": -4.426500310326489,
+            "ci_upper": -0.8573005329464868,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "16": {
+          "adjusted_total_bits_per_scene": 26.22144665461121,
+          "point_total_bit_reduction_percent": 5.85818363996985,
+          "conservative_total_bit_reduction_lower_percent": -160.0264905391677,
+          "paired_clean_gain_percentage_points": {
+            "mean": -2.6992163954189268,
+            "ci_lower": -4.426500310326489,
+            "ci_upper": -0.8573005329464868,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "24": {
+          "adjusted_total_bits_per_scene": 27.03287522603978,
+          "point_total_bit_reduction_percent": 2.9449439332934593,
+          "conservative_total_bit_reduction_lower_percent": -161.22142431980637,
+          "paired_clean_gain_percentage_points": {
+            "mean": -2.6992163954189268,
+            "ci_lower": -4.426500310326489,
+            "ci_upper": -0.8573005329464868,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        }
+      },
+      "piggyback24": {
+        "0": {
+          "adjusted_total_bits_per_scene": 22.7992646172393,
+          "point_total_bit_reduction_percent": 18.144707612368776,
+          "conservative_total_bit_reduction_lower_percent": -153.95411351228378,
+          "paired_clean_gain_percentage_points": {
+            "mean": -6.802290536467752,
+            "ci_lower": -10.370291358802815,
+            "ci_upper": -2.764890315398177,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "8": {
+          "adjusted_total_bits_per_scene": 23.558902953586493,
+          "point_total_bit_reduction_percent": 15.417408325551579,
+          "conservative_total_bit_reduction_lower_percent": -154.8969268173407,
+          "paired_clean_gain_percentage_points": {
+            "mean": -6.802290536467752,
+            "ci_lower": -10.370291358802815,
+            "ci_upper": -2.764890315398177,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "16": {
+          "adjusted_total_bits_per_scene": 24.31854128993369,
+          "point_total_bit_reduction_percent": 12.690109038734366,
+          "conservative_total_bit_reduction_lower_percent": -155.8397401223976,
+          "paired_clean_gain_percentage_points": {
+            "mean": -6.802290536467752,
+            "ci_lower": -10.370291358802815,
+            "ci_upper": -2.764890315398177,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "24": {
+          "adjusted_total_bits_per_scene": 25.07817962628089,
+          "point_total_bit_reduction_percent": 9.962809751917153,
+          "conservative_total_bit_reduction_lower_percent": -156.7825534274545,
+          "paired_clean_gain_percentage_points": {
+            "mean": -6.802290536467752,
+            "ci_lower": -10.370291358802815,
+            "ci_upper": -2.764890315398177,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        }
+      }
+    },
+    "16": {
+      "piggyback12": {
+        "0": {
+          "adjusted_total_bits_per_scene": 30.964382157926472,
+          "point_total_bit_reduction_percent": 6.269499472411448,
+          "conservative_total_bit_reduction_lower_percent": -190.9606687374367,
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.6051838456901749,
+            "ci_lower": -1.421371881881025,
+            "ci_upper": 0.30937325291815526,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "8": {
+          "adjusted_total_bits_per_scene": 32.59591922845088,
+          "point_total_bit_reduction_percent": 1.33076743281796,
+          "conservative_total_bit_reduction_lower_percent": -193.25496050249677,
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.6051838456901749,
+            "ci_lower": -1.421371881881025,
+            "ci_upper": 0.30937325291815526,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "16": {
+          "adjusted_total_bits_per_scene": 34.2274562989753,
+          "point_total_bit_reduction_percent": -3.6079646067755498,
+          "conservative_total_bit_reduction_lower_percent": -195.54925226755688,
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.6051838456901749,
+            "ci_lower": -1.421371881881025,
+            "ci_upper": 0.30937325291815526,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "24": {
+          "adjusted_total_bits_per_scene": 35.85899336949971,
+          "point_total_bit_reduction_percent": -8.546696646369037,
+          "conservative_total_bit_reduction_lower_percent": -197.84354403261702,
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.6051838456901749,
+            "ci_lower": -1.421371881881025,
+            "ci_upper": 0.30937325291815526,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        }
+      },
+      "piggyback16": {
+        "0": {
+          "adjusted_total_bits_per_scene": 29.249288728149484,
+          "point_total_bit_reduction_percent": 11.461160161931266,
+          "conservative_total_bit_reduction_lower_percent": -183.4021047991185,
+          "paired_clean_gain_percentage_points": {
+            "mean": -3.0036166365280295,
+            "ci_lower": -4.815489202035892,
+            "ci_upper": -0.9726699015502076,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "8": {
+          "adjusted_total_bits_per_scene": 30.805696202531642,
+          "point_total_bit_reduction_percent": 6.749848602259935,
+          "conservative_total_bit_reduction_lower_percent": -185.4424222174847,
+          "paired_clean_gain_percentage_points": {
+            "mean": -3.0036166365280295,
+            "ci_lower": -4.815489202035892,
+            "ci_upper": -0.9726699015502076,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "16": {
+          "adjusted_total_bits_per_scene": 32.362103676913804,
+          "point_total_bit_reduction_percent": 2.0385370425885947,
+          "conservative_total_bit_reduction_lower_percent": -187.4827396358509,
+          "paired_clean_gain_percentage_points": {
+            "mean": -3.0036166365280295,
+            "ci_lower": -4.815489202035892,
+            "ci_upper": -0.9726699015502076,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "24": {
+          "adjusted_total_bits_per_scene": 33.91851115129596,
+          "point_total_bit_reduction_percent": -2.6727745170827246,
+          "conservative_total_bit_reduction_lower_percent": -189.5230570542171,
+          "paired_clean_gain_percentage_points": {
+            "mean": -3.0036166365280295,
+            "ci_lower": -4.815489202035892,
+            "ci_upper": -0.9726699015502076,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        }
+      },
+      "piggyback24": {
+        "0": {
+          "adjusted_total_bits_per_scene": 27.42950572634116,
+          "point_total_bit_reduction_percent": 16.969720634449153,
+          "conservative_total_bit_reduction_lower_percent": -178.47368626297714,
+          "paired_clean_gain_percentage_points": {
+            "mean": -7.16998191681736,
+            "ci_lower": -10.974901633972221,
+            "ci_upper": -2.8769815527051152,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "8": {
+          "adjusted_total_bits_per_scene": 28.903936106087993,
+          "point_total_bit_reduction_percent": 12.50655722360176,
+          "conservative_total_bit_reduction_lower_percent": -180.14785189326707,
+          "paired_clean_gain_percentage_points": {
+            "mean": -7.16998191681736,
+            "ci_lower": -10.974901633972221,
+            "ci_upper": -2.8769815527051152,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "16": {
+          "adjusted_total_bits_per_scene": 30.37836648583483,
+          "point_total_bit_reduction_percent": 8.043393812754356,
+          "conservative_total_bit_reduction_lower_percent": -181.8220175235571,
+          "paired_clean_gain_percentage_points": {
+            "mean": -7.16998191681736,
+            "ci_lower": -10.974901633972221,
+            "ci_upper": -2.8769815527051152,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "24": {
+          "adjusted_total_bits_per_scene": 31.852796865581666,
+          "point_total_bit_reduction_percent": 3.5802304019069626,
+          "conservative_total_bit_reduction_lower_percent": -183.49618315384706,
+          "paired_clean_gain_percentage_points": {
+            "mean": -7.16998191681736,
+            "ci_lower": -10.974901633972221,
+            "ci_upper": -2.8769815527051152,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        }
+      }
+    },
+    "32": {
+      "piggyback12": {
+        "0": {
+          "adjusted_total_bits_per_scene": 40.103037974683545,
+          "point_total_bit_reduction_percent": 3.3912488780808316,
+          "conservative_total_bit_reduction_lower_percent": -157.47892073182283,
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.6654611211573238,
+            "ci_lower": -1.7262975779628966,
+            "ci_upper": 0.4001071905638163,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "8": {
+          "adjusted_total_bits_per_scene": 41.733899939722725,
+          "point_total_bit_reduction_percent": -0.537519256496322,
+          "conservative_total_bit_reduction_lower_percent": -158.70261623167934,
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.6654611211573238,
+            "ci_lower": -1.7262975779628966,
+            "ci_upper": 0.4001071905638163,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "16": {
+          "adjusted_total_bits_per_scene": 43.364761904761906,
+          "point_total_bit_reduction_percent": -4.466287391073475,
+          "conservative_total_bit_reduction_lower_percent": -159.92631173153586,
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.6654611211573238,
+            "ci_lower": -1.7262975779628966,
+            "ci_upper": 0.4001071905638163,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "24": {
+          "adjusted_total_bits_per_scene": 44.995623869801086,
+          "point_total_bit_reduction_percent": -8.39505552565063,
+          "conservative_total_bit_reduction_lower_percent": -161.1500072313924,
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.6654611211573238,
+            "ci_lower": -1.7262975779628966,
+            "ci_upper": 0.4001071905638163,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        }
+      },
+      "piggyback16": {
+        "0": {
+          "adjusted_total_bits_per_scene": 38.70230259192285,
+          "point_total_bit_reduction_percent": 6.765639019451708,
+          "conservative_total_bit_reduction_lower_percent": -154.2807788122177,
+          "paired_clean_gain_percentage_points": {
+            "mean": -2.3098251959011455,
+            "ci_lower": -4.454863991277304,
+            "ci_upper": -0.2995597551724178,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "8": {
+          "adjusted_total_bits_per_scene": 40.26440024110911,
+          "point_total_bit_reduction_percent": 3.002525035078784,
+          "conservative_total_bit_reduction_lower_percent": -155.35359741339803,
+          "paired_clean_gain_percentage_points": {
+            "mean": -2.3098251959011455,
+            "ci_lower": -4.454863991277304,
+            "ci_upper": -0.2995597551724178,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "16": {
+          "adjusted_total_bits_per_scene": 41.826497890295364,
+          "point_total_bit_reduction_percent": -0.7605889492941388,
+          "conservative_total_bit_reduction_lower_percent": -156.4264160145784,
+          "paired_clean_gain_percentage_points": {
+            "mean": -2.3098251959011455,
+            "ci_lower": -4.454863991277304,
+            "ci_upper": -0.2995597551724178,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "24": {
+          "adjusted_total_bits_per_scene": 43.38859553948162,
+          "point_total_bit_reduction_percent": -4.523702933667062,
+          "conservative_total_bit_reduction_lower_percent": -157.49923461575872,
+          "paired_clean_gain_percentage_points": {
+            "mean": -2.3098251959011455,
+            "ci_lower": -4.454863991277304,
+            "ci_upper": -0.2995597551724178,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        }
+      },
+      "piggyback24": {
+        "0": {
+          "adjusted_total_bits_per_scene": 37.29420132610006,
+          "point_total_bit_reduction_percent": 10.157773670951437,
+          "conservative_total_bit_reduction_lower_percent": -152.7824164549914,
+          "paired_clean_gain_percentage_points": {
+            "mean": -5.295358649789029,
+            "ci_lower": -9.482203660767253,
+            "ci_upper": -1.0025815933937314,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "8": {
+          "adjusted_total_bits_per_scene": 38.79245328511151,
+          "point_total_bit_reduction_percent": 6.548464802195899,
+          "conservative_total_bit_reduction_lower_percent": -153.6071200293123,
+          "paired_clean_gain_percentage_points": {
+            "mean": -5.295358649789029,
+            "ci_lower": -9.482203660767253,
+            "ci_upper": -1.0025815933937314,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "16": {
+          "adjusted_total_bits_per_scene": 40.29070524412296,
+          "point_total_bit_reduction_percent": 2.9391559334403765,
+          "conservative_total_bit_reduction_lower_percent": -154.43182360363332,
+          "paired_clean_gain_percentage_points": {
+            "mean": -5.295358649789029,
+            "ci_lower": -9.482203660767253,
+            "ci_upper": -1.0025815933937314,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "24": {
+          "adjusted_total_bits_per_scene": 41.788957203134416,
+          "point_total_bit_reduction_percent": -0.6701529353151625,
+          "conservative_total_bit_reduction_lower_percent": -155.25652717795424,
+          "paired_clean_gain_percentage_points": {
+            "mean": -5.295358649789029,
+            "ci_lower": -9.482203660767253,
+            "ci_upper": -1.0025815933937314,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        }
+      }
+    },
+    "64": {
+      "piggyback12": {
+        "0": {
+          "adjusted_total_bits_per_scene": 37.792483423749246,
+          "point_total_bit_reduction_percent": 3.5032215238393496,
+          "conservative_total_bit_reduction_lower_percent": -152.06148906538803,
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.5394816154309826,
+            "ci_lower": -1.4561781806850767,
+            "ci_upper": 0.3741302627476025,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "8": {
+          "adjusted_total_bits_per_scene": 38.70271850512357,
+          "point_total_bit_reduction_percent": 1.179088652660743,
+          "conservative_total_bit_reduction_lower_percent": -152.7114119923999,
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.5394816154309826,
+            "ci_lower": -1.4561781806850767,
+            "ci_upper": 0.3741302627476025,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "16": {
+          "adjusted_total_bits_per_scene": 39.61295358649789,
+          "point_total_bit_reduction_percent": -1.1450442185178458,
+          "conservative_total_bit_reduction_lower_percent": -153.36133491941175,
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.5394816154309826,
+            "ci_lower": -1.4561781806850767,
+            "ci_upper": 0.3741302627476025,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "24": {
+          "adjusted_total_bits_per_scene": 40.52318866787221,
+          "point_total_bit_reduction_percent": -3.469177089696452,
+          "conservative_total_bit_reduction_lower_percent": -154.0112578464236,
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.5394816154309826,
+            "ci_lower": -1.4561781806850767,
+            "ci_upper": 0.3741302627476025,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        }
+      },
+      "piggyback16": {
+        "0": {
+          "adjusted_total_bits_per_scene": 36.591199517781796,
+          "point_total_bit_reduction_percent": 6.570498835609565,
+          "conservative_total_bit_reduction_lower_percent": -146.66499831768166,
+          "paired_clean_gain_percentage_points": {
+            "mean": -2.357444243520193,
+            "ci_lower": -4.441125102487245,
+            "ci_upper": -0.20094075134510603,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "8": {
+          "adjusted_total_bits_per_scene": 37.46690777576853,
+          "point_total_bit_reduction_percent": 4.33452442680456,
+          "conservative_total_bit_reduction_lower_percent": -147.21905596146135,
+          "paired_clean_gain_percentage_points": {
+            "mean": -2.357444243520193,
+            "ci_lower": -4.441125102487245,
+            "ci_upper": -0.20094075134510603,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "16": {
+          "adjusted_total_bits_per_scene": 38.34261603375528,
+          "point_total_bit_reduction_percent": 2.0985500179995356,
+          "conservative_total_bit_reduction_lower_percent": -147.77311360524104,
+          "paired_clean_gain_percentage_points": {
+            "mean": -2.357444243520193,
+            "ci_lower": -4.441125102487245,
+            "ci_upper": -0.20094075134510603,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "24": {
+          "adjusted_total_bits_per_scene": 39.218324291742015,
+          "point_total_bit_reduction_percent": -0.13742439080547084,
+          "conservative_total_bit_reduction_lower_percent": -148.32717124902072,
+          "paired_clean_gain_percentage_points": {
+            "mean": -2.357444243520193,
+            "ci_lower": -4.441125102487245,
+            "ci_upper": -0.20094075134510603,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        }
+      },
+      "piggyback24": {
+        "0": {
+          "adjusted_total_bits_per_scene": 35.109795057263405,
+          "point_total_bit_reduction_percent": 10.35301708024039,
+          "conservative_total_bit_reduction_lower_percent": -149.41959228832096,
+          "paired_clean_gain_percentage_points": {
+            "mean": -5.448462929475588,
+            "ci_lower": -9.615732173698495,
+            "ci_upper": -1.2055172229882007,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "8": {
+          "adjusted_total_bits_per_scene": 35.94817962628088,
+          "point_total_bit_reduction_percent": 8.212342461766612,
+          "conservative_total_bit_reduction_lower_percent": -149.83666595176507,
+          "paired_clean_gain_percentage_points": {
+            "mean": -5.448462929475588,
+            "ci_lower": -9.615732173698495,
+            "ci_upper": -1.2055172229882007,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "16": {
+          "adjusted_total_bits_per_scene": 36.78656419529837,
+          "point_total_bit_reduction_percent": 6.071667843292815,
+          "conservative_total_bit_reduction_lower_percent": -150.2537396152092,
+          "paired_clean_gain_percentage_points": {
+            "mean": -5.448462929475588,
+            "ci_lower": -9.615732173698495,
+            "ci_upper": -1.2055172229882007,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        },
+        "24": {
+          "adjusted_total_bits_per_scene": 37.624948764315846,
+          "point_total_bit_reduction_percent": 3.9309932248190362,
+          "conservative_total_bit_reduction_lower_percent": -150.67081327865333,
+          "paired_clean_gain_percentage_points": {
+            "mean": -5.448462929475588,
+            "ci_lower": -9.615732173698495,
+            "ci_upper": -1.2055172229882007,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "point_gate_passed": false,
+          "conservative_gate_passed": false
+        }
+      }
+    }
+  },
+  "decision": {
+    "passing_n_count": {
+      "piggyback12_header0": 0,
+      "piggyback12_header8": 0,
+      "piggyback12_header16": 0,
+      "piggyback12_header24": 0,
+      "piggyback16_header0": 0,
+      "piggyback16_header8": 0,
+      "piggyback16_header16": 0,
+      "piggyback16_header24": 0,
+      "piggyback24_header0": 0,
+      "piggyback24_header8": 0,
+      "piggyback24_header16": 0,
+      "piggyback24_header24": 0
+    },
+    "best_nonzero_candidate": "piggyback24_header8",
+    "required_n_count": 3,
+    "gate_passed": false,
+    "next_action": "freeze_fixed10_heartbeat_as_stage7_reliability_boundary"
+  },
+  "elapsed_seconds": 0.0071274000001722015,
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {}
+  },
+  "claim_boundary": [
+    "This audit reuses completed development results and does not load raw signal values.",
+    "It is an exact bit repricing only under frozen packet delivery and action outcomes.",
+    "The zero-bit case is an unattainable upper bound and cannot become a protocol candidate.",
+    "A shorter key changes catalog-version safety assumptions and must not be described as equivalent security.",
+    "No internal development-test, reserve, or external Final data are accessed."
+  ]
+}

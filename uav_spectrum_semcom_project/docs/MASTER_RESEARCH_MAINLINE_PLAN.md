@@ -1,11 +1,11 @@
 # 离散任务导向频谱语义通信系统主线研究计划书
 
-版本：2.1
+版本：2.2
 生效日期：2026-07-27；最近更新：2026-07-30
 状态：正式主线  
 适用范围：阶段6收尾、外部确认性验证、后续频谱预测与最小工程验证  
-当前入口：S7.4C“半无状态帧头解析边界”
-当前进度：S7.4B事件更新捎带已完成并为0/4种N通过。12景策略clean只下降0.54—0.67个百分点，但总bit增加1.38%—6.48%；16/24景虽有平均bit收益，却损失2.31—7.17个百分点clean。事件更新救援密度不足，停止增加有状态组件，转向半无状态帧头成本边界。
+当前入口：S7.5“冻结架构复杂度与会话开销审计”
+当前进度：S7.4C证明即使采用不可实现的0-bit身份上界，12/16/24景半无状态候选仍为0/4种N通过。可靠性协议分支正式收口，固定10景心跳冻结为阶段7工程边界，后续只做复杂度、会话摊销和论文证据整合。
 
 ## Material Passport
 
@@ -18,7 +18,7 @@
 - Stage 6R ElectroSense Main Final Access Count：1
 - Stage 6R Confirmation Lockbox Access Count：1
 - Stage 6 Closeout：COMPLETE
-- Stage 7 Research：ACTIVE AT S7.4C
+- Stage 7 Research：ACTIVE AT S7.5
 - Stage 7 S7.0 Oracle Headroom：PASSED 4/4 N（development upper bound）
 - Stage 7 S7.1 Aggregate Gate：PASSED 3/4 N（development validation）
 - Stage 7 S7.1 Site Robustness：CAUTION；未打开内部开发测试集
@@ -27,6 +27,7 @@
 - Stage 7 S7.3b Full-Protocol Oracle：FAILED 0/4 N；停止任务预测保护
 - Stage 7 S7.4A Periodic Checkpoint：FAILED 0/4 N；保留codec与协议负结果
 - Stage 7 S7.4B Event Piggyback：FAILED 0/4 N；停止增加有状态上下文组件
+- Stage 7 S7.4C Semi-Stateless Bound：FAILED 0/4 N；固定10景心跳冻结
 - Supersession Rule：本文件是后续研究的唯一主线入口；既有阶段计划继续作为历史证据，不得用其旧顺序覆盖本文件
 
 ---
@@ -1256,3 +1257,22 @@ S7.4B完成7个验证站点、四种N、每种N 60条共同随机轨迹的事件
 5. 若不存在优势区间，冻结固定10景心跳为论文工程边界，结束阶段7可靠性协议扩展。
 
 完整证据见 `docs/STAGE7_S7_4B_EVENT_PIGGYBACK_RESULTS.md`。
+
+---
+
+## 30. 2026-07-30 阶段7 S7.4C结果与可靠性协议收口
+
+S7.4C在不读取原始信号的条件下，将S7.4B实测24-bit身份增量反事实重计为16、8和0 bit。0 bit是不可实现的性能上界。
+
+结果显示，即使0 bit上界也为0/4种N通过。12景策略的clean区间下界已经低于允许的−0.5个百分点；16/24景的clean损失更大。缩短身份字段只能降低bit，不能修复随机重置后的恢复时延。
+
+决策：
+
+1. 不实现新的8-bit或16-bit半无状态codec；
+2. 固定10景心跳S6R-FH10-v1冻结为阶段7可靠性工程边界；
+3. 阶段7停止预测心跳、周期检查点、事件捎带和短身份帧扩展；
+4. S7.3b—S7.4C全部保留为机制消融和研究边界；
+5. 当前转入S7.5，只审计冻结架构的计算复杂度、内存、会话长度摊销和论文证据完整性；
+6. 不因可靠性分支负结果打开关闭数据或重新运行Final。
+
+完整证据见 `docs/STAGE7_S7_4C_SEMI_STATELESS_BOUNDARY_RESULTS.md`。

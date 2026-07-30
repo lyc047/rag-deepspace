@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage7_s7_4c0_semi_stateless_header_audit_v1",
+  "status": "registered_before_execution",
+  "created_date": "2026-07-30",
+  "evidence_role": "analytic_repricing_of_completed_stage7_development_trajectories",
+  "objective": "Determine whether a shorter session-pinned bank key could reverse the S7.4B full-protocol decision before implementing another codec.",
+  "inputs": {
+    "s7_4b_result": "results/stage7/s7_4b0_event_piggyback_feasibility_v1/result.json",
+    "s7_4b_reproduction": "results/stage7/s7_4b0_event_piggyback_feasibility_v1/reproduction.json"
+  },
+  "audit": {
+    "reference_policy": "fixed10_compact",
+    "source_policies": ["piggyback12", "piggyback16", "piggyback24"],
+    "measured_identity_increment_bits": 24,
+    "counterfactual_identity_increment_bits": [0, 8, 16, 24],
+    "clean_and_delivery_outcomes_frozen": true,
+    "only_identity_bit_accounting_is_repriced": true,
+    "zero_bit_case_is_an_unimplementable_upper_bound": true,
+    "eight_bit_case_requires_a_session_pinned_catalog_and_unique_bank_id": true,
+    "sixteen_bit_case_requires_a_session_pinned_catalog_and_additional_short_tag": true
+  },
+  "gate": {
+    "minimum_total_bit_reduction_percent": 5.0,
+    "maximum_clean_loss_percentage_points": 0.5,
+    "minimum_passing_n_count": 3,
+    "same_policy_and_header_width_across_n": true,
+    "implement_only_if_a_nonzero_header_passes": true,
+    "if_passes": "implement_the_smallest_nonzero_common_header_with_fail_closed_session_binding",
+    "if_fails": "freeze_fixed10_heartbeat_as_stage7_reliability_boundary"
+  },
+  "claim_boundary": [
+    "This audit reuses completed development results and does not load raw signal values.",
+    "It is an exact bit repricing only under frozen packet delivery and action outcomes.",
+    "The zero-bit case is an unattainable upper bound and cannot become a protocol candidate.",
+    "A shorter key changes catalog-version safety assumptions and must not be described as equivalent security.",
+    "No internal development-test, reserve, or external Final data are accessed."
+  ]
+}
