@@ -1,0 +1,4333 @@
+{
+  "version": "1.0",
+  "status": "stage7_s7_4a1_checkpoint_protocol_scan_complete",
+  "verification_status": "ANALYZED",
+  "experiment_id": "stage7_s7_4a1_checkpoint_protocol_scan_v1",
+  "config_sha256": "fc87d08ca2b4f0c1a22f89fb89f39d18d8faff23b44bbfc843a11e59154979dd",
+  "input_hashes": {
+    "development_split": "0b0b3faed73cffcbf28777dab4684c7c632473f2f9b545d132a0449fbcf0486c",
+    "electrosense_protocol": "8aeffb02c98b561026854cea4b11d6daf7277504abd9c6786b500707dd8ffd68",
+    "electrosense_registry": "3f56c862645391583e67316af29d64754e2cc390365d9c8238731859add9ba73",
+    "electrosense_access_state": "6c4105198a766c3925219bde3076379e0b10f9dfc0a1c6129cfeeaadc9df5ee3",
+    "electrosense_freeze": "41fd5bdf0e3f57b2f0ee571dec848585462216083f4ca9f851d0759e12bfcc0f",
+    "matched_scan_config": "6598125579d0e935a6003ce4d3b5c2997fab1746ffeda5ba51c94b93e3405fb3",
+    "activation_protocol": "4f89d46baea177a3bc6ca958a46dbf27dc8e772c21aa0b32cf21e5115b6afc36",
+    "s7_4a0_result": "47e4ccffd4b69ef50fe09b8b62ff9678e341a35099641c2d00d09e1e977d04cb"
+  },
+  "loaded_sites": {
+    "train": [],
+    "validation": [
+      "vlenders_burgdorf",
+      "Geneva",
+      "HuldOne",
+      "SP8AKM",
+      "alcorcon1",
+      "EDLV",
+      "BGSOFIAMLADOST01"
+    ],
+    "internal_development_test": [],
+    "reserve": []
+  },
+  "trajectories": 60,
+  "bootstrap_replicates": 5000,
+  "smoke": false,
+  "n_results": {
+    "8": {
+      "n_channels": 8,
+      "site_results": {
+        "vlenders_burgdorf": {
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 423,
+          "calibration_scenes": 16
+        },
+        "Geneva": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 457,
+          "calibration_scenes": 4
+        },
+        "HuldOne": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 450,
+          "calibration_scenes": 4
+        },
+        "SP8AKM": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 356,
+          "calibration_scenes": 4
+        },
+        "alcorcon1": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 203,
+          "calibration_scenes": 4
+        },
+        "EDLV": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 426,
+          "calibration_scenes": 4
+        },
+        "BGSOFIAMLADOST01": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 450,
+          "calibration_scenes": 4
+        }
+      },
+      "policy_metrics": {
+        "fixed6_heartbeat": {
+          "clean_rate": {
+            "mean": 0.9402712477396021,
+            "ci_lower": 0.932834506098089,
+            "ci_upper": 0.9480175235057594,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9521518987341772,
+            "ci_lower": 0.9388333156163626,
+            "ci_upper": 0.9706155151616496,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.49002721669940824,
+            "ci_lower": 0.3242312635296622,
+            "ci_upper": 0.6121295993334339,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 4.791948722703704,
+            "ci_lower": 3.1367360258362664,
+            "ci_upper": 6.002322482255839,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 5.019728752260398,
+            "ci_lower": 3.7257773160588785,
+            "ci_upper": 5.937405516437793,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 32.51236889692585,
+            "ci_lower": 23.0142811901998,
+            "ci_upper": 44.18767706933501,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 23.70658227848101,
+            "ci_lower": 13.953994931239587,
+            "ci_upper": 36.424104382125485,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 6.34126582278481,
+            "ci_lower": 3.2033325786273052,
+            "ci_upper": 10.045660088935021,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 5.612055455093429,
+            "ci_lower": 2.877549779532197,
+            "ci_upper": 7.788976266383281,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 5.623803496081978,
+            "ci_lower": 3.110021736743698,
+            "ci_upper": 8.185856388436273,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.2795901145268234,
+            "ci_lower": 0.0,
+            "ci_upper": 0.831058492644604,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "fixed10_heartbeat": {
+          "clean_rate": {
+            "mean": 0.9148523206751055,
+            "ci_lower": 0.9010988563715799,
+            "ci_upper": 0.9322224162337723,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9266968053044004,
+            "ci_lower": 0.9023682702970371,
+            "ci_upper": 0.957171291468071,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.7445157882612998,
+            "ci_lower": 0.4607716610707513,
+            "ci_upper": 0.9770726243926297,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 6.492119772908769,
+            "ci_lower": 4.110066337731143,
+            "ci_upper": 8.335222195870235,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 7.599843279083785,
+            "ci_lower": 5.154853541636197,
+            "ci_upper": 9.407680170850847,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 27.868921036769137,
+            "ci_lower": 16.780066853633613,
+            "ci_upper": 41.2567179282131,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 20.778625678119344,
+            "ci_lower": 10.03783329564943,
+            "ci_upper": 35.277557630045365,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.677974683544305,
+            "ci_lower": 2.7218981608951673,
+            "ci_upper": 9.474000676443703,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 3.3676190476190477,
+            "ci_lower": 1.6986819923371652,
+            "ci_upper": 4.780216725559483,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 4.520572634116937,
+            "ci_lower": 2.3663648558014763,
+            "ci_upper": 7.129582842445177,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.27973477998794455,
+            "ci_lower": 0.0,
+            "ci_upper": 0.8367359921067665,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "fixed16_heartbeat": {
+          "clean_rate": {
+            "mean": 0.8810669077757686,
+            "ci_lower": 0.8535558734582542,
+            "ci_upper": 0.9136935065960529,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.8928812537673297,
+            "ci_lower": 0.8541509885234198,
+            "ci_upper": 0.9392144140025706,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 1.0826365099257078,
+            "ci_lower": 0.6336850967029038,
+            "ci_upper": 1.46562443815037,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 7.417322675041855,
+            "ci_lower": 4.654457713925058,
+            "ci_upper": 9.542070921715084,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 11.446250753465945,
+            "ci_lower": 7.498492622481322,
+            "ci_upper": 14.776199163737077,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 25.24075949367089,
+            "ci_lower": 13.126483534861045,
+            "ci_upper": 39.259880579483166,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 19.146051838456902,
+            "ci_lower": 7.7790980668465926,
+            "ci_upper": 34.01746991738503,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.302133815551537,
+            "ci_lower": 2.4034749111822,
+            "ci_upper": 9.148886072005213,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 2.0303315250150695,
+            "ci_lower": 0.9628774185917515,
+            "ci_upper": 2.941174845053245,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 3.967625075346594,
+            "ci_lower": 1.977871900891222,
+            "ci_upper": 6.628805926497512,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.2800723327305606,
+            "ci_lower": 0.0,
+            "ci_upper": 0.8371264833901367,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint6": {
+          "clean_rate": {
+            "mean": 0.9424352019288731,
+            "ci_lower": 0.934590021372155,
+            "ci_upper": 0.9501618698771457,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9543098251959012,
+            "ci_lower": 0.9418289060302275,
+            "ci_upper": 0.9710433616863904,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.46844122268774324,
+            "ci_lower": 0.308795755921773,
+            "ci_upper": 0.5826115941148078,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 4.594727015585927,
+            "ci_lower": 2.9866144045140897,
+            "ci_upper": 5.710797721466374,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 4.865111512959614,
+            "ci_lower": 3.5768673452499176,
+            "ci_upper": 5.722413951142986,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 29.991175406871612,
+            "ci_lower": 19.810911852284757,
+            "ci_upper": 41.67385296220365,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 23.088173598553343,
+            "ci_lower": 13.300121975536934,
+            "ci_upper": 36.732771285342416,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 6.903001808318264,
+            "ci_lower": 3.672458371928654,
+            "ci_upper": 10.507243734834983,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 1.6071247739602172,
+            "ci_lower": 0.08912128260516133,
+            "ci_upper": 4.570499231030021,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.2795418927064497,
+            "ci_lower": 0.0,
+            "ci_upper": 0.8362805991961998,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.1331886678722122,
+            "ci_lower": 0.07329090774871694,
+            "ci_upper": 0.18306565515436984,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.12021097046413502,
+            "ci_lower": 0.06719008694989076,
+            "ci_upper": 0.16525335935826907,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 8.909312839059675,
+            "ci_lower": 4.8358292627997645,
+            "ci_upper": 12.236983311773637,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.015575647980711267,
+            "ci_lower": 0.0,
+            "ci_upper": 0.04526575938500753,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint8": {
+          "clean_rate": {
+            "mean": 0.9307775768535261,
+            "ci_lower": 0.9226304391738177,
+            "ci_upper": 0.9419258007022144,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9426401446654612,
+            "ci_lower": 0.9252347268000379,
+            "ci_upper": 0.9645995159603421,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.5851046162391698,
+            "ci_lower": 0.37530533629060653,
+            "ci_upper": 0.7427927917854509,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 5.5383521610552435,
+            "ci_lower": 3.534269677555728,
+            "ci_upper": 7.021164330024748,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 6.109005424954793,
+            "ci_lower": 4.246100379671362,
+            "ci_upper": 7.411168107255311,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 27.560307414104877,
+            "ci_lower": 16.42006738799413,
+            "ci_upper": 41.02193389040461,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 21.252893309222426,
+            "ci_lower": 10.732088468233663,
+            "ci_upper": 35.79418395955044,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 6.30741410488246,
+            "ci_lower": 3.201902100494115,
+            "ci_upper": 10.012232606442069,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 1.6925979505726336,
+            "ci_lower": 0.08781900251298311,
+            "ci_upper": 4.823702029520293,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.2796865581675708,
+            "ci_lower": 0.0,
+            "ci_upper": 0.835726714038277,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.10308619650391801,
+            "ci_lower": 0.05456572391431867,
+            "ci_upper": 0.14474095157113678,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.0926341169379144,
+            "ci_lower": 0.04816420862735199,
+            "ci_upper": 0.130077043660155,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 6.8890235081374325,
+            "ci_lower": 3.4987287754422125,
+            "ci_upper": 9.661060409883596,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.006124171187462327,
+            "ci_lower": 0.0,
+            "ci_upper": 0.01790384394022494,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint10": {
+          "clean_rate": {
+            "mean": 0.9182519590114527,
+            "ci_lower": 0.906811929843155,
+            "ci_upper": 0.9333555594337766,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9301084990958408,
+            "ci_lower": 0.9077687716284975,
+            "ci_upper": 0.9575515819910344,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.7103926908560023,
+            "ci_lower": 0.4477774446176618,
+            "ci_upper": 0.922535362277192,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 6.275557065115291,
+            "ci_lower": 4.037165377897508,
+            "ci_upper": 8.023388660528482,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 7.478939119951778,
+            "ci_lower": 5.103717950751722,
+            "ci_upper": 9.22473817789152,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 25.960247136829413,
+            "ci_lower": 14.157919281127228,
+            "ci_upper": 40.330909574016545,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 20.039813140446054,
+            "ci_lower": 9.03060900133667,
+            "ci_upper": 34.30038212757723,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.9204339963833625,
+            "ci_lower": 2.9516005069819045,
+            "ci_upper": 9.650636203866434,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 1.731446654611212,
+            "ci_lower": 0.08727186722888962,
+            "ci_upper": 4.970178850691564,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.27973477998794455,
+            "ci_lower": 0.0,
+            "ci_upper": 0.8368322981366457,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.08392405063291139,
+            "ci_lower": 0.041885255167303216,
+            "ci_upper": 0.11908181138976494,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.07560578661844485,
+            "ci_lower": 0.03733209732710553,
+            "ci_upper": 0.10710404013474185,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 5.606775165762508,
+            "ci_lower": 2.8132513017432608,
+            "ci_upper": 7.947975859073087,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.0033273056057866184,
+            "ci_lower": 0.0,
+            "ci_upper": 0.00914136310373635,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint12": {
+          "clean_rate": {
+            "mean": 0.9076974080771549,
+            "ci_lower": 0.8915402478478717,
+            "ci_upper": 0.9272561342451343,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9195298372513563,
+            "ci_lower": 0.8924611349593776,
+            "ci_upper": 0.9528257025314356,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.8161667436933523,
+            "ci_lower": 0.4998820791247375,
+            "ci_upper": 1.0744681065069175,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 6.777925783793311,
+            "ci_lower": 4.190957967771805,
+            "ci_upper": 8.713365783846545,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 8.756081977094635,
+            "ci_lower": 5.9205130067444145,
+            "ci_upper": 10.953352812891389,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 24.777516576250758,
+            "ci_lower": 12.55494238516019,
+            "ci_upper": 39.493013349898256,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 19.160301386377334,
+            "ci_lower": 7.831761844860009,
+            "ci_upper": 33.52708839647367,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.617215189873418,
+            "ci_lower": 2.7014148893360175,
+            "ci_upper": 9.434580690627199,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 1.7358529234478601,
+            "ci_lower": 0.08901047803728204,
+            "ci_upper": 4.949729320332245,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.2795901145268234,
+            "ci_lower": 0.0,
+            "ci_upper": 0.8390174517903688,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.07090415913200723,
+            "ci_lower": 0.03425318767980851,
+            "ci_upper": 0.1010734929104329,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.0634358047016275,
+            "ci_lower": 0.031184503670800775,
+            "ci_upper": 0.09038536395484624,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 4.738752260397829,
+            "ci_lower": 2.370998717190938,
+            "ci_upper": 6.7551760750753935,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.004822182037371911,
+            "ci_lower": 0.0,
+            "ci_upper": 0.012955750899447347,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint16": {
+          "clean_rate": {
+            "mean": 0.8856901748040988,
+            "ci_lower": 0.8595508776628282,
+            "ci_upper": 0.9163261132328795,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.8975105485232067,
+            "ci_lower": 0.8604660456110796,
+            "ci_upper": 0.9426105235901058,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 1.036343705243128,
+            "ci_lower": 0.6127323351765616,
+            "ci_upper": 1.3991655378213592,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 7.274543542094589,
+            "ci_lower": 4.6512007729693865,
+            "ci_upper": 9.351996025016264,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 11.243182640144665,
+            "ci_lower": 7.097577543641528,
+            "ci_upper": 14.517654463236859,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 23.29493670886076,
+            "ci_lower": 10.371024788228743,
+            "ci_upper": 39.01757083200533,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 18.030705244122966,
+            "ci_lower": 6.196910992883348,
+            "ci_upper": 33.7806263697129,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.264231464737795,
+            "ci_lower": 2.3904888531817092,
+            "ci_upper": 9.197762114028773,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 1.7648402652200121,
+            "ci_lower": 0.08507618167297289,
+            "ci_upper": 5.058114679604359,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.2800723327305606,
+            "ci_lower": 0.0,
+            "ci_upper": 0.8329446064139941,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.05298975286317058,
+            "ci_lower": 0.022963021477319132,
+            "ci_upper": 0.07689689133804103,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.047673297166968054,
+            "ci_lower": 0.02098829152839085,
+            "ci_upper": 0.06912816133985594,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 3.5386678722121756,
+            "ci_lower": 1.5543607503240837,
+            "ci_upper": 5.134309763507804,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.0008679927667269439,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0029329424405303162,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        }
+      },
+      "paired_comparisons_vs_fixed10": {
+        "fixed6_heartbeat": {
+          "paired_clean_gain_percentage_points": {
+            "mean": 2.541892706449668,
+            "ci_lower": 1.328804494575228,
+            "ci_upper": 3.722854393115942,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": 2.545509342977697,
+            "ci_lower": 1.356923400853826,
+            "ci_upper": 3.684969602588546,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": -27.57142937128509,
+            "ci_lower": -39.61813064511328,
+            "ci_upper": -13.441469603707468,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "fixed16_heartbeat": {
+          "paired_clean_gain_percentage_points": {
+            "mean": -3.3785412899336946,
+            "ci_lower": -5.044368948562124,
+            "ci_upper": -1.5334721029590126,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": -3.3815551537070525,
+            "ci_lower": -5.0557206991992825,
+            "ci_upper": -1.588538427398906,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": 14.295628185461338,
+            "ci_lower": 6.56221892579263,
+            "ci_upper": 21.346510653915168,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint6": {
+          "paired_clean_gain_percentage_points": {
+            "mean": 2.7582881253767333,
+            "ci_lower": 1.439692163355748,
+            "ci_upper": 4.062361063611492,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": 2.7613019891500907,
+            "ci_lower": 1.4599570190456936,
+            "ci_upper": 4.041275518960056,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": -13.837144655205632,
+            "ci_lower": -20.885752721751768,
+            "ci_upper": -6.416536831545642,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint8": {
+          "paired_clean_gain_percentage_points": {
+            "mean": 1.5925256178420741,
+            "ci_lower": 0.7691820073798197,
+            "ci_upper": 2.414719385177066,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": 1.5943339361060886,
+            "ci_lower": 0.7826961324985321,
+            "ci_upper": 2.399513523907006,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": 0.5475362820364239,
+            "ci_lower": -1.4398848890430633,
+            "ci_upper": 2.5023048426524053,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint10": {
+          "paired_clean_gain_percentage_points": {
+            "mean": 0.33996383363471955,
+            "ci_lower": -0.068426751597653,
+            "ci_upper": 0.8199485771736096,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": 0.34116937914406253,
+            "ci_lower": -0.05776805189169487,
+            "ci_upper": 0.824844770205543,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": 10.147493368615384,
+            "ci_lower": 4.844836372025906,
+            "ci_upper": 15.100679027702535,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint12": {
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.7154912597950571,
+            "ci_lower": -1.2915705959598847,
+            "ci_upper": -0.21782223467565795,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": -0.7166968053044002,
+            "ci_lower": -1.266441142447538,
+            "ci_upper": -0.21566478878038212,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": 16.879888783120602,
+            "ci_lower": 8.14663752404201,
+            "ci_upper": 24.457633335681162,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint16": {
+          "paired_clean_gain_percentage_points": {
+            "mean": -2.916214587100663,
+            "ci_lower": -4.396314952329248,
+            "ci_upper": -1.3850480194201507,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": -2.9186256781193487,
+            "ci_lower": -4.385711905355559,
+            "ci_upper": -1.42824591402574,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": 25.808566945531584,
+            "ci_lower": 12.581470444150405,
+            "ci_upper": 37.73349179370339,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        }
+      },
+      "wrong_codebook_decode_total": {
+        "fixed6_heartbeat": 0,
+        "fixed10_heartbeat": 0,
+        "fixed16_heartbeat": 0,
+        "checkpoint6": 0,
+        "checkpoint8": 0,
+        "checkpoint10": 0,
+        "checkpoint12": 0,
+        "checkpoint16": 0
+      },
+      "checkpoint_policy_checks": {
+        "checkpoint6": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        },
+        "checkpoint8": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        },
+        "checkpoint10": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        },
+        "checkpoint12": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        },
+        "checkpoint16": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        }
+      }
+    },
+    "16": {
+      "n_channels": 16,
+      "site_results": {
+        "vlenders_burgdorf": {
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 423,
+          "calibration_scenes": 16
+        },
+        "Geneva": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 457,
+          "calibration_scenes": 4
+        },
+        "HuldOne": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 450,
+          "calibration_scenes": 4
+        },
+        "SP8AKM": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 356,
+          "calibration_scenes": 4
+        },
+        "alcorcon1": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 203,
+          "calibration_scenes": 4
+        },
+        "EDLV": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 426,
+          "calibration_scenes": 6
+        },
+        "BGSOFIAMLADOST01": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 450,
+          "calibration_scenes": 4
+        }
+      },
+      "policy_metrics": {
+        "fixed6_heartbeat": {
+          "clean_rate": {
+            "mean": 0.9426763110307415,
+            "ci_lower": 0.9372378985075882,
+            "ci_upper": 0.9487236093679369,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9532549728752261,
+            "ci_lower": 0.9407759340036784,
+            "ci_upper": 0.9708871170706023,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.47762704727983757,
+            "ci_lower": 0.31852854812836945,
+            "ci_upper": 0.5896645362697259,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 4.696482457367115,
+            "ci_lower": 3.1416048799428156,
+            "ci_upper": 5.802854151143214,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 4.991127185051236,
+            "ci_lower": 3.8591077419661888,
+            "ci_upper": 5.724377153969585,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 37.96354430379747,
+            "ci_lower": 25.918808783521182,
+            "ci_upper": 52.44679500019466,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 29.262206148282097,
+            "ci_lower": 16.92941323921253,
+            "ci_upper": 44.33777437982056,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 6.239710669077757,
+            "ci_lower": 3.216902751403033,
+            "ci_upper": 9.928640056517127,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 5.613984327908378,
+            "ci_lower": 2.84997639868125,
+            "ci_upper": 7.7914023446008835,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 4.621555153707052,
+            "ci_lower": 2.6285033507731272,
+            "ci_upper": 6.231021966406719,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.3841711874623267,
+            "ci_lower": 0.0,
+            "ci_upper": 1.1456997084548102,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "fixed10_heartbeat": {
+          "clean_rate": {
+            "mean": 0.9193490054249548,
+            "ci_lower": 0.9091499586005216,
+            "ci_upper": 0.9307053183435826,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9299216395418927,
+            "ci_lower": 0.9092215480040696,
+            "ci_upper": 0.9573225282882736,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.7109066967259785,
+            "ci_lower": 0.44895977452183655,
+            "ci_upper": 0.9086269532589633,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 6.364274674875731,
+            "ci_lower": 4.12199632027319,
+            "ci_upper": 8.006110932733574,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 7.512537673297167,
+            "ci_lower": 5.388886298436621,
+            "ci_upper": 9.07793362248085,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 32.83212778782399,
+            "ci_lower": 19.013126243804038,
+            "ci_upper": 49.6736185505947,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 25.861663652802893,
+            "ci_lower": 12.357483042070584,
+            "ci_upper": 42.46849721867667,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.558336347197108,
+            "ci_lower": 2.663650511383472,
+            "ci_upper": 9.24830268390206,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 3.349680530440024,
+            "ci_lower": 1.717285304098147,
+            "ci_upper": 4.767509575254915,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 3.628607594936709,
+            "ci_lower": 1.951925626407163,
+            "ci_upper": 5.404624697444424,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.3844364074743822,
+            "ci_lower": 0.0,
+            "ci_upper": 1.1413852193715188,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "fixed16_heartbeat": {
+          "clean_rate": {
+            "mean": 0.8836889692585895,
+            "ci_lower": 0.8573899605491702,
+            "ci_upper": 0.9126916309248873,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.8942616033755274,
+            "ci_lower": 0.8570841104433851,
+            "ci_upper": 0.936800153597834,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 1.0675041184963732,
+            "ci_lower": 0.6301102619207734,
+            "ci_upper": 1.4252400259427922,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 7.322314636138029,
+            "ci_lower": 4.598335844509477,
+            "ci_upper": 9.287795933741512,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 11.323188667872211,
+            "ci_lower": 7.396469771200946,
+            "ci_upper": 14.414725845163431,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 29.873755274261605,
+            "ci_lower": 14.97221469802277,
+            "ci_upper": 47.48476696734243,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 23.881518987341774,
+            "ci_lower": 9.657672886065738,
+            "ci_upper": 40.64935738514985,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.210849909584088,
+            "ci_lower": 2.4207013137649427,
+            "ci_upper": 8.934978472459846,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 1.9925256178420738,
+            "ci_lower": 0.8655761242386573,
+            "ci_upper": 2.887007540358517,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 3.04344786015672,
+            "ci_lower": 1.5871108045627895,
+            "ci_upper": 4.927671395473718,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.38476793248945146,
+            "ci_lower": 0.0,
+            "ci_upper": 1.1291448530311965,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint6": {
+          "clean_rate": {
+            "mean": 0.9447317661241712,
+            "ci_lower": 0.9391894740045301,
+            "ci_upper": 0.9502642977638992,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9553104279686558,
+            "ci_lower": 0.9441103777069261,
+            "ci_upper": 0.9710395874407476,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.4570830819436461,
+            "ci_lower": 0.30474453922011163,
+            "ci_upper": 0.5592221853956957,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 4.504377038354004,
+            "ci_lower": 3.0575060855721077,
+            "ci_upper": 5.511063949168403,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 4.814502712477396,
+            "ci_lower": 3.8222632977934308,
+            "ci_upper": 5.454887146079006,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 41.55524412296564,
+            "ci_lower": 31.185524032129283,
+            "ci_upper": 54.559765596677416,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 34.65773960216998,
+            "ci_lower": 24.614266933033598,
+            "ci_upper": 46.89112537566966,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 6.8975045207956605,
+            "ci_lower": 3.7060318559556813,
+            "ci_upper": 10.384116986229882,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 1.1068173598553346,
+            "ci_lower": 0.06298065839517976,
+            "ci_upper": 3.091628865254779,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.38403857745629894,
+            "ci_lower": 0.0,
+            "ci_upper": 1.1473132288629737,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.1232368896925859,
+            "ci_lower": 0.06677891622263168,
+            "ci_upper": 0.16931313131313133,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.12214587100663049,
+            "ci_lower": 0.06736824419272458,
+            "ci_upper": 0.16787804123396358,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 16.554587100663046,
+            "ci_lower": 8.722909003831417,
+            "ci_upper": 22.717942690441017,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.04084388185654008,
+            "ci_lower": 0.0,
+            "ci_upper": 0.12132927539064146,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint8": {
+          "clean_rate": {
+            "mean": 0.9320433996383363,
+            "ci_lower": 0.9263043531100875,
+            "ci_upper": 0.9389120988337998,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9426280892103676,
+            "ci_lower": 0.9273630201330256,
+            "ci_upper": 0.9646307301275243,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.583865783750097,
+            "ci_lower": 0.37395676487096874,
+            "ci_upper": 0.7249260648810104,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 5.606553657272035,
+            "ci_lower": 3.7142887548975128,
+            "ci_upper": 6.950978154288402,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 6.226015672091622,
+            "ci_lower": 4.660259113652609,
+            "ci_upper": 7.311556728788368,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 37.273405666063894,
+            "ci_lower": 25.419688038107296,
+            "ci_upper": 51.56055610724924,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 31.018360458107292,
+            "ci_lower": 19.713050311405215,
+            "ci_upper": 44.569760376756065,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 6.2550452079565995,
+            "ci_lower": 3.24519699223396,
+            "ci_upper": 9.84107817128561,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 1.177781796262809,
+            "ci_lower": 0.06313272427847755,
+            "ci_upper": 3.384896905054539,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.38450271247739615,
+            "ci_lower": 0.0,
+            "ci_upper": 1.146230572586177,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.0945388788426763,
+            "ci_lower": 0.04814316873785698,
+            "ci_upper": 0.13274987594237284,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.09356238698010849,
+            "ci_lower": 0.04741956056616196,
+            "ci_upper": 0.1313396930103489,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 12.687570825798673,
+            "ci_lower": 6.373202169784024,
+            "ci_upper": 17.789062567201107,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.019361060880048225,
+            "ci_lower": 0.0,
+            "ci_upper": 0.05455598254125812,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint10": {
+          "clean_rate": {
+            "mean": 0.9201567209162147,
+            "ci_lower": 0.9101069008444994,
+            "ci_upper": 0.9313605551177544,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9307293550331527,
+            "ci_lower": 0.9104722278495785,
+            "ci_upper": 0.9581617892134063,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.7028280289629373,
+            "ci_lower": 0.44418548166737726,
+            "ci_upper": 0.8977307690672169,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 6.318781493937609,
+            "ci_lower": 4.07666672396441,
+            "ci_upper": 7.928881135490086,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 7.429144062688367,
+            "ci_lower": 5.290499219344365,
+            "ci_upper": 8.958259935951865,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 34.62931886678722,
+            "ci_lower": 21.62761956509389,
+            "ci_upper": 49.689186780844764,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 28.755901145268233,
+            "ci_lower": 16.491964903047997,
+            "ci_upper": 43.257379388852186,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.8734177215189876,
+            "ci_lower": 2.9666979156492364,
+            "ci_upper": 9.533310723342987,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 1.2493911995177818,
+            "ci_lower": 0.06342450236909687,
+            "ci_upper": 3.562721958348556,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.3844364074743822,
+            "ci_lower": 0.0,
+            "ci_upper": 1.1451034074344022,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.0761543098251959,
+            "ci_lower": 0.03744035552146699,
+            "ci_upper": 0.10849253000244916,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.07549125979505728,
+            "ci_lower": 0.036735765348438774,
+            "ci_upper": 0.10771859946802874,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 10.207329716696806,
+            "ci_lower": 4.835136107758516,
+            "ci_upper": 14.546443469506926,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.0026522001205545507,
+            "ci_lower": 0.0,
+            "ci_upper": 0.007487870084024983,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint12": {
+          "clean_rate": {
+            "mean": 0.9085895117540688,
+            "ci_lower": 0.8931934031684414,
+            "ci_upper": 0.9257545303923995,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9191681735985533,
+            "ci_lower": 0.8940071460218599,
+            "ci_upper": 0.9523190952813324,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.8184453301147565,
+            "ci_lower": 0.5048781696176917,
+            "ci_upper": 1.0650174278032922,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 6.7439570382471095,
+            "ci_lower": 4.3984774442199015,
+            "ci_upper": 8.500442708143147,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 8.677347799879445,
+            "ci_lower": 6.03373883308282,
+            "ci_upper": 10.652548389005984,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 32.73383966244726,
+            "ci_lower": 19.04471744318895,
+            "ci_upper": 49.100129737362856,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 27.157420132610003,
+            "ci_lower": 14.317345641297742,
+            "ci_upper": 42.92133362722791,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.576419529837252,
+            "ci_lower": 2.604735178002259,
+            "ci_upper": 9.20314667047032,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 1.2347317661241715,
+            "ci_lower": 0.06230927244055589,
+            "ci_upper": 3.525195109591966,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.3842374924653405,
+            "ci_lower": 0.0,
+            "ci_upper": 1.1484841980270362,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.06479807112718505,
+            "ci_lower": 0.030608093130414578,
+            "ci_upper": 0.09241722120227705,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.06408679927667268,
+            "ci_lower": 0.031174620765216227,
+            "ci_upper": 0.09132517448152741,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 8.69487643158529,
+            "ci_lower": 4.115450177099511,
+            "ci_upper": 12.371334538065954,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.011934900542495483,
+            "ci_lower": 0.0,
+            "ci_upper": 0.03279945674296269,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint16": {
+          "clean_rate": {
+            "mean": 0.8842374924653406,
+            "ci_lower": 0.8583344881598125,
+            "ci_upper": 0.9133339843750001,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.8948161543098252,
+            "ci_lower": 0.8589785602219318,
+            "ci_upper": 0.942033956747214,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 1.061963483561902,
+            "ci_lower": 0.6233630078700233,
+            "ci_upper": 1.4205463052576344,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 7.374693722721437,
+            "ci_lower": 4.72548872753009,
+            "ci_upper": 9.354417912782088,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 11.249373116335141,
+            "ci_lower": 7.429737735868246,
+            "ci_upper": 14.376230932372197,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 30.234159132007232,
+            "ci_lower": 15.532043672113867,
+            "ci_upper": 48.14193185606231,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 25.025623869801088,
+            "ci_lower": 11.313966756910098,
+            "ci_upper": 41.37516259410095,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.208535262206149,
+            "ci_lower": 2.3910491689750706,
+            "ci_upper": 8.976965638318031,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 1.2591621458710067,
+            "ci_lower": 0.06432773406296731,
+            "ci_upper": 3.6217449252580387,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.38476793248945146,
+            "ci_lower": 0.0,
+            "ci_upper": 1.1411397594752182,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.04820373719107896,
+            "ci_lower": 0.022722796411856483,
+            "ci_upper": 0.0699374978065358,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.04778179626280892,
+            "ci_lower": 0.021165142276422765,
+            "ci_upper": 0.06932991528072398,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 6.461024713682941,
+            "ci_lower": 3.0710136014577643,
+            "ci_upper": 9.389317190689239,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.0017239300783604581,
+            "ci_lower": 0.0,
+            "ci_upper": 0.005549249773638596,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        }
+      },
+      "paired_comparisons_vs_fixed10": {
+        "fixed6_heartbeat": {
+          "paired_clean_gain_percentage_points": {
+            "mean": 2.3327305605786623,
+            "ci_lower": 1.305184119040229,
+            "ci_upper": 3.294952201303934,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": 2.333333333333334,
+            "ci_lower": 1.2787536982248524,
+            "ci_upper": 3.329563372979526,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": -26.49206140122501,
+            "ci_lower": -38.117700139536716,
+            "ci_upper": -12.71197880131942,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "fixed16_heartbeat": {
+          "paired_clean_gain_percentage_points": {
+            "mean": -3.566003616636528,
+            "ci_lower": -5.289665461421308,
+            "ci_upper": -1.6914382943531223,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": -3.566003616636528,
+            "ci_lower": -5.293281758957655,
+            "ci_upper": -1.6951810445416575,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": 14.295849630853542,
+            "ci_lower": 6.788072813627525,
+            "ci_upper": 20.82404209576911,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint6": {
+          "paired_clean_gain_percentage_points": {
+            "mean": 2.5382760699216402,
+            "ci_lower": 1.3690077966922272,
+            "ci_upper": 3.605598173822711,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": 2.538878842676312,
+            "ci_lower": 1.392426339097716,
+            "ci_upper": 3.599193063676916,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": -46.08694460572338,
+            "ci_lower": -67.04801031005337,
+            "ci_upper": -21.48772183369137,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint8": {
+          "paired_clean_gain_percentage_points": {
+            "mean": 1.2694394213381557,
+            "ci_lower": 0.5909938359004719,
+            "ci_upper": 1.9377293917302514,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": 1.2706449668474986,
+            "ci_lower": 0.5962525055528468,
+            "ci_upper": 1.9476049735779648,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": -24.338631456667937,
+            "ci_lower": -35.905960709438425,
+            "ci_upper": -10.781791196857242,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint10": {
+          "paired_clean_gain_percentage_points": {
+            "mean": 0.08077154912597952,
+            "ci_lower": -0.19938537746267043,
+            "ci_upper": 0.379396201170171,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": 0.0807715491259795,
+            "ci_lower": -0.21149776435976933,
+            "ci_upper": 0.3740017965320513,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": -10.407708742398615,
+            "ci_lower": -15.859488497902744,
+            "ci_upper": -4.473952291113654,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint12": {
+          "paired_clean_gain_percentage_points": {
+            "mean": -1.0759493670886076,
+            "ci_lower": -1.8138020457645865,
+            "ci_upper": -0.4273554148665544,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": -1.0753465943339362,
+            "ci_lower": -1.7443141453009114,
+            "ci_upper": -0.4306395460532722,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": -0.8193475509834094,
+            "ci_lower": -2.6479077232230055,
+            "ci_upper": 0.8950538261795067,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint16": {
+          "paired_clean_gain_percentage_points": {
+            "mean": -3.5111512959614233,
+            "ci_lower": -5.185285715742396,
+            "ci_upper": -1.6600429143324298,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": -3.5105485232067517,
+            "ci_lower": -5.188803927824184,
+            "ci_upper": -1.697507490397614,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": 12.23432625130182,
+            "ci_lower": 5.826380209666208,
+            "ci_upper": 17.84256432338067,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        }
+      },
+      "wrong_codebook_decode_total": {
+        "fixed6_heartbeat": 0,
+        "fixed10_heartbeat": 0,
+        "fixed16_heartbeat": 0,
+        "checkpoint6": 0,
+        "checkpoint8": 0,
+        "checkpoint10": 0,
+        "checkpoint12": 0,
+        "checkpoint16": 0
+      },
+      "checkpoint_policy_checks": {
+        "checkpoint6": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        },
+        "checkpoint8": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        },
+        "checkpoint10": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        },
+        "checkpoint12": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        },
+        "checkpoint16": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        }
+      }
+    },
+    "32": {
+      "n_channels": 32,
+      "site_results": {
+        "vlenders_burgdorf": {
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 423,
+          "calibration_scenes": 16
+        },
+        "Geneva": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 457,
+          "calibration_scenes": 4
+        },
+        "HuldOne": {
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 450,
+          "calibration_scenes": 16
+        },
+        "SP8AKM": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 356,
+          "calibration_scenes": 4
+        },
+        "alcorcon1": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 203,
+          "calibration_scenes": 4
+        },
+        "EDLV": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 426,
+          "calibration_scenes": 4
+        },
+        "BGSOFIAMLADOST01": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 450,
+          "calibration_scenes": 4
+        }
+      },
+      "policy_metrics": {
+        "fixed6_heartbeat": {
+          "clean_rate": {
+            "mean": 0.9520976491862568,
+            "ci_lower": 0.938985151350789,
+            "ci_upper": 0.9692299065194319,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.963086196503918,
+            "ci_lower": 0.9451630163728072,
+            "ci_upper": 0.982868616373103,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.3789352875108592,
+            "ci_lower": 0.18608492515944142,
+            "ci_upper": 0.5547343636895398,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 3.709404092504568,
+            "ci_lower": 1.916151067979829,
+            "ci_upper": 5.4750401132704285,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 4.144828209764918,
+            "ci_lower": 2.626678113065065,
+            "ci_upper": 5.485532468376004,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 45.175376732971664,
+            "ci_lower": 31.390665698895525,
+            "ci_upper": 61.02413674442838,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 37.7848523206751,
+            "ci_lower": 22.95452267009245,
+            "ci_upper": 54.19198682923178,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.50119349005425,
+            "ci_lower": 2.057642882925462,
+            "ci_upper": 9.84442666035289,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 4.289620253164557,
+            "ci_lower": 1.6457154575304944,
+            "ci_upper": 6.790148075199889,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 3.878016877637131,
+            "ci_lower": 1.745655986445403,
+            "ci_upper": 6.109486780616895,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.5324050632911393,
+            "ci_lower": 0.004776526782668032,
+            "ci_upper": 1.5717657323860956,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "fixed10_heartbeat": {
+          "clean_rate": {
+            "mean": 0.9355696202531645,
+            "ci_lower": 0.9149179661929197,
+            "ci_upper": 0.9596748580955599,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9465581675708257,
+            "ci_lower": 0.918247101188745,
+            "ci_upper": 0.9756276449408031,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.5441871283113849,
+            "ci_lower": 0.26179766476215427,
+            "ci_upper": 0.8140855312989924,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 4.885899271624964,
+            "ci_lower": 2.437837420919372,
+            "ci_upper": 7.294537112685481,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 6.09203737191079,
+            "ci_lower": 3.4779318928750755,
+            "ci_upper": 8.621040898880128,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 41.37223628691983,
+            "ci_lower": 25.410247786493166,
+            "ci_upper": 58.8513732589292,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 35.269957805907175,
+            "ci_lower": 19.436409800750578,
+            "ci_upper": 53.115298390803595,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.0311754068716095,
+            "ci_lower": 1.7798778709379146,
+            "ci_upper": 9.181808954681985,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 2.5428330319469565,
+            "ci_lower": 0.7712024825446082,
+            "ci_upper": 4.1407454051188335,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 3.1426763110307414,
+            "ci_lower": 1.237964138310442,
+            "ci_upper": 5.299412556721464,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.5324050632911393,
+            "ci_lower": 0.004511508932855147,
+            "ci_upper": 1.5759974424552425,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "fixed16_heartbeat": {
+          "clean_rate": {
+            "mean": 0.910084388185654,
+            "ci_lower": 0.8732132585408139,
+            "ci_upper": 0.9502225234753846,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9210729355033151,
+            "ci_lower": 0.8746966334841686,
+            "ci_upper": 0.9650202691473702,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.7990107065273241,
+            "ci_lower": 0.3451817537171432,
+            "ci_upper": 1.2418063537845152,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 5.714846071702109,
+            "ci_lower": 2.6736961022646613,
+            "ci_upper": 8.600309932716941,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 8.896763110307413,
+            "ci_lower": 4.586554970376115,
+            "ci_upper": 13.095332181925917,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 39.163544303797465,
+            "ci_lower": 22.396666861891187,
+            "ci_upper": 57.937463159608896,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 33.80725738396624,
+            "ci_lower": 16.867115909255467,
+            "ci_upper": 52.91186575275326,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 4.7554430379746835,
+            "ci_lower": 1.5917029015987263,
+            "ci_upper": 9.060172586146066,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 1.5172513562386982,
+            "ci_lower": 0.4318651434080334,
+            "ci_upper": 2.4566139983982502,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 2.7273899939722726,
+            "ci_lower": 1.028604657813915,
+            "ci_upper": 4.899453563123313,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.5324050632911393,
+            "ci_lower": 0.004844290657439446,
+            "ci_upper": 1.5747688586304085,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint6": {
+          "clean_rate": {
+            "mean": 0.9543037974683545,
+            "ci_lower": 0.9416086642053874,
+            "ci_upper": 0.9705980542319038,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9652923447860158,
+            "ci_lower": 0.9481108192065963,
+            "ci_upper": 0.9835947325621065,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.35688332704139536,
+            "ci_lower": 0.19027463700501995,
+            "ci_upper": 0.5205222960167097,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 3.5072330089600205,
+            "ci_lower": 1.8553326875502243,
+            "ci_upper": 5.1024120689445684,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 4.052368896925858,
+            "ci_lower": 2.643743524521068,
+            "ci_upper": 5.343782096020413,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 48.08737793851717,
+            "ci_lower": 36.11407370770457,
+            "ci_upper": 61.49585323009179,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 42.04441229656419,
+            "ci_lower": 30.02290141922108,
+            "ci_upper": 55.41762292508602,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 6.042965641952984,
+            "ci_lower": 2.339225016029222,
+            "ci_upper": 10.11119157386442,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 1.1900301386377332,
+            "ci_lower": 0.05930670896679465,
+            "ci_upper": 3.4155527190604484,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.5324050632911393,
+            "ci_lower": 0.0045117628101836935,
+            "ci_upper": 1.5860439432690068,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.09523809523809523,
+            "ci_lower": 0.03787711481337983,
+            "ci_upper": 0.1490360239007058,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.09443037974683545,
+            "ci_lower": 0.035871701116483926,
+            "ci_upper": 0.1484671941110991,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 12.753538276069921,
+            "ci_lower": 4.699905709851282,
+            "ci_upper": 19.929366417933984,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.04691983122362869,
+            "ci_lower": 0.0009871332171796795,
+            "ci_upper": 0.13184097753130514,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint8": {
+          "clean_rate": {
+            "mean": 0.94456901748041,
+            "ci_lower": 0.9286070580232452,
+            "ci_upper": 0.9651690207943356,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9555635925256178,
+            "ci_lower": 0.9332709673202138,
+            "ci_upper": 0.9800266289681215,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.4541474389892544,
+            "ci_lower": 0.23268443394570662,
+            "ci_upper": 0.6769030938905131,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 4.306108438204977,
+            "ci_lower": 2.0836452399477627,
+            "ci_upper": 6.38740855746891,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 5.011482820976492,
+            "ci_lower": 3.050841309032692,
+            "ci_upper": 6.837960726641903,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 44.635075346594334,
+            "ci_lower": 31.081723200477768,
+            "ci_upper": 59.94789239258747,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 39.10625075346594,
+            "ci_lower": 25.580062283858506,
+            "ci_upper": 54.51650534784504,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.528824593128391,
+            "ci_lower": 2.1290493818403777,
+            "ci_upper": 9.703020589045689,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 1.2515913200723328,
+            "ci_lower": 0.060439513537120064,
+            "ci_upper": 3.5699568623031253,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.5324050632911393,
+            "ci_lower": 0.004551365409622887,
+            "ci_upper": 1.5873254995778212,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.07197709463532248,
+            "ci_lower": 0.023931986960839344,
+            "ci_upper": 0.11475890764250896,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.07131404460518384,
+            "ci_lower": 0.023545373049215824,
+            "ci_upper": 0.11309640476294698,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 9.626895720313442,
+            "ci_lower": 3.264678222093828,
+            "ci_upper": 15.327780565195209,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.024810126582278484,
+            "ci_lower": 0.0015133888734984472,
+            "ci_upper": 0.06461798839604031,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint10": {
+          "clean_rate": {
+            "mean": 0.9361603375527425,
+            "ci_lower": 0.9155636804853098,
+            "ci_upper": 0.9605351170568561,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9471488848704039,
+            "ci_lower": 0.9195644913461364,
+            "ci_upper": 0.9754331483775138,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.5382767537465422,
+            "ci_lower": 0.256024367429837,
+            "ci_upper": 0.8163331823767608,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 4.792965138335607,
+            "ci_lower": 2.3699973548317854,
+            "ci_upper": 7.127468871039187,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 5.9610427968655815,
+            "ci_lower": 3.3748644331585855,
+            "ci_upper": 8.406430072312467,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 42.688137432188064,
+            "ci_lower": 27.84766807531441,
+            "ci_upper": 59.259690991104115,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 37.44473779385172,
+            "ci_lower": 22.62853839722582,
+            "ci_upper": 54.17548771723506,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.2433996383363475,
+            "ci_lower": 1.9180014378145223,
+            "ci_upper": 9.491144631854938,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 1.3251356238698009,
+            "ci_lower": 0.06217031536279899,
+            "ci_upper": 3.8468912656516268,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.5324050632911393,
+            "ci_lower": 0.004810707936765991,
+            "ci_upper": 1.5750255102040813,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.05810729355033152,
+            "ci_lower": 0.01844160978818896,
+            "ci_upper": 0.09365081321808318,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.05743821579264617,
+            "ci_lower": 0.017801995786072285,
+            "ci_upper": 0.09329245632869423,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 7.756612417118746,
+            "ci_lower": 2.3858143527224325,
+            "ci_upper": 12.464088170874689,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.005569620253164558,
+            "ci_lower": 0.0,
+            "ci_upper": 0.01419286776005843,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint12": {
+          "clean_rate": {
+            "mean": 0.926811332127788,
+            "ci_lower": 0.9001280151803648,
+            "ci_upper": 0.9572567959871728,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9377998794454492,
+            "ci_lower": 0.9036611036693946,
+            "ci_upper": 0.9728564924027906,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.6317566590493658,
+            "ci_lower": 0.30716074973798446,
+            "ci_upper": 0.9769559285603656,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 5.317557853845414,
+            "ci_lower": 2.5636106304100497,
+            "ci_upper": 7.947335931869314,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 6.994249547920433,
+            "ci_lower": 3.707419648774023,
+            "ci_upper": 10.054261694909512,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 41.25448462929475,
+            "ci_lower": 25.68741331826948,
+            "ci_upper": 58.58884633574324,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 36.23213381555154,
+            "ci_lower": 20.856102668052447,
+            "ci_upper": 53.466179991243315,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.022350813743219,
+            "ci_lower": 1.7775446094972573,
+            "ci_upper": 9.228022140221402,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 1.3033212778782401,
+            "ci_lower": 0.06126872153388711,
+            "ci_upper": 3.753651682134495,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.5324050632911393,
+            "ci_lower": 0.0047994514912581415,
+            "ci_upper": 1.5816777004123879,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.04953586497890296,
+            "ci_lower": 0.014961425946361339,
+            "ci_upper": 0.07942060658115228,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.04905967450271249,
+            "ci_lower": 0.015137975194400587,
+            "ci_upper": 0.07908343203682008,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 6.621000602772754,
+            "ci_lower": 2.0326236545342455,
+            "ci_upper": 10.650139456530818,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.013164556962025316,
+            "ci_lower": 0.0010734228856321376,
+            "ci_upper": 0.032427204592774,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint16": {
+          "clean_rate": {
+            "mean": 0.9092103676913803,
+            "ci_lower": 0.8704766436399258,
+            "ci_upper": 0.9499729626946107,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9201989150090416,
+            "ci_lower": 0.87275,
+            "ci_upper": 0.9653502889493332,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.8077599762785436,
+            "ci_lower": 0.3447441246815768,
+            "ci_upper": 1.2504825883823063,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 5.710524459948124,
+            "ci_lower": 2.8229109180344785,
+            "ci_upper": 8.655204154946658,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 8.89447860156721,
+            "ci_lower": 4.390448432206047,
+            "ci_upper": 13.202215457129542,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 39.44251356238698,
+            "ci_lower": 22.71660905343248,
+            "ci_upper": 58.01681394188212,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 34.68866184448462,
+            "ci_lower": 18.345786802914997,
+            "ci_upper": 53.411747894478374,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 4.753851717902351,
+            "ci_lower": 1.6083716750539183,
+            "ci_upper": 9.097266575949645,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 1.3399095840867992,
+            "ci_lower": 0.06412293417366946,
+            "ci_upper": 3.7916309794882306,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.5324050632911393,
+            "ci_lower": 0.0047879616963064295,
+            "ci_upper": 1.569655612244898,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.03717299578059072,
+            "ci_lower": 0.010696327676706406,
+            "ci_upper": 0.060541571350642046,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.03678722121760097,
+            "ci_lower": 0.010425531164417549,
+            "ci_upper": 0.060335726534236786,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 4.960747438215793,
+            "ci_lower": 1.4046292650918633,
+            "ci_upper": 8.056198391761654,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.0027004219409282704,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0087167771343757,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        }
+      },
+      "paired_comparisons_vs_fixed10": {
+        "fixed6_heartbeat": {
+          "paired_clean_gain_percentage_points": {
+            "mean": 1.6528028933092227,
+            "ci_lower": 0.5838168634367764,
+            "ci_upper": 2.7603647884978866,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": 1.6528028933092225,
+            "ci_lower": 0.6016266139847608,
+            "ci_upper": 2.7904417324012947,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": -19.0003480564091,
+            "ci_lower": -32.54346933018346,
+            "ci_upper": -5.697771979046159,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "fixed16_heartbeat": {
+          "paired_clean_gain_percentage_points": {
+            "mean": -2.548523206751055,
+            "ci_lower": -4.378413797156786,
+            "ci_upper": -0.8145922907281975,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": -2.548523206751055,
+            "ci_lower": -4.401783128758815,
+            "ci_upper": -0.8203933777258944,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": 10.51711700360751,
+            "ci_lower": 3.428133512263827,
+            "ci_upper": 18.19109698453872,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint6": {
+          "paired_clean_gain_percentage_points": {
+            "mean": 1.8734177215189873,
+            "ci_lower": 0.6733088634797683,
+            "ci_upper": 3.1627194709782973,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": 1.8734177215189873,
+            "ci_lower": 0.6239422656871559,
+            "ci_upper": 3.218132836299158,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": -34.144336555879356,
+            "ci_lower": -57.17365124318476,
+            "ci_upper": -10.052379175684507,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint8": {
+          "paired_clean_gain_percentage_points": {
+            "mean": 0.8999397227245327,
+            "ci_lower": 0.3010922163002445,
+            "ci_upper": 1.6310251329166843,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": 0.9005424954792043,
+            "ci_lower": 0.28426279158069684,
+            "ci_upper": 1.6275186723101194,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": -17.374995487935887,
+            "ci_lower": -30.259453307464153,
+            "ci_upper": -4.920178752188488,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint10": {
+          "paired_clean_gain_percentage_points": {
+            "mean": 0.05907172995780594,
+            "ci_lower": -0.17058137205143248,
+            "ci_upper": 0.3469278908010433,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": 0.05907172995780593,
+            "ci_lower": -0.1677653639573878,
+            "ci_upper": 0.33857724906981035,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": -7.422187935485861,
+            "ci_lower": -13.564249179990872,
+            "ci_upper": -1.8653753687899364,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint12": {
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.8758288125376732,
+            "ci_lower": -1.5931307604659128,
+            "ci_upper": -0.2732381192467223,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": -0.8758288125376732,
+            "ci_lower": -1.6099708100999945,
+            "ci_upper": -0.28132374181211633,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": -0.43351496326154326,
+            "ci_lower": -2.338883159753048,
+            "ci_upper": 1.088924129490398,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint16": {
+          "paired_clean_gain_percentage_points": {
+            "mean": -2.635925256178421,
+            "ci_lower": -4.5370809099759555,
+            "ci_upper": -0.8283304553470614,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": -2.635925256178421,
+            "ci_lower": -4.609580854991006,
+            "ci_upper": -0.8313335114489427,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": 8.865838785344991,
+            "ci_lower": 3.039673958405853,
+            "ci_upper": 15.325912329153978,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        }
+      },
+      "wrong_codebook_decode_total": {
+        "fixed6_heartbeat": 0,
+        "fixed10_heartbeat": 0,
+        "fixed16_heartbeat": 0,
+        "checkpoint6": 0,
+        "checkpoint8": 0,
+        "checkpoint10": 0,
+        "checkpoint12": 0,
+        "checkpoint16": 0
+      },
+      "checkpoint_policy_checks": {
+        "checkpoint6": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        },
+        "checkpoint8": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        },
+        "checkpoint10": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        },
+        "checkpoint12": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        },
+        "checkpoint16": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        }
+      }
+    },
+    "64": {
+      "n_channels": 64,
+      "site_results": {
+        "vlenders_burgdorf": {
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 423,
+          "calibration_scenes": 16
+        },
+        "Geneva": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 457,
+          "calibration_scenes": 4
+        },
+        "HuldOne": {
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 450,
+          "calibration_scenes": 16
+        },
+        "SP8AKM": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 356,
+          "calibration_scenes": 4
+        },
+        "alcorcon1": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 203,
+          "calibration_scenes": 4
+        },
+        "EDLV": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 426,
+          "calibration_scenes": 4
+        },
+        "BGSOFIAMLADOST01": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 450,
+          "calibration_scenes": 4
+        }
+      },
+      "policy_metrics": {
+        "fixed6_heartbeat": {
+          "clean_rate": {
+            "mean": 0.9450452079566004,
+            "ci_lower": 0.931002188029362,
+            "ci_upper": 0.964756622695889,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9621338155515371,
+            "ci_lower": 0.9422665792734851,
+            "ci_upper": 0.9823901940683959,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.3954700394463087,
+            "ci_lower": 0.20183763099696234,
+            "ci_upper": 0.5793942627984148,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 3.814847129767951,
+            "ci_lower": 1.9573288221453256,
+            "ci_upper": 5.623180950992254,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 4.185364677516577,
+            "ci_lower": 2.633056888155456,
+            "ci_upper": 5.632577261199134,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 42.781790235081374,
+            "ci_lower": 29.44315859658922,
+            "ci_upper": 57.95523409613193,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 35.0611874623267,
+            "ci_lower": 18.948101031379824,
+            "ci_upper": 51.64191586273803,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.880650994575046,
+            "ci_lower": 2.01682955147091,
+            "ci_upper": 10.688206642066419,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 4.189704641350211,
+            "ci_lower": 1.4311302377976896,
+            "ci_upper": 6.736506414664088,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 5.115997588908981,
+            "ci_lower": 2.105310927390368,
+            "ci_upper": 8.496125330814719,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.8401627486437612,
+            "ci_lower": 0.005538948463620222,
+            "ci_upper": 2.472177750987949,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "fixed10_heartbeat": {
+          "clean_rate": {
+            "mean": 0.9265822784810127,
+            "ci_lower": 0.9048801752885771,
+            "ci_upper": 0.9548779945551061,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9436467751657626,
+            "ci_lower": 0.9099374443491579,
+            "ci_upper": 0.9751728922402878,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.5803133388952106,
+            "ci_lower": 0.2644831122285871,
+            "ci_upper": 0.8833923301474341,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 5.018974370346705,
+            "ci_lower": 2.433375291940342,
+            "ci_upper": 7.558053873113841,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 6.053911995177818,
+            "ci_lower": 3.325762240287085,
+            "ci_upper": 8.635288161275035,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 39.104635322483425,
+            "ci_lower": 23.139914068160888,
+            "ci_upper": 56.49064234126171,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 32.725274261603374,
+            "ci_lower": 15.199977332274972,
+            "ci_upper": 50.931597098917365,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.3196383363471975,
+            "ci_lower": 1.719716457835473,
+            "ci_upper": 10.328770541188137,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 2.528559373116335,
+            "ci_lower": 0.7737496231541068,
+            "ci_upper": 4.0940475408040315,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 4.21374321880651,
+            "ci_lower": 1.545789523862024,
+            "ci_upper": 7.761273947558555,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.8390355635925256,
+            "ci_lower": 0.0055263442883010895,
+            "ci_upper": 2.511940993788819,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "fixed16_heartbeat": {
+          "clean_rate": {
+            "mean": 0.9011392405063291,
+            "ci_lower": 0.8630948720401831,
+            "ci_upper": 0.9415876469954072,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.918179626280892,
+            "ci_lower": 0.871747446768419,
+            "ci_upper": 0.9676029352871895,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.8349450324598626,
+            "ci_lower": 0.3538380741601857,
+            "ci_upper": 1.299351417529053,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 5.666827016855583,
+            "ci_lower": 2.649954027660215,
+            "ci_upper": 8.510184882580546,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 8.916485834840264,
+            "ci_lower": 4.467398018165639,
+            "ci_upper": 13.17309009975128,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 37.17593128390596,
+            "ci_lower": 20.542858415812432,
+            "ci_upper": 56.14655555555555,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 31.50538276069922,
+            "ci_lower": 13.274592126038844,
+            "ci_upper": 51.13710963595266,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.064882459312839,
+            "ci_lower": 1.5881777162234278,
+            "ci_upper": 10.004337770274864,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 1.545605786618445,
+            "ci_lower": 0.45785598973355485,
+            "ci_upper": 2.5022485256103106,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 3.7836528028933087,
+            "ci_lower": 1.2109761339431606,
+            "ci_upper": 7.35117935332727,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.8362688366485834,
+            "ci_lower": 0.005478569126651628,
+            "ci_upper": 2.4857737600552134,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint6": {
+          "clean_rate": {
+            "mean": 0.9471127185051235,
+            "ci_lower": 0.9323211105174104,
+            "ci_upper": 0.9666809547854216,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.964249547920434,
+            "ci_lower": 0.9456688399096483,
+            "ci_upper": 0.9826996590000036,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.37430895634325484,
+            "ci_lower": 0.19214686769841446,
+            "ci_upper": 0.55512702777418,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 3.6332420964859975,
+            "ci_lower": 1.8777903537779836,
+            "ci_upper": 5.337180741759116,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 4.08952380952381,
+            "ci_lower": 2.6302123382342644,
+            "ci_upper": 5.461187105673804,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 40.767679324894516,
+            "ci_lower": 26.3826766004415,
+            "ci_upper": 57.370876275767856,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 34.4926702833032,
+            "ci_lower": 18.0800599529154,
+            "ci_upper": 51.432460734767744,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 6.27500904159132,
+            "ci_lower": 2.1791872396315535,
+            "ci_upper": 10.876485202776763,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 2.0179987944544897,
+            "ci_lower": 0.0800716843540672,
+            "ci_upper": 5.797297887349879,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.8476431585292344,
+            "ci_lower": 0.005868139454608217,
+            "ci_upper": 2.541511928529176,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.09954792043399638,
+            "ci_lower": 0.03316245552570864,
+            "ci_upper": 0.1583817659122537,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.08960819770946353,
+            "ci_lower": 0.0320259949816831,
+            "ci_upper": 0.14217966818908503,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 6.661000602772754,
+            "ci_lower": 2.250864447420622,
+            "ci_upper": 10.586503816335057,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.02100663050030139,
+            "ci_lower": 0.0007841789636816931,
+            "ci_upper": 0.057900473063690505,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint8": {
+          "clean_rate": {
+            "mean": 0.9377516576250753,
+            "ci_lower": 0.9226333341232975,
+            "ci_upper": 0.9598403989753317,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9548583484026523,
+            "ci_lower": 0.9308920973381237,
+            "ci_upper": 0.9782044788937025,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.4682387286931397,
+            "ci_lower": 0.23752567116941958,
+            "ci_upper": 0.7013961490735887,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 4.383524469925787,
+            "ci_lower": 2.1997869262062544,
+            "ci_upper": 6.6191690913471914,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 5.047148884870404,
+            "ci_lower": 3.0124718868697435,
+            "ci_upper": 6.993633734897599,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 38.88802290536468,
+            "ci_lower": 23.19777297656052,
+            "ci_upper": 56.60681556757215,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 33.07955997588909,
+            "ci_lower": 15.649032497607449,
+            "ci_upper": 51.26215970944152,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.808462929475588,
+            "ci_lower": 1.9887377865464118,
+            "ci_upper": 10.894485911320892,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 2.060747438215793,
+            "ci_lower": 0.08243648189129231,
+            "ci_upper": 5.894222224931721,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.8477456298975286,
+            "ci_lower": 0.005813953488372094,
+            "ci_upper": 2.533072764820214,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.07746232670283303,
+            "ci_lower": 0.025558321479374112,
+            "ci_upper": 0.12494461433981548,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.0695117540687161,
+            "ci_lower": 0.021745052002969216,
+            "ci_upper": 0.1117125283645493,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 5.182881253767329,
+            "ci_lower": 1.724657448478358,
+            "ci_upper": 8.285002822741298,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.01619047619047619,
+            "ci_lower": 0.0004092199906742959,
+            "ci_upper": 0.04604383785901934,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint10": {
+          "clean_rate": {
+            "mean": 0.9272875226039783,
+            "ci_lower": 0.9068315038672478,
+            "ci_upper": 0.9533766785998483,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9443459915611813,
+            "ci_lower": 0.9138390797840842,
+            "ci_upper": 0.9750651067524513,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.5733080285907859,
+            "ci_lower": 0.2712543721133744,
+            "ci_upper": 0.8799963169953701,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 5.048124617039295,
+            "ci_lower": 2.3778660083244816,
+            "ci_upper": 7.5847487378940395,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 6.010892103676914,
+            "ci_lower": 3.3036076958070213,
+            "ci_upper": 8.528946418225377,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 37.65717902350814,
+            "ci_lower": 21.162465707229842,
+            "ci_upper": 56.18013389696817,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 32.151356238698014,
+            "ci_lower": 14.408883834329977,
+            "ci_upper": 52.04802889713679,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.505822784810126,
+            "ci_lower": 1.8921822680353901,
+            "ci_upper": 10.287548123782983,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 2.075792646172393,
+            "ci_lower": 0.08345630732349886,
+            "ci_upper": 5.933668899193968,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.8430319469559977,
+            "ci_lower": 0.0055263442883010895,
+            "ci_upper": 2.5332386273608813,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.06338155515370705,
+            "ci_lower": 0.019317772829186838,
+            "ci_upper": 0.1018206667997216,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.05673297166968053,
+            "ci_lower": 0.0172070589692185,
+            "ci_upper": 0.09127423107530999,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 4.242133815551537,
+            "ci_lower": 1.3666575892131145,
+            "ci_upper": 6.801098052908935,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.014755877034358046,
+            "ci_lower": 0.0003921331736008177,
+            "ci_upper": 0.040776316999348944,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint12": {
+          "clean_rate": {
+            "mean": 0.9186196503918023,
+            "ci_lower": 0.8924340498795537,
+            "ci_upper": 0.949529545898935,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9356841470765519,
+            "ci_lower": 0.9001709727659791,
+            "ci_upper": 0.9713844333033862,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.6599475528189663,
+            "ci_lower": 0.3048272469497221,
+            "ci_upper": 1.0224782289920566,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 5.309871184625852,
+            "ci_lower": 2.4884432546730038,
+            "ci_upper": 8.031626357251046,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 6.953092224231464,
+            "ci_lower": 3.6679631979695433,
+            "ci_upper": 10.017716376479804,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 36.84689572031344,
+            "ci_lower": 20.003535678918237,
+            "ci_upper": 55.680431616983554,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 31.534345991561185,
+            "ci_lower": 13.338846982270985,
+            "ci_upper": 50.64529282525445,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.312549728752261,
+            "ci_lower": 1.630546797194866,
+            "ci_upper": 10.209850181386686,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 2.1003074141048828,
+            "ci_lower": 0.08497984276605777,
+            "ci_upper": 6.1571022817761945,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.8404701627486438,
+            "ci_lower": 0.005453962143086302,
+            "ci_upper": 2.521964285714285,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.053405666063893915,
+            "ci_lower": 0.016077666324518496,
+            "ci_upper": 0.08650110094850946,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.04794454490657022,
+            "ci_lower": 0.014260191517505348,
+            "ci_upper": 0.07756866282306814,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 3.5682700421940927,
+            "ci_lower": 1.0855920033738315,
+            "ci_upper": 5.744404231442679,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.00625075346594334,
+            "ci_lower": 0.00021656037643721075,
+            "ci_upper": 0.014973864941045923,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint16": {
+          "clean_rate": {
+            "mean": 0.9031283905967451,
+            "ci_lower": 0.8676388915067269,
+            "ci_upper": 0.942953473662451,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "availability_rate": {
+            "mean": 0.9201748040988548,
+            "ci_lower": 0.870064069182663,
+            "ci_upper": 0.9665394405151787,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "mean_effective_regret_db": {
+            "mean": 0.8149952068492804,
+            "ci_lower": 0.3571543741987734,
+            "ci_upper": 1.2714359882455,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "cvar_0_9_effective_regret_db": {
+            "mean": 5.644470674903201,
+            "ci_lower": 2.5710043451133022,
+            "ci_upper": 8.518432056324553,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "longest_dirty_run_scenes": {
+            "mean": 8.717179023508137,
+            "ci_lower": 4.59196903768585,
+            "ci_upper": 12.866693398988216,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "total_bits_per_scene": {
+            "mean": 35.646298975286314,
+            "ci_lower": 18.233125556767902,
+            "ci_upper": 55.301348502912354,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "forward_bits_per_scene": {
+            "mean": 30.62770946353225,
+            "ci_lower": 11.736867184859749,
+            "ci_upper": 49.959957204975794,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "ack_bits_per_scene": {
+            "mean": 5.018589511754069,
+            "ci_lower": 1.4959960759438413,
+            "ci_upper": 10.12439332854236,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "heartbeat_bits_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "recovery_bits_per_scene": {
+            "mean": 2.0765762507534657,
+            "ci_lower": 0.08527124103668898,
+            "ci_upper": 6.074213609274036,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "escape_bits_per_scene": {
+            "mean": 0.8365762507534661,
+            "ci_lower": 0.00557527927360958,
+            "ci_upper": 2.4996946169772265,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "wrong_codebook_decode_count": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_count_per_scene": {
+            "mean": 0.04065702230259192,
+            "ci_lower": 0.012419861381849697,
+            "ci_upper": 0.06601657934824,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_ack_count_per_scene": {
+            "mean": 0.036461723930078356,
+            "ci_lower": 0.010897852284524312,
+            "ci_upper": 0.05957643695813789,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_rejection_count_per_scene": {
+            "mean": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 0.0,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_bits_per_scene": {
+            "mean": 2.7204641350210967,
+            "ci_lower": 0.8132644587924,
+            "ci_upper": 4.394419828932109,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "checkpoint_escape_bits_per_scene": {
+            "mean": 0.008915009041591319,
+            "ci_lower": 9.088488078732437e-05,
+            "ci_upper": 0.021659925415720382,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        }
+      },
+      "paired_comparisons_vs_fixed10": {
+        "fixed6_heartbeat": {
+          "paired_clean_gain_percentage_points": {
+            "mean": 1.84629294755877,
+            "ci_lower": 0.5798078116854036,
+            "ci_upper": 3.2114993067934234,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": 1.848704038577456,
+            "ci_lower": 0.6199177972911731,
+            "ci_upper": 3.2263187748358515,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": -21.69260067383632,
+            "ci_lower": -36.23570616151079,
+            "ci_upper": -6.759458274522256,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "fixed16_heartbeat": {
+          "paired_clean_gain_percentage_points": {
+            "mean": -2.5443037974683542,
+            "ci_lower": -4.382578617001388,
+            "ci_upper": -0.8933508472760981,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": -2.5467148884870405,
+            "ci_lower": -4.400380570469057,
+            "ci_upper": -0.8025549430930069,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": 10.299564240606582,
+            "ci_lower": 3.2092909326661028,
+            "ci_upper": 17.973357086390777,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint6": {
+          "paired_clean_gain_percentage_points": {
+            "mean": 2.0530440024110908,
+            "ci_lower": 0.6625709559433256,
+            "ci_upper": 3.5733381595132347,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": 2.060277275467149,
+            "ci_lower": 0.5993093887197047,
+            "ci_upper": 3.5494748319203264,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": -10.410709552875552,
+            "ci_lower": -17.972429453838494,
+            "ci_upper": -3.230609904060776,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint8": {
+          "paired_clean_gain_percentage_points": {
+            "mean": 1.1169379144062692,
+            "ci_lower": 0.30650446610915816,
+            "ci_upper": 2.144325948395022,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": 1.1211573236889694,
+            "ci_lower": 0.30079977725401824,
+            "ci_upper": 2.128393994604372,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": 0.39125072809529754,
+            "ci_lower": -1.0744999886752715,
+            "ci_upper": 2.101262044358446,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint10": {
+          "paired_clean_gain_percentage_points": {
+            "mean": 0.07052441229656423,
+            "ci_lower": -0.26921057964318457,
+            "ci_upper": 0.4816132315777641,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": 0.06992163954189255,
+            "ci_lower": -0.27346742653196143,
+            "ci_upper": 0.499855211976622,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": 7.470145791234288,
+            "ci_lower": 2.3415509765622695,
+            "ci_upper": 12.98223049993048,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint12": {
+          "paired_clean_gain_percentage_points": {
+            "mean": -0.7962628089210368,
+            "ci_lower": -1.7117174149502108,
+            "ci_upper": -0.07680448287140057,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": -0.7962628089210368,
+            "ci_lower": -1.7459798707441139,
+            "ci_upper": -0.08982972457395119,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": 12.359431967434825,
+            "ci_lower": 3.6921252876463284,
+            "ci_upper": 20.941994631864144,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        },
+        "checkpoint16": {
+          "paired_clean_gain_percentage_points": {
+            "mean": -2.3453887884267632,
+            "ci_lower": -4.116183404956297,
+            "ci_upper": -0.8306395297028407,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_availability_gain_percentage_points": {
+            "mean": -2.3471971066907775,
+            "ci_lower": -4.120884961647538,
+            "ci_upper": -0.7318857774337232,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          },
+          "paired_total_bit_reduction_percentage": {
+            "mean": 19.082781415246192,
+            "ci_lower": 5.756774560025916,
+            "ci_upper": 31.531775859919556,
+            "bootstrap_unit": "site_then_paired_trajectory"
+          }
+        }
+      },
+      "wrong_codebook_decode_total": {
+        "fixed6_heartbeat": 0,
+        "fixed10_heartbeat": 0,
+        "fixed16_heartbeat": 0,
+        "checkpoint6": 0,
+        "checkpoint8": 0,
+        "checkpoint10": 0,
+        "checkpoint12": 0,
+        "checkpoint16": 0
+      },
+      "checkpoint_policy_checks": {
+        "checkpoint6": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        },
+        "checkpoint8": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        },
+        "checkpoint10": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        },
+        "checkpoint12": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        },
+        "checkpoint16": {
+          "path_a_passed": false,
+          "path_b_passed": false,
+          "wrong_codebook_gate_passed": true,
+          "system_gate_passed": false
+        }
+      }
+    }
+  },
+  "decision": {
+    "policy_passing_n_count": {
+      "checkpoint6": 0,
+      "checkpoint8": 0,
+      "checkpoint10": 0,
+      "checkpoint12": 0,
+      "checkpoint16": 0
+    },
+    "best_common_policy": "checkpoint8",
+    "required_n_count": 3,
+    "system_gate_passed": false,
+    "next_action": "reject_periodic_checkpoint_and_move_to_event_update_context_digest_piggyback"
+  },
+  "governance_checks": {
+    "internal_development_test_not_loaded": true,
+    "reserve_remained_unread": true,
+    "all_registered_policies_reported": true,
+    "full_packet_ack_reset_recovery_accounting_used": true,
+    "external_final_claim_forbidden": true
+  },
+  "elapsed_seconds": 502.18589249999786,
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": [
+    "This is a development protocol scan on previously consumed validation sites, not an external Final.",
+    "The checkpoint is self-contained only for a matching preinstalled bank catalog.",
+    "Unresolved sites remain on the identical exact fallback under every policy.",
+    "Only the 7 validation sites may be loaded; internal development-test and reserve sites remain closed.",
+    "All eight policies are reported even if one interval is favorable.",
+    "A packet-size advantage alone is not a system-level clean-bit advantage."
+  ]
+}

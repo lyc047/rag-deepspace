@@ -1,0 +1,531 @@
+{
+  "version": "1.0",
+  "status": "stage7_s7_4a0_checkpoint_feasibility_complete",
+  "verification_status": "ANALYZED",
+  "experiment_id": "stage7_s7_4a0_checkpoint_feasibility_v1",
+  "config_sha256": "9bc7babd1ca6739bce794180edcf1a27f7e83f3f5d52bfe038bd2217419b033b",
+  "input_hashes": {
+    "development_split": "0b0b3faed73cffcbf28777dab4684c7c632473f2f9b545d132a0449fbcf0486c",
+    "electrosense_protocol": "8aeffb02c98b561026854cea4b11d6daf7277504abd9c6786b500707dd8ffd68",
+    "electrosense_registry": "3f56c862645391583e67316af29d64754e2cc390365d9c8238731859add9ba73",
+    "electrosense_access_state": "6c4105198a766c3925219bde3076379e0b10f9dfc0a1c6129cfeeaadc9df5ee3",
+    "electrosense_freeze": "41fd5bdf0e3f57b2f0ee571dec848585462216083f4ca9f851d0759e12bfcc0f",
+    "matched_scan_config": "6598125579d0e935a6003ce4d3b5c2997fab1746ffeda5ba51c94b93e3405fb3",
+    "activation_protocol": "4f89d46baea177a3bc6ca958a46dbf27dc8e772c21aa0b32cf21e5115b6afc36",
+    "s7_3b_result": "9025b936b038f436c7361463bbf06928f211106ba0ea958746000c1d98488ea5"
+  },
+  "loaded_sites": {
+    "train": [],
+    "validation": [
+      "vlenders_burgdorf",
+      "Geneva",
+      "HuldOne",
+      "SP8AKM",
+      "alcorcon1",
+      "EDLV",
+      "BGSOFIAMLADOST01"
+    ],
+    "internal_development_test": [],
+    "reserve": []
+  },
+  "n_results": {
+    "8": {
+      "n_channels": 8,
+      "resolved_bank_site_count": 6,
+      "site_results": {
+        "vlenders_burgdorf": {
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 423,
+          "checkpoint_scene_count": 0
+        },
+        "Geneva": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 457,
+          "checkpoint_scene_count": 453,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 67,
+          "mean_frame_bits": 67.0,
+          "escape_count": 0
+        },
+        "HuldOne": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 450,
+          "checkpoint_scene_count": 446,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 67,
+          "mean_frame_bits": 67.0,
+          "escape_count": 0
+        },
+        "SP8AKM": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 356,
+          "checkpoint_scene_count": 352,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 75,
+          "mean_frame_bits": 67.04545454545455,
+          "escape_count": 2
+        },
+        "alcorcon1": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 203,
+          "checkpoint_scene_count": 199,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 67,
+          "mean_frame_bits": 67.0,
+          "escape_count": 0
+        },
+        "EDLV": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 426,
+          "checkpoint_scene_count": 422,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 75,
+          "mean_frame_bits": 69.19905213270142,
+          "escape_count": 116
+        },
+        "BGSOFIAMLADOST01": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 450,
+          "checkpoint_scene_count": 446,
+          "minimum_frame_bits": 66,
+          "maximum_frame_bits": 66,
+          "mean_frame_bits": 66.0,
+          "escape_count": 0
+        }
+      },
+      "frame_statistics": {
+        "sample_count": 2318,
+        "non_escape_count": 2200,
+        "escape_count": 118,
+        "escape_rate": 0.05090595340811044,
+        "minimum_non_escape_bits": 66,
+        "maximum_non_escape_bits": 67,
+        "mean_all_frame_bits": 67.21484037963762,
+        "maximum_all_frame_bits": 75,
+        "mean_compact_update_bits": 43.21484037963762,
+        "mean_separate_activation_plus_update_bits": 107.21484037963762,
+        "mean_reduction_vs_separate_percent": 37.318649682172634
+      },
+      "nominal_periodic_cost": {
+        "6": {
+          "checkpoint_plus_ack_bits_per_scene": 15.20247339660627,
+          "ideal_request_response_heartbeat_bits_per_scene": 10.666666666666666,
+          "separate_activation_update_ack_bits_per_scene": 21.869140063272937
+        },
+        "8": {
+          "checkpoint_plus_ack_bits_per_scene": 11.401855047454703,
+          "ideal_request_response_heartbeat_bits_per_scene": 8.0,
+          "separate_activation_update_ack_bits_per_scene": 16.401855047454703
+        },
+        "10": {
+          "checkpoint_plus_ack_bits_per_scene": 9.121484037963763,
+          "ideal_request_response_heartbeat_bits_per_scene": 6.4,
+          "separate_activation_update_ack_bits_per_scene": 13.121484037963763
+        },
+        "12": {
+          "checkpoint_plus_ack_bits_per_scene": 7.601236698303135,
+          "ideal_request_response_heartbeat_bits_per_scene": 5.333333333333333,
+          "separate_activation_update_ack_bits_per_scene": 10.934570031636468
+        },
+        "16": {
+          "checkpoint_plus_ack_bits_per_scene": 5.700927523727351,
+          "ideal_request_response_heartbeat_bits_per_scene": 4.0,
+          "separate_activation_update_ack_bits_per_scene": 8.200927523727351
+        }
+      },
+      "checks": {
+        "all_validation_bank_frames_roundtrip": true,
+        "maximum_non_escape_bits": true,
+        "mean_reduction_vs_separate": true,
+        "escape_actions_preserved": true
+      },
+      "feasibility_gate_passed": true
+    },
+    "16": {
+      "n_channels": 16,
+      "resolved_bank_site_count": 6,
+      "site_results": {
+        "vlenders_burgdorf": {
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 423,
+          "checkpoint_scene_count": 0
+        },
+        "Geneva": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 457,
+          "checkpoint_scene_count": 453,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 67,
+          "mean_frame_bits": 67.0,
+          "escape_count": 0
+        },
+        "HuldOne": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 450,
+          "checkpoint_scene_count": 446,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 67,
+          "mean_frame_bits": 67.0,
+          "escape_count": 0
+        },
+        "SP8AKM": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 356,
+          "checkpoint_scene_count": 352,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 78,
+          "mean_frame_bits": 67.0625,
+          "escape_count": 2
+        },
+        "alcorcon1": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 203,
+          "checkpoint_scene_count": 199,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 67,
+          "mean_frame_bits": 67.0,
+          "escape_count": 0
+        },
+        "EDLV": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 426,
+          "checkpoint_scene_count": 420,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 78,
+          "mean_frame_bits": 70.16904761904762,
+          "escape_count": 121
+        },
+        "BGSOFIAMLADOST01": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 450,
+          "checkpoint_scene_count": 446,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 67,
+          "mean_frame_bits": 67.0,
+          "escape_count": 0
+        }
+      },
+      "frame_statistics": {
+        "sample_count": 2316,
+        "non_escape_count": 2193,
+        "escape_count": 123,
+        "escape_rate": 0.05310880829015544,
+        "minimum_non_escape_bits": 67,
+        "maximum_non_escape_bits": 67,
+        "mean_all_frame_bits": 67.58419689119171,
+        "maximum_all_frame_bits": 78,
+        "mean_compact_update_bits": 43.58419689119171,
+        "mean_separate_activation_plus_update_bits": 107.58419689119171,
+        "mean_reduction_vs_separate_percent": 37.198100145353486
+      },
+      "nominal_periodic_cost": {
+        "6": {
+          "checkpoint_plus_ack_bits_per_scene": 26.528065630397236,
+          "ideal_request_response_heartbeat_bits_per_scene": 10.666666666666666,
+          "separate_activation_update_ack_bits_per_scene": 39.86139896373057
+        },
+        "8": {
+          "checkpoint_plus_ack_bits_per_scene": 19.896049222797927,
+          "ideal_request_response_heartbeat_bits_per_scene": 8.0,
+          "separate_activation_update_ack_bits_per_scene": 29.896049222797927
+        },
+        "10": {
+          "checkpoint_plus_ack_bits_per_scene": 15.916839378238341,
+          "ideal_request_response_heartbeat_bits_per_scene": 6.4,
+          "separate_activation_update_ack_bits_per_scene": 23.916839378238343
+        },
+        "12": {
+          "checkpoint_plus_ack_bits_per_scene": 13.264032815198618,
+          "ideal_request_response_heartbeat_bits_per_scene": 5.333333333333333,
+          "separate_activation_update_ack_bits_per_scene": 19.930699481865286
+        },
+        "16": {
+          "checkpoint_plus_ack_bits_per_scene": 9.948024611398964,
+          "ideal_request_response_heartbeat_bits_per_scene": 4.0,
+          "separate_activation_update_ack_bits_per_scene": 14.948024611398964
+        }
+      },
+      "checks": {
+        "all_validation_bank_frames_roundtrip": true,
+        "maximum_non_escape_bits": true,
+        "mean_reduction_vs_separate": true,
+        "escape_actions_preserved": true
+      },
+      "feasibility_gate_passed": true
+    },
+    "32": {
+      "n_channels": 32,
+      "resolved_bank_site_count": 5,
+      "site_results": {
+        "vlenders_burgdorf": {
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 423,
+          "checkpoint_scene_count": 0
+        },
+        "Geneva": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 457,
+          "checkpoint_scene_count": 453,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 67,
+          "mean_frame_bits": 67.0,
+          "escape_count": 0
+        },
+        "HuldOne": {
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 450,
+          "checkpoint_scene_count": 0
+        },
+        "SP8AKM": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 356,
+          "checkpoint_scene_count": 352,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 81,
+          "mean_frame_bits": 67.07954545454545,
+          "escape_count": 2
+        },
+        "alcorcon1": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 203,
+          "checkpoint_scene_count": 199,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 67,
+          "mean_frame_bits": 67.0,
+          "escape_count": 0
+        },
+        "EDLV": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 426,
+          "checkpoint_scene_count": 422,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 81,
+          "mean_frame_bits": 71.14691943127963,
+          "escape_count": 125
+        },
+        "BGSOFIAMLADOST01": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 450,
+          "checkpoint_scene_count": 446,
+          "minimum_frame_bits": 66,
+          "maximum_frame_bits": 80,
+          "mean_frame_bits": 66.03139013452915,
+          "escape_count": 1
+        }
+      },
+      "frame_statistics": {
+        "sample_count": 1872,
+        "non_escape_count": 1744,
+        "escape_count": 128,
+        "escape_rate": 0.06837606837606838,
+        "minimum_non_escape_bits": 66,
+        "maximum_non_escape_bits": 67,
+        "mean_all_frame_bits": 67.71901709401709,
+        "maximum_all_frame_bits": 81,
+        "mean_compact_update_bits": 43.7190170940171,
+        "mean_separate_activation_plus_update_bits": 107.71901709401709,
+        "mean_reduction_vs_separate_percent": 37.17141075561508
+      },
+      "nominal_periodic_cost": {
+        "6": {
+          "checkpoint_plus_ack_bits_per_scene": 26.573005698005698,
+          "ideal_request_response_heartbeat_bits_per_scene": 10.666666666666666,
+          "separate_activation_update_ack_bits_per_scene": 39.90633903133903
+        },
+        "8": {
+          "checkpoint_plus_ack_bits_per_scene": 19.929754273504273,
+          "ideal_request_response_heartbeat_bits_per_scene": 8.0,
+          "separate_activation_update_ack_bits_per_scene": 29.929754273504273
+        },
+        "10": {
+          "checkpoint_plus_ack_bits_per_scene": 15.943803418803418,
+          "ideal_request_response_heartbeat_bits_per_scene": 6.4,
+          "separate_activation_update_ack_bits_per_scene": 23.94380341880342
+        },
+        "12": {
+          "checkpoint_plus_ack_bits_per_scene": 13.286502849002849,
+          "ideal_request_response_heartbeat_bits_per_scene": 5.333333333333333,
+          "separate_activation_update_ack_bits_per_scene": 19.953169515669515
+        },
+        "16": {
+          "checkpoint_plus_ack_bits_per_scene": 9.964877136752136,
+          "ideal_request_response_heartbeat_bits_per_scene": 4.0,
+          "separate_activation_update_ack_bits_per_scene": 14.964877136752136
+        }
+      },
+      "checks": {
+        "all_validation_bank_frames_roundtrip": true,
+        "maximum_non_escape_bits": true,
+        "mean_reduction_vs_separate": true,
+        "escape_actions_preserved": true
+      },
+      "feasibility_gate_passed": true
+    },
+    "64": {
+      "n_channels": 64,
+      "resolved_bank_site_count": 5,
+      "site_results": {
+        "vlenders_burgdorf": {
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 423,
+          "checkpoint_scene_count": 0
+        },
+        "Geneva": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 457,
+          "checkpoint_scene_count": 453,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 67,
+          "mean_frame_bits": 67.0,
+          "escape_count": 0
+        },
+        "HuldOne": {
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 450,
+          "checkpoint_scene_count": 0
+        },
+        "SP8AKM": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 356,
+          "checkpoint_scene_count": 352,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 84,
+          "mean_frame_bits": 67.0965909090909,
+          "escape_count": 2
+        },
+        "alcorcon1": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 203,
+          "checkpoint_scene_count": 199,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 67,
+          "mean_frame_bits": 67.0,
+          "escape_count": 0
+        },
+        "EDLV": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 426,
+          "checkpoint_scene_count": 422,
+          "minimum_frame_bits": 67,
+          "maximum_frame_bits": 84,
+          "mean_frame_bits": 73.44549763033176,
+          "escape_count": 160
+        },
+        "BGSOFIAMLADOST01": {
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 450,
+          "checkpoint_scene_count": 446,
+          "minimum_frame_bits": 66,
+          "maximum_frame_bits": 83,
+          "mean_frame_bits": 66.03811659192826,
+          "escape_count": 1
+        }
+      },
+      "frame_statistics": {
+        "sample_count": 1872,
+        "non_escape_count": 1709,
+        "escape_count": 163,
+        "escape_rate": 0.08707264957264957,
+        "minimum_non_escape_bits": 66,
+        "maximum_non_escape_bits": 67,
+        "mean_all_frame_bits": 68.24198717948718,
+        "maximum_all_frame_bits": 84,
+        "mean_compact_update_bits": 44.24198717948718,
+        "mean_separate_activation_plus_update_bits": 108.24198717948718,
+        "mean_reduction_vs_separate_percent": 37.020895328847736
+      },
+      "nominal_periodic_cost": {
+        "6": {
+          "checkpoint_plus_ack_bits_per_scene": 15.37366452991453,
+          "ideal_request_response_heartbeat_bits_per_scene": 10.666666666666666,
+          "separate_activation_update_ack_bits_per_scene": 22.040331196581196
+        },
+        "8": {
+          "checkpoint_plus_ack_bits_per_scene": 11.530248397435898,
+          "ideal_request_response_heartbeat_bits_per_scene": 8.0,
+          "separate_activation_update_ack_bits_per_scene": 16.530248397435898
+        },
+        "10": {
+          "checkpoint_plus_ack_bits_per_scene": 9.224198717948719,
+          "ideal_request_response_heartbeat_bits_per_scene": 6.4,
+          "separate_activation_update_ack_bits_per_scene": 13.224198717948719
+        },
+        "12": {
+          "checkpoint_plus_ack_bits_per_scene": 7.686832264957265,
+          "ideal_request_response_heartbeat_bits_per_scene": 5.333333333333333,
+          "separate_activation_update_ack_bits_per_scene": 11.020165598290598
+        },
+        "16": {
+          "checkpoint_plus_ack_bits_per_scene": 5.765124198717949,
+          "ideal_request_response_heartbeat_bits_per_scene": 4.0,
+          "separate_activation_update_ack_bits_per_scene": 8.265124198717949
+        }
+      },
+      "checks": {
+        "all_validation_bank_frames_roundtrip": true,
+        "maximum_non_escape_bits": true,
+        "mean_reduction_vs_separate": true,
+        "escape_actions_preserved": true
+      },
+      "feasibility_gate_passed": true
+    }
+  },
+  "decision": {
+    "passing_n_count": 4,
+    "required_n_count": 4,
+    "feasibility_gate_passed": true,
+    "next_action": "implement_full_reliability_checkpoint_hook_and_run_interval_smoke"
+  },
+  "governance_checks": {
+    "internal_development_test_not_loaded": true,
+    "reserve_remained_unread": true,
+    "signal_values_used_only_for_frame_size_and_roundtrip": true,
+    "full_protocol_effect_claim_forbidden": true,
+    "external_final_claim_forbidden": true
+  },
+  "elapsed_seconds": 8.923489700002392,
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": [
+    "S7.4A-0 first audits a packet schema and analytic bit feasibility; it is not a system-level result.",
+    "Only a later full reliability simulation may claim a clean-bit effect.",
+    "The checkpoint is self-contained only relative to a matching preinstalled catalog; it is not universally decodable.",
+    "OOD or unknown-bank sessions retain the existing exact or full-install fallback.",
+    "The 7 internal development-test and 3 reserve sites remain closed.",
+    "No result from previously consumed sites may be called a Stage-7 external Final."
+  ]
+}

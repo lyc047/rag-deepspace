@@ -57,6 +57,11 @@ from spectrum_semcom.stage6r_codebook_activation import (
     decode_codebook_activation,
     encode_codebook_activation,
 )
+from spectrum_semcom.stage7_self_contained_checkpoint import (
+    decode_self_contained_checkpoint,
+    encode_self_contained_checkpoint,
+    minimum_checkpoint_bits,
+)
 
 
 @dataclass(frozen=True)
@@ -74,6 +79,16 @@ class ActivationMatchedTrajectoryResult:
     full_recovery_install_bits: int
     forced_update_request_count: int
     forced_update_redundant_count: int
+    checkpoint_count: int
+    checkpoint_ack_count: int
+    checkpoint_rejection_count: int
+    checkpoint_bits: int
+    checkpoint_escape_bits: int
+    event_context_update_count: int
+    event_context_update_bits: int
+    event_context_incremental_bits: int
+    event_context_rejection_count: int
+    event_context_reset_rescue_count: int
 
 
 def simulate_activation_semantic_trajectory(
@@ -102,6 +117,8 @@ def simulate_activation_semantic_trajectory(
     compact_codeword_frame_bits: int,
     heartbeat_trigger_mask: np.ndarray | None = None,
     forced_update_trigger_mask: np.ndarray | None = None,
+    checkpoint_interval_scenes: int | None = None,
+    self_contained_event_updates: bool = False,
 ) -> ActivationMatchedTrajectoryResult:
     """Simulate known-bank activation or OOD full-install fallback.
 
@@ -116,6 +133,16 @@ def simulate_activation_semantic_trajectory(
     analytical regret and age triggers are not yet active.  The request still
     uses the current measured state and passes through the frozen packet,
     context, ACK, duplicate, escape, and bit-accounting paths.
+
+    ``checkpoint_interval_scenes`` replaces heartbeat probing with a
+    self-contained preinstalled-bank identity and current semantic action
+    after the configured number of scenes without successful feedback.  It
+    uses the normal task-loss, repetition, ACK, belief, and fail-closed paths.
+
+    ``self_contained_event_updates`` upgrades only updates already triggered
+    by analytical regret, state age, or an explicit diagnostic mask.  The
+    upgraded frame can restore a matching preinstalled bank after an
+    unobserved receiver reset and reuses the normal task ACK.
     """
 
     indices = _validate_common_inputs(
@@ -134,6 +161,10 @@ def simulate_activation_semantic_trajectory(
         (activation_eligible and int(maximum_activation_attempts) < 1)
         or heartbeat_interval_scenes is not None
         and int(heartbeat_interval_scenes) < 1
+        or checkpoint_interval_scenes is not None
+        and int(checkpoint_interval_scenes) < 1
+        or bool(self_contained_event_updates)
+        and not activation_eligible
         or int(compact_codeword_frame_bits) < 1
     ):
         raise ValueError("invalid activation reliability configuration")
@@ -158,6 +189,13 @@ def simulate_activation_semantic_trajectory(
     ):
         raise ValueError(
             "fixed heartbeat interval and trigger mask are mutually exclusive"
+        )
+    if checkpoint_interval_scenes is not None and (
+        heartbeat_interval_scenes is not None
+        or heartbeat_triggers is not None
+    ):
+        raise ValueError(
+            "checkpoint interval and heartbeat control are mutually exclusive"
         )
     if (
         forced_update_triggers is not None
@@ -226,6 +264,16 @@ def simulate_activation_semantic_trajectory(
     full_recovery_install_bits = 0
     forced_update_request_count = 0
     forced_update_redundant_count = 0
+    checkpoint_count = 0
+    checkpoint_ack_count = 0
+    checkpoint_rejection_count = 0
+    checkpoint_bits = 0
+    checkpoint_escape_bits = 0
+    event_context_update_count = 0
+    event_context_update_bits = 0
+    event_context_incremental_bits = 0
+    event_context_rejection_count = 0
+    event_context_reset_rescue_count = 0
     available_rows: list[bool] = []
     clean_rows: list[bool] = []
     effective_regret: list[float] = []
@@ -236,6 +284,8 @@ def simulate_activation_semantic_trajectory(
         timestamp = str(timestamps[int(index)])
         row = random[local_position]
         feedback_received = False
+        current_ack_delivered = False
+        current_ack_epoch: int | None = None
         if (
             row[RESET_STREAM]
             < probabilities["receiver_context_reset_probability"]
@@ -322,9 +372,116 @@ def simulate_activation_semantic_trajectory(
                 )
                 heartbeat_failure_count += 1
 
+        checkpoint_due = (
+            checkpoint_interval_scenes is not None
+            and activation_eligible
+            and scenes_since_successful_feedback
+            >= int(checkpoint_interval_scenes)
+        )
+        checkpoint_attempted = False
+        if checkpoint_due:
+            checkpoint_attempted = True
+            last_sent_epoch = (last_sent_epoch + 1) % 256
+            checkpoint_packet, checkpoint_decision = (
+                encode_self_contained_checkpoint(
+                    state,
+                    sender_catalog,
+                    node_id=catalog_node_id,
+                    bank_id=int(bank_id),
+                    codebook_epoch=sender_session.epoch,
+                    update_epoch=last_sent_epoch,
+                )
+            )
+            packet_size = int(checkpoint_packet.size)
+            minimum_size = int(
+                minimum_checkpoint_bits(sender_catalog, int(bank_id))
+            )
+            if packet_size < minimum_size:
+                raise ValueError("checkpoint is shorter than its identity")
+            base_duplicates = int(task_open_loop_attempts) - 1
+            compact_update_bits += minimum_size
+            escape_exact_bits += packet_size - minimum_size
+            duplicate_update_bits += base_duplicates * packet_size
+            duplicate_update_count += base_duplicates
+            update_count += 1
+            checkpoint_count += 1
+            checkpoint_bits += int(task_open_loop_attempts) * packet_size
+            checkpoint_escape_bits += int(task_open_loop_attempts) * (
+                packet_size - minimum_size
+            )
+            delivered = any(
+                row[stream] >= probabilities["task_loss_probability"]
+                for stream in TASK_ATTEMPT_STREAMS[
+                    : int(task_open_loop_attempts)
+                ]
+            )
+            accepted_checkpoint = False
+            if delivered:
+                try:
+                    decoded_checkpoint = decode_self_contained_checkpoint(
+                        checkpoint_packet,
+                        receiver_catalog,
+                    )
+                    accepted_checkpoint = (
+                        decoded_checkpoint.decoder_actions
+                        == checkpoint_decision.decoder_actions
+                        and decoded_checkpoint.session.manifest_sha256
+                        == sender_session.manifest_sha256
+                    )
+                except ValueError:
+                    accepted_checkpoint = False
+                if accepted_checkpoint:
+                    receiver.context_installed = True
+                    receiver.codebook_epoch = sender_session.epoch
+                    receiver.actions = decoded_checkpoint.decoder_actions
+                    receiver.update_epoch = decoded_checkpoint.update_epoch
+                    receiver.success_timestamp = timestamp
+                    active_receiver_session = decoded_checkpoint.session
+                    ack_frame = encode_cumulative_ack(
+                        node_id=catalog_node_id,
+                        epoch=last_sent_epoch,
+                    )
+                    if int(ack_frame.size) != int(ack_frame_bits):
+                        raise ValueError(
+                            "checkpoint ACK accounting mismatch"
+                        )
+                    ack_bits += int(ack_frame.size)
+                    ack_count += 1
+                    checkpoint_ack_count += 1
+                    current_ack_epoch = last_sent_epoch
+                    current_ack_delivered = (
+                        row[UPDATE_ACK_STREAM]
+                        >= probabilities["ack_loss_probability"]
+                    )
+                    feedback_received = current_ack_delivered
+                else:
+                    checkpoint_rejection_count += 1
+            belief = compact_update_attempt(
+                belief,
+                codebook_epoch=sender_session.epoch,
+                update_epoch=last_sent_epoch,
+                decoder_actions=checkpoint_decision.decoder_actions,
+                success_timestamp=timestamp,
+                ack_received=False,
+                include_context_loss_on_no_ack=(
+                    include_reset and not current_ack_delivered
+                ),
+            )
+            if current_ack_delivered and current_ack_epoch is not None:
+                belief, confirmed_update_epoch, accepted = (
+                    condition_belief_on_cumulative_ack(
+                        belief,
+                        ack_epoch=current_ack_epoch,
+                        confirmed_epoch=confirmed_update_epoch,
+                        guard_stale_epochs=True,
+                    )
+                )
+                if not accepted:
+                    stale_rejections += 1
+
         needs_install = belief_requires_context_install(
             belief, codebook_epoch=sender_session.epoch
-        )
+        ) and not checkpoint_attempted
         if needs_install:
             context_attempt_count += 1
             attempt_is_initial = first_context_control_pending
@@ -484,25 +641,45 @@ def simulate_activation_semantic_trajectory(
         if forced_update:
             forced_update_request_count += 1
             forced_update_redundant_count += int(analytic_update)
-        should_update = analytic_update or forced_update
-
-        current_ack_delivered = False
-        current_ack_epoch: int | None = None
+        should_update = (
+            analytic_update or forced_update
+        ) and not checkpoint_attempted
         if should_update:
             last_sent_epoch = (last_sent_epoch + 1) % 256
-            update_packet, decision = encode_compact_update(
+            compact_packet, compact_decision = encode_compact_update(
                 state,
                 sender_session,
                 node_id=catalog_node_id,
                 update_epoch=last_sent_epoch,
             )
+            if self_contained_event_updates:
+                update_packet, decision = encode_self_contained_checkpoint(
+                    state,
+                    sender_catalog,
+                    node_id=catalog_node_id,
+                    bank_id=int(bank_id),
+                    codebook_epoch=sender_session.epoch,
+                    update_epoch=last_sent_epoch,
+                )
+                base_frame_bits = int(
+                    minimum_checkpoint_bits(sender_catalog, int(bank_id))
+                )
+                event_context_update_count += 1
+                event_context_update_bits += (
+                    int(task_open_loop_attempts) * int(update_packet.size)
+                )
+                event_context_incremental_bits += (
+                    int(task_open_loop_attempts)
+                    * (int(update_packet.size) - int(compact_packet.size))
+                )
+            else:
+                update_packet, decision = compact_packet, compact_decision
+                base_frame_bits = int(compact_codeword_frame_bits)
             packet_size = int(update_packet.size)
-            if packet_size < int(compact_codeword_frame_bits):
+            if packet_size < base_frame_bits:
                 raise ValueError("compact packet is shorter than base frame")
-            base_escape_bits = (
-                packet_size - int(compact_codeword_frame_bits)
-            )
-            compact_update_bits += int(compact_codeword_frame_bits)
+            base_escape_bits = packet_size - base_frame_bits
+            compact_update_bits += base_frame_bits
             escape_exact_bits += base_escape_bits
             base_duplicates = int(task_open_loop_attempts) - 1
             duplicate_update_bits += base_duplicates * packet_size
@@ -517,7 +694,42 @@ def simulate_activation_semantic_trajectory(
 
             accepted_update = False
             if delivered:
-                if (
+                receiver_had_no_context = not receiver.context_installed
+                if self_contained_event_updates:
+                    try:
+                        decoded_checkpoint = (
+                            decode_self_contained_checkpoint(
+                                update_packet,
+                                receiver_catalog,
+                            )
+                        )
+                        if (
+                            decoded_checkpoint.decoder_actions
+                            != decision.decoder_actions
+                            or decoded_checkpoint.session.manifest_sha256
+                            != sender_session.manifest_sha256
+                        ):
+                            wrong_decode += 1
+                        else:
+                            receiver.context_installed = True
+                            receiver.codebook_epoch = sender_session.epoch
+                            receiver.actions = (
+                                decoded_checkpoint.decoder_actions
+                            )
+                            receiver.update_epoch = (
+                                decoded_checkpoint.update_epoch
+                            )
+                            receiver.success_timestamp = timestamp
+                            active_receiver_session = (
+                                decoded_checkpoint.session
+                            )
+                            accepted_update = True
+                            event_context_reset_rescue_count += int(
+                                receiver_had_no_context
+                            )
+                    except ValueError:
+                        event_context_rejection_count += 1
+                elif (
                     receiver.context_installed
                     and receiver.codebook_epoch == sender_session.epoch
                 ):
@@ -669,4 +881,14 @@ def simulate_activation_semantic_trajectory(
         full_recovery_install_bits=full_recovery_install_bits,
         forced_update_request_count=forced_update_request_count,
         forced_update_redundant_count=forced_update_redundant_count,
+        checkpoint_count=checkpoint_count,
+        checkpoint_ack_count=checkpoint_ack_count,
+        checkpoint_rejection_count=checkpoint_rejection_count,
+        checkpoint_bits=checkpoint_bits,
+        checkpoint_escape_bits=checkpoint_escape_bits,
+        event_context_update_count=event_context_update_count,
+        event_context_update_bits=event_context_update_bits,
+        event_context_incremental_bits=event_context_incremental_bits,
+        event_context_rejection_count=event_context_rejection_count,
+        event_context_reset_rescue_count=event_context_reset_rescue_count,
     )

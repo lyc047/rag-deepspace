@@ -16,7 +16,10 @@ from spectrum_semcom.stage6_context_heartbeat import (
     encode_context_probe_request,
     encode_context_probe_response,
 )
-from spectrum_semcom.stage6_matched_reliability import RANDOM_STREAM_COUNT
+from spectrum_semcom.stage6_matched_reliability import (
+    RANDOM_STREAM_COUNT,
+    RESET_STREAM,
+)
 from spectrum_semcom.stage6_task_codebook import (
     SpectrumTaskQuery,
     build_task_state,
@@ -111,6 +114,10 @@ def test_no_fault_activation_uses_64_bits_and_stays_clean() -> None:
     assert result.full_install_attempt_count == 0
     assert result.matched.bit_breakdown.initial_install_bits == 64
     assert result.matched.wrong_codebook_decode_count == 0
+    assert result.checkpoint_count == 0
+    assert result.checkpoint_bits == 0
+    assert result.event_context_update_count == 0
+    assert result.event_context_update_bits == 0
     assert all(result.matched.clean)
 
 
@@ -303,6 +310,132 @@ def test_stage7_forced_update_rejects_misaligned_mask() -> None:
             compact_codeword_frame_bits=int(compact_bits),
             forced_update_trigger_mask=np.asarray([True], dtype=bool),
         )
+
+
+def test_stage7_checkpoint_restores_context_through_normal_ack_path() -> None:
+    states, sender, receiver, packet, catalog, compact_bits = _fixture()
+    random = np.ones((len(states), RANDOM_STREAM_COUNT), dtype=np.float64)
+    result = simulate_activation_semantic_trajectory(
+        states,
+        np.asarray(
+            [f"2026-01-01T00:0{i}:00" for i in range(len(states))]
+        ),
+        np.arange(len(states)),
+        sender_session=sender,
+        receiver_session=receiver,
+        full_install_packet=packet,
+        sender_catalog=catalog,
+        receiver_catalog=catalog,
+        bank_id=7,
+        catalog_node_id=1,
+        maximum_activation_attempts=2,
+        condition=_condition(),
+        random_values=random,
+        epsilon_db=0.2,
+        max_age_minutes=60.0,
+        ack_frame_bits=cumulative_ack_payload_bits(),
+        outage_penalty_db=10.0,
+        heartbeat_interval_scenes=None,
+        heartbeat_request_frame_bits=32,
+        heartbeat_response_frame_bits=32,
+        task_open_loop_attempts=1,
+        compact_codeword_frame_bits=int(compact_bits),
+        checkpoint_interval_scenes=1,
+    )
+    validate_breakdown_identity(result.matched.bit_breakdown)
+    assert result.checkpoint_count >= 1
+    assert result.checkpoint_ack_count == result.checkpoint_count
+    assert result.checkpoint_rejection_count == 0
+    assert result.checkpoint_bits > 0
+    assert result.matched.wrong_codebook_decode_count == 0
+    assert all(result.matched.clean)
+
+
+def test_stage7_checkpoint_and_heartbeat_are_mutually_exclusive() -> None:
+    states, sender, receiver, packet, catalog, compact_bits = _fixture()
+    random = np.ones((len(states), RANDOM_STREAM_COUNT), dtype=np.float64)
+    with pytest.raises(ValueError, match="mutually exclusive"):
+        simulate_activation_semantic_trajectory(
+            states,
+            np.asarray(
+                [f"2026-01-01T00:0{i}:00" for i in range(len(states))]
+            ),
+            np.arange(len(states)),
+            sender_session=sender,
+            receiver_session=receiver,
+            full_install_packet=packet,
+            sender_catalog=catalog,
+            receiver_catalog=catalog,
+            bank_id=7,
+            catalog_node_id=1,
+            maximum_activation_attempts=2,
+            condition=_condition(),
+            random_values=random,
+            epsilon_db=0.2,
+            max_age_minutes=60.0,
+            ack_frame_bits=cumulative_ack_payload_bits(),
+            outage_penalty_db=10.0,
+            heartbeat_interval_scenes=10,
+            heartbeat_request_frame_bits=32,
+            heartbeat_response_frame_bits=32,
+            task_open_loop_attempts=1,
+            compact_codeword_frame_bits=int(compact_bits),
+            checkpoint_interval_scenes=10,
+        )
+
+
+def test_stage7_event_context_update_rescues_hidden_reset() -> None:
+    states, sender, receiver, packet, catalog, compact_bits = _fixture()
+    timestamps = np.asarray(
+        [f"2026-01-01T00:0{i}:00" for i in range(len(states))]
+    )
+    random = np.ones((len(states), RANDOM_STREAM_COUNT), dtype=np.float64)
+    random[2, RESET_STREAM] = 0.0
+    common = dict(
+        sender_session=sender,
+        receiver_session=receiver,
+        full_install_packet=packet,
+        sender_catalog=catalog,
+        receiver_catalog=catalog,
+        bank_id=7,
+        catalog_node_id=1,
+        maximum_activation_attempts=2,
+        condition=_condition(receiver_context_reset_probability=0.5),
+        random_values=random,
+        epsilon_db=0.2,
+        max_age_minutes=60.0,
+        ack_frame_bits=cumulative_ack_payload_bits(),
+        outage_penalty_db=10.0,
+        heartbeat_interval_scenes=None,
+        heartbeat_request_frame_bits=32,
+        heartbeat_response_frame_bits=32,
+        task_open_loop_attempts=1,
+        compact_codeword_frame_bits=int(compact_bits),
+        forced_update_trigger_mask=np.asarray(
+            [False, False, True, False], dtype=bool
+        ),
+    )
+    compact = simulate_activation_semantic_trajectory(
+        states,
+        timestamps,
+        np.arange(len(states)),
+        **common,
+    )
+    piggyback = simulate_activation_semantic_trajectory(
+        states,
+        timestamps,
+        np.arange(len(states)),
+        self_contained_event_updates=True,
+        **common,
+    )
+    validate_breakdown_identity(piggyback.matched.bit_breakdown)
+    assert compact.matched.clean[2] is False
+    assert piggyback.matched.clean[2] is True
+    assert piggyback.event_context_update_count >= 1
+    assert piggyback.event_context_reset_rescue_count == 1
+    assert piggyback.event_context_incremental_bits > 0
+    assert piggyback.event_context_rejection_count == 0
+    assert piggyback.matched.wrong_codebook_decode_count == 0
 
 
 def test_catalog_mismatch_falls_back_to_full_install() -> None:

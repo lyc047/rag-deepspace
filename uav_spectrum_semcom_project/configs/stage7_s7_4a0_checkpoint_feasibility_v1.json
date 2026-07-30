@@ -1,0 +1,81 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage7_s7_4a0_checkpoint_feasibility_v1",
+  "status": "registered_before_execution",
+  "created_date": "2026-07-30",
+  "evidence_role": "stage7_development_protocol_feasibility_not_candidate_validation",
+  "objective": "Determine whether a combined preinstalled-bank identity and semantic-action checkpoint is sufficiently smaller than separate activation plus compact update, and whether any periodic interval can plausibly improve the fixed-heartbeat rate-risk frontier before full implementation.",
+  "inputs": {
+    "development_split": "configs/stage7_development_split_v1.json",
+    "electrosense_protocol": "configs/stage6r_electrosense_external_final_protocol_v1.json",
+    "electrosense_registry": "results/stage6r/electrosense_final_registry_v1/registry.json",
+    "electrosense_access_state": "configs/stage6r_electrosense_final_access_state_v1.json",
+    "electrosense_freeze": "results/stage6r/electrosense_final_freeze_v1/result.json",
+    "matched_scan_config": "configs/stage6r_matched_clean_scan_v1.json",
+    "activation_protocol": "configs/stage6r_codebook_activation_protocol_v1.json",
+    "s7_3b_result": "results/stage7/s7_3b_full_protocol_oracle_v1/result.json"
+  },
+  "data": {
+    "fit_split": "train",
+    "diagnostic_split": "validation",
+    "internal_development_test_signal_values_may_be_loaded": false,
+    "reserve_values_may_be_loaded": false,
+    "expected_train_site_count": 20,
+    "expected_validation_site_count": 7
+  },
+  "task": {
+    "n_channels": [8, 16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "epsilon_db": 0.2,
+    "primary_k": 4
+  },
+  "checkpoint_schema": {
+    "identity_bits": 64,
+    "fields": [
+      "magic",
+      "version",
+      "node_id",
+      "catalog_epoch",
+      "bank_id",
+      "codebook_epoch",
+      "codebook_tag",
+      "update_epoch"
+    ],
+    "payload": "semantic_symbol_and_exact_actions_only_on_escape",
+    "receiver_requires_preinstalled_matching_catalog": true,
+    "wrong_catalog_or_tag_is_fail_closed": true,
+    "ordinary_checkpoint_target_bits": [65, 72],
+    "separate_activation_plus_compact_reference_bits": [105, 107]
+  },
+  "candidate_intervals_scenes": [6, 8, 10, 12, 16],
+  "candidate_modes": [
+    "periodic_checkpoint_replaces_heartbeat",
+    "periodic_checkpoint_plus_frozen_event_updates",
+    "future_extension_event_updates_are_self_contained"
+  ],
+  "feasibility_gate": {
+    "maximum_non_escape_checkpoint_bits": 72,
+    "minimum_reduction_vs_separate_activation_plus_update_percent": 30.0,
+    "wrong_catalog_must_fail_closed": true,
+    "escape_must_preserve_exact_actions": true,
+    "minimum_passing_n_count": 4,
+    "if_gate_passes": "implement_full_reliability_checkpoint_hook_and_run_interval_smoke",
+    "if_gate_fails": "do_not_integrate_checkpoint_and_move_to_context_digest_piggyback"
+  },
+  "full_protocol_gate_for_later_stage": {
+    "path_a_minimum_total_bit_reduction_percent": 5.0,
+    "path_a_maximum_clean_loss_percentage_points": 0.5,
+    "path_b_minimum_clean_gain_percentage_points": 1.0,
+    "path_b_maximum_total_bit_increase_percent": 5.0,
+    "minimum_passing_n_count": 3,
+    "wrong_codebook_actions_must_equal": 0
+  },
+  "claim_boundary": [
+    "S7.4A-0 first audits a packet schema and analytic bit feasibility; it is not a system-level result.",
+    "Only a later full reliability simulation may claim a clean-bit effect.",
+    "The checkpoint is self-contained only relative to a matching preinstalled catalog; it is not universally decodable.",
+    "OOD or unknown-bank sessions retain the existing exact or full-install fallback.",
+    "The 7 internal development-test and 3 reserve sites remain closed.",
+    "No result from previously consumed sites may be called a Stage-7 external Final."
+  ]
+}
