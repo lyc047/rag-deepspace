@@ -69,6 +69,7 @@ def test_causal_dataset_keeps_full_horizon_inside_group() -> None:
     )
     assert result["groups"].tolist() == ["a", "a", "b"]
     assert result["source_indices"].tolist() == [0, 1, 4]
+    assert result["task_time_to_failure"].shape == (3,)
 
 
 def test_lookup_baselines_use_training_prevalence_for_unseen_keys() -> None:

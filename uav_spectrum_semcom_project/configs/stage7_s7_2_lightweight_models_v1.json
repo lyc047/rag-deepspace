@@ -1,0 +1,135 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage7_s7_2_lightweight_models_v1",
+  "status": "registered_before_execution",
+  "created_date": "2026-07-30",
+  "evidence_role": "stage7_development_train_validation_only",
+  "objective": "Test whether regularized causal logistic and discrete-time survival models improve within-site task-risk discrimination and calibration over the S7.1 duration/Markov strong baselines.",
+  "inputs": {
+    "governance": "configs/stage7_research_governance_v1.json",
+    "development_split": "configs/stage7_development_split_v1.json",
+    "electrosense_protocol": "configs/stage6r_electrosense_external_final_protocol_v1.json",
+    "electrosense_registry": "results/stage6r/electrosense_final_registry_v1/registry.json",
+    "electrosense_access_state": "configs/stage6r_electrosense_final_access_state_v1.json",
+    "electrosense_freeze": "results/stage6r/electrosense_final_freeze_v1/result.json",
+    "s7_1_result": "results/stage7/s7_1_strong_baselines_v1/result.json",
+    "s7_1_robustness": "results/stage7/s7_1b_site_robustness_v1/result.json"
+  },
+  "data": {
+    "fit_split": "train",
+    "model_selection_split": "validation",
+    "internal_development_test_signal_values_may_be_loaded": false,
+    "reserve_values_may_be_loaded": false,
+    "expected_train_site_count": 20,
+    "expected_validation_site_count": 7,
+    "unresolved_exact_fallback_rule": "retain_count_but_exclude_from_semantic_hazard_model"
+  },
+  "task": {
+    "n_channels": [8, 16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "epsilon_db": 0.2,
+    "primary_k": 4,
+    "prediction_horizons_scenes": [1, 3, 5, 10],
+    "primary_horizon_scenes": 1
+  },
+  "features": {
+    "numeric": [
+      "power_mean_dbm",
+      "power_std_db",
+      "power_range_db",
+      "adjacent_difference_mean_db",
+      "adjacent_difference_max_db",
+      "history_available",
+      "past_change_mean_db",
+      "past_change_max_db",
+      "past_change_std_db",
+      "rolling3_change_mean_db",
+      "rolling5_change_mean_db",
+      "previous_action_violation",
+      "previous_action_regret_db",
+      "action_change_fraction",
+      "action_dwell_scenes",
+      "current_codebook_fallback",
+      "current_max_regret_db",
+      "minimum_runner_up_margin_db",
+      "mean_runner_up_margin_db",
+      "maximum_query_action_regret_db",
+      "mean_query_action_regret_db"
+    ],
+    "categorical": [
+      "current_codeword_id",
+      "previous_symbol",
+      "action_dwell_bin"
+    ],
+    "standardization_fit_on_train_only": true,
+    "future_information_forbidden": true,
+    "site_identifier_forbidden": true
+  },
+  "models": [
+    {
+      "name": "direct_logistic",
+      "target": "failure_within_h",
+      "class_weight_options": [null, "balanced"]
+    },
+    {
+      "name": "discrete_time_survival_logistic",
+      "target": "first_failure_hazard",
+      "class_weight_options": [null, "balanced"],
+      "time_basis": "categorical_scene_offset_1_to_10"
+    }
+  ],
+  "selection": {
+    "training_group_folds": 5,
+    "regularization_c_grid": [0.03, 0.1, 0.3, 1.0],
+    "solver": "liblinear",
+    "maximum_iterations": 2000,
+    "primary_training_cv_metric": "macro_within_site_auc_h1",
+    "tie_breakers": [
+      "lower_brier_score_h1",
+      "lower_expected_calibration_error_h1",
+      "lower_regularization_c"
+    ],
+    "threshold_target_training_oof_recall": 0.8,
+    "calibration_bins": 10,
+    "random_seed": 20260822
+  },
+  "validation_model_selection": {
+    "primary_metric": "macro_within_site_auc_h1",
+    "tie_breakers": [
+      "dominant_positive_site_auc_h1",
+      "lower_expected_calibration_error_h1",
+      "lower_alert_fraction_h1"
+    ],
+    "dominant_positive_site": "EDLV",
+    "selection_is_development_only": true
+  },
+  "bootstrap": {
+    "replicates": 5000,
+    "confidence_level": 0.95,
+    "seed": 20260823,
+    "unit": "evaluable_validation_site"
+  },
+  "candidate_freeze_gate": {
+    "minimum_n_count": 3,
+    "minimum_macro_within_site_auc_lower_bound": 0.6,
+    "minimum_dominant_site_auc_improvement_over_s7_1": 0.03,
+    "require_positive_brier_skill_over_training_prevalence": true,
+    "maximum_expected_calibration_error": 0.08,
+    "minimum_recall_at_training_oof_threshold": 0.8,
+    "maximum_alert_fraction_at_training_oof_threshold": 0.25
+  },
+  "decision_policy": {
+    "if_freeze_gate_passes": "freeze_model_feature_threshold_and_safety_rules_before_single_internal_test_access",
+    "if_predictive_but_freeze_gate_fails": "continue_to_site_robust_boosted_tree_or_feature_reformulation_without_opening_internal_test",
+    "if_no_within_site_gain": "stop_model_escalation_and_reformulate_task_events_or_protocol"
+  },
+  "claim_boundary": [
+    "Only the 20 train and 7 validation sites may be loaded.",
+    "The 7 internal development-test sites and 3 reserve sites remain closed.",
+    "Model selection is development evidence and cannot be called an external Final.",
+    "Site identity is forbidden as a model feature.",
+    "All inference features use scene t and its past; future spectra appear only in labels.",
+    "The predictor may later allocate protection levels but may not directly select a channel or bypass current-regret, identity, escape, maximum-age, or fail-closed safety checks.",
+    "No system-level clean-bit benefit is claimed until the selected predictor is integrated into the reliability protocol and evaluated against fixed10."
+  ]
+}

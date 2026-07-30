@@ -234,6 +234,9 @@ def _concatenate(rows: list[dict]) -> dict:
         "features": np.concatenate([row["features"] for row in rows]),
         "feature_names": rows[0]["feature_names"],
         "labels": np.concatenate([row["labels"] for row in rows]),
+        "task_time_to_failure": np.concatenate(
+            [row["task_time_to_failure"] for row in rows]
+        ),
         "horizons": rows[0]["horizons"],
         "groups": np.concatenate([row["groups"] for row in rows]),
         "source_indices": np.concatenate(

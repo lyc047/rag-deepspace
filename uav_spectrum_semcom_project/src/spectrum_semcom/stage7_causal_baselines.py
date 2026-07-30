@@ -171,6 +171,9 @@ def build_causal_task_risk_dataset(
         "features": matrix,
         "feature_names": FEATURE_NAMES,
         "labels": np.asarray(labels["task_failure"][keep], dtype=np.uint8),
+        "task_time_to_failure": np.asarray(
+            labels["task_time_to_failure"][keep], dtype=np.int64
+        ),
         "horizons": labels["horizons"],
         "groups": groups[keep],
         "source_indices": np.asarray(source_indices, dtype=np.int64),
