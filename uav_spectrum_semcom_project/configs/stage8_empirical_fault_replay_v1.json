@@ -39,6 +39,7 @@
     "electrosense_role": "pilot",
     "electrosense_site_count": 4,
     "stage6_main_final_may_be_rerun": false,
+    "stage6_confirmation_lockbox_may_be_rerun": false,
     "stage7_closed_development_test_may_be_opened": false,
     "stage7_reserve_may_be_opened": false
   },
@@ -80,6 +81,7 @@
     "The AADM frame-gap estimator is a lower bound because leading and trailing losses are unobservable.",
     "ACK loss and semantic receiver reset remain stress assumptions.",
     "No confirmation AADM or ALFA value may be opened until this model and any development selection are frozen.",
+    "The already consumed Stage-6 Final and confirmation lockbox are not read or rerun; only the historical access ledger is inspected.",
     "The Stage-6 Final failure and Stage-7 conclusion remain unchanged."
   ]
 }

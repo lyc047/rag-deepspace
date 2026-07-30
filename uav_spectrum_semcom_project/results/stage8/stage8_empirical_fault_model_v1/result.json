@@ -2,7 +2,7 @@
   "version": "1.0",
   "status": "EMPIRICAL_FAULT_MODEL_FROZEN_BEFORE_CONFIRMATION_ACCESS",
   "experiment_id": "stage8_empirical_fault_replay_v1",
-  "config_sha256": "c3649e1b73be6715f33786bf4f7527a475d9c17b9f9ed75dfa5992187efeb59b",
+  "config_sha256": "48026bf2f373ef774c5d169227e3319d0534ac29cd0fe1fd10d13a7073dc8335",
   "input_hashes": {
     "stage8_fault_protocol": "9a1da0dacdb120c87d82ed36684496b544a202f4b91b31882e8d7db798035362",
     "stage8_split": "70a0b4f03c15f7df1d7ddb4fcec2a35622de14e5f417b47b850120870955a3e0",
@@ -139,6 +139,7 @@
     "The AADM frame-gap estimator is a lower bound because leading and trailing losses are unobservable.",
     "ACK loss and semantic receiver reset remain stress assumptions.",
     "No confirmation AADM or ALFA value may be opened until this model and any development selection are frozen.",
+    "The already consumed Stage-6 Final and confirmation lockbox are not read or rerun; only the historical access ledger is inspected.",
     "The Stage-6 Final failure and Stage-7 conclusion remain unchanged."
   ]
 }
