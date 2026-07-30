@@ -99,6 +99,7 @@ def simulate_activation_semantic_trajectory(
     task_open_loop_attempts: int,
     compact_codeword_frame_bits: int,
     heartbeat_trigger_mask: np.ndarray | None = None,
+    forced_update_trigger_mask: np.ndarray | None = None,
 ) -> ActivationMatchedTrajectoryResult:
     """Simulate known-bank activation or OOD full-install fallback.
 
@@ -107,6 +108,12 @@ def simulate_activation_semantic_trajectory(
     aligned Boolean mask replaces the fixed interval and requests a heartbeat
     at selected evaluation scenes.  It does not bypass any context, identity,
     regret, escape, or fail-closed check.
+
+    ``forced_update_trigger_mask`` is a separate Stage-7 diagnostic hook.  A
+    true entry requests a normal compact semantic update even when the
+    analytical regret and age triggers are not yet active.  The request still
+    uses the current measured state and passes through the frozen packet,
+    context, ACK, duplicate, escape, and bit-accounting paths.
     """
 
     indices = _validate_common_inputs(
@@ -133,6 +140,11 @@ def simulate_activation_semantic_trajectory(
         if heartbeat_trigger_mask is None
         else np.asarray(heartbeat_trigger_mask, dtype=bool).reshape(-1)
     )
+    forced_update_triggers = (
+        None
+        if forced_update_trigger_mask is None
+        else np.asarray(forced_update_trigger_mask, dtype=bool).reshape(-1)
+    )
     if (
         heartbeat_triggers is not None
         and heartbeat_triggers.shape != (indices.size,)
@@ -144,6 +156,13 @@ def simulate_activation_semantic_trajectory(
     ):
         raise ValueError(
             "fixed heartbeat interval and trigger mask are mutually exclusive"
+        )
+    if (
+        forced_update_triggers is not None
+        and forced_update_triggers.shape != (indices.size,)
+    ):
+        raise ValueError(
+            "forced update trigger mask must align with evaluation indices"
         )
     probabilities = {
         key: float(condition[key])
@@ -453,6 +472,10 @@ def simulate_activation_semantic_trajectory(
         should_update = (
             worst_regret > float(epsilon_db) + 1e-12
             or worst_age > float(max_age_minutes)
+            or (
+                forced_update_triggers is not None
+                and bool(forced_update_triggers[local_position])
+            )
         )
 
         current_ack_delivered = False

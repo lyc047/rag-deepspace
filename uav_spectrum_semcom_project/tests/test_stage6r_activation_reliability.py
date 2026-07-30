@@ -217,6 +217,92 @@ def test_stage7_trigger_mask_rejects_misalignment_and_mixed_control() -> None:
         )
 
 
+def test_stage7_forced_update_uses_normal_reliability_and_bit_paths() -> None:
+    states, sender, receiver, packet, catalog, compact_bits = _fixture()
+    timestamps = np.asarray(
+        [f"2026-01-01T00:0{i}:00" for i in range(len(states))]
+    )
+    random = np.ones((len(states), RANDOM_STREAM_COUNT), dtype=np.float64)
+    common = dict(
+        sender_session=sender,
+        receiver_session=receiver,
+        full_install_packet=packet,
+        sender_catalog=catalog,
+        receiver_catalog=catalog,
+        bank_id=7,
+        catalog_node_id=1,
+        maximum_activation_attempts=2,
+        condition=_condition(),
+        random_values=random,
+        epsilon_db=0.2,
+        max_age_minutes=60.0,
+        ack_frame_bits=cumulative_ack_payload_bits(),
+        outage_penalty_db=10.0,
+        heartbeat_interval_scenes=None,
+        heartbeat_request_frame_bits=32,
+        heartbeat_response_frame_bits=32,
+        task_open_loop_attempts=1,
+        compact_codeword_frame_bits=int(compact_bits),
+    )
+    baseline = simulate_activation_semantic_trajectory(
+        states,
+        timestamps,
+        np.arange(len(states)),
+        **common,
+    )
+    forced = simulate_activation_semantic_trajectory(
+        states,
+        timestamps,
+        np.arange(len(states)),
+        forced_update_trigger_mask=np.asarray(
+            [False, False, True, False], dtype=bool
+        ),
+        **common,
+    )
+    assert (
+        forced.matched.compact_update_count
+        == baseline.matched.compact_update_count + 1
+    )
+    assert (
+        forced.matched.bit_breakdown.compact_update_bits
+        == baseline.matched.bit_breakdown.compact_update_bits + compact_bits
+    )
+    assert forced.matched.wrong_codebook_decode_count == 0
+
+
+def test_stage7_forced_update_rejects_misaligned_mask() -> None:
+    states, sender, receiver, packet, catalog, compact_bits = _fixture()
+    random = np.ones((len(states), RANDOM_STREAM_COUNT), dtype=np.float64)
+    with pytest.raises(ValueError, match="forced update trigger mask"):
+        simulate_activation_semantic_trajectory(
+            states,
+            np.asarray(
+                [f"2026-01-01T00:0{i}:00" for i in range(len(states))]
+            ),
+            np.arange(len(states)),
+            sender_session=sender,
+            receiver_session=receiver,
+            full_install_packet=packet,
+            sender_catalog=catalog,
+            receiver_catalog=catalog,
+            bank_id=7,
+            catalog_node_id=1,
+            maximum_activation_attempts=2,
+            condition=_condition(),
+            random_values=random,
+            epsilon_db=0.2,
+            max_age_minutes=60.0,
+            ack_frame_bits=cumulative_ack_payload_bits(),
+            outage_penalty_db=10.0,
+            heartbeat_interval_scenes=None,
+            heartbeat_request_frame_bits=32,
+            heartbeat_response_frame_bits=32,
+            task_open_loop_attempts=1,
+            compact_codeword_frame_bits=int(compact_bits),
+            forced_update_trigger_mask=np.asarray([True], dtype=bool),
+        )
+
+
 def test_catalog_mismatch_falls_back_to_full_install() -> None:
     states, _, _, _, _, _ = _fixture()
     wrong_codebook = fit_greedy_task_codebook(

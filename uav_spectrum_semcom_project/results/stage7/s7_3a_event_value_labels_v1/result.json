@@ -1,0 +1,4996 @@
+{
+  "version": "1.0",
+  "status": "stage7_s7_3a_event_value_labels_complete",
+  "verification_status": "ANALYZED",
+  "experiment_id": "stage7_s7_3a_event_value_labels_v1",
+  "config_sha256": "c8123d1eb5af8bdc8c857b574d93a52fb3e05d45feb59da14af516356112dc77",
+  "input_hashes": {
+    "governance": "67ebea7d6fba1d52a0c6777856ac28326180ff0600ebc08eb7ae5505d7b92462",
+    "development_split": "0b0b3faed73cffcbf28777dab4684c7c632473f2f9b545d132a0449fbcf0486c",
+    "electrosense_protocol": "8aeffb02c98b561026854cea4b11d6daf7277504abd9c6786b500707dd8ffd68",
+    "electrosense_registry": "3f56c862645391583e67316af29d64754e2cc390365d9c8238731859add9ba73",
+    "electrosense_access_state": "6c4105198a766c3925219bde3076379e0b10f9dfc0a1c6129cfeeaadc9df5ee3",
+    "electrosense_freeze": "41fd5bdf0e3f57b2f0ee571dec848585462216083f4ca9f851d0759e12bfcc0f",
+    "s7_1_result": "8b30af3f1449000a40212b5ad648a3dd3bc50bb19881e41f7fb3e75d50b28976",
+    "s7_2_result": "05850ebd3adc911576ddc6c64aa7fbbfa6eceac79d1272c5d525c4335b026754"
+  },
+  "loaded_sites": {
+    "train": [
+      "bcn-L",
+      "Bandon_Oregon_GAP1",
+      "donostia-ategorrieta",
+      "Oreland",
+      "Rapallo_Electrosense",
+      "Espi1",
+      "skyhubfr",
+      "Princeton1",
+      "scalessio",
+      "imdea_adsb",
+      "Skap_French_Riviera",
+      "Nudelsalat_RPi",
+      "Giansense",
+      "NFM-Electrosense-01",
+      "miguel_murcia",
+      "Defcon1",
+      "Zagreb",
+      "Valbella",
+      "goeppingen_I",
+      "Andrew_GVA"
+    ],
+    "validation": [
+      "vlenders_burgdorf",
+      "Geneva",
+      "HuldOne",
+      "SP8AKM",
+      "alcorcon1",
+      "EDLV",
+      "BGSOFIAMLADOST01"
+    ],
+    "internal_development_test": [],
+    "reserve": []
+  },
+  "n_results": {
+    "8": {
+      "n_channels": 8,
+      "incremental_bits": 66,
+      "resolved_train_site_count": 16,
+      "resolved_validation_site_count": 6,
+      "site_audit": {
+        "Andrew_GVA": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 449,
+          "calibration_scenes": 4,
+          "model_sample_count": 435
+        },
+        "BGSOFIAMLADOST01": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 450,
+          "calibration_scenes": 4,
+          "model_sample_count": 436
+        },
+        "Bandon_Oregon_GAP1": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 448,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "Defcon1": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 426,
+          "calibration_scenes": 4,
+          "model_sample_count": 412
+        },
+        "EDLV": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 426,
+          "calibration_scenes": 4,
+          "model_sample_count": 412
+        },
+        "Espi1": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 377,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "Geneva": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 457,
+          "calibration_scenes": 4,
+          "model_sample_count": 443
+        },
+        "Giansense": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 442,
+          "calibration_scenes": 4,
+          "model_sample_count": 428
+        },
+        "HuldOne": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 450,
+          "calibration_scenes": 4,
+          "model_sample_count": 436
+        },
+        "NFM-Electrosense-01": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 445,
+          "calibration_scenes": 4,
+          "model_sample_count": 431
+        },
+        "Nudelsalat_RPi": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 461,
+          "calibration_scenes": 4,
+          "model_sample_count": 447
+        },
+        "Oreland": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 457,
+          "calibration_scenes": 4,
+          "model_sample_count": 443
+        },
+        "Princeton1": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 443,
+          "calibration_scenes": 4,
+          "model_sample_count": 429
+        },
+        "Rapallo_Electrosense": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 458,
+          "calibration_scenes": 4,
+          "model_sample_count": 444
+        },
+        "SP8AKM": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 356,
+          "calibration_scenes": 4,
+          "model_sample_count": 342
+        },
+        "Skap_French_Riviera": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 451,
+          "calibration_scenes": 4,
+          "model_sample_count": 437
+        },
+        "Valbella": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 407,
+          "calibration_scenes": 4,
+          "model_sample_count": 393
+        },
+        "Zagreb": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 456,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "alcorcon1": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 203,
+          "calibration_scenes": 4,
+          "model_sample_count": 189
+        },
+        "bcn-L": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 450,
+          "calibration_scenes": 4,
+          "model_sample_count": 436
+        },
+        "donostia-ategorrieta": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 453,
+          "calibration_scenes": 4,
+          "model_sample_count": 439
+        },
+        "goeppingen_I": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 326,
+          "calibration_scenes": 4,
+          "model_sample_count": 312
+        },
+        "imdea_adsb": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 451,
+          "calibration_scenes": 4,
+          "model_sample_count": 437
+        },
+        "miguel_murcia": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 455,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "scalessio": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 454,
+          "calibration_scenes": 4,
+          "model_sample_count": 440
+        },
+        "skyhubfr": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 434,
+          "calibration_scenes": 4,
+          "model_sample_count": 420
+        },
+        "vlenders_burgdorf": {
+          "split": "validation",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 423,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        }
+      },
+      "training_event_distributions": {
+        "any_failure": {
+          "sample_count": 6783,
+          "positive_count": 2062,
+          "positive_prevalence": 0.3039952823234557,
+          "positive_site_count": 9,
+          "dominant_positive_site": "Rapallo_Electrosense",
+          "dominant_positive_count": 435,
+          "dominant_site_event_share": 0.21096023278370515,
+          "positive_count_by_site": {
+            "Andrew_GVA": 368,
+            "Defcon1": 11,
+            "Giansense": 48,
+            "NFM-Electrosense-01": 0,
+            "Nudelsalat_RPi": 78,
+            "Oreland": 286,
+            "Princeton1": 424,
+            "Rapallo_Electrosense": 435,
+            "Skap_French_Riviera": 0,
+            "Valbella": 0,
+            "bcn-L": 0,
+            "donostia-ategorrieta": 410,
+            "goeppingen_I": 0,
+            "imdea_adsb": 0,
+            "scalessio": 0,
+            "skyhubfr": 2
+          }
+        },
+        "persistent_failure": {
+          "2": {
+            "sample_count": 6783,
+            "positive_count": 1250,
+            "positive_prevalence": 0.1842842400117942,
+            "positive_site_count": 8,
+            "dominant_positive_site": "Rapallo_Electrosense",
+            "dominant_positive_count": 401,
+            "dominant_site_event_share": 0.3208,
+            "positive_count_by_site": {
+              "Andrew_GVA": 204,
+              "Defcon1": 1,
+              "Giansense": 8,
+              "NFM-Electrosense-01": 0,
+              "Nudelsalat_RPi": 1,
+              "Oreland": 146,
+              "Princeton1": 274,
+              "Rapallo_Electrosense": 401,
+              "Skap_French_Riviera": 0,
+              "Valbella": 0,
+              "bcn-L": 0,
+              "donostia-ategorrieta": 215,
+              "goeppingen_I": 0,
+              "imdea_adsb": 0,
+              "scalessio": 0,
+              "skyhubfr": 0
+            }
+          },
+          "3": {
+            "sample_count": 6783,
+            "positive_count": 735,
+            "positive_prevalence": 0.10835913312693499,
+            "positive_site_count": 7,
+            "dominant_positive_site": "Rapallo_Electrosense",
+            "dominant_positive_count": 326,
+            "dominant_site_event_share": 0.4435374149659864,
+            "positive_count_by_site": {
+              "Andrew_GVA": 82,
+              "Defcon1": 1,
+              "Giansense": 8,
+              "NFM-Electrosense-01": 0,
+              "Nudelsalat_RPi": 0,
+              "Oreland": 68,
+              "Princeton1": 150,
+              "Rapallo_Electrosense": 326,
+              "Skap_French_Riviera": 0,
+              "Valbella": 0,
+              "bcn-L": 0,
+              "donostia-ategorrieta": 100,
+              "goeppingen_I": 0,
+              "imdea_adsb": 0,
+              "scalessio": 0,
+              "skyhubfr": 0
+            }
+          }
+        },
+        "forced_refresh_beneficial": {
+          "sample_count": 6783,
+          "positive_count": 576,
+          "positive_prevalence": 0.08491817779743477,
+          "positive_site_count": 8,
+          "dominant_positive_site": "Rapallo_Electrosense",
+          "dominant_positive_count": 192,
+          "dominant_site_event_share": 0.3333333333333333,
+          "positive_count_by_site": {
+            "Andrew_GVA": 82,
+            "Defcon1": 1,
+            "Giansense": 8,
+            "NFM-Electrosense-01": 0,
+            "Nudelsalat_RPi": 8,
+            "Oreland": 55,
+            "Princeton1": 125,
+            "Rapallo_Electrosense": 192,
+            "Skap_French_Riviera": 0,
+            "Valbella": 0,
+            "bcn-L": 0,
+            "donostia-ategorrieta": 105,
+            "goeppingen_I": 0,
+            "imdea_adsb": 0,
+            "scalessio": 0,
+            "skyhubfr": 0
+          }
+        }
+      },
+      "event_distributions": {
+        "any_failure": {
+          "sample_count": 2258,
+          "positive_count": 412,
+          "positive_prevalence": 0.1824623560673162,
+          "positive_site_count": 4,
+          "dominant_positive_site": "EDLV",
+          "dominant_positive_count": 397,
+          "dominant_site_event_share": 0.9635922330097088,
+          "positive_count_by_site": {
+            "BGSOFIAMLADOST01": 0,
+            "EDLV": 397,
+            "Geneva": 1,
+            "HuldOne": 2,
+            "SP8AKM": 12,
+            "alcorcon1": 0
+          }
+        },
+        "transient_failure": {
+          "sample_count": 2258,
+          "positive_count": 171,
+          "positive_prevalence": 0.07573073516386182,
+          "positive_site_count": 2,
+          "dominant_positive_site": "EDLV",
+          "dominant_positive_count": 170,
+          "dominant_site_event_share": 0.9941520467836257,
+          "positive_count_by_site": {
+            "BGSOFIAMLADOST01": 0,
+            "EDLV": 170,
+            "Geneva": 0,
+            "HuldOne": 0,
+            "SP8AKM": 1,
+            "alcorcon1": 0
+          }
+        },
+        "persistent_failure": {
+          "2": {
+            "sample_count": 2258,
+            "positive_count": 241,
+            "positive_prevalence": 0.10673162090345438,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 227,
+            "dominant_site_event_share": 0.941908713692946,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 0,
+              "EDLV": 227,
+              "Geneva": 1,
+              "HuldOne": 2,
+              "SP8AKM": 11,
+              "alcorcon1": 0
+            }
+          },
+          "3": {
+            "sample_count": 2258,
+            "positive_count": 129,
+            "positive_prevalence": 0.05713020372010629,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 124,
+            "dominant_site_event_share": 0.9612403100775194,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 0,
+              "EDLV": 124,
+              "Geneva": 1,
+              "HuldOne": 2,
+              "SP8AKM": 2,
+              "alcorcon1": 0
+            }
+          }
+        },
+        "forced_refresh_beneficial": {
+          "sample_count": 2258,
+          "positive_count": 102,
+          "positive_prevalence": 0.045172719220549155,
+          "positive_site_count": 4,
+          "dominant_positive_site": "EDLV",
+          "dominant_positive_count": 97,
+          "dominant_site_event_share": 0.9509803921568627,
+          "positive_count_by_site": {
+            "BGSOFIAMLADOST01": 0,
+            "EDLV": 97,
+            "Geneva": 1,
+            "HuldOne": 2,
+            "SP8AKM": 2,
+            "alcorcon1": 0
+          }
+        },
+        "net_positive_by_clean_scene_value_bits": {
+          "32": {
+            "sample_count": 2258,
+            "positive_count": 73,
+            "positive_prevalence": 0.032329495128432244,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 69,
+            "dominant_site_event_share": 0.9452054794520548,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 0,
+              "EDLV": 69,
+              "Geneva": 1,
+              "HuldOne": 2,
+              "SP8AKM": 1,
+              "alcorcon1": 0
+            }
+          },
+          "64": {
+            "sample_count": 2258,
+            "positive_count": 84,
+            "positive_prevalence": 0.03720106288751107,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 80,
+            "dominant_site_event_share": 0.9523809523809523,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 0,
+              "EDLV": 80,
+              "Geneva": 1,
+              "HuldOne": 2,
+              "SP8AKM": 1,
+              "alcorcon1": 0
+            }
+          },
+          "128": {
+            "sample_count": 2258,
+            "positive_count": 102,
+            "positive_prevalence": 0.045172719220549155,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 97,
+            "dominant_site_event_share": 0.9509803921568627,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 0,
+              "EDLV": 97,
+              "Geneva": 1,
+              "HuldOne": 2,
+              "SP8AKM": 2,
+              "alcorcon1": 0
+            }
+          },
+          "256": {
+            "sample_count": 2258,
+            "positive_count": 102,
+            "positive_prevalence": 0.045172719220549155,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 97,
+            "dominant_site_event_share": 0.9509803921568627,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 0,
+              "EDLV": 97,
+              "Geneva": 1,
+              "HuldOne": 2,
+              "SP8AKM": 2,
+              "alcorcon1": 0
+            }
+          }
+        },
+        "transient_fraction_among_any_failures": 0.41504854368932037,
+        "persistent_fraction_among_any_failures": 0.5849514563106796
+      },
+      "forced_refresh_effect": {
+        "beneficial_count": 102,
+        "median_avoided_dirty_scenes": 4.0,
+        "mean_avoided_dirty_scenes": 4.166666666666667,
+        "median_avoided_excess_regret_db": 2.06719834562115,
+        "median_break_even_bits_per_avoided_dirty_scene": 16.5,
+        "negative_value_count": 72
+      },
+      "strong_baseline_predictability": {
+        "persistent_failure": {
+          "baselines": {
+            "action_duration_lookup": {
+              "aggregate_auc": 0.9217769292960047,
+              "average_precision": 0.5790271546105119,
+              "macro_within_site_auc": 0.8006165134335934,
+              "evaluable_site_count": 4,
+              "site_metrics": [
+                {
+                  "site": "BGSOFIAMLADOST01",
+                  "sample_count": 436,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                },
+                {
+                  "site": "EDLV",
+                  "sample_count": 412,
+                  "positive_count": 227,
+                  "positive_prevalence": 0.5509708737864077,
+                  "roc_auc": 0.6375997142516966,
+                  "average_precision": 0.6490033619879911
+                },
+                {
+                  "site": "Geneva",
+                  "sample_count": 443,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.002257336343115124,
+                  "roc_auc": 0.997737556561086,
+                  "average_precision": 0.3333333333333333
+                },
+                {
+                  "site": "HuldOne",
+                  "sample_count": 436,
+                  "positive_count": 2,
+                  "positive_prevalence": 0.0045871559633027525,
+                  "roc_auc": 0.9965437788018433,
+                  "average_precision": 0.4
+                },
+                {
+                  "site": "SP8AKM",
+                  "sample_count": 342,
+                  "positive_count": 11,
+                  "positive_prevalence": 0.03216374269005848,
+                  "roc_auc": 0.5705850041197473,
+                  "average_precision": 0.11722488038277512
+                },
+                {
+                  "site": "alcorcon1",
+                  "sample_count": 189,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                }
+              ]
+            },
+            "symbol_markov_duration_lookup": {
+              "aggregate_auc": 0.9294451518935521,
+              "average_precision": 0.6957906038035491,
+              "macro_within_site_auc": 0.8157145917160269,
+              "evaluable_site_count": 4,
+              "site_metrics": [
+                {
+                  "site": "BGSOFIAMLADOST01",
+                  "sample_count": 436,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                },
+                {
+                  "site": "EDLV",
+                  "sample_count": 412,
+                  "positive_count": 227,
+                  "positive_prevalence": 0.5509708737864077,
+                  "roc_auc": 0.7008572449101083,
+                  "average_precision": 0.7529776566907898
+                },
+                {
+                  "site": "Geneva",
+                  "sample_count": 443,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.002257336343115124,
+                  "roc_auc": 0.995475113122172,
+                  "average_precision": 0.3333333333333333
+                },
+                {
+                  "site": "HuldOne",
+                  "sample_count": 436,
+                  "positive_count": 2,
+                  "positive_prevalence": 0.0045871559633027525,
+                  "roc_auc": 0.9953917050691244,
+                  "average_precision": 0.5
+                },
+                {
+                  "site": "SP8AKM",
+                  "sample_count": 342,
+                  "positive_count": 11,
+                  "positive_prevalence": 0.03216374269005848,
+                  "roc_auc": 0.5711343037627026,
+                  "average_precision": 0.20813397129186603
+                },
+                {
+                  "site": "alcorcon1",
+                  "sample_count": 189,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                }
+              ]
+            }
+          },
+          "best_baseline": "symbol_markov_duration_lookup"
+        },
+        "forced_refresh_beneficial": {
+          "baselines": {
+            "action_duration_lookup": {
+              "aggregate_auc": 0.961707410236822,
+              "average_precision": 0.400102379774425,
+              "macro_within_site_auc": 0.9376648548106323,
+              "evaluable_site_count": 4,
+              "site_metrics": [
+                {
+                  "site": "BGSOFIAMLADOST01",
+                  "sample_count": 436,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                },
+                {
+                  "site": "EDLV",
+                  "sample_count": 412,
+                  "positive_count": 97,
+                  "positive_prevalence": 0.2354368932038835,
+                  "roc_auc": 0.7593192603501882,
+                  "average_precision": 0.406153623381745
+                },
+                {
+                  "site": "Geneva",
+                  "sample_count": 443,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.002257336343115124,
+                  "roc_auc": 0.997737556561086,
+                  "average_precision": 0.3333333333333333
+                },
+                {
+                  "site": "HuldOne",
+                  "sample_count": 436,
+                  "positive_count": 2,
+                  "positive_prevalence": 0.0045871559633027525,
+                  "roc_auc": 0.9965437788018433,
+                  "average_precision": 0.4
+                },
+                {
+                  "site": "SP8AKM",
+                  "sample_count": 342,
+                  "positive_count": 2,
+                  "positive_prevalence": 0.005847953216374269,
+                  "roc_auc": 0.9970588235294117,
+                  "average_precision": 0.5
+                },
+                {
+                  "site": "alcorcon1",
+                  "sample_count": 189,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                }
+              ]
+            },
+            "symbol_markov_duration_lookup": {
+              "aggregate_auc": 0.9774114191130998,
+              "average_precision": 0.670384107850637,
+              "macro_within_site_auc": 0.9626329569628539,
+              "evaluable_site_count": 4,
+              "site_metrics": [
+                {
+                  "site": "BGSOFIAMLADOST01",
+                  "sample_count": 436,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                },
+                {
+                  "site": "EDLV",
+                  "sample_count": 412,
+                  "positive_count": 97,
+                  "positive_prevalence": 0.2354368932038835,
+                  "roc_auc": 0.8505318278514155,
+                  "average_precision": 0.662916322089443
+                },
+                {
+                  "site": "Geneva",
+                  "sample_count": 443,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.002257336343115124,
+                  "roc_auc": 1.0,
+                  "average_precision": 1.0
+                },
+                {
+                  "site": "HuldOne",
+                  "sample_count": 436,
+                  "positive_count": 2,
+                  "positive_prevalence": 0.0045871559633027525,
+                  "roc_auc": 1.0,
+                  "average_precision": 1.0
+                },
+                {
+                  "site": "SP8AKM",
+                  "sample_count": 342,
+                  "positive_count": 2,
+                  "positive_prevalence": 0.005847953216374269,
+                  "roc_auc": 0.9999999999999999,
+                  "average_precision": 1.0
+                },
+                {
+                  "site": "alcorcon1",
+                  "sample_count": 189,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                }
+              ]
+            }
+          },
+          "best_baseline": "symbol_markov_duration_lookup"
+        },
+        "training_leave_one_site_out": {
+          "persistent_failure": {
+            "baselines": {
+              "action_duration_lookup": {
+                "aggregate_auc": 0.8883230797035967,
+                "macro_within_site_auc": 0.7636220307023919,
+                "evaluable_site_count": 8,
+                "site_metrics": [
+                  {
+                    "site": "Andrew_GVA",
+                    "sample_count": 435,
+                    "positive_count": 204,
+                    "positive_prevalence": 0.4689655172413793,
+                    "roc_auc": 0.6126920465155758,
+                    "average_precision": 0.5495333084634936
+                  },
+                  {
+                    "site": "Defcon1",
+                    "sample_count": 412,
+                    "positive_count": 1,
+                    "positive_prevalence": 0.0024271844660194173,
+                    "roc_auc": 0.9975669099756691,
+                    "average_precision": 0.3333333333333333
+                  },
+                  {
+                    "site": "Giansense",
+                    "sample_count": 428,
+                    "positive_count": 8,
+                    "positive_prevalence": 0.018691588785046728,
+                    "roc_auc": 0.9892857142857143,
+                    "average_precision": 0.47058823529411764
+                  },
+                  {
+                    "site": "NFM-Electrosense-01",
+                    "sample_count": 431,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Nudelsalat_RPi",
+                    "sample_count": 447,
+                    "positive_count": 1,
+                    "positive_prevalence": 0.0022371364653243847,
+                    "roc_auc": 0.9820627802690582,
+                    "average_precision": 0.058823529411764705
+                  },
+                  {
+                    "site": "Oreland",
+                    "sample_count": 443,
+                    "positive_count": 146,
+                    "positive_prevalence": 0.3295711060948081,
+                    "roc_auc": 0.7726004335593377,
+                    "average_precision": 0.5783896561463884
+                  },
+                  {
+                    "site": "Princeton1",
+                    "sample_count": 429,
+                    "positive_count": 274,
+                    "positive_prevalence": 0.6386946386946387,
+                    "roc_auc": 0.5568989875206029,
+                    "average_precision": 0.6692561221175231
+                  },
+                  {
+                    "site": "Rapallo_Electrosense",
+                    "sample_count": 444,
+                    "positive_count": 401,
+                    "positive_prevalence": 0.9031531531531531,
+                    "roc_auc": 0.5050745229948385,
+                    "average_precision": 0.9042117753419021
+                  },
+                  {
+                    "site": "Skap_French_Riviera",
+                    "sample_count": 437,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Valbella",
+                    "sample_count": 393,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "bcn-L",
+                    "sample_count": 436,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "donostia-ategorrieta",
+                    "sample_count": 439,
+                    "positive_count": 215,
+                    "positive_prevalence": 0.489749430523918,
+                    "roc_auc": 0.6927948504983389,
+                    "average_precision": 0.652331104037718
+                  },
+                  {
+                    "site": "goeppingen_I",
+                    "sample_count": 312,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "imdea_adsb",
+                    "sample_count": 437,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "scalessio",
+                    "sample_count": 440,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "skyhubfr",
+                    "sample_count": 420,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  }
+                ]
+              },
+              "symbol_markov_duration_lookup": {
+                "aggregate_auc": 0.8683139707211278,
+                "macro_within_site_auc": 0.6885533957569787,
+                "evaluable_site_count": 8,
+                "site_metrics": [
+                  {
+                    "site": "Andrew_GVA",
+                    "sample_count": 435,
+                    "positive_count": 204,
+                    "positive_prevalence": 0.4689655172413793,
+                    "roc_auc": 0.5976784653255242,
+                    "average_precision": 0.5293309549723736
+                  },
+                  {
+                    "site": "Defcon1",
+                    "sample_count": 412,
+                    "positive_count": 1,
+                    "positive_prevalence": 0.0024271844660194173,
+                    "roc_auc": 1.0,
+                    "average_precision": 1.0
+                  },
+                  {
+                    "site": "Giansense",
+                    "sample_count": 428,
+                    "positive_count": 8,
+                    "positive_prevalence": 0.018691588785046728,
+                    "roc_auc": 1.0,
+                    "average_precision": 1.0
+                  },
+                  {
+                    "site": "NFM-Electrosense-01",
+                    "sample_count": 431,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Nudelsalat_RPi",
+                    "sample_count": 447,
+                    "positive_count": 1,
+                    "positive_prevalence": 0.0022371364653243847,
+                    "roc_auc": 0.5,
+                    "average_precision": 0.0022371364653243847
+                  },
+                  {
+                    "site": "Oreland",
+                    "sample_count": 443,
+                    "positive_count": 146,
+                    "positive_prevalence": 0.3295711060948081,
+                    "roc_auc": 0.7860799778607999,
+                    "average_precision": 0.6890943039428739
+                  },
+                  {
+                    "site": "Princeton1",
+                    "sample_count": 429,
+                    "positive_count": 274,
+                    "positive_prevalence": 0.6386946386946387,
+                    "roc_auc": 0.6071579938780315,
+                    "average_precision": 0.758782260055332
+                  },
+                  {
+                    "site": "Rapallo_Electrosense",
+                    "sample_count": 444,
+                    "positive_count": 401,
+                    "positive_prevalence": 0.9031531531531531,
+                    "roc_auc": 0.6584991010844982,
+                    "average_precision": 0.9369937407169232
+                  },
+                  {
+                    "site": "Skap_French_Riviera",
+                    "sample_count": 437,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Valbella",
+                    "sample_count": 393,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "bcn-L",
+                    "sample_count": 436,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "donostia-ategorrieta",
+                    "sample_count": 439,
+                    "positive_count": 215,
+                    "positive_prevalence": 0.489749430523918,
+                    "roc_auc": 0.3590116279069767,
+                    "average_precision": 0.5258098357210756
+                  },
+                  {
+                    "site": "goeppingen_I",
+                    "sample_count": 312,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "imdea_adsb",
+                    "sample_count": 437,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "scalessio",
+                    "sample_count": 440,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "skyhubfr",
+                    "sample_count": 420,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  }
+                ]
+              }
+            },
+            "best_baseline": "action_duration_lookup"
+          },
+          "forced_refresh_beneficial": {
+            "baselines": {
+              "action_duration_lookup": {
+                "aggregate_auc": 0.9076781590677191,
+                "macro_within_site_auc": 0.788928010184639,
+                "evaluable_site_count": 8,
+                "site_metrics": [
+                  {
+                    "site": "Andrew_GVA",
+                    "sample_count": 435,
+                    "positive_count": 82,
+                    "positive_prevalence": 0.18850574712643678,
+                    "roc_auc": 0.7257479444482829,
+                    "average_precision": 0.3151392263431049
+                  },
+                  {
+                    "site": "Defcon1",
+                    "sample_count": 412,
+                    "positive_count": 1,
+                    "positive_prevalence": 0.0024271844660194173,
+                    "roc_auc": 0.9975669099756691,
+                    "average_precision": 0.3333333333333333
+                  },
+                  {
+                    "site": "Giansense",
+                    "sample_count": 428,
+                    "positive_count": 8,
+                    "positive_prevalence": 0.018691588785046728,
+                    "roc_auc": 0.9892857142857143,
+                    "average_precision": 0.47058823529411764
+                  },
+                  {
+                    "site": "NFM-Electrosense-01",
+                    "sample_count": 431,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Nudelsalat_RPi",
+                    "sample_count": 447,
+                    "positive_count": 8,
+                    "positive_prevalence": 0.017897091722595078,
+                    "roc_auc": 0.8465261958997722,
+                    "average_precision": 0.26918015528358996
+                  },
+                  {
+                    "site": "Oreland",
+                    "sample_count": 443,
+                    "positive_count": 55,
+                    "positive_prevalence": 0.12415349887133183,
+                    "roc_auc": 0.8515698219306467,
+                    "average_precision": 0.3455225622928068
+                  },
+                  {
+                    "site": "Princeton1",
+                    "sample_count": 429,
+                    "positive_count": 125,
+                    "positive_prevalence": 0.2913752913752914,
+                    "roc_auc": 0.6013947368421053,
+                    "average_precision": 0.34378137170984013
+                  },
+                  {
+                    "site": "Rapallo_Electrosense",
+                    "sample_count": 444,
+                    "positive_count": 192,
+                    "positive_prevalence": 0.43243243243243246,
+                    "roc_auc": 0.5149016203703703,
+                    "average_precision": 0.44004086309955814
+                  },
+                  {
+                    "site": "Skap_French_Riviera",
+                    "sample_count": 437,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Valbella",
+                    "sample_count": 393,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "bcn-L",
+                    "sample_count": 436,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "donostia-ategorrieta",
+                    "sample_count": 439,
+                    "positive_count": 105,
+                    "positive_prevalence": 0.23917995444191345,
+                    "roc_auc": 0.784431137724551,
+                    "average_precision": 0.4327237299406023
+                  },
+                  {
+                    "site": "goeppingen_I",
+                    "sample_count": 312,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "imdea_adsb",
+                    "sample_count": 437,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "scalessio",
+                    "sample_count": 440,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "skyhubfr",
+                    "sample_count": 420,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  }
+                ]
+              },
+              "symbol_markov_duration_lookup": {
+                "aggregate_auc": 0.9045578021230511,
+                "macro_within_site_auc": 0.7654146506646676,
+                "evaluable_site_count": 8,
+                "site_metrics": [
+                  {
+                    "site": "Andrew_GVA",
+                    "sample_count": 435,
+                    "positive_count": 82,
+                    "positive_prevalence": 0.18850574712643678,
+                    "roc_auc": 0.7690872659434809,
+                    "average_precision": 0.4043658166741163
+                  },
+                  {
+                    "site": "Defcon1",
+                    "sample_count": 412,
+                    "positive_count": 1,
+                    "positive_prevalence": 0.0024271844660194173,
+                    "roc_auc": 1.0,
+                    "average_precision": 1.0
+                  },
+                  {
+                    "site": "Giansense",
+                    "sample_count": 428,
+                    "positive_count": 8,
+                    "positive_prevalence": 0.018691588785046728,
+                    "roc_auc": 1.0,
+                    "average_precision": 1.0
+                  },
+                  {
+                    "site": "NFM-Electrosense-01",
+                    "sample_count": 431,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Nudelsalat_RPi",
+                    "sample_count": 447,
+                    "positive_count": 8,
+                    "positive_prevalence": 0.017897091722595078,
+                    "roc_auc": 0.5,
+                    "average_precision": 0.017897091722595078
+                  },
+                  {
+                    "site": "Oreland",
+                    "sample_count": 443,
+                    "positive_count": 55,
+                    "positive_prevalence": 0.12415349887133183,
+                    "roc_auc": 0.8918931583880039,
+                    "average_precision": 0.5131485486894489
+                  },
+                  {
+                    "site": "Princeton1",
+                    "sample_count": 429,
+                    "positive_count": 125,
+                    "positive_prevalence": 0.2913752913752914,
+                    "roc_auc": 0.7215131578947369,
+                    "average_precision": 0.5550615472575426
+                  },
+                  {
+                    "site": "Rapallo_Electrosense",
+                    "sample_count": 444,
+                    "positive_count": 192,
+                    "positive_prevalence": 0.43243243243243246,
+                    "roc_auc": 0.59559978505291,
+                    "average_precision": 0.5454902759333993
+                  },
+                  {
+                    "site": "Skap_French_Riviera",
+                    "sample_count": 437,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Valbella",
+                    "sample_count": 393,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "bcn-L",
+                    "sample_count": 436,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "donostia-ategorrieta",
+                    "sample_count": 439,
+                    "positive_count": 105,
+                    "positive_prevalence": 0.23917995444191345,
+                    "roc_auc": 0.6452238380382094,
+                    "average_precision": 0.3915971409555462
+                  },
+                  {
+                    "site": "goeppingen_I",
+                    "sample_count": 312,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "imdea_adsb",
+                    "sample_count": 437,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "scalessio",
+                    "sample_count": 440,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "skyhubfr",
+                    "sample_count": 420,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  }
+                ]
+              }
+            },
+            "best_baseline": "action_duration_lookup"
+          }
+        }
+      },
+      "viability_checks": {
+        "persistent_positive_sites": true,
+        "persistent_not_overconcentrated": false,
+        "beneficial_positive_sites": true,
+        "beneficial_not_overconcentrated": false,
+        "beneficial_predictability": true,
+        "avoided_dirty_scenes": true
+      },
+      "label_viability_gate_passed": false
+    },
+    "16": {
+      "n_channels": 16,
+      "incremental_bits": 110,
+      "resolved_train_site_count": 14,
+      "resolved_validation_site_count": 6,
+      "site_audit": {
+        "Andrew_GVA": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 449,
+          "calibration_scenes": 4,
+          "model_sample_count": 435
+        },
+        "BGSOFIAMLADOST01": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 450,
+          "calibration_scenes": 4,
+          "model_sample_count": 436
+        },
+        "Bandon_Oregon_GAP1": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 448,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "Defcon1": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 426,
+          "calibration_scenes": 4,
+          "model_sample_count": 412
+        },
+        "EDLV": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 426,
+          "calibration_scenes": 6,
+          "model_sample_count": 410
+        },
+        "Espi1": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 377,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "Geneva": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 457,
+          "calibration_scenes": 4,
+          "model_sample_count": 443
+        },
+        "Giansense": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 442,
+          "calibration_scenes": 4,
+          "model_sample_count": 428
+        },
+        "HuldOne": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 450,
+          "calibration_scenes": 4,
+          "model_sample_count": 436
+        },
+        "NFM-Electrosense-01": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 445,
+          "calibration_scenes": 4,
+          "model_sample_count": 431
+        },
+        "Nudelsalat_RPi": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 461,
+          "calibration_scenes": 4,
+          "model_sample_count": 447
+        },
+        "Oreland": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 457,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "Princeton1": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 443,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "Rapallo_Electrosense": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 458,
+          "calibration_scenes": 4,
+          "model_sample_count": 444
+        },
+        "SP8AKM": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 356,
+          "calibration_scenes": 4,
+          "model_sample_count": 342
+        },
+        "Skap_French_Riviera": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 451,
+          "calibration_scenes": 4,
+          "model_sample_count": 437
+        },
+        "Valbella": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 407,
+          "calibration_scenes": 4,
+          "model_sample_count": 393
+        },
+        "Zagreb": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 456,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "alcorcon1": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 203,
+          "calibration_scenes": 4,
+          "model_sample_count": 189
+        },
+        "bcn-L": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 450,
+          "calibration_scenes": 4,
+          "model_sample_count": 436
+        },
+        "donostia-ategorrieta": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 453,
+          "calibration_scenes": 4,
+          "model_sample_count": 439
+        },
+        "goeppingen_I": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 326,
+          "calibration_scenes": 4,
+          "model_sample_count": 312
+        },
+        "imdea_adsb": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 451,
+          "calibration_scenes": 4,
+          "model_sample_count": 437
+        },
+        "miguel_murcia": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 455,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "scalessio": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 454,
+          "calibration_scenes": 4,
+          "model_sample_count": 440
+        },
+        "skyhubfr": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 434,
+          "calibration_scenes": 4,
+          "model_sample_count": 420
+        },
+        "vlenders_burgdorf": {
+          "split": "validation",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 423,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        }
+      },
+      "training_event_distributions": {
+        "any_failure": {
+          "sample_count": 5911,
+          "positive_count": 1853,
+          "positive_prevalence": 0.3134833361529352,
+          "positive_site_count": 8,
+          "dominant_positive_site": "Rapallo_Electrosense",
+          "dominant_positive_count": 427,
+          "dominant_site_event_share": 0.23043712898003238,
+          "positive_count_by_site": {
+            "Andrew_GVA": 366,
+            "Defcon1": 78,
+            "Giansense": 44,
+            "NFM-Electrosense-01": 0,
+            "Nudelsalat_RPi": 211,
+            "Rapallo_Electrosense": 427,
+            "Skap_French_Riviera": 284,
+            "Valbella": 0,
+            "bcn-L": 0,
+            "donostia-ategorrieta": 405,
+            "goeppingen_I": 0,
+            "imdea_adsb": 0,
+            "scalessio": 0,
+            "skyhubfr": 38
+          }
+        },
+        "persistent_failure": {
+          "2": {
+            "sample_count": 5911,
+            "positive_count": 881,
+            "positive_prevalence": 0.1490441549653189,
+            "positive_site_count": 7,
+            "dominant_positive_site": "Rapallo_Electrosense",
+            "dominant_positive_count": 371,
+            "dominant_site_event_share": 0.4211123723041998,
+            "positive_count_by_site": {
+              "Andrew_GVA": 204,
+              "Defcon1": 17,
+              "Giansense": 4,
+              "NFM-Electrosense-01": 0,
+              "Nudelsalat_RPi": 23,
+              "Rapallo_Electrosense": 371,
+              "Skap_French_Riviera": 82,
+              "Valbella": 0,
+              "bcn-L": 0,
+              "donostia-ategorrieta": 180,
+              "goeppingen_I": 0,
+              "imdea_adsb": 0,
+              "scalessio": 0,
+              "skyhubfr": 0
+            }
+          },
+          "3": {
+            "sample_count": 5911,
+            "positive_count": 537,
+            "positive_prevalence": 0.09084757232278802,
+            "positive_site_count": 7,
+            "dominant_positive_site": "Rapallo_Electrosense",
+            "dominant_positive_count": 287,
+            "dominant_site_event_share": 0.5344506517690876,
+            "positive_count_by_site": {
+              "Andrew_GVA": 82,
+              "Defcon1": 8,
+              "Giansense": 4,
+              "NFM-Electrosense-01": 0,
+              "Nudelsalat_RPi": 2,
+              "Rapallo_Electrosense": 287,
+              "Skap_French_Riviera": 37,
+              "Valbella": 0,
+              "bcn-L": 0,
+              "donostia-ategorrieta": 117,
+              "goeppingen_I": 0,
+              "imdea_adsb": 0,
+              "scalessio": 0,
+              "skyhubfr": 0
+            }
+          }
+        },
+        "forced_refresh_beneficial": {
+          "sample_count": 5911,
+          "positive_count": 453,
+          "positive_prevalence": 0.07663677888682117,
+          "positive_site_count": 8,
+          "dominant_positive_site": "Rapallo_Electrosense",
+          "dominant_positive_count": 165,
+          "dominant_site_event_share": 0.36423841059602646,
+          "positive_count_by_site": {
+            "Andrew_GVA": 80,
+            "Defcon1": 7,
+            "Giansense": 4,
+            "NFM-Electrosense-01": 0,
+            "Nudelsalat_RPi": 28,
+            "Rapallo_Electrosense": 165,
+            "Skap_French_Riviera": 61,
+            "Valbella": 0,
+            "bcn-L": 0,
+            "donostia-ategorrieta": 105,
+            "goeppingen_I": 0,
+            "imdea_adsb": 0,
+            "scalessio": 0,
+            "skyhubfr": 3
+          }
+        }
+      },
+      "event_distributions": {
+        "any_failure": {
+          "sample_count": 2256,
+          "positive_count": 423,
+          "positive_prevalence": 0.1875,
+          "positive_site_count": 4,
+          "dominant_positive_site": "EDLV",
+          "dominant_positive_count": 398,
+          "dominant_site_event_share": 0.9408983451536643,
+          "positive_count_by_site": {
+            "BGSOFIAMLADOST01": 0,
+            "EDLV": 398,
+            "Geneva": 11,
+            "HuldOne": 2,
+            "SP8AKM": 12,
+            "alcorcon1": 0
+          }
+        },
+        "transient_failure": {
+          "sample_count": 2256,
+          "positive_count": 176,
+          "positive_prevalence": 0.07801418439716312,
+          "positive_site_count": 3,
+          "dominant_positive_site": "EDLV",
+          "dominant_positive_count": 165,
+          "dominant_site_event_share": 0.9375,
+          "positive_count_by_site": {
+            "BGSOFIAMLADOST01": 0,
+            "EDLV": 165,
+            "Geneva": 10,
+            "HuldOne": 0,
+            "SP8AKM": 1,
+            "alcorcon1": 0
+          }
+        },
+        "persistent_failure": {
+          "2": {
+            "sample_count": 2256,
+            "positive_count": 247,
+            "positive_prevalence": 0.10948581560283688,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 233,
+            "dominant_site_event_share": 0.9433198380566802,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 0,
+              "EDLV": 233,
+              "Geneva": 1,
+              "HuldOne": 2,
+              "SP8AKM": 11,
+              "alcorcon1": 0
+            }
+          },
+          "3": {
+            "sample_count": 2256,
+            "positive_count": 127,
+            "positive_prevalence": 0.05629432624113475,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 122,
+            "dominant_site_event_share": 0.9606299212598425,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 0,
+              "EDLV": 122,
+              "Geneva": 1,
+              "HuldOne": 2,
+              "SP8AKM": 2,
+              "alcorcon1": 0
+            }
+          }
+        },
+        "forced_refresh_beneficial": {
+          "sample_count": 2256,
+          "positive_count": 103,
+          "positive_prevalence": 0.04565602836879433,
+          "positive_site_count": 4,
+          "dominant_positive_site": "EDLV",
+          "dominant_positive_count": 98,
+          "dominant_site_event_share": 0.9514563106796117,
+          "positive_count_by_site": {
+            "BGSOFIAMLADOST01": 0,
+            "EDLV": 98,
+            "Geneva": 1,
+            "HuldOne": 2,
+            "SP8AKM": 2,
+            "alcorcon1": 0
+          }
+        },
+        "net_positive_by_clean_scene_value_bits": {
+          "32": {
+            "sample_count": 2256,
+            "positive_count": 61,
+            "positive_prevalence": 0.027039007092198582,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 57,
+            "dominant_site_event_share": 0.9344262295081968,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 0,
+              "EDLV": 57,
+              "Geneva": 1,
+              "HuldOne": 2,
+              "SP8AKM": 1,
+              "alcorcon1": 0
+            }
+          },
+          "64": {
+            "sample_count": 2256,
+            "positive_count": 90,
+            "positive_prevalence": 0.0398936170212766,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 86,
+            "dominant_site_event_share": 0.9555555555555556,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 0,
+              "EDLV": 86,
+              "Geneva": 1,
+              "HuldOne": 2,
+              "SP8AKM": 1,
+              "alcorcon1": 0
+            }
+          },
+          "128": {
+            "sample_count": 2256,
+            "positive_count": 103,
+            "positive_prevalence": 0.04565602836879433,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 98,
+            "dominant_site_event_share": 0.9514563106796117,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 0,
+              "EDLV": 98,
+              "Geneva": 1,
+              "HuldOne": 2,
+              "SP8AKM": 2,
+              "alcorcon1": 0
+            }
+          },
+          "256": {
+            "sample_count": 2256,
+            "positive_count": 103,
+            "positive_prevalence": 0.04565602836879433,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 98,
+            "dominant_site_event_share": 0.9514563106796117,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 0,
+              "EDLV": 98,
+              "Geneva": 1,
+              "HuldOne": 2,
+              "SP8AKM": 2,
+              "alcorcon1": 0
+            }
+          }
+        },
+        "transient_fraction_among_any_failures": 0.4160756501182033,
+        "persistent_fraction_among_any_failures": 0.5839243498817966
+      },
+      "forced_refresh_effect": {
+        "beneficial_count": 103,
+        "median_avoided_dirty_scenes": 4.0,
+        "mean_avoided_dirty_scenes": 4.135922330097087,
+        "median_avoided_excess_regret_db": 2.030624967225589,
+        "median_break_even_bits_per_avoided_dirty_scene": 27.5,
+        "negative_value_count": 71
+      },
+      "strong_baseline_predictability": {
+        "persistent_failure": {
+          "baselines": {
+            "action_duration_lookup": {
+              "aggregate_auc": 0.9233812217490927,
+              "average_precision": 0.588874239590299,
+              "macro_within_site_auc": 0.7988570397577961,
+              "evaluable_site_count": 4,
+              "site_metrics": [
+                {
+                  "site": "BGSOFIAMLADOST01",
+                  "sample_count": 436,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                },
+                {
+                  "site": "EDLV",
+                  "sample_count": 410,
+                  "positive_count": 233,
+                  "positive_prevalence": 0.5682926829268292,
+                  "roc_auc": 0.6305618195485077,
+                  "average_precision": 0.659013220198243
+                },
+                {
+                  "site": "Geneva",
+                  "sample_count": 443,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.002257336343115124,
+                  "roc_auc": 0.997737556561086,
+                  "average_precision": 0.3333333333333333
+                },
+                {
+                  "site": "HuldOne",
+                  "sample_count": 436,
+                  "positive_count": 2,
+                  "positive_prevalence": 0.0045871559633027525,
+                  "roc_auc": 0.9965437788018433,
+                  "average_precision": 0.4
+                },
+                {
+                  "site": "SP8AKM",
+                  "sample_count": 342,
+                  "positive_count": 11,
+                  "positive_prevalence": 0.03216374269005848,
+                  "roc_auc": 0.5705850041197473,
+                  "average_precision": 0.11722488038277512
+                },
+                {
+                  "site": "alcorcon1",
+                  "sample_count": 189,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                }
+              ]
+            },
+            "symbol_markov_duration_lookup": {
+              "aggregate_auc": 0.9288596054596421,
+              "average_precision": 0.6661693022867989,
+              "macro_within_site_auc": 0.81058166448661,
+              "evaluable_site_count": 4,
+              "site_metrics": [
+                {
+                  "site": "BGSOFIAMLADOST01",
+                  "sample_count": 436,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                },
+                {
+                  "site": "EDLV",
+                  "sample_count": 410,
+                  "positive_count": 233,
+                  "positive_prevalence": 0.5682926829268292,
+                  "roc_auc": 0.6780630925535269,
+                  "average_precision": 0.7381913282849499
+                },
+                {
+                  "site": "Geneva",
+                  "sample_count": 443,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.002257336343115124,
+                  "roc_auc": 0.997737556561086,
+                  "average_precision": 0.5
+                },
+                {
+                  "site": "HuldOne",
+                  "sample_count": 436,
+                  "positive_count": 2,
+                  "positive_prevalence": 0.0045871559633027525,
+                  "roc_auc": 0.9953917050691244,
+                  "average_precision": 0.5
+                },
+                {
+                  "site": "SP8AKM",
+                  "sample_count": 342,
+                  "positive_count": 11,
+                  "positive_prevalence": 0.03216374269005848,
+                  "roc_auc": 0.5711343037627026,
+                  "average_precision": 0.20813397129186603
+                },
+                {
+                  "site": "alcorcon1",
+                  "sample_count": 189,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                }
+              ]
+            }
+          },
+          "best_baseline": "symbol_markov_duration_lookup"
+        },
+        "forced_refresh_beneficial": {
+          "baselines": {
+            "action_duration_lookup": {
+              "aggregate_auc": 0.9538508019967622,
+              "average_precision": 0.38259185010600016,
+              "macro_within_site_auc": 0.9311242207801235,
+              "evaluable_site_count": 4,
+              "site_metrics": [
+                {
+                  "site": "BGSOFIAMLADOST01",
+                  "sample_count": 436,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                },
+                {
+                  "site": "EDLV",
+                  "sample_count": 410,
+                  "positive_count": 98,
+                  "positive_prevalence": 0.23902439024390243,
+                  "roc_auc": 0.7331567242281528,
+                  "average_precision": 0.38949514953082764
+                },
+                {
+                  "site": "Geneva",
+                  "sample_count": 443,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.002257336343115124,
+                  "roc_auc": 0.997737556561086,
+                  "average_precision": 0.3333333333333333
+                },
+                {
+                  "site": "HuldOne",
+                  "sample_count": 436,
+                  "positive_count": 2,
+                  "positive_prevalence": 0.0045871559633027525,
+                  "roc_auc": 0.9965437788018433,
+                  "average_precision": 0.4
+                },
+                {
+                  "site": "SP8AKM",
+                  "sample_count": 342,
+                  "positive_count": 2,
+                  "positive_prevalence": 0.005847953216374269,
+                  "roc_auc": 0.9970588235294117,
+                  "average_precision": 0.5
+                },
+                {
+                  "site": "alcorcon1",
+                  "sample_count": 189,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                }
+              ]
+            },
+            "symbol_markov_duration_lookup": {
+              "aggregate_auc": 0.969088064069553,
+              "average_precision": 0.6060180057925943,
+              "macro_within_site_auc": 0.9558348075582591,
+              "evaluable_site_count": 4,
+              "site_metrics": [
+                {
+                  "site": "BGSOFIAMLADOST01",
+                  "sample_count": 436,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                },
+                {
+                  "site": "EDLV",
+                  "sample_count": 410,
+                  "positive_count": 98,
+                  "positive_prevalence": 0.23902439024390243,
+                  "roc_auc": 0.8302099686028258,
+                  "average_precision": 0.6180646185384121
+                },
+                {
+                  "site": "Geneva",
+                  "sample_count": 443,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.002257336343115124,
+                  "roc_auc": 0.997737556561086,
+                  "average_precision": 0.5
+                },
+                {
+                  "site": "HuldOne",
+                  "sample_count": 436,
+                  "positive_count": 2,
+                  "positive_prevalence": 0.0045871559633027525,
+                  "roc_auc": 0.9953917050691244,
+                  "average_precision": 0.5
+                },
+                {
+                  "site": "SP8AKM",
+                  "sample_count": 342,
+                  "positive_count": 2,
+                  "positive_prevalence": 0.005847953216374269,
+                  "roc_auc": 0.9999999999999999,
+                  "average_precision": 1.0
+                },
+                {
+                  "site": "alcorcon1",
+                  "sample_count": 189,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                }
+              ]
+            }
+          },
+          "best_baseline": "symbol_markov_duration_lookup"
+        },
+        "training_leave_one_site_out": {
+          "persistent_failure": {
+            "baselines": {
+              "action_duration_lookup": {
+                "aggregate_auc": 0.8240387414446353,
+                "macro_within_site_auc": 0.6701683242326899,
+                "evaluable_site_count": 7,
+                "site_metrics": [
+                  {
+                    "site": "Andrew_GVA",
+                    "sample_count": 435,
+                    "positive_count": 204,
+                    "positive_prevalence": 0.4689655172413793,
+                    "roc_auc": 0.6027289703760292,
+                    "average_precision": 0.5433687977843658
+                  },
+                  {
+                    "site": "Defcon1",
+                    "sample_count": 412,
+                    "positive_count": 17,
+                    "positive_prevalence": 0.0412621359223301,
+                    "roc_auc": 0.6864482501861505,
+                    "average_precision": 0.23360936607652769
+                  },
+                  {
+                    "site": "Giansense",
+                    "sample_count": 428,
+                    "positive_count": 4,
+                    "positive_prevalence": 0.009345794392523364,
+                    "roc_auc": 0.9941037735849056,
+                    "average_precision": 0.4444444444444444
+                  },
+                  {
+                    "site": "NFM-Electrosense-01",
+                    "sample_count": 431,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Nudelsalat_RPi",
+                    "sample_count": 447,
+                    "positive_count": 23,
+                    "positive_prevalence": 0.05145413870246085,
+                    "roc_auc": 0.5086136177194421,
+                    "average_precision": 0.059174591141846075
+                  },
+                  {
+                    "site": "Rapallo_Electrosense",
+                    "sample_count": 444,
+                    "positive_count": 371,
+                    "positive_prevalence": 0.8355855855855856,
+                    "roc_auc": 0.5682716094967323,
+                    "average_precision": 0.8563970526718994
+                  },
+                  {
+                    "site": "Skap_French_Riviera",
+                    "sample_count": 437,
+                    "positive_count": 82,
+                    "positive_prevalence": 0.18764302059496568,
+                    "roc_auc": 0.6654929577464789,
+                    "average_precision": 0.2770247477354568
+                  },
+                  {
+                    "site": "Valbella",
+                    "sample_count": 393,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "bcn-L",
+                    "sample_count": 436,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "donostia-ategorrieta",
+                    "sample_count": 439,
+                    "positive_count": 180,
+                    "positive_prevalence": 0.41002277904328016,
+                    "roc_auc": 0.6655190905190905,
+                    "average_precision": 0.5582025544392595
+                  },
+                  {
+                    "site": "goeppingen_I",
+                    "sample_count": 312,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "imdea_adsb",
+                    "sample_count": 437,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "scalessio",
+                    "sample_count": 440,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "skyhubfr",
+                    "sample_count": 420,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  }
+                ]
+              },
+              "symbol_markov_duration_lookup": {
+                "aggregate_auc": 0.7823577265126609,
+                "macro_within_site_auc": 0.6670191183926553,
+                "evaluable_site_count": 7,
+                "site_metrics": [
+                  {
+                    "site": "Andrew_GVA",
+                    "sample_count": 435,
+                    "positive_count": 204,
+                    "positive_prevalence": 0.4689655172413793,
+                    "roc_auc": 0.6190157881334353,
+                    "average_precision": 0.576967117263263
+                  },
+                  {
+                    "site": "Defcon1",
+                    "sample_count": 412,
+                    "positive_count": 17,
+                    "positive_prevalence": 0.0412621359223301,
+                    "roc_auc": 0.6913626209977662,
+                    "average_precision": 0.4649819150961355
+                  },
+                  {
+                    "site": "Giansense",
+                    "sample_count": 428,
+                    "positive_count": 4,
+                    "positive_prevalence": 0.009345794392523364,
+                    "roc_auc": 1.0,
+                    "average_precision": 1.0
+                  },
+                  {
+                    "site": "NFM-Electrosense-01",
+                    "sample_count": 431,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Nudelsalat_RPi",
+                    "sample_count": 447,
+                    "positive_count": 23,
+                    "positive_prevalence": 0.05145413870246085,
+                    "roc_auc": 0.5189191960623462,
+                    "average_precision": 0.07918177567364898
+                  },
+                  {
+                    "site": "Rapallo_Electrosense",
+                    "sample_count": 444,
+                    "positive_count": 371,
+                    "positive_prevalence": 0.8355855855855856,
+                    "roc_auc": 0.517169442085441,
+                    "average_precision": 0.838482874645883
+                  },
+                  {
+                    "site": "Skap_French_Riviera",
+                    "sample_count": 437,
+                    "positive_count": 82,
+                    "positive_prevalence": 0.18764302059496568,
+                    "roc_auc": 0.632394366197183,
+                    "average_precision": 0.24789070783040534
+                  },
+                  {
+                    "site": "Valbella",
+                    "sample_count": 393,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "bcn-L",
+                    "sample_count": 436,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "donostia-ategorrieta",
+                    "sample_count": 439,
+                    "positive_count": 180,
+                    "positive_prevalence": 0.41002277904328016,
+                    "roc_auc": 0.6902724152724152,
+                    "average_precision": 0.6051029516469211
+                  },
+                  {
+                    "site": "goeppingen_I",
+                    "sample_count": 312,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "imdea_adsb",
+                    "sample_count": 437,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "scalessio",
+                    "sample_count": 440,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "skyhubfr",
+                    "sample_count": 420,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  }
+                ]
+              }
+            },
+            "best_baseline": "action_duration_lookup"
+          },
+          "forced_refresh_beneficial": {
+            "baselines": {
+              "action_duration_lookup": {
+                "aggregate_auc": 0.8837506481362393,
+                "macro_within_site_auc": 0.793539144504936,
+                "evaluable_site_count": 8,
+                "site_metrics": [
+                  {
+                    "site": "Andrew_GVA",
+                    "sample_count": 435,
+                    "positive_count": 80,
+                    "positive_prevalence": 0.1839080459770115,
+                    "roc_auc": 0.7284507042253521,
+                    "average_precision": 0.31196930316650145
+                  },
+                  {
+                    "site": "Defcon1",
+                    "sample_count": 412,
+                    "positive_count": 7,
+                    "positive_prevalence": 0.01699029126213592,
+                    "roc_auc": 0.9858906525573192,
+                    "average_precision": 0.38452380952380955
+                  },
+                  {
+                    "site": "Giansense",
+                    "sample_count": 428,
+                    "positive_count": 4,
+                    "positive_prevalence": 0.009345794392523364,
+                    "roc_auc": 0.9941037735849056,
+                    "average_precision": 0.4444444444444444
+                  },
+                  {
+                    "site": "NFM-Electrosense-01",
+                    "sample_count": 431,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Nudelsalat_RPi",
+                    "sample_count": 447,
+                    "positive_count": 28,
+                    "positive_prevalence": 0.06263982102908278,
+                    "roc_auc": 0.6810433003750426,
+                    "average_precision": 0.16098837865226123
+                  },
+                  {
+                    "site": "Rapallo_Electrosense",
+                    "sample_count": 444,
+                    "positive_count": 165,
+                    "positive_prevalence": 0.3716216216216216,
+                    "roc_auc": 0.6001303356142066,
+                    "average_precision": 0.42627611188030395
+                  },
+                  {
+                    "site": "Skap_French_Riviera",
+                    "sample_count": 437,
+                    "positive_count": 61,
+                    "positive_prevalence": 0.13958810068649885,
+                    "roc_auc": 0.7378139169863969,
+                    "average_precision": 0.2610165311094346
+                  },
+                  {
+                    "site": "Valbella",
+                    "sample_count": 393,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "bcn-L",
+                    "sample_count": 436,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "donostia-ategorrieta",
+                    "sample_count": 439,
+                    "positive_count": 105,
+                    "positive_prevalence": 0.23917995444191345,
+                    "roc_auc": 0.804733390362133,
+                    "average_precision": 0.4528976878014201
+                  },
+                  {
+                    "site": "goeppingen_I",
+                    "sample_count": 312,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "imdea_adsb",
+                    "sample_count": 437,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "scalessio",
+                    "sample_count": 440,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "skyhubfr",
+                    "sample_count": 420,
+                    "positive_count": 3,
+                    "positive_prevalence": 0.007142857142857143,
+                    "roc_auc": 0.8161470823341327,
+                    "average_precision": 0.19285714285714284
+                  }
+                ]
+              },
+              "symbol_markov_duration_lookup": {
+                "aggregate_auc": 0.8881227871354764,
+                "macro_within_site_auc": 0.7962872418594007,
+                "evaluable_site_count": 8,
+                "site_metrics": [
+                  {
+                    "site": "Andrew_GVA",
+                    "sample_count": 435,
+                    "positive_count": 80,
+                    "positive_prevalence": 0.1839080459770115,
+                    "roc_auc": 0.750950704225352,
+                    "average_precision": 0.39032332748387016
+                  },
+                  {
+                    "site": "Defcon1",
+                    "sample_count": 412,
+                    "positive_count": 7,
+                    "positive_prevalence": 0.01699029126213592,
+                    "roc_auc": 0.9961199294532628,
+                    "average_precision": 0.801360544217687
+                  },
+                  {
+                    "site": "Giansense",
+                    "sample_count": 428,
+                    "positive_count": 4,
+                    "positive_prevalence": 0.009345794392523364,
+                    "roc_auc": 1.0,
+                    "average_precision": 1.0
+                  },
+                  {
+                    "site": "NFM-Electrosense-01",
+                    "sample_count": 431,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Nudelsalat_RPi",
+                    "sample_count": 447,
+                    "positive_count": 28,
+                    "positive_prevalence": 0.06263982102908278,
+                    "roc_auc": 0.6748210023866349,
+                    "average_precision": 0.14798415691623906
+                  },
+                  {
+                    "site": "Rapallo_Electrosense",
+                    "sample_count": 444,
+                    "positive_count": 165,
+                    "positive_prevalence": 0.3716216216216216,
+                    "roc_auc": 0.5620071684587813,
+                    "average_precision": 0.3997018160782024
+                  },
+                  {
+                    "site": "Skap_French_Riviera",
+                    "sample_count": 437,
+                    "positive_count": 61,
+                    "positive_prevalence": 0.13958810068649885,
+                    "roc_auc": 0.7377703174049529,
+                    "average_precision": 0.2757566314796556
+                  },
+                  {
+                    "site": "Valbella",
+                    "sample_count": 393,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "bcn-L",
+                    "sample_count": 436,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "donostia-ategorrieta",
+                    "sample_count": 439,
+                    "positive_count": 105,
+                    "positive_prevalence": 0.23917995444191345,
+                    "roc_auc": 0.8292842885657257,
+                    "average_precision": 0.5047993293200096
+                  },
+                  {
+                    "site": "goeppingen_I",
+                    "sample_count": 312,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "imdea_adsb",
+                    "sample_count": 437,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "scalessio",
+                    "sample_count": 440,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "skyhubfr",
+                    "sample_count": 420,
+                    "positive_count": 3,
+                    "positive_prevalence": 0.007142857142857143,
+                    "roc_auc": 0.8193445243804955,
+                    "average_precision": 0.4468253968253968
+                  }
+                ]
+              }
+            },
+            "best_baseline": "symbol_markov_duration_lookup"
+          }
+        }
+      },
+      "viability_checks": {
+        "persistent_positive_sites": true,
+        "persistent_not_overconcentrated": false,
+        "beneficial_positive_sites": true,
+        "beneficial_not_overconcentrated": false,
+        "beneficial_predictability": true,
+        "avoided_dirty_scenes": true
+      },
+      "label_viability_gate_passed": false
+    },
+    "32": {
+      "n_channels": 32,
+      "incremental_bits": 110,
+      "resolved_train_site_count": 15,
+      "resolved_validation_site_count": 5,
+      "site_audit": {
+        "Andrew_GVA": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 449,
+          "calibration_scenes": 4,
+          "model_sample_count": 435
+        },
+        "BGSOFIAMLADOST01": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 450,
+          "calibration_scenes": 4,
+          "model_sample_count": 436
+        },
+        "Bandon_Oregon_GAP1": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 448,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "Defcon1": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 426,
+          "calibration_scenes": 4,
+          "model_sample_count": 412
+        },
+        "EDLV": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 426,
+          "calibration_scenes": 4,
+          "model_sample_count": 412
+        },
+        "Espi1": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 377,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "Geneva": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 457,
+          "calibration_scenes": 4,
+          "model_sample_count": 443
+        },
+        "Giansense": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 442,
+          "calibration_scenes": 4,
+          "model_sample_count": 428
+        },
+        "HuldOne": {
+          "split": "validation",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 450,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "NFM-Electrosense-01": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 445,
+          "calibration_scenes": 4,
+          "model_sample_count": 431
+        },
+        "Nudelsalat_RPi": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 461,
+          "calibration_scenes": 4,
+          "model_sample_count": 447
+        },
+        "Oreland": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 457,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "Princeton1": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 443,
+          "calibration_scenes": 4,
+          "model_sample_count": 429
+        },
+        "Rapallo_Electrosense": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 458,
+          "calibration_scenes": 4,
+          "model_sample_count": 444
+        },
+        "SP8AKM": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 356,
+          "calibration_scenes": 4,
+          "model_sample_count": 342
+        },
+        "Skap_French_Riviera": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 451,
+          "calibration_scenes": 4,
+          "model_sample_count": 437
+        },
+        "Valbella": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 407,
+          "calibration_scenes": 4,
+          "model_sample_count": 393
+        },
+        "Zagreb": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 456,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "alcorcon1": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 203,
+          "calibration_scenes": 4,
+          "model_sample_count": 189
+        },
+        "bcn-L": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 450,
+          "calibration_scenes": 4,
+          "model_sample_count": 436
+        },
+        "donostia-ategorrieta": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 453,
+          "calibration_scenes": 4,
+          "model_sample_count": 439
+        },
+        "goeppingen_I": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 326,
+          "calibration_scenes": 4,
+          "model_sample_count": 312
+        },
+        "imdea_adsb": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 451,
+          "calibration_scenes": 4,
+          "model_sample_count": 437
+        },
+        "miguel_murcia": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 455,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "scalessio": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 454,
+          "calibration_scenes": 4,
+          "model_sample_count": 440
+        },
+        "skyhubfr": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 434,
+          "calibration_scenes": 4,
+          "model_sample_count": 420
+        },
+        "vlenders_burgdorf": {
+          "split": "validation",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 423,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        }
+      },
+      "training_event_distributions": {
+        "any_failure": {
+          "sample_count": 6340,
+          "positive_count": 2346,
+          "positive_prevalence": 0.3700315457413249,
+          "positive_site_count": 10,
+          "dominant_positive_site": "donostia-ategorrieta",
+          "dominant_positive_count": 424,
+          "dominant_site_event_share": 0.18073316283034954,
+          "positive_count_by_site": {
+            "Andrew_GVA": 368,
+            "Defcon1": 89,
+            "Giansense": 77,
+            "NFM-Electrosense-01": 0,
+            "Nudelsalat_RPi": 265,
+            "Princeton1": 418,
+            "Rapallo_Electrosense": 363,
+            "Skap_French_Riviera": 284,
+            "Valbella": 0,
+            "bcn-L": 0,
+            "donostia-ategorrieta": 424,
+            "goeppingen_I": 0,
+            "imdea_adsb": 20,
+            "scalessio": 0,
+            "skyhubfr": 38
+          }
+        },
+        "persistent_failure": {
+          "2": {
+            "sample_count": 6340,
+            "positive_count": 1329,
+            "positive_prevalence": 0.20962145110410094,
+            "positive_site_count": 8,
+            "dominant_positive_site": "Princeton1",
+            "dominant_positive_count": 340,
+            "dominant_site_event_share": 0.2558314522197141,
+            "positive_count_by_site": {
+              "Andrew_GVA": 206,
+              "Defcon1": 18,
+              "Giansense": 7,
+              "NFM-Electrosense-01": 0,
+              "Nudelsalat_RPi": 181,
+              "Princeton1": 340,
+              "Rapallo_Electrosense": 240,
+              "Skap_French_Riviera": 82,
+              "Valbella": 0,
+              "bcn-L": 0,
+              "donostia-ategorrieta": 255,
+              "goeppingen_I": 0,
+              "imdea_adsb": 0,
+              "scalessio": 0,
+              "skyhubfr": 0
+            }
+          },
+          "3": {
+            "sample_count": 6340,
+            "positive_count": 829,
+            "positive_prevalence": 0.13075709779179812,
+            "positive_site_count": 8,
+            "dominant_positive_site": "Princeton1",
+            "dominant_positive_count": 227,
+            "dominant_site_event_share": 0.2738238841978287,
+            "positive_count_by_site": {
+              "Andrew_GVA": 83,
+              "Defcon1": 9,
+              "Giansense": 7,
+              "NFM-Electrosense-01": 0,
+              "Nudelsalat_RPi": 134,
+              "Princeton1": 227,
+              "Rapallo_Electrosense": 182,
+              "Skap_French_Riviera": 37,
+              "Valbella": 0,
+              "bcn-L": 0,
+              "donostia-ategorrieta": 150,
+              "goeppingen_I": 0,
+              "imdea_adsb": 0,
+              "scalessio": 0,
+              "skyhubfr": 0
+            }
+          }
+        },
+        "forced_refresh_beneficial": {
+          "sample_count": 6340,
+          "positive_count": 740,
+          "positive_prevalence": 0.1167192429022082,
+          "positive_site_count": 10,
+          "dominant_positive_site": "Rapallo_Electrosense",
+          "dominant_positive_count": 156,
+          "dominant_site_event_share": 0.21081081081081082,
+          "positive_count_by_site": {
+            "Andrew_GVA": 85,
+            "Defcon1": 8,
+            "Giansense": 7,
+            "NFM-Electrosense-01": 0,
+            "Nudelsalat_RPi": 130,
+            "Princeton1": 155,
+            "Rapallo_Electrosense": 156,
+            "Skap_French_Riviera": 61,
+            "Valbella": 0,
+            "bcn-L": 0,
+            "donostia-ategorrieta": 132,
+            "goeppingen_I": 0,
+            "imdea_adsb": 3,
+            "scalessio": 0,
+            "skyhubfr": 3
+          }
+        }
+      },
+      "event_distributions": {
+        "any_failure": {
+          "sample_count": 1822,
+          "positive_count": 440,
+          "positive_prevalence": 0.2414928649835346,
+          "positive_site_count": 4,
+          "dominant_positive_site": "EDLV",
+          "dominant_positive_count": 406,
+          "dominant_site_event_share": 0.9227272727272727,
+          "positive_count_by_site": {
+            "BGSOFIAMLADOST01": 11,
+            "EDLV": 406,
+            "Geneva": 11,
+            "SP8AKM": 12,
+            "alcorcon1": 0
+          }
+        },
+        "transient_failure": {
+          "sample_count": 1822,
+          "positive_count": 178,
+          "positive_prevalence": 0.09769484083424808,
+          "positive_site_count": 4,
+          "dominant_positive_site": "EDLV",
+          "dominant_positive_count": 157,
+          "dominant_site_event_share": 0.8820224719101124,
+          "positive_count_by_site": {
+            "BGSOFIAMLADOST01": 10,
+            "EDLV": 157,
+            "Geneva": 10,
+            "SP8AKM": 1,
+            "alcorcon1": 0
+          }
+        },
+        "persistent_failure": {
+          "2": {
+            "sample_count": 1822,
+            "positive_count": 262,
+            "positive_prevalence": 0.1437980241492865,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 249,
+            "dominant_site_event_share": 0.950381679389313,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 1,
+              "EDLV": 249,
+              "Geneva": 1,
+              "SP8AKM": 11,
+              "alcorcon1": 0
+            }
+          },
+          "3": {
+            "sample_count": 1822,
+            "positive_count": 132,
+            "positive_prevalence": 0.07244785949506037,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 128,
+            "dominant_site_event_share": 0.9696969696969697,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 1,
+              "EDLV": 128,
+              "Geneva": 1,
+              "SP8AKM": 2,
+              "alcorcon1": 0
+            }
+          }
+        },
+        "forced_refresh_beneficial": {
+          "sample_count": 1822,
+          "positive_count": 109,
+          "positive_prevalence": 0.05982436882546652,
+          "positive_site_count": 4,
+          "dominant_positive_site": "EDLV",
+          "dominant_positive_count": 105,
+          "dominant_site_event_share": 0.963302752293578,
+          "positive_count_by_site": {
+            "BGSOFIAMLADOST01": 1,
+            "EDLV": 105,
+            "Geneva": 1,
+            "SP8AKM": 2,
+            "alcorcon1": 0
+          }
+        },
+        "net_positive_by_clean_scene_value_bits": {
+          "32": {
+            "sample_count": 1822,
+            "positive_count": 67,
+            "positive_prevalence": 0.03677277716794731,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 64,
+            "dominant_site_event_share": 0.9552238805970149,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 1,
+              "EDLV": 64,
+              "Geneva": 1,
+              "SP8AKM": 1,
+              "alcorcon1": 0
+            }
+          },
+          "64": {
+            "sample_count": 1822,
+            "positive_count": 95,
+            "positive_prevalence": 0.05214050493962678,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 92,
+            "dominant_site_event_share": 0.968421052631579,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 1,
+              "EDLV": 92,
+              "Geneva": 1,
+              "SP8AKM": 1,
+              "alcorcon1": 0
+            }
+          },
+          "128": {
+            "sample_count": 1822,
+            "positive_count": 109,
+            "positive_prevalence": 0.05982436882546652,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 105,
+            "dominant_site_event_share": 0.963302752293578,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 1,
+              "EDLV": 105,
+              "Geneva": 1,
+              "SP8AKM": 2,
+              "alcorcon1": 0
+            }
+          },
+          "256": {
+            "sample_count": 1822,
+            "positive_count": 109,
+            "positive_prevalence": 0.05982436882546652,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 105,
+            "dominant_site_event_share": 0.963302752293578,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 1,
+              "EDLV": 105,
+              "Geneva": 1,
+              "SP8AKM": 2,
+              "alcorcon1": 0
+            }
+          }
+        },
+        "transient_fraction_among_any_failures": 0.40454545454545454,
+        "persistent_fraction_among_any_failures": 0.5954545454545455
+      },
+      "forced_refresh_effect": {
+        "beneficial_count": 109,
+        "median_avoided_dirty_scenes": 4.0,
+        "mean_avoided_dirty_scenes": 4.4036697247706424,
+        "median_avoided_excess_regret_db": 2.3876469747023923,
+        "median_break_even_bits_per_avoided_dirty_scene": 27.5,
+        "negative_value_count": 78
+      },
+      "strong_baseline_predictability": {
+        "persistent_failure": {
+          "baselines": {
+            "action_duration_lookup": {
+              "aggregate_auc": 0.9329051673517323,
+              "average_precision": 0.644401612535851,
+              "macro_within_site_auc": 0.8027952566220533,
+              "evaluable_site_count": 4,
+              "site_metrics": [
+                {
+                  "site": "BGSOFIAMLADOST01",
+                  "sample_count": 436,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.0022935779816513763,
+                  "roc_auc": 0.9977011494252873,
+                  "average_precision": 0.3333333333333333
+                },
+                {
+                  "site": "EDLV",
+                  "sample_count": 412,
+                  "positive_count": 249,
+                  "positive_prevalence": 0.6043689320388349,
+                  "roc_auc": 0.6451573163820928,
+                  "average_precision": 0.6967942137152393
+                },
+                {
+                  "site": "Geneva",
+                  "sample_count": 443,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.002257336343115124,
+                  "roc_auc": 0.997737556561086,
+                  "average_precision": 0.3333333333333333
+                },
+                {
+                  "site": "SP8AKM",
+                  "sample_count": 342,
+                  "positive_count": 11,
+                  "positive_prevalence": 0.03216374269005848,
+                  "roc_auc": 0.5705850041197473,
+                  "average_precision": 0.11722488038277512
+                },
+                {
+                  "site": "alcorcon1",
+                  "sample_count": 189,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                }
+              ]
+            },
+            "symbol_markov_duration_lookup": {
+              "aggregate_auc": 0.934730377764729,
+              "average_precision": 0.7032641428961308,
+              "macro_within_site_auc": 0.8095715656401123,
+              "evaluable_site_count": 4,
+              "site_metrics": [
+                {
+                  "site": "BGSOFIAMLADOST01",
+                  "sample_count": 436,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.0022935779816513763,
+                  "roc_auc": 0.9977011494252873,
+                  "average_precision": 0.5
+                },
+                {
+                  "site": "EDLV",
+                  "sample_count": 412,
+                  "positive_count": 249,
+                  "positive_prevalence": 0.6043689320388349,
+                  "roc_auc": 0.6694508093724592,
+                  "average_precision": 0.7597428460141975
+                },
+                {
+                  "site": "Geneva",
+                  "sample_count": 443,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.002257336343115124,
+                  "roc_auc": 1.0,
+                  "average_precision": 1.0
+                },
+                {
+                  "site": "SP8AKM",
+                  "sample_count": 342,
+                  "positive_count": 11,
+                  "positive_prevalence": 0.03216374269005848,
+                  "roc_auc": 0.5711343037627026,
+                  "average_precision": 0.20813397129186603
+                },
+                {
+                  "site": "alcorcon1",
+                  "sample_count": 189,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                }
+              ]
+            }
+          },
+          "best_baseline": "symbol_markov_duration_lookup"
+        },
+        "forced_refresh_beneficial": {
+          "baselines": {
+            "action_duration_lookup": {
+              "aggregate_auc": 0.9469544819164832,
+              "average_precision": 0.4101790837992643,
+              "macro_within_site_auc": 0.933792134821943,
+              "evaluable_site_count": 4,
+              "site_metrics": [
+                {
+                  "site": "BGSOFIAMLADOST01",
+                  "sample_count": 436,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.0022935779816513763,
+                  "roc_auc": 0.9977011494252873,
+                  "average_precision": 0.3333333333333333
+                },
+                {
+                  "site": "EDLV",
+                  "sample_count": 412,
+                  "positive_count": 105,
+                  "positive_prevalence": 0.25485436893203883,
+                  "roc_auc": 0.742671009771987,
+                  "average_precision": 0.41663653128097994
+                },
+                {
+                  "site": "Geneva",
+                  "sample_count": 443,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.002257336343115124,
+                  "roc_auc": 0.997737556561086,
+                  "average_precision": 0.3333333333333333
+                },
+                {
+                  "site": "SP8AKM",
+                  "sample_count": 342,
+                  "positive_count": 2,
+                  "positive_prevalence": 0.005847953216374269,
+                  "roc_auc": 0.9970588235294117,
+                  "average_precision": 0.5
+                },
+                {
+                  "site": "alcorcon1",
+                  "sample_count": 189,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                }
+              ]
+            },
+            "symbol_markov_duration_lookup": {
+              "aggregate_auc": 0.9667009431385466,
+              "average_precision": 0.6698230209552452,
+              "macro_within_site_auc": 0.9604583527221964,
+              "evaluable_site_count": 4,
+              "site_metrics": [
+                {
+                  "site": "BGSOFIAMLADOST01",
+                  "sample_count": 436,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.0022935779816513763,
+                  "roc_auc": 1.0,
+                  "average_precision": 1.0
+                },
+                {
+                  "site": "EDLV",
+                  "sample_count": 412,
+                  "positive_count": 105,
+                  "positive_prevalence": 0.25485436893203883,
+                  "roc_auc": 0.8418334108887855,
+                  "average_precision": 0.662669907346379
+                },
+                {
+                  "site": "Geneva",
+                  "sample_count": 443,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.002257336343115124,
+                  "roc_auc": 1.0,
+                  "average_precision": 1.0
+                },
+                {
+                  "site": "SP8AKM",
+                  "sample_count": 342,
+                  "positive_count": 2,
+                  "positive_prevalence": 0.005847953216374269,
+                  "roc_auc": 0.9999999999999999,
+                  "average_precision": 1.0
+                },
+                {
+                  "site": "alcorcon1",
+                  "sample_count": 189,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                }
+              ]
+            }
+          },
+          "best_baseline": "symbol_markov_duration_lookup"
+        },
+        "training_leave_one_site_out": {
+          "persistent_failure": {
+            "baselines": {
+              "action_duration_lookup": {
+                "aggregate_auc": 0.8456752555964538,
+                "macro_within_site_auc": 0.6513820064223941,
+                "evaluable_site_count": 8,
+                "site_metrics": [
+                  {
+                    "site": "Andrew_GVA",
+                    "sample_count": 435,
+                    "positive_count": 206,
+                    "positive_prevalence": 0.4735632183908046,
+                    "roc_auc": 0.622662907533811,
+                    "average_precision": 0.5628493395226006
+                  },
+                  {
+                    "site": "Defcon1",
+                    "sample_count": 412,
+                    "positive_count": 18,
+                    "positive_prevalence": 0.043689320388349516,
+                    "roc_auc": 0.6986040609137056,
+                    "average_precision": 0.27184466019417475
+                  },
+                  {
+                    "site": "Giansense",
+                    "sample_count": 428,
+                    "positive_count": 7,
+                    "positive_prevalence": 0.016355140186915886,
+                    "roc_auc": 0.9904988123515439,
+                    "average_precision": 0.4666666666666667
+                  },
+                  {
+                    "site": "NFM-Electrosense-01",
+                    "sample_count": 431,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Nudelsalat_RPi",
+                    "sample_count": 447,
+                    "positive_count": 181,
+                    "positive_prevalence": 0.40492170022371365,
+                    "roc_auc": 0.3792942300502638,
+                    "average_precision": 0.35094325355909944
+                  },
+                  {
+                    "site": "Princeton1",
+                    "sample_count": 429,
+                    "positive_count": 340,
+                    "positive_prevalence": 0.7925407925407926,
+                    "roc_auc": 0.41576338400528756,
+                    "average_precision": 0.7644650925305021
+                  },
+                  {
+                    "site": "Rapallo_Electrosense",
+                    "sample_count": 444,
+                    "positive_count": 240,
+                    "positive_prevalence": 0.5405405405405406,
+                    "roc_auc": 0.7124183006535947,
+                    "average_precision": 0.6741460729115455
+                  },
+                  {
+                    "site": "Skap_French_Riviera",
+                    "sample_count": 437,
+                    "positive_count": 82,
+                    "positive_prevalence": 0.18764302059496568,
+                    "roc_auc": 0.6654929577464789,
+                    "average_precision": 0.2770247477354568
+                  },
+                  {
+                    "site": "Valbella",
+                    "sample_count": 393,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "bcn-L",
+                    "sample_count": 436,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "donostia-ategorrieta",
+                    "sample_count": 439,
+                    "positive_count": 255,
+                    "positive_prevalence": 0.5808656036446469,
+                    "roc_auc": 0.7263213981244673,
+                    "average_precision": 0.7345373818962887
+                  },
+                  {
+                    "site": "goeppingen_I",
+                    "sample_count": 312,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "imdea_adsb",
+                    "sample_count": 437,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "scalessio",
+                    "sample_count": 440,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "skyhubfr",
+                    "sample_count": 420,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  }
+                ]
+              },
+              "symbol_markov_duration_lookup": {
+                "aggregate_auc": 0.838737621476544,
+                "macro_within_site_auc": 0.601864446547927,
+                "evaluable_site_count": 8,
+                "site_metrics": [
+                  {
+                    "site": "Andrew_GVA",
+                    "sample_count": 435,
+                    "positive_count": 206,
+                    "positive_prevalence": 0.4735632183908046,
+                    "roc_auc": 0.6006910586339933,
+                    "average_precision": 0.533368151177561
+                  },
+                  {
+                    "site": "Defcon1",
+                    "sample_count": 412,
+                    "positive_count": 18,
+                    "positive_prevalence": 0.043689320388349516,
+                    "roc_auc": 0.6941624365482234,
+                    "average_precision": 0.26331161734740643
+                  },
+                  {
+                    "site": "Giansense",
+                    "sample_count": 428,
+                    "positive_count": 7,
+                    "positive_prevalence": 0.016355140186915886,
+                    "roc_auc": 1.0,
+                    "average_precision": 1.0
+                  },
+                  {
+                    "site": "NFM-Electrosense-01",
+                    "sample_count": 431,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Nudelsalat_RPi",
+                    "sample_count": 447,
+                    "positive_count": 181,
+                    "positive_prevalence": 0.40492170022371365,
+                    "roc_auc": 0.4027021974826569,
+                    "average_precision": 0.3818669659915128
+                  },
+                  {
+                    "site": "Princeton1",
+                    "sample_count": 429,
+                    "positive_count": 340,
+                    "positive_prevalence": 0.7925407925407926,
+                    "roc_auc": 0.3957699933906147,
+                    "average_precision": 0.8015597344356241
+                  },
+                  {
+                    "site": "Rapallo_Electrosense",
+                    "sample_count": 444,
+                    "positive_count": 240,
+                    "positive_prevalence": 0.5405405405405406,
+                    "roc_auc": 0.7723651960784312,
+                    "average_precision": 0.7597479591078479
+                  },
+                  {
+                    "site": "Skap_French_Riviera",
+                    "sample_count": 437,
+                    "positive_count": 82,
+                    "positive_prevalence": 0.18764302059496568,
+                    "roc_auc": 0.6262281003091721,
+                    "average_precision": 0.24143297226918148
+                  },
+                  {
+                    "site": "Valbella",
+                    "sample_count": 393,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "bcn-L",
+                    "sample_count": 436,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "donostia-ategorrieta",
+                    "sample_count": 439,
+                    "positive_count": 255,
+                    "positive_prevalence": 0.5808656036446469,
+                    "roc_auc": 0.32299658994032393,
+                    "average_precision": 0.5086635635439732
+                  },
+                  {
+                    "site": "goeppingen_I",
+                    "sample_count": 312,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "imdea_adsb",
+                    "sample_count": 437,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "scalessio",
+                    "sample_count": 440,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "skyhubfr",
+                    "sample_count": 420,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  }
+                ]
+              }
+            },
+            "best_baseline": "action_duration_lookup"
+          },
+          "forced_refresh_beneficial": {
+            "baselines": {
+              "action_duration_lookup": {
+                "aggregate_auc": 0.8542072876447876,
+                "macro_within_site_auc": 0.7266724315716446,
+                "evaluable_site_count": 10,
+                "site_metrics": [
+                  {
+                    "site": "Andrew_GVA",
+                    "sample_count": 435,
+                    "positive_count": 85,
+                    "positive_prevalence": 0.19540229885057472,
+                    "roc_auc": 0.7431428571428571,
+                    "average_precision": 0.3438295290788926
+                  },
+                  {
+                    "site": "Defcon1",
+                    "sample_count": 412,
+                    "positive_count": 8,
+                    "positive_prevalence": 0.019417475728155338,
+                    "roc_auc": 0.9876237623762376,
+                    "average_precision": 0.4444444444444444
+                  },
+                  {
+                    "site": "Giansense",
+                    "sample_count": 428,
+                    "positive_count": 7,
+                    "positive_prevalence": 0.016355140186915886,
+                    "roc_auc": 0.9904988123515439,
+                    "average_precision": 0.4666666666666667
+                  },
+                  {
+                    "site": "NFM-Electrosense-01",
+                    "sample_count": 431,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Nudelsalat_RPi",
+                    "sample_count": 447,
+                    "positive_count": 130,
+                    "positive_prevalence": 0.29082774049217003,
+                    "roc_auc": 0.44418830380975494,
+                    "average_precision": 0.26808289154895776
+                  },
+                  {
+                    "site": "Princeton1",
+                    "sample_count": 429,
+                    "positive_count": 155,
+                    "positive_prevalence": 0.3613053613053613,
+                    "roc_auc": 0.4687190958323523,
+                    "average_precision": 0.3475259605683165
+                  },
+                  {
+                    "site": "Rapallo_Electrosense",
+                    "sample_count": 444,
+                    "positive_count": 156,
+                    "positive_prevalence": 0.35135135135135137,
+                    "roc_auc": 0.6853632478632479,
+                    "average_precision": 0.4629320822661762
+                  },
+                  {
+                    "site": "Skap_French_Riviera",
+                    "sample_count": 437,
+                    "positive_count": 61,
+                    "positive_prevalence": 0.13958810068649885,
+                    "roc_auc": 0.7378139169863969,
+                    "average_precision": 0.2610165311094346
+                  },
+                  {
+                    "site": "Valbella",
+                    "sample_count": 393,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "bcn-L",
+                    "sample_count": 436,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "donostia-ategorrieta",
+                    "sample_count": 439,
+                    "positive_count": 132,
+                    "positive_prevalence": 0.30068337129840544,
+                    "roc_auc": 0.7472978975421972,
+                    "average_precision": 0.4654119022111516
+                  },
+                  {
+                    "site": "goeppingen_I",
+                    "sample_count": 312,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "imdea_adsb",
+                    "sample_count": 437,
+                    "positive_count": 3,
+                    "positive_prevalence": 0.006864988558352402,
+                    "roc_auc": 0.6459293394777266,
+                    "average_precision": 0.07124332570556827
+                  },
+                  {
+                    "site": "scalessio",
+                    "sample_count": 440,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "skyhubfr",
+                    "sample_count": 420,
+                    "positive_count": 3,
+                    "positive_prevalence": 0.007142857142857143,
+                    "roc_auc": 0.8161470823341327,
+                    "average_precision": 0.19285714285714284
+                  }
+                ]
+              },
+              "symbol_markov_duration_lookup": {
+                "aggregate_auc": 0.8589934845559846,
+                "macro_within_site_auc": 0.7124389755773982,
+                "evaluable_site_count": 10,
+                "site_metrics": [
+                  {
+                    "site": "Andrew_GVA",
+                    "sample_count": 435,
+                    "positive_count": 85,
+                    "positive_prevalence": 0.19540229885057472,
+                    "roc_auc": 0.7043529411764706,
+                    "average_precision": 0.3291673186677098
+                  },
+                  {
+                    "site": "Defcon1",
+                    "sample_count": 412,
+                    "positive_count": 8,
+                    "positive_prevalence": 0.019417475728155338,
+                    "roc_auc": 0.9986076732673268,
+                    "average_precision": 0.8767361111111112
+                  },
+                  {
+                    "site": "Giansense",
+                    "sample_count": 428,
+                    "positive_count": 7,
+                    "positive_prevalence": 0.016355140186915886,
+                    "roc_auc": 1.0,
+                    "average_precision": 1.0
+                  },
+                  {
+                    "site": "NFM-Electrosense-01",
+                    "sample_count": 431,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Nudelsalat_RPi",
+                    "sample_count": 447,
+                    "positive_count": 130,
+                    "positive_prevalence": 0.29082774049217003,
+                    "roc_auc": 0.46440184421256975,
+                    "average_precision": 0.3125906382719017
+                  },
+                  {
+                    "site": "Princeton1",
+                    "sample_count": 429,
+                    "positive_count": 155,
+                    "positive_prevalence": 0.3613053613053613,
+                    "roc_auc": 0.5135625147162703,
+                    "average_precision": 0.3861164898573492
+                  },
+                  {
+                    "site": "Rapallo_Electrosense",
+                    "sample_count": 444,
+                    "positive_count": 156,
+                    "positive_prevalence": 0.35135135135135137,
+                    "roc_auc": 0.6406695156695157,
+                    "average_precision": 0.5456226907189422
+                  },
+                  {
+                    "site": "Skap_French_Riviera",
+                    "sample_count": 437,
+                    "positive_count": 61,
+                    "positive_prevalence": 0.13958810068649885,
+                    "roc_auc": 0.740364492500872,
+                    "average_precision": 0.27658685583208936
+                  },
+                  {
+                    "site": "Valbella",
+                    "sample_count": 393,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "bcn-L",
+                    "sample_count": 436,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "donostia-ategorrieta",
+                    "sample_count": 439,
+                    "positive_count": 132,
+                    "positive_prevalence": 0.30068337129840544,
+                    "roc_auc": 0.5960048366400158,
+                    "average_precision": 0.47039653617983634
+                  },
+                  {
+                    "site": "goeppingen_I",
+                    "sample_count": 312,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "imdea_adsb",
+                    "sample_count": 437,
+                    "positive_count": 3,
+                    "positive_prevalence": 0.006864988558352402,
+                    "roc_auc": 0.6470814132104454,
+                    "average_precision": 0.17124332570556827
+                  },
+                  {
+                    "site": "scalessio",
+                    "sample_count": 440,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "skyhubfr",
+                    "sample_count": 420,
+                    "positive_count": 3,
+                    "positive_prevalence": 0.007142857142857143,
+                    "roc_auc": 0.8193445243804955,
+                    "average_precision": 0.4468253968253968
+                  }
+                ]
+              }
+            },
+            "best_baseline": "action_duration_lookup"
+          }
+        }
+      },
+      "viability_checks": {
+        "persistent_positive_sites": true,
+        "persistent_not_overconcentrated": false,
+        "beneficial_positive_sites": true,
+        "beneficial_not_overconcentrated": false,
+        "beneficial_predictability": true,
+        "avoided_dirty_scenes": true
+      },
+      "label_viability_gate_passed": false
+    },
+    "64": {
+      "n_channels": 64,
+      "incremental_bits": 67,
+      "resolved_train_site_count": 13,
+      "resolved_validation_site_count": 5,
+      "site_audit": {
+        "Andrew_GVA": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 449,
+          "calibration_scenes": 4,
+          "model_sample_count": 435
+        },
+        "BGSOFIAMLADOST01": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 450,
+          "calibration_scenes": 4,
+          "model_sample_count": 436
+        },
+        "Bandon_Oregon_GAP1": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 448,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "Defcon1": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 426,
+          "calibration_scenes": 4,
+          "model_sample_count": 412
+        },
+        "EDLV": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 426,
+          "calibration_scenes": 4,
+          "model_sample_count": 412
+        },
+        "Espi1": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 377,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "Geneva": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 457,
+          "calibration_scenes": 4,
+          "model_sample_count": 443
+        },
+        "Giansense": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 442,
+          "calibration_scenes": 4,
+          "model_sample_count": 428
+        },
+        "HuldOne": {
+          "split": "validation",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 450,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "NFM-Electrosense-01": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "scene_count": 445,
+          "calibration_scenes": 4,
+          "model_sample_count": 431
+        },
+        "Nudelsalat_RPi": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 461,
+          "calibration_scenes": 4,
+          "model_sample_count": 447
+        },
+        "Oreland": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 457,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "Princeton1": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 443,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "Rapallo_Electrosense": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 458,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "SP8AKM": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 356,
+          "calibration_scenes": 4,
+          "model_sample_count": 342
+        },
+        "Skap_French_Riviera": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 451,
+          "calibration_scenes": 4,
+          "model_sample_count": 437
+        },
+        "Valbella": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 407,
+          "calibration_scenes": 4,
+          "model_sample_count": 393
+        },
+        "Zagreb": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 456,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "alcorcon1": {
+          "split": "validation",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 203,
+          "calibration_scenes": 4,
+          "model_sample_count": 189
+        },
+        "bcn-L": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 450,
+          "calibration_scenes": 4,
+          "model_sample_count": 436
+        },
+        "donostia-ategorrieta": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 453,
+          "calibration_scenes": 4,
+          "model_sample_count": 439
+        },
+        "goeppingen_I": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 326,
+          "calibration_scenes": 4,
+          "model_sample_count": 312
+        },
+        "imdea_adsb": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 451,
+          "calibration_scenes": 4,
+          "model_sample_count": 437
+        },
+        "miguel_murcia": {
+          "split": "train",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 455,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        },
+        "scalessio": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 454,
+          "calibration_scenes": 4,
+          "model_sample_count": 440
+        },
+        "skyhubfr": {
+          "split": "train",
+          "resolved": true,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "scene_count": 434,
+          "calibration_scenes": 4,
+          "model_sample_count": 420
+        },
+        "vlenders_burgdorf": {
+          "split": "validation",
+          "resolved": false,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "scene_count": 423,
+          "calibration_scenes": 16,
+          "model_sample_count": 0
+        }
+      },
+      "training_event_distributions": {
+        "any_failure": {
+          "sample_count": 5467,
+          "positive_count": 1671,
+          "positive_prevalence": 0.30565209438448876,
+          "positive_site_count": 8,
+          "dominant_positive_site": "donostia-ategorrieta",
+          "dominant_positive_count": 426,
+          "dominant_site_event_share": 0.25493716337522443,
+          "positive_count_by_site": {
+            "Andrew_GVA": 366,
+            "Defcon1": 75,
+            "Giansense": 124,
+            "NFM-Electrosense-01": 0,
+            "Nudelsalat_RPi": 302,
+            "Skap_French_Riviera": 276,
+            "Valbella": 0,
+            "bcn-L": 0,
+            "donostia-ategorrieta": 426,
+            "goeppingen_I": 0,
+            "imdea_adsb": 43,
+            "scalessio": 0,
+            "skyhubfr": 59
+          }
+        },
+        "persistent_failure": {
+          "2": {
+            "sample_count": 5467,
+            "positive_count": 768,
+            "positive_prevalence": 0.14047923907078835,
+            "positive_site_count": 8,
+            "dominant_positive_site": "donostia-ategorrieta",
+            "dominant_positive_count": 270,
+            "dominant_site_event_share": 0.3515625,
+            "positive_count_by_site": {
+              "Andrew_GVA": 204,
+              "Defcon1": 17,
+              "Giansense": 13,
+              "NFM-Electrosense-01": 0,
+              "Nudelsalat_RPi": 177,
+              "Skap_French_Riviera": 84,
+              "Valbella": 0,
+              "bcn-L": 0,
+              "donostia-ategorrieta": 270,
+              "goeppingen_I": 0,
+              "imdea_adsb": 2,
+              "scalessio": 0,
+              "skyhubfr": 1
+            }
+          },
+          "3": {
+            "sample_count": 5467,
+            "positive_count": 448,
+            "positive_prevalence": 0.08194622279129321,
+            "positive_site_count": 8,
+            "dominant_positive_site": "donostia-ategorrieta",
+            "dominant_positive_count": 177,
+            "dominant_site_event_share": 0.3950892857142857,
+            "positive_count_by_site": {
+              "Andrew_GVA": 82,
+              "Defcon1": 8,
+              "Giansense": 13,
+              "NFM-Electrosense-01": 0,
+              "Nudelsalat_RPi": 133,
+              "Skap_French_Riviera": 32,
+              "Valbella": 0,
+              "bcn-L": 0,
+              "donostia-ategorrieta": 177,
+              "goeppingen_I": 0,
+              "imdea_adsb": 2,
+              "scalessio": 0,
+              "skyhubfr": 1
+            }
+          }
+        },
+        "forced_refresh_beneficial": {
+          "sample_count": 5467,
+          "positive_count": 469,
+          "positive_prevalence": 0.08578745198463508,
+          "positive_site_count": 8,
+          "dominant_positive_site": "Nudelsalat_RPi",
+          "dominant_positive_count": 151,
+          "dominant_site_event_share": 0.32196162046908317,
+          "positive_count_by_site": {
+            "Andrew_GVA": 80,
+            "Defcon1": 7,
+            "Giansense": 13,
+            "NFM-Electrosense-01": 0,
+            "Nudelsalat_RPi": 151,
+            "Skap_French_Riviera": 71,
+            "Valbella": 0,
+            "bcn-L": 0,
+            "donostia-ategorrieta": 137,
+            "goeppingen_I": 0,
+            "imdea_adsb": 5,
+            "scalessio": 0,
+            "skyhubfr": 5
+          }
+        }
+      },
+      "event_distributions": {
+        "any_failure": {
+          "sample_count": 1822,
+          "positive_count": 443,
+          "positive_prevalence": 0.24313940724478594,
+          "positive_site_count": 4,
+          "dominant_positive_site": "EDLV",
+          "dominant_positive_count": 409,
+          "dominant_site_event_share": 0.9232505643340858,
+          "positive_count_by_site": {
+            "BGSOFIAMLADOST01": 11,
+            "EDLV": 409,
+            "Geneva": 11,
+            "SP8AKM": 12,
+            "alcorcon1": 0
+          }
+        },
+        "transient_failure": {
+          "sample_count": 1822,
+          "positive_count": 110,
+          "positive_prevalence": 0.06037321624588365,
+          "positive_site_count": 4,
+          "dominant_positive_site": "EDLV",
+          "dominant_positive_count": 89,
+          "dominant_site_event_share": 0.8090909090909091,
+          "positive_count_by_site": {
+            "BGSOFIAMLADOST01": 10,
+            "EDLV": 89,
+            "Geneva": 10,
+            "SP8AKM": 1,
+            "alcorcon1": 0
+          }
+        },
+        "persistent_failure": {
+          "2": {
+            "sample_count": 1822,
+            "positive_count": 333,
+            "positive_prevalence": 0.18276619099890232,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 320,
+            "dominant_site_event_share": 0.960960960960961,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 1,
+              "EDLV": 320,
+              "Geneva": 1,
+              "SP8AKM": 11,
+              "alcorcon1": 0
+            }
+          },
+          "3": {
+            "sample_count": 1822,
+            "positive_count": 156,
+            "positive_prevalence": 0.08562019758507135,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 152,
+            "dominant_site_event_share": 0.9743589743589743,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 1,
+              "EDLV": 152,
+              "Geneva": 1,
+              "SP8AKM": 2,
+              "alcorcon1": 0
+            }
+          }
+        },
+        "forced_refresh_beneficial": {
+          "sample_count": 1822,
+          "positive_count": 136,
+          "positive_prevalence": 0.07464324917672886,
+          "positive_site_count": 4,
+          "dominant_positive_site": "EDLV",
+          "dominant_positive_count": 133,
+          "dominant_site_event_share": 0.9779411764705882,
+          "positive_count_by_site": {
+            "BGSOFIAMLADOST01": 1,
+            "EDLV": 133,
+            "Geneva": 1,
+            "SP8AKM": 1,
+            "alcorcon1": 0
+          }
+        },
+        "net_positive_by_clean_scene_value_bits": {
+          "32": {
+            "sample_count": 1822,
+            "positive_count": 79,
+            "positive_prevalence": 0.0433589462129528,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 76,
+            "dominant_site_event_share": 0.9620253164556962,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 1,
+              "EDLV": 76,
+              "Geneva": 1,
+              "SP8AKM": 1,
+              "alcorcon1": 0
+            }
+          },
+          "64": {
+            "sample_count": 1822,
+            "positive_count": 106,
+            "positive_prevalence": 0.05817782656421515,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 103,
+            "dominant_site_event_share": 0.9716981132075472,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 1,
+              "EDLV": 103,
+              "Geneva": 1,
+              "SP8AKM": 1,
+              "alcorcon1": 0
+            }
+          },
+          "128": {
+            "sample_count": 1822,
+            "positive_count": 136,
+            "positive_prevalence": 0.07464324917672886,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 133,
+            "dominant_site_event_share": 0.9779411764705882,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 1,
+              "EDLV": 133,
+              "Geneva": 1,
+              "SP8AKM": 1,
+              "alcorcon1": 0
+            }
+          },
+          "256": {
+            "sample_count": 1822,
+            "positive_count": 136,
+            "positive_prevalence": 0.07464324917672886,
+            "positive_site_count": 4,
+            "dominant_positive_site": "EDLV",
+            "dominant_positive_count": 133,
+            "dominant_site_event_share": 0.9779411764705882,
+            "positive_count_by_site": {
+              "BGSOFIAMLADOST01": 1,
+              "EDLV": 133,
+              "Geneva": 1,
+              "SP8AKM": 1,
+              "alcorcon1": 0
+            }
+          }
+        },
+        "transient_fraction_among_any_failures": 0.24830699774266365,
+        "persistent_fraction_among_any_failures": 0.7516930022573364
+      },
+      "forced_refresh_effect": {
+        "beneficial_count": 136,
+        "median_avoided_dirty_scenes": 3.0,
+        "mean_avoided_dirty_scenes": 3.3455882352941178,
+        "median_avoided_excess_regret_db": 1.3359294323863669,
+        "median_break_even_bits_per_avoided_dirty_scene": 22.333333333333332,
+        "negative_value_count": 92
+      },
+      "strong_baseline_predictability": {
+        "persistent_failure": {
+          "baselines": {
+            "action_duration_lookup": {
+              "aggregate_auc": 0.9528232060132664,
+              "average_precision": 0.7637769857055341,
+              "macro_within_site_auc": 0.7872727413852258,
+              "evaluable_site_count": 4,
+              "site_metrics": [
+                {
+                  "site": "BGSOFIAMLADOST01",
+                  "sample_count": 436,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.0022935779816513763,
+                  "roc_auc": 0.9977011494252873,
+                  "average_precision": 0.3333333333333333
+                },
+                {
+                  "site": "EDLV",
+                  "sample_count": 412,
+                  "positive_count": 320,
+                  "positive_prevalence": 0.7766990291262136,
+                  "roc_auc": 0.5830672554347825,
+                  "average_precision": 0.8107135324555906
+                },
+                {
+                  "site": "Geneva",
+                  "sample_count": 443,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.002257336343115124,
+                  "roc_auc": 0.997737556561086,
+                  "average_precision": 0.3333333333333333
+                },
+                {
+                  "site": "SP8AKM",
+                  "sample_count": 342,
+                  "positive_count": 11,
+                  "positive_prevalence": 0.03216374269005848,
+                  "roc_auc": 0.5705850041197473,
+                  "average_precision": 0.11722488038277512
+                },
+                {
+                  "site": "alcorcon1",
+                  "sample_count": 189,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                }
+              ]
+            },
+            "symbol_markov_duration_lookup": {
+              "aggregate_auc": 0.9544184883338678,
+              "average_precision": 0.7816127795947524,
+              "macro_within_site_auc": 0.782332781779993,
+              "evaluable_site_count": 4,
+              "site_metrics": [
+                {
+                  "site": "BGSOFIAMLADOST01",
+                  "sample_count": 436,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.0022935779816513763,
+                  "roc_auc": 1.0,
+                  "average_precision": 1.0
+                },
+                {
+                  "site": "EDLV",
+                  "sample_count": 412,
+                  "positive_count": 320,
+                  "positive_prevalence": 0.7766990291262136,
+                  "roc_auc": 0.5887398097826088,
+                  "average_precision": 0.8150259859715752
+                },
+                {
+                  "site": "Geneva",
+                  "sample_count": 443,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.002257336343115124,
+                  "roc_auc": 0.9694570135746606,
+                  "average_precision": 0.06666666666666667
+                },
+                {
+                  "site": "SP8AKM",
+                  "sample_count": 342,
+                  "positive_count": 11,
+                  "positive_prevalence": 0.03216374269005848,
+                  "roc_auc": 0.5711343037627026,
+                  "average_precision": 0.20813397129186603
+                },
+                {
+                  "site": "alcorcon1",
+                  "sample_count": 189,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                }
+              ]
+            }
+          },
+          "best_baseline": "action_duration_lookup"
+        },
+        "forced_refresh_beneficial": {
+          "baselines": {
+            "action_duration_lookup": {
+              "aggregate_auc": 0.9419767462145,
+              "average_precision": 0.4235878980911146,
+              "macro_within_site_auc": 0.9158010401697058,
+              "evaluable_site_count": 4,
+              "site_metrics": [
+                {
+                  "site": "BGSOFIAMLADOST01",
+                  "sample_count": 436,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.0022935779816513763,
+                  "roc_auc": 0.9977011494252873,
+                  "average_precision": 0.3333333333333333
+                },
+                {
+                  "site": "EDLV",
+                  "sample_count": 412,
+                  "positive_count": 133,
+                  "positive_prevalence": 0.32281553398058255,
+                  "roc_auc": 0.6721642816719217,
+                  "average_precision": 0.4323752679783092
+                },
+                {
+                  "site": "Geneva",
+                  "sample_count": 443,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.002257336343115124,
+                  "roc_auc": 0.997737556561086,
+                  "average_precision": 0.3333333333333333
+                },
+                {
+                  "site": "SP8AKM",
+                  "sample_count": 342,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.0029239766081871343,
+                  "roc_auc": 0.9956011730205279,
+                  "average_precision": 0.25
+                },
+                {
+                  "site": "alcorcon1",
+                  "sample_count": 189,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                }
+              ]
+            },
+            "symbol_markov_duration_lookup": {
+              "aggregate_auc": 0.9591706789477357,
+              "average_precision": 0.5686251847145611,
+              "macro_within_site_auc": 0.9391650875784003,
+              "evaluable_site_count": 4,
+              "site_metrics": [
+                {
+                  "site": "BGSOFIAMLADOST01",
+                  "sample_count": 436,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.0022935779816513763,
+                  "roc_auc": 1.0,
+                  "average_precision": 1.0
+                },
+                {
+                  "site": "EDLV",
+                  "sample_count": 412,
+                  "positive_count": 133,
+                  "positive_prevalence": 0.32281553398058255,
+                  "roc_auc": 0.7697738971083623,
+                  "average_precision": 0.5703295228412539
+                },
+                {
+                  "site": "Geneva",
+                  "sample_count": 443,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.002257336343115124,
+                  "roc_auc": 0.9898190045248869,
+                  "average_precision": 0.16666666666666666
+                },
+                {
+                  "site": "SP8AKM",
+                  "sample_count": 342,
+                  "positive_count": 1,
+                  "positive_prevalence": 0.0029239766081871343,
+                  "roc_auc": 0.9970674486803519,
+                  "average_precision": 0.5
+                },
+                {
+                  "site": "alcorcon1",
+                  "sample_count": 189,
+                  "positive_count": 0,
+                  "positive_prevalence": 0.0,
+                  "roc_auc": null,
+                  "average_precision": null
+                }
+              ]
+            }
+          },
+          "best_baseline": "symbol_markov_duration_lookup"
+        },
+        "training_leave_one_site_out": {
+          "persistent_failure": {
+            "baselines": {
+              "action_duration_lookup": {
+                "aggregate_auc": 0.837293478887352,
+                "macro_within_site_auc": 0.7523446450168163,
+                "evaluable_site_count": 8,
+                "site_metrics": [
+                  {
+                    "site": "Andrew_GVA",
+                    "sample_count": 435,
+                    "positive_count": 204,
+                    "positive_prevalence": 0.4689655172413793,
+                    "roc_auc": 0.6024000509294627,
+                    "average_precision": 0.540964901060671
+                  },
+                  {
+                    "site": "Defcon1",
+                    "sample_count": 412,
+                    "positive_count": 17,
+                    "positive_prevalence": 0.0412621359223301,
+                    "roc_auc": 0.6883097542814595,
+                    "average_precision": 0.25713877784123357
+                  },
+                  {
+                    "site": "Giansense",
+                    "sample_count": 428,
+                    "positive_count": 13,
+                    "positive_prevalence": 0.030373831775700934,
+                    "roc_auc": 0.983132530120482,
+                    "average_precision": 0.48148148148148145
+                  },
+                  {
+                    "site": "NFM-Electrosense-01",
+                    "sample_count": 431,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Nudelsalat_RPi",
+                    "sample_count": 447,
+                    "positive_count": 177,
+                    "positive_prevalence": 0.3959731543624161,
+                    "roc_auc": 0.39024900606821517,
+                    "average_precision": 0.3472755989432511
+                  },
+                  {
+                    "site": "Skap_French_Riviera",
+                    "sample_count": 437,
+                    "positive_count": 84,
+                    "positive_prevalence": 0.19221967963386727,
+                    "roc_auc": 0.617664912990692,
+                    "average_precision": 0.2353157354676041
+                  },
+                  {
+                    "site": "Valbella",
+                    "sample_count": 393,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "bcn-L",
+                    "sample_count": 436,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "donostia-ategorrieta",
+                    "sample_count": 439,
+                    "positive_count": 270,
+                    "positive_prevalence": 0.6150341685649203,
+                    "roc_auc": 0.7569800569800569,
+                    "average_precision": 0.7860020378671395
+                  },
+                  {
+                    "site": "goeppingen_I",
+                    "sample_count": 312,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "imdea_adsb",
+                    "sample_count": 437,
+                    "positive_count": 2,
+                    "positive_prevalence": 0.004576659038901602,
+                    "roc_auc": 0.9919540229885058,
+                    "average_precision": 0.2222222222222222
+                  },
+                  {
+                    "site": "scalessio",
+                    "sample_count": 440,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "skyhubfr",
+                    "sample_count": 420,
+                    "positive_count": 1,
+                    "positive_prevalence": 0.002380952380952381,
+                    "roc_auc": 0.9880668257756563,
+                    "average_precision": 0.09090909090909091
+                  }
+                ]
+              },
+              "symbol_markov_duration_lookup": {
+                "aggregate_auc": 0.7857438362328865,
+                "macro_within_site_auc": 0.697756842073243,
+                "evaluable_site_count": 8,
+                "site_metrics": [
+                  {
+                    "site": "Andrew_GVA",
+                    "sample_count": 435,
+                    "positive_count": 204,
+                    "positive_prevalence": 0.4689655172413793,
+                    "roc_auc": 0.6011055937526526,
+                    "average_precision": 0.5702536633728803
+                  },
+                  {
+                    "site": "Defcon1",
+                    "sample_count": 412,
+                    "positive_count": 17,
+                    "positive_prevalence": 0.0412621359223301,
+                    "roc_auc": 0.6920327624720775,
+                    "average_precision": 0.4649819150961355
+                  },
+                  {
+                    "site": "Giansense",
+                    "sample_count": 428,
+                    "positive_count": 13,
+                    "positive_prevalence": 0.030373831775700934,
+                    "roc_auc": 1.0,
+                    "average_precision": 1.0
+                  },
+                  {
+                    "site": "NFM-Electrosense-01",
+                    "sample_count": 431,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Nudelsalat_RPi",
+                    "sample_count": 447,
+                    "positive_count": 177,
+                    "positive_prevalence": 0.3959731543624161,
+                    "roc_auc": 0.3964950826532747,
+                    "average_precision": 0.430109713354681
+                  },
+                  {
+                    "site": "Skap_French_Riviera",
+                    "sample_count": 437,
+                    "positive_count": 84,
+                    "positive_prevalence": 0.19221967963386727,
+                    "roc_auc": 0.6066707136112235,
+                    "average_precision": 0.2372176602271009
+                  },
+                  {
+                    "site": "Valbella",
+                    "sample_count": 393,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "bcn-L",
+                    "sample_count": 436,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "donostia-ategorrieta",
+                    "sample_count": 439,
+                    "positive_count": 270,
+                    "positive_prevalence": 0.6150341685649203,
+                    "roc_auc": 0.29282270436116586,
+                    "average_precision": 0.5449352769365028
+                  },
+                  {
+                    "site": "goeppingen_I",
+                    "sample_count": 312,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "imdea_adsb",
+                    "sample_count": 437,
+                    "positive_count": 2,
+                    "positive_prevalence": 0.004576659038901602,
+                    "roc_auc": 0.9977011494252874,
+                    "average_precision": 0.5
+                  },
+                  {
+                    "site": "scalessio",
+                    "sample_count": 440,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "skyhubfr",
+                    "sample_count": 420,
+                    "positive_count": 1,
+                    "positive_prevalence": 0.002380952380952381,
+                    "roc_auc": 0.9952267303102625,
+                    "average_precision": 0.2
+                  }
+                ]
+              }
+            },
+            "best_baseline": "action_duration_lookup"
+          },
+          "forced_refresh_beneficial": {
+            "baselines": {
+              "action_duration_lookup": {
+                "aggregate_auc": 0.8757035863385867,
+                "macro_within_site_auc": 0.7754541326068625,
+                "evaluable_site_count": 8,
+                "site_metrics": [
+                  {
+                    "site": "Andrew_GVA",
+                    "sample_count": 435,
+                    "positive_count": 80,
+                    "positive_prevalence": 0.1839080459770115,
+                    "roc_auc": 0.7276056338028168,
+                    "average_precision": 0.30678539633717317
+                  },
+                  {
+                    "site": "Defcon1",
+                    "sample_count": 412,
+                    "positive_count": 7,
+                    "positive_prevalence": 0.01699029126213592,
+                    "roc_auc": 0.9888888888888889,
+                    "average_precision": 0.4375
+                  },
+                  {
+                    "site": "Giansense",
+                    "sample_count": 428,
+                    "positive_count": 13,
+                    "positive_prevalence": 0.030373831775700934,
+                    "roc_auc": 0.983132530120482,
+                    "average_precision": 0.48148148148148145
+                  },
+                  {
+                    "site": "NFM-Electrosense-01",
+                    "sample_count": 431,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Nudelsalat_RPi",
+                    "sample_count": 447,
+                    "positive_count": 151,
+                    "positive_prevalence": 0.3378076062639821,
+                    "roc_auc": 0.46038795417934486,
+                    "average_precision": 0.32050747248831934
+                  },
+                  {
+                    "site": "Skap_French_Riviera",
+                    "sample_count": 437,
+                    "positive_count": 71,
+                    "positive_prevalence": 0.16247139588100687,
+                    "roc_auc": 0.6295312860771185,
+                    "average_precision": 0.21104519849525888
+                  },
+                  {
+                    "site": "Valbella",
+                    "sample_count": 393,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "bcn-L",
+                    "sample_count": 436,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "donostia-ategorrieta",
+                    "sample_count": 439,
+                    "positive_count": 137,
+                    "positive_prevalence": 0.3120728929384966,
+                    "roc_auc": 0.757855174747426,
+                    "average_precision": 0.4853787935872792
+                  },
+                  {
+                    "site": "goeppingen_I",
+                    "sample_count": 312,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "imdea_adsb",
+                    "sample_count": 437,
+                    "positive_count": 5,
+                    "positive_prevalence": 0.011441647597254004,
+                    "roc_auc": 0.8861111111111112,
+                    "average_precision": 0.35784388507500636
+                  },
+                  {
+                    "site": "scalessio",
+                    "sample_count": 440,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "skyhubfr",
+                    "sample_count": 420,
+                    "positive_count": 5,
+                    "positive_prevalence": 0.011904761904761904,
+                    "roc_auc": 0.7701204819277109,
+                    "average_precision": 0.16839826839826838
+                  }
+                ]
+              },
+              "symbol_markov_duration_lookup": {
+                "aggregate_auc": 0.8719986928673389,
+                "macro_within_site_auc": 0.7716026176888919,
+                "evaluable_site_count": 8,
+                "site_metrics": [
+                  {
+                    "site": "Andrew_GVA",
+                    "sample_count": 435,
+                    "positive_count": 80,
+                    "positive_prevalence": 0.1839080459770115,
+                    "roc_auc": 0.7327112676056339,
+                    "average_precision": 0.39033921408606953
+                  },
+                  {
+                    "site": "Defcon1",
+                    "sample_count": 412,
+                    "positive_count": 7,
+                    "positive_prevalence": 0.01699029126213592,
+                    "roc_auc": 0.998589065255732,
+                    "average_precision": 0.8596938775510203
+                  },
+                  {
+                    "site": "Giansense",
+                    "sample_count": 428,
+                    "positive_count": 13,
+                    "positive_prevalence": 0.030373831775700934,
+                    "roc_auc": 1.0,
+                    "average_precision": 1.0
+                  },
+                  {
+                    "site": "NFM-Electrosense-01",
+                    "sample_count": 431,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "Nudelsalat_RPi",
+                    "sample_count": 447,
+                    "positive_count": 151,
+                    "positive_prevalence": 0.3378076062639821,
+                    "roc_auc": 0.38303203866117774,
+                    "average_precision": 0.31834172342808587
+                  },
+                  {
+                    "site": "Skap_French_Riviera",
+                    "sample_count": 437,
+                    "positive_count": 71,
+                    "positive_prevalence": 0.16247139588100687,
+                    "roc_auc": 0.6017663357192333,
+                    "average_precision": 0.19524775778146966
+                  },
+                  {
+                    "site": "Valbella",
+                    "sample_count": 393,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "bcn-L",
+                    "sample_count": 436,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "donostia-ategorrieta",
+                    "sample_count": 439,
+                    "positive_count": 137,
+                    "positive_prevalence": 0.3120728929384966,
+                    "roc_auc": 0.7915236622033162,
+                    "average_precision": 0.6044562972990215
+                  },
+                  {
+                    "site": "goeppingen_I",
+                    "sample_count": 312,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "imdea_adsb",
+                    "sample_count": 437,
+                    "positive_count": 5,
+                    "positive_prevalence": 0.011441647597254004,
+                    "roc_auc": 0.8907407407407408,
+                    "average_precision": 0.8022883295194508
+                  },
+                  {
+                    "site": "scalessio",
+                    "sample_count": 440,
+                    "positive_count": 0,
+                    "positive_prevalence": 0.0,
+                    "roc_auc": null,
+                    "average_precision": null
+                  },
+                  {
+                    "site": "skyhubfr",
+                    "sample_count": 420,
+                    "positive_count": 5,
+                    "positive_prevalence": 0.011904761904761904,
+                    "roc_auc": 0.7744578313253012,
+                    "average_precision": 0.36476190476190473
+                  }
+                ]
+              }
+            },
+            "best_baseline": "action_duration_lookup"
+          }
+        }
+      },
+      "viability_checks": {
+        "persistent_positive_sites": true,
+        "persistent_not_overconcentrated": false,
+        "beneficial_positive_sites": true,
+        "beneficial_not_overconcentrated": false,
+        "beneficial_predictability": true,
+        "avoided_dirty_scenes": true
+      },
+      "label_viability_gate_passed": false
+    }
+  },
+  "decision": {
+    "passing_n_count": 0,
+    "required_n_count": 3,
+    "label_viability_gate_passed": false,
+    "next_action": "retain_event_decomposition_but_require_more_temporally_diverse_sites_before_value_prediction"
+  },
+  "governance_checks": {
+    "internal_development_test_not_loaded": true,
+    "reserve_remained_unread": true,
+    "future_used_only_for_labels_and_counterfactuals": true,
+    "full_protocol_benefit_claim_forbidden": true,
+    "external_final_claim_forbidden": true
+  },
+  "elapsed_seconds": 30.502685600000405,
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "scikit-learn": "1.5.1"
+    }
+  },
+  "claim_boundary": [
+    "Only the 20 train and 7 validation sites may be loaded.",
+    "The 7 internal development-test and 3 reserve sites remain closed.",
+    "S7.3a is a deterministic semantic-action counterfactual upper bound, not a packet-level reliability result.",
+    "The forced-refresh action is recomputed at scene t+1 and is not future information available at scene t; scene t only schedules the refresh opportunity.",
+    "Future spectra are used only to construct labels and counterfactual outcomes, never as inference features.",
+    "No clean-bit system benefit may be claimed until S7.3b simulates packet loss, ACK loss, context resets, duplicates, recovery, and all protocol bits.",
+    "No result from these already consumed sites may be called a Stage-7 external Final."
+  ]
+}
