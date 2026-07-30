@@ -72,6 +72,8 @@ class ActivationMatchedTrajectoryResult:
     full_install_fallback_count: int
     full_initial_install_bits: int
     full_recovery_install_bits: int
+    forced_update_request_count: int
+    forced_update_redundant_count: int
 
 
 def simulate_activation_semantic_trajectory(
@@ -222,6 +224,8 @@ def simulate_activation_semantic_trajectory(
     full_install_fallback_count = 0
     full_initial_install_bits = 0
     full_recovery_install_bits = 0
+    forced_update_request_count = 0
+    forced_update_redundant_count = 0
     available_rows: list[bool] = []
     clean_rows: list[bool] = []
     effective_regret: list[float] = []
@@ -469,14 +473,18 @@ def simulate_activation_semantic_trajectory(
             timestamp_local=timestamp,
             codebook_epoch=sender_session.epoch,
         )
-        should_update = (
+        analytic_update = (
             worst_regret > float(epsilon_db) + 1e-12
             or worst_age > float(max_age_minutes)
-            or (
-                forced_update_triggers is not None
-                and bool(forced_update_triggers[local_position])
-            )
         )
+        forced_update = (
+            forced_update_triggers is not None
+            and bool(forced_update_triggers[local_position])
+        )
+        if forced_update:
+            forced_update_request_count += 1
+            forced_update_redundant_count += int(analytic_update)
+        should_update = analytic_update or forced_update
 
         current_ack_delivered = False
         current_ack_epoch: int | None = None
@@ -659,4 +667,6 @@ def simulate_activation_semantic_trajectory(
         full_install_fallback_count=full_install_fallback_count,
         full_initial_install_bits=full_initial_install_bits,
         full_recovery_install_bits=full_recovery_install_bits,
+        forced_update_request_count=forced_update_request_count,
+        forced_update_redundant_count=forced_update_redundant_count,
     )

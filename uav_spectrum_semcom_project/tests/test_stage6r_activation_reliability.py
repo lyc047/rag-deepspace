@@ -267,6 +267,8 @@ def test_stage7_forced_update_uses_normal_reliability_and_bit_paths() -> None:
         forced.matched.bit_breakdown.compact_update_bits
         == baseline.matched.bit_breakdown.compact_update_bits + compact_bits
     )
+    assert forced.forced_update_request_count == 1
+    assert forced.forced_update_redundant_count == 0
     assert forced.matched.wrong_codebook_decode_count == 0
 
 
