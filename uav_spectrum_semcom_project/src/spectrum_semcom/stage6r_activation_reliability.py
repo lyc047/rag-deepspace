@@ -98,8 +98,16 @@ def simulate_activation_semantic_trajectory(
     heartbeat_response_frame_bits: int,
     task_open_loop_attempts: int,
     compact_codeword_frame_bits: int,
+    heartbeat_trigger_mask: np.ndarray | None = None,
 ) -> ActivationMatchedTrajectoryResult:
-    """Simulate known-bank activation or OOD full-install fallback."""
+    """Simulate known-bank activation or OOD full-install fallback.
+
+    ``heartbeat_trigger_mask`` is a Stage-7 research hook.  When omitted, the
+    frozen Stage-6R fixed-interval behavior is unchanged.  When supplied, the
+    aligned Boolean mask replaces the fixed interval and requests a heartbeat
+    at selected evaluation scenes.  It does not bypass any context, identity,
+    regret, escape, or fail-closed check.
+    """
 
     indices = _validate_common_inputs(
         states,
@@ -120,6 +128,23 @@ def simulate_activation_semantic_trajectory(
         or int(compact_codeword_frame_bits) < 1
     ):
         raise ValueError("invalid activation reliability configuration")
+    heartbeat_triggers = (
+        None
+        if heartbeat_trigger_mask is None
+        else np.asarray(heartbeat_trigger_mask, dtype=bool).reshape(-1)
+    )
+    if (
+        heartbeat_triggers is not None
+        and heartbeat_triggers.shape != (indices.size,)
+    ):
+        raise ValueError("heartbeat trigger mask must align with evaluation indices")
+    if (
+        heartbeat_triggers is not None
+        and heartbeat_interval_scenes is not None
+    ):
+        raise ValueError(
+            "fixed heartbeat interval and trigger mask are mutually exclusive"
+        )
     probabilities = {
         key: float(condition[key])
         for key in (
@@ -194,10 +219,17 @@ def simulate_activation_semantic_trajectory(
         ):
             receiver = _ReceiverState()
 
+        heartbeat_due = (
+            bool(heartbeat_triggers[local_position])
+            if heartbeat_triggers is not None
+            else (
+                heartbeat_interval_scenes is not None
+                and scenes_since_successful_feedback
+                >= int(heartbeat_interval_scenes)
+            )
+        )
         if (
-            heartbeat_interval_scenes is not None
-            and scenes_since_successful_feedback
-            >= int(heartbeat_interval_scenes)
+            heartbeat_due
             and not belief_requires_context_install(
                 belief, codebook_epoch=sender_session.epoch
             )

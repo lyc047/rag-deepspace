@@ -1,0 +1,90 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage7_s7_0_oracle_headroom_v1",
+  "status": "registered_before_execution",
+  "created_date": "2026-07-30",
+  "evidence_role": "stage7_development_oracle_upper_bound_not_external_final",
+  "purpose": "Audit multi-horizon task/context labels and test whether perfect reset-risk information has enough full-protocol clean-versus-bit headroom to justify Stage-7 predictive modeling.",
+  "inputs": {
+    "governance": "configs/stage7_research_governance_v1.json",
+    "electrosense_protocol": "configs/stage6r_electrosense_external_final_protocol_v1.json",
+    "electrosense_registry": "results/stage6r/electrosense_final_registry_v1/registry.json",
+    "electrosense_access_state": "configs/stage6r_electrosense_final_access_state_v1.json",
+    "electrosense_freeze": "results/stage6r/electrosense_final_freeze_v1/result.json",
+    "matched_scan_config": "configs/stage6r_matched_clean_scan_v1.json",
+    "activation_protocol": "configs/stage6r_codebook_activation_protocol_v1.json"
+  },
+  "data": {
+    "development_roles": [
+      "pilot",
+      "stage6_final",
+      "confirmation_lockbox"
+    ],
+    "expected_development_site_count": 34,
+    "reserve_role_must_remain_unread": true,
+    "reserve_values_may_be_read": false,
+    "deterministic_split_salt": "stage7-electrosense-development-split-v1",
+    "split_counts": {
+      "train": 20,
+      "validation": 7,
+      "internal_development_test": 7
+    }
+  },
+  "task": {
+    "n_channels": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "demand_ratios": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "epsilon_db": 0.2,
+    "primary_k": 4,
+    "prediction_horizons_scenes": [
+      1,
+      3,
+      5,
+      10
+    ]
+  },
+  "reliability": {
+    "fixed_baseline_heartbeat_scenes": 10,
+    "oracle": "perfect_same_scene_receiver_reset_trigger",
+    "oracle_is_noncausal_upper_bound": true,
+    "all_other_stage6r_workpoint_fields_frozen": true,
+    "maximum_activation_attempts": 2,
+    "catalog_epoch": 1,
+    "codebook_epoch": 2,
+    "paired_common_random_numbers": true
+  },
+  "monte_carlo": {
+    "trajectories": 60,
+    "random_seed": 20260730,
+    "bootstrap_replicates": 5000,
+    "bootstrap_seed": 20260817,
+    "confidence_level": 0.95,
+    "hierarchical_bootstrap_unit": "site_then_paired_trajectory"
+  },
+  "oracle_headroom_gate": {
+    "minimum_total_bit_reduction_percent": 5.0,
+    "maximum_clean_loss_percentage_points": 0.5,
+    "or_minimum_clean_gain_percentage_points": 1.0,
+    "minimum_passing_n_count": 3,
+    "total_n_count": 4,
+    "wrong_codebook_actions_must_equal": 0,
+    "if_gate_fails": "stop_complex_prediction_and_study_stateless_or_periodically_self_contained_protocols",
+    "if_gate_passes": "continue_to_s7_1_strong_baselines_and_causal_features"
+  },
+  "claim_boundary": [
+    "All 34 ElectroSense sites were already consumed in Stage 6 and are development-only in Stage 7.",
+    "The three reserve sites remain unread and are not loaded by this experiment.",
+    "The oracle reads the actual reset stream and is deliberately non-causal; it is an upper bound, not a deployable algorithm.",
+    "Fixed-heartbeat and oracle trajectories share all task, packet, ACK, delayed-duplicate, reset, activation, escape, and bit-accounting settings.",
+    "A positive oracle result only justifies predictive-model research; it does not prove that a causal model can realize the oracle gain.",
+    "No result from this experiment may be called a Stage-7 Final."
+  ]
+}

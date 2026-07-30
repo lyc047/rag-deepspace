@@ -1,0 +1,871 @@
+{
+  "version": "1.0",
+  "status": "stage7_s7_0_smoke_complete",
+  "verification_status": "ANALYZED",
+  "experiment_id": "stage7_s7_0_oracle_headroom_v1",
+  "config_sha256": "5791ee4a423aa8c74d216a12b9323bb977e427cd9f4f9e59296a0a9dae9f71e2",
+  "input_hashes": {
+    "governance": "67ebea7d6fba1d52a0c6777856ac28326180ff0600ebc08eb7ae5505d7b92462",
+    "electrosense_protocol": "8aeffb02c98b561026854cea4b11d6daf7277504abd9c6786b500707dd8ffd68",
+    "electrosense_registry": "3f56c862645391583e67316af29d64754e2cc390365d9c8238731859add9ba73",
+    "electrosense_access_state": "6c4105198a766c3925219bde3076379e0b10f9dfc0a1c6129cfeeaadc9df5ee3",
+    "electrosense_freeze": "41fd5bdf0e3f57b2f0ee571dec848585462216083f4ca9f851d0759e12bfcc0f",
+    "matched_scan_config": "6598125579d0e935a6003ce4d3b5c2997fab1746ffeda5ba51c94b93e3405fb3",
+    "activation_protocol": "4f89d46baea177a3bc6ca958a46dbf27dc8e772c21aa0b32cf21e5115b6afc36"
+  },
+  "archive_path": "F:\\spectrum_bands.tar.gz",
+  "archive_size_bytes": 1731443582,
+  "development_roles": [
+    "pilot",
+    "stage6_final",
+    "confirmation_lockbox"
+  ],
+  "development_site_count": 1,
+  "reserve_access_count_before_and_after": 0,
+  "development_split": {
+    "train": [
+      "bcn-L",
+      "Bandon_Oregon_GAP1",
+      "donostia-ategorrieta",
+      "Oreland",
+      "Rapallo_Electrosense",
+      "Espi1",
+      "skyhubfr",
+      "Princeton1",
+      "scalessio",
+      "imdea_adsb",
+      "Skap_French_Riviera",
+      "Nudelsalat_RPi",
+      "Giansense",
+      "NFM-Electrosense-01",
+      "miguel_murcia",
+      "Defcon1",
+      "Zagreb",
+      "Valbella",
+      "goeppingen_I",
+      "Andrew_GVA"
+    ],
+    "validation": [
+      "vlenders_burgdorf",
+      "Geneva",
+      "HuldOne",
+      "SP8AKM",
+      "alcorcon1",
+      "EDLV",
+      "BGSOFIAMLADOST01"
+    ],
+    "internal_development_test": [
+      "Britof",
+      "BZ_Italy",
+      "Sashatka",
+      "PiSDR1",
+      "CYD_EPFL_S",
+      "URJC1",
+      "dipolkurz"
+    ]
+  },
+  "n_results": {
+    "8": {
+      "n_channels": 8,
+      "evaluated_site_count": 1,
+      "resolved_semantic_site_count": 1,
+      "unresolved_exact_fallback_site_count": 0,
+      "label_audit": {
+        "1": {
+          "task_observed": 321,
+          "task_positive": 0,
+          "context_observed": 19260,
+          "context_positive": 409,
+          "any_positive": 409,
+          "task_positive_rate": 0.0,
+          "context_positive_rate": 0.021235721703011422,
+          "any_positive_rate": 0.021235721703011422
+        },
+        "3": {
+          "task_observed": 319,
+          "task_positive": 0,
+          "context_observed": 19140,
+          "context_positive": 1201,
+          "any_positive": 1201,
+          "task_positive_rate": 0.0,
+          "context_positive_rate": 0.06274817136886103,
+          "any_positive_rate": 0.06274817136886103
+        },
+        "5": {
+          "task_observed": 317,
+          "task_positive": 0,
+          "context_observed": 19020,
+          "context_positive": 1951,
+          "any_positive": 1951,
+          "task_positive_rate": 0.0,
+          "context_positive_rate": 0.10257623554153522,
+          "any_positive_rate": 0.10257623554153522
+        },
+        "10": {
+          "task_observed": 312,
+          "task_positive": 0,
+          "context_observed": 18720,
+          "context_positive": 3659,
+          "any_positive": 3659,
+          "task_positive_rate": 0.0,
+          "context_positive_rate": 0.1954594017094017,
+          "any_positive_rate": 0.1954594017094017
+        }
+      },
+      "comparison": {
+        "metrics": {
+          "clean_rate": {
+            "fixed10": {
+              "mean": 0.8973415132924334,
+              "ci_lower": 0.8843047034764827,
+              "ci_upper": 0.90920245398773,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 0.9954498977505112,
+              "ci_lower": 0.9943762781186095,
+              "ci_upper": 0.9964212678936605,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "availability_rate": {
+            "fixed10": {
+              "mean": 0.8973415132924334,
+              "ci_lower": 0.8844567995910022,
+              "ci_upper": 0.9096127300613498,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 0.9954498977505112,
+              "ci_lower": 0.9944274028629857,
+              "ci_upper": 0.9964212678936607,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "total_bits_per_scene": {
+            "fixed10": {
+              "mean": 17.280419222903884,
+              "ci_lower": 16.598976226993866,
+              "ci_upper": 18.038587678936608,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 9.851942740286297,
+              "ci_lower": 9.106621932515338,
+              "ci_upper": 10.650734918200406,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "heartbeat_bits_per_scene": {
+            "fixed10": {
+              "mean": 4.687116564417177,
+              "ci_lower": 4.620040899795502,
+              "ci_upper": 4.754192229038855,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 0.6658486707566463,
+              "ci_lower": 0.5889570552147239,
+              "ci_upper": 0.7427402862985685,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "recovery_bits_per_scene": {
+            "fixed10": {
+              "mean": 4.432208588957056,
+              "ci_lower": 3.9415529141104293,
+              "ci_upper": 4.966890337423312,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 2.683282208588957,
+              "ci_lower": 2.2832195807770965,
+              "ci_upper": 3.1193353783231084,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "wrong_codebook_decode_count": {
+            "fixed10": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          }
+        },
+        "paired_clean_gain_percentage_points": {
+          "mean": 9.810838445807773,
+          "ci_lower": 8.614519427402865,
+          "ci_upper": 11.109406952965236,
+          "bootstrap_unit": "site_then_paired_trajectory"
+        },
+        "paired_availability_gain_percentage_points": {
+          "mean": 9.810838445807773,
+          "ci_lower": 8.599182004089982,
+          "ci_upper": 11.078859918200408,
+          "bootstrap_unit": "site_then_paired_trajectory"
+        },
+        "paired_total_bit_reduction_percentage": {
+          "mean": 42.79221245375434,
+          "ci_lower": 38.89806358777738,
+          "ci_upper": 46.6516139115718,
+          "bootstrap_unit": "site_then_paired_trajectory"
+        }
+      },
+      "site_results": {
+        "goeppingen_I": {
+          "source_role": "pilot",
+          "scene_count": 326,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "resolved": true,
+          "calibration_scenes": 4,
+          "labels": {
+            "included": true,
+            "task_positive_rate": {
+              "1": 0.0,
+              "3": 0.0,
+              "5": 0.0,
+              "10": 0.0
+            },
+            "context_positive_rate": {
+              "1": 0.021235721703011422,
+              "3": 0.06274817136886103,
+              "5": 0.10257623554153522,
+              "10": 0.1954594017094017
+            },
+            "any_positive_rate": {
+              "1": 0.021235721703011422,
+              "3": 0.06274817136886103,
+              "5": 0.10257623554153522,
+              "10": 0.1954594017094017
+            }
+          },
+          "fixed10_mean_clean_rate": 0.8973415132924335,
+          "oracle_mean_clean_rate": 0.9954498977505112,
+          "fixed10_mean_total_bits_per_scene": 17.280419222903884,
+          "oracle_mean_total_bits_per_scene": 9.851942740286297
+        }
+      },
+      "gate": {
+        "bit_headroom_pass": true,
+        "clean_headroom_pass": true,
+        "wrong_codebook_actions_zero": true
+      }
+    },
+    "16": {
+      "n_channels": 16,
+      "evaluated_site_count": 1,
+      "resolved_semantic_site_count": 1,
+      "unresolved_exact_fallback_site_count": 0,
+      "label_audit": {
+        "1": {
+          "task_observed": 321,
+          "task_positive": 0,
+          "context_observed": 19260,
+          "context_positive": 365,
+          "any_positive": 365,
+          "task_positive_rate": 0.0,
+          "context_positive_rate": 0.018951194184839044,
+          "any_positive_rate": 0.018951194184839044
+        },
+        "3": {
+          "task_observed": 319,
+          "task_positive": 0,
+          "context_observed": 19140,
+          "context_positive": 1068,
+          "any_positive": 1068,
+          "task_positive_rate": 0.0,
+          "context_positive_rate": 0.05579937304075235,
+          "any_positive_rate": 0.05579937304075235
+        },
+        "5": {
+          "task_observed": 317,
+          "task_positive": 0,
+          "context_observed": 19020,
+          "context_positive": 1734,
+          "any_positive": 1734,
+          "task_positive_rate": 0.0,
+          "context_positive_rate": 0.09116719242902208,
+          "any_positive_rate": 0.09116719242902208
+        },
+        "10": {
+          "task_observed": 312,
+          "task_positive": 0,
+          "context_observed": 18720,
+          "context_positive": 3252,
+          "any_positive": 3252,
+          "task_positive_rate": 0.0,
+          "context_positive_rate": 0.1737179487179487,
+          "any_positive_rate": 0.1737179487179487
+        }
+      },
+      "comparison": {
+        "metrics": {
+          "clean_rate": {
+            "fixed10": {
+              "mean": 0.9127300613496933,
+              "ci_lower": 0.9017893660531697,
+              "ci_upper": 0.9237730061349694,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 0.9978527607361962,
+              "ci_lower": 0.9971370143149283,
+              "ci_upper": 0.9985173824130879,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "availability_rate": {
+            "fixed10": {
+              "mean": 0.9127300613496933,
+              "ci_lower": 0.9013803680981594,
+              "ci_upper": 0.9243353783231085,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 0.9978527607361962,
+              "ci_lower": 0.9970858895705522,
+              "ci_upper": 0.9985173824130879,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "total_bits_per_scene": {
+            "fixed10": {
+              "mean": 19.398466257668712,
+              "ci_lower": 18.763826687116566,
+              "ci_upper": 20.028931492842528,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 11.510531697341513,
+              "ci_lower": 10.920255623721882,
+              "ci_upper": 12.106062116564416,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "heartbeat_bits_per_scene": {
+            "fixed10": {
+              "mean": 4.826175869120653,
+              "ci_lower": 4.754192229038855,
+              "ci_upper": 4.899795501022494,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 0.5938650306748466,
+              "ci_lower": 0.5267893660531697,
+              "ci_upper": 0.6609406952965233,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "recovery_bits_per_scene": {
+            "fixed10": {
+              "mean": 3.5366053169734144,
+              "ci_lower": 3.2161554192229045,
+              "ci_upper": 3.879907975460123,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 1.9096114519427403,
+              "ci_lower": 1.6784752044989772,
+              "ci_upper": 2.1614519427402863,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "wrong_codebook_decode_count": {
+            "fixed10": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          }
+        },
+        "paired_clean_gain_percentage_points": {
+          "mean": 8.51226993865031,
+          "ci_lower": 7.397239263803683,
+          "ci_upper": 9.621804703476485,
+          "bootstrap_unit": "site_then_paired_trajectory"
+        },
+        "paired_availability_gain_percentage_points": {
+          "mean": 8.51226993865031,
+          "ci_lower": 7.407975460122702,
+          "ci_upper": 9.67791411042945,
+          "bootstrap_unit": "site_then_paired_trajectory"
+        },
+        "paired_total_bit_reduction_percentage": {
+          "mean": 40.38539457258483,
+          "ci_lower": 37.49327657900746,
+          "ci_upper": 43.180538803652844,
+          "bootstrap_unit": "site_then_paired_trajectory"
+        }
+      },
+      "site_results": {
+        "goeppingen_I": {
+          "source_role": "pilot",
+          "scene_count": 326,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "resolved": true,
+          "calibration_scenes": 4,
+          "labels": {
+            "included": true,
+            "task_positive_rate": {
+              "1": 0.0,
+              "3": 0.0,
+              "5": 0.0,
+              "10": 0.0
+            },
+            "context_positive_rate": {
+              "1": 0.018951194184839044,
+              "3": 0.05579937304075235,
+              "5": 0.09116719242902208,
+              "10": 0.1737179487179487
+            },
+            "any_positive_rate": {
+              "1": 0.018951194184839044,
+              "3": 0.05579937304075235,
+              "5": 0.09116719242902208,
+              "10": 0.1737179487179487
+            }
+          },
+          "fixed10_mean_clean_rate": 0.9127300613496933,
+          "oracle_mean_clean_rate": 0.9978527607361962,
+          "fixed10_mean_total_bits_per_scene": 19.398466257668712,
+          "oracle_mean_total_bits_per_scene": 11.510531697341513
+        }
+      },
+      "gate": {
+        "bit_headroom_pass": true,
+        "clean_headroom_pass": true,
+        "wrong_codebook_actions_zero": true
+      }
+    },
+    "32": {
+      "n_channels": 32,
+      "evaluated_site_count": 1,
+      "resolved_semantic_site_count": 1,
+      "unresolved_exact_fallback_site_count": 0,
+      "label_audit": {
+        "1": {
+          "task_observed": 321,
+          "task_positive": 0,
+          "context_observed": 19260,
+          "context_positive": 369,
+          "any_positive": 369,
+          "task_positive_rate": 0.0,
+          "context_positive_rate": 0.019158878504672898,
+          "any_positive_rate": 0.019158878504672898
+        },
+        "3": {
+          "task_observed": 319,
+          "task_positive": 0,
+          "context_observed": 19140,
+          "context_positive": 1076,
+          "any_positive": 1076,
+          "task_positive_rate": 0.0,
+          "context_positive_rate": 0.05621734587251829,
+          "any_positive_rate": 0.05621734587251829
+        },
+        "5": {
+          "task_observed": 317,
+          "task_positive": 0,
+          "context_observed": 19020,
+          "context_positive": 1736,
+          "any_positive": 1736,
+          "task_positive_rate": 0.0,
+          "context_positive_rate": 0.09127234490010515,
+          "any_positive_rate": 0.09127234490010515
+        },
+        "10": {
+          "task_observed": 312,
+          "task_positive": 0,
+          "context_observed": 18720,
+          "context_positive": 3250,
+          "any_positive": 3250,
+          "task_positive_rate": 0.0,
+          "context_positive_rate": 0.1736111111111111,
+          "any_positive_rate": 0.1736111111111111
+        }
+      },
+      "comparison": {
+        "metrics": {
+          "clean_rate": {
+            "fixed10": {
+              "mean": 0.911349693251534,
+              "ci_lower": 0.9022494887525562,
+              "ci_upper": 0.919939928425358,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 0.9979038854805727,
+              "ci_lower": 0.9973415132924334,
+              "ci_upper": 0.9984662576687117,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "availability_rate": {
+            "fixed10": {
+              "mean": 0.911349693251534,
+              "ci_lower": 0.9024015848670757,
+              "ci_upper": 0.9197852760736195,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 0.9979038854805727,
+              "ci_lower": 0.9973415132924334,
+              "ci_upper": 0.9984662576687117,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "total_bits_per_scene": {
+            "fixed10": {
+              "mean": 19.885020449897752,
+              "ci_lower": 19.307990797546015,
+              "ci_upper": 20.500231339468307,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 11.946779141104294,
+              "ci_lower": 11.43327837423313,
+              "ci_upper": 12.469036298568506,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "heartbeat_bits_per_scene": {
+            "fixed10": {
+              "mean": 4.7820040899795515,
+              "ci_lower": 4.721472392638036,
+              "ci_upper": 4.842535787321063,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 0.5938650306748465,
+              "ci_lower": 0.5366053169734151,
+              "ci_upper": 0.6527607361963188,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "recovery_bits_per_scene": {
+            "fixed10": {
+              "mean": 3.71661554192229,
+              "ci_lower": 3.4018596625766877,
+              "ci_upper": 4.053946830265849,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 2.063548057259714,
+              "ci_lower": 1.8621651329243356,
+              "ci_upper": 2.2732016871165635,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "wrong_codebook_decode_count": {
+            "fixed10": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          }
+        },
+        "paired_clean_gain_percentage_points": {
+          "mean": 8.655419222903886,
+          "ci_lower": 7.801635991820043,
+          "ci_upper": 9.524539877300612,
+          "bootstrap_unit": "site_then_paired_trajectory"
+        },
+        "paired_availability_gain_percentage_points": {
+          "mean": 8.655419222903886,
+          "ci_lower": 7.811860940695296,
+          "ci_upper": 9.55521472392638,
+          "bootstrap_unit": "site_then_paired_trajectory"
+        },
+        "paired_total_bit_reduction_percentage": {
+          "mean": 39.56388116103447,
+          "ci_lower": 37.14109100301581,
+          "ci_upper": 41.93723981298455,
+          "bootstrap_unit": "site_then_paired_trajectory"
+        }
+      },
+      "site_results": {
+        "goeppingen_I": {
+          "source_role": "pilot",
+          "scene_count": 326,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "resolved": true,
+          "calibration_scenes": 4,
+          "labels": {
+            "included": true,
+            "task_positive_rate": {
+              "1": 0.0,
+              "3": 0.0,
+              "5": 0.0,
+              "10": 0.0
+            },
+            "context_positive_rate": {
+              "1": 0.019158878504672898,
+              "3": 0.05621734587251829,
+              "5": 0.09127234490010515,
+              "10": 0.1736111111111111
+            },
+            "any_positive_rate": {
+              "1": 0.019158878504672898,
+              "3": 0.05621734587251829,
+              "5": 0.09127234490010515,
+              "10": 0.1736111111111111
+            }
+          },
+          "fixed10_mean_clean_rate": 0.9113496932515339,
+          "oracle_mean_clean_rate": 0.9979038854805727,
+          "fixed10_mean_total_bits_per_scene": 19.885020449897752,
+          "oracle_mean_total_bits_per_scene": 11.946779141104294
+        }
+      },
+      "gate": {
+        "bit_headroom_pass": true,
+        "clean_headroom_pass": true,
+        "wrong_codebook_actions_zero": true
+      }
+    },
+    "64": {
+      "n_channels": 64,
+      "evaluated_site_count": 1,
+      "resolved_semantic_site_count": 1,
+      "unresolved_exact_fallback_site_count": 0,
+      "label_audit": {
+        "1": {
+          "task_observed": 321,
+          "task_positive": 0,
+          "context_observed": 19260,
+          "context_positive": 377,
+          "any_positive": 377,
+          "task_positive_rate": 0.0,
+          "context_positive_rate": 0.0195742471443406,
+          "any_positive_rate": 0.0195742471443406
+        },
+        "3": {
+          "task_observed": 319,
+          "task_positive": 0,
+          "context_observed": 19140,
+          "context_positive": 1105,
+          "any_positive": 1105,
+          "task_positive_rate": 0.0,
+          "context_positive_rate": 0.0577324973876698,
+          "any_positive_rate": 0.0577324973876698
+        },
+        "5": {
+          "task_observed": 317,
+          "task_positive": 0,
+          "context_observed": 19020,
+          "context_positive": 1786,
+          "any_positive": 1786,
+          "task_positive_rate": 0.0,
+          "context_positive_rate": 0.09390115667718191,
+          "any_positive_rate": 0.09390115667718191
+        },
+        "10": {
+          "task_observed": 312,
+          "task_positive": 0,
+          "context_observed": 18720,
+          "context_positive": 3336,
+          "any_positive": 3336,
+          "task_positive_rate": 0.0,
+          "context_positive_rate": 0.1782051282051282,
+          "any_positive_rate": 0.1782051282051282
+        }
+      },
+      "comparison": {
+        "metrics": {
+          "clean_rate": {
+            "fixed10": {
+              "mean": 0.9037321063394683,
+              "ci_lower": 0.8931492842535788,
+              "ci_upper": 0.9137014314928426,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 0.995040899795501,
+              "ci_lower": 0.9938139059304703,
+              "ci_upper": 0.996165644171779,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "availability_rate": {
+            "fixed10": {
+              "mean": 0.9037321063394683,
+              "ci_lower": 0.8936605316973415,
+              "ci_upper": 0.9133435582822084,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 0.995040899795501,
+              "ci_lower": 0.9938139059304703,
+              "ci_upper": 0.9962167689161554,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "total_bits_per_scene": {
+            "fixed10": {
+              "mean": 17.39105316973415,
+              "ci_lower": 16.777861707566462,
+              "ci_upper": 18.055300357873207,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 9.532106339468303,
+              "ci_lower": 8.861950408997956,
+              "ci_upper": 10.254983384458077,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "heartbeat_bits_per_scene": {
+            "fixed10": {
+              "mean": 4.716564417177915,
+              "ci_lower": 4.660940695296525,
+              "ci_upper": 4.770552147239264,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 0.6102249488752556,
+              "ci_lower": 0.5578732106339468,
+              "ci_upper": 0.6609406952965237,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "recovery_bits_per_scene": {
+            "fixed10": {
+              "mean": 4.325,
+              "ci_lower": 3.875180214723926,
+              "ci_upper": 4.805910020449897,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 2.5161042944785277,
+              "ci_lower": 2.113548057259714,
+              "ci_upper": 2.9707655930470342,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          },
+          "wrong_codebook_decode_count": {
+            "fixed10": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            },
+            "oracle": {
+              "mean": 0.0,
+              "ci_lower": 0.0,
+              "ci_upper": 0.0,
+              "bootstrap_unit": "site_then_paired_trajectory"
+            }
+          }
+        },
+        "paired_clean_gain_percentage_points": {
+          "mean": 9.13087934560327,
+          "ci_lower": 8.164621676891615,
+          "ci_upper": 10.112602249488752,
+          "bootstrap_unit": "site_then_paired_trajectory"
+        },
+        "paired_availability_gain_percentage_points": {
+          "mean": 9.13087934560327,
+          "ci_lower": 8.159381390593046,
+          "ci_upper": 10.081927402862984,
+          "bootstrap_unit": "site_then_paired_trajectory"
+        },
+        "paired_total_bit_reduction_percentage": {
+          "mean": 44.71468911723731,
+          "ci_lower": 40.94334565038325,
+          "ci_upper": 48.48360236139762,
+          "bootstrap_unit": "site_then_paired_trajectory"
+        }
+      },
+      "site_results": {
+        "goeppingen_I": {
+          "source_role": "pilot",
+          "scene_count": 326,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "resolved": true,
+          "calibration_scenes": 4,
+          "labels": {
+            "included": true,
+            "task_positive_rate": {
+              "1": 0.0,
+              "3": 0.0,
+              "5": 0.0,
+              "10": 0.0
+            },
+            "context_positive_rate": {
+              "1": 0.0195742471443406,
+              "3": 0.0577324973876698,
+              "5": 0.09390115667718191,
+              "10": 0.1782051282051282
+            },
+            "any_positive_rate": {
+              "1": 0.0195742471443406,
+              "3": 0.0577324973876698,
+              "5": 0.09390115667718191,
+              "10": 0.1782051282051282
+            }
+          },
+          "fixed10_mean_clean_rate": 0.9037321063394683,
+          "oracle_mean_clean_rate": 0.995040899795501,
+          "fixed10_mean_total_bits_per_scene": 17.39105316973415,
+          "oracle_mean_total_bits_per_scene": 9.532106339468303
+        }
+      },
+      "gate": {
+        "bit_headroom_pass": true,
+        "clean_headroom_pass": true,
+        "wrong_codebook_actions_zero": true
+      }
+    }
+  },
+  "decision": {
+    "passing_n_count": 4,
+    "required_passing_n_count": 3,
+    "oracle_headroom_gate_passed": false,
+    "next_action": "run_full_registered_s7_0"
+  },
+  "governance_checks": {
+    "stage7_governance_status": "planning_frozen_s7_0",
+    "all_development_roles_previously_consumed": true,
+    "reserve_remained_unread": true,
+    "oracle_is_noncausal_upper_bound": true,
+    "external_final_claim_forbidden": true
+  },
+  "elapsed_seconds": 32.842429499998616,
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": [
+    "All 34 ElectroSense sites were already consumed in Stage 6 and are development-only in Stage 7.",
+    "The three reserve sites remain unread and are not loaded by this experiment.",
+    "The oracle reads the actual reset stream and is deliberately non-causal; it is an upper bound, not a deployable algorithm.",
+    "Fixed-heartbeat and oracle trajectories share all task, packet, ACK, delayed-duplicate, reset, activation, escape, and bit-accounting settings.",
+    "A positive oracle result only justifies predictive-model research; it does not prove that a causal model can realize the oracle gain.",
+    "No result from this experiment may be called a Stage-7 Final."
+  ]
+}

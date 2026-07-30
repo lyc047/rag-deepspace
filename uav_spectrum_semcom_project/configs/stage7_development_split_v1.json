@@ -1,0 +1,60 @@
+{
+  "version": "1.0",
+  "split_id": "stage7_electrosense_development_split_v1",
+  "status": "frozen_after_s7_0_before_s7_1_model_fitting",
+  "created_date": "2026-07-30",
+  "source_registry": "results/stage6r/electrosense_final_registry_v1/registry.json",
+  "source_registry_sha256": "3f56c862645391583e67316af29d64754e2cc390365d9c8238731859add9ba73",
+  "method": "ascending SHA-256 digest of '<salt>|<site>'",
+  "salt": "stage7-electrosense-development-split-v1",
+  "roles_are_stage7_development_only": true,
+  "split": {
+    "train": [
+      "bcn-L",
+      "Bandon_Oregon_GAP1",
+      "donostia-ategorrieta",
+      "Oreland",
+      "Rapallo_Electrosense",
+      "Espi1",
+      "skyhubfr",
+      "Princeton1",
+      "scalessio",
+      "imdea_adsb",
+      "Skap_French_Riviera",
+      "Nudelsalat_RPi",
+      "Giansense",
+      "NFM-Electrosense-01",
+      "miguel_murcia",
+      "Defcon1",
+      "Zagreb",
+      "Valbella",
+      "goeppingen_I",
+      "Andrew_GVA"
+    ],
+    "validation": [
+      "vlenders_burgdorf",
+      "Geneva",
+      "HuldOne",
+      "SP8AKM",
+      "alcorcon1",
+      "EDLV",
+      "BGSOFIAMLADOST01"
+    ],
+    "internal_development_test": [
+      "Britof",
+      "BZ_Italy",
+      "Sashatka",
+      "PiSDR1",
+      "CYD_EPFL_S",
+      "URJC1",
+      "dipolkurz"
+    ]
+  },
+  "rules": [
+    "A complete site belongs to exactly one split.",
+    "Random scene or sliding-window splitting is forbidden.",
+    "Model selection and probability calibration may use train and validation only.",
+    "Internal development test results remain development evidence because every site was previously consumed in Stage 6.",
+    "No listed site may be used as a Stage-7 external Final."
+  ]
+}

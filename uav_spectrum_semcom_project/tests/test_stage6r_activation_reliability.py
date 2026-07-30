@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import numpy as np
+import pytest
 
 from spectrum_semcom.stage5_cumulative_ack import (
     cumulative_ack_payload_bits,
@@ -10,6 +11,10 @@ from spectrum_semcom.stage6_context_codec import (
     decode_context_install,
     encode_compact_update,
     encode_context_install,
+)
+from spectrum_semcom.stage6_context_heartbeat import (
+    encode_context_probe_request,
+    encode_context_probe_response,
 )
 from spectrum_semcom.stage6_matched_reliability import RANDOM_STREAM_COUNT
 from spectrum_semcom.stage6_task_codebook import (
@@ -107,6 +112,109 @@ def test_no_fault_activation_uses_64_bits_and_stays_clean() -> None:
     assert result.matched.bit_breakdown.initial_install_bits == 64
     assert result.matched.wrong_codebook_decode_count == 0
     assert all(result.matched.clean)
+
+
+def test_stage7_trigger_mask_replaces_fixed_heartbeat_without_bypassing_checks() -> None:
+    states, sender, receiver, packet, catalog, compact_bits = _fixture()
+    timestamps = np.asarray(
+        [f"2026-01-01T00:0{i}:00" for i in range(len(states))]
+    )
+    random = np.ones((len(states), RANDOM_STREAM_COUNT), dtype=np.float64)
+    trigger = np.asarray([False, True, False, False], dtype=bool)
+    heartbeat_request_bits = int(
+        encode_context_probe_request(
+            node_id=1, codebook_epoch=2, expected_update_epoch=0
+        ).size
+    )
+    heartbeat_response_bits = int(
+        encode_context_probe_response(
+            node_id=1, codebook_epoch=2, current_update_epoch=0
+        ).size
+    )
+    result = simulate_activation_semantic_trajectory(
+        states,
+        timestamps,
+        np.arange(len(states)),
+        sender_session=sender,
+        receiver_session=receiver,
+        full_install_packet=packet,
+        sender_catalog=catalog,
+        receiver_catalog=catalog,
+        bank_id=7,
+        catalog_node_id=1,
+        maximum_activation_attempts=2,
+        condition=_condition(),
+        random_values=random,
+        epsilon_db=0.2,
+        max_age_minutes=60.0,
+        ack_frame_bits=cumulative_ack_payload_bits(),
+        outage_penalty_db=10.0,
+        heartbeat_interval_scenes=None,
+        heartbeat_request_frame_bits=heartbeat_request_bits,
+        heartbeat_response_frame_bits=heartbeat_response_bits,
+        task_open_loop_attempts=1,
+        compact_codeword_frame_bits=int(compact_bits),
+        heartbeat_trigger_mask=trigger,
+    )
+    assert result.matched.heartbeat_probe_count == 1
+    assert result.matched.heartbeat_response_count == 1
+    assert result.matched.wrong_codebook_decode_count == 0
+
+
+def test_stage7_trigger_mask_rejects_misalignment_and_mixed_control() -> None:
+    states, sender, receiver, packet, catalog, compact_bits = _fixture()
+    timestamps = np.asarray(
+        [f"2026-01-01T00:0{i}:00" for i in range(len(states))]
+    )
+    random = np.ones((len(states), RANDOM_STREAM_COUNT), dtype=np.float64)
+    heartbeat_request_bits = int(
+        encode_context_probe_request(
+            node_id=1, codebook_epoch=2, expected_update_epoch=0
+        ).size
+    )
+    heartbeat_response_bits = int(
+        encode_context_probe_response(
+            node_id=1, codebook_epoch=2, current_update_epoch=0
+        ).size
+    )
+    common = dict(
+        sender_session=sender,
+        receiver_session=receiver,
+        full_install_packet=packet,
+        sender_catalog=catalog,
+        receiver_catalog=catalog,
+        bank_id=7,
+        catalog_node_id=1,
+        maximum_activation_attempts=2,
+        condition=_condition(),
+        random_values=random,
+        epsilon_db=0.2,
+        max_age_minutes=60.0,
+        ack_frame_bits=cumulative_ack_payload_bits(),
+        outage_penalty_db=10.0,
+        heartbeat_request_frame_bits=heartbeat_request_bits,
+        heartbeat_response_frame_bits=heartbeat_response_bits,
+        task_open_loop_attempts=1,
+        compact_codeword_frame_bits=int(compact_bits),
+    )
+    with pytest.raises(ValueError, match="align"):
+        simulate_activation_semantic_trajectory(
+            states,
+            timestamps,
+            np.arange(len(states)),
+            heartbeat_interval_scenes=None,
+            heartbeat_trigger_mask=np.asarray([True]),
+            **common,
+        )
+    with pytest.raises(ValueError, match="mutually exclusive"):
+        simulate_activation_semantic_trajectory(
+            states,
+            timestamps,
+            np.arange(len(states)),
+            heartbeat_interval_scenes=10,
+            heartbeat_trigger_mask=np.zeros(len(states), dtype=bool),
+            **common,
+        )
 
 
 def test_catalog_mismatch_falls_back_to_full_install() -> None:
