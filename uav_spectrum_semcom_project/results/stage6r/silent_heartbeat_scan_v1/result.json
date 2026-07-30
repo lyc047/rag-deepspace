@@ -1,0 +1,4274 @@
+{
+  "version": "1.0",
+  "status": "stage6r_silent_heartbeat_scan_complete",
+  "verification_status": "ANALYZED",
+  "experiment_id": "stage6r_silent_heartbeat_scan_v1",
+  "config_sha256": "466437a580e0ab3c46ffd522153dcce4bde8517b300c5f9662875fe6605c8e8d",
+  "input_hashes": {
+    "adaptation_config": "b5771f520b619c9e967f5b505f01e5d4cb0d856b15e2a8ddca789d6e7b839dff",
+    "temporal_gate_result": "eb4298131e1f72a9b01698d2725b56b14bd3b5e280ba0b754608c6d1f1592c99",
+    "matched_scan_config": "6598125579d0e935a6003ce4d3b5c2997fab1746ffeda5ba51c94b93e3405fb3",
+    "matched_scan_result": "47ab34451eb2565c5dc0e4d482ab48cd0c1aebec7404ea399791e2241891cd88",
+    "activation_protocol": "4f89d46baea177a3bc6ca958a46dbf27dc8e772c21aa0b32cf21e5115b6afc36",
+    "electrosense_protocol": "8aeffb02c98b561026854cea4b11d6daf7277504abd9c6786b500707dd8ffd68",
+    "electrosense_registry": "3f56c862645391583e67316af29d64754e2cc390365d9c8238731859add9ba73",
+    "electrosense_access_state": "002b17abb03d7b66daf0707f054f22310d5960be956d8d2c32403bf117eef585",
+    "electrosense_freeze": "41fd5bdf0e3f57b2f0ee571dec848585462216083f4ca9f851d0759e12bfcc0f"
+  },
+  "access_counts_after_run": {
+    "pilot": 1,
+    "stage6_final": 1,
+    "confirmation_lockbox": 0,
+    "reserve": 0
+  },
+  "n_results": {
+    "16": {
+      "n_channels": 16,
+      "candidate_results": {
+        "16": {
+          "heartbeat_silence_scenes": 16,
+          "groups": {
+            "combined": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.8887413741374137,
+                  "ci_lower": 0.8622173577577611,
+                  "ci_upper": 0.9265549951791855,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.8974497449744974,
+                  "ci_lower": 0.8623852882447665,
+                  "ci_upper": 0.9498509865340483,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 32.44533453345334,
+                  "ci_lower": 18.994599353370038,
+                  "ci_upper": 48.89279501216544,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 5.734068406840685,
+                  "ci_lower": 1.709695728596764,
+                  "ci_upper": 12.912812063355728,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9831833183318331,
+                  "ci_lower": 0.9680577545426539,
+                  "ci_upper": 0.994204348406029,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9975172517251726,
+                  "ci_lower": 0.9967499967498699,
+                  "ci_upper": 0.9980694778151288,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.0,
+                  "ci_lower": 59.0,
+                  "ci_upper": 59.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 45.00790757041806,
+                "ci_lower": 16.289667208355294,
+                "ci_upper": 67.76248514481591,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            },
+            "aerpaw": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.8988770685579196,
+                  "ci_lower": 0.8799996128532713,
+                  "ci_upper": 0.9412609238451934,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.8997931442080378,
+                  "ci_lower": 0.8801425947409127,
+                  "ci_upper": 0.9424819070147278,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 47.02464539007091,
+                  "ci_lower": 43.526132057231244,
+                  "ci_upper": 57.718840852130334,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 16.05017730496454,
+                  "ci_lower": 5.560547252035703,
+                  "ci_upper": 20.300834411849294,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9781323877068557,
+                  "ci_lower": 0.9688048304724073,
+                  "ci_upper": 0.981327566728313,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.997340425531915,
+                  "ci_lower": 0.994736842105263,
+                  "ci_upper": 0.9982565011820329,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.0,
+                  "ci_lower": 59.0,
+                  "ci_upper": 59.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 20.297211203269626,
+                "ci_lower": 2.434189286776263,
+                "ci_upper": 26.219319598355437,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            },
+            "pilot": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.8852935263369521,
+                  "ci_lower": 0.8516771940703993,
+                  "ci_upper": 0.9338825174027159,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.8966525934861278,
+                  "ci_lower": 0.852125217977172,
+                  "ci_upper": 0.9656451537307836,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 27.48590671491757,
+                  "ci_lower": 14.946311211340204,
+                  "ci_upper": 48.83062710911136,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 2.224849215922799,
+                  "ci_lower": 0.7575703734671128,
+                  "ci_upper": 3.235021327043305,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9849014877362284,
+                  "ci_lower": 0.9645897524411244,
+                  "ci_upper": 0.9978527117887728,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9975774024929634,
+                  "ci_lower": 0.996842439350329,
+                  "ci_upper": 0.9981959027745673,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.0,
+                  "ci_lower": 59.0,
+                  "ci_upper": 59.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 53.413717432343105,
+                "ci_lower": 17.207154852465475,
+                "ci_upper": 74.65146304884505,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            }
+          },
+          "session_results": {
+            "aerpaw_packapalooza_2023": {
+              "domain": "aerpaw",
+              "decision": "OOD",
+              "scene_count": 364,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.8802197802197803,
+                  "ci_lower": 0.867672847985348,
+                  "ci_upper": 0.8917135989010989
+                },
+                "availability_rate": {
+                  "mean": 0.8808150183150184,
+                  "ci_lower": 0.8679945054945055,
+                  "ci_upper": 0.8920329670329671
+                },
+                "total_bits_per_scene": {
+                  "mean": 43.96098901098901,
+                  "ci_lower": 42.63001831501832,
+                  "ci_upper": 45.33840659340659
+                },
+                "context_bits_per_scene": {
+                  "mean": 21.25714285714286,
+                  "ci_lower": 20.184065934065934,
+                  "ci_upper": 22.33021978021978
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 25.48984913391693,
+                "ci_lower": 23.093414354007574,
+                "ci_upper": 27.745009933569257
+              }
+            },
+            "aerpaw_lake_wheeler_2024": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_packapalooza_2024",
+              "scene_count": 67,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9313432835820895,
+                  "ci_lower": 0.9114427860696518,
+                  "ci_upper": 0.9497574626865672
+                },
+                "availability_rate": {
+                  "mean": 0.9323383084577114,
+                  "ci_lower": 0.9131840796019901,
+                  "ci_upper": 0.9502487562189056
+                },
+                "total_bits_per_scene": {
+                  "mean": 43.192039800995026,
+                  "ci_lower": 41.653924129353236,
+                  "ci_upper": 44.692568407960195
+                },
+                "context_bits_per_scene": {
+                  "mean": 5.0039800995024875,
+                  "ci_lower": 4.35148631840796,
+                  "ci_upper": 5.677985074626864
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 26.793152879669446,
+                "ci_lower": 24.183246901087777,
+                "ci_upper": 29.34576060376085
+              }
+            },
+            "aerpaw_packapalooza_2024": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 67,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9340796019900498,
+                  "ci_lower": 0.9186504975124378,
+                  "ci_upper": 0.9492537313432836
+                },
+                "availability_rate": {
+                  "mean": 0.9353233830845772,
+                  "ci_lower": 0.9191542288557215,
+                  "ci_upper": 0.9500000000000001
+                },
+                "total_bits_per_scene": {
+                  "mean": 54.00597014925372,
+                  "ci_lower": 52.26771144278607,
+                  "ci_upper": 55.79904228855721
+                },
+                "context_bits_per_scene": {
+                  "mean": 6.477611940298506,
+                  "ci_lower": 5.478047263681592,
+                  "ci_upper": 7.639054726368155
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 8.464457374146217,
+                "ci_lower": 5.370562442027151,
+                "ci_upper": 11.420292604772744
+              }
+            },
+            "aerpaw_packapalooza_2025": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 66,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9330808080808081,
+                  "ci_lower": 0.9166666666666666,
+                  "ci_upper": 0.9489898989898989
+                },
+                "availability_rate": {
+                  "mean": 0.9353535353535353,
+                  "ci_lower": 0.9189393939393938,
+                  "ci_upper": 0.9507575757575757
+                },
+                "total_bits_per_scene": {
+                  "mean": 60.72474747474747,
+                  "ci_lower": 58.67626262626263,
+                  "ci_upper": 62.86819444444445
+                },
+                "context_bits_per_scene": {
+                  "mean": 8.264141414141415,
+                  "ci_lower": 7.064141414141415,
+                  "ci_upper": 9.580075757575754
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": -2.9233008046567375,
+                "ci_lower": -6.6556668378702275,
+                "ci_upper": 0.5290618044855323
+              }
+            },
+            "goeppingen_I": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2025",
+              "scene_count": 326,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.861963190184049,
+                  "ci_lower": 0.8467280163599182,
+                  "ci_upper": 0.8765337423312884
+                },
+                "availability_rate": {
+                  "mean": 0.861963190184049,
+                  "ci_lower": 0.8467280163599182,
+                  "ci_upper": 0.876993865030675
+                },
+                "total_bits_per_scene": {
+                  "mean": 15.03527607361963,
+                  "ci_lower": 14.509529652351736,
+                  "ci_upper": 15.588652862985684
+                },
+                "context_bits_per_scene": {
+                  "mean": 2.715541922290389,
+                  "ci_lower": 2.456007157464213,
+                  "ci_upper": 2.989187116564416
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 74.51648123115316,
+                "ci_lower": 73.60535380056152,
+                "ci_upper": 75.40766784513535
+              }
+            },
+            "skyhubfr": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2025",
+              "scene_count": 434,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.8599462365591397,
+                  "ci_lower": 0.8442396313364057,
+                  "ci_upper": 0.8756922043010751
+                },
+                "availability_rate": {
+                  "mean": 0.8600614439324116,
+                  "ci_lower": 0.8438162442396314,
+                  "ci_upper": 0.8760752688172044
+                },
+                "total_bits_per_scene": {
+                  "mean": 17.2463133640553,
+                  "ci_lower": 16.70375480030722,
+                  "ci_upper": 17.794269393241162
+                },
+                "context_bits_per_scene": {
+                  "mean": 3.204531490015362,
+                  "ci_lower": 2.9056835637480805,
+                  "ci_upper": 3.5247129416282634
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 70.76896039990628,
+                "ci_lower": 69.84969180400427,
+                "ci_upper": 71.65853055273504
+              }
+            },
+            "BGSOFIAMLADOST01": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2023",
+              "scene_count": 450,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.8563703703703704,
+                  "ci_lower": 0.8431481481481483,
+                  "ci_upper": 0.8695935185185185
+                },
+                "availability_rate": {
+                  "mean": 0.8563703703703704,
+                  "ci_lower": 0.8435555555555554,
+                  "ci_upper": 0.8688148148148149
+                },
+                "total_bits_per_scene": {
+                  "mean": 15.007185185185186,
+                  "ci_lower": 14.519918518518518,
+                  "ci_upper": 15.512056481481482
+                },
+                "context_bits_per_scene": {
+                  "mean": 3.1394814814814818,
+                  "ci_lower": 2.880425,
+                  "ci_upper": 3.4095731481481484
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 74.56409290646579,
+                "ci_lower": 73.74136534839924,
+                "ci_upper": 75.42491682360325
+              }
+            },
+            "Bandon_Oregon_GAP1": {
+              "domain": "electrosense_pilot",
+              "decision": "UNRESOLVED_EXACT_FALLBACK",
+              "scene_count": 448,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.955877976190476,
+                  "ci_lower": 0.9536086309523809,
+                  "ci_upper": 0.9581473214285714
+                },
+                "availability_rate": {
+                  "mean": 0.9978050595238095,
+                  "ci_lower": 0.9971726190476189,
+                  "ci_upper": 0.9984002976190476
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.0,
+                  "ci_lower": 59.0,
+                  "ci_upper": 59.0
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 0.0,
+                "ci_lower": 0.0,
+                "ci_upper": 0.0
+              }
+            }
+          },
+          "checks": {
+            "combined_clean_lower_pass": false,
+            "pilot_clean_lower_pass": false,
+            "combined_savings_lower_pass": true,
+            "pilot_savings_lower_pass": true,
+            "wrong_codebook_decode_count_zero": true,
+            "candidate_passed": false
+          }
+        },
+        "10": {
+          "heartbeat_silence_scenes": 10,
+          "groups": {
+            "combined": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.924054905490549,
+                  "ci_lower": 0.911368204216516,
+                  "ci_upper": 0.9415130274964074,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9327632763276329,
+                  "ci_lower": 0.9113584066740008,
+                  "ci_upper": 0.9656448663984315,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 36.21096609660966,
+                  "ci_lower": 22.980279517997264,
+                  "ci_upper": 52.9233555478753,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 7.05927092709271,
+                  "ci_lower": 2.1326282272527877,
+                  "ci_upper": 15.750872450597285,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9831833183318331,
+                  "ci_lower": 0.9681614307458988,
+                  "ci_upper": 0.9939913216368993,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9975172517251726,
+                  "ci_lower": 0.9968101215381551,
+                  "ci_upper": 0.9980687357823781,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.0,
+                  "ci_lower": 59.0,
+                  "ci_upper": 59.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 38.625481192187024,
+                "ci_lower": 10.06498386953093,
+                "ci_upper": 61.56036685651433,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            },
+            "aerpaw": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9263002364066195,
+                  "ci_lower": 0.9180793088080382,
+                  "ci_upper": 0.9441520387251785,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9272163120567377,
+                  "ci_lower": 0.9187388738293625,
+                  "ci_upper": 0.9458646616541353,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 53.10981087470449,
+                  "ci_lower": 48.446838757989084,
+                  "ci_upper": 58.27364552891663,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 19.558333333333337,
+                  "ci_lower": 5.752767558508952,
+                  "ci_upper": 25.509989205526765,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9781323877068557,
+                  "ci_lower": 0.9689934919846787,
+                  "ci_upper": 0.9813225400821665,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.997340425531915,
+                  "ci_lower": 0.9946317103620477,
+                  "ci_upper": 0.9982985305491104,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.0,
+                  "ci_lower": 59.0,
+                  "ci_upper": 59.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 9.983371398805948,
+                "ci_lower": 1.2839195446242737,
+                "ci_upper": 17.96790558412153,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            },
+            "pilot": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9232911137917169,
+                  "ci_lower": 0.9060222069597069,
+                  "ci_upper": 0.9458661947758027,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9346501809408927,
+                  "ci_lower": 0.9065503933391025,
+                  "ci_upper": 0.9776727127859016,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 30.462505026135908,
+                  "ci_lower": 19.00118014120923,
+                  "ci_upper": 49.82714848143982,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 2.8074788902291914,
+                  "ci_lower": 0.9161278335191377,
+                  "ci_upper": 4.040540204428958,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9849014877362284,
+                  "ci_lower": 0.9645481814773154,
+                  "ci_upper": 0.9978619729514717,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9975774024929634,
+                  "ci_lower": 0.99687933667869,
+                  "ci_upper": 0.9981997030438009,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.0,
+                  "ci_lower": 59.0,
+                  "ci_upper": 59.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 48.36863554892219,
+                "ci_lower": 15.531457932165258,
+                "ci_upper": 67.85491019424543,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            }
+          },
+          "session_results": {
+            "aerpaw_packapalooza_2023": {
+              "domain": "aerpaw",
+              "decision": "OOD",
+              "scene_count": 364,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9207875457875458,
+                  "ci_lower": 0.9136904761904763,
+                  "ci_upper": 0.9276098901098901
+                },
+                "availability_rate": {
+                  "mean": 0.9213827838827839,
+                  "ci_lower": 0.9145146520146522,
+                  "ci_upper": 0.9282051282051283
+                },
+                "total_bits_per_scene": {
+                  "mean": 53.059065934065934,
+                  "ci_lower": 51.411788003663,
+                  "ci_upper": 54.72152243589743
+                },
+                "context_bits_per_scene": {
+                  "mean": 26.656593406593412,
+                  "ci_lower": 25.362087912087915,
+                  "ci_upper": 27.985164835164834
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 10.069379772769604,
+                "ci_lower": 7.185633575464084,
+                "ci_upper": 12.873455640404792
+              }
+            },
+            "aerpaw_lake_wheeler_2024": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_packapalooza_2024",
+              "scene_count": 67,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.93681592039801,
+                  "ci_lower": 0.9181592039800995,
+                  "ci_upper": 0.9539800995024875
+                },
+                "availability_rate": {
+                  "mean": 0.937810945273632,
+                  "ci_lower": 0.9196517412935322,
+                  "ci_upper": 0.9544776119402985
+                },
+                "total_bits_per_scene": {
+                  "mean": 44.544278606965165,
+                  "ci_lower": 43.0850248756219,
+                  "ci_upper": 45.99453980099502
+                },
+                "context_bits_per_scene": {
+                  "mean": 5.3383084577114435,
+                  "ci_lower": 4.685820895522388,
+                  "ci_upper": 6.059701492537314
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 24.50122270005903,
+                "ci_lower": 21.97589383590522,
+                "ci_upper": 26.866282991820558
+              }
+            },
+            "aerpaw_packapalooza_2024": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 67,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9343283582089552,
+                  "ci_lower": 0.9184079601990051,
+                  "ci_upper": 0.9490049751243781
+                },
+                "availability_rate": {
+                  "mean": 0.9355721393034826,
+                  "ci_lower": 0.9201492537313435,
+                  "ci_upper": 0.9504975124378111
+                },
+                "total_bits_per_scene": {
+                  "mean": 54.067661691542284,
+                  "ci_lower": 52.34962686567165,
+                  "ci_upper": 55.86442786069651
+                },
+                "context_bits_per_scene": {
+                  "mean": 6.477611940298506,
+                  "ci_lower": 5.465584577114428,
+                  "ci_upper": 7.641355721393034
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 8.359895438063917,
+                "ci_lower": 5.254152963993592,
+                "ci_upper": 11.385508896196983
+              }
+            },
+            "aerpaw_packapalooza_2025": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 66,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9378787878787878,
+                  "ci_lower": 0.9222222222222223,
+                  "ci_upper": 0.9525252525252526
+                },
+                "availability_rate": {
+                  "mean": 0.9401515151515151,
+                  "ci_lower": 0.9250000000000002,
+                  "ci_upper": 0.9550505050505048
+                },
+                "total_bits_per_scene": {
+                  "mean": 61.112626262626264,
+                  "ci_lower": 59.24136363636364,
+                  "ci_upper": 63.07205808080808
+                },
+                "context_bits_per_scene": {
+                  "mean": 8.124747474747474,
+                  "ci_lower": 7.126262626262627,
+                  "ci_upper": 9.179381313131314
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": -3.5807224790275645,
+                "ci_lower": -7.055491354220168,
+                "ci_upper": -0.5234334874165453
+              }
+            },
+            "goeppingen_I": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2025",
+              "scene_count": 326,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9085889570552148,
+                  "ci_lower": 0.8982592024539878,
+                  "ci_upper": 0.9187627811860941
+                },
+                "availability_rate": {
+                  "mean": 0.9085889570552148,
+                  "ci_lower": 0.8983640081799592,
+                  "ci_upper": 0.918916155419223
+                },
+                "total_bits_per_scene": {
+                  "mean": 19.632361963190185,
+                  "ci_lower": 18.998208077709617,
+                  "ci_upper": 20.327558793456035
+                },
+                "context_bits_per_scene": {
+                  "mean": 3.8473926380368098,
+                  "ci_lower": 3.524617842535787,
+                  "ci_upper": 4.177737730061349
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 66.72481023188104,
+                "ci_lower": 65.59317917923121,
+                "ci_upper": 67.74838177186233
+              }
+            },
+            "skyhubfr": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2025",
+              "scene_count": 434,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9145161290322581,
+                  "ci_lower": 0.9053744239631336,
+                  "ci_upper": 0.9235416666666669
+                },
+                "availability_rate": {
+                  "mean": 0.91463133640553,
+                  "ci_lower": 0.9052227342549924,
+                  "ci_upper": 0.9233870967741936
+                },
+                "total_bits_per_scene": {
+                  "mean": 21.361904761904764,
+                  "ci_lower": 20.770138248847925,
+                  "ci_upper": 21.97116935483871
+                },
+                "context_bits_per_scene": {
+                  "mean": 4.048310291858678,
+                  "ci_lower": 3.7518433179723507,
+                  "ci_upper": 4.37747791858679
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 63.79338175948347,
+                "ci_lower": 62.77122386680206,
+                "ci_upper": 64.81437618787265
+              }
+            },
+            "BGSOFIAMLADOST01": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2023",
+              "scene_count": 450,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9099629629629631,
+                  "ci_lower": 0.9019259259259259,
+                  "ci_upper": 0.9179629629629631
+                },
+                "availability_rate": {
+                  "mean": 0.9099629629629631,
+                  "ci_lower": 0.9018509259259258,
+                  "ci_upper": 0.9178888888888889
+                },
+                "total_bits_per_scene": {
+                  "mean": 18.674703703703702,
+                  "ci_lower": 18.180237037037045,
+                  "ci_upper": 19.158372222222226
+                },
+                "context_bits_per_scene": {
+                  "mean": 3.6524074074074075,
+                  "ci_lower": 3.4138333333333333,
+                  "ci_upper": 3.894037962962963
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 68.34795982423101,
+                "ci_lower": 67.51720652856247,
+                "ci_upper": 69.16163527934714
+              }
+            },
+            "Bandon_Oregon_GAP1": {
+              "domain": "electrosense_pilot",
+              "decision": "UNRESOLVED_EXACT_FALLBACK",
+              "scene_count": 448,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.955877976190476,
+                  "ci_lower": 0.9536086309523809,
+                  "ci_upper": 0.9581473214285715
+                },
+                "availability_rate": {
+                  "mean": 0.9978050595238095,
+                  "ci_lower": 0.9971726190476189,
+                  "ci_upper": 0.9984002976190476
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.0,
+                  "ci_lower": 59.0,
+                  "ci_upper": 59.0
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 0.0,
+                "ci_lower": 0.0,
+                "ci_upper": 0.0
+              }
+            }
+          },
+          "checks": {
+            "combined_clean_lower_pass": true,
+            "pilot_clean_lower_pass": true,
+            "combined_savings_lower_pass": true,
+            "pilot_savings_lower_pass": true,
+            "wrong_codebook_decode_count_zero": true,
+            "candidate_passed": true
+          }
+        },
+        "8": {
+          "heartbeat_silence_scenes": 8,
+          "groups": {
+            "combined": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9335658565856585,
+                  "ci_lower": 0.924159977724877,
+                  "ci_upper": 0.9459017105350654,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9422742274227424,
+                  "ci_lower": 0.9244749316594107,
+                  "ci_upper": 0.9699719922057601,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 38.23919891989199,
+                  "ci_lower": 25.37804987058719,
+                  "ci_upper": 53.70338058419244,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 7.6490249024902495,
+                  "ci_lower": 2.3403351581530516,
+                  "ci_upper": 16.725219735989953,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9831833183318331,
+                  "ci_lower": 0.9677528662201859,
+                  "ci_upper": 0.9942418735953267,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9975172517251726,
+                  "ci_lower": 0.9967988482805816,
+                  "ci_upper": 0.9980444933786642,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.0,
+                  "ci_lower": 59.0,
+                  "ci_upper": 59.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 35.18779844086104,
+                "ci_lower": 6.218338582780872,
+                "ci_upper": 56.91230729963654,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            },
+            "aerpaw": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9338947990543736,
+                  "ci_lower": 0.9255634550979217,
+                  "ci_upper": 0.9503132832080199,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9348108747044918,
+                  "ci_lower": 0.9266839539007092,
+                  "ci_upper": 0.9514925373134329,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 55.54825650118203,
+                  "ci_lower": 49.132492197253434,
+                  "ci_upper": 59.15367167919799,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 20.662854609929077,
+                  "ci_lower": 5.89693407960199,
+                  "ci_upper": 27.189250071901064,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9781323877068557,
+                  "ci_lower": 0.9690476190476189,
+                  "ci_upper": 0.9813344837503596,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.997340425531915,
+                  "ci_lower": 0.9947560615020696,
+                  "ci_upper": 0.9982599942479147,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.0,
+                  "ci_lower": 59.0,
+                  "ci_upper": 59.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 5.850412709860961,
+                "ci_lower": 0.33865103276259334,
+                "ci_upper": 15.871515233772092,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            },
+            "pilot": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9334539605950944,
+                  "ci_lower": 0.9212292609351435,
+                  "ci_upper": 0.9490537120359954,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9448130277442702,
+                  "ci_lower": 0.9208929215848264,
+                  "ci_upper": 0.9808358092466702,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 32.3511962203458,
+                  "ci_lower": 21.8024503968254,
+                  "ci_upper": 50.33297126921635,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 3.222125050261359,
+                  "ci_lower": 1.0633618725648428,
+                  "ci_upper": 4.585381677627707,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9849014877362284,
+                  "ci_lower": 0.9647354236970378,
+                  "ci_upper": 0.9978951890034363,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9975774024929634,
+                  "ci_lower": 0.996870878463229,
+                  "ci_upper": 0.998230036101067,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.0,
+                  "ci_lower": 59.0,
+                  "ci_upper": 59.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 45.16746403331221,
+                "ci_lower": 14.593460642631538,
+                "ci_upper": 63.01837747628901,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            }
+          },
+          "session_results": {
+            "aerpaw_packapalooza_2023": {
+              "domain": "aerpaw",
+              "decision": "OOD",
+              "scene_count": 364,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9294871794871795,
+                  "ci_lower": 0.9221611721611722,
+                  "ci_upper": 0.9370421245421245
+                },
+                "availability_rate": {
+                  "mean": 0.9300824175824176,
+                  "ci_lower": 0.9225263278388279,
+                  "ci_upper": 0.9373626373626374
+                },
+                "total_bits_per_scene": {
+                  "mean": 56.247344322344325,
+                  "ci_lower": 54.70089743589744,
+                  "ci_upper": 57.767557234432225
+                },
+                "context_bits_per_scene": {
+                  "mean": 28.274725274725274,
+                  "ci_lower": 27.031318681318684,
+                  "ci_upper": 29.48406593406594
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 4.665518097721488,
+                "ci_lower": 2.0629811572608183,
+                "ci_upper": 7.3119373564288805
+              }
+            },
+            "aerpaw_lake_wheeler_2024": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_packapalooza_2024",
+              "scene_count": 67,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9487562189054727,
+                  "ci_lower": 0.9335820895522388,
+                  "ci_upper": 0.9626865671641791
+                },
+                "availability_rate": {
+                  "mean": 0.9497512437810944,
+                  "ci_lower": 0.9350746268656717,
+                  "ci_upper": 0.964179104477612
+                },
+                "total_bits_per_scene": {
+                  "mean": 45.81965174129354,
+                  "ci_lower": 44.4382960199005,
+                  "ci_upper": 47.25495646766169
+                },
+                "context_bits_per_scene": {
+                  "mean": 5.46044776119403,
+                  "ci_lower": 4.818407960199005,
+                  "ci_upper": 6.1022450248756215
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 22.33957331984147,
+                "ci_lower": 20.021608061387973,
+                "ci_upper": 24.642644826713887
+              }
+            },
+            "aerpaw_packapalooza_2024": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 67,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9375621890547262,
+                  "ci_lower": 0.9226368159203979,
+                  "ci_upper": 0.9514987562189056
+                },
+                "availability_rate": {
+                  "mean": 0.9388059701492537,
+                  "ci_lower": 0.92363184079602,
+                  "ci_upper": 0.9527363184079604
+                },
+                "total_bits_per_scene": {
+                  "mean": 55.92089552238805,
+                  "ci_lower": 54.051243781094534,
+                  "ci_upper": 57.929353233830845
+                },
+                "context_bits_per_scene": {
+                  "mean": 6.909950248756218,
+                  "ci_lower": 5.83681592039801,
+                  "ci_upper": 8.149776119402983
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 5.218821148494814,
+                "ci_lower": 1.899780757230795,
+                "ci_upper": 8.332974955729824
+              }
+            },
+            "aerpaw_packapalooza_2025": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 66,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9393939393939393,
+                  "ci_lower": 0.9234848484848485,
+                  "ci_upper": 0.954040404040404
+                },
+                "availability_rate": {
+                  "mean": 0.9416666666666665,
+                  "ci_lower": 0.9257575757575758,
+                  "ci_upper": 0.9560669191919192
+                },
+                "total_bits_per_scene": {
+                  "mean": 61.19040404040404,
+                  "ci_lower": 59.47113636363636,
+                  "ci_upper": 63.149015151515144
+                },
+                "context_bits_per_scene": {
+                  "mean": 8.076262626262627,
+                  "ci_lower": 7.105050505050506,
+                  "ci_upper": 9.209154040404039
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": -3.7125492210237985,
+                "ci_lower": -6.895309022427669,
+                "ci_upper": -0.659904126005823
+              }
+            },
+            "goeppingen_I": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2025",
+              "scene_count": 326,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9286298568507156,
+                  "ci_lower": 0.9195807770961145,
+                  "ci_upper": 0.9372699386503067
+                },
+                "availability_rate": {
+                  "mean": 0.9286298568507156,
+                  "ci_lower": 0.919478527607362,
+                  "ci_upper": 0.9374233128834356
+                },
+                "total_bits_per_scene": {
+                  "mean": 22.135071574642122,
+                  "ci_lower": 21.47790388548057,
+                  "ci_upper": 22.830656952965235
+                },
+                "context_bits_per_scene": {
+                  "mean": 4.396932515337424,
+                  "ci_lower": 3.9969555214723926,
+                  "ci_upper": 4.817714723926379
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 62.48292953450486,
+                "ci_lower": 61.367257634050816,
+                "ci_upper": 63.57084243180479
+              }
+            },
+            "skyhubfr": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2025",
+              "scene_count": 434,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9250768049155148,
+                  "ci_lower": 0.9170103686635945,
+                  "ci_upper": 0.9331806835637483
+                },
+                "availability_rate": {
+                  "mean": 0.9251920122887867,
+                  "ci_lower": 0.916935483870968,
+                  "ci_upper": 0.9330654761904763
+                },
+                "total_bits_per_scene": {
+                  "mean": 23.559485407066052,
+                  "ci_lower": 23.042388632872505,
+                  "ci_upper": 24.083885368663594
+                },
+                "context_bits_per_scene": {
+                  "mean": 4.443125960061445,
+                  "ci_lower": 4.16472638248848,
+                  "ci_upper": 4.731318164362518
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 60.068668801582966,
+                "ci_lower": 59.177066247494075,
+                "ci_upper": 60.937223372126326
+              }
+            },
+            "BGSOFIAMLADOST01": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2023",
+              "scene_count": 450,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9227037037037038,
+                  "ci_lower": 0.9151462962962962,
+                  "ci_upper": 0.929888888888889
+                },
+                "availability_rate": {
+                  "mean": 0.9227037037037038,
+                  "ci_lower": 0.9154805555555556,
+                  "ci_upper": 0.9298157407407408
+                },
+                "total_bits_per_scene": {
+                  "mean": 21.70096296296297,
+                  "ci_lower": 21.098627777777775,
+                  "ci_upper": 22.32058148148148
+                },
+                "context_bits_per_scene": {
+                  "mean": 4.40125925925926,
+                  "ci_lower": 4.094814814814814,
+                  "ci_upper": 4.730486111111111
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 63.21870684243565,
+                "ci_lower": 62.163548336472076,
+                "ci_upper": 64.21332705586943
+              }
+            },
+            "Bandon_Oregon_GAP1": {
+              "domain": "electrosense_pilot",
+              "decision": "UNRESOLVED_EXACT_FALLBACK",
+              "scene_count": 448,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.955877976190476,
+                  "ci_lower": 0.9536086309523809,
+                  "ci_upper": 0.9581482514880953
+                },
+                "availability_rate": {
+                  "mean": 0.9978050595238095,
+                  "ci_lower": 0.9971726190476189,
+                  "ci_upper": 0.9984002976190476
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.0,
+                  "ci_lower": 59.0,
+                  "ci_upper": 59.0
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 0.0,
+                "ci_lower": 0.0,
+                "ci_upper": 0.0
+              }
+            }
+          },
+          "checks": {
+            "combined_clean_lower_pass": true,
+            "pilot_clean_lower_pass": true,
+            "combined_savings_lower_pass": true,
+            "pilot_savings_lower_pass": true,
+            "wrong_codebook_decode_count_zero": true,
+            "candidate_passed": true
+          }
+        },
+        "6": {
+          "heartbeat_silence_scenes": 6,
+          "groups": {
+            "combined": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9453420342034202,
+                  "ci_lower": 0.9399969807320084,
+                  "ci_upper": 0.9515224595208543,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9540579057905791,
+                  "ci_lower": 0.9404178350606619,
+                  "ci_upper": 0.9750710194541274,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 41.371947194719475,
+                  "ci_lower": 28.762648065950373,
+                  "ci_upper": 55.62390350727764,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 8.512916291629162,
+                  "ci_lower": 2.66692346284552,
+                  "ci_upper": 18.896356902433276,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9831833183318331,
+                  "ci_lower": 0.9680192347080762,
+                  "ci_upper": 0.9939446280657355,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9975172517251726,
+                  "ci_lower": 0.9967772083160293,
+                  "ci_upper": 0.998062662060926,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.0,
+                  "ci_lower": 59.0,
+                  "ci_upper": 59.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 29.878055602170388,
+                "ci_lower": 5.002550232163891,
+                "ci_upper": 51.35612161073334,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            },
+            "aerpaw": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9451832151300235,
+                  "ci_lower": 0.9390951276102089,
+                  "ci_upper": 0.9576101983369845,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.946128841607565,
+                  "ci_lower": 0.9399071925754063,
+                  "ci_upper": 0.9593283582089553,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 60.26105200945627,
+                  "ci_lower": 52.61523932304768,
+                  "ci_upper": 62.719550986703005,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 23.002600472813235,
+                  "ci_lower": 6.683721880997633,
+                  "ci_upper": 30.099296448087426,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9781323877068557,
+                  "ci_lower": 0.9691700241168961,
+                  "ci_upper": 0.9812275577284276,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.997340425531915,
+                  "ci_lower": 0.9946941323345819,
+                  "ci_upper": 0.9983126110124333,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.0,
+                  "ci_lower": 59.0,
+                  "ci_upper": 59.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": -2.137376287214008,
+                "ci_lower": -6.439202804442307,
+                "ci_upper": 11.096137772699379,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            },
+            "pilot": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9453960595094492,
+                  "ci_lower": 0.9385842556423614,
+                  "ci_upper": 0.9527034559643255,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9567551266586248,
+                  "ci_lower": 0.9386056052934038,
+                  "ci_upper": 0.9845136919026425,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 34.946461600321676,
+                  "ci_lower": 25.402466257881407,
+                  "ci_upper": 51.18224409448819,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 3.583976678729393,
+                  "ci_lower": 1.1519680352455943,
+                  "ci_upper": 5.09832495067261,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9849014877362284,
+                  "ci_lower": 0.9646690531979518,
+                  "ci_upper": 0.9978312989714785,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9975774024929634,
+                  "ci_lower": 0.9968607184666332,
+                  "ci_upper": 0.9981780225862705,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.0,
+                  "ci_lower": 59.0,
+                  "ci_upper": 59.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 40.76870915199717,
+                "ci_lower": 13.297031991763744,
+                "ci_upper": 57.06240819759672,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            }
+          },
+          "session_results": {
+            "aerpaw_packapalooza_2023": {
+              "domain": "aerpaw",
+              "decision": "OOD",
+              "scene_count": 364,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9419871794871795,
+                  "ci_lower": 0.936125228937729,
+                  "ci_upper": 0.947664835164835
+                },
+                "availability_rate": {
+                  "mean": 0.9425824175824176,
+                  "ci_lower": 0.9367662545787545,
+                  "ci_upper": 0.9482142857142858
+                },
+                "total_bits_per_scene": {
+                  "mean": 62.06043956043957,
+                  "ci_lower": 60.541082875457874,
+                  "ci_upper": 63.68716346153846
+                },
+                "context_bits_per_scene": {
+                  "mean": 31.51098901098901,
+                  "ci_lower": 30.267156593406593,
+                  "ci_upper": 32.7032967032967
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": -5.187185695660271,
+                "ci_lower": -7.743372446762277,
+                "ci_upper": -2.6315150245235017
+              }
+            },
+            "aerpaw_lake_wheeler_2024": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_packapalooza_2024",
+              "scene_count": 67,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9559701492537315,
+                  "ci_lower": 0.9432835820895524,
+                  "ci_upper": 0.967412935323383
+                },
+                "availability_rate": {
+                  "mean": 0.9569651741293532,
+                  "ci_lower": 0.9450186567164178,
+                  "ci_upper": 0.9681592039800996
+                },
+                "total_bits_per_scene": {
+                  "mean": 49.19004975124379,
+                  "ci_lower": 47.7206343283582,
+                  "ci_upper": 50.71447139303482
+                },
+                "context_bits_per_scene": {
+                  "mean": 6.319900497512437,
+                  "ci_lower": 5.582456467661691,
+                  "ci_upper": 7.1635634328358195
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 16.627034319925794,
+                "ci_lower": 14.102590859263008,
+                "ci_upper": 19.16055316637153
+              }
+            },
+            "aerpaw_packapalooza_2024": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 67,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9490049751243782,
+                  "ci_lower": 0.936318407960199,
+                  "ci_upper": 0.9601990049751244
+                },
+                "availability_rate": {
+                  "mean": 0.9504975124378111,
+                  "ci_lower": 0.9375621890547264,
+                  "ci_upper": 0.9624378109452736
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.26965174129353,
+                  "ci_lower": 57.46610696517412,
+                  "ci_upper": 61.10697761194029
+                },
+                "context_bits_per_scene": {
+                  "mean": 7.597014925373134,
+                  "ci_lower": 6.4869154228855725,
+                  "ci_upper": 8.842910447761192
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": -0.45703684965005387,
+                "ci_lower": -3.7888101863563524,
+                "ci_upper": 2.626718104393288
+              }
+            },
+            "aerpaw_packapalooza_2025": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 66,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9479797979797979,
+                  "ci_lower": 0.9363636363636362,
+                  "ci_upper": 0.9598484848484847
+                },
+                "availability_rate": {
+                  "mean": 0.9502525252525252,
+                  "ci_lower": 0.9381313131313131,
+                  "ci_upper": 0.9621275252525253
+                },
+                "total_bits_per_scene": {
+                  "mean": 62.582323232323226,
+                  "ci_lower": 60.58833333333333,
+                  "ci_upper": 64.77027777777776
+                },
+                "context_bits_per_scene": {
+                  "mean": 8.652020202020203,
+                  "ci_lower": 7.484280303030304,
+                  "ci_upper": 9.935416666666665
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": -6.071734292073276,
+                "ci_lower": -9.668956514295497,
+                "ci_upper": -2.658748501968843
+              }
+            },
+            "goeppingen_I": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2025",
+              "scene_count": 326,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.942126789366053,
+                  "ci_lower": 0.9358895705521473,
+                  "ci_upper": 0.9482617586912065
+                },
+                "availability_rate": {
+                  "mean": 0.942126789366053,
+                  "ci_lower": 0.9357860429447851,
+                  "ci_upper": 0.9482617586912064
+                },
+                "total_bits_per_scene": {
+                  "mean": 25.750971370143148,
+                  "ci_lower": 25.016435327198362,
+                  "ci_upper": 26.53427786298568
+                },
+                "context_bits_per_scene": {
+                  "mean": 4.970705521472394,
+                  "ci_lower": 4.61418200408998,
+                  "ci_upper": 5.357671267893661
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 56.354285813316686,
+                "ci_lower": 55.01151173269557,
+                "ci_upper": 57.60106235485772
+              }
+            },
+            "skyhubfr": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2025",
+              "scene_count": 434,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.941551459293395,
+                  "ci_lower": 0.9354070660522276,
+                  "ci_upper": 0.9471207757296468
+                },
+                "availability_rate": {
+                  "mean": 0.9416666666666669,
+                  "ci_lower": 0.935599078341014,
+                  "ci_upper": 0.947542242703533
+                },
+                "total_bits_per_scene": {
+                  "mean": 27.065552995391705,
+                  "ci_lower": 26.37330645161291,
+                  "ci_upper": 27.73251440092166
+                },
+                "context_bits_per_scene": {
+                  "mean": 4.884831029185867,
+                  "ci_lower": 4.576112711213519,
+                  "ci_upper": 5.203419738863287
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 54.126181363742866,
+                "ci_lower": 52.96473157332916,
+                "ci_upper": 55.257833450493365
+              }
+            },
+            "BGSOFIAMLADOST01": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2023",
+              "scene_count": 450,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.941037037037037,
+                  "ci_lower": 0.9358888888888889,
+                  "ci_upper": 0.9460370370370371
+                },
+                "availability_rate": {
+                  "mean": 0.941037037037037,
+                  "ci_lower": 0.9358148148148148,
+                  "ci_upper": 0.9461481481481483
+                },
+                "total_bits_per_scene": {
+                  "mean": 25.26214814814815,
+                  "ci_lower": 24.600478703703704,
+                  "ci_upper": 25.91915555555556
+                },
+                "context_bits_per_scene": {
+                  "mean": 4.892814814814814,
+                  "ci_lower": 4.591961111111111,
+                  "ci_upper": 5.221357407407408
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 57.18279974890145,
+                "ci_lower": 56.0385389202762,
+                "ci_upper": 58.29398775894537
+              }
+            },
+            "Bandon_Oregon_GAP1": {
+              "domain": "electrosense_pilot",
+              "decision": "UNRESOLVED_EXACT_FALLBACK",
+              "scene_count": 448,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.955877976190476,
+                  "ci_lower": 0.953607700892857,
+                  "ci_upper": 0.9580729166666667
+                },
+                "availability_rate": {
+                  "mean": 0.9978050595238095,
+                  "ci_lower": 0.9971354166666665,
+                  "ci_upper": 0.9984002976190477
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.0,
+                  "ci_lower": 59.0,
+                  "ci_upper": 59.0
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 0.0,
+                "ci_lower": 0.0,
+                "ci_upper": 0.0
+              }
+            }
+          },
+          "checks": {
+            "combined_clean_lower_pass": true,
+            "pilot_clean_lower_pass": true,
+            "combined_savings_lower_pass": true,
+            "pilot_savings_lower_pass": true,
+            "wrong_codebook_decode_count_zero": true,
+            "candidate_passed": true
+          }
+        }
+      }
+    },
+    "32": {
+      "n_channels": 32,
+      "candidate_results": {
+        "16": {
+          "heartbeat_silence_scenes": 16,
+          "groups": {
+            "combined": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.8896264626462645,
+                  "ci_lower": 0.8634764578658908,
+                  "ci_upper": 0.9243332198377558,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.8998124812481247,
+                  "ci_lower": 0.8636106778001489,
+                  "ci_upper": 0.9506978220805008,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 33.074452445244525,
+                  "ci_lower": 19.27734817598577,
+                  "ci_upper": 50.86131880404582,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 5.534533453345334,
+                  "ci_lower": 1.6938003660573384,
+                  "ci_upper": 12.344543061350992,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9807680768076806,
+                  "ci_lower": 0.9638335088275185,
+                  "ci_upper": 0.9929950005813277,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9971872187218722,
+                  "ci_lower": 0.9963817004487414,
+                  "ci_upper": 0.9977095276870835,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 62.0,
+                  "ci_lower": 62.0,
+                  "ci_upper": 62.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 46.65410895928302,
+                "ci_lower": 17.29264844577821,
+                "ci_upper": 68.7400109774703,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            },
+            "aerpaw": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9073877068557921,
+                  "ci_lower": 0.891414521339567,
+                  "ci_upper": 0.9443619543261138,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9088947990543735,
+                  "ci_lower": 0.8920632864544781,
+                  "ci_upper": 0.9474417885661792,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 46.82630023640662,
+                  "ci_lower": 43.31116659476561,
+                  "ci_upper": 57.08338972431077,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 15.453191489361704,
+                  "ci_lower": 5.472320158337525,
+                  "ci_upper": 19.801788898475696,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9760342789598109,
+                  "ci_lower": 0.9655429655599674,
+                  "ci_upper": 0.9795228366866096,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9967494089834514,
+                  "ci_lower": 0.9933832709113608,
+                  "ci_upper": 0.9978699106754206,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 62.0,
+                  "ci_lower": 62.0,
+                  "ci_upper": 62.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 24.47370929611835,
+                "ci_lower": 8.060820989511742,
+                "ci_upper": 29.990823728263848,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            },
+            "pilot": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.883584640128669,
+                  "ci_lower": 0.8520612142557261,
+                  "ci_upper": 0.9285604143232095,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.8967229593888217,
+                  "ci_lower": 0.8519524554029385,
+                  "ci_upper": 0.9644455647057494,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 28.396501809408925,
+                  "ci_lower": 15.220662530261245,
+                  "ci_upper": 51.091076584176975,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 2.1605146763168475,
+                  "ci_lower": 0.7191275309336334,
+                  "ci_upper": 3.0932854255203,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9823783675110574,
+                  "ci_lower": 0.959232929248365,
+                  "ci_upper": 0.9967979789980234,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.997336147969441,
+                  "ci_lower": 0.9968034513263966,
+                  "ci_upper": 0.9978407281469629,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 62.0,
+                  "ci_lower": 62.0,
+                  "ci_upper": 62.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 54.1991906299856,
+                "ci_lower": 17.563081706520556,
+                "ci_upper": 75.50893076153314,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            }
+          },
+          "session_results": {
+            "aerpaw_packapalooza_2023": {
+              "domain": "aerpaw",
+              "decision": "OOD",
+              "scene_count": 364,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.893452380952381,
+                  "ci_lower": 0.881959706959707,
+                  "ci_upper": 0.9049908424908425
+                },
+                "availability_rate": {
+                  "mean": 0.8943681318681319,
+                  "ci_lower": 0.882554945054945,
+                  "ci_upper": 0.906135531135531
+                },
+                "total_bits_per_scene": {
+                  "mean": 43.218086080586076,
+                  "ci_lower": 41.71929029304028,
+                  "ci_upper": 44.77800595238096
+                },
+                "context_bits_per_scene": {
+                  "mean": 20.51854395604396,
+                  "ci_lower": 19.31662087912088,
+                  "ci_upper": 21.75480769230769
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 30.2934095474418,
+                "ci_lower": 27.862452735436612,
+                "ci_upper": 32.65509977253928
+              }
+            },
+            "aerpaw_lake_wheeler_2024": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_packapalooza_2024",
+              "scene_count": 67,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9196517412935326,
+                  "ci_lower": 0.8975124378109453,
+                  "ci_upper": 0.9402985074626867
+                },
+                "availability_rate": {
+                  "mean": 0.9221393034825872,
+                  "ci_lower": 0.9,
+                  "ci_upper": 0.9430348258706468
+                },
+                "total_bits_per_scene": {
+                  "mean": 46.57437810945273,
+                  "ci_lower": 45.28803482587065,
+                  "ci_upper": 47.833376865671646
+                },
+                "context_bits_per_scene": {
+                  "mean": 5.326616915422885,
+                  "ci_lower": 4.649241293532337,
+                  "ci_upper": 6.044042288557212
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 24.880035307334296,
+                "ci_lower": 22.84372492376826,
+                "ci_upper": 26.839622452254854
+              }
+            },
+            "aerpaw_packapalooza_2024": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 67,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9415422885572139,
+                  "ci_lower": 0.9218905472636816,
+                  "ci_upper": 0.9599502487562188
+                },
+                "availability_rate": {
+                  "mean": 0.9440298507462687,
+                  "ci_lower": 0.9238805970149254,
+                  "ci_upper": 0.9624378109452736
+                },
+                "total_bits_per_scene": {
+                  "mean": 55.255721393034825,
+                  "ci_lower": 53.469875621890544,
+                  "ci_upper": 57.13434079601989
+                },
+                "context_bits_per_scene": {
+                  "mean": 5.864676616915422,
+                  "ci_lower": 5.017910447761193,
+                  "ci_upper": 6.802238805970149
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 10.877868720911572,
+                "ci_lower": 7.84324346011876,
+                "ci_upper": 13.882262076713209
+              }
+            },
+            "aerpaw_packapalooza_2025": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 66,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9371212121212121,
+                  "ci_lower": 0.9196969696969697,
+                  "ci_upper": 0.9535353535353533
+                },
+                "availability_rate": {
+                  "mean": 0.9398989898989899,
+                  "ci_lower": 0.9232323232323231,
+                  "ci_upper": 0.9560606060606059
+                },
+                "total_bits_per_scene": {
+                  "mean": 58.424747474747484,
+                  "ci_lower": 56.71161616161616,
+                  "ci_upper": 60.27494318181819
+                },
+                "context_bits_per_scene": {
+                  "mean": 7.5308080808080815,
+                  "ci_lower": 6.598693181818183,
+                  "ci_upper": 8.663383838383838
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 5.76653633105246,
+                "ci_lower": 2.816389703486479,
+                "ci_upper": 8.59734441186054
+              }
+            },
+            "goeppingen_I": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2025",
+              "scene_count": 326,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.864366053169734,
+                  "ci_lower": 0.8498964723926381,
+                  "ci_upper": 0.8784764826175867
+                },
+                "availability_rate": {
+                  "mean": 0.864366053169734,
+                  "ci_lower": 0.8499987218813906,
+                  "ci_upper": 0.8786298568507156
+                },
+                "total_bits_per_scene": {
+                  "mean": 15.281697341513292,
+                  "ci_lower": 14.802897494887526,
+                  "ci_upper": 15.755373210633945
+                },
+                "context_bits_per_scene": {
+                  "mean": 2.8868098159509197,
+                  "ci_lower": 2.638034253578732,
+                  "ci_upper": 3.145506134969325
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 75.35210106207533,
+                "ci_lower": 74.56083226136286,
+                "ci_upper": 76.10948941223036
+              }
+            },
+            "skyhubfr": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2025",
+              "scene_count": 434,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.8604070660522275,
+                  "ci_lower": 0.8458515745007681,
+                  "ci_upper": 0.8745775729646696
+                },
+                "availability_rate": {
+                  "mean": 0.860599078341014,
+                  "ci_lower": 0.8462749615975422,
+                  "ci_upper": 0.8747321428571431
+                },
+                "total_bits_per_scene": {
+                  "mean": 17.25253456221198,
+                  "ci_lower": 16.75360887096774,
+                  "ci_upper": 17.790343701996928
+                },
+                "context_bits_per_scene": {
+                  "mean": 3.0506912442396312,
+                  "ci_lower": 2.8034178187404,
+                  "ci_upper": 3.3228696236559134
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 72.173331351271,
+                "ci_lower": 71.31499770824041,
+                "ci_upper": 73.00082844011693
+              }
+            },
+            "BGSOFIAMLADOST01": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2023",
+              "scene_count": 450,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.855074074074074,
+                  "ci_lower": 0.8421842592592593,
+                  "ci_upper": 0.8674444444444444
+                },
+                "availability_rate": {
+                  "mean": 0.8551111111111109,
+                  "ci_lower": 0.8417407407407408,
+                  "ci_upper": 0.8678148148148149
+                },
+                "total_bits_per_scene": {
+                  "mean": 15.191037037037036,
+                  "ci_lower": 14.76758148148148,
+                  "ci_upper": 15.654950925925926
+                },
+                "context_bits_per_scene": {
+                  "mean": 2.9267407407407404,
+                  "ci_lower": 2.726272222222222,
+                  "ci_upper": 3.1440675925925925
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 75.49832735961768,
+                "ci_lower": 74.72615143369174,
+                "ci_upper": 76.21519563918757
+              }
+            },
+            "Bandon_Oregon_GAP1": {
+              "domain": "electrosense_pilot",
+              "decision": "UNRESOLVED_EXACT_FALLBACK",
+              "scene_count": 448,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9486607142857141,
+                  "ci_lower": 0.9463169642857142,
+                  "ci_upper": 0.9509300595238095
+                },
+                "availability_rate": {
+                  "mean": 0.9970610119047617,
+                  "ci_lower": 0.9962425595238094,
+                  "ci_upper": 0.9978050595238094
+                },
+                "total_bits_per_scene": {
+                  "mean": 62.0,
+                  "ci_lower": 62.0,
+                  "ci_upper": 62.0
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 0.0,
+                "ci_lower": 0.0,
+                "ci_upper": 0.0
+              }
+            }
+          },
+          "checks": {
+            "combined_clean_lower_pass": false,
+            "pilot_clean_lower_pass": false,
+            "combined_savings_lower_pass": true,
+            "pilot_savings_lower_pass": true,
+            "wrong_codebook_decode_count_zero": true,
+            "candidate_passed": false
+          }
+        },
+        "10": {
+          "heartbeat_silence_scenes": 10,
+          "groups": {
+            "combined": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9209045904590458,
+                  "ci_lower": 0.9075794857119067,
+                  "ci_upper": 0.9365846192530687,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9311131113111312,
+                  "ci_lower": 0.9081673408033429,
+                  "ci_upper": 0.965218012912078,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 36.821692169216924,
+                  "ci_lower": 23.468806106925946,
+                  "ci_upper": 53.50144199127195,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 6.904920492049204,
+                  "ci_lower": 2.0709415270991633,
+                  "ci_upper": 15.400019924959642,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9807680768076806,
+                  "ci_lower": 0.9634068104184458,
+                  "ci_upper": 0.9929381039068446,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9971872187218722,
+                  "ci_lower": 0.9963983540374642,
+                  "ci_upper": 0.997693278750909,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 62.0,
+                  "ci_lower": 62.0,
+                  "ci_upper": 62.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 40.61017392061787,
+                "ci_lower": 13.623634375851934,
+                "ci_upper": 62.67356724902825,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            },
+            "aerpaw": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.927836879432624,
+                  "ci_lower": 0.9182328605200946,
+                  "ci_upper": 0.947431318230032,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9294030732860521,
+                  "ci_lower": 0.9193180734713883,
+                  "ci_upper": 0.9502497113570444,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 53.036554373522456,
+                  "ci_lower": 50.0874956851976,
+                  "ci_upper": 58.11564606741573,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 18.984663120567372,
+                  "ci_lower": 5.684058642408259,
+                  "ci_upper": 24.73683167960885,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9760342789598109,
+                  "ci_lower": 0.9656603773584906,
+                  "ci_upper": 0.9794509556244336,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9967494089834514,
+                  "ci_lower": 0.9934837092731829,
+                  "ci_upper": 0.9978480691056911,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 62.0,
+                  "ci_lower": 62.0,
+                  "ci_upper": 62.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 14.457170365286357,
+                "ci_lower": 5.978881404390744,
+                "ci_upper": 19.08783300094781,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            },
+            "pilot": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9185464414957779,
+                  "ci_lower": 0.9019056556446966,
+                  "ci_upper": 0.9387154981463437,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9316948130277442,
+                  "ci_lower": 0.9021483916147104,
+                  "ci_upper": 0.9752510683760683,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 31.305900683554484,
+                  "ci_lower": 19.201517339633448,
+                  "ci_upper": 52.01002624671916,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 2.795767993566546,
+                  "ci_lower": 0.8930123560014865,
+                  "ci_upper": 3.995946500926764,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9823783675110574,
+                  "ci_lower": 0.9589618263473052,
+                  "ci_upper": 0.9966886415454896,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.997336147969441,
+                  "ci_lower": 0.9968013301188555,
+                  "ci_upper": 0.9978291498891222,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 62.0,
+                  "ci_lower": 62.0,
+                  "ci_upper": 62.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 49.50661180071858,
+                "ci_lower": 16.04083095963811,
+                "ci_upper": 69.03535386322051,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            }
+          },
+          "session_results": {
+            "aerpaw_packapalooza_2023": {
+              "domain": "aerpaw",
+              "decision": "OOD",
+              "scene_count": 364,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9232600732600733,
+                  "ci_lower": 0.9151556776556777,
+                  "ci_upper": 0.9314102564102564
+                },
+                "availability_rate": {
+                  "mean": 0.9242673992673993,
+                  "ci_lower": 0.9161172161172162,
+                  "ci_upper": 0.9324175824175825
+                },
+                "total_bits_per_scene": {
+                  "mean": 52.21401098901099,
+                  "ci_lower": 50.603770604395606,
+                  "ci_upper": 53.89481570512821
+                },
+                "context_bits_per_scene": {
+                  "mean": 25.858516483516482,
+                  "ci_lower": 24.58791208791209,
+                  "ci_upper": 27.1462912087912
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 15.783853243530663,
+                "ci_lower": 13.058726220016544,
+                "ci_upper": 18.318889947418164
+              }
+            },
+            "aerpaw_lake_wheeler_2024": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_packapalooza_2024",
+              "scene_count": 67,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9216417910447763,
+                  "ci_lower": 0.9007400497512439,
+                  "ci_upper": 0.9420398009950248
+                },
+                "availability_rate": {
+                  "mean": 0.9241293532338309,
+                  "ci_lower": 0.9022388059701494,
+                  "ci_upper": 0.9442786069651742
+                },
+                "total_bits_per_scene": {
+                  "mean": 47.50174129353234,
+                  "ci_lower": 46.258949004975115,
+                  "ci_upper": 48.81571517412935
+                },
+                "context_bits_per_scene": {
+                  "mean": 5.453980099502487,
+                  "ci_lower": 4.8243656716417895,
+                  "ci_upper": 6.147263681592039
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 23.384288236238167,
+                "ci_lower": 21.231493740972557,
+                "ci_upper": 25.369964692665707
+              }
+            },
+            "aerpaw_packapalooza_2024": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 67,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9462686567164179,
+                  "ci_lower": 0.9286069651741296,
+                  "ci_upper": 0.9626865671641791
+                },
+                "availability_rate": {
+                  "mean": 0.9487562189054727,
+                  "ci_lower": 0.9310945273631841,
+                  "ci_upper": 0.9654291044776121
+                },
+                "total_bits_per_scene": {
+                  "mean": 56.87985074626866,
+                  "ci_lower": 55.14619402985075,
+                  "ci_upper": 58.648264925373134
+                },
+                "context_bits_per_scene": {
+                  "mean": 6.162437810945273,
+                  "ci_lower": 5.356965174129353,
+                  "ci_upper": 7.055223880597015
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 8.258305247953778,
+                "ci_lower": 5.361829963087787,
+                "ci_upper": 10.88751805488686
+              }
+            },
+            "aerpaw_packapalooza_2025": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 66,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9406565656565656,
+                  "ci_lower": 0.9247474747474748,
+                  "ci_upper": 0.9558080808080809
+                },
+                "availability_rate": {
+                  "mean": 0.9434343434343435,
+                  "ci_lower": 0.9275252525252526,
+                  "ci_upper": 0.9590909090909091
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.290151515151514,
+                  "ci_lower": 57.51006944444444,
+                  "ci_upper": 61.255909090909086
+                },
+                "context_bits_per_scene": {
+                  "mean": 7.826515151515152,
+                  "ci_lower": 6.813636363636364,
+                  "ci_upper": 9.002897727272725
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 4.370723362658849,
+                "ci_lower": 1.3452977354187026,
+                "ci_upper": 7.2548264907135875
+              }
+            },
+            "goeppingen_I": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2025",
+              "scene_count": 326,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9138548057259713,
+                  "ci_lower": 0.9041411042944786,
+                  "ci_upper": 0.9233128834355829
+                },
+                "availability_rate": {
+                  "mean": 0.9138548057259713,
+                  "ci_lower": 0.9043456032719835,
+                  "ci_upper": 0.9233640081799591
+                },
+                "total_bits_per_scene": {
+                  "mean": 19.837832310838447,
+                  "ci_lower": 19.227248210633945,
+                  "ci_upper": 20.455242842535785
+                },
+                "context_bits_per_scene": {
+                  "mean": 3.8980572597137018,
+                  "ci_lower": 3.5987142126789364,
+                  "ci_upper": 4.227351738241308
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 68.0034962728412,
+                "ci_lower": 66.99533280559405,
+                "ci_upper": 68.95442476416648
+              }
+            },
+            "skyhubfr": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2025",
+              "scene_count": 434,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9021505376344088,
+                  "ci_lower": 0.8938162442396316,
+                  "ci_upper": 0.9109831029185868
+                },
+                "availability_rate": {
+                  "mean": 0.9023425499231953,
+                  "ci_lower": 0.8937403993855607,
+                  "ci_upper": 0.910752688172043
+                },
+                "total_bits_per_scene": {
+                  "mean": 21.068855606758834,
+                  "ci_lower": 20.476093509984636,
+                  "ci_upper": 21.669482526881716
+                },
+                "context_bits_per_scene": {
+                  "mean": 3.93252688172043,
+                  "ci_lower": 3.643467741935485,
+                  "ci_upper": 4.230329301075268
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 66.01797482780833,
+                "ci_lower": 65.01431110945938,
+                "ci_upper": 66.96765522025667
+              }
+            },
+            "BGSOFIAMLADOST01": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2023",
+              "scene_count": 450,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9077777777777777,
+                  "ci_lower": 0.8983703703703703,
+                  "ci_upper": 0.9169999999999999
+                },
+                "availability_rate": {
+                  "mean": 0.9078518518518518,
+                  "ci_lower": 0.8980740740740741,
+                  "ci_upper": 0.917037037037037
+                },
+                "total_bits_per_scene": {
+                  "mean": 18.92925925925926,
+                  "ci_lower": 18.35334444444445,
+                  "ci_upper": 19.528683333333333
+                },
+                "context_bits_per_scene": {
+                  "mean": 3.6842222222222225,
+                  "ci_lower": 3.3749935185185183,
+                  "ci_upper": 4.02926574074074
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 69.4689366786141,
+                "ci_lower": 68.52172491039427,
+                "ci_upper": 70.38801075268817
+              }
+            },
+            "Bandon_Oregon_GAP1": {
+              "domain": "electrosense_pilot",
+              "decision": "UNRESOLVED_EXACT_FALLBACK",
+              "scene_count": 448,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9486607142857141,
+                  "ci_lower": 0.9463169642857143,
+                  "ci_upper": 0.9509672619047617
+                },
+                "availability_rate": {
+                  "mean": 0.9970610119047617,
+                  "ci_lower": 0.9962425595238094,
+                  "ci_upper": 0.9978422619047617
+                },
+                "total_bits_per_scene": {
+                  "mean": 62.0,
+                  "ci_lower": 62.0,
+                  "ci_upper": 62.0
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 0.0,
+                "ci_lower": 0.0,
+                "ci_upper": 0.0
+              }
+            }
+          },
+          "checks": {
+            "combined_clean_lower_pass": true,
+            "pilot_clean_lower_pass": true,
+            "combined_savings_lower_pass": true,
+            "pilot_savings_lower_pass": true,
+            "wrong_codebook_decode_count_zero": true,
+            "candidate_passed": true
+          }
+        },
+        "8": {
+          "heartbeat_silence_scenes": 8,
+          "groups": {
+            "combined": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9327857785778576,
+                  "ci_lower": 0.9242599587740471,
+                  "ci_upper": 0.9432415001456336,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.942986798679868,
+                  "ci_lower": 0.9246737360780786,
+                  "ci_upper": 0.970557514524054,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 38.95866336633663,
+                  "ci_lower": 25.744496800176908,
+                  "ci_upper": 55.834620019295166,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 7.493316831683169,
+                  "ci_lower": 2.330271521838541,
+                  "ci_upper": 16.1709438056573,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9807680768076806,
+                  "ci_lower": 0.9634996104540531,
+                  "ci_upper": 0.9930006838971689,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9971872187218722,
+                  "ci_lower": 0.9963923857218521,
+                  "ci_upper": 0.9977133590329502,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 62.0,
+                  "ci_lower": 62.0,
+                  "ci_upper": 62.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 37.163446183328,
+                "ci_lower": 10.62346516164487,
+                "ci_upper": 58.39182763037388,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            },
+            "aerpaw": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9380319148936169,
+                  "ci_lower": 0.9299067007822882,
+                  "ci_upper": 0.9557213930348258,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9395981087470449,
+                  "ci_lower": 0.9313466795226408,
+                  "ci_upper": 0.9575530586766543,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 55.532417257683214,
+                  "ci_lower": 53.145881529850755,
+                  "ci_upper": 59.02789160401002,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 20.11238179669031,
+                  "ci_lower": 6.290393345771143,
+                  "ci_upper": 26.08993367002652,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9760342789598109,
+                  "ci_lower": 0.9655430711610488,
+                  "ci_upper": 0.9794690265486725,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9967494089834514,
+                  "ci_lower": 0.9932330827067671,
+                  "ci_upper": 0.9978717437996804,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 62.0,
+                  "ci_lower": 62.0,
+                  "ci_upper": 62.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 10.431585068252879,
+                "ci_lower": 4.808942490889432,
+                "ci_upper": 14.468106902661988,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            },
+            "pilot": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9310012062726175,
+                  "ci_lower": 0.9201100276806052,
+                  "ci_upper": 0.9434835565090293,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9441395255327704,
+                  "ci_lower": 0.9200151984955068,
+                  "ci_upper": 0.979386951631046,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 33.32078809811017,
+                  "ci_lower": 22.104852878006874,
+                  "ci_upper": 52.64332841207349,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 3.20070365902694,
+                  "ci_lower": 1.0299198537682794,
+                  "ci_upper": 4.580427083333333,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9823783675110574,
+                  "ci_lower": 0.958891601218261,
+                  "ci_upper": 0.9967788874570447,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.997336147969441,
+                  "ci_lower": 0.9968013301188556,
+                  "ci_upper": 0.9978318329121625,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 62.0,
+                  "ci_lower": 62.0,
+                  "ci_upper": 62.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 46.25679339014488,
+                "ci_lower": 15.11156140764663,
+                "ci_upper": 64.31930476205547,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            }
+          },
+          "session_results": {
+            "aerpaw_packapalooza_2023": {
+              "domain": "aerpaw",
+              "decision": "OOD",
+              "scene_count": 364,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9339285714285714,
+                  "ci_lower": 0.9266472069597069,
+                  "ci_upper": 0.9412087912087911
+                },
+                "availability_rate": {
+                  "mean": 0.9349358974358974,
+                  "ci_lower": 0.9277003205128206,
+                  "ci_upper": 0.9423534798534798
+                },
+                "total_bits_per_scene": {
+                  "mean": 55.12760989010989,
+                  "ci_lower": 53.47586195054945,
+                  "ci_upper": 56.842221840659334
+                },
+                "context_bits_per_scene": {
+                  "mean": 27.283653846153847,
+                  "ci_lower": 25.944368131868135,
+                  "ci_upper": 28.674450549450547
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 11.084500177242113,
+                "ci_lower": 8.328797043010752,
+                "ci_upper": 13.851640966560323
+              }
+            },
+            "aerpaw_lake_wheeler_2024": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_packapalooza_2024",
+              "scene_count": 67,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9388059701492537,
+                  "ci_lower": 0.919900497512438,
+                  "ci_upper": 0.9564676616915423
+                },
+                "availability_rate": {
+                  "mean": 0.9412935323383084,
+                  "ci_lower": 0.9221393034825872,
+                  "ci_upper": 0.9594527363184079
+                },
+                "total_bits_per_scene": {
+                  "mean": 51.190796019900496,
+                  "ci_lower": 49.73007462686567,
+                  "ci_upper": 52.753824626865665
+                },
+                "context_bits_per_scene": {
+                  "mean": 6.76044776119403,
+                  "ci_lower": 5.867400497512437,
+                  "ci_upper": 7.789732587064672
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 17.434199967902423,
+                "ci_lower": 14.839993580484673,
+                "ci_upper": 19.844477210720594
+              }
+            },
+            "aerpaw_packapalooza_2024": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 67,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9539800995024876,
+                  "ci_lower": 0.9380597014925375,
+                  "ci_upper": 0.9686567164179105
+                },
+                "availability_rate": {
+                  "mean": 0.9564676616915422,
+                  "ci_lower": 0.9410385572139304,
+                  "ci_upper": 0.9711442786069652
+                },
+                "total_bits_per_scene": {
+                  "mean": 57.61119402985074,
+                  "ci_lower": 55.9337686567164,
+                  "ci_upper": 59.367021144278596
+                },
+                "context_bits_per_scene": {
+                  "mean": 6.210199004975124,
+                  "ci_lower": 5.422226368159204,
+                  "ci_upper": 7.082338308457711
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 7.078719306692347,
+                "ci_lower": 4.274514524153426,
+                "ci_upper": 9.800403225806448
+              }
+            },
+            "aerpaw_packapalooza_2025": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 66,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9436868686868688,
+                  "ci_lower": 0.9297979797979798,
+                  "ci_upper": 0.9573232323232322
+                },
+                "availability_rate": {
+                  "mean": 0.9464646464646463,
+                  "ci_lower": 0.932070707070707,
+                  "ci_upper": 0.9606060606060606
+                },
+                "total_bits_per_scene": {
+                  "mean": 60.06212121212122,
+                  "ci_lower": 58.05253156565656,
+                  "ci_upper": 62.27515782828282
+                },
+                "context_bits_per_scene": {
+                  "mean": 8.22878787878788,
+                  "ci_lower": 7.001010101010102,
+                  "ci_upper": 9.698989898989899
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 3.1256109481915932,
+                "ci_lower": -0.3470796676441834,
+                "ci_upper": 6.398287308569567
+              }
+            },
+            "goeppingen_I": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2025",
+              "scene_count": 326,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9303169734151329,
+                  "ci_lower": 0.9224948875255624,
+                  "ci_upper": 0.9381390593047033
+                },
+                "availability_rate": {
+                  "mean": 0.9303169734151329,
+                  "ci_lower": 0.9227505112474438,
+                  "ci_upper": 0.9382924335378322
+                },
+                "total_bits_per_scene": {
+                  "mean": 22.63430470347648,
+                  "ci_lower": 21.835971370143152,
+                  "ci_upper": 23.485677402862986
+                },
+                "context_bits_per_scene": {
+                  "mean": 4.56784253578732,
+                  "ci_lower": 4.119066973415132,
+                  "ci_upper": 5.054706032719837
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 63.49305692987664,
+                "ci_lower": 62.119112408470215,
+                "ci_upper": 64.72733194801769
+              }
+            },
+            "skyhubfr": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2025",
+              "scene_count": 434,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9204301075268818,
+                  "ci_lower": 0.9127112135176653,
+                  "ci_upper": 0.9276123271889403
+                },
+                "availability_rate": {
+                  "mean": 0.920583717357911,
+                  "ci_lower": 0.9130942780337944,
+                  "ci_upper": 0.928225806451613
+                },
+                "total_bits_per_scene": {
+                  "mean": 23.545622119815665,
+                  "ci_lower": 22.894433563748084,
+                  "ci_upper": 24.210239055299535
+                },
+                "context_bits_per_scene": {
+                  "mean": 4.326804915514592,
+                  "ci_lower": 4.013093317972349,
+                  "ci_upper": 4.647814900153609
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 62.02319012932957,
+                "ci_lower": 60.99214917496655,
+                "ci_upper": 63.0850103438878
+              }
+            },
+            "BGSOFIAMLADOST01": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2023",
+              "scene_count": 450,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9241111111111112,
+                  "ci_lower": 0.9168518518518518,
+                  "ci_upper": 0.9314074074074074
+                },
+                "availability_rate": {
+                  "mean": 0.9241851851851853,
+                  "ci_lower": 0.9167027777777778,
+                  "ci_upper": 0.9316305555555556
+                },
+                "total_bits_per_scene": {
+                  "mean": 21.93840740740741,
+                  "ci_lower": 21.305014814814815,
+                  "ci_upper": 22.5882
+                },
+                "context_bits_per_scene": {
+                  "mean": 4.310703703703704,
+                  "ci_lower": 3.981093518518519,
+                  "ci_upper": 4.663573148148148
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 64.61547192353643,
+                "ci_lower": 63.583224313022704,
+                "ci_upper": 65.59631272401434
+              }
+            },
+            "Bandon_Oregon_GAP1": {
+              "domain": "electrosense_pilot",
+              "decision": "UNRESOLVED_EXACT_FALLBACK",
+              "scene_count": 448,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9486607142857141,
+                  "ci_lower": 0.946391369047619,
+                  "ci_upper": 0.9509672619047618
+                },
+                "availability_rate": {
+                  "mean": 0.9970610119047617,
+                  "ci_lower": 0.9962425595238094,
+                  "ci_upper": 0.9978422619047618
+                },
+                "total_bits_per_scene": {
+                  "mean": 62.0,
+                  "ci_lower": 62.0,
+                  "ci_upper": 62.0
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 0.0,
+                "ci_lower": 0.0,
+                "ci_upper": 0.0
+              }
+            }
+          },
+          "checks": {
+            "combined_clean_lower_pass": true,
+            "pilot_clean_lower_pass": true,
+            "combined_savings_lower_pass": true,
+            "pilot_savings_lower_pass": true,
+            "wrong_codebook_decode_count_zero": true,
+            "candidate_passed": true
+          }
+        },
+        "6": {
+          "heartbeat_silence_scenes": 6,
+          "groups": {
+            "combined": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9451695169516953,
+                  "ci_lower": 0.9404687334617583,
+                  "ci_upper": 0.9503687415303345,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9553630363036303,
+                  "ci_lower": 0.941224584237364,
+                  "ci_upper": 0.9766060647877566,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 42.45854335433543,
+                  "ci_lower": 29.738837510055674,
+                  "ci_upper": 56.75234893184373,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 8.564603960396042,
+                  "ci_lower": 2.6391922814207653,
+                  "ci_upper": 18.473100221858697,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9807680768076806,
+                  "ci_lower": 0.9635172739754213,
+                  "ci_upper": 0.9928268894733389,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9971872187218722,
+                  "ci_lower": 0.9963838370283546,
+                  "ci_upper": 0.9976970330582676,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 62.0,
+                  "ci_lower": 62.0,
+                  "ci_upper": 62.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 31.518478460749296,
+                "ci_lower": 6.831721729401946,
+                "ci_upper": 52.27405053416739,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            },
+            "aerpaw": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9489657210401892,
+                  "ci_lower": 0.9421641791044776,
+                  "ci_upper": 0.961779448621554,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9505023640661939,
+                  "ci_lower": 0.9434802358168967,
+                  "ci_upper": 0.9647869674185463,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 60.15818557919622,
+                  "ci_lower": 53.78497727304489,
+                  "ci_upper": 62.4461211960583,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 22.606944444444448,
+                  "ci_lower": 6.3580161691542285,
+                  "ci_upper": 29.84507333908541,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9760342789598109,
+                  "ci_lower": 0.965655288843491,
+                  "ci_upper": 0.9794618737695736,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.9967494089834514,
+                  "ci_lower": 0.9932832535436027,
+                  "ci_upper": 0.9978538283062643,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 62.0,
+                  "ci_lower": 62.0,
+                  "ci_upper": 62.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 2.9706684206512617,
+                "ci_lower": -0.5219252144843015,
+                "ci_upper": 13.188677371343706,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            },
+            "pilot": {
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9438781664656212,
+                  "ci_lower": 0.9381125130682779,
+                  "ci_upper": 0.9494193999098577,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.957016485725774,
+                  "ci_lower": 0.9383718155365055,
+                  "ci_upper": 0.9834179112330859,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 36.43767591475674,
+                  "ci_lower": 26.159565082596288,
+                  "ci_upper": 53.84836356392951,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 3.78783675110575,
+                  "ci_lower": 1.2673024465691791,
+                  "ci_upper": 5.3712941449569165,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "exact": {
+                "clean_rate": {
+                  "mean": 0.9823783675110574,
+                  "ci_lower": 0.9592793869516312,
+                  "ci_upper": 0.9967554064151432,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "availability_rate": {
+                  "mean": 0.997336147969441,
+                  "ci_lower": 0.996794086380036,
+                  "ci_upper": 0.9978611574629512,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "total_bits_per_scene": {
+                  "mean": 62.0,
+                  "ci_lower": 62.0,
+                  "ci_upper": 62.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0,
+                  "bootstrap_unit": "site_then_paired_trajectory"
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 41.22955497619881,
+                "ci_lower": 13.089540848724555,
+                "ci_upper": 57.72647567091352,
+                "bootstrap_unit": "site_then_paired_trajectory"
+              }
+            }
+          },
+          "session_results": {
+            "aerpaw_packapalooza_2023": {
+              "domain": "aerpaw",
+              "decision": "OOD",
+              "scene_count": 364,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9460622710622711,
+                  "ci_lower": 0.9393315018315019,
+                  "ci_upper": 0.9523363095238097
+                },
+                "availability_rate": {
+                  "mean": 0.9470238095238096,
+                  "ci_lower": 0.940246108058608,
+                  "ci_upper": 0.9532967032967032
+                },
+                "total_bits_per_scene": {
+                  "mean": 61.70677655677655,
+                  "ci_lower": 60.07389652014653,
+                  "ci_upper": 63.397892628205135
+                },
+                "context_bits_per_scene": {
+                  "mean": 31.146978021978025,
+                  "ci_lower": 29.773351648351642,
+                  "ci_upper": 32.46909340659341
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 0.47294103745716604,
+                "ci_lower": -2.288683091102445,
+                "ci_upper": 3.0799177301193397
+              }
+            },
+            "aerpaw_lake_wheeler_2024": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_packapalooza_2024",
+              "scene_count": 67,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9485074626865673,
+                  "ci_lower": 0.9350746268656717,
+                  "ci_upper": 0.9609452736318409
+                },
+                "availability_rate": {
+                  "mean": 0.9509950248756219,
+                  "ci_lower": 0.9370646766169154,
+                  "ci_upper": 0.9644278606965174
+                },
+                "total_bits_per_scene": {
+                  "mean": 51.2460199004975,
+                  "ci_lower": 49.97769278606966,
+                  "ci_upper": 52.541859452736325
+                },
+                "context_bits_per_scene": {
+                  "mean": 6.218159203980099,
+                  "ci_lower": 5.61268656716418,
+                  "ci_upper": 6.89502487562189
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 17.345129192745947,
+                "ci_lower": 15.296882522869524,
+                "ci_upper": 19.34765687690579
+              }
+            },
+            "aerpaw_packapalooza_2024": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 67,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9624378109452737,
+                  "ci_lower": 0.950497512437811,
+                  "ci_upper": 0.9731343283582089
+                },
+                "availability_rate": {
+                  "mean": 0.9649253731343284,
+                  "ci_lower": 0.9522388059701492,
+                  "ci_upper": 0.9761194029850747
+                },
+                "total_bits_per_scene": {
+                  "mean": 59.83482587064677,
+                  "ci_lower": 58.17006840796019,
+                  "ci_upper": 61.656983830845775
+                },
+                "context_bits_per_scene": {
+                  "mean": 6.740298507462687,
+                  "ci_lower": 5.914179104477611,
+                  "ci_upper": 7.664968905472635
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 3.492216337666506,
+                "ci_lower": 0.6226528647087142,
+                "ci_upper": 6.273160407639223
+              }
+            },
+            "aerpaw_packapalooza_2025": {
+              "domain": "aerpaw",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 66,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9517676767676767,
+                  "ci_lower": 0.9386363636363637,
+                  "ci_upper": 0.9638888888888888
+                },
+                "availability_rate": {
+                  "mean": 0.9545454545454546,
+                  "ci_lower": 0.9416666666666665,
+                  "ci_upper": 0.9666666666666666
+                },
+                "total_bits_per_scene": {
+                  "mean": 60.99292929292928,
+                  "ci_lower": 59.26307449494949,
+                  "ci_upper": 62.87911616161616
+                },
+                "context_bits_per_scene": {
+                  "mean": 8.251515151515152,
+                  "ci_lower": 7.215909090909093,
+                  "ci_upper": 9.508617424242425
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 1.6243075920495278,
+                "ci_lower": -1.4020751873574455,
+                "ci_upper": 4.4278673835125435
+              }
+            },
+            "goeppingen_I": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2025",
+              "scene_count": 326,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.949233128834356,
+                  "ci_lower": 0.9438650306748466,
+                  "ci_upper": 0.954601226993865
+                },
+                "availability_rate": {
+                  "mean": 0.949233128834356,
+                  "ci_lower": 0.9440682515337421,
+                  "ci_upper": 0.9547034764826176
+                },
+                "total_bits_per_scene": {
+                  "mean": 26.244478527607363,
+                  "ci_lower": 25.50957949897751,
+                  "ci_upper": 26.975300357873213
+                },
+                "context_bits_per_scene": {
+                  "mean": 5.000613496932515,
+                  "ci_lower": 4.654717535787322,
+                  "ci_upper": 5.364215235173825
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 57.670195923213925,
+                "ci_lower": 56.439967593508804,
+                "ci_upper": 58.878333415792596
+              }
+            },
+            "skyhubfr": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2025",
+              "scene_count": 434,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9399769585253457,
+                  "ci_lower": 0.933640552995392,
+                  "ci_upper": 0.9461213517665131
+                },
+                "availability_rate": {
+                  "mean": 0.9401305683563749,
+                  "ci_lower": 0.9339093701996929,
+                  "ci_upper": 0.9463901689708142
+                },
+                "total_bits_per_scene": {
+                  "mean": 28.23682795698925,
+                  "ci_lower": 27.52860983102919,
+                  "ci_upper": 28.945826612903225
+                },
+                "context_bits_per_scene": {
+                  "mean": 5.321159754224271,
+                  "ci_lower": 4.977779377880184,
+                  "ci_upper": 5.667149577572963
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 54.456729101630245,
+                "ci_lower": 53.3055209726971,
+                "ci_upper": 55.58520855012139
+              }
+            },
+            "BGSOFIAMLADOST01": {
+              "domain": "electrosense_pilot",
+              "decision": "BANK:aerpaw_packapalooza_2023",
+              "scene_count": 450,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9390000000000001,
+                  "ci_lower": 0.9326666666666666,
+                  "ci_upper": 0.9452972222222222
+                },
+                "availability_rate": {
+                  "mean": 0.9390740740740742,
+                  "ci_lower": 0.933037037037037,
+                  "ci_upper": 0.9451481481481481
+                },
+                "total_bits_per_scene": {
+                  "mean": 26.282629629629632,
+                  "ci_lower": 25.549017592592588,
+                  "ci_upper": 26.999461111111106
+                },
+                "context_bits_per_scene": {
+                  "mean": 5.201444444444445,
+                  "ci_lower": 4.841217592592592,
+                  "ci_upper": 5.594526851851851
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 57.60866188769415,
+                "ci_lower": 56.41619474313023,
+                "ci_upper": 58.778122759856636
+              }
+            },
+            "Bandon_Oregon_GAP1": {
+              "domain": "electrosense_pilot",
+              "decision": "UNRESOLVED_EXACT_FALLBACK",
+              "scene_count": 448,
+              "semantic": {
+                "clean_rate": {
+                  "mean": 0.9486607142857141,
+                  "ci_lower": 0.9463160342261903,
+                  "ci_upper": 0.9510416666666666
+                },
+                "availability_rate": {
+                  "mean": 0.9970610119047617,
+                  "ci_lower": 0.9962425595238094,
+                  "ci_upper": 0.9978050595238094
+                },
+                "total_bits_per_scene": {
+                  "mean": 62.0,
+                  "ci_lower": 62.0,
+                  "ci_upper": 62.0
+                },
+                "context_bits_per_scene": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                },
+                "wrong_codebook_decode_count": {
+                  "mean": 0.0,
+                  "ci_lower": 0.0,
+                  "ci_upper": 0.0
+                }
+              },
+              "paired_savings_percentage": {
+                "mean": 0.0,
+                "ci_lower": 0.0,
+                "ci_upper": 0.0
+              }
+            }
+          },
+          "checks": {
+            "combined_clean_lower_pass": true,
+            "pilot_clean_lower_pass": true,
+            "combined_savings_lower_pass": true,
+            "pilot_savings_lower_pass": true,
+            "wrong_codebook_decode_count_zero": true,
+            "candidate_passed": true
+          }
+        }
+      }
+    }
+  },
+  "selection": {
+    "selected_heartbeat_silence_scenes": 10,
+    "selection_succeeded": true,
+    "next_action": "freeze_fixed_heartbeat_candidate"
+  },
+  "elapsed_seconds": 135.23110779999934,
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": [
+    "This experiment is motivated by the failed Final and is development evidence only.",
+    "The consumed 24-site main Final is not read or rerun.",
+    "Only the four Pilot sites and four existing AERPAW development activities are evaluated.",
+    "Only heartbeat_silence_scenes changes; codebooks, epsilon, activation attempts, fault probabilities, and all other workpoint fields remain frozen.",
+    "The six-site confirmation lockbox and reserve signal values remain unread.",
+    "A selected interval requires both N=16 and N=32 to pass all registered gates."
+  ]
+}

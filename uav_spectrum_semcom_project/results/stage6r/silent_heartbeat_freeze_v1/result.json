@@ -1,0 +1,79 @@
+{
+  "version": "1.0",
+  "status": "stage6r_fixed_heartbeat_candidate_frozen",
+  "frozen_date": "2026-07-30",
+  "candidate_id": "S6R-FH10-v1",
+  "parent_candidate": "stage6r_electrosense_external_final_v1",
+  "evidence_role": "post_final_failure_development_candidate",
+  "input_hashes": {
+    "silent_heartbeat_scan_config": "466437a580e0ab3c46ffd522153dcce4bde8517b300c5f9662875fe6605c8e8d",
+    "silent_heartbeat_scan_result": "66254acaddf4601ec4dc1c95c559facf94a3c237f53d6ee93aea4d468490c583",
+    "silent_heartbeat_scan_script": "e17836b769138ada7ce0ab981cb6c6554c9de97d28e3aeb4f4b94d651c321189",
+    "original_external_final_protocol": "8aeffb02c98b561026854cea4b11d6daf7277504abd9c6786b500707dd8ffd68",
+    "original_external_final_freeze": "41fd5bdf0e3f57b2f0ee571dec848585462216083f4ca9f851d0759e12bfcc0f",
+    "electrosense_registry": "3f56c862645391583e67316af29d64754e2cc390365d9c8238731859add9ba73",
+    "access_state_at_freeze": "002b17abb03d7b66daf0707f054f22310d5960be956d8d2c32403bf117eef585"
+  },
+  "frozen_change": {
+    "only_changed_field": "heartbeat_silence_scenes",
+    "heartbeat_silence_scenes_by_n": {
+      "8": 10,
+      "16": 10,
+      "32": 10,
+      "64": 10
+    },
+    "changed_from_original_final": {
+      "16": {
+        "old": 16,
+        "new": 10
+      },
+      "32": {
+        "old": 16,
+        "new": 10
+      }
+    },
+    "unchanged_from_original_final": {
+      "8": 10,
+      "64": 10
+    }
+  },
+  "frozen_unchanged_components": [
+    "task definition and epsilon_db=0.2",
+    "K=4 task codebooks and context gate",
+    "versioned 64-bit activation protocol",
+    "maximum two activation attempts",
+    "cumulative ACK and belief-state recovery",
+    "exact regret validation",
+    "escape exact-action fallback",
+    "fail-closed codebook identity checks",
+    "fault probabilities and paired Monte Carlo design",
+    "exact-action baseline and total-bit accounting"
+  ],
+  "development_gate_result": {
+    "selected_as_largest_passing_interval": true,
+    "required_n_values": [
+      16,
+      32
+    ],
+    "heartbeat_16_passed": false,
+    "heartbeat_10_passed": true,
+    "heartbeat_8_passed": true,
+    "heartbeat_6_passed": true,
+    "wrong_codebook_decode_count": 0
+  },
+  "data_access_at_freeze": {
+    "pilot": 1,
+    "stage6_final": 1,
+    "confirmation_lockbox": 0,
+    "reserve": 0
+  },
+  "claim_boundary": [
+    "S6R-FH10-v1 is selected using Pilot and existing AERPAW development evidence after the failed 24-site Final.",
+    "The consumed 24-site main Final remains FAILED and was not reread for this scan.",
+    "This freeze does not convert the post-Final development result into independent confirmation.",
+    "The six-site confirmation lockbox and reserve signal values remain unread.",
+    "Any confirmation-lockbox execution requires a separately registered protocol and frozen executor.",
+    "A future supportive pass may confirm the repair but cannot erase or relabel the original failed Final."
+  ],
+  "next_action": "register_and_dry_run_confirmation_lockbox_protocol"
+}

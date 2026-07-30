@@ -1,0 +1,31 @@
+Heartbeat scan N=16 session=aerpaw_packapalooza_2023 complete
+Heartbeat scan N=16 session=aerpaw_lake_wheeler_2024 complete
+Heartbeat scan N=16 session=aerpaw_packapalooza_2024 complete
+Heartbeat scan N=16 session=aerpaw_packapalooza_2025 complete
+Heartbeat scan N=16 session=goeppingen_I complete
+Heartbeat scan N=16 session=skyhubfr complete
+Heartbeat scan N=16 session=BGSOFIAMLADOST01 complete
+Heartbeat scan N=16 session=Bandon_Oregon_GAP1 complete
+Heartbeat scan N=32 session=aerpaw_packapalooza_2023 complete
+Heartbeat scan N=32 session=aerpaw_lake_wheeler_2024 complete
+Heartbeat scan N=32 session=aerpaw_packapalooza_2024 complete
+Heartbeat scan N=32 session=aerpaw_packapalooza_2025 complete
+Heartbeat scan N=32 session=goeppingen_I complete
+Heartbeat scan N=32 session=skyhubfr complete
+Heartbeat scan N=32 session=BGSOFIAMLADOST01 complete
+Heartbeat scan N=32 session=Bandon_Oregon_GAP1 complete
+{
+  "output": "C:\\Users\\Lenovo\\Desktop\\ÏîÄ¿\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage6r\\silent_heartbeat_scan_v1\\result.json",
+  "selection": {
+    "selected_heartbeat_silence_scenes": 10,
+    "selection_succeeded": true,
+    "next_action": "freeze_fixed_heartbeat_candidate"
+  },
+  "access_counts_after_run": {
+    "pilot": 1,
+    "stage6_final": 1,
+    "confirmation_lockbox": 0,
+    "reserve": 0
+  },
+  "elapsed_seconds": 135.23110779999934
+}
