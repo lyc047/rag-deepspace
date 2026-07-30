@@ -1,0 +1,108 @@
+{
+  "version": "1.0",
+  "status": "stage6r_confirmation_lockbox_dry_run_complete",
+  "verification_status": "PASSED",
+  "experiment_id": "stage6r_confirmation_lockbox_v1",
+  "protocol_sha256": "6c8a08c299b5eea19a14686de3369219ee041333b45edd2b9f7b62f26bda2fff",
+  "freeze_result_sha256": "b9263842e11b45ca497237e436b7cafa7bf39014fa62c56daabe6eadd9578fa8",
+  "code_snapshot_sha256": "34e386037301af910302daafc647b4055ab001c878d74b7398f3587984d832e3",
+  "execution_role": "confirmation_lockbox",
+  "sites": [
+    "Oreland",
+    "PiSDR1",
+    "Skap_French_Riviera",
+    "Geneva",
+    "URJC1",
+    "Princeton1"
+  ],
+  "metadata_checks": [
+    {
+      "site": "Oreland",
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Oreland/Aug_1/SpectrumBands_86_110_fm_usa_86_110.npy",
+      "shape": [
+        457,
+        2581
+      ],
+      "dtype": "<f8",
+      "metadata_gate_passed": true
+    },
+    {
+      "site": "PiSDR1",
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/PiSDR1/Sep_1/SpectrumBands_100_110_fm_po_100_110.npy",
+      "shape": [
+        462,
+        1075
+      ],
+      "dtype": "<f8",
+      "metadata_gate_passed": true
+    },
+    {
+      "site": "Skap_French_Riviera",
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Skap_French_Riviera/Sep_1/SpectrumBands_85_120_fm_Esp_85_120.npy",
+      "shape": [
+        451,
+        3763
+      ],
+      "dtype": "<f8",
+      "metadata_gate_passed": true
+    },
+    {
+      "site": "Geneva",
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Geneva/Sep_1/SpectrumBands_94_120_fm_Swis_94_120.npy",
+      "shape": [
+        457,
+        2796
+      ],
+      "dtype": "<f8",
+      "metadata_gate_passed": true
+    },
+    {
+      "site": "URJC1",
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/URJC1/Sep_1/SpectrumBands_85_120_fm_Esp_85_120.npy",
+      "shape": [
+        406,
+        3764
+      ],
+      "dtype": "<f8",
+      "metadata_gate_passed": true
+    },
+    {
+      "site": "Princeton1",
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Princeton1/Feb_23/SpectrumBands_86_110_fm_usa_86_110.npy",
+      "shape": [
+        443,
+        2581
+      ],
+      "dtype": "<f8",
+      "metadata_gate_passed": true
+    }
+  ],
+  "heartbeat_silence_scenes_by_n": {
+    "8": 10,
+    "16": 10,
+    "32": 10,
+    "64": 10
+  },
+  "checks": {
+    "all_six_registered_sites_present": true,
+    "all_metadata_gates_passed": true,
+    "heartbeat_map_matches_protocol": true,
+    "confirmation_lockbox_access_count_zero": true,
+    "reserve_access_count_zero": true,
+    "archive_signal_values_loaded": false,
+    "output_result_absent": true
+  },
+  "signal_values_accessed": false,
+  "next_action": "eligible_for_explicit_single_consume",
+  "claim_boundary": [
+    "The original 24-site main Final remains FAILED and is not reread.",
+    "The six lockbox sites were fixed by the original metadata-only split before any of their PSD values were read.",
+    "Only heartbeat_silence_scenes changes relative to the failed main Final; N=8/64 remain at 10 and N=16/32 change from 16 to 10.",
+    "Task codebooks, epsilon, context gate, activation protocol, fault probabilities, exact baseline, and statistical gates remain frozen.",
+    "The dry-run and freeze inspect metadata, hashes, access counts, and code only; they do not load lockbox NPY arrays.",
+    "The supportive confirmation may provide independent evidence for the repair but cannot erase or relabel the failed main Final.",
+    "Any invalid accessed lockbox site is retained and is never replaced.",
+    "Execution is single-use, requires explicit --consume, and cannot be retried automatically.",
+    "Reserve signal values remain unread."
+  ]
+}

@@ -1,0 +1,2666 @@
+{
+  "version": "1.0",
+  "status": "stage6r_confirmation_lockbox_frozen_unaccessed",
+  "experiment_id": "stage6r_confirmation_lockbox_v1",
+  "protocol_sha256": "6c8a08c299b5eea19a14686de3369219ee041333b45edd2b9f7b62f26bda2fff",
+  "input_hashes": {
+    "registry": "3f56c862645391583e67316af29d64754e2cc390365d9c8238731859add9ba73",
+    "access_state": "002b17abb03d7b66daf0707f054f22310d5960be956d8d2c32403bf117eef585",
+    "matched_scan_config": "6598125579d0e935a6003ce4d3b5c2997fab1746ffeda5ba51c94b93e3405fb3",
+    "activation_protocol": "4f89d46baea177a3bc6ca958a46dbf27dc8e772c21aa0b32cf21e5115b6afc36",
+    "parent_final_freeze": "41fd5bdf0e3f57b2f0ee571dec848585462216083f4ca9f851d0759e12bfcc0f",
+    "heartbeat_candidate_freeze": "5dff9fe9523ceb133c93c275d9230c38b713e581777a34893ef6590795a3768c"
+  },
+  "registered_archive": {
+    "path": "F:\\spectrum_bands.tar.gz",
+    "size_bytes": 1731443582,
+    "sha256_from_original_registry": "a42088a427c716f97845262041aaf14b549895607db761b11b536217225ae6d2",
+    "signal_bytes_rehashed_during_freeze": false
+  },
+  "registry_sha256": "3f56c862645391583e67316af29d64754e2cc390365d9c8238731859add9ba73",
+  "sites": [
+    "Oreland",
+    "PiSDR1",
+    "Skap_French_Riviera",
+    "Geneva",
+    "URJC1",
+    "Princeton1"
+  ],
+  "signal_values_accessed": false,
+  "required_access_counts_before_run": {
+    "pilot": 1,
+    "stage6_final": 1,
+    "confirmation_lockbox": 0,
+    "reserve": 0
+  },
+  "heartbeat_change": {
+    "parent_by_n": {
+      "8": 10,
+      "16": 16,
+      "32": 16,
+      "64": 10
+    },
+    "frozen_by_n": {
+      "8": 10,
+      "16": 10,
+      "32": 10,
+      "64": 10
+    },
+    "only_changed_field": "heartbeat_silence_scenes"
+  },
+  "n_artifacts": {
+    "8": {
+      "n_channels": 8,
+      "queries": [
+        {
+          "demand_channels": 2
+        },
+        {
+          "demand_channels": 4
+        },
+        {
+          "demand_channels": 6
+        }
+      ],
+      "prototypes": {
+        "aerpaw_packapalooza_2023": [
+          -1.1452757106835523,
+          -0.7549824429273988,
+          -0.15318693687453325,
+          0.27723145812209493,
+          -0.35932509855320455,
+          0.580922854075534,
+          1.557560245819497,
+          0.9959296241324502
+        ],
+        "aerpaw_lake_wheeler_2024": [
+          0.17148273861491659,
+          1.836298652923551,
+          1.7009531810746956,
+          1.3670768984667891,
+          -0.14684790194934622,
+          -0.5298241663453631,
+          -0.5022425311136655,
+          -0.4873189873175524
+        ],
+        "aerpaw_packapalooza_2024": [
+          -0.204358249222761,
+          1.6611122082549017,
+          1.6630878389422554,
+          1.5501617441284141,
+          0.10987432318830051,
+          -0.41985987186568524,
+          -0.4270604741432833,
+          -0.2545459081408316
+        ],
+        "aerpaw_packapalooza_2025": [
+          0.1871344555854431,
+          1.4561531116252215,
+          1.40838090938176,
+          1.2439377189831111,
+          -0.14902678512550643,
+          -0.710174876591668,
+          -0.8121154200654628,
+          -0.7516344255113299
+        ]
+      },
+      "novelty_threshold": 1.5151801554550628,
+      "bank_actions": {
+        "aerpaw_packapalooza_2023": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "aerpaw_lake_wheeler_2024": [
+          [
+            5,
+            4,
+            2
+          ],
+          [
+            6,
+            4,
+            2
+          ]
+        ],
+        "aerpaw_packapalooza_2024": [
+          [
+            5,
+            4,
+            2
+          ],
+          [
+            6,
+            4,
+            2
+          ],
+          [
+            4,
+            3,
+            1
+          ]
+        ],
+        "aerpaw_packapalooza_2025": [
+          [
+            6,
+            4,
+            2
+          ],
+          [
+            5,
+            4,
+            2
+          ],
+          [
+            4,
+            4,
+            2
+          ],
+          [
+            5,
+            3,
+            1
+          ]
+        ]
+      },
+      "bank_ids": {
+        "aerpaw_packapalooza_2023": 1,
+        "aerpaw_lake_wheeler_2024": 2,
+        "aerpaw_packapalooza_2024": 3,
+        "aerpaw_packapalooza_2025": 4
+      },
+      "workpoints": {
+        "matched": {
+          "target_clean_rate": 0.9,
+          "common_eligible": true,
+          "semantic_workpoint_id": "semantic_primary_fault_n8_33",
+          "exact_workpoint_id": "exact_primary_fault_n8_a1",
+          "semantic_clean_rate": 0.9084810874704491,
+          "exact_clean_rate": 0.980821513002364,
+          "semantic_resource_bits_per_scene": 53.98040780141844,
+          "exact_resource_bits_per_scene": 56.0,
+          "paired_savings_percentage": 3.6064146403242154,
+          "paired_savings_ci_lower": 1.19767392772712,
+          "paired_savings_ci_upper": 6.03159168144208
+        },
+        "semantic": {
+          "workpoint_id": "semantic_primary_fault_n8_33",
+          "heartbeat_silence_scenes": 10,
+          "maximum_state_age_minutes": 120.0,
+          "task_update_open_loop_attempts": 1,
+          "calibration_open_loop_attempts": 1,
+          "summary": {
+            "clean_rate": 0.9084810874704491,
+            "clean_rate_ci_lower": 0.9020094562647755,
+            "clean_rate_ci_upper": 0.9148640661938533,
+            "availability_rate": 0.9195330969267139,
+            "availability_rate_ci_lower": 0.9132683215130023,
+            "availability_rate_ci_upper": 0.925886524822695,
+            "actual_total_bits_per_scene": 53.98040780141844,
+            "actual_total_bits_per_scene_ci_lower": 52.63286052009456,
+            "actual_total_bits_per_scene_ci_upper": 55.34671985815602,
+            "resource_equivalent_bits_per_scene": 53.98040780141844,
+            "resource_equivalent_bits_per_scene_ci_lower": 52.644634308510646,
+            "resource_equivalent_bits_per_scene_ci_upper": 55.340434397163115,
+            "exact_action_bits_per_scene": 2.1843971631205674,
+            "exact_action_bits_per_scene_ci_lower": 2.1843971631205674,
+            "exact_action_bits_per_scene_ci_upper": 2.1843971631205674,
+            "initial_install_bits_per_scene": 2.6737588652482276,
+            "initial_install_bits_per_scene_ci_lower": 2.6737588652482276,
+            "initial_install_bits_per_scene_ci_upper": 2.6737588652482276,
+            "recovery_install_bits_per_scene": 30.36430260047281,
+            "recovery_install_bits_per_scene_ci_lower": 29.243321513002364,
+            "recovery_install_bits_per_scene_ci_upper": 31.50426787825059,
+            "compact_update_bits_per_scene": 7.747783687943261,
+            "compact_update_bits_per_scene_ci_lower": 7.626023197399527,
+            "compact_update_bits_per_scene_ci_upper": 7.874261968085104,
+            "escape_exact_bits_per_scene": 0.24113475177304963,
+            "escape_exact_bits_per_scene_ci_lower": 0.24113475177304963,
+            "escape_exact_bits_per_scene_ci_upper": 0.24113475177304963,
+            "duplicate_update_bits_per_scene": 0.0,
+            "duplicate_update_bits_per_scene_ci_lower": 0.0,
+            "duplicate_update_bits_per_scene_ci_upper": 0.0,
+            "ack_bits_per_scene": 8.016312056737588,
+            "ack_bits_per_scene_ci_lower": 7.87872340425532,
+            "ack_bits_per_scene_ci_upper": 8.15886524822695,
+            "heartbeat_bits_per_scene": 2.7527186761229308,
+            "heartbeat_bits_per_scene_ci_lower": 2.7073286052009453,
+            "heartbeat_bits_per_scene_ci_upper": 2.7952718676122927,
+            "effective_mean_regret_db": 0.8256250548682128,
+            "effective_mean_regret_db_ci_lower": 0.7605692317896325,
+            "effective_mean_regret_db_ci_upper": 0.8890801637580397,
+            "context_install_count_per_scene": 0.08841607565011819,
+            "context_install_count_per_scene_ci_lower": 0.08522458628841607,
+            "context_install_count_per_scene_ci_upper": 0.09154846335697399,
+            "compact_update_count_per_scene": 0.2255023640661939,
+            "compact_update_count_per_scene_ci_lower": 0.22251699172576833,
+            "compact_update_count_per_scene_ci_upper": 0.22863475177304965,
+            "wrong_codebook_decode_count": 0.0,
+            "wrong_codebook_decode_count_ci_lower": 0.0,
+            "wrong_codebook_decode_count_ci_upper": 0.0
+          },
+          "session_metadata": [
+            {
+              "campaign": "aerpaw_packapalooza_2023",
+              "decision": "OOD",
+              "scene_count": 364,
+              "calibration_scene_count": 4,
+              "future_scene_count": 360,
+              "codeword_count": 1,
+              "install_packet_bits": 369,
+              "compact_frame_bits": 41
+            },
+            {
+              "campaign": "aerpaw_lake_wheeler_2024",
+              "decision": "BANK:aerpaw_packapalooza_2024",
+              "scene_count": 67,
+              "calibration_scene_count": 6,
+              "future_scene_count": 61,
+              "codeword_count": 3,
+              "install_packet_bits": 385,
+              "compact_frame_bits": 42
+            },
+            {
+              "campaign": "aerpaw_packapalooza_2024",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 67,
+              "calibration_scene_count": 8,
+              "future_scene_count": 59,
+              "codeword_count": 2,
+              "install_packet_bits": 377,
+              "compact_frame_bits": 42
+            },
+            {
+              "campaign": "aerpaw_packapalooza_2025",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 66,
+              "calibration_scene_count": 4,
+              "future_scene_count": 62,
+              "codeword_count": 2,
+              "install_packet_bits": 377,
+              "compact_frame_bits": 42
+            }
+          ]
+        },
+        "exact": {
+          "workpoint_id": "exact_primary_fault_n8_a1",
+          "task_packet_open_loop_attempts": 1,
+          "summary": {
+            "clean_rate": 0.980821513002364,
+            "clean_rate_ci_lower": 0.9793735224586286,
+            "clean_rate_ci_upper": 0.982239952718676,
+            "availability_rate": 0.997340425531915,
+            "availability_rate_ci_lower": 0.9966016548463356,
+            "availability_rate_ci_upper": 0.9980200945626476,
+            "actual_total_bits_per_scene": 56.0,
+            "actual_total_bits_per_scene_ci_lower": 56.0,
+            "actual_total_bits_per_scene_ci_upper": 56.0,
+            "resource_equivalent_bits_per_scene": 56.0,
+            "resource_equivalent_bits_per_scene_ci_lower": 56.0,
+            "resource_equivalent_bits_per_scene_ci_upper": 56.0,
+            "exact_action_bits_per_scene": 56.0,
+            "exact_action_bits_per_scene_ci_lower": 56.0,
+            "exact_action_bits_per_scene_ci_upper": 56.0,
+            "initial_install_bits_per_scene": 0.0,
+            "initial_install_bits_per_scene_ci_lower": 0.0,
+            "initial_install_bits_per_scene_ci_upper": 0.0,
+            "recovery_install_bits_per_scene": 0.0,
+            "recovery_install_bits_per_scene_ci_lower": 0.0,
+            "recovery_install_bits_per_scene_ci_upper": 0.0,
+            "compact_update_bits_per_scene": 0.0,
+            "compact_update_bits_per_scene_ci_lower": 0.0,
+            "compact_update_bits_per_scene_ci_upper": 0.0,
+            "escape_exact_bits_per_scene": 0.0,
+            "escape_exact_bits_per_scene_ci_lower": 0.0,
+            "escape_exact_bits_per_scene_ci_upper": 0.0,
+            "duplicate_update_bits_per_scene": 0.0,
+            "duplicate_update_bits_per_scene_ci_lower": 0.0,
+            "duplicate_update_bits_per_scene_ci_upper": 0.0,
+            "ack_bits_per_scene": 0.0,
+            "ack_bits_per_scene_ci_lower": 0.0,
+            "ack_bits_per_scene_ci_upper": 0.0,
+            "heartbeat_bits_per_scene": 0.0,
+            "heartbeat_bits_per_scene_ci_lower": 0.0,
+            "heartbeat_bits_per_scene_ci_upper": 0.0,
+            "effective_mean_regret_db": 0.040391647881462024,
+            "effective_mean_regret_db_ci_lower": 0.03385366589089281,
+            "effective_mean_regret_db_ci_upper": 0.04735790150949014,
+            "context_install_count_per_scene": 0.0,
+            "context_install_count_per_scene_ci_lower": 0.0,
+            "context_install_count_per_scene_ci_upper": 0.0,
+            "compact_update_count_per_scene": 1.0,
+            "compact_update_count_per_scene_ci_lower": 1.0,
+            "compact_update_count_per_scene_ci_upper": 1.0,
+            "wrong_codebook_decode_count": 0.0,
+            "wrong_codebook_decode_count_ci_lower": 0.0,
+            "wrong_codebook_decode_count_ci_upper": 0.0
+          }
+        }
+      },
+      "pilot_adapter_gate": [
+        {
+          "site": "goeppingen_I",
+          "scene_count": 326,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "adapted": false,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "selected_actions": [
+            [
+              6,
+              4,
+              2
+            ],
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              4,
+              4,
+              2
+            ],
+            [
+              5,
+              3,
+              1
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.7166074681055692,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.6742689269452486,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": "BANK:aerpaw_packapalooza_2025",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future_compact_coverage": 1.0,
+          "future_escape_rate": 0.0
+        },
+        {
+          "site": "skyhubfr",
+          "scene_count": 434,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "adapted": false,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "selected_actions": [
+            [
+              6,
+              4,
+              2
+            ],
+            [
+              5,
+              4,
+              2
+            ],
+            [
+              4,
+              4,
+              2
+            ],
+            [
+              5,
+              3,
+              1
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.9373684971337257,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 1.0772082100113274,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": "BANK:aerpaw_packapalooza_2025",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future_compact_coverage": 0.9976744186046511,
+          "future_escape_rate": 0.0023255813953488857
+        },
+        {
+          "site": "BGSOFIAMLADOST01",
+          "scene_count": 450,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "adapted": false,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "selected_actions": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2023",
+              "nearest_source": "aerpaw_packapalooza_2023",
+              "context_distance": 0.8374327414682962,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2023",
+              "nearest_source": "aerpaw_packapalooza_2023",
+              "context_distance": 0.8410192862224538,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": "BANK:aerpaw_packapalooza_2023",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future_compact_coverage": 1.0,
+          "future_escape_rate": 0.0
+        },
+        {
+          "site": "Bandon_Oregon_GAP1",
+          "scene_count": 448,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "adapted": false,
+          "resolved": false,
+          "calibration_scenes": 16,
+          "selected_actions": [],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.7460207798795677,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.8590035841657964,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.8511642603224452,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 8,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.8980217136498192,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 10,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.9305502071045816,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 12,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.8880177491597684,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 16,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.5724615505136762,
+              "novelty_threshold": 1.5151801554550628,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.125,
+              "accepted": false
+            }
+          ],
+          "future_compact_coverage": 0.0,
+          "future_escape_rate": 1.0
+        }
+      ]
+    },
+    "16": {
+      "n_channels": 16,
+      "queries": [
+        {
+          "demand_channels": 4
+        },
+        {
+          "demand_channels": 8
+        },
+        {
+          "demand_channels": 12
+        }
+      ],
+      "prototypes": {
+        "aerpaw_packapalooza_2023": [
+          -1.642399332101597,
+          -0.522963404441621,
+          -0.5360724812558716,
+          -0.8788363954691027,
+          0.0946942147538614,
+          -0.4195705220573921,
+          -0.08044781405926338,
+          0.4021527039882311,
+          -0.7073128453617142,
+          0.03370295153379002,
+          0.4596395844223145,
+          0.5319006573609271,
+          1.4421999127959282,
+          1.082929070630387,
+          0.6262592548299231,
+          0.9654256922721904
+        ],
+        "aerpaw_lake_wheeler_2024": [
+          -0.038646444965369675,
+          0.3397223128461749,
+          1.65011434319933,
+          1.9313995122110166,
+          1.7123744479183374,
+          1.6026398874155505,
+          1.2037897413616139,
+          1.4544714855546825,
+          0.08318195083078683,
+          -0.4029134147465838,
+          -0.4262593007598161,
+          -0.6470887868247257,
+          -0.4483163477828079,
+          -0.5705938581458064,
+          -0.5235852081654326,
+          -0.46067893048168124
+        ],
+        "aerpaw_packapalooza_2024": [
+          -0.18905222280107067,
+          -0.06565538810511563,
+          1.479751524735144,
+          1.9254534840562383,
+          1.6543504973163718,
+          1.7546435771507212,
+          1.459468702044173,
+          1.7678203802904056,
+          0.4882101565591078,
+          -0.06511609921923882,
+          -0.18449573361368507,
+          -0.4357699728192059,
+          -0.2880811870323601,
+          -0.3691142241210549,
+          -0.20464589981288484,
+          -0.1632903540226389
+        ],
+        "aerpaw_packapalooza_2025": [
+          0.033197276599478284,
+          0.16506861062863476,
+          1.238871104675139,
+          1.4424110044036085,
+          1.2674283300271902,
+          1.3204132567925042,
+          1.0129695359322513,
+          1.2523074910799392,
+          0.08039831492162577,
+          -0.5501129582981578,
+          -0.677240246370991,
+          -0.8933163715013518,
+          -0.8478900521493887,
+          -0.9190656396996761,
+          -0.8153418650524321,
+          -0.8516992271352601
+        ]
+      },
+      "novelty_threshold": 1.4895910775665,
+      "bank_actions": {
+        "aerpaw_packapalooza_2023": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            3,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            6,
+            3,
+            0
+          ]
+        ],
+        "aerpaw_lake_wheeler_2024": [
+          [
+            11,
+            8,
+            4
+          ],
+          [
+            10,
+            8,
+            4
+          ],
+          [
+            12,
+            8,
+            4
+          ]
+        ],
+        "aerpaw_packapalooza_2024": [
+          [
+            10,
+            8,
+            4
+          ],
+          [
+            11,
+            8,
+            4
+          ],
+          [
+            8,
+            5,
+            3
+          ],
+          [
+            12,
+            8,
+            4
+          ]
+        ],
+        "aerpaw_packapalooza_2025": [
+          [
+            12,
+            8,
+            4
+          ],
+          [
+            10,
+            8,
+            4
+          ],
+          [
+            9,
+            8,
+            4
+          ],
+          [
+            10,
+            6,
+            2
+          ]
+        ]
+      },
+      "bank_ids": {
+        "aerpaw_packapalooza_2023": 1,
+        "aerpaw_lake_wheeler_2024": 2,
+        "aerpaw_packapalooza_2024": 3,
+        "aerpaw_packapalooza_2025": 4
+      },
+      "workpoints": {
+        "matched": {
+          "target_clean_rate": 0.9,
+          "common_eligible": true,
+          "semantic_workpoint_id": "semantic_primary_fault_n16_49",
+          "exact_workpoint_id": "exact_primary_fault_n16_a1",
+          "semantic_clean_rate": 0.9090425531914892,
+          "exact_clean_rate": 0.977127659574468,
+          "semantic_resource_bits_per_scene": 56.153014184397165,
+          "exact_resource_bits_per_scene": 59.0,
+          "paired_savings_percentage": 4.825399687462435,
+          "paired_savings_ci_lower": 2.567953129382537,
+          "paired_savings_ci_upper": 7.101632307569016
+        },
+        "semantic": {
+          "workpoint_id": "semantic_primary_fault_n16_49",
+          "heartbeat_silence_scenes": 10,
+          "maximum_state_age_minutes": 60.0,
+          "task_update_open_loop_attempts": 2,
+          "calibration_open_loop_attempts": 2,
+          "summary": {
+            "clean_rate": 0.9090425531914892,
+            "clean_rate_ci_lower": 0.9002061170212764,
+            "clean_rate_ci_upper": 0.9179971926713948,
+            "availability_rate": 0.9104905437352245,
+            "availability_rate_ci_lower": 0.9014177009456263,
+            "availability_rate_ci_upper": 0.9191496749408984,
+            "actual_total_bits_per_scene": 56.153014184397165,
+            "actual_total_bits_per_scene_ci_lower": 54.830411495271875,
+            "actual_total_bits_per_scene_ci_upper": 57.55023788416076,
+            "resource_equivalent_bits_per_scene": 56.153014184397165,
+            "resource_equivalent_bits_per_scene_ci_lower": 54.805310283687945,
+            "resource_equivalent_bits_per_scene_ci_upper": 57.554729609929076,
+            "exact_action_bits_per_scene": 4.602836879432624,
+            "exact_action_bits_per_scene_ci_lower": 4.602836879432624,
+            "exact_action_bits_per_scene_ci_upper": 4.602836879432624,
+            "initial_install_bits_per_scene": 2.7748226950354606,
+            "initial_install_bits_per_scene_ci_lower": 2.7748226950354606,
+            "initial_install_bits_per_scene_ci_upper": 2.7748226950354606,
+            "recovery_install_bits_per_scene": 22.69473995271868,
+            "recovery_install_bits_per_scene_ci_lower": 21.630759456264773,
+            "recovery_install_bits_per_scene_ci_upper": 23.829046247044914,
+            "compact_update_bits_per_scene": 8.04320330969267,
+            "compact_update_bits_per_scene_ci_lower": 7.94931811465721,
+            "compact_update_bits_per_scene_ci_upper": 8.144623226950355,
+            "escape_exact_bits_per_scene": 0.47393617021276596,
+            "escape_exact_bits_per_scene_ci_lower": 0.47166075650118205,
+            "escape_exact_bits_per_scene_ci_upper": 0.4762115839243499,
+            "duplicate_update_bits_per_scene": 8.517139479905437,
+            "duplicate_update_bits_per_scene_ci_lower": 8.420889479905437,
+            "duplicate_update_bits_per_scene_ci_upper": 8.616371158392434,
+            "ack_bits_per_scene": 8.00709219858156,
+            "ack_bits_per_scene_ci_lower": 7.872340425531915,
+            "ack_bits_per_scene_ci_upper": 8.143262411347516,
+            "heartbeat_bits_per_scene": 1.0392434988179668,
+            "heartbeat_bits_per_scene_ci_lower": 1.0137115839243498,
+            "heartbeat_bits_per_scene_ci_upper": 1.0638297872340423,
+            "effective_mean_regret_db": 0.9129626434839457,
+            "effective_mean_regret_db_ci_lower": 0.8222973403891211,
+            "effective_mean_regret_db_ci_upper": 1.0020224631591232,
+            "context_install_count_per_scene": 0.06637115839243499,
+            "context_install_count_per_scene_ci_lower": 0.06359264184397162,
+            "context_install_count_per_scene_ci_upper": 0.0692966903073286,
+            "compact_update_count_per_scene": 0.23203309692671398,
+            "compact_update_count_per_scene_ci_lower": 0.22972813238770687,
+            "compact_update_count_per_scene_ci_upper": 0.2344570035460993,
+            "wrong_codebook_decode_count": 0.0,
+            "wrong_codebook_decode_count_ci_lower": 0.0,
+            "wrong_codebook_decode_count_ci_upper": 0.0
+          },
+          "session_metadata": [
+            {
+              "campaign": "aerpaw_packapalooza_2023",
+              "decision": "OOD",
+              "scene_count": 364,
+              "calibration_scene_count": 4,
+              "future_scene_count": 360,
+              "codeword_count": 1,
+              "install_packet_bits": 372,
+              "compact_frame_bits": 41
+            },
+            {
+              "campaign": "aerpaw_lake_wheeler_2024",
+              "decision": "BANK:aerpaw_packapalooza_2024",
+              "scene_count": 67,
+              "calibration_scene_count": 6,
+              "future_scene_count": 61,
+              "codeword_count": 4,
+              "install_packet_bits": 405,
+              "compact_frame_bits": 43
+            },
+            {
+              "campaign": "aerpaw_packapalooza_2024",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 67,
+              "calibration_scene_count": 8,
+              "future_scene_count": 59,
+              "codeword_count": 3,
+              "install_packet_bits": 394,
+              "compact_frame_bits": 42
+            },
+            {
+              "campaign": "aerpaw_packapalooza_2025",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 66,
+              "calibration_scene_count": 4,
+              "future_scene_count": 62,
+              "codeword_count": 3,
+              "install_packet_bits": 394,
+              "compact_frame_bits": 42
+            }
+          ]
+        },
+        "exact": {
+          "workpoint_id": "exact_primary_fault_n16_a1",
+          "task_packet_open_loop_attempts": 1,
+          "summary": {
+            "clean_rate": 0.977127659574468,
+            "clean_rate_ci_lower": 0.9755614657210401,
+            "clean_rate_ci_upper": 0.9787529550827422,
+            "availability_rate": 0.9967494089834515,
+            "availability_rate_ci_lower": 0.9960401891252956,
+            "availability_rate_ci_upper": 0.9974290780141842,
+            "actual_total_bits_per_scene": 59.0,
+            "actual_total_bits_per_scene_ci_lower": 59.0,
+            "actual_total_bits_per_scene_ci_upper": 59.0,
+            "resource_equivalent_bits_per_scene": 59.0,
+            "resource_equivalent_bits_per_scene_ci_lower": 59.0,
+            "resource_equivalent_bits_per_scene_ci_upper": 59.0,
+            "exact_action_bits_per_scene": 59.0,
+            "exact_action_bits_per_scene_ci_lower": 59.0,
+            "exact_action_bits_per_scene_ci_upper": 59.0,
+            "initial_install_bits_per_scene": 0.0,
+            "initial_install_bits_per_scene_ci_lower": 0.0,
+            "initial_install_bits_per_scene_ci_upper": 0.0,
+            "recovery_install_bits_per_scene": 0.0,
+            "recovery_install_bits_per_scene_ci_lower": 0.0,
+            "recovery_install_bits_per_scene_ci_upper": 0.0,
+            "compact_update_bits_per_scene": 0.0,
+            "compact_update_bits_per_scene_ci_lower": 0.0,
+            "compact_update_bits_per_scene_ci_upper": 0.0,
+            "escape_exact_bits_per_scene": 0.0,
+            "escape_exact_bits_per_scene_ci_lower": 0.0,
+            "escape_exact_bits_per_scene_ci_upper": 0.0,
+            "duplicate_update_bits_per_scene": 0.0,
+            "duplicate_update_bits_per_scene_ci_lower": 0.0,
+            "duplicate_update_bits_per_scene_ci_upper": 0.0,
+            "ack_bits_per_scene": 0.0,
+            "ack_bits_per_scene_ci_lower": 0.0,
+            "ack_bits_per_scene_ci_upper": 0.0,
+            "heartbeat_bits_per_scene": 0.0,
+            "heartbeat_bits_per_scene_ci_lower": 0.0,
+            "heartbeat_bits_per_scene_ci_upper": 0.0,
+            "effective_mean_regret_db": 0.04954930700778585,
+            "effective_mean_regret_db_ci_lower": 0.042752099423496816,
+            "effective_mean_regret_db_ci_upper": 0.056626450250569615,
+            "context_install_count_per_scene": 0.0,
+            "context_install_count_per_scene_ci_lower": 0.0,
+            "context_install_count_per_scene_ci_upper": 0.0,
+            "compact_update_count_per_scene": 1.0,
+            "compact_update_count_per_scene_ci_lower": 1.0,
+            "compact_update_count_per_scene_ci_upper": 1.0,
+            "wrong_codebook_decode_count": 0.0,
+            "wrong_codebook_decode_count_ci_lower": 0.0,
+            "wrong_codebook_decode_count_ci_upper": 0.0
+          }
+        }
+      },
+      "pilot_adapter_gate": [
+        {
+          "site": "goeppingen_I",
+          "scene_count": 326,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "adapted": false,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "selected_actions": [
+            [
+              12,
+              8,
+              4
+            ],
+            [
+              10,
+              8,
+              4
+            ],
+            [
+              9,
+              8,
+              4
+            ],
+            [
+              10,
+              6,
+              2
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.7300321950427805,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.6963344788316399,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": "BANK:aerpaw_packapalooza_2025",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future_compact_coverage": 1.0,
+          "future_escape_rate": 0.0
+        },
+        {
+          "site": "skyhubfr",
+          "scene_count": 434,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "adapted": false,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "selected_actions": [
+            [
+              12,
+              8,
+              4
+            ],
+            [
+              10,
+              8,
+              4
+            ],
+            [
+              9,
+              8,
+              4
+            ],
+            [
+              10,
+              6,
+              2
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.978273985942535,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 1.010439702987217,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": "BANK:aerpaw_packapalooza_2025",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future_compact_coverage": 0.9883720930232558,
+          "future_escape_rate": 0.011627906976744207
+        },
+        {
+          "site": "BGSOFIAMLADOST01",
+          "scene_count": 450,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "adapted": false,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "selected_actions": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              3,
+              0
+            ],
+            [
+              2,
+              2,
+              0
+            ],
+            [
+              6,
+              3,
+              0
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2023",
+              "nearest_source": "aerpaw_packapalooza_2023",
+              "context_distance": 0.8167131183689721,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2023",
+              "nearest_source": "aerpaw_packapalooza_2023",
+              "context_distance": 0.8394846172827204,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": "BANK:aerpaw_packapalooza_2023",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future_compact_coverage": 1.0,
+          "future_escape_rate": 0.0
+        },
+        {
+          "site": "Bandon_Oregon_GAP1",
+          "scene_count": 448,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "adapted": false,
+          "resolved": false,
+          "calibration_scenes": 16,
+          "selected_actions": [],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.9236728971533493,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.9313007153777425,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.9554143912724579,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 8,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.9483949889697304,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 10,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 1.0084587552173048,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 12,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.9704086565658634,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 16,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.8718225063165339,
+              "novelty_threshold": 1.4895910775665,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            }
+          ],
+          "future_compact_coverage": 0.0,
+          "future_escape_rate": 1.0
+        }
+      ]
+    },
+    "32": {
+      "n_channels": 32,
+      "queries": [
+        {
+          "demand_channels": 8
+        },
+        {
+          "demand_channels": 16
+        },
+        {
+          "demand_channels": 24
+        }
+      ],
+      "prototypes": {
+        "aerpaw_packapalooza_2023": [
+          -1.710015085210826,
+          -1.3258692294790235,
+          -0.6950896702389405,
+          -0.31870162953723596,
+          -0.40004673698293775,
+          -0.6272282779065163,
+          -1.2128247374240797,
+          -0.3879685706344061,
+          -0.04691992011158795,
+          0.21520683608749414,
+          0.011096882064107859,
+          -0.774994578151616,
+          -0.4251841751906351,
+          0.2855767998999456,
+          0.5159582998972534,
+          0.2193276582016562,
+          -0.30324203775352027,
+          -0.979234876056148,
+          -0.15848099726317086,
+          0.211358595782907,
+          0.22476045638648826,
+          0.6272748361655613,
+          0.3659119876191912,
+          0.7027427168112085,
+          1.199231558210444,
+          1.4983433388625391,
+          1.497728665585551,
+          0.5397725375017458,
+          0.20793079551351665,
+          1.001624604365292,
+          1.046225647290791,
+          0.7479713737153371
+        ],
+        "aerpaw_lake_wheeler_2024": [
+          -0.09705416296782607,
+          0.11640861021374165,
+          0.39264973400760933,
+          0.3467706696607916,
+          1.296182128752354,
+          1.9603145769701968,
+          1.8789083429319526,
+          1.918585347227317,
+          1.3901684442690911,
+          1.9855708287745135,
+          1.909218494687171,
+          1.253806738947936,
+          0.7192714342992144,
+          1.679811361156465,
+          1.5745675660921468,
+          1.3047840305825518,
+          0.8260042760865272,
+          -0.5712011092404826,
+          -0.3717939577226619,
+          -0.3038162172151565,
+          -0.30308186487131,
+          -0.41634627241281436,
+          -0.6341942451123146,
+          -0.5090350435377764,
+          -0.43570957246744546,
+          -0.3268522346642273,
+          -0.4537362682382587,
+          -0.5427609571159296,
+          -0.5589051437007132,
+          -0.3471946807759293,
+          -0.40705791603085373,
+          -0.37961806629337336
+        ],
+        "aerpaw_packapalooza_2024": [
+          -0.1410502334958498,
+          -0.15438483282724996,
+          -0.08216621511827064,
+          0.012722409223434645,
+          0.9400384192948974,
+          1.9425637234213344,
+          1.865620809946187,
+          1.8705203093410092,
+          1.2717493966542985,
+          1.937172160087819,
+          1.8732658002272424,
+          1.5428348660822213,
+          0.9685783255869534,
+          1.8881125061802246,
+          1.835195537463287,
+          1.6028774516889228,
+          1.2246872375088647,
+          -0.21477117319399686,
+          -0.0746521155828619,
+          0.02208955927660931,
+          0.002034756688138059,
+          -0.28316929312600253,
+          -0.4059734467882482,
+          -0.3474433815286267,
+          -0.30015569737147435,
+          -0.18456916901192413,
+          -0.2950317524339985,
+          -0.33907806820829206,
+          -0.24019158945251445,
+          -0.08598313295003931,
+          -0.1801603395067117,
+          -0.09066626921619736
+        ],
+        "aerpaw_packapalooza_2025": [
+          0.05532359951138687,
+          0.08437581956027852,
+          0.19278488308203942,
+          0.2012360286473478,
+          0.9105026827891016,
+          1.5513838276415046,
+          1.424031328849766,
+          1.4273255556932574,
+          1.0146619858682384,
+          1.4996913376022005,
+          1.4537209211839917,
+          1.159432293185142,
+          0.6317981582946829,
+          1.3884315996003198,
+          1.3094801507817806,
+          1.1704776341610366,
+          0.8174843945947718,
+          -0.5954265656086326,
+          -0.4951947793607357,
+          -0.4961499647823849,
+          -0.5667890467016278,
+          -0.6693158282373333,
+          -0.8210594729857492,
+          -0.8339658574602453,
+          -0.8068062239471753,
+          -0.7617397143825253,
+          -0.802480240828901,
+          -0.9045252247720952,
+          -0.8062938753849352,
+          -0.699990582721578,
+          -0.7492894296236396,
+          -0.8290751250643003
+        ]
+      },
+      "novelty_threshold": 1.449169521683897,
+      "bank_actions": {
+        "aerpaw_packapalooza_2023": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            4,
+            0
+          ],
+          [
+            13,
+            6,
+            0
+          ]
+        ],
+        "aerpaw_lake_wheeler_2024": [
+          [
+            21,
+            16,
+            8
+          ],
+          [
+            24,
+            16,
+            8
+          ],
+          [
+            17,
+            16,
+            8
+          ]
+        ],
+        "aerpaw_packapalooza_2024": [
+          [
+            21,
+            16,
+            8
+          ],
+          [
+            17,
+            16,
+            8
+          ],
+          [
+            23,
+            16,
+            8
+          ],
+          [
+            15,
+            9,
+            6
+          ]
+        ],
+        "aerpaw_packapalooza_2025": [
+          [
+            24,
+            16,
+            8
+          ],
+          [
+            20,
+            16,
+            8
+          ],
+          [
+            17,
+            16,
+            8
+          ],
+          [
+            20,
+            12,
+            4
+          ]
+        ]
+      },
+      "bank_ids": {
+        "aerpaw_packapalooza_2023": 1,
+        "aerpaw_lake_wheeler_2024": 2,
+        "aerpaw_packapalooza_2024": 3,
+        "aerpaw_packapalooza_2025": 4
+      },
+      "workpoints": {
+        "matched": {
+          "target_clean_rate": 0.9,
+          "common_eligible": true,
+          "semantic_workpoint_id": "semantic_primary_fault_n32_49",
+          "exact_workpoint_id": "exact_primary_fault_n32_a1",
+          "semantic_clean_rate": 0.9097517730496455,
+          "exact_clean_rate": 0.9787234042553191,
+          "semantic_resource_bits_per_scene": 56.86052009456265,
+          "exact_resource_bits_per_scene": 62.0,
+          "paired_savings_percentage": 8.289483718447341,
+          "paired_savings_ci_lower": 6.4429180488827855,
+          "paired_savings_ci_upper": 10.164084543964004
+        },
+        "semantic": {
+          "workpoint_id": "semantic_primary_fault_n32_49",
+          "heartbeat_silence_scenes": 10,
+          "maximum_state_age_minutes": 60.0,
+          "task_update_open_loop_attempts": 2,
+          "calibration_open_loop_attempts": 2,
+          "summary": {
+            "clean_rate": 0.9097517730496455,
+            "clean_rate_ci_lower": 0.9029550827423168,
+            "clean_rate_ci_upper": 0.9166666666666666,
+            "availability_rate": 0.9108156028368796,
+            "availability_rate_ci_lower": 0.9039007092198583,
+            "availability_rate_ci_upper": 0.9176713947990542,
+            "actual_total_bits_per_scene": 56.86052009456265,
+            "actual_total_bits_per_scene_ci_lower": 55.75314125295508,
+            "actual_total_bits_per_scene_ci_upper": 58.034119385342784,
+            "resource_equivalent_bits_per_scene": 56.86052009456265,
+            "resource_equivalent_bits_per_scene_ci_lower": 55.74371232269504,
+            "resource_equivalent_bits_per_scene_ci_upper": 58.00077644799054,
+            "exact_action_bits_per_scene": 4.836879432624114,
+            "exact_action_bits_per_scene_ci_lower": 4.836879432624114,
+            "exact_action_bits_per_scene_ci_upper": 4.836879432624114,
+            "initial_install_bits_per_scene": 2.833333333333334,
+            "initial_install_bits_per_scene_ci_lower": 2.833333333333334,
+            "initial_install_bits_per_scene_ci_upper": 2.833333333333334,
+            "recovery_install_bits_per_scene": 22.614834515366432,
+            "recovery_install_bits_per_scene_ci_lower": 21.6892109929078,
+            "recovery_install_bits_per_scene_ci_upper": 23.543825354609933,
+            "compact_update_bits_per_scene": 8.112204491725768,
+            "compact_update_bits_per_scene_ci_lower": 8.028160460992908,
+            "compact_update_bits_per_scene_ci_upper": 8.199616578014185,
+            "escape_exact_bits_per_scene": 0.6255319148936169,
+            "escape_exact_bits_per_scene_ci_lower": 0.6230496453900708,
+            "escape_exact_bits_per_scene_ci_upper": 0.628014184397163,
+            "duplicate_update_bits_per_scene": 8.737736406619385,
+            "duplicate_update_bits_per_scene_ci_lower": 8.652655880614656,
+            "duplicate_update_bits_per_scene_ci_upper": 8.820784574468084,
+            "ack_bits_per_scene": 8.073049645390071,
+            "ack_bits_per_scene_ci_lower": 7.956737588652484,
+            "ack_bits_per_scene_ci_upper": 8.192216312056738,
+            "heartbeat_bits_per_scene": 1.026950354609929,
+            "heartbeat_bits_per_scene_ci_lower": 1.0052009456264774,
+            "heartbeat_bits_per_scene_ci_upper": 1.0486997635933804,
+            "effective_mean_regret_db": 0.910933878052601,
+            "effective_mean_regret_db_ci_lower": 0.8436830027323947,
+            "effective_mean_regret_db_ci_upper": 0.9789604238200554,
+            "context_install_count_per_scene": 0.06524822695035461,
+            "context_install_count_per_scene_ci_lower": 0.06288416075650119,
+            "context_install_count_per_scene_ci_upper": 0.06764184397163119,
+            "compact_update_count_per_scene": 0.2336583924349882,
+            "compact_update_count_per_scene_ci_lower": 0.2316489361702128,
+            "compact_update_count_per_scene_ci_upper": 0.2357860520094563,
+            "wrong_codebook_decode_count": 0.0,
+            "wrong_codebook_decode_count_ci_lower": 0.0,
+            "wrong_codebook_decode_count_ci_upper": 0.0
+          },
+          "session_metadata": [
+            {
+              "campaign": "aerpaw_packapalooza_2023",
+              "decision": "OOD",
+              "scene_count": 364,
+              "calibration_scene_count": 4,
+              "future_scene_count": 360,
+              "codeword_count": 1,
+              "install_packet_bits": 375,
+              "compact_frame_bits": 41
+            },
+            {
+              "campaign": "aerpaw_lake_wheeler_2024",
+              "decision": "BANK:aerpaw_packapalooza_2024",
+              "scene_count": 67,
+              "calibration_scene_count": 6,
+              "future_scene_count": 61,
+              "codeword_count": 4,
+              "install_packet_bits": 417,
+              "compact_frame_bits": 43
+            },
+            {
+              "campaign": "aerpaw_packapalooza_2024",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 67,
+              "calibration_scene_count": 8,
+              "future_scene_count": 59,
+              "codeword_count": 3,
+              "install_packet_bits": 403,
+              "compact_frame_bits": 42
+            },
+            {
+              "campaign": "aerpaw_packapalooza_2025",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 66,
+              "calibration_scene_count": 4,
+              "future_scene_count": 62,
+              "codeword_count": 3,
+              "install_packet_bits": 403,
+              "compact_frame_bits": 42
+            }
+          ]
+        },
+        "exact": {
+          "workpoint_id": "exact_primary_fault_n32_a1",
+          "task_packet_open_loop_attempts": 1,
+          "summary": {
+            "clean_rate": 0.9787234042553191,
+            "clean_rate_ci_lower": 0.9771572104018913,
+            "clean_rate_ci_upper": 0.9802903368794327,
+            "availability_rate": 0.9972517730496455,
+            "availability_rate_ci_lower": 0.996690307328605,
+            "availability_rate_ci_upper": 0.9978132387706855,
+            "actual_total_bits_per_scene": 62.0,
+            "actual_total_bits_per_scene_ci_lower": 62.0,
+            "actual_total_bits_per_scene_ci_upper": 62.0,
+            "resource_equivalent_bits_per_scene": 62.0,
+            "resource_equivalent_bits_per_scene_ci_lower": 62.0,
+            "resource_equivalent_bits_per_scene_ci_upper": 62.0,
+            "exact_action_bits_per_scene": 62.0,
+            "exact_action_bits_per_scene_ci_lower": 62.0,
+            "exact_action_bits_per_scene_ci_upper": 62.0,
+            "initial_install_bits_per_scene": 0.0,
+            "initial_install_bits_per_scene_ci_lower": 0.0,
+            "initial_install_bits_per_scene_ci_upper": 0.0,
+            "recovery_install_bits_per_scene": 0.0,
+            "recovery_install_bits_per_scene_ci_lower": 0.0,
+            "recovery_install_bits_per_scene_ci_upper": 0.0,
+            "compact_update_bits_per_scene": 0.0,
+            "compact_update_bits_per_scene_ci_lower": 0.0,
+            "compact_update_bits_per_scene_ci_upper": 0.0,
+            "escape_exact_bits_per_scene": 0.0,
+            "escape_exact_bits_per_scene_ci_lower": 0.0,
+            "escape_exact_bits_per_scene_ci_upper": 0.0,
+            "duplicate_update_bits_per_scene": 0.0,
+            "duplicate_update_bits_per_scene_ci_lower": 0.0,
+            "duplicate_update_bits_per_scene_ci_upper": 0.0,
+            "ack_bits_per_scene": 0.0,
+            "ack_bits_per_scene_ci_lower": 0.0,
+            "ack_bits_per_scene_ci_upper": 0.0,
+            "heartbeat_bits_per_scene": 0.0,
+            "heartbeat_bits_per_scene_ci_lower": 0.0,
+            "heartbeat_bits_per_scene_ci_upper": 0.0,
+            "effective_mean_regret_db": 0.04173367784378377,
+            "effective_mean_regret_db_ci_lower": 0.03559094037687431,
+            "effective_mean_regret_db_ci_upper": 0.04813724862486476,
+            "context_install_count_per_scene": 0.0,
+            "context_install_count_per_scene_ci_lower": 0.0,
+            "context_install_count_per_scene_ci_upper": 0.0,
+            "compact_update_count_per_scene": 1.0,
+            "compact_update_count_per_scene_ci_lower": 1.0,
+            "compact_update_count_per_scene_ci_upper": 1.0,
+            "wrong_codebook_decode_count": 0.0,
+            "wrong_codebook_decode_count_ci_lower": 0.0,
+            "wrong_codebook_decode_count_ci_upper": 0.0
+          }
+        }
+      },
+      "pilot_adapter_gate": [
+        {
+          "site": "goeppingen_I",
+          "scene_count": 326,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "adapted": false,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "selected_actions": [
+            [
+              24,
+              16,
+              8
+            ],
+            [
+              20,
+              16,
+              8
+            ],
+            [
+              17,
+              16,
+              8
+            ],
+            [
+              20,
+              12,
+              4
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.8202351064358225,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.7984141656888591,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": "BANK:aerpaw_packapalooza_2025",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future_compact_coverage": 1.0,
+          "future_escape_rate": 0.0
+        },
+        {
+          "site": "skyhubfr",
+          "scene_count": 434,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "adapted": false,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "selected_actions": [
+            [
+              24,
+              16,
+              8
+            ],
+            [
+              20,
+              16,
+              8
+            ],
+            [
+              17,
+              16,
+              8
+            ],
+            [
+              20,
+              12,
+              4
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 1.002965207361082,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 1.003597683628527,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": "BANK:aerpaw_packapalooza_2025",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future_compact_coverage": 0.9883720930232558,
+          "future_escape_rate": 0.011627906976744207
+        },
+        {
+          "site": "BGSOFIAMLADOST01",
+          "scene_count": 450,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "adapted": false,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "selected_actions": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              5,
+              4,
+              0
+            ],
+            [
+              13,
+              6,
+              0
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2023",
+              "nearest_source": "aerpaw_packapalooza_2023",
+              "context_distance": 0.8609088982306757,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2023",
+              "nearest_source": "aerpaw_packapalooza_2023",
+              "context_distance": 0.9047805674593897,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": "BANK:aerpaw_packapalooza_2023",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future_compact_coverage": 0.9977578475336323,
+          "future_escape_rate": 0.0022421524663677195
+        },
+        {
+          "site": "Bandon_Oregon_GAP1",
+          "scene_count": 448,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "adapted": false,
+          "resolved": false,
+          "calibration_scenes": 16,
+          "selected_actions": [],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.9499559144084953,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.942818494252822,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.9724316025105317,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 8,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.9506626747411944,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 10,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 1.004331540874347,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 12,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.9877387861643833,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 16,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.8908226619322922,
+              "novelty_threshold": 1.449169521683897,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            }
+          ],
+          "future_compact_coverage": 0.0,
+          "future_escape_rate": 1.0
+        }
+      ]
+    },
+    "64": {
+      "n_channels": 64,
+      "queries": [
+        {
+          "demand_channels": 16
+        },
+        {
+          "demand_channels": 32
+        },
+        {
+          "demand_channels": 48
+        }
+      ],
+      "prototypes": {
+        "aerpaw_packapalooza_2023": [
+          -1.3794437883332886,
+          -1.8929270222240893,
+          -1.5193332658881824,
+          -1.0173930708512628,
+          -0.7308768167151846,
+          -0.608382226369999,
+          -0.41177607050049214,
+          -0.21242200329677582,
+          -0.5012560077576425,
+          -0.2784077172710368,
+          -0.4319008169875704,
+          -0.7799648471003692,
+          -1.353436691383289,
+          -0.9572031934591126,
+          -0.49475642966910055,
+          -0.24408681070697288,
+          -0.15846794618493357,
+          0.06712671998153225,
+          0.32062252828657517,
+          0.08492213239136501,
+          0.015360356165260743,
+          0.003594013136684333,
+          -0.45112110533951644,
+          -1.0227412204078665,
+          -0.5688958019290418,
+          -0.24042438556630724,
+          0.23833387960428573,
+          0.30054158995118174,
+          0.4491920372617459,
+          0.5272756958313535,
+          0.27349443152031405,
+          0.14051092129396717,
+          -0.05974525864675821,
+          -0.5173289135485978,
+          -1.1794298988132625,
+          -0.6800202172004027,
+          -0.24903446776653412,
+          -0.05226201018356937,
+          0.09651172150475254,
+          0.3043847581001432,
+          0.3017251514757573,
+          0.12511715218533065,
+          0.030275580974702336,
+          1.170592394302253,
+          0.6837245879445691,
+          0.0053186122157668474,
+          0.5246877295137252,
+          0.8097254496915199,
+          1.0543292872435044,
+          1.2173944326169504,
+          1.3378668913054126,
+          1.5030408610203798,
+          1.4417054271205245,
+          1.3955769736636687,
+          0.9600352868547064,
+          0.06603295053609975,
+          -0.02096187892922359,
+          0.41180284004901707,
+          0.7738890151529861,
+          1.1221167901428664,
+          0.9408268831199095,
+          1.0361071181861106,
+          1.0776577802588991,
+          0.34497934395395263
+        ],
+        "aerpaw_lake_wheeler_2024": [
+          -0.00988464933232946,
+          -0.133484926006713,
+          0.01445439731264669,
+          0.25435513140859306,
+          0.3982982110138171,
+          0.4033749487710476,
+          0.3009817953415346,
+          0.4139356117606252,
+          0.21128715108255147,
+          2.3355853938188873,
+          2.0813457670275843,
+          1.7493051787827723,
+          1.7654753121098585,
+          1.909965185957354,
+          1.8588248368369433,
+          1.89309810653517,
+          1.5804925930236084,
+          1.1516309161723373,
+          2.0959480034793865,
+          1.7879613094405622,
+          1.6612806737741692,
+          2.0689280301511794,
+          1.3715205387640728,
+          1.0975729213819714,
+          1.237896512121312,
+          0.19809941849915494,
+          1.7866000657887404,
+          1.5057317370326795,
+          1.3791059495599767,
+          1.70974552342531,
+          1.3658873949614074,
+          1.2015479293735662,
+          1.083011681313967,
+          0.5593179300187106,
+          -0.5918318719095478,
+          -0.4665087476325643,
+          -0.35354430394306685,
+          -0.31967533995132585,
+          -0.31089492356812215,
+          -0.2312394118416877,
+          -0.2022282043302358,
+          -0.3383544382305878,
+          -0.35876330661782413,
+          -0.40092400564195013,
+          -0.5126958785983706,
+          -0.6670406070249612,
+          -0.5027685695686556,
+          -0.43563022153976166,
+          -0.40051315718918595,
+          -0.39550414107947,
+          -0.2689497916857899,
+          -0.31654216992205636,
+          -0.4121212656004089,
+          -0.4184894095929034,
+          -0.4564270867059418,
+          -0.5462129356761976,
+          -0.630520685098395,
+          -0.4034344884512424,
+          -0.29411322707344895,
+          -0.3307240360431848,
+          -0.41985433808841066,
+          -0.3203474624978483,
+          -0.2762125996778952,
+          -0.4092472758487343
+        ],
+        "aerpaw_packapalooza_2024": [
+          -0.06394390049246444,
+          -0.1338866495480087,
+          -0.11891456730930902,
+          -0.10400816041421203,
+          -0.025351064293908654,
+          -0.061634570460284,
+          -0.01209491858989804,
+          0.10178125172774198,
+          -0.07333776580309713,
+          1.9623017609105833,
+          2.0003361587691195,
+          1.8314179229947252,
+          1.8133198700119493,
+          1.8722434709974487,
+          1.8203044749398467,
+          1.8678769310105452,
+          1.5411916508822472,
+          0.9835898724103478,
+          1.9912412465774663,
+          1.8187762711452509,
+          1.7774517222408248,
+          1.9189847277548193,
+          1.6010797729380126,
+          1.4679298421454274,
+          1.5568521675128277,
+          0.3997972115846545,
+          1.9457159845445313,
+          1.7869693013193464,
+          1.7585497516811475,
+          1.86416048055917,
+          1.6445412170181104,
+          1.5392229723680684,
+          1.5004042217582712,
+          0.953974407368511,
+          -0.25908171091986976,
+          -0.06829908211364509,
+          -0.03794936007372786,
+          -0.025448015893838997,
+          0.054902431923208775,
+          0.06267798771470746,
+          0.10510420645183814,
+          -0.028500518791080204,
+          -0.20825628122684942,
+          -0.26026578236926984,
+          -0.3099978827361326,
+          -0.3893831076551208,
+          -0.3216662974789199,
+          -0.2686588720459652,
+          -0.25761449089907407,
+          -0.24486952425773675,
+          -0.13172227572707215,
+          -0.1570341956837127,
+          -0.24585716681439998,
+          -0.2480378610340374,
+          -0.2706814907166574,
+          -0.30621252243116204,
+          -0.284755067898659,
+          -0.09966894355042538,
+          -0.008425398352728973,
+          -0.08734443458084441,
+          -0.18479969992514092,
+          -0.09977972587423929,
+          0.022536187637593564,
+          -0.15951120019413664
+        ],
+        "aerpaw_packapalooza_2025": [
+          0.10262664405709536,
+          0.028633049760041007,
+          0.05277301417274455,
+          0.13688781996479493,
+          0.19861091831751768,
+          0.2023638374181854,
+          0.215200897715739,
+          0.2016700010565926,
+          0.17152310452598582,
+          1.6316980165083437,
+          1.6154204016285958,
+          1.4402580233556612,
+          1.387531342334816,
+          1.4199951142891625,
+          1.3910332748109413,
+          1.421873986625389,
+          1.1976063945249447,
+          0.8089574798337079,
+          1.5550537896690793,
+          1.4009117737130528,
+          1.3532071764364515,
+          1.5111839144335375,
+          1.2178816277428153,
+          1.0729982324789562,
+          1.1334074869086697,
+          0.124618256419421,
+          1.4417959108737801,
+          1.2972532937862558,
+          1.2354668191247358,
+          1.3498310319360611,
+          1.2027931160548626,
+          1.1102894248191515,
+          1.0523379095165417,
+          0.5702214082754961,
+          -0.6060724261207909,
+          -0.538829335633335,
+          -0.4828260223034404,
+          -0.4677157392916463,
+          -0.47550377496213736,
+          -0.47686032157310787,
+          -0.5105313229011499,
+          -0.5791920338540891,
+          -0.6190787314650333,
+          -0.671821381232173,
+          -0.7358679156819402,
+          -0.8505500938435706,
+          -0.8213610245474242,
+          -0.7894271887830099,
+          -0.780986866109767,
+          -0.7772519879876535,
+          -0.7377556673737858,
+          -0.7351292221938908,
+          -0.734710856543436,
+          -0.8221097730316195,
+          -0.8472645337973075,
+          -0.9012540951120794,
+          -0.8523417356789956,
+          -0.7046605350343638,
+          -0.6515579495065985,
+          -0.697548315304998,
+          -0.7412028596205216,
+          -0.7109744047756301,
+          -0.7360159709968677,
+          -0.8663817104049406
+        ]
+      },
+      "novelty_threshold": 1.4361255922625746,
+      "bank_actions": {
+        "aerpaw_packapalooza_2023": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            10,
+            10,
+            0
+          ],
+          [
+            27,
+            11,
+            0
+          ]
+        ],
+        "aerpaw_lake_wheeler_2024": [
+          [
+            42,
+            32,
+            16
+          ],
+          [
+            48,
+            32,
+            16
+          ],
+          [
+            34,
+            32,
+            16
+          ]
+        ],
+        "aerpaw_packapalooza_2024": [
+          [
+            42,
+            32,
+            16
+          ],
+          [
+            34,
+            32,
+            16
+          ],
+          [
+            46,
+            32,
+            16
+          ],
+          [
+            31,
+            18,
+            11
+          ]
+        ],
+        "aerpaw_packapalooza_2025": [
+          [
+            48,
+            32,
+            16
+          ],
+          [
+            40,
+            32,
+            16
+          ],
+          [
+            34,
+            32,
+            16
+          ],
+          [
+            40,
+            24,
+            8
+          ]
+        ]
+      },
+      "bank_ids": {
+        "aerpaw_packapalooza_2023": 1,
+        "aerpaw_lake_wheeler_2024": 2,
+        "aerpaw_packapalooza_2024": 3,
+        "aerpaw_packapalooza_2025": 4
+      },
+      "workpoints": {
+        "matched": {
+          "target_clean_rate": 0.9,
+          "common_eligible": true,
+          "semantic_workpoint_id": "semantic_primary_fault_n64_33",
+          "exact_workpoint_id": "exact_primary_fault_n64_a1",
+          "semantic_clean_rate": 0.9123522458628841,
+          "exact_clean_rate": 0.978014184397163,
+          "semantic_resource_bits_per_scene": 58.120035460992895,
+          "exact_resource_bits_per_scene": 65.0,
+          "paired_savings_percentage": 10.584560829241683,
+          "paired_savings_ci_lower": 8.202853927986908,
+          "paired_savings_ci_upper": 12.850723995271869
+        },
+        "semantic": {
+          "workpoint_id": "semantic_primary_fault_n64_33",
+          "heartbeat_silence_scenes": 10,
+          "maximum_state_age_minutes": 120.0,
+          "task_update_open_loop_attempts": 1,
+          "calibration_open_loop_attempts": 1,
+          "summary": {
+            "clean_rate": 0.9123522458628841,
+            "clean_rate_ci_lower": 0.905437352245863,
+            "clean_rate_ci_upper": 0.919297429078014,
+            "availability_rate": 0.9252068557919623,
+            "availability_rate_ci_lower": 0.9184692671394799,
+            "availability_rate_ci_upper": 0.9315602836879431,
+            "actual_total_bits_per_scene": 58.120035460992895,
+            "actual_total_bits_per_scene_ci_lower": 56.59772828014185,
+            "actual_total_bits_per_scene_ci_upper": 59.62250812647754,
+            "resource_equivalent_bits_per_scene": 58.120035460992895,
+            "resource_equivalent_bits_per_scene_ci_lower": 56.56558289007093,
+            "resource_equivalent_bits_per_scene_ci_upper": 59.639824911347525,
+            "exact_action_bits_per_scene": 2.3049645390070927,
+            "exact_action_bits_per_scene_ci_lower": 2.3049645390070927,
+            "exact_action_bits_per_scene_ci_upper": 2.3049645390070927,
+            "initial_install_bits_per_scene": 2.891843971631206,
+            "initial_install_bits_per_scene_ci_lower": 2.891843971631206,
+            "initial_install_bits_per_scene_ci_upper": 2.891843971631206,
+            "recovery_install_bits_per_scene": 32.50026595744681,
+            "recovery_install_bits_per_scene_ci_lower": 31.154949763593383,
+            "recovery_install_bits_per_scene_ci_upper": 33.81036790780142,
+            "compact_update_bits_per_scene": 8.520803782505912,
+            "compact_update_bits_per_scene_ci_lower": 8.386461288416076,
+            "compact_update_bits_per_scene_ci_upper": 8.655853280141846,
+            "escape_exact_bits_per_scene": 0.764095744680851,
+            "escape_exact_bits_per_scene_ci_lower": 0.760579196217494,
+            "escape_exact_bits_per_scene_ci_upper": 0.768114657210402,
+            "duplicate_update_bits_per_scene": 0.0,
+            "duplicate_update_bits_per_scene_ci_lower": 0.0,
+            "duplicate_update_bits_per_scene_ci_upper": 0.0,
+            "ack_bits_per_scene": 8.486524822695035,
+            "ack_bits_per_scene_ci_lower": 8.352482269503547,
+            "ack_bits_per_scene_ci_upper": 8.6177304964539,
+            "heartbeat_bits_per_scene": 2.651536643026004,
+            "heartbeat_bits_per_scene_ci_lower": 2.6146572104018913,
+            "heartbeat_bits_per_scene_ci_upper": 2.6884160756501174,
+            "effective_mean_regret_db": 0.7785266489941273,
+            "effective_mean_regret_db_ci_lower": 0.715086650837703,
+            "effective_mean_regret_db_ci_upper": 0.8442298929138482,
+            "context_install_count_per_scene": 0.08968676122931443,
+            "context_install_count_per_scene_ci_lower": 0.08649527186761229,
+            "context_install_count_per_scene_ci_upper": 0.09305629432624114,
+            "compact_update_count_per_scene": 0.24027777777777776,
+            "compact_update_count_per_scene_ci_lower": 0.2372340425531915,
+            "compact_update_count_per_scene_ci_upper": 0.24361702127659574,
+            "wrong_codebook_decode_count": 0.0,
+            "wrong_codebook_decode_count_ci_lower": 0.0,
+            "wrong_codebook_decode_count_ci_upper": 0.0
+          },
+          "session_metadata": [
+            {
+              "campaign": "aerpaw_packapalooza_2023",
+              "decision": "OOD",
+              "scene_count": 364,
+              "calibration_scene_count": 4,
+              "future_scene_count": 360,
+              "codeword_count": 1,
+              "install_packet_bits": 378,
+              "compact_frame_bits": 41
+            },
+            {
+              "campaign": "aerpaw_lake_wheeler_2024",
+              "decision": "BANK:aerpaw_packapalooza_2024",
+              "scene_count": 67,
+              "calibration_scene_count": 6,
+              "future_scene_count": 61,
+              "codeword_count": 4,
+              "install_packet_bits": 429,
+              "compact_frame_bits": 43
+            },
+            {
+              "campaign": "aerpaw_packapalooza_2024",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 67,
+              "calibration_scene_count": 6,
+              "future_scene_count": 61,
+              "codeword_count": 3,
+              "install_packet_bits": 412,
+              "compact_frame_bits": 42
+            },
+            {
+              "campaign": "aerpaw_packapalooza_2025",
+              "decision": "BANK:aerpaw_lake_wheeler_2024",
+              "scene_count": 66,
+              "calibration_scene_count": 4,
+              "future_scene_count": 62,
+              "codeword_count": 3,
+              "install_packet_bits": 412,
+              "compact_frame_bits": 42
+            }
+          ]
+        },
+        "exact": {
+          "workpoint_id": "exact_primary_fault_n64_a1",
+          "task_packet_open_loop_attempts": 1,
+          "summary": {
+            "clean_rate": 0.978014184397163,
+            "clean_rate_ci_lower": 0.976418439716312,
+            "clean_rate_ci_upper": 0.9796099290780141,
+            "availability_rate": 0.9970449172576832,
+            "availability_rate_ci_lower": 0.9963947990543734,
+            "availability_rate_ci_upper": 0.9976654846335699,
+            "actual_total_bits_per_scene": 65.0,
+            "actual_total_bits_per_scene_ci_lower": 65.0,
+            "actual_total_bits_per_scene_ci_upper": 65.0,
+            "resource_equivalent_bits_per_scene": 65.0,
+            "resource_equivalent_bits_per_scene_ci_lower": 65.0,
+            "resource_equivalent_bits_per_scene_ci_upper": 65.0,
+            "exact_action_bits_per_scene": 65.0,
+            "exact_action_bits_per_scene_ci_lower": 65.0,
+            "exact_action_bits_per_scene_ci_upper": 65.0,
+            "initial_install_bits_per_scene": 0.0,
+            "initial_install_bits_per_scene_ci_lower": 0.0,
+            "initial_install_bits_per_scene_ci_upper": 0.0,
+            "recovery_install_bits_per_scene": 0.0,
+            "recovery_install_bits_per_scene_ci_lower": 0.0,
+            "recovery_install_bits_per_scene_ci_upper": 0.0,
+            "compact_update_bits_per_scene": 0.0,
+            "compact_update_bits_per_scene_ci_lower": 0.0,
+            "compact_update_bits_per_scene_ci_upper": 0.0,
+            "escape_exact_bits_per_scene": 0.0,
+            "escape_exact_bits_per_scene_ci_lower": 0.0,
+            "escape_exact_bits_per_scene_ci_upper": 0.0,
+            "duplicate_update_bits_per_scene": 0.0,
+            "duplicate_update_bits_per_scene_ci_lower": 0.0,
+            "duplicate_update_bits_per_scene_ci_upper": 0.0,
+            "ack_bits_per_scene": 0.0,
+            "ack_bits_per_scene_ci_lower": 0.0,
+            "ack_bits_per_scene_ci_upper": 0.0,
+            "heartbeat_bits_per_scene": 0.0,
+            "heartbeat_bits_per_scene_ci_lower": 0.0,
+            "heartbeat_bits_per_scene_ci_upper": 0.0,
+            "effective_mean_regret_db": 0.04501838634998616,
+            "effective_mean_regret_db_ci_lower": 0.038241835032583125,
+            "effective_mean_regret_db_ci_upper": 0.052088092056971236,
+            "context_install_count_per_scene": 0.0,
+            "context_install_count_per_scene_ci_lower": 0.0,
+            "context_install_count_per_scene_ci_upper": 0.0,
+            "compact_update_count_per_scene": 1.0,
+            "compact_update_count_per_scene_ci_lower": 1.0,
+            "compact_update_count_per_scene_ci_upper": 1.0,
+            "wrong_codebook_decode_count": 0.0,
+            "wrong_codebook_decode_count_ci_lower": 0.0,
+            "wrong_codebook_decode_count_ci_upper": 0.0
+          }
+        }
+      },
+      "pilot_adapter_gate": [
+        {
+          "site": "goeppingen_I",
+          "scene_count": 326,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "adapted": false,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "selected_actions": [
+            [
+              48,
+              32,
+              16
+            ],
+            [
+              40,
+              32,
+              16
+            ],
+            [
+              34,
+              32,
+              16
+            ],
+            [
+              40,
+              24,
+              8
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.8710908848357126,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 0.8293939804306316,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": "BANK:aerpaw_packapalooza_2025",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future_compact_coverage": 1.0,
+          "future_escape_rate": 0.0
+        },
+        {
+          "site": "skyhubfr",
+          "scene_count": 434,
+          "decision": "BANK:aerpaw_packapalooza_2025",
+          "adapted": false,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "selected_actions": [
+            [
+              48,
+              32,
+              16
+            ],
+            [
+              40,
+              32,
+              16
+            ],
+            [
+              34,
+              32,
+              16
+            ],
+            [
+              40,
+              24,
+              8
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 1.10628617104256,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2025",
+              "nearest_source": "aerpaw_packapalooza_2025",
+              "context_distance": 1.0973238151874942,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": "BANK:aerpaw_packapalooza_2025",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future_compact_coverage": 0.9837209302325581,
+          "future_escape_rate": 0.016279069767441867
+        },
+        {
+          "site": "BGSOFIAMLADOST01",
+          "scene_count": 450,
+          "decision": "BANK:aerpaw_packapalooza_2023",
+          "adapted": false,
+          "resolved": true,
+          "calibration_scenes": 4,
+          "selected_actions": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              10,
+              10,
+              0
+            ],
+            [
+              27,
+              11,
+              0
+            ]
+          ],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2023",
+              "nearest_source": "aerpaw_packapalooza_2023",
+              "context_distance": 0.842942763071299,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2023",
+              "nearest_source": "aerpaw_packapalooza_2023",
+              "context_distance": 0.8625610973068492,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": "BANK:aerpaw_packapalooza_2023",
+              "accumulated_bank_coverage": 1.0,
+              "accepted": true
+            }
+          ],
+          "future_compact_coverage": 0.9977578475336323,
+          "future_escape_rate": 0.0022421524663677195
+        },
+        {
+          "site": "Bandon_Oregon_GAP1",
+          "scene_count": 448,
+          "decision": "UNRESOLVED_EXACT_FALLBACK",
+          "adapted": false,
+          "resolved": false,
+          "calibration_scenes": 16,
+          "selected_actions": [],
+          "decision_trace": [
+            {
+              "checkpoint_scenes": 2,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 1.0727315072643728,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": null,
+              "accumulated_bank_coverage": null,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 4,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 1.0378798691344346,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 6,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 1.0788978738068924,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 8,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 1.0439837385195023,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 10,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 1.061686535320012,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 12,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 1.0831321010697763,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            },
+            {
+              "checkpoint_scenes": 16,
+              "signature": "BANK:aerpaw_packapalooza_2024",
+              "nearest_source": "aerpaw_packapalooza_2024",
+              "context_distance": 0.9902059232631459,
+              "novelty_threshold": 1.4361255922625746,
+              "stable_signature": "BANK:aerpaw_packapalooza_2024",
+              "accumulated_bank_coverage": 0.0,
+              "accepted": false
+            }
+          ],
+          "future_compact_coverage": 0.0,
+          "future_escape_rate": 1.0
+        }
+      ]
+    }
+  },
+  "code_snapshot": {
+    "files": {
+      "configs/stage6r_confirmation_lockbox_protocol_v1.json": "6c8a08c299b5eea19a14686de3369219ee041333b45edd2b9f7b62f26bda2fff",
+      "src/spectrum_semcom/final_holdout.py": "687902fdac88c3f62f1e947a72311254e645886ee3b9dbf58ecc0181965438e5",
+      "src/spectrum_semcom/reproducibility.py": "e61dcc0fcbdcb563798fb40be7dd7193a3c31fa1c50e94bf8326e957872e104c",
+      "src/spectrum_semcom/electrosense_psd.py": "bcda88f15174c230fd68d6019166945472c98634bc4307cbef9b437db30e9fda",
+      "src/spectrum_semcom/stage5_event_semantics.py": "d747a31ee2f323b10d9579422eaf06f6727a19892637980004ca65497b2eb103",
+      "src/spectrum_semcom/stage5_cumulative_ack.py": "5a0ad147e9e209f68942a7d51e8a1de048cadf5a678d2fa4a08061f69a472a6e",
+      "src/spectrum_semcom/stage6_bit_accounting.py": "6f232186051dc6c2498d0f816757e71f0a2741ef476437ee50c0fa6a1c3e3697",
+      "src/spectrum_semcom/stage6_context_codec.py": "5eea3916b1ee3b7b43ec3bb0a070a6298210d62ff1d71f8b2ba964eee7dab0f5",
+      "src/spectrum_semcom/stage6_context_heartbeat.py": "73413b4276974eb95396efa0eec09983b34e73cabe4b7a0379040c4c4dabb616",
+      "src/spectrum_semcom/stage6_context_recovery.py": "2e63202e1e19e8fe33039db6d327f1fc0177454439721c8d799304adb678f2be",
+      "src/spectrum_semcom/stage6_task_codebook.py": "ea4dc1f26e96aabf8bbeeaa7779f54e2d1b44570ce5146c43ebba02ad4adc03c",
+      "src/spectrum_semcom/stage6_task_codec.py": "d37dcbbd5370e2ef5a731c83517e0e73a03eed5ac0598ab7b515a33e88451bd3",
+      "src/spectrum_semcom/stage6_matched_reliability.py": "8372b0ed14558d7336f275be1ed62704c41aa4a5d39557ce80daf7cb3ceb5746",
+      "src/spectrum_semcom/stage6r_context_adapter.py": "dedc08d939a6a4db25921f4c03b038a18031e0dd7d794b7d1b9b514c721b7418",
+      "src/spectrum_semcom/stage6r_regret_codebook.py": "fbd2a942c8bd3a671b7718169ce1249db245e27bdefe91a67028d7646e0b96ee",
+      "src/spectrum_semcom/stage6r_codebook_activation.py": "6bffec4aa021e353144dd9962ac836dca3e664da36419b0e070ff091678f8628",
+      "src/spectrum_semcom/stage6r_activation_reliability.py": "8b2e3889408517033e17719b51edc0992994f6f6dd43a4a12691fce4fa6ebb34",
+      "src/spectrum_semcom/stage6r_reliability_integration.py": "c5f12d536f0128306b2dabb37f63822585b2a1b07439b3d05fecd2c21e04f4a9",
+      "src/spectrum_semcom/stage6r_external_final.py": "fd57428828b1c1e20497365825de41f417599cd1aec20d8dfa0f3c4bab48f194",
+      "src/spectrum_semcom/stage6r_confirmation_governance.py": "0048dfde797c1aa72e352fe92d5519c23eda8de9f0299321a44bf22802cb873b",
+      "scripts/run_stage6r_activation_protocol_dry_run.py": "c7c9fe21a7cbb13cd11f257d7b1404897043330e04adf87c9f163e5d28430000",
+      "scripts/run_stage6r_electrosense_external_final.py": "4c2bca3d03507ddcd0b5dc819baed1d5cbd5b96245a1a2efa134f17a6b37b50c",
+      "scripts/run_stage6r_confirmation_lockbox.py": "9ff3a966b3f7f512b2bbcef9023b47b9449e632eb1357c16870dd11dbd6241dd",
+      "scripts/prepare_stage6r_confirmation_lockbox.py": "1cb2609a7d16a53d944c97215c051b9b7fe9b9fa250edc8c406f803960e4bae6",
+      "scripts/dry_run_stage6r_confirmation_lockbox.py": "77238f78c51363b14723e7980f8419306df63744e16d5fd27ee46aefb51a6da2"
+    },
+    "combined_sha256": "34e386037301af910302daafc647b4055ab001c878d74b7398f3587984d832e3"
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": [
+    "The original 24-site main Final remains FAILED and is not reread.",
+    "The six lockbox sites were fixed by the original metadata-only split before any of their PSD values were read.",
+    "Only heartbeat_silence_scenes changes relative to the failed main Final; N=8/64 remain at 10 and N=16/32 change from 16 to 10.",
+    "Task codebooks, epsilon, context gate, activation protocol, fault probabilities, exact baseline, and statistical gates remain frozen.",
+    "The dry-run and freeze inspect metadata, hashes, access counts, and code only; they do not load lockbox NPY arrays.",
+    "The supportive confirmation may provide independent evidence for the repair but cannot erase or relabel the failed main Final.",
+    "Any invalid accessed lockbox site is retained and is never replaced.",
+    "Execution is single-use, requires explicit --consume, and cannot be retried automatically.",
+    "Reserve signal values remain unread."
+  ]
+}

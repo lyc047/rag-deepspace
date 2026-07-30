@@ -1,18 +1,18 @@
 # 离散任务导向频谱语义通信系统主线研究计划书
 
-版本：1.1
+版本：1.2
 生效日期：2026-07-27；最近更新：2026-07-30
 状态：正式主线  
 适用范围：阶段6收尾、外部确认性验证、后续频谱预测与最小工程验证  
-当前入口：S6R.3h“固定10景心跳候选的确认锁箱协议”
-当前进度：阶段6R的24站点主 Final 已完成并正式判定为失败，原因是 N = 16/32 的 clean 95%下界未达到90%。随后只在既有 AERPAW 开发活动和4个 Pilot 站点上完成预注册静默心跳扫描；10景是同时通过 N = 16/32 全部门槛的最大间隔，已冻结为 S6R-FH10-v1。确认锁箱与储备信号值仍未读取，下一动作是注册并dry-run六站点支持性确认协议。
+当前入口：S6R.3i“S6R-FH10-v1六站点单次支持性确认”
+当前进度：S6R.3h已完成。六站点确认锁箱协议、独立执行入口、访问治理层和代码快照均已冻结；无信号值dry-run通过，400项回归测试通过。确认锁箱和储备信号值仍未读取，候选已具备一次性显式执行资格。
 
 ## Material Passport
 
 - Origin Skill：academic-research-suite / experiment-agent
 - Origin Mode：plan
 - Evidence Basis：阶段4确认性结果、阶段5开发结果、阶段6与阶段6R冻结候选、外部验证及失败后开发诊断
-- Verification Status：S6.8首次外部访问不可判定；阶段6R的24站点主 Final 正式失败；S6R.3g开发扫描已完成并冻结10景候选
+- Verification Status：S6.8首次外部访问不可判定；阶段6R的24站点主 Final 正式失败；S6R.3g已冻结10景候选；S6R.3h锁箱协议和无信号dry-run已通过
 - Current Frozen Candidate：S6R-FH10-v1
 - Stage 6 S6.8 Final Access Count：1
 - Stage 6R ElectroSense Main Final Access Count：1
@@ -896,3 +896,45 @@ ElectroSense 外部 Final 已按冻结协议单次完成。24/24 个预注册站
 8. 若确认失败，不回到Pilot追正，应转向新的独立数据或预注册的风险感知静默看门狗研究。
 
 完整证据见 `docs/STAGE6R_SILENT_HEARTBEAT_SCAN_REPORT.md`。
+
+---
+
+## 19. 2026-07-30 阶段6R确认锁箱预检更新
+
+### 19.1 已完成
+
+六站点支持性确认协议已经注册并冻结：
+
+- 角色固定为 `confirmation_lockbox`；
+- 站点固定为 Oreland、PiSDR1、Skap_French_Riviera、Geneva、URJC1、Princeton1；
+- 四种 N 统一使用10景固定静默心跳；
+- 仅心跳字段相对主 Final变化；
+- 6/6站点必须可评价；
+- 四种 N 均须通过 clean、场景加权节省、等站点节省和零错误动作门槛；
+- 自动重试、覆盖结果和储备替换均禁止。
+
+独立治理模块会在信号加载前检查访问计数、协议哈希、代码快照、站点顺序和输出状态。无信号值dry-run已经通过，确认锁箱访问次数仍为0。
+
+### 19.2 冻结证据
+
+- 定向测试13项通过；
+- 全量回归测试400项通过；
+- 代码快照 SHA-256：`34e386037301af910302daafc647b4055ab001c878d74b7398f3587984d832e3`；
+- 冻结结果 SHA-256：`b9263842e11b45ca497237e436b7cafa7bf39014fa62c56daabe6eadd9578fa8`；
+- Dry-run结果 SHA-256：`fe5c79a6ee93d1b4dd567b6d2254ea43e308adf75546074fa44ac644cd0a3645`。
+
+### 19.3 当前主线入口：S6R.3i
+
+下一步只允许执行一次：
+
+`python scripts/run_stage6r_confirmation_lockbox.py --consume`
+
+执行后无论通过、失败或数据不足：
+
+1. 确认锁箱访问次数都保持为1；
+2. 不自动重试；
+3. 不以储备站点替换失败站点；
+4. 不改写原24站点主 Final 的失败结论；
+5. 先完成结果审计、统计解释和失败归因，再决定阶段6R收尾或新研究分支。
+
+完整证据见 `docs/STAGE6R_CONFIRMATION_LOCKBOX_PREFLIGHT_REPORT.md`。

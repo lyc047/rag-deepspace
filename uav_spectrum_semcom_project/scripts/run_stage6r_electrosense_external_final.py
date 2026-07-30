@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Single-consumption Stage-6R external Final on 24 ElectroSense sites."""
+"""Single-consumption Stage-6R execution on a frozen ElectroSense role."""
 
 from __future__ import annotations
 
@@ -54,6 +54,9 @@ from spectrum_semcom.stage6r_activation_reliability import (  # noqa: E402
 )
 from spectrum_semcom.stage6r_codebook_activation import (  # noqa: E402
     build_preinstalled_catalog,
+)
+from spectrum_semcom.stage6r_confirmation_governance import (  # noqa: E402
+    validate_execution_preconditions,
 )
 from spectrum_semcom.stage6r_external_final import (  # noqa: E402
     code_snapshot,
@@ -127,11 +130,11 @@ def main() -> None:
     parser.add_argument(
         "--consume",
         action="store_true",
-        help="Required acknowledgement that the Final role is consumed once.",
+        help="Required acknowledgement that the configured role is consumed once.",
     )
     args = parser.parse_args()
     if not args.consume:
-        raise ValueError("Final execution requires explicit --consume")
+        raise ValueError("execution requires explicit --consume")
     if args.output.exists():
         raise FileExistsError("refusing to overwrite external Final result")
     config = read_json(args.config)
@@ -144,35 +147,47 @@ def main() -> None:
     registry = read_json(paths["registry"])
     access = read_json(paths["access_state"])
     freeze = read_json(paths["freeze_result"])
-    if freeze["status"] != "stage6r_electrosense_final_frozen_unaccessed":
-        raise ValueError("Final freeze artifact has invalid status")
-    if freeze["protocol_sha256"] != sha256_file(args.config):
-        raise ValueError("protocol changed after Final freeze")
     current_snapshot = code_snapshot(
         PROJECT_DIR, config["code_snapshot_paths"]
     )
-    if current_snapshot != freeze["code_snapshot"]:
-        raise ValueError("code snapshot changed after Final freeze")
-    if access["roles"]["stage6_final"]["access_count"] != 0:
-        raise ValueError("Stage-6 Final role has already been consumed")
-    if any(
-        access["roles"][role]["access_count"] != 0
-        for role in ("confirmation_lockbox", "reserve")
-    ):
-        raise ValueError("confirmation lockbox or reserve was accessed")
-    if registry["split"]["roles"]["stage6_final"] != freeze["final_sites"]:
-        raise ValueError("Final site list changed after freeze")
+    execution_role, frozen_sites = validate_execution_preconditions(
+        config=config,
+        registry=registry,
+        access_state=access,
+        freeze=freeze,
+        protocol_sha256=sha256_file(args.config),
+        code_snapshot=current_snapshot,
+    )
     if paths["archive"].stat().st_size != registry["archive"]["size_bytes"]:
         raise ValueError("archive size changed after registration")
-    if sha256_file(paths["archive"]) != registry["archive"]["sha256"]:
+    verify_full_archive = bool(
+        config.get("governance", {}).get(
+            "verify_full_archive_sha256_before_access",
+            execution_role == "stage6_final",
+        )
+    )
+    if (
+        verify_full_archive
+        and sha256_file(paths["archive"]) != registry["archive"]["sha256"]
+    ):
         raise ValueError("archive hash changed after registration")
 
+    governance = config.get("governance", {})
     receipt = claim_role_access(
         registry_path=paths["registry"],
         access_state_path=paths["access_state"],
-        role="stage6_final",
-        actor="Codex Stage-6R confirmatory executor",
-        purpose="single 24-site Stage-6R ElectroSense external Final",
+        role=execution_role,
+        actor=str(
+            governance.get(
+                "actor", "Codex Stage-6R confirmatory executor"
+            )
+        ),
+        purpose=str(
+            governance.get(
+                "purpose",
+                "single 24-site Stage-6R ElectroSense external Final",
+            )
+        ),
         evidence={
             "protocol_sha256": freeze["protocol_sha256"],
             "freeze_result_sha256": sha256_file(paths["freeze_result"]),
@@ -181,7 +196,7 @@ def main() -> None:
         },
     )
     started = time.perf_counter()
-    metadata_rows = role_members(registry, "stage6_final")
+    metadata_rows = role_members(registry, execution_role)
     loaded = load_npy_members(
         paths["archive"], [row["member"] for row in metadata_rows]
     )
@@ -450,7 +465,7 @@ def main() -> None:
                 ),
             }
             print(
-                f"Final N={n_channels} site={site} "
+                f"{execution_role} N={n_channels} site={site} "
                 f"decision={resolution['decision']}",
                 flush=True,
             )
@@ -589,7 +604,7 @@ def main() -> None:
         for row in n_results.values()
     )
     checks = {
-        "registered_final_site_count": len(metadata_rows),
+        "registered_site_count": len(metadata_rows),
         "evaluable_site_count": len(valid),
         "minimum_evaluable_site_gate_passed": enough_sites,
         "semantic_clean_ci_lower_gate_passed_all_n": clean_all_n,
@@ -603,10 +618,10 @@ def main() -> None:
         ),
         "all_wrong_codebook_decode_counts_zero": wrong_zero,
         "all_bit_accounting_identities_valid": True,
-        "no_final_site_replacement": True,
-        "confirmation_lockbox_access_count": read_json(
+        "no_site_replacement": True,
+        "execution_role_access_count_after_run": read_json(
             paths["access_state"]
-        )["roles"]["confirmation_lockbox"]["access_count"],
+        )["roles"][execution_role]["access_count"],
     }
     primary_passed = bool(
         enough_sites
@@ -624,16 +639,21 @@ def main() -> None:
     )
     result = {
         "version": "1.0",
-        "status": "stage6r_electrosense_external_final_complete",
+        "status": str(
+            governance.get(
+                "completion_status",
+                "stage6r_electrosense_external_final_complete",
+            )
+        ),
         "verification_status": status,
         "experiment_id": config["experiment_id"],
         "access_receipt": receipt,
         "protocol_sha256": freeze["protocol_sha256"],
         "freeze_result_sha256": sha256_file(paths["freeze_result"]),
         "code_snapshot": current_snapshot,
-        "registered_final_sites": [
-            row["site"] for row in metadata_rows
-        ],
+        "execution_role": execution_role,
+        "registered_sites": [row["site"] for row in metadata_rows],
+        "frozen_sites": frozen_sites,
         "invalid_sites": invalid_sites,
         "n_results": n_results,
         "checks": checks,
