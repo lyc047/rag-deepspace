@@ -1,0 +1,111 @@
+{
+  "schema_version": "stage6r-electrosense-pilot-inspection-v1",
+  "access_receipt": {
+    "role": "pilot",
+    "access_number": 1,
+    "first_access_at_utc": "2026-07-30T01:39:06.428976+00:00",
+    "actor": "Codex Stage-6R external validation",
+    "purpose": "freeze ElectroSense value semantics and adapter only",
+    "registry_sha256": "3f56c862645391583e67316af29d64754e2cc390365d9c8238731859add9ba73"
+  },
+  "site_count": 4,
+  "sites": [
+    {
+      "site": "goeppingen_I",
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/goeppingen_I/Sep_15/SpectrumBands_100_120_fm_Ger_100_120.npy",
+      "frequency_low_mhz": 100,
+      "frequency_high_mhz": 120,
+      "diagnostics": {
+        "shape": [
+          326,
+          2150
+        ],
+        "finite_fraction": 1.0,
+        "minimum": -74.605354,
+        "q01": -64.0143504,
+        "q05": -61.60315415,
+        "median": -55.3217865,
+        "q95": -42.41592870000001,
+        "q99": -26.853071259999997,
+        "maximum": -0.6488944,
+        "row_median_standard_deviation": 0.3233777812210962,
+        "column_median_standard_deviation": 5.909970670821262,
+        "median_adjacent_row_absolute_difference": 2.2591125000000005,
+        "median_adjacent_column_absolute_difference": 1.8260904999999994
+      }
+    },
+    {
+      "site": "skyhubfr",
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/skyhubfr/Jun_1/SpectrumBands_102_110_fm_fr_102_110.npy",
+      "frequency_low_mhz": 102,
+      "frequency_high_mhz": 110,
+      "diagnostics": {
+        "shape": [
+          434,
+          860
+        ],
+        "finite_fraction": 1.0,
+        "minimum": -71.18671,
+        "q01": -62.96048743,
+        "q05": -60.670934849999995,
+        "median": -53.778271000000004,
+        "q95": -36.50829900000001,
+        "q99": -24.74458629000002,
+        "maximum": -16.20088,
+        "row_median_standard_deviation": 0.3649233409124216,
+        "column_median_standard_deviation": 6.818091332208138,
+        "median_adjacent_row_absolute_difference": 2.1160430000000012,
+        "median_adjacent_column_absolute_difference": 3.257640000000002
+      }
+    },
+    {
+      "site": "BGSOFIAMLADOST01",
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/BGSOFIAMLADOST01/Aug_1/SpectrumBands_85_91_fm_bu_85_91.npy",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 91,
+      "diagnostics": {
+        "shape": [
+          450,
+          645
+        ],
+        "finite_fraction": 1.0,
+        "minimum": -76.3974,
+        "q01": -68.0718626,
+        "q05": -65.130988,
+        "median": -39.923418,
+        "q95": -21.900762050000015,
+        "q99": -13.72544207,
+        "maximum": -4.0550447,
+        "row_median_standard_deviation": 0.9549741053421913,
+        "column_median_standard_deviation": 12.024008333573326,
+        "median_adjacent_row_absolute_difference": 3.5596610000000055,
+        "median_adjacent_column_absolute_difference": 1.888355500000003
+      }
+    },
+    {
+      "site": "Bandon_Oregon_GAP1",
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Bandon_Oregon_GAP1/Aug_1/SpectrumBands_86_110_fm_usa_86_110.npy",
+      "frequency_low_mhz": 86,
+      "frequency_high_mhz": 110,
+      "diagnostics": {
+        "shape": [
+          448,
+          2581
+        ],
+        "finite_fraction": 1.0,
+        "minimum": -78.20673,
+        "q01": -67.55946780000001,
+        "q05": -64.6769165,
+        "median": -56.5065625,
+        "q95": -33.0382614,
+        "q99": -14.493221850000028,
+        "maximum": -0.7094935,
+        "row_median_standard_deviation": 0.5158924858387837,
+        "column_median_standard_deviation": 9.222773676286263,
+        "median_adjacent_row_absolute_difference": 3.272659999999995,
+        "median_adjacent_column_absolute_difference": 2.0335239999999963
+      }
+    }
+  ],
+  "scope_boundary": "Only Pilot signal values were read. Stage-6 Final, confirmation lockbox, reserve, and structural-reserve values remain unread."
+}

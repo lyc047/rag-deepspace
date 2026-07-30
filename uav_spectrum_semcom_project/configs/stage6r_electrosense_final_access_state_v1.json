@@ -1,0 +1,38 @@
+{
+  "schema_version": "stage6r-electrosense-access-state-v1",
+  "registry_sha256": "3f56c862645391583e67316af29d64754e2cc390365d9c8238731859add9ba73",
+  "roles": {
+    "pilot": {
+      "access_count": 1,
+      "signal_values_accessed": true,
+      "first_access_at_utc": "2026-07-30T01:39:06.428976+00:00",
+      "purpose": "adapter validation only",
+      "actor": "Codex Stage-6R external validation",
+      "declared_purpose": "freeze ElectroSense value semantics and adapter only",
+      "member_count": 4
+    },
+    "stage6_final": {
+      "access_count": 0,
+      "signal_values_accessed": false,
+      "first_access_at_utc": null,
+      "purpose": "single Stage-6R external Final"
+    },
+    "confirmation_lockbox": {
+      "access_count": 0,
+      "signal_values_accessed": false,
+      "first_access_at_utc": null,
+      "purpose": "future independent confirmation"
+    },
+    "reserve": {
+      "access_count": 0,
+      "signal_values_accessed": false,
+      "first_access_at_utc": null,
+      "purpose": "structural reserve only"
+    }
+  },
+  "prohibitions": [
+    "Do not reset access_count.",
+    "Do not use Final, lockbox, or reserve signal values for tuning.",
+    "Do not replace an accessed invalid Final site based on outcome."
+  ]
+}

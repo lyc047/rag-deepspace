@@ -1,0 +1,4120 @@
+{
+  "schema_version": "stage6r-electrosense-registry-v1",
+  "created_at_utc": "2026-07-30T01:37:46.556479+00:00",
+  "metadata_only_registration": true,
+  "signal_values_accessed": false,
+  "archive": {
+    "path": "F:\\spectrum_bands.tar.gz",
+    "size_bytes": 1731443582,
+    "sha256": "a42088a427c716f97845262041aaf14b549895607db761b11b536217225ae6d2"
+  },
+  "dataset": {
+    "name": "CrowdSpectrumizer spectrum_bands",
+    "source": "Zenodo record 7521246",
+    "technology": "fm",
+    "selection_rule": "lexicographically first valid FM member per site; shape rows>=200 and columns>=64",
+    "npy_member_count": 232,
+    "observed_site_count": 40,
+    "eligible_site_count": 37,
+    "noneligible_sites": [
+      "Somdalsbraatan",
+      "leganes_rack_3",
+      "oha_sense1"
+    ]
+  },
+  "split": {
+    "method": "ascending SHA-256 digest of '<salt>|<site>'",
+    "salt": "stage6r-electrosense-site-split-v1",
+    "roles": {
+      "pilot": [
+        "goeppingen_I",
+        "skyhubfr",
+        "BGSOFIAMLADOST01",
+        "Bandon_Oregon_GAP1"
+      ],
+      "stage6_final": [
+        "EDLV",
+        "vlenders_burgdorf",
+        "Andrew_GVA",
+        "donostia-ategorrieta",
+        "alcorcon1",
+        "Valbella",
+        "scalessio",
+        "HuldOne",
+        "BZ_Italy",
+        "SP8AKM",
+        "miguel_murcia",
+        "Rapallo_Electrosense",
+        "Zagreb",
+        "Nudelsalat_RPi",
+        "bcn-L",
+        "Espi1",
+        "Sashatka",
+        "NFM-Electrosense-01",
+        "imdea_adsb",
+        "dipolkurz",
+        "CYD_EPFL_S",
+        "Giansense",
+        "Britof",
+        "Defcon1"
+      ],
+      "confirmation_lockbox": [
+        "Oreland",
+        "PiSDR1",
+        "Skap_French_Riviera",
+        "Geneva",
+        "URJC1",
+        "Princeton1"
+      ],
+      "reserve": [
+        "IADAM",
+        "alemino_ZRH",
+        "Sensorix"
+      ]
+    },
+    "structural_reserve_sites": [
+      "Somdalsbraatan",
+      "leganes_rack_3",
+      "oha_sense1"
+    ]
+  },
+  "selected_site_members": {
+    "Andrew_GVA": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Andrew_GVA/Aug_1/SpectrumBands_80_110_fm_Swis_80_110.npy",
+      "site": "Andrew_GVA",
+      "date_group": "Aug_1",
+      "technology": "fm",
+      "frequency_low_mhz": 80,
+      "frequency_high_mhz": 110,
+      "shape": [
+        449,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11587920
+    },
+    "BGSOFIAMLADOST01": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/BGSOFIAMLADOST01/Aug_1/SpectrumBands_85_91_fm_bu_85_91.npy",
+      "site": "BGSOFIAMLADOST01",
+      "date_group": "Aug_1",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 91,
+      "shape": [
+        450,
+        645
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2322128
+    },
+    "BZ_Italy": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/BZ_Italy/Sep_1/SpectrumBands_87_102_fm_Ita_87_102.npy",
+      "site": "BZ_Italy",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 87,
+      "frequency_high_mhz": 102,
+      "shape": [
+        457,
+        1614
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 5900912
+    },
+    "Bandon_Oregon_GAP1": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Bandon_Oregon_GAP1/Aug_1/SpectrumBands_86_110_fm_usa_86_110.npy",
+      "site": "Bandon_Oregon_GAP1",
+      "date_group": "Aug_1",
+      "technology": "fm",
+      "frequency_low_mhz": 86,
+      "frequency_high_mhz": 110,
+      "shape": [
+        448,
+        2581
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 9250432
+    },
+    "Britof": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Britof/Sep_08/SpectrumBands_93_128_fm_slv_93_128.npy",
+      "site": "Britof",
+      "date_group": "Sep_08",
+      "technology": "fm",
+      "frequency_low_mhz": 93,
+      "frequency_high_mhz": 128,
+      "shape": [
+        449,
+        3765
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 13524008
+    },
+    "CYD_EPFL_S": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/CYD_EPFL_S/Sep_15/SpectrumBands_100_120_fm_Switz_100_120.npy",
+      "site": "CYD_EPFL_S",
+      "date_group": "Sep_15",
+      "technology": "fm",
+      "frequency_low_mhz": 100,
+      "frequency_high_mhz": 120,
+      "shape": [
+        454,
+        2150
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 7808928
+    },
+    "Defcon1": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Defcon1/Aug_1/SpectrumBands_87_92_fm_ne_87_92.npy",
+      "site": "Defcon1",
+      "date_group": "Aug_1",
+      "technology": "fm",
+      "frequency_low_mhz": 87,
+      "frequency_high_mhz": 92,
+      "shape": [
+        426,
+        538
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1833632
+    },
+    "EDLV": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/EDLV/Aug_1/SpectrumBands_100_106_fm_ge_100_106.npy",
+      "site": "EDLV",
+      "date_group": "Aug_1",
+      "technology": "fm",
+      "frequency_low_mhz": 100,
+      "frequency_high_mhz": 106,
+      "shape": [
+        426,
+        645
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2198288
+    },
+    "Espi1": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Espi1/Dec_13/SpectrumBands_87_102_fm_ger_87_102.npy",
+      "site": "Espi1",
+      "date_group": "Dec_13",
+      "technology": "fm",
+      "frequency_low_mhz": 87,
+      "frequency_high_mhz": 102,
+      "shape": [
+        377,
+        1614
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 4867952
+    },
+    "Geneva": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Geneva/Sep_1/SpectrumBands_94_120_fm_Swis_94_120.npy",
+      "site": "Geneva",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 94,
+      "frequency_high_mhz": 120,
+      "shape": [
+        457,
+        2796
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 10222304
+    },
+    "Giansense": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Giansense/Sep_08/SpectrumBands_98_107_fm_ita_98_107.npy",
+      "site": "Giansense",
+      "date_group": "Sep_08",
+      "technology": "fm",
+      "frequency_low_mhz": 98,
+      "frequency_high_mhz": 107,
+      "shape": [
+        442,
+        967
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3419440
+    },
+    "HuldOne": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/HuldOne/Aug_30/SpectrumBands_99_107_fm_cz_99_107.npy",
+      "site": "HuldOne",
+      "date_group": "Aug_30",
+      "technology": "fm",
+      "frequency_low_mhz": 99,
+      "frequency_high_mhz": 107,
+      "shape": [
+        450,
+        861
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3099728
+    },
+    "IADAM": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/IADAM/Jul_13/SpectrumBands_85_110_fm_czk_85_110.npy",
+      "site": "IADAM",
+      "date_group": "Jul_13",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 110,
+      "shape": [
+        337,
+        2689
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 7249672
+    },
+    "NFM-Electrosense-01": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/NFM-Electrosense-01/Sep_1/SpectrumBands_70_90_fm_Jap_207_228.npy",
+      "site": "NFM-Electrosense-01",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 70,
+      "frequency_high_mhz": 90,
+      "shape": [
+        445,
+        2151
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 7657688
+    },
+    "Nudelsalat_RPi": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Nudelsalat_RPi/Aug_1/SpectrumBands_85_120_fm_Ger_85_120.npy",
+      "site": "Nudelsalat_RPi",
+      "date_group": "Aug_1",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 120,
+      "shape": [
+        461,
+        3764
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 13881760
+    },
+    "Oreland": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Oreland/Aug_1/SpectrumBands_86_110_fm_usa_86_110.npy",
+      "site": "Oreland",
+      "date_group": "Aug_1",
+      "technology": "fm",
+      "frequency_low_mhz": 86,
+      "frequency_high_mhz": 110,
+      "shape": [
+        457,
+        2581
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 9436264
+    },
+    "PiSDR1": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/PiSDR1/Sep_1/SpectrumBands_100_110_fm_po_100_110.npy",
+      "site": "PiSDR1",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 100,
+      "frequency_high_mhz": 110,
+      "shape": [
+        462,
+        1075
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3973328
+    },
+    "Princeton1": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Princeton1/Feb_23/SpectrumBands_86_110_fm_usa_86_110.npy",
+      "site": "Princeton1",
+      "date_group": "Feb_23",
+      "technology": "fm",
+      "frequency_low_mhz": 86,
+      "frequency_high_mhz": 110,
+      "shape": [
+        443,
+        2581
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 9147192
+    },
+    "Rapallo_Electrosense": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Rapallo_Electrosense/Sep_1/SpectrumBands_80_120_fm_Ita_80_120.npy",
+      "site": "Rapallo_Electrosense",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 80,
+      "frequency_high_mhz": 120,
+      "shape": [
+        458,
+        4301
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 15758992
+    },
+    "SP8AKM": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/SP8AKM/Feb_22/SpectrumBands_80_120_fm_Pol_80_120.npy",
+      "site": "SP8AKM",
+      "date_group": "Feb_22",
+      "technology": "fm",
+      "frequency_low_mhz": 80,
+      "frequency_high_mhz": 120,
+      "shape": [
+        356,
+        4301
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 12249376
+    },
+    "Sashatka": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Sashatka/Aug_24/SpectrumBands_90_120_fm_rus_90_120.npy",
+      "site": "Sashatka",
+      "date_group": "Aug_24",
+      "technology": "fm",
+      "frequency_low_mhz": 90,
+      "frequency_high_mhz": 120,
+      "shape": [
+        450,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11613728
+    },
+    "Sensorix": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Sensorix/Sep_1/SpectrumBands_85_120_fm_Swis_85_120.npy",
+      "site": "Sensorix",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 120,
+      "shape": [
+        369,
+        3764
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11111456
+    },
+    "Skap_French_Riviera": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Skap_French_Riviera/Sep_1/SpectrumBands_85_120_fm_Esp_85_120.npy",
+      "site": "Skap_French_Riviera",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 120,
+      "shape": [
+        451,
+        3763
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 13577032
+    },
+    "URJC1": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/URJC1/Sep_1/SpectrumBands_85_120_fm_Esp_85_120.npy",
+      "site": "URJC1",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 120,
+      "shape": [
+        406,
+        3764
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 12225600
+    },
+    "Valbella": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Valbella/Sep_15/SpectrumBands_100_120_fm_Switz_100_120.npy",
+      "site": "Valbella",
+      "date_group": "Sep_15",
+      "technology": "fm",
+      "frequency_low_mhz": 100,
+      "frequency_high_mhz": 120,
+      "shape": [
+        407,
+        2150
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 7000528
+    },
+    "Zagreb": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Zagreb/Sep_15/SpectrumBands_91_111_fm_Cro_91_111.npy",
+      "site": "Zagreb",
+      "date_group": "Sep_15",
+      "technology": "fm",
+      "frequency_low_mhz": 91,
+      "frequency_high_mhz": 111,
+      "shape": [
+        456,
+        2151
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 7846976
+    },
+    "alcorcon1": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_1/SpectrumBands_85_120_fm_alcorcon_85_120.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_1",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 120,
+      "shape": [
+        203,
+        3747
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 6085256
+    },
+    "alemino_ZRH": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alemino_ZRH/Sep_1/SpectrumBands_87_102_fm_Swis_87_102.npy",
+      "site": "alemino_ZRH",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 87,
+      "frequency_high_mhz": 102,
+      "shape": [
+        463,
+        1614
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 5978384
+    },
+    "bcn-L": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/bcn-L/Sep_1/SpectrumBands_90_120_fm_Esp_90_120.npy",
+      "site": "bcn-L",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 90,
+      "frequency_high_mhz": 120,
+      "shape": [
+        450,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11613728
+    },
+    "dipolkurz": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/dipolkurz/Sep_1/SpectrumBands_85_120_fm_Swis_85_120.npy",
+      "site": "dipolkurz",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 120,
+      "shape": [
+        442,
+        3764
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 13309632
+    },
+    "donostia-ategorrieta": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/donostia-ategorrieta/Sep_1/SpectrumBands_80_120_fm_Esp_80_120.npy",
+      "site": "donostia-ategorrieta",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 80,
+      "frequency_high_mhz": 120,
+      "shape": [
+        453,
+        4301
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 15586952
+    },
+    "goeppingen_I": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/goeppingen_I/Sep_15/SpectrumBands_100_120_fm_Ger_100_120.npy",
+      "site": "goeppingen_I",
+      "date_group": "Sep_15",
+      "technology": "fm",
+      "frequency_low_mhz": 100,
+      "frequency_high_mhz": 120,
+      "shape": [
+        326,
+        2150
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 5607328
+    },
+    "imdea_adsb": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/imdea_adsb/Sep_1/SpectrumBands_80_120_fm_Esp_80_120.npy",
+      "site": "imdea_adsb",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 80,
+      "frequency_high_mhz": 120,
+      "shape": [
+        451,
+        4302
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 15521744
+    },
+    "miguel_murcia": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/miguel_murcia/Dec_1/SpectrumBands_85_105_fm_Esp_85_105.npy",
+      "site": "miguel_murcia",
+      "date_group": "Dec_1",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 105,
+      "shape": [
+        455,
+        2150
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 7826128
+    },
+    "scalessio": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/scalessio/May_2/SpectrumBands_80_120_fm_scalessio_80_120.npy",
+      "site": "scalessio",
+      "date_group": "May_2",
+      "technology": "fm",
+      "frequency_low_mhz": 80,
+      "frequency_high_mhz": 120,
+      "shape": [
+        454,
+        4301
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 15621360
+    },
+    "skyhubfr": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/skyhubfr/Jun_1/SpectrumBands_102_110_fm_fr_102_110.npy",
+      "site": "skyhubfr",
+      "date_group": "Jun_1",
+      "technology": "fm",
+      "frequency_low_mhz": 102,
+      "frequency_high_mhz": 110,
+      "shape": [
+        434,
+        860
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2986048
+    },
+    "vlenders_burgdorf": {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/vlenders_burgdorf/Aug_1/SpectrumBands_102_107_fm_sw_102_107.npy",
+      "site": "vlenders_burgdorf",
+      "date_group": "Aug_1",
+      "technology": "fm",
+      "frequency_low_mhz": 102,
+      "frequency_high_mhz": 107,
+      "shape": [
+        423,
+        537
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1817336
+    }
+  },
+  "inventory": [
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Andrew_GVA/Aug_1/SpectrumBands_207_228_dab_Swis_207_228.npy",
+      "site": "Andrew_GVA",
+      "date_group": "Aug_1",
+      "technology": "dab",
+      "frequency_low_mhz": 207,
+      "frequency_high_mhz": 228,
+      "shape": [
+        449,
+        2259
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 8114456
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Andrew_GVA/Aug_1/SpectrumBands_389_395_tetra_Swis_389_395.npy",
+      "site": "Andrew_GVA",
+      "date_group": "Aug_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 389,
+      "frequency_high_mhz": 395,
+      "shape": [
+        449,
+        645
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2316968
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Andrew_GVA/Aug_1/SpectrumBands_542_582_dvbt_Swis_542_582.npy",
+      "site": "Andrew_GVA",
+      "date_group": "Aug_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 542,
+      "frequency_high_mhz": 582,
+      "shape": [
+        449,
+        4302
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 15452912
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Andrew_GVA/Aug_1/SpectrumBands_80_110_fm_Swis_80_110.npy",
+      "site": "Andrew_GVA",
+      "date_group": "Aug_1",
+      "technology": "fm",
+      "frequency_low_mhz": 80,
+      "frequency_high_mhz": 110,
+      "shape": [
+        449,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11587920
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/BGSOFIAMLADOST01/Aug_1/SpectrumBands_393_398_tetra_bu_393_398.npy",
+      "site": "BGSOFIAMLADOST01",
+      "date_group": "Aug_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 393,
+      "frequency_high_mhz": 398,
+      "shape": [
+        450,
+        538
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1936928
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/BGSOFIAMLADOST01/Aug_1/SpectrumBands_515_561_dvbt_bu_515_561.npy",
+      "site": "BGSOFIAMLADOST01",
+      "date_group": "Aug_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 515,
+      "frequency_high_mhz": 561,
+      "shape": [
+        450,
+        4947
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 17809328
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/BGSOFIAMLADOST01/Aug_1/SpectrumBands_85_91_fm_bu_85_91.npy",
+      "site": "BGSOFIAMLADOST01",
+      "date_group": "Aug_1",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 91,
+      "shape": [
+        450,
+        645
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2322128
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/BGSOFIAMLADOST01/Aug_1/SpectrumBands_914_925_gsm_bu_914_925.npy",
+      "site": "BGSOFIAMLADOST01",
+      "date_group": "Aug_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 914,
+      "frequency_high_mhz": 925,
+      "shape": [
+        450,
+        1182
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 4255328
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/BZ_Italy/Sep_1/SpectrumBands_203_2320_dab_Ita_203_232.npy",
+      "site": "BZ_Italy",
+      "date_group": "Sep_1",
+      "technology": "dab",
+      "frequency_low_mhz": 203,
+      "frequency_high_mhz": 2320,
+      "shape": [
+        457,
+        168013
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 614255656
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/BZ_Italy/Sep_1/SpectrumBands_390_395_tetra_Ita_390_395.npy",
+      "site": "BZ_Italy",
+      "date_group": "Sep_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 390,
+      "frequency_high_mhz": 395,
+      "shape": [
+        457,
+        537
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1963400
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/BZ_Italy/Sep_1/SpectrumBands_540_649_dvbt_Ita_540_649.npy",
+      "site": "BZ_Italy",
+      "date_group": "Sep_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 540,
+      "frequency_high_mhz": 649,
+      "shape": [
+        457,
+        11722
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 42855760
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/BZ_Italy/Sep_1/SpectrumBands_788_821_lte_Ita_791_821.npy",
+      "site": "BZ_Italy",
+      "date_group": "Sep_1",
+      "technology": "lte",
+      "frequency_low_mhz": 788,
+      "frequency_high_mhz": 821,
+      "shape": [
+        457,
+        3548
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 12971616
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/BZ_Italy/Sep_1/SpectrumBands_87_102_fm_Ita_87_102.npy",
+      "site": "BZ_Italy",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 87,
+      "frequency_high_mhz": 102,
+      "shape": [
+        457,
+        1614
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 5900912
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/BZ_Italy/Sep_1/SpectrumBands_936_944_gsm_Ita_936_944.npy",
+      "site": "BZ_Italy",
+      "date_group": "Sep_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 936,
+      "frequency_high_mhz": 944,
+      "shape": [
+        457,
+        861
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3147944
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Bandon_Oregon_GAP1/Aug_1/SpectrumBands_734_768_lte_usa_734_768.npy",
+      "site": "Bandon_Oregon_GAP1",
+      "date_group": "Aug_1",
+      "technology": "lte",
+      "frequency_low_mhz": 734,
+      "frequency_high_mhz": 768,
+      "shape": [
+        448,
+        3656
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 13103232
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Bandon_Oregon_GAP1/Aug_1/SpectrumBands_86_110_fm_usa_86_110.npy",
+      "site": "Bandon_Oregon_GAP1",
+      "date_group": "Aug_1",
+      "technology": "fm",
+      "frequency_low_mhz": 86,
+      "frequency_high_mhz": 110,
+      "shape": [
+        448,
+        2581
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 9250432
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Britof/Sep_08/SpectrumBands_180_195_dab_slv_180_196.npy",
+      "site": "Britof",
+      "date_group": "Sep_08",
+      "technology": "dab",
+      "frequency_low_mhz": 180,
+      "frequency_high_mhz": 195,
+      "shape": [
+        449,
+        1612
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 5790432
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Britof/Sep_08/SpectrumBands_189_395_tetra_slv_189_395.npy",
+      "site": "Britof",
+      "date_group": "Sep_08",
+      "technology": "tetra",
+      "frequency_low_mhz": 189,
+      "frequency_high_mhz": 395,
+      "shape": [
+        449,
+        22154
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 79577296
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Britof/Sep_08/SpectrumBands_557_615_dvbt_slv_557_615.npy",
+      "site": "Britof",
+      "date_group": "Sep_08",
+      "technology": "dvbt",
+      "frequency_low_mhz": 557,
+      "frequency_high_mhz": 615,
+      "shape": [
+        449,
+        6237
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 22403432
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Britof/Sep_08/SpectrumBands_791_821_lte_slv_791_821.npy",
+      "site": "Britof",
+      "date_group": "Sep_08",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        449,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11587920
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Britof/Sep_08/SpectrumBands_9350_941_gsm_slv_935_491.npy",
+      "site": "Britof",
+      "date_group": "Sep_08",
+      "technology": "gsm",
+      "frequency_low_mhz": 9350,
+      "frequency_high_mhz": 941,
+      "shape": [
+        449,
+        0
+      ],
+      "dtype": "<f8",
+      "fortran_order": false,
+      "member_size_bytes": 128
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Britof/Sep_08/SpectrumBands_93_128_fm_slv_93_128.npy",
+      "site": "Britof",
+      "date_group": "Sep_08",
+      "technology": "fm",
+      "frequency_low_mhz": 93,
+      "frequency_high_mhz": 128,
+      "shape": [
+        449,
+        3765
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 13524008
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/CYD_EPFL_S/Sep_15/SpectrumBands_100_120_fm_Switz_100_120.npy",
+      "site": "CYD_EPFL_S",
+      "date_group": "Sep_15",
+      "technology": "fm",
+      "frequency_low_mhz": 100,
+      "frequency_high_mhz": 120,
+      "shape": [
+        454,
+        2150
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 7808928
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/CYD_EPFL_S/Sep_15/SpectrumBands_209_227_dab_Switz_209_227.npy",
+      "site": "CYD_EPFL_S",
+      "date_group": "Sep_15",
+      "technology": "dab",
+      "frequency_low_mhz": 209,
+      "frequency_high_mhz": 227,
+      "shape": [
+        454,
+        1936
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 7031680
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/CYD_EPFL_S/Sep_15/SpectrumBands_304_315_tetra_Switz_304_315.npy",
+      "site": "CYD_EPFL_S",
+      "date_group": "Sep_15",
+      "technology": "tetra",
+      "frequency_low_mhz": 304,
+      "frequency_high_mhz": 315,
+      "shape": [
+        454,
+        1182
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 4293152
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/CYD_EPFL_S/Sep_15/SpectrumBands_791_821_lte_Switz_791_821.npy",
+      "site": "CYD_EPFL_S",
+      "date_group": "Sep_15",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        454,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11716960
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Defcon1/Aug_1/SpectrumBands_219_229_dab_ne_219_229.npy",
+      "site": "Defcon1",
+      "date_group": "Aug_1",
+      "technology": "dab",
+      "frequency_low_mhz": 219,
+      "frequency_high_mhz": 229,
+      "shape": [
+        426,
+        1076
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3667136
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Defcon1/Aug_1/SpectrumBands_390_394_tetra_ne_390_394.npy",
+      "site": "Defcon1",
+      "date_group": "Aug_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 390,
+      "frequency_high_mhz": 394,
+      "shape": [
+        426,
+        430
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1465568
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Defcon1/Aug_1/SpectrumBands_636_695_dvbt_ne_636_695.npy",
+      "site": "Defcon1",
+      "date_group": "Aug_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 636,
+      "frequency_high_mhz": 695,
+      "shape": [
+        426,
+        6345
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 21623888
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Defcon1/Aug_1/SpectrumBands_791_821_lte_ne_791_821.npy",
+      "site": "Defcon1",
+      "date_group": "Aug_1",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        426,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 10994336
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Defcon1/Aug_1/SpectrumBands_87_92_fm_ne_87_92.npy",
+      "site": "Defcon1",
+      "date_group": "Aug_1",
+      "technology": "fm",
+      "frequency_low_mhz": 87,
+      "frequency_high_mhz": 92,
+      "shape": [
+        426,
+        538
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1833632
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Defcon1/Aug_1/SpectrumBands_920_935_gsm_ne_920_935.npy",
+      "site": "Defcon1",
+      "date_group": "Aug_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 920,
+      "frequency_high_mhz": 935,
+      "shape": [
+        426,
+        1612
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 5493824
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/EDLV/Aug_1/SpectrumBands_100_106_fm_ge_100_106.npy",
+      "site": "EDLV",
+      "date_group": "Aug_1",
+      "technology": "fm",
+      "frequency_low_mhz": 100,
+      "frequency_high_mhz": 106,
+      "shape": [
+        426,
+        645
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2198288
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/EDLV/Aug_1/SpectrumBands_174_181_dab_ge_174_181.npy",
+      "site": "EDLV",
+      "date_group": "Aug_1",
+      "technology": "dab",
+      "frequency_low_mhz": 174,
+      "frequency_high_mhz": 181,
+      "shape": [
+        426,
+        752
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2562944
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/EDLV/Aug_1/SpectrumBands_390_395_tetra_ge_390_395.npy",
+      "site": "EDLV",
+      "date_group": "Aug_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 390,
+      "frequency_high_mhz": 395,
+      "shape": [
+        426,
+        537
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1830224
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/EDLV/Aug_1/SpectrumBands_557_590_dvbt_ge_557_590.npy",
+      "site": "EDLV",
+      "date_group": "Aug_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 557,
+      "frequency_high_mhz": 590,
+      "shape": [
+        426,
+        3550
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 12098528
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/EDLV/Aug_1/SpectrumBands_791_821_lte_ge_791_821.npy",
+      "site": "EDLV",
+      "date_group": "Aug_1",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        426,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 10994336
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/EDLV/Aug_1/SpectrumBands_943_952_gsm_ge_943_952.npy",
+      "site": "EDLV",
+      "date_group": "Aug_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 943,
+      "frequency_high_mhz": 952,
+      "shape": [
+        426,
+        969
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3302480
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Espi1/Dec_13/SpectrumBands_203_220_dab_ger_180_196.npy",
+      "site": "Espi1",
+      "date_group": "Dec_13",
+      "technology": "dab",
+      "frequency_low_mhz": 203,
+      "frequency_high_mhz": 220,
+      "shape": [
+        377,
+        1829
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 5516392
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Espi1/Dec_13/SpectrumBands_390_395_tetra_ger_390_395.npy",
+      "site": "Espi1",
+      "date_group": "Dec_13",
+      "technology": "tetra",
+      "frequency_low_mhz": 390,
+      "frequency_high_mhz": 395,
+      "shape": [
+        377,
+        537
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1619720
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Espi1/Dec_13/SpectrumBands_468_530_dvbt_ger_468_530.npy",
+      "site": "Espi1",
+      "date_group": "Dec_13",
+      "technology": "dvbt",
+      "frequency_low_mhz": 468,
+      "frequency_high_mhz": 530,
+      "shape": [
+        377,
+        6668
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 20110816
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Espi1/Dec_13/SpectrumBands_791_821_lte_ger_791_821.npy",
+      "site": "Espi1",
+      "date_group": "Dec_13",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        377,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 9729744
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Espi1/Dec_13/SpectrumBands_87_102_fm_ger_87_102.npy",
+      "site": "Espi1",
+      "date_group": "Dec_13",
+      "technology": "fm",
+      "frequency_low_mhz": 87,
+      "frequency_high_mhz": 102,
+      "shape": [
+        377,
+        1614
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 4867952
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Espi1/Dec_13/SpectrumBands_920_937_gsm_ger_920_937.npy",
+      "site": "Espi1",
+      "date_group": "Dec_13",
+      "technology": "gsm",
+      "frequency_low_mhz": 920,
+      "frequency_high_mhz": 937,
+      "shape": [
+        377,
+        1827
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 5510360
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Geneva/Sep_1/SpectrumBands_210_226_dab_Swis_210_226.npy",
+      "site": "Geneva",
+      "date_group": "Sep_1",
+      "technology": "dab",
+      "frequency_low_mhz": 210,
+      "frequency_high_mhz": 226,
+      "shape": [
+        457,
+        1721
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 6292104
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Geneva/Sep_1/SpectrumBands_390_394_tetra_Swis_390_394.npy",
+      "site": "Geneva",
+      "date_group": "Sep_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 390,
+      "frequency_high_mhz": 394,
+      "shape": [
+        457,
+        430
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1572208
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Geneva/Sep_1/SpectrumBands_464_505_dvbt_Swis_464_505.npy",
+      "site": "Geneva",
+      "date_group": "Sep_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 464,
+      "frequency_high_mhz": 505,
+      "shape": [
+        457,
+        4409
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 16119432
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Geneva/Sep_1/SpectrumBands_791_821_lte_Swis_791_821.npy",
+      "site": "Geneva",
+      "date_group": "Sep_1",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        457,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11794384
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Geneva/Sep_1/SpectrumBands_94_120_fm_Swis_94_120.npy",
+      "site": "Geneva",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 94,
+      "frequency_high_mhz": 120,
+      "shape": [
+        457,
+        2796
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 10222304
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Giansense/Sep_08/SpectrumBands_213_231_dab_ita_213_231.npy",
+      "site": "Giansense",
+      "date_group": "Sep_08",
+      "technology": "dab",
+      "frequency_low_mhz": 213,
+      "frequency_high_mhz": 231,
+      "shape": [
+        442,
+        1936
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 6845824
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Giansense/Sep_08/SpectrumBands_620_686_dvbt_ita_620_686.npy",
+      "site": "Giansense",
+      "date_group": "Sep_08",
+      "technology": "dvbt",
+      "frequency_low_mhz": 620,
+      "frequency_high_mhz": 686,
+      "shape": [
+        442,
+        7098
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 25098656
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Giansense/Sep_08/SpectrumBands_791_821_lte_ita_791_821.npy",
+      "site": "Giansense",
+      "date_group": "Sep_08",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        442,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11407264
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Giansense/Sep_08/SpectrumBands_930_960_gsm_ita_620_686.npy",
+      "site": "Giansense",
+      "date_group": "Sep_08",
+      "technology": "gsm",
+      "frequency_low_mhz": 930,
+      "frequency_high_mhz": 960,
+      "shape": [
+        442,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11407264
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Giansense/Sep_08/SpectrumBands_98_107_fm_ita_98_107.npy",
+      "site": "Giansense",
+      "date_group": "Sep_08",
+      "technology": "fm",
+      "frequency_low_mhz": 98,
+      "frequency_high_mhz": 107,
+      "shape": [
+        442,
+        967
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3419440
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/HuldOne/Aug_30/SpectrumBands_173_218_dab_cz_173_218.npy",
+      "site": "HuldOne",
+      "date_group": "Aug_30",
+      "technology": "dab",
+      "frequency_low_mhz": 173,
+      "frequency_high_mhz": 218,
+      "shape": [
+        450,
+        4841
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 17427728
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/HuldOne/Aug_30/SpectrumBands_424_429_tetra_cz_424_429.npy",
+      "site": "HuldOne",
+      "date_group": "Aug_30",
+      "technology": "tetra",
+      "frequency_low_mhz": 424,
+      "frequency_high_mhz": 429,
+      "shape": [
+        450,
+        537
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1933328
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/HuldOne/Aug_30/SpectrumBands_484_419_dvbt_cz_484_519.npy",
+      "site": "HuldOne",
+      "date_group": "Aug_30",
+      "technology": "dvbt",
+      "frequency_low_mhz": 484,
+      "frequency_high_mhz": 419,
+      "shape": [
+        450,
+        0
+      ],
+      "dtype": "<f8",
+      "fortran_order": false,
+      "member_size_bytes": 128
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/HuldOne/Aug_30/SpectrumBands_790_821_lte_cz_790_821.npy",
+      "site": "HuldOne",
+      "date_group": "Aug_30",
+      "technology": "lte",
+      "frequency_low_mhz": 790,
+      "frequency_high_mhz": 821,
+      "shape": [
+        450,
+        3333
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11998928
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/HuldOne/Aug_30/SpectrumBands_925_930_gsm_cz_925_930.npy",
+      "site": "HuldOne",
+      "date_group": "Aug_30",
+      "technology": "gsm",
+      "frequency_low_mhz": 925,
+      "frequency_high_mhz": 930,
+      "shape": [
+        450,
+        539
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1940528
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/HuldOne/Aug_30/SpectrumBands_99_107_fm_cz_99_107.npy",
+      "site": "HuldOne",
+      "date_group": "Aug_30",
+      "technology": "fm",
+      "frequency_low_mhz": 99,
+      "frequency_high_mhz": 107,
+      "shape": [
+        450,
+        861
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3099728
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/IADAM/Jul_13/SpectrumBands_390_394_tetra_czk_390_394.npy",
+      "site": "IADAM",
+      "date_group": "Jul_13",
+      "technology": "tetra",
+      "frequency_low_mhz": 390,
+      "frequency_high_mhz": 394,
+      "shape": [
+        337,
+        430
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1159408
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/IADAM/Jul_13/SpectrumBands_637_646_dvbt_czk_637_646.npy",
+      "site": "IADAM",
+      "date_group": "Jul_13",
+      "technology": "dvbt",
+      "frequency_low_mhz": 637,
+      "frequency_high_mhz": 646,
+      "shape": [
+        337,
+        969
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2612552
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/IADAM/Jul_13/SpectrumBands_791_821_lte_czk_791_821.npy",
+      "site": "IADAM",
+      "date_group": "Jul_13",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        337,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 8697424
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/IADAM/Jul_13/SpectrumBands_85_110_fm_czk_85_110.npy",
+      "site": "IADAM",
+      "date_group": "Jul_13",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 110,
+      "shape": [
+        337,
+        2689
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 7249672
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/IADAM/Jul_13/SpectrumBands_921_926_gsm_czk_921_926.npy",
+      "site": "IADAM",
+      "date_group": "Jul_13",
+      "technology": "gsm",
+      "frequency_low_mhz": 921,
+      "frequency_high_mhz": 926,
+      "shape": [
+        337,
+        539
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1453272
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/NFM-Electrosense-01/Sep_1/SpectrumBands_270_275_tetra_Jap_270_275.npy",
+      "site": "NFM-Electrosense-01",
+      "date_group": "Sep_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 270,
+      "frequency_high_mhz": 275,
+      "shape": [
+        445,
+        537
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1911848
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/NFM-Electrosense-01/Sep_1/SpectrumBands_518_561_dvbt_Jap_518_561.npy",
+      "site": "NFM-Electrosense-01",
+      "date_group": "Sep_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 518,
+      "frequency_high_mhz": 561,
+      "shape": [
+        445,
+        4624
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 16461568
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/NFM-Electrosense-01/Sep_1/SpectrumBands_70_90_fm_Jap_207_228.npy",
+      "site": "NFM-Electrosense-01",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 70,
+      "frequency_high_mhz": 90,
+      "shape": [
+        445,
+        2151
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 7657688
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/NFM-Electrosense-01/Sep_1/SpectrumBands_770_80_lte_Jap_770_803.npy",
+      "site": "NFM-Electrosense-01",
+      "date_group": "Sep_1",
+      "technology": "lte",
+      "frequency_low_mhz": 770,
+      "frequency_high_mhz": 80,
+      "shape": [
+        445,
+        0
+      ],
+      "dtype": "<f8",
+      "fortran_order": false,
+      "member_size_bytes": 128
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/NFM-Electrosense-01/Sep_1/SpectrumBands_85_85_gsm_Jap_850_857.npy",
+      "site": "NFM-Electrosense-01",
+      "date_group": "Sep_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 85,
+      "shape": [
+        445,
+        74
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 263568
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Nudelsalat_RPi/Aug_1/SpectrumBands_176_199_dab_Ger_176_199.npy",
+      "site": "Nudelsalat_RPi",
+      "date_group": "Aug_1",
+      "technology": "dab",
+      "frequency_low_mhz": 176,
+      "frequency_high_mhz": 199,
+      "shape": [
+        461,
+        2472
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 9116864
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Nudelsalat_RPi/Aug_1/SpectrumBands_580_656_dvbt_Ger_580_656.npy",
+      "site": "Nudelsalat_RPi",
+      "date_group": "Aug_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 580,
+      "frequency_high_mhz": 656,
+      "shape": [
+        461,
+        8173
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 30142152
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Nudelsalat_RPi/Aug_1/SpectrumBands_791_821_lte_Ger_791_821.npy",
+      "site": "Nudelsalat_RPi",
+      "date_group": "Aug_1",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        461,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11897616
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Nudelsalat_RPi/Aug_1/SpectrumBands_85_120_fm_Ger_85_120.npy",
+      "site": "Nudelsalat_RPi",
+      "date_group": "Aug_1",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 120,
+      "shape": [
+        461,
+        3764
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 13881760
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Nudelsalat_RPi/Aug_1/SpectrumBands_925_960_gsm_Ger_925_960.npy",
+      "site": "Nudelsalat_RPi",
+      "date_group": "Aug_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 925,
+      "frequency_high_mhz": 960,
+      "shape": [
+        461,
+        3765
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 13885448
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Oreland/Aug_1/SpectrumBands_734_768_lte_usa_734_768.npy",
+      "site": "Oreland",
+      "date_group": "Aug_1",
+      "technology": "lte",
+      "frequency_low_mhz": 734,
+      "frequency_high_mhz": 768,
+      "shape": [
+        457,
+        3656
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 13366464
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Oreland/Aug_1/SpectrumBands_86_110_fm_usa_86_110.npy",
+      "site": "Oreland",
+      "date_group": "Aug_1",
+      "technology": "fm",
+      "frequency_low_mhz": 86,
+      "frequency_high_mhz": 110,
+      "shape": [
+        457,
+        2581
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 9436264
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/PiSDR1/Sep_1/SpectrumBands_100_110_fm_po_100_110.npy",
+      "site": "PiSDR1",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 100,
+      "frequency_high_mhz": 110,
+      "shape": [
+        462,
+        1075
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3973328
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/PiSDR1/Sep_1/SpectrumBands_425_427_tetra_po_425_427.npy",
+      "site": "PiSDR1",
+      "date_group": "Sep_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 425,
+      "frequency_high_mhz": 427,
+      "shape": [
+        462,
+        215
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 794768
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/PiSDR1/Sep_1/SpectrumBands_573_630_dvbt_po_573_630.npy",
+      "site": "PiSDR1",
+      "date_group": "Sep_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 573,
+      "frequency_high_mhz": 630,
+      "shape": [
+        462,
+        6131
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 22660304
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/PiSDR1/Sep_1/SpectrumBands_790_821_lte_po_790_821.npy",
+      "site": "PiSDR1",
+      "date_group": "Sep_1",
+      "technology": "lte",
+      "frequency_low_mhz": 790,
+      "frequency_high_mhz": 821,
+      "shape": [
+        462,
+        3333
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 12318896
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/PiSDR1/Sep_1/SpectrumBands_935_943_gsm_po_935_943.npy",
+      "site": "PiSDR1",
+      "date_group": "Sep_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 935,
+      "frequency_high_mhz": 943,
+      "shape": [
+        462,
+        860
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3178688
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Princeton1/Feb_23/SpectrumBands_734_768_lte_usa_734_768.npy",
+      "site": "Princeton1",
+      "date_group": "Feb_23",
+      "technology": "lte",
+      "frequency_low_mhz": 734,
+      "frequency_high_mhz": 768,
+      "shape": [
+        443,
+        3656
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 12956992
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Princeton1/Feb_23/SpectrumBands_86_110_fm_usa_86_110.npy",
+      "site": "Princeton1",
+      "date_group": "Feb_23",
+      "technology": "fm",
+      "frequency_low_mhz": 86,
+      "frequency_high_mhz": 110,
+      "shape": [
+        443,
+        2581
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 9147192
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Rapallo_Electrosense/Sep_1/SpectrumBands_222_230_dab_Ita_222_230.npy",
+      "site": "Rapallo_Electrosense",
+      "date_group": "Sep_1",
+      "technology": "dab",
+      "frequency_low_mhz": 222,
+      "frequency_high_mhz": 230,
+      "shape": [
+        458,
+        860
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3151168
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Rapallo_Electrosense/Sep_1/SpectrumBands_468_571_dvbt_Ita_468_571.npy",
+      "site": "Rapallo_Electrosense",
+      "date_group": "Sep_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 468,
+      "frequency_high_mhz": 571,
+      "shape": [
+        458,
+        11076
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 40582592
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Rapallo_Electrosense/Sep_1/SpectrumBands_791_821_lte_Ita_791_821.npy",
+      "site": "Rapallo_Electrosense",
+      "date_group": "Sep_1",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        458,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11820192
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Rapallo_Electrosense/Sep_1/SpectrumBands_80_120_fm_Ita_80_120.npy",
+      "site": "Rapallo_Electrosense",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 80,
+      "frequency_high_mhz": 120,
+      "shape": [
+        458,
+        4301
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 15758992
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Rapallo_Electrosense/Sep_1/SpectrumBands_934_947_gsm_Ita_934_937.npy",
+      "site": "Rapallo_Electrosense",
+      "date_group": "Sep_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 934,
+      "frequency_high_mhz": 947,
+      "shape": [
+        458,
+        1397
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 5118736
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/SP8AKM/Feb_22/SpectrumBands_667_670_dvbt_Pol_667_670.npy",
+      "site": "SP8AKM",
+      "date_group": "Feb_22",
+      "technology": "dvbt",
+      "frequency_low_mhz": 667,
+      "frequency_high_mhz": 670,
+      "shape": [
+        356,
+        324
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 922880
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/SP8AKM/Feb_22/SpectrumBands_791_821_lte_Pol_791_821.npy",
+      "site": "SP8AKM",
+      "date_group": "Feb_22",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        356,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 9187776
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/SP8AKM/Feb_22/SpectrumBands_80_120_fm_Pol_80_120.npy",
+      "site": "SP8AKM",
+      "date_group": "Feb_22",
+      "technology": "fm",
+      "frequency_low_mhz": 80,
+      "frequency_high_mhz": 120,
+      "shape": [
+        356,
+        4301
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 12249376
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/SP8AKM/Feb_22/SpectrumBands_935_943_gsm_Pol_935_943.npy",
+      "site": "SP8AKM",
+      "date_group": "Feb_22",
+      "technology": "gsm",
+      "frequency_low_mhz": 935,
+      "frequency_high_mhz": 943,
+      "shape": [
+        356,
+        860
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2449408
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Sashatka/Aug_24/SpectrumBands_420_426_tetra_rus_420_426.npy",
+      "site": "Sashatka",
+      "date_group": "Aug_24",
+      "technology": "tetra",
+      "frequency_low_mhz": 420,
+      "frequency_high_mhz": 426,
+      "shape": [
+        450,
+        646
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2325728
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Sashatka/Aug_24/SpectrumBands_775_790_dvbt_rus_775_790.npy",
+      "site": "Sashatka",
+      "date_group": "Aug_24",
+      "technology": "dvbt",
+      "frequency_low_mhz": 775,
+      "frequency_high_mhz": 790,
+      "shape": [
+        450,
+        1614
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 5810528
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Sashatka/Aug_24/SpectrumBands_90_120_fm_rus_90_120.npy",
+      "site": "Sashatka",
+      "date_group": "Aug_24",
+      "technology": "fm",
+      "frequency_low_mhz": 90,
+      "frequency_high_mhz": 120,
+      "shape": [
+        450,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11613728
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Sashatka/Aug_24/SpectrumBands_933_961_gsm_rus_933_961.npy",
+      "site": "Sashatka",
+      "date_group": "Aug_24",
+      "technology": "gsm",
+      "frequency_low_mhz": 933,
+      "frequency_high_mhz": 961,
+      "shape": [
+        450,
+        3011
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 10839728
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Sensorix/Sep_1/SpectrumBands_209_225_dab_Swis_209_225.npy",
+      "site": "Sensorix",
+      "date_group": "Sep_1",
+      "technology": "dab",
+      "frequency_low_mhz": 209,
+      "frequency_high_mhz": 225,
+      "shape": [
+        369,
+        1721
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 5080520
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Sensorix/Sep_1/SpectrumBands_392_396_tetra_Swis_392_396.npy",
+      "site": "Sensorix",
+      "date_group": "Sep_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 392,
+      "frequency_high_mhz": 396,
+      "shape": [
+        369,
+        430
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1269488
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Sensorix/Sep_1/SpectrumBands_791_821_lte_Swis_791_821.npy",
+      "site": "Sensorix",
+      "date_group": "Sep_1",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        369,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 9523280
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Sensorix/Sep_1/SpectrumBands_85_120_fm_Swis_85_120.npy",
+      "site": "Sensorix",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 120,
+      "shape": [
+        369,
+        3764
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11111456
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Skap_French_Riviera/Sep_1/SpectrumBands_194_228_dab_Esp_194_228.npy",
+      "site": "Skap_French_Riviera",
+      "date_group": "Sep_1",
+      "technology": "dab",
+      "frequency_low_mhz": 194,
+      "frequency_high_mhz": 228,
+      "shape": [
+        451,
+        3657
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 13194584
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Skap_French_Riviera/Sep_1/SpectrumBands_389_395_tetra_Esp_389_395.npy",
+      "site": "Skap_French_Riviera",
+      "date_group": "Sep_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 389,
+      "frequency_high_mhz": 395,
+      "shape": [
+        451,
+        645
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2327288
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Skap_French_Riviera/Sep_1/SpectrumBands_473_535_dvbt_Esp_473_535.npy",
+      "site": "Skap_French_Riviera",
+      "date_group": "Sep_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 473,
+      "frequency_high_mhz": 535,
+      "shape": [
+        451,
+        6667
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 24054664
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Skap_French_Riviera/Sep_1/SpectrumBands_791_821_lte_Esp_791_821.npy",
+      "site": "Skap_French_Riviera",
+      "date_group": "Sep_1",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        451,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11639536
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Skap_French_Riviera/Sep_1/SpectrumBands_85_120_fm_Esp_85_120.npy",
+      "site": "Skap_French_Riviera",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 120,
+      "shape": [
+        451,
+        3763
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 13577032
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Skap_French_Riviera/Sep_1/SpectrumBands_933_938_gsm_Esp_933_938.npy",
+      "site": "Skap_French_Riviera",
+      "date_group": "Sep_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 933,
+      "frequency_high_mhz": 938,
+      "shape": [
+        451,
+        539
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1944840
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Somdalsbraatan/Sep_1/SpectrumBands_225_239_dab_no_225_239.npy",
+      "site": "Somdalsbraatan",
+      "date_group": "Sep_1",
+      "technology": "dab",
+      "frequency_low_mhz": 225,
+      "frequency_high_mhz": 239,
+      "shape": [
+        444,
+        1505
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 5345888
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Somdalsbraatan/Sep_1/SpectrumBands_390_395_tetra_no_390_395.npy",
+      "site": "Somdalsbraatan",
+      "date_group": "Sep_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 390,
+      "frequency_high_mhz": 395,
+      "shape": [
+        444,
+        537
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1907552
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Somdalsbraatan/Sep_1/SpectrumBands_524_606_dvbt_no_524_606.npy",
+      "site": "Somdalsbraatan",
+      "date_group": "Sep_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 524,
+      "frequency_high_mhz": 606,
+      "shape": [
+        444,
+        8818
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 31321664
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Somdalsbraatan/Sep_1/SpectrumBands_790_821_lte_no_790_821.npy",
+      "site": "Somdalsbraatan",
+      "date_group": "Sep_1",
+      "technology": "lte",
+      "frequency_low_mhz": 790,
+      "frequency_high_mhz": 821,
+      "shape": [
+        444,
+        3333
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11838944
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Somdalsbraatan/Sep_1/SpectrumBands_942_949_gsm_no_942_949.npy",
+      "site": "Somdalsbraatan",
+      "date_group": "Sep_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 942,
+      "frequency_high_mhz": 949,
+      "shape": [
+        444,
+        751
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2667680
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/URJC1/Sep_1/SpectrumBands_208_229_dab_Esp_208_229.npy",
+      "site": "URJC1",
+      "date_group": "Sep_1",
+      "technology": "dab",
+      "frequency_low_mhz": 208,
+      "frequency_high_mhz": 229,
+      "shape": [
+        406,
+        2258
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 7334112
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/URJC1/Sep_1/SpectrumBands_419_427_tetra_Esp_419_427.npy",
+      "site": "URJC1",
+      "date_group": "Sep_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 419,
+      "frequency_high_mhz": 427,
+      "shape": [
+        406,
+        860
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2793408
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/URJC1/Sep_1/SpectrumBands_475_555_dvbt_Esp_475_555.npy",
+      "site": "URJC1",
+      "date_group": "Sep_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 475,
+      "frequency_high_mhz": 555,
+      "shape": [
+        406,
+        8604
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 27945920
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/URJC1/Sep_1/SpectrumBands_791_821_lte_Esp_791_821.npy",
+      "site": "URJC1",
+      "date_group": "Sep_1",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        406,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 10478176
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/URJC1/Sep_1/SpectrumBands_85_120_fm_Esp_85_120.npy",
+      "site": "URJC1",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 120,
+      "shape": [
+        406,
+        3764
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 12225600
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/URJC1/Sep_1/SpectrumBands_954_960_gsm_Esp_954_960.npy",
+      "site": "URJC1",
+      "date_group": "Sep_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 954,
+      "frequency_high_mhz": 960,
+      "shape": [
+        406,
+        645
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2095088
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Valbella/Sep_15/SpectrumBands_100_120_fm_Switz_100_120.npy",
+      "site": "Valbella",
+      "date_group": "Sep_15",
+      "technology": "fm",
+      "frequency_low_mhz": 100,
+      "frequency_high_mhz": 120,
+      "shape": [
+        407,
+        2150
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 7000528
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Valbella/Sep_15/SpectrumBands_220_225_dab_Switz_220_225.npy",
+      "site": "Valbella",
+      "date_group": "Sep_15",
+      "technology": "dab",
+      "frequency_low_mhz": 220,
+      "frequency_high_mhz": 225,
+      "shape": [
+        409,
+        537
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1757192
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Valbella/Sep_15/SpectrumBands_225_233_dab_Switz_225_233.npy",
+      "site": "Valbella",
+      "date_group": "Sep_15",
+      "technology": "dab",
+      "frequency_low_mhz": 225,
+      "frequency_high_mhz": 233,
+      "shape": [
+        407,
+        860
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2800288
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Valbella/Sep_15/SpectrumBands_389_395_tetra_Switz_389_395.npy",
+      "site": "Valbella",
+      "date_group": "Sep_15",
+      "technology": "tetra",
+      "frequency_low_mhz": 389,
+      "frequency_high_mhz": 395,
+      "shape": [
+        409,
+        645
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2110568
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Valbella/Sep_15/SpectrumBands_390_400_tetra_Switz_390_400.npy",
+      "site": "Valbella",
+      "date_group": "Sep_15",
+      "technology": "tetra",
+      "frequency_low_mhz": 390,
+      "frequency_high_mhz": 400,
+      "shape": [
+        407,
+        1075
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3500328
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Valbella/Sep_15/SpectrumBands_771_823_lte_Switz_771_823.npy",
+      "site": "Valbella",
+      "date_group": "Sep_15",
+      "technology": "lte",
+      "frequency_low_mhz": 771,
+      "frequency_high_mhz": 823,
+      "shape": [
+        409,
+        5592
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 18297152
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Valbella/Sep_15/SpectrumBands_788_821_lte_Switz_788_821.npy",
+      "site": "Valbella",
+      "date_group": "Sep_15",
+      "technology": "lte",
+      "frequency_low_mhz": 788,
+      "frequency_high_mhz": 821,
+      "shape": [
+        409,
+        3548
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11609184
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Valbella/Sep_15/SpectrumBands_87_102_fm_Switz_87_102.npy",
+      "site": "Valbella",
+      "date_group": "Sep_15",
+      "technology": "fm",
+      "frequency_low_mhz": 87,
+      "frequency_high_mhz": 102,
+      "shape": [
+        409,
+        1614
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 5281136
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Valbella/Sep_15/SpectrumBands_936_944_gsm_Switz_936_944.npy",
+      "site": "Valbella",
+      "date_group": "Sep_15",
+      "technology": "gsm",
+      "frequency_low_mhz": 936,
+      "frequency_high_mhz": 944,
+      "shape": [
+        409,
+        861
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2817320
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Zagreb/Sep_15/SpectrumBands_204_208_dab_Cro_204_208.npy",
+      "site": "Zagreb",
+      "date_group": "Sep_15",
+      "technology": "dab",
+      "frequency_low_mhz": 204,
+      "frequency_high_mhz": 208,
+      "shape": [
+        456,
+        430
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1568768
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Zagreb/Sep_15/SpectrumBands_389_399_tetra_Cro_389_399.npy",
+      "site": "Zagreb",
+      "date_group": "Sep_15",
+      "technology": "tetra",
+      "frequency_low_mhz": 389,
+      "frequency_high_mhz": 399,
+      "shape": [
+        456,
+        1075
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3921728
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Zagreb/Sep_15/SpectrumBands_475_538_dvbt_Cro_475_538.npy",
+      "site": "Zagreb",
+      "date_group": "Sep_15",
+      "technology": "dvbt",
+      "frequency_low_mhz": 475,
+      "frequency_high_mhz": 538,
+      "shape": [
+        456,
+        6776
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 24718976
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Zagreb/Sep_15/SpectrumBands_791_821_lte_Cro_791_821.npy",
+      "site": "Zagreb",
+      "date_group": "Sep_15",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        456,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11768576
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Zagreb/Sep_15/SpectrumBands_91_111_fm_Cro_91_111.npy",
+      "site": "Zagreb",
+      "date_group": "Sep_15",
+      "technology": "fm",
+      "frequency_low_mhz": 91,
+      "frequency_high_mhz": 111,
+      "shape": [
+        456,
+        2151
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 7846976
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/Zagreb/Sep_15/SpectrumBands_949_960_gsm_Cro_949_960.npy",
+      "site": "Zagreb",
+      "date_group": "Sep_15",
+      "technology": "gsm",
+      "frequency_low_mhz": 949,
+      "frequency_high_mhz": 960,
+      "shape": [
+        456,
+        1184
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 4319360
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_1/SpectrumBands_195_230_dab_alcorcon_195_230.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_1",
+      "technology": "dab",
+      "frequency_low_mhz": 195,
+      "frequency_high_mhz": 230,
+      "shape": [
+        203,
+        3747
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 6085256
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_1/SpectrumBands_421_426_tetra_alcorcon_421_426.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 421,
+      "frequency_high_mhz": 426,
+      "shape": [
+        243,
+        536
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1042112
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_1/SpectrumBands_540_584_dvbt_alcorcon_540_5845.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 540,
+      "frequency_high_mhz": 584,
+      "shape": [
+        243,
+        4763
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 9259400
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_1/SpectrumBands_791_821_lte_alcorcon_791_821.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_1",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        203,
+        3212
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 5216416
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_1/SpectrumBands_85_120_fm_alcorcon_85_120.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_1",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 120,
+      "shape": [
+        203,
+        3747
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 6085256
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_1/SpectrumBands_924_929_gsm_alcorcon_924_929.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 924,
+      "frequency_high_mhz": 929,
+      "shape": [
+        243,
+        535
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1040168
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_1/SpectrumBands_935_939_gsm_alcorcon_935_939.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 935,
+      "frequency_high_mhz": 939,
+      "shape": [
+        243,
+        429
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 834104
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_1/SpectrumBands_954_960_gsm_alcorcon_9544_9604.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 954,
+      "frequency_high_mhz": 960,
+      "shape": [
+        243,
+        642
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1248176
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_2/alcorcon_Feb_2_21SpectrumBands_195_230_dab_alcorcon_195_230.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_2",
+      "technology": "dab",
+      "frequency_low_mhz": 195,
+      "frequency_high_mhz": 230,
+      "shape": [
+        498,
+        3747
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 14928176
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_2/alcorcon_Feb_2_21SpectrumBands_421_426_tetra_alcorcon_421_426.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_2",
+      "technology": "tetra",
+      "frequency_low_mhz": 421,
+      "frequency_high_mhz": 426,
+      "shape": [
+        495,
+        536
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2122688
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_2/alcorcon_Feb_2_21SpectrumBands_540_584_dvbt_alcorcon_540_5845.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_2",
+      "technology": "dvbt",
+      "frequency_low_mhz": 540,
+      "frequency_high_mhz": 584,
+      "shape": [
+        495,
+        4763
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 18861608
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_2/alcorcon_Feb_2_21SpectrumBands_791_821_lte_alcorcon_791_821.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_2",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        498,
+        3212
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 12796736
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_2/alcorcon_Feb_2_21SpectrumBands_85_120_fm_alcorcon_85_120.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_2",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 120,
+      "shape": [
+        498,
+        3747
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 14928176
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_2/alcorcon_Feb_2_21SpectrumBands_924_929_gsm_alcorcon_924_929.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_2",
+      "technology": "gsm",
+      "frequency_low_mhz": 924,
+      "frequency_high_mhz": 929,
+      "shape": [
+        495,
+        535
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2118728
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_2/alcorcon_Feb_2_21SpectrumBands_935_939_gsm_alcorcon_935_939.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_2",
+      "technology": "gsm",
+      "frequency_low_mhz": 935,
+      "frequency_high_mhz": 939,
+      "shape": [
+        495,
+        429
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1698968
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_2/alcorcon_Feb_2_21SpectrumBands_954_960_gsm_alcorcon_9544_9604.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_2",
+      "technology": "gsm",
+      "frequency_low_mhz": 954,
+      "frequency_high_mhz": 960,
+      "shape": [
+        495,
+        642
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2542448
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_3/alcorcon_Feb_3_21SpectrumBands_195_230_dab_alcorcon_195_230.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_3",
+      "technology": "dab",
+      "frequency_low_mhz": 195,
+      "frequency_high_mhz": 230,
+      "shape": [
+        474,
+        3747
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 14208752
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_3/alcorcon_Feb_3_21SpectrumBands_421_426_tetra_alcorcon_421_426.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_3",
+      "technology": "tetra",
+      "frequency_low_mhz": 421,
+      "frequency_high_mhz": 426,
+      "shape": [
+        471,
+        536
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2019776
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_3/alcorcon_Feb_3_21SpectrumBands_540_584_dvbt_alcorcon_540_5845.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_3",
+      "technology": "dvbt",
+      "frequency_low_mhz": 540,
+      "frequency_high_mhz": 584,
+      "shape": [
+        471,
+        4763
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 17947112
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_3/alcorcon_Feb_3_21SpectrumBands_791_821_lte_alcorcon_791_821.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_3",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        474,
+        3212
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 12180032
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_3/alcorcon_Feb_3_21SpectrumBands_85_120_fm_alcorcon_85_120.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_3",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 120,
+      "shape": [
+        474,
+        3747
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 14208752
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_3/alcorcon_Feb_3_21SpectrumBands_924_929_gsm_alcorcon_924_929.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_3",
+      "technology": "gsm",
+      "frequency_low_mhz": 924,
+      "frequency_high_mhz": 929,
+      "shape": [
+        471,
+        535
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2016008
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_3/alcorcon_Feb_3_21SpectrumBands_935_939_gsm_alcorcon_935_939.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_3",
+      "technology": "gsm",
+      "frequency_low_mhz": 935,
+      "frequency_high_mhz": 939,
+      "shape": [
+        471,
+        429
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1616600
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alcorcon1/Feb_3/alcorcon_Feb_3_21SpectrumBands_954_960_gsm_alcorcon_9544_9604.npy",
+      "site": "alcorcon1",
+      "date_group": "Feb_3",
+      "technology": "gsm",
+      "frequency_low_mhz": 954,
+      "frequency_high_mhz": 960,
+      "shape": [
+        471,
+        642
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2419184
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alemino_ZRH/Sep_1/SpectrumBands_187_228_dab_Swis_187_228.npy",
+      "site": "alemino_ZRH",
+      "date_group": "Sep_1",
+      "technology": "dab",
+      "frequency_low_mhz": 187,
+      "frequency_high_mhz": 228,
+      "shape": [
+        463,
+        4410
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 16334768
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alemino_ZRH/Sep_1/SpectrumBands_390_395_tetra_Swis_390_395.npy",
+      "site": "alemino_ZRH",
+      "date_group": "Sep_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 390,
+      "frequency_high_mhz": 395,
+      "shape": [
+        463,
+        537
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1989176
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alemino_ZRH/Sep_1/SpectrumBands_788_821_lte_Swis_791_821.npy",
+      "site": "alemino_ZRH",
+      "date_group": "Sep_1",
+      "technology": "lte",
+      "frequency_low_mhz": 788,
+      "frequency_high_mhz": 821,
+      "shape": [
+        463,
+        3548
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 13141920
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alemino_ZRH/Sep_1/SpectrumBands_87_102_fm_Swis_87_102.npy",
+      "site": "alemino_ZRH",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 87,
+      "frequency_high_mhz": 102,
+      "shape": [
+        463,
+        1614
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 5978384
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/alemino_ZRH/Sep_1/SpectrumBands_936_944_gsm_Swis_936_944.npy",
+      "site": "alemino_ZRH",
+      "date_group": "Sep_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 936,
+      "frequency_high_mhz": 944,
+      "shape": [
+        463,
+        861
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3189272
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/bcn-L/Sep_1/SpectrumBands_191_220_dab_Esp_191_220.npy",
+      "site": "bcn-L",
+      "date_group": "Sep_1",
+      "technology": "dab",
+      "frequency_low_mhz": 191,
+      "frequency_high_mhz": 220,
+      "shape": [
+        450,
+        3120
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11232128
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/bcn-L/Sep_1/SpectrumBands_419_424_tetra_Esp_419_424.npy",
+      "site": "bcn-L",
+      "date_group": "Sep_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 419,
+      "frequency_high_mhz": 424,
+      "shape": [
+        450,
+        538
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1936928
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/bcn-L/Sep_1/SpectrumBands_484_543_dvbt_Esp_484_583.npy",
+      "site": "bcn-L",
+      "date_group": "Sep_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 484,
+      "frequency_high_mhz": 543,
+      "shape": [
+        450,
+        6344
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 22838528
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/bcn-L/Sep_1/SpectrumBands_791_821_lte_Esp_791_821.npy",
+      "site": "bcn-L",
+      "date_group": "Sep_1",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        450,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11613728
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/bcn-L/Sep_1/SpectrumBands_90_120_fm_Esp_90_120.npy",
+      "site": "bcn-L",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 90,
+      "frequency_high_mhz": 120,
+      "shape": [
+        450,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11613728
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/bcn-L/Sep_1/SpectrumBands_924_929_gsm_Esp_924_929.npy",
+      "site": "bcn-L",
+      "date_group": "Sep_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 924,
+      "frequency_high_mhz": 929,
+      "shape": [
+        450,
+        537
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1933328
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/dipolkurz/Sep_1/SpectrumBands_208_229_dab_Swis_208_229.npy",
+      "site": "dipolkurz",
+      "date_group": "Sep_1",
+      "technology": "dab",
+      "frequency_low_mhz": 208,
+      "frequency_high_mhz": 229,
+      "shape": [
+        442,
+        2258
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 7984416
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/dipolkurz/Sep_1/SpectrumBands_393_395_tetra_Swis_393_395.npy",
+      "site": "dipolkurz",
+      "date_group": "Sep_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 393,
+      "frequency_high_mhz": 395,
+      "shape": [
+        442,
+        215
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 760368
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/dipolkurz/Sep_1/SpectrumBands_791_821_lte_Swis_791_821.npy",
+      "site": "dipolkurz",
+      "date_group": "Sep_1",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        442,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11407264
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/dipolkurz/Sep_1/SpectrumBands_85_120_fm_Swis_85_120.npy",
+      "site": "dipolkurz",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 120,
+      "shape": [
+        442,
+        3764
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 13309632
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/dipolkurz/Sep_1/SpectrumBands_922_925_gsm_Swis_922_925.npy",
+      "site": "dipolkurz",
+      "date_group": "Sep_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 922,
+      "frequency_high_mhz": 925,
+      "shape": [
+        442,
+        321
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1135184
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/donostia-ategorrieta/Sep_1/SpectrumBands_419_427_tetra_Esp_419_427.npy",
+      "site": "donostia-ategorrieta",
+      "date_group": "Sep_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 419,
+      "frequency_high_mhz": 427,
+      "shape": [
+        453,
+        860
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3116768
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/donostia-ategorrieta/Sep_1/SpectrumBands_791_821_lte_Esp_791_821.npy",
+      "site": "donostia-ategorrieta",
+      "date_group": "Sep_1",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        453,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11691152
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/donostia-ategorrieta/Sep_1/SpectrumBands_80_120_fm_Esp_80_120.npy",
+      "site": "donostia-ategorrieta",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 80,
+      "frequency_high_mhz": 120,
+      "shape": [
+        453,
+        4301
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 15586952
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/goeppingen_I/Sep_15/SpectrumBands_100_120_fm_Ger_100_120.npy",
+      "site": "goeppingen_I",
+      "date_group": "Sep_15",
+      "technology": "fm",
+      "frequency_low_mhz": 100,
+      "frequency_high_mhz": 120,
+      "shape": [
+        326,
+        2150
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 5607328
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/goeppingen_I/Sep_15/SpectrumBands_203_223_dab_Ger_203_223.npy",
+      "site": "goeppingen_I",
+      "date_group": "Sep_15",
+      "technology": "dab",
+      "frequency_low_mhz": 203,
+      "frequency_high_mhz": 223,
+      "shape": [
+        326,
+        2150
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 5607328
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/goeppingen_I/Sep_15/SpectrumBands_371_394_tetra_Ger_371_394.npy",
+      "site": "goeppingen_I",
+      "date_group": "Sep_15",
+      "technology": "tetra",
+      "frequency_low_mhz": 371,
+      "frequency_high_mhz": 394,
+      "shape": [
+        326,
+        2474
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 6452320
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/goeppingen_I/Sep_15/SpectrumBands_791_821_lte_Ger_791_821.npy",
+      "site": "goeppingen_I",
+      "date_group": "Sep_15",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        326,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 8413536
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/goeppingen_I/Sep_15/SpectrumBands_925_948_gsm_Ger_925_948.npy",
+      "site": "goeppingen_I",
+      "date_group": "Sep_15",
+      "technology": "gsm",
+      "frequency_low_mhz": 925,
+      "frequency_high_mhz": 948,
+      "shape": [
+        326,
+        2475
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 6454928
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/imdea_adsb/Sep_1/SpectrumBands_194_203_dab_Esp_194_203.npy",
+      "site": "imdea_adsb",
+      "date_group": "Sep_1",
+      "technology": "dab",
+      "frequency_low_mhz": 194,
+      "frequency_high_mhz": 203,
+      "shape": [
+        451,
+        969
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3496280
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/imdea_adsb/Sep_1/SpectrumBands_392_395_tetra_Esp_392_395.npy",
+      "site": "imdea_adsb",
+      "date_group": "Sep_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 392,
+      "frequency_high_mhz": 395,
+      "shape": [
+        451,
+        323
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1165512
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/imdea_adsb/Sep_1/SpectrumBands_620_630_dvbt_Esp_620_630.npy",
+      "site": "imdea_adsb",
+      "date_group": "Sep_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 620,
+      "frequency_high_mhz": 630,
+      "shape": [
+        451,
+        1076
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3882336
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/imdea_adsb/Sep_1/SpectrumBands_791_821_lte_Esp_791_821.npy",
+      "site": "imdea_adsb",
+      "date_group": "Sep_1",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        451,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11639536
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/imdea_adsb/Sep_1/SpectrumBands_80_120_fm_Esp_80_120.npy",
+      "site": "imdea_adsb",
+      "date_group": "Sep_1",
+      "technology": "fm",
+      "frequency_low_mhz": 80,
+      "frequency_high_mhz": 120,
+      "shape": [
+        451,
+        4302
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 15521744
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/imdea_adsb/Sep_1/SpectrumBands_924_929_gsm_Esp_924_929.npy",
+      "site": "imdea_adsb",
+      "date_group": "Sep_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 924,
+      "frequency_high_mhz": 929,
+      "shape": [
+        451,
+        537
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1937624
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/leganes_rack_3/May_1/SpectrumBands_421_426_tetra_rack3_421_426.npy",
+      "site": "leganes_rack_3",
+      "date_group": "May_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 421,
+      "frequency_high_mhz": 426,
+      "shape": [
+        449,
+        539
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1936216
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/leganes_rack_3/May_1/SpectrumBands_540_584_dvbt_rack3_540_5845.npy",
+      "site": "leganes_rack_3",
+      "date_group": "May_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 540,
+      "frequency_high_mhz": 584,
+      "shape": [
+        449,
+        4786
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 17191440
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/leganes_rack_3/May_1/SpectrumBands_924_929_gsm_rack3_924_929.npy",
+      "site": "leganes_rack_3",
+      "date_group": "May_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 924,
+      "frequency_high_mhz": 929,
+      "shape": [
+        449,
+        537
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1929032
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/leganes_rack_3/May_1/SpectrumBands_935_939_gsm_rack3_935_939.npy",
+      "site": "leganes_rack_3",
+      "date_group": "May_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 935,
+      "frequency_high_mhz": 939,
+      "shape": [
+        449,
+        430
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1544688
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/leganes_rack_3/May_1/SpectrumBands_954_960_gsm_rack3_9544_9604.npy",
+      "site": "leganes_rack_3",
+      "date_group": "May_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 954,
+      "frequency_high_mhz": 960,
+      "shape": [
+        449,
+        645
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2316968
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/leganes_rack_3/May_2/SpectrumBands_421_426_tetra_rack3_421_426.npy",
+      "site": "leganes_rack_3",
+      "date_group": "May_2",
+      "technology": "tetra",
+      "frequency_low_mhz": 421,
+      "frequency_high_mhz": 426,
+      "shape": [
+        445,
+        539
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1918968
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/leganes_rack_3/May_2/SpectrumBands_540_584_dvbt_rack3_540_5845.npy",
+      "site": "leganes_rack_3",
+      "date_group": "May_2",
+      "technology": "dvbt",
+      "frequency_low_mhz": 540,
+      "frequency_high_mhz": 584,
+      "shape": [
+        445,
+        4786
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 17038288
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/leganes_rack_3/May_2/SpectrumBands_924_929_gsm_rack3_924_929.npy",
+      "site": "leganes_rack_3",
+      "date_group": "May_2",
+      "technology": "gsm",
+      "frequency_low_mhz": 924,
+      "frequency_high_mhz": 929,
+      "shape": [
+        445,
+        537
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1911848
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/leganes_rack_3/May_2/SpectrumBands_935_939_gsm_rack3_935_939.npy",
+      "site": "leganes_rack_3",
+      "date_group": "May_2",
+      "technology": "gsm",
+      "frequency_low_mhz": 935,
+      "frequency_high_mhz": 939,
+      "shape": [
+        445,
+        430
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1530928
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/leganes_rack_3/May_2/SpectrumBands_954_960_gsm_rack3_9544_9604.npy",
+      "site": "leganes_rack_3",
+      "date_group": "May_2",
+      "technology": "gsm",
+      "frequency_low_mhz": 954,
+      "frequency_high_mhz": 960,
+      "shape": [
+        445,
+        645
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2296328
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/miguel_murcia/Dec_1/SpectrumBands_389_394_tetra_Esp_389_394.npy",
+      "site": "miguel_murcia",
+      "date_group": "Dec_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 389,
+      "frequency_high_mhz": 394,
+      "shape": [
+        455,
+        538
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1958448
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/miguel_murcia/Dec_1/SpectrumBands_636_644_dvbt_Esp_636_644.npy",
+      "site": "miguel_murcia",
+      "date_group": "Dec_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 636,
+      "frequency_high_mhz": 644,
+      "shape": [
+        455,
+        861
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3134168
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/miguel_murcia/Dec_1/SpectrumBands_791_821_lte_Esp_791_821.npy",
+      "site": "miguel_murcia",
+      "date_group": "Dec_1",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        455,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11742768
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/miguel_murcia/Dec_1/SpectrumBands_85_105_fm_Esp_85_105.npy",
+      "site": "miguel_murcia",
+      "date_group": "Dec_1",
+      "technology": "fm",
+      "frequency_low_mhz": 85,
+      "frequency_high_mhz": 105,
+      "shape": [
+        455,
+        2150
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 7826128
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/miguel_murcia/Dec_1/SpectrumBands_924_929_gsm_Esp_924_929.npy",
+      "site": "miguel_murcia",
+      "date_group": "Dec_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 924,
+      "frequency_high_mhz": 929,
+      "shape": [
+        455,
+        537
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1954808
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/oha_sense1/Sep_1/SpectrumBands_200_230_dab_oh_200_230.npy",
+      "site": "oha_sense1",
+      "date_group": "Sep_1",
+      "technology": "dab",
+      "frequency_low_mhz": 200,
+      "frequency_high_mhz": 230,
+      "shape": [
+        451,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11639536
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/oha_sense1/Sep_1/SpectrumBands_389_395_tetra_oh_389_395.npy",
+      "site": "oha_sense1",
+      "date_group": "Sep_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 389,
+      "frequency_high_mhz": 395,
+      "shape": [
+        451,
+        645
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2327288
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/oha_sense1/Sep_1/SpectrumBands_468_527_dvbt_oh_468_527.npy",
+      "site": "oha_sense1",
+      "date_group": "Sep_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 468,
+      "frequency_high_mhz": 527,
+      "shape": [
+        451,
+        6344
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 22889280
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/oha_sense1/Sep_1/SpectrumBands_791_821_lte_oh_791_821.npy",
+      "site": "oha_sense1",
+      "date_group": "Sep_1",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        451,
+        3194
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11524080
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/oha_sense1/Sep_5/SpectrumBands_200_230_dab_oh_200_230.npy",
+      "site": "oha_sense1",
+      "date_group": "Sep_5",
+      "technology": "dab",
+      "frequency_low_mhz": 200,
+      "frequency_high_mhz": 230,
+      "shape": [
+        451,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11639536
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/oha_sense1/Sep_5/SpectrumBands_468_527_dvbt_oh_468_527.npy",
+      "site": "oha_sense1",
+      "date_group": "Sep_5",
+      "technology": "dvbt",
+      "frequency_low_mhz": 468,
+      "frequency_high_mhz": 527,
+      "shape": [
+        446,
+        6344
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 22635520
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/oha_sense1/Sep_5/SpectrumBands_791_821_lte_oh_791_821.npy",
+      "site": "oha_sense1",
+      "date_group": "Sep_5",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        446,
+        3194
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11396320
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/scalessio/May_2/SpectrumBands_201_207_dab_scalessio_201_207.npy",
+      "site": "scalessio",
+      "date_group": "May_2",
+      "technology": "dab",
+      "frequency_low_mhz": 201,
+      "frequency_high_mhz": 207,
+      "shape": [
+        454,
+        645
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2342768
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/scalessio/May_2/SpectrumBands_421_426_tetra_scalessio_421_426.npy",
+      "site": "scalessio",
+      "date_group": "May_2",
+      "technology": "tetra",
+      "frequency_low_mhz": 421,
+      "frequency_high_mhz": 426,
+      "shape": [
+        454,
+        539
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1957776
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/scalessio/May_2/SpectrumBands_509_550_dvbt_scalessio_509_550.npy",
+      "site": "scalessio",
+      "date_group": "May_2",
+      "technology": "dvbt",
+      "frequency_low_mhz": 509,
+      "frequency_high_mhz": 550,
+      "shape": [
+        454,
+        4324
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 15704896
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/scalessio/May_2/SpectrumBands_791_821_lte_scalessio_791_821.npy",
+      "site": "scalessio",
+      "date_group": "May_2",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        454,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11716960
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/scalessio/May_2/SpectrumBands_80_120_fm_scalessio_80_120.npy",
+      "site": "scalessio",
+      "date_group": "May_2",
+      "technology": "fm",
+      "frequency_low_mhz": 80,
+      "frequency_high_mhz": 120,
+      "shape": [
+        454,
+        4301
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 15621360
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/scalessio/May_2/SpectrumBands_935_960_gsm_test_935_960.npy",
+      "site": "scalessio",
+      "date_group": "May_2",
+      "technology": "gsm",
+      "frequency_low_mhz": 935,
+      "frequency_high_mhz": 960,
+      "shape": [
+        150,
+        2239
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2686928
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/scalessio/May_2/SpectrumBands_939_948_gsm_scalessio_939_948.npy",
+      "site": "scalessio",
+      "date_group": "May_2",
+      "technology": "gsm",
+      "frequency_low_mhz": 939,
+      "frequency_high_mhz": 948,
+      "shape": [
+        454,
+        969
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3519536
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/scalessio/May_3/SpectrumBands_201_207_dab_scalessio_201_207.npy",
+      "site": "scalessio",
+      "date_group": "May_3",
+      "technology": "dab",
+      "frequency_low_mhz": 201,
+      "frequency_high_mhz": 207,
+      "shape": [
+        444,
+        645
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2291168
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/scalessio/May_3/SpectrumBands_421_426_tetra_scalessio_421_426.npy",
+      "site": "scalessio",
+      "date_group": "May_3",
+      "technology": "tetra",
+      "frequency_low_mhz": 421,
+      "frequency_high_mhz": 426,
+      "shape": [
+        444,
+        539
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1914656
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/scalessio/May_3/SpectrumBands_509_550_dvbt_scalessio_509_550.npy",
+      "site": "scalessio",
+      "date_group": "May_3",
+      "technology": "dvbt",
+      "frequency_low_mhz": 509,
+      "frequency_high_mhz": 550,
+      "shape": [
+        444,
+        4324
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 15358976
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/scalessio/May_3/SpectrumBands_791_821_lte_scalessio_791_821.npy",
+      "site": "scalessio",
+      "date_group": "May_3",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        444,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 11458880
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/scalessio/May_3/SpectrumBands_80_120_fm_scalessio_80_120.npy",
+      "site": "scalessio",
+      "date_group": "May_3",
+      "technology": "fm",
+      "frequency_low_mhz": 80,
+      "frequency_high_mhz": 120,
+      "shape": [
+        444,
+        4301
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 15277280
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/scalessio/May_3/SpectrumBands_939_948_gsm_scalessio_939_948.npy",
+      "site": "scalessio",
+      "date_group": "May_3",
+      "technology": "gsm",
+      "frequency_low_mhz": 939,
+      "frequency_high_mhz": 948,
+      "shape": [
+        444,
+        969
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 3442016
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/skyhubfr/Jun_1/SpectrumBands_102_110_fm_fr_102_110.npy",
+      "site": "skyhubfr",
+      "date_group": "Jun_1",
+      "technology": "fm",
+      "frequency_low_mhz": 102,
+      "frequency_high_mhz": 110,
+      "shape": [
+        434,
+        860
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2986048
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/skyhubfr/Jun_1/SpectrumBands_390_394_tetra_fr_390_394.npy",
+      "site": "skyhubfr",
+      "date_group": "Jun_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 390,
+      "frequency_high_mhz": 394,
+      "shape": [
+        434,
+        430
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1493088
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/skyhubfr/Jun_1/SpectrumBands_560_620_dvbt_fr_560_620.npy",
+      "site": "skyhubfr",
+      "date_group": "Jun_1",
+      "technology": "dvbt",
+      "frequency_low_mhz": 560,
+      "frequency_high_mhz": 620,
+      "shape": [
+        434,
+        6453
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 22404944
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/skyhubfr/Jun_1/SpectrumBands_760_822_lte_fr_760_822.npy",
+      "site": "skyhubfr",
+      "date_group": "Jun_1",
+      "technology": "lte",
+      "frequency_low_mhz": 760,
+      "frequency_high_mhz": 822,
+      "shape": [
+        434,
+        6667
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 23147952
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/skyhubfr/Jun_1/SpectrumBands_932_938_gsm_932_938.npy",
+      "site": "skyhubfr",
+      "date_group": "Jun_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 932,
+      "frequency_high_mhz": 938,
+      "shape": [
+        434,
+        645
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2239568
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/vlenders_burgdorf/Aug_1/SpectrumBands_102_107_fm_sw_102_107.npy",
+      "site": "vlenders_burgdorf",
+      "date_group": "Aug_1",
+      "technology": "fm",
+      "frequency_low_mhz": 102,
+      "frequency_high_mhz": 107,
+      "shape": [
+        423,
+        537
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1817336
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/vlenders_burgdorf/Aug_1/SpectrumBands_208_216_dab_sw_208_216.npy",
+      "site": "vlenders_burgdorf",
+      "date_group": "Aug_1",
+      "technology": "dab",
+      "frequency_low_mhz": 208,
+      "frequency_high_mhz": 216,
+      "shape": [
+        423,
+        861
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 2913752
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/vlenders_burgdorf/Aug_1/SpectrumBands_390_394_tetra_sw_390_394.npy",
+      "site": "vlenders_burgdorf",
+      "date_group": "Aug_1",
+      "technology": "tetra",
+      "frequency_low_mhz": 390,
+      "frequency_high_mhz": 394,
+      "shape": [
+        423,
+        430
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1455248
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/vlenders_burgdorf/Aug_1/SpectrumBands_791_821_lte_sw_791_821.npy",
+      "site": "vlenders_burgdorf",
+      "date_group": "Aug_1",
+      "technology": "lte",
+      "frequency_low_mhz": 791,
+      "frequency_high_mhz": 821,
+      "shape": [
+        423,
+        3226
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 10916912
+    },
+    {
+      "member": "opt/shared/alessio/Data_Transmitters_Identification/spectrum_bands_2/vlenders_burgdorf/Aug_1/SpectrumBands_922_925_gsm_sw_922_925.npy",
+      "site": "vlenders_burgdorf",
+      "date_group": "Aug_1",
+      "technology": "gsm",
+      "frequency_low_mhz": 922,
+      "frequency_high_mhz": 925,
+      "shape": [
+        423,
+        321
+      ],
+      "dtype": "<f8",
+      "fortran_order": true,
+      "member_size_bytes": 1086392
+    }
+  ]
+}

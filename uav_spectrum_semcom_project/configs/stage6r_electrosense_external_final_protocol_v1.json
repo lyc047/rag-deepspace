@@ -1,0 +1,116 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage6r_electrosense_external_final_v1",
+  "status": "registered_after_pilot_before_stage6_final_signal_access",
+  "created_date": "2026-07-30",
+  "purpose": "Independently test the frozen Stage-6R task-codebook activation system on 24 never-read ElectroSense sites.",
+  "inputs": {
+    "archive": "F:\\spectrum_bands.tar.gz",
+    "registry": "results/stage6r/electrosense_final_registry_v1/registry.json",
+    "access_state": "configs/stage6r_electrosense_final_access_state_v1.json",
+    "pilot_inspection": "results/stage6r/electrosense_pilot_inspection_v1/result.json",
+    "adaptation_config": "configs/stage6r_few_shot_adaptation_v1.json",
+    "matched_scan_config": "configs/stage6r_matched_clean_scan_v1.json",
+    "matched_scan_result": "results/stage6r/matched_clean_scan_v1/result.json",
+    "activation_protocol": "configs/stage6r_codebook_activation_protocol_v1.json",
+    "temporal_gate_config": "configs/stage6r_temporal_context_gate_v1.json",
+    "freeze_result": "results/stage6r/electrosense_final_freeze_v1/result.json"
+  },
+  "data_adapter": {
+    "role": "stage6_final",
+    "site_count": 24,
+    "technology": "fm",
+    "member_selection": "lexicographically_first_valid_fm_member_per_site",
+    "matrix_orientation": "rows_are_chronological_scenes_columns_are_frequency_bins",
+    "value_semantics": "PSD_on_dataset_native_decibel_scale",
+    "normalization": "none",
+    "frequency_aggregation": "arithmetic_mean_in_native_decibel_scale_over_deterministic_equal_width_contiguous_bin_groups",
+    "scene_selection": "all_rows_in_original_order",
+    "timestamp_rule": "uniformly_space_rows_across_the_documented_six_hour_collection_window",
+    "invalid_site_rule": "retain_failure_record_do_not_replace",
+    "minimum_evaluable_sites": 20
+  },
+  "task": {
+    "n_channels": [8, 16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "epsilon_db": 0.2,
+    "cvar_alpha": 0.95,
+    "primary_k": 4
+  },
+  "context_gate": {
+    "development_bank_sources": [
+      "aerpaw_packapalooza_2023",
+      "aerpaw_lake_wheeler_2024",
+      "aerpaw_packapalooza_2024",
+      "aerpaw_packapalooza_2025"
+    ],
+    "window_size_scenes": 2,
+    "required_consecutive_matching_windows": 2,
+    "checkpoints_scenes": [2, 4, 6, 8, 10, 12, 16],
+    "minimum_accumulated_bank_coverage": 0.75,
+    "maximum_calibration_scenes": 16,
+    "stable_ood_action": "fit_k4_codebook_on_calibration_prefix_then_full_install",
+    "unresolved_action": "exact_actions_for_entire_remaining_site_session",
+    "future_suffix_may_influence_context_or_codebook": false
+  },
+  "reliability": {
+    "matched_clean_target": 0.9,
+    "workpoint_source": "frozen_stage6r_matched_clean_scan_v1",
+    "fault_condition": "primary_fault",
+    "maximum_activation_attempts": 2,
+    "catalog_epoch": 1,
+    "codebook_epoch": 2,
+    "whole_site_session_is_primary": true,
+    "all_forward_feedback_recovery_heartbeat_and_escape_bits_counted": true,
+    "paired_common_random_numbers": true
+  },
+  "monte_carlo": {
+    "trajectories": 60,
+    "random_seed": 20260730,
+    "bootstrap_replicates": 5000,
+    "bootstrap_seed": 20260807,
+    "confidence_level": 0.95,
+    "hierarchical_bootstrap_unit": "site_then_paired_trajectory"
+  },
+  "gates": {
+    "minimum_evaluable_sites": 20,
+    "semantic_scene_weighted_clean_ci_lower_minimum_all_n": 0.9,
+    "scene_weighted_savings_ci_lower_positive_all_n": true,
+    "equal_site_macro_savings_ci_lower_positive_minimum_n_count": 3,
+    "wrong_codebook_decode_count": 0,
+    "bit_accounting_identities_valid": true,
+    "no_final_site_replacement": true
+  },
+  "code_snapshot_paths": [
+    "configs/stage6r_electrosense_external_final_protocol_v1.json",
+    "src/spectrum_semcom/final_holdout.py",
+    "src/spectrum_semcom/reproducibility.py",
+    "src/spectrum_semcom/electrosense_psd.py",
+    "src/spectrum_semcom/stage5_event_semantics.py",
+    "src/spectrum_semcom/stage5_cumulative_ack.py",
+    "src/spectrum_semcom/stage6_bit_accounting.py",
+    "src/spectrum_semcom/stage6_context_codec.py",
+    "src/spectrum_semcom/stage6_context_heartbeat.py",
+    "src/spectrum_semcom/stage6_context_recovery.py",
+    "src/spectrum_semcom/stage6_task_codebook.py",
+    "src/spectrum_semcom/stage6_task_codec.py",
+    "src/spectrum_semcom/stage6_matched_reliability.py",
+    "src/spectrum_semcom/stage6r_context_adapter.py",
+    "src/spectrum_semcom/stage6r_regret_codebook.py",
+    "src/spectrum_semcom/stage6r_codebook_activation.py",
+    "src/spectrum_semcom/stage6r_activation_reliability.py",
+    "src/spectrum_semcom/stage6r_reliability_integration.py",
+    "src/spectrum_semcom/stage6r_external_final.py",
+    "scripts/run_stage6r_activation_protocol_dry_run.py",
+    "scripts/run_stage6r_electrosense_external_final.py"
+  ],
+  "claim_boundary": [
+    "The 24 Final sites are fixed by a metadata-only hash split before any of their PSD values are read.",
+    "Pilot values are used only to freeze data semantics and test the adapter; they do not train or tune the task codebook.",
+    "All task codebook banks and matched-reliability workpoints come from the four pre-existing AERPAW development activities.",
+    "ElectroSense sites may trigger the already-frozen calibration-only OOD adaptation path.",
+    "The 6-site confirmation lockbox and all reserve values remain unread after this Stage-6 Final.",
+    "A failed or invalid accessed Final site is retained and is never replaced.",
+    "This is one confirmatory execution; a software crash does not authorize an automatic retry."
+  ]
+}
