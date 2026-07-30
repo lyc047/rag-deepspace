@@ -1,0 +1,103 @@
+{
+  "version": "1.0",
+  "status": "STAGE8_CONCLUSION_AUDIT_COMPLETE",
+  "overall_conclusion": "MIXED_MODEL_EVIDENCE_NO_NEW_PROTOCOL_CANDIDATE",
+  "evidence_components": {
+    "between_flight_loss_heterogeneity_confirmed": true,
+    "development_within_flight_bernoulli_assumption_confirmed": false,
+    "full_flight_hierarchical_bernoulli_model_confirmed": false,
+    "exact_10_percent_mean_loss_rejected": false,
+    "semantic_context_reset_probability_calibrated": false,
+    "new_heartbeat_candidate_selected": false,
+    "fixed10_is_empirically_optimal_on_real_board": false,
+    "fixed10_remains_engineering_stress_boundary": true
+  },
+  "key_numbers": {
+    "aadm_confirmation_flights": 20,
+    "aadm_pooled_internal_gap_fraction_lower_bound": 0.13983739837398373,
+    "aadm_cluster_bootstrap_95_ci": [
+      0.03225806451612903,
+      0.27082502458767715
+    ],
+    "aadm_flight_rate_range": [
+      0.0,
+      0.8
+    ],
+    "aadm_overdispersion_p_value": 4.999750012499375e-05,
+    "aadm_maximum_absolute_segment_lag1": 0.8071428571428572,
+    "alfa_confirmation_raw_flights": 20,
+    "alfa_processed_coverage_flights": 15,
+    "alfa_observed_hours": 0.6866868448822222,
+    "alfa_fcu_boot_resets": 0
+  },
+  "eleven_fallacy_audit": [
+    {
+      "risk": "pseudoreplication",
+      "status": "MITIGATED",
+      "evidence": "AADM complete flight and ALFA raw flight are the independent units; processed clips inherit their raw-flight split."
+    },
+    {
+      "risk": "development-confirmation leakage",
+      "status": "MITIGATED",
+      "evidence": "SHA-256 flight-level splits were frozen before signal access."
+    },
+    {
+      "risk": "test-set tuning",
+      "status": "MITIGATED",
+      "evidence": "The development replay selected no candidate; confirmation values were not used to change a heartbeat interval."
+    },
+    {
+      "risk": "optional stopping or repeated confirmation",
+      "status": "MITIGATED",
+      "evidence": "Both confirmation roles have access_count=1 and rerun is prohibited."
+    },
+    {
+      "risk": "selective reporting across heartbeat intervals",
+      "status": "MITIGATED",
+      "evidence": "All preregistered intervals and all four N values are retained, including negative results."
+    },
+    {
+      "risk": "aggregation or Simpson effect",
+      "status": "DETECTED_AND_CORRECTED",
+      "evidence": "The pooled Gilbert-Elliott proxy was not treated as stationary; flight-level heterogeneity and segment-level lag are reported separately."
+    },
+    {
+      "risk": "mean-only reporting hides heterogeneity",
+      "status": "MITIGATED",
+      "evidence": "Flight-cluster intervals, 0-to-0.8 rate range, and an overdispersion test accompany the pooled mean."
+    },
+    {
+      "risk": "causal overclaim from proxy data",
+      "status": "MITIGATED",
+      "evidence": "AADM uplink loss and ALFA FCU faults are not claimed to cause or equal semantic receiver-context loss."
+    },
+    {
+      "risk": "absence of evidence treated as zero events",
+      "status": "MITIGATED",
+      "evidence": "Zero observed ALFA boot resets is accompanied by coverage, duration, and a weak zero-event upper bound."
+    },
+    {
+      "risk": "metric or construct mismatch",
+      "status": "ACTIVE_LIMITATION",
+      "evidence": "Internal frame gaps are a lower-bound LoRa uplink proxy and do not calibrate ACK loss or exact semantic packet loss."
+    },
+    {
+      "risk": "external-validity overclaim",
+      "status": "ACTIVE_LIMITATION",
+      "evidence": "No target-board process restart, power interruption, persistent-state, or independent spectrum-algorithm Final was performed."
+    }
+  ],
+  "frozen_decision": {
+    "candidate_id": "S6R-FH10-v1",
+    "algorithm_or_protocol_change": "NONE",
+    "stage8_public_data_work": "COMPLETE",
+    "stage8_hardware_validation": "NOT_EXECUTED",
+    "next_valid_research_action": "instrument a real receiver process or hardware-in-the-loop target to observe boot identity, process lifetime, persistent codebook version, volatile action cache, packet/ACK outcomes, and recovery latency"
+  },
+  "claim_boundary": [
+    "Stage-8 provides fault-model and protocol-boundary evidence, not a new algorithm Final.",
+    "The full development flight-hierarchical Bernoulli model was not confirmed because confirmation showed strong segment-level dependence.",
+    "Fixed10 is retained because no alternative passed the frozen development gate, not because it was proven globally optimal.",
+    "Stage-6 Final remains failed and Stage-7 remains without an independent external Final."
+  ]
+}

@@ -1,0 +1,3522 @@
+{
+  "version": "1.0",
+  "status": "STAGE8_FAULT_CONFIRMATION_COMPLETE",
+  "verification_status": "SINGLE_USE_CONFIRMATION",
+  "experiment_id": "stage8_fault_confirmation_v1",
+  "config_sha256": "e6afa1527f1b9fa32bb80c0b417e066854f1c3818e6ef3b27660452e9a459252",
+  "frozen_input_hashes": {
+    "split": "70a0b4f03c15f7df1d7ddb4fcec2a35622de14e5f417b47b850120870955a3e0",
+    "fault_model": "88bac200f95964c8888755959f82a94a134701e3ef02e9dc46f985b78ed4d605",
+    "development_replay": "5a6f8f7117acccbf42fc6b71f68830de4bfee50db6f1d93e99cf3dbda8172859"
+  },
+  "access_state_after_start": {
+    "schema_version": "stage8-fault-confirmation-access-state-v1",
+    "experiment_id": "stage8_fault_confirmation_v1",
+    "execution_started": true,
+    "roles": {
+      "aadm_confirmation": {
+        "access_count": 1,
+        "signal_values_accessed": true,
+        "first_access_at_utc": "2026-07-30T12:35:28.764690+00:00",
+        "unit_count": 20,
+        "unit_ids": [
+          "932vol3_flight3",
+          "799vol3_flight15",
+          "779vol3_flight6",
+          "1004vol3_flight30",
+          "1004vol2_flight29",
+          "1047vol2_flight8",
+          "828vol1_flight10",
+          "932vol1_flight1",
+          "779vol1_flight4",
+          "1004vol1_flight28",
+          "1047vol1_flight7",
+          "866vol2_flight23",
+          "934vol1_flight19",
+          "866vol1_flight22",
+          "866vol3_flight24",
+          "1050vol1_flight16",
+          "799vol2_flight14",
+          "928vol3_flight27",
+          "799vol1_flight13",
+          "792vol1_flight31"
+        ]
+      },
+      "alfa_confirmation": {
+        "access_count": 1,
+        "signal_values_accessed": true,
+        "first_access_at_utc": "2026-07-30T12:35:28.764690+00:00",
+        "unit_count": 20,
+        "unit_ids": [
+          "carbonZ_2018-10-05-14-37-22",
+          "carbonZ_2018-07-30-17-02-48",
+          "carbonZ_2018-09-11-11-33-39",
+          "carbonZ_2018-09-11-14-42-06",
+          "carbonZ_2018-09-11-17-55-30",
+          "carbonZ_2018-09-11-13-57-47",
+          "carbonZ_2018-10-18-11-04-35",
+          "carbonZ_2018-09-11-15-05-11",
+          "carbonZ_2018-09-11-14-52-54",
+          "carbonZ_2018-07-30-17-10-45",
+          "carbonZ_2018-09-11-17-25-17",
+          "carbonZ_2018-10-05-15-55-10",
+          "carbonZ_2018-10-05-14-34-20",
+          "carbonZ_2018-09-11-14-16-55",
+          "carbonZ_2018-09-11-15-06-34",
+          "carbonZ_2018-07-18-16-37-39",
+          "carbonZ_2018-07-18-16-22-01",
+          "carbonZ_2018-07-30-17-36-35",
+          "carbonZ_2018-09-11-14-22-07",
+          "carbonZ_2018-07-30-17-46-31"
+        ]
+      }
+    },
+    "evidence": null,
+    "prohibitions": [
+      "Do not reset access_count.",
+      "Do not rerun after execution_started becomes true.",
+      "Do not tune the fault estimator, heartbeat interval, or protocol after confirmation access."
+    ]
+  },
+  "aadm_confirmation": {
+    "independent_flight_count": 20,
+    "received_unique_packets": 3175,
+    "internal_frame_span": 3690,
+    "internal_gap_count": 516,
+    "pooled_internal_gap_fraction_lower_bound": 0.13983739837398373,
+    "cluster_bootstrap_95_ci": [
+      0.03225806451612903,
+      0.27082502458767715
+    ],
+    "fixed_10_percent_inside_interval": true,
+    "flights_with_any_internal_gap": 7,
+    "flight_gap_fraction_minimum": 0.0,
+    "flight_gap_fraction_maximum": 0.8,
+    "flights_with_counter_restart": 5,
+    "maximum_loss_run": 21,
+    "maximum_absolute_segment_lag1": 0.8071428571428572,
+    "short_range_lag1_threshold": 0.1,
+    "homogeneous_binomial_overdispersion_test": {
+      "pooled_probability": 0.13983739837398373,
+      "pearson_statistic": 1901.0069322063423,
+      "degrees_of_freedom": 19,
+      "monte_carlo_replicates": 20000,
+      "monte_carlo_p_value": 4.999750012499375e-05
+    },
+    "homogeneous_model_rejected": true,
+    "confirmation_minus_development_gap_fraction": {
+      "mean": -0.15410747891198318,
+      "ci_lower": -0.3674526728327128,
+      "ci_upper": 0.06219033822235747
+    },
+    "per_flight": [
+      {
+        "flight_id": "932vol3_flight3",
+        "member": "AADM2025Dryad/LORA/932vol3_flight3/LORAlog.csv",
+        "row_count": 1071,
+        "malformed_row_count": 0,
+        "unique_packet_count": 284,
+        "gateway_count": 6,
+        "segment_count": 1,
+        "counter_restart_events": 0,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 284,
+        "internal_gap_count": 0,
+        "internal_gap_fraction_lower_bound": 0.0,
+        "transition_counts": {
+          "success_to_success": 283,
+          "success_to_failure": 0,
+          "failure_to_success": 0,
+          "failure_to_failure": 0
+        },
+        "lag1_failure_correlation": null,
+        "loss_run_count": 0,
+        "maximum_loss_run": 0,
+        "mean_loss_run": 0.0,
+        "median_observed_interarrival_seconds": 2.4425768852233887,
+        "median_best_gateway_snr_db": 12.800000190734863,
+        "median_best_gateway_rssi_dbm": -68.0,
+        "mean_gateways_per_received_packet": 3.7711267605633805,
+        "segments": [
+          {
+            "start_counter": 43,
+            "end_counter": 326,
+            "received_packet_count": 284,
+            "internal_frame_span": 284,
+            "internal_gap_count": 0,
+            "internal_gap_fraction_lower_bound": 0.0,
+            "lag1_failure_correlation": null,
+            "maximum_loss_run": 0,
+            "loss_trace_rle": [
+              [
+                0,
+                284
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "799vol3_flight15",
+        "member": "AADM2025Dryad/LORA/799vol3_flight15/LORAlog.csv",
+        "row_count": 849,
+        "malformed_row_count": 0,
+        "unique_packet_count": 226,
+        "gateway_count": 6,
+        "segment_count": 1,
+        "counter_restart_events": 0,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 226,
+        "internal_gap_count": 0,
+        "internal_gap_fraction_lower_bound": 0.0,
+        "transition_counts": {
+          "success_to_success": 225,
+          "success_to_failure": 0,
+          "failure_to_success": 0,
+          "failure_to_failure": 0
+        },
+        "lag1_failure_correlation": null,
+        "loss_run_count": 0,
+        "maximum_loss_run": 0,
+        "mean_loss_run": 0.0,
+        "median_observed_interarrival_seconds": 2.4524998664855957,
+        "median_best_gateway_snr_db": 13.199999809265137,
+        "median_best_gateway_rssi_dbm": -69.0,
+        "mean_gateways_per_received_packet": 3.756637168141593,
+        "segments": [
+          {
+            "start_counter": 2,
+            "end_counter": 227,
+            "received_packet_count": 226,
+            "internal_frame_span": 226,
+            "internal_gap_count": 0,
+            "internal_gap_fraction_lower_bound": 0.0,
+            "lag1_failure_correlation": null,
+            "maximum_loss_run": 0,
+            "loss_trace_rle": [
+              [
+                0,
+                226
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "779vol3_flight6",
+        "member": "AADM2025Dryad/LORA/779vol3_flight6/LORAlog.csv",
+        "row_count": 987,
+        "malformed_row_count": 0,
+        "unique_packet_count": 263,
+        "gateway_count": 6,
+        "segment_count": 1,
+        "counter_restart_events": 0,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 263,
+        "internal_gap_count": 0,
+        "internal_gap_fraction_lower_bound": 0.0,
+        "transition_counts": {
+          "success_to_success": 262,
+          "success_to_failure": 0,
+          "failure_to_success": 0,
+          "failure_to_failure": 0
+        },
+        "lag1_failure_correlation": null,
+        "loss_run_count": 0,
+        "maximum_loss_run": 0,
+        "mean_loss_run": 0.0,
+        "median_observed_interarrival_seconds": 2.4410308599472046,
+        "median_best_gateway_snr_db": 13.300000190734863,
+        "median_best_gateway_rssi_dbm": -63.0,
+        "mean_gateways_per_received_packet": 3.752851711026616,
+        "segments": [
+          {
+            "start_counter": 16,
+            "end_counter": 278,
+            "received_packet_count": 263,
+            "internal_frame_span": 263,
+            "internal_gap_count": 0,
+            "internal_gap_fraction_lower_bound": 0.0,
+            "lag1_failure_correlation": null,
+            "maximum_loss_run": 0,
+            "loss_trace_rle": [
+              [
+                0,
+                263
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "1004vol3_flight30",
+        "member": "AADM2025Dryad/LORA/1004vol3_flight30/LORAlog.csv",
+        "row_count": 88,
+        "malformed_row_count": 0,
+        "unique_packet_count": 29,
+        "gateway_count": 5,
+        "segment_count": 1,
+        "counter_restart_events": 0,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 29,
+        "internal_gap_count": 0,
+        "internal_gap_fraction_lower_bound": 0.0,
+        "transition_counts": {
+          "success_to_success": 28,
+          "success_to_failure": 0,
+          "failure_to_success": 0,
+          "failure_to_failure": 0
+        },
+        "lag1_failure_correlation": null,
+        "loss_run_count": 0,
+        "maximum_loss_run": 0,
+        "mean_loss_run": 0.0,
+        "median_observed_interarrival_seconds": 2.4576849937438965,
+        "median_best_gateway_snr_db": 12.5,
+        "median_best_gateway_rssi_dbm": -72.0,
+        "mean_gateways_per_received_packet": 3.0344827586206895,
+        "segments": [
+          {
+            "start_counter": 2,
+            "end_counter": 30,
+            "received_packet_count": 29,
+            "internal_frame_span": 29,
+            "internal_gap_count": 0,
+            "internal_gap_fraction_lower_bound": 0.0,
+            "lag1_failure_correlation": null,
+            "maximum_loss_run": 0,
+            "loss_trace_rle": [
+              [
+                0,
+                29
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "1004vol2_flight29",
+        "member": "AADM2025Dryad/LORA/1004vol2_flight29/LORAlog.csv",
+        "row_count": 42,
+        "malformed_row_count": 0,
+        "unique_packet_count": 14,
+        "gateway_count": 5,
+        "segment_count": 1,
+        "counter_restart_events": 0,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 70,
+        "internal_gap_count": 56,
+        "internal_gap_fraction_lower_bound": 0.8,
+        "transition_counts": {
+          "success_to_success": 4,
+          "success_to_failure": 9,
+          "failure_to_success": 9,
+          "failure_to_failure": 47
+        },
+        "lag1_failure_correlation": 0.14697802197802198,
+        "loss_run_count": 9,
+        "maximum_loss_run": 14,
+        "mean_loss_run": 6.222222222222222,
+        "median_observed_interarrival_seconds": 10.04752802848816,
+        "median_best_gateway_snr_db": 10.400000095367432,
+        "median_best_gateway_rssi_dbm": -83.0,
+        "mean_gateways_per_received_packet": 3.0,
+        "segments": [
+          {
+            "start_counter": 0,
+            "end_counter": 69,
+            "received_packet_count": 14,
+            "internal_frame_span": 70,
+            "internal_gap_count": 56,
+            "internal_gap_fraction_lower_bound": 0.8,
+            "lag1_failure_correlation": 0.14697802197802198,
+            "maximum_loss_run": 14,
+            "loss_trace_rle": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                6
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                14
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                12
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                10
+              ],
+              [
+                0,
+                2
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "1047vol2_flight8",
+        "member": "AADM2025Dryad/LORA/1047vol2_flight8/LORAlog.csv",
+        "row_count": 429,
+        "malformed_row_count": 0,
+        "unique_packet_count": 119,
+        "gateway_count": 6,
+        "segment_count": 1,
+        "counter_restart_events": 0,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 119,
+        "internal_gap_count": 0,
+        "internal_gap_fraction_lower_bound": 0.0,
+        "transition_counts": {
+          "success_to_success": 118,
+          "success_to_failure": 0,
+          "failure_to_success": 0,
+          "failure_to_failure": 0
+        },
+        "lag1_failure_correlation": null,
+        "loss_run_count": 0,
+        "maximum_loss_run": 0,
+        "mean_loss_run": 0.0,
+        "median_observed_interarrival_seconds": 2.439155101776123,
+        "median_best_gateway_snr_db": 13.300000190734863,
+        "median_best_gateway_rssi_dbm": -67.0,
+        "mean_gateways_per_received_packet": 3.6050420168067228,
+        "segments": [
+          {
+            "start_counter": 44,
+            "end_counter": 162,
+            "received_packet_count": 119,
+            "internal_frame_span": 119,
+            "internal_gap_count": 0,
+            "internal_gap_fraction_lower_bound": 0.0,
+            "lag1_failure_correlation": null,
+            "maximum_loss_run": 0,
+            "loss_trace_rle": [
+              [
+                0,
+                119
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "828vol1_flight10",
+        "member": "AADM2025Dryad/LORA/828vol1_flight10/LORAlog.csv",
+        "row_count": 42,
+        "malformed_row_count": 0,
+        "unique_packet_count": 14,
+        "gateway_count": 4,
+        "segment_count": 1,
+        "counter_restart_events": 0,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 14,
+        "internal_gap_count": 0,
+        "internal_gap_fraction_lower_bound": 0.0,
+        "transition_counts": {
+          "success_to_success": 13,
+          "success_to_failure": 0,
+          "failure_to_success": 0,
+          "failure_to_failure": 0
+        },
+        "lag1_failure_correlation": null,
+        "loss_run_count": 0,
+        "maximum_loss_run": 0,
+        "mean_loss_run": 0.0,
+        "median_observed_interarrival_seconds": 2.451820135116577,
+        "median_best_gateway_snr_db": 13.400000095367432,
+        "median_best_gateway_rssi_dbm": -70.0,
+        "mean_gateways_per_received_packet": 3.0,
+        "segments": [
+          {
+            "start_counter": 2,
+            "end_counter": 15,
+            "received_packet_count": 14,
+            "internal_frame_span": 14,
+            "internal_gap_count": 0,
+            "internal_gap_fraction_lower_bound": 0.0,
+            "lag1_failure_correlation": null,
+            "maximum_loss_run": 0,
+            "loss_trace_rle": [
+              [
+                0,
+                14
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "932vol1_flight1",
+        "member": "AADM2025Dryad/LORA/932vol1_flight1/LORAlog.csv",
+        "row_count": 824,
+        "malformed_row_count": 0,
+        "unique_packet_count": 210,
+        "gateway_count": 6,
+        "segment_count": 2,
+        "counter_restart_events": 1,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 313,
+        "internal_gap_count": 103,
+        "internal_gap_fraction_lower_bound": 0.329073482428115,
+        "transition_counts": {
+          "success_to_success": 186,
+          "success_to_failure": 22,
+          "failure_to_success": 22,
+          "failure_to_failure": 81
+        },
+        "lag1_failure_correlation": 0.0530744336569579,
+        "loss_run_count": 22,
+        "maximum_loss_run": 21,
+        "mean_loss_run": 4.681818181818182,
+        "median_observed_interarrival_seconds": 2.4626119136810303,
+        "median_best_gateway_snr_db": 13.0,
+        "median_best_gateway_rssi_dbm": -70.0,
+        "mean_gateways_per_received_packet": 3.9238095238095236,
+        "segments": [
+          {
+            "start_counter": 506,
+            "end_counter": 684,
+            "received_packet_count": 179,
+            "internal_frame_span": 179,
+            "internal_gap_count": 0,
+            "internal_gap_fraction_lower_bound": 0.0,
+            "lag1_failure_correlation": null,
+            "maximum_loss_run": 0,
+            "loss_trace_rle": [
+              [
+                0,
+                179
+              ]
+            ]
+          },
+          {
+            "start_counter": 1,
+            "end_counter": 134,
+            "received_packet_count": 31,
+            "internal_frame_span": 134,
+            "internal_gap_count": 103,
+            "internal_gap_fraction_lower_bound": 0.7686567164179104,
+            "lag1_failure_correlation": 0.0530744336569579,
+            "maximum_loss_run": 21,
+            "loss_trace_rle": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                6
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                9
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                16
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                21
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "779vol1_flight4",
+        "member": "AADM2025Dryad/LORA/779vol1_flight4/LORAlog.csv",
+        "row_count": 163,
+        "malformed_row_count": 0,
+        "unique_packet_count": 41,
+        "gateway_count": 6,
+        "segment_count": 1,
+        "counter_restart_events": 0,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 55,
+        "internal_gap_count": 14,
+        "internal_gap_fraction_lower_bound": 0.2545454545454545,
+        "transition_counts": {
+          "success_to_success": 38,
+          "success_to_failure": 2,
+          "failure_to_success": 2,
+          "failure_to_failure": 12
+        },
+        "lag1_failure_correlation": 0.8071428571428572,
+        "loss_run_count": 2,
+        "maximum_loss_run": 8,
+        "mean_loss_run": 7.0,
+        "median_observed_interarrival_seconds": 2.4596410989761353,
+        "median_best_gateway_snr_db": 13.199999809265137,
+        "median_best_gateway_rssi_dbm": -70.0,
+        "mean_gateways_per_received_packet": 3.975609756097561,
+        "segments": [
+          {
+            "start_counter": 2,
+            "end_counter": 56,
+            "received_packet_count": 41,
+            "internal_frame_span": 55,
+            "internal_gap_count": 14,
+            "internal_gap_fraction_lower_bound": 0.2545454545454545,
+            "lag1_failure_correlation": 0.8071428571428572,
+            "maximum_loss_run": 8,
+            "loss_trace_rle": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                8
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                6
+              ],
+              [
+                0,
+                39
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "1004vol1_flight28",
+        "member": "AADM2025Dryad/LORA/1004vol1_flight28/LORAlog.csv",
+        "row_count": 104,
+        "malformed_row_count": 0,
+        "unique_packet_count": 33,
+        "gateway_count": 5,
+        "segment_count": 1,
+        "counter_restart_events": 0,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 33,
+        "internal_gap_count": 0,
+        "internal_gap_fraction_lower_bound": 0.0,
+        "transition_counts": {
+          "success_to_success": 32,
+          "success_to_failure": 0,
+          "failure_to_success": 0,
+          "failure_to_failure": 0
+        },
+        "lag1_failure_correlation": null,
+        "loss_run_count": 0,
+        "maximum_loss_run": 0,
+        "mean_loss_run": 0.0,
+        "median_observed_interarrival_seconds": 2.4626535177230835,
+        "median_best_gateway_snr_db": 12.0,
+        "median_best_gateway_rssi_dbm": -78.0,
+        "mean_gateways_per_received_packet": 3.1515151515151514,
+        "segments": [
+          {
+            "start_counter": 3,
+            "end_counter": 35,
+            "received_packet_count": 33,
+            "internal_frame_span": 33,
+            "internal_gap_count": 0,
+            "internal_gap_fraction_lower_bound": 0.0,
+            "lag1_failure_correlation": null,
+            "maximum_loss_run": 0,
+            "loss_trace_rle": [
+              [
+                0,
+                33
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "1047vol1_flight7",
+        "member": "AADM2025Dryad/LORA/1047vol1_flight7/LORAlog.csv",
+        "row_count": 692,
+        "malformed_row_count": 0,
+        "unique_packet_count": 197,
+        "gateway_count": 6,
+        "segment_count": 1,
+        "counter_restart_events": 0,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 197,
+        "internal_gap_count": 0,
+        "internal_gap_fraction_lower_bound": 0.0,
+        "transition_counts": {
+          "success_to_success": 196,
+          "success_to_failure": 0,
+          "failure_to_success": 0,
+          "failure_to_failure": 0
+        },
+        "lag1_failure_correlation": null,
+        "loss_run_count": 0,
+        "maximum_loss_run": 0,
+        "mean_loss_run": 0.0,
+        "median_observed_interarrival_seconds": 2.449926972389221,
+        "median_best_gateway_snr_db": 13.300000190734863,
+        "median_best_gateway_rssi_dbm": -65.0,
+        "mean_gateways_per_received_packet": 3.512690355329949,
+        "segments": [
+          {
+            "start_counter": 38,
+            "end_counter": 234,
+            "received_packet_count": 197,
+            "internal_frame_span": 197,
+            "internal_gap_count": 0,
+            "internal_gap_fraction_lower_bound": 0.0,
+            "lag1_failure_correlation": null,
+            "maximum_loss_run": 0,
+            "loss_trace_rle": [
+              [
+                0,
+                197
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "866vol2_flight23",
+        "member": "AADM2025Dryad/LORA/866vol2_flight23/LORAlog.csv",
+        "row_count": 1043,
+        "malformed_row_count": 0,
+        "unique_packet_count": 279,
+        "gateway_count": 6,
+        "segment_count": 1,
+        "counter_restart_events": 0,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 279,
+        "internal_gap_count": 0,
+        "internal_gap_fraction_lower_bound": 0.0,
+        "transition_counts": {
+          "success_to_success": 278,
+          "success_to_failure": 0,
+          "failure_to_success": 0,
+          "failure_to_failure": 0
+        },
+        "lag1_failure_correlation": null,
+        "loss_run_count": 0,
+        "maximum_loss_run": 0,
+        "mean_loss_run": 0.0,
+        "median_observed_interarrival_seconds": 2.439422607421875,
+        "median_best_gateway_snr_db": 13.199999809265137,
+        "median_best_gateway_rssi_dbm": -68.0,
+        "mean_gateways_per_received_packet": 3.738351254480287,
+        "segments": [
+          {
+            "start_counter": 4,
+            "end_counter": 282,
+            "received_packet_count": 279,
+            "internal_frame_span": 279,
+            "internal_gap_count": 0,
+            "internal_gap_fraction_lower_bound": 0.0,
+            "lag1_failure_correlation": null,
+            "maximum_loss_run": 0,
+            "loss_trace_rle": [
+              [
+                0,
+                279
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "934vol1_flight19",
+        "member": "AADM2025Dryad/LORA/934vol1_flight19/LORAlog.csv",
+        "row_count": 380,
+        "malformed_row_count": 0,
+        "unique_packet_count": 106,
+        "gateway_count": 6,
+        "segment_count": 2,
+        "counter_restart_events": 1,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 254,
+        "internal_gap_count": 148,
+        "internal_gap_fraction_lower_bound": 0.5826771653543307,
+        "transition_counts": {
+          "success_to_success": 67,
+          "success_to_failure": 37,
+          "failure_to_success": 37,
+          "failure_to_failure": 111
+        },
+        "lag1_failure_correlation": -0.09090909090909091,
+        "loss_run_count": 37,
+        "maximum_loss_run": 12,
+        "mean_loss_run": 4.0,
+        "median_observed_interarrival_seconds": 2.8160825967788696,
+        "median_best_gateway_snr_db": 12.5,
+        "median_best_gateway_rssi_dbm": -70.0,
+        "mean_gateways_per_received_packet": 3.5849056603773586,
+        "segments": [
+          {
+            "start_counter": 1,
+            "end_counter": 61,
+            "received_packet_count": 61,
+            "internal_frame_span": 61,
+            "internal_gap_count": 0,
+            "internal_gap_fraction_lower_bound": 0.0,
+            "lag1_failure_correlation": null,
+            "maximum_loss_run": 0,
+            "loss_trace_rle": [
+              [
+                0,
+                61
+              ]
+            ]
+          },
+          {
+            "start_counter": 6,
+            "end_counter": 198,
+            "received_packet_count": 45,
+            "internal_frame_span": 193,
+            "internal_gap_count": 148,
+            "internal_gap_fraction_lower_bound": 0.7668393782383419,
+            "lag1_failure_correlation": -0.09090909090909091,
+            "maximum_loss_run": 12,
+            "loss_trace_rle": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                9
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                9
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                6
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                8
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                8
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                12
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                10
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "866vol1_flight22",
+        "member": "AADM2025Dryad/LORA/866vol1_flight22/LORAlog.csv",
+        "row_count": 229,
+        "malformed_row_count": 0,
+        "unique_packet_count": 63,
+        "gateway_count": 5,
+        "segment_count": 2,
+        "counter_restart_events": 1,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 241,
+        "internal_gap_count": 178,
+        "internal_gap_fraction_lower_bound": 0.7385892116182573,
+        "transition_counts": {
+          "success_to_success": 22,
+          "success_to_failure": 39,
+          "failure_to_success": 39,
+          "failure_to_failure": 139
+        },
+        "lag1_failure_correlation": 0.030898876404494385,
+        "loss_run_count": 39,
+        "maximum_loss_run": 16,
+        "mean_loss_run": 4.564102564102564,
+        "median_observed_interarrival_seconds": 7.224161148071289,
+        "median_best_gateway_snr_db": 13.0,
+        "median_best_gateway_rssi_dbm": -68.0,
+        "mean_gateways_per_received_packet": 3.634920634920635,
+        "segments": [
+          {
+            "start_counter": 1,
+            "end_counter": 10,
+            "received_packet_count": 10,
+            "internal_frame_span": 10,
+            "internal_gap_count": 0,
+            "internal_gap_fraction_lower_bound": 0.0,
+            "lag1_failure_correlation": null,
+            "maximum_loss_run": 0,
+            "loss_trace_rle": [
+              [
+                0,
+                10
+              ]
+            ]
+          },
+          {
+            "start_counter": 4,
+            "end_counter": 234,
+            "received_packet_count": 53,
+            "internal_frame_span": 231,
+            "internal_gap_count": 178,
+            "internal_gap_fraction_lower_bound": 0.7705627705627706,
+            "lag1_failure_correlation": 0.030898876404494385,
+            "maximum_loss_run": 16,
+            "loss_trace_rle": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                8
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                6
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                6
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                11
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                8
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                13
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                16
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                10
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                11
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "866vol3_flight24",
+        "member": "AADM2025Dryad/LORA/866vol3_flight24/LORAlog.csv",
+        "row_count": 847,
+        "malformed_row_count": 0,
+        "unique_packet_count": 255,
+        "gateway_count": 5,
+        "segment_count": 1,
+        "counter_restart_events": 0,
+        "duplicate_counter_packets_within_segments": 1,
+        "internal_frame_span": 254,
+        "internal_gap_count": 0,
+        "internal_gap_fraction_lower_bound": 0.0,
+        "transition_counts": {
+          "success_to_success": 253,
+          "success_to_failure": 0,
+          "failure_to_success": 0,
+          "failure_to_failure": 0
+        },
+        "lag1_failure_correlation": null,
+        "loss_run_count": 0,
+        "maximum_loss_run": 0,
+        "mean_loss_run": 0.0,
+        "median_observed_interarrival_seconds": 2.447219967842102,
+        "median_best_gateway_snr_db": 12.800000190734863,
+        "median_best_gateway_rssi_dbm": -74.0,
+        "mean_gateways_per_received_packet": 3.3215686274509806,
+        "segments": [
+          {
+            "start_counter": 1,
+            "end_counter": 254,
+            "received_packet_count": 254,
+            "internal_frame_span": 254,
+            "internal_gap_count": 0,
+            "internal_gap_fraction_lower_bound": 0.0,
+            "lag1_failure_correlation": null,
+            "maximum_loss_run": 0,
+            "loss_trace_rle": [
+              [
+                0,
+                254
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "1050vol1_flight16",
+        "member": "AADM2025Dryad/LORA/1050vol1_flight16/LORAlog.csv",
+        "row_count": 1131,
+        "malformed_row_count": 0,
+        "unique_packet_count": 298,
+        "gateway_count": 5,
+        "segment_count": 1,
+        "counter_restart_events": 0,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 298,
+        "internal_gap_count": 0,
+        "internal_gap_fraction_lower_bound": 0.0,
+        "transition_counts": {
+          "success_to_success": 297,
+          "success_to_failure": 0,
+          "failure_to_success": 0,
+          "failure_to_failure": 0
+        },
+        "lag1_failure_correlation": null,
+        "loss_run_count": 0,
+        "maximum_loss_run": 0,
+        "mean_loss_run": 0.0,
+        "median_observed_interarrival_seconds": 2.44166898727417,
+        "median_best_gateway_snr_db": 13.0,
+        "median_best_gateway_rssi_dbm": -73.0,
+        "mean_gateways_per_received_packet": 3.795302013422819,
+        "segments": [
+          {
+            "start_counter": 1,
+            "end_counter": 298,
+            "received_packet_count": 298,
+            "internal_frame_span": 298,
+            "internal_gap_count": 0,
+            "internal_gap_fraction_lower_bound": 0.0,
+            "lag1_failure_correlation": null,
+            "maximum_loss_run": 0,
+            "loss_trace_rle": [
+              [
+                0,
+                298
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "799vol2_flight14",
+        "member": "AADM2025Dryad/LORA/799vol2_flight14/LORAlog.csv",
+        "row_count": 752,
+        "malformed_row_count": 0,
+        "unique_packet_count": 206,
+        "gateway_count": 6,
+        "segment_count": 2,
+        "counter_restart_events": 1,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 210,
+        "internal_gap_count": 4,
+        "internal_gap_fraction_lower_bound": 0.01904761904761905,
+        "transition_counts": {
+          "success_to_success": 203,
+          "success_to_failure": 1,
+          "failure_to_success": 1,
+          "failure_to_failure": 3
+        },
+        "lag1_failure_correlation": 0.4166666666666667,
+        "loss_run_count": 1,
+        "maximum_loss_run": 4,
+        "mean_loss_run": 4.0,
+        "median_observed_interarrival_seconds": 2.452265501022339,
+        "median_best_gateway_snr_db": 13.199999809265137,
+        "median_best_gateway_rssi_dbm": -67.0,
+        "mean_gateways_per_received_packet": 3.650485436893204,
+        "segments": [
+          {
+            "start_counter": 2,
+            "end_counter": 203,
+            "received_packet_count": 202,
+            "internal_frame_span": 202,
+            "internal_gap_count": 0,
+            "internal_gap_fraction_lower_bound": 0.0,
+            "lag1_failure_correlation": null,
+            "maximum_loss_run": 0,
+            "loss_trace_rle": [
+              [
+                0,
+                202
+              ]
+            ]
+          },
+          {
+            "start_counter": 2,
+            "end_counter": 9,
+            "received_packet_count": 4,
+            "internal_frame_span": 8,
+            "internal_gap_count": 4,
+            "internal_gap_fraction_lower_bound": 0.5,
+            "lag1_failure_correlation": 0.4166666666666667,
+            "maximum_loss_run": 4,
+            "loss_trace_rle": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                0,
+                1
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "928vol3_flight27",
+        "member": "AADM2025Dryad/LORA/928vol3_flight27/LORAlog.csv",
+        "row_count": 583,
+        "malformed_row_count": 0,
+        "unique_packet_count": 179,
+        "gateway_count": 5,
+        "segment_count": 1,
+        "counter_restart_events": 0,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 179,
+        "internal_gap_count": 0,
+        "internal_gap_fraction_lower_bound": 0.0,
+        "transition_counts": {
+          "success_to_success": 178,
+          "success_to_failure": 0,
+          "failure_to_success": 0,
+          "failure_to_failure": 0
+        },
+        "lag1_failure_correlation": null,
+        "loss_run_count": 0,
+        "maximum_loss_run": 0,
+        "mean_loss_run": 0.0,
+        "median_observed_interarrival_seconds": 2.445314407348633,
+        "median_best_gateway_snr_db": 13.0,
+        "median_best_gateway_rssi_dbm": -66.0,
+        "mean_gateways_per_received_packet": 3.2569832402234637,
+        "segments": [
+          {
+            "start_counter": 5,
+            "end_counter": 183,
+            "received_packet_count": 179,
+            "internal_frame_span": 179,
+            "internal_gap_count": 0,
+            "internal_gap_fraction_lower_bound": 0.0,
+            "lag1_failure_correlation": null,
+            "maximum_loss_run": 0,
+            "loss_trace_rle": [
+              [
+                0,
+                179
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "799vol1_flight13",
+        "member": "AADM2025Dryad/LORA/799vol1_flight13/LORAlog.csv",
+        "row_count": 816,
+        "malformed_row_count": 0,
+        "unique_packet_count": 205,
+        "gateway_count": 6,
+        "segment_count": 2,
+        "counter_restart_events": 1,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 218,
+        "internal_gap_count": 13,
+        "internal_gap_fraction_lower_bound": 0.05963302752293578,
+        "transition_counts": {
+          "success_to_success": 200,
+          "success_to_failure": 3,
+          "failure_to_success": 3,
+          "failure_to_failure": 10
+        },
+        "lag1_failure_correlation": 0.08083333333333333,
+        "loss_run_count": 3,
+        "maximum_loss_run": 7,
+        "mean_loss_run": 4.333333333333333,
+        "median_observed_interarrival_seconds": 2.4538440704345703,
+        "median_best_gateway_snr_db": 13.199999809265137,
+        "median_best_gateway_rssi_dbm": -65.0,
+        "mean_gateways_per_received_packet": 3.9804878048780488,
+        "segments": [
+          {
+            "start_counter": 0,
+            "end_counter": 201,
+            "received_packet_count": 201,
+            "internal_frame_span": 202,
+            "internal_gap_count": 1,
+            "internal_gap_fraction_lower_bound": 0.0049504950495049506,
+            "lag1_failure_correlation": -0.005000000000000001,
+            "maximum_loss_run": 1,
+            "loss_trace_rle": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                200
+              ]
+            ]
+          },
+          {
+            "start_counter": 0,
+            "end_counter": 15,
+            "received_packet_count": 4,
+            "internal_frame_span": 16,
+            "internal_gap_count": 12,
+            "internal_gap_fraction_lower_bound": 0.75,
+            "lag1_failure_correlation": 0.16666666666666666,
+            "maximum_loss_run": 7,
+            "loss_trace_rle": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                7
+              ],
+              [
+                0,
+                2
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "flight_id": "792vol1_flight31",
+        "member": "AADM2025Dryad/LORA/792vol1_flight31/LORAlog.csv",
+        "row_count": 569,
+        "malformed_row_count": 0,
+        "unique_packet_count": 154,
+        "gateway_count": 6,
+        "segment_count": 1,
+        "counter_restart_events": 0,
+        "duplicate_counter_packets_within_segments": 0,
+        "internal_frame_span": 154,
+        "internal_gap_count": 0,
+        "internal_gap_fraction_lower_bound": 0.0,
+        "transition_counts": {
+          "success_to_success": 153,
+          "success_to_failure": 0,
+          "failure_to_success": 0,
+          "failure_to_failure": 0
+        },
+        "lag1_failure_correlation": null,
+        "loss_run_count": 0,
+        "maximum_loss_run": 0,
+        "mean_loss_run": 0.0,
+        "median_observed_interarrival_seconds": 2.4531378746032715,
+        "median_best_gateway_snr_db": 13.300000190734863,
+        "median_best_gateway_rssi_dbm": -67.0,
+        "mean_gateways_per_received_packet": 3.6948051948051948,
+        "segments": [
+          {
+            "start_counter": 2,
+            "end_counter": 155,
+            "received_packet_count": 154,
+            "internal_frame_span": 154,
+            "internal_gap_count": 0,
+            "internal_gap_fraction_lower_bound": 0.0,
+            "lag1_failure_correlation": null,
+            "maximum_loss_run": 0,
+            "loss_trace_rle": [
+              [
+                0,
+                154
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "alfa_confirmation": {
+    "registered_raw_flight_count": 20,
+    "raw_flights_with_processed_coverage": 15,
+    "coverage_fraction": 0.75,
+    "processed_sequence_count": 24,
+    "merged_observed_duration_hours": 0.6866868448822222,
+    "system_time_boot_sample_count": 4197,
+    "fcu_boot_reset_event_count": 0,
+    "mavros_reconnect_transition_count": 0,
+    "mavros_disconnect_sample_count": 0,
+    "descriptive_zero_event_poisson_95_upper_rate_per_hour": 4.362588705289391,
+    "semantic_receiver_context_reset_probability_calibratable": false,
+    "per_raw_flight": [
+      {
+        "raw_flight_id": "carbonZ_2018-10-05-14-37-22",
+        "processed_sequence_count": 3,
+        "processed_sequence_ids": [
+          "carbonZ_2018-10-05-14-37-22_1_no_failure",
+          "carbonZ_2018-10-05-14-37-22_2_right_aileron_failure",
+          "carbonZ_2018-10-05-14-37-22_3_left_aileron_failure"
+        ],
+        "merged_observed_duration_seconds": 314.058339552,
+        "system_time_boot_sample_count": 688,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-07-30-17-02-48",
+        "processed_sequence_count": 0,
+        "processed_sequence_ids": [],
+        "merged_observed_duration_seconds": 0,
+        "system_time_boot_sample_count": 0,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-11-33-39",
+        "processed_sequence_count": 0,
+        "processed_sequence_ids": [],
+        "merged_observed_duration_seconds": 0,
+        "system_time_boot_sample_count": 0,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-14-42-06",
+        "processed_sequence_count": 0,
+        "processed_sequence_ids": [],
+        "merged_observed_duration_seconds": 0,
+        "system_time_boot_sample_count": 0,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-17-55-30",
+        "processed_sequence_count": 2,
+        "processed_sequence_ids": [
+          "carbonZ_2018-09-11-17-55-30_1_right_aileron_failure",
+          "carbonZ_2018-09-11-17-55-30_2_left_aileron_failure"
+        ],
+        "merged_observed_duration_seconds": 214.580232659,
+        "system_time_boot_sample_count": 283,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-13-57-47",
+        "processed_sequence_count": 0,
+        "processed_sequence_ids": [],
+        "merged_observed_duration_seconds": 0,
+        "system_time_boot_sample_count": 0,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-10-18-11-04-35",
+        "processed_sequence_count": 1,
+        "processed_sequence_ids": [
+          "carbonZ_2018-10-18-11-04-35_engine_failure_with_emr_traj"
+        ],
+        "merged_observed_duration_seconds": 109.246582816,
+        "system_time_boot_sample_count": 0,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-15-05-11",
+        "processed_sequence_count": 2,
+        "processed_sequence_ids": [
+          "carbonZ_2018-09-11-15-05-11_1_elevator_failure",
+          "carbonZ_2018-09-11-15-05-11_2_no_failure"
+        ],
+        "merged_observed_duration_seconds": 143.569439104,
+        "system_time_boot_sample_count": 147,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-14-52-54",
+        "processed_sequence_count": 1,
+        "processed_sequence_ids": [
+          "carbonZ_2018-09-11-14-52-54_left_aileron__right_aileron__failure"
+        ],
+        "merged_observed_duration_seconds": 233.384821792,
+        "system_time_boot_sample_count": 477,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-07-30-17-10-45",
+        "processed_sequence_count": 1,
+        "processed_sequence_ids": [
+          "carbonZ_2018-07-30-17-10-45_engine_failure_with_emr_traj"
+        ],
+        "merged_observed_duration_seconds": 133.133884437,
+        "system_time_boot_sample_count": 283,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-17-25-17",
+        "processed_sequence_count": 0,
+        "processed_sequence_ids": [],
+        "merged_observed_duration_seconds": 0,
+        "system_time_boot_sample_count": 0,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-10-05-15-55-10",
+        "processed_sequence_count": 1,
+        "processed_sequence_ids": [
+          "carbonZ_2018-10-05-15-55-10_engine_failure_with_emr_traj"
+        ],
+        "merged_observed_duration_seconds": 113.20080128,
+        "system_time_boot_sample_count": 242,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-10-05-14-34-20",
+        "processed_sequence_count": 2,
+        "processed_sequence_ids": [
+          "carbonZ_2018-10-05-14-34-20_1_no_failure",
+          "carbonZ_2018-10-05-14-34-20_2_right_aileron_failure_with_emr_traj"
+        ],
+        "merged_observed_duration_seconds": 228.956643648,
+        "system_time_boot_sample_count": 491,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-14-16-55",
+        "processed_sequence_count": 1,
+        "processed_sequence_ids": [
+          "carbonZ_2018-09-11-14-16-55_no_failure"
+        ],
+        "merged_observed_duration_seconds": 33.534992895,
+        "system_time_boot_sample_count": 74,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-15-06-34",
+        "processed_sequence_count": 3,
+        "processed_sequence_ids": [
+          "carbonZ_2018-09-11-15-06-34_1_rudder_right_failure",
+          "carbonZ_2018-09-11-15-06-34_2_rudder_right_failure",
+          "carbonZ_2018-09-11-15-06-34_3_rudder_left_failure"
+        ],
+        "merged_observed_duration_seconds": 208.92386611199998,
+        "system_time_boot_sample_count": 297,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-07-18-16-37-39",
+        "processed_sequence_count": 2,
+        "processed_sequence_ids": [
+          "carbonZ_2018-07-18-16-37-39_1_no_failure",
+          "carbonZ_2018-07-18-16-37-39_2_engine_failure_with_emr_traj"
+        ],
+        "merged_observed_duration_seconds": 160.83796433600003,
+        "system_time_boot_sample_count": 263,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-07-18-16-22-01",
+        "processed_sequence_count": 1,
+        "processed_sequence_ids": [
+          "carbonZ_2018-07-18-16-22-01_engine_failure_with_emr_traj"
+        ],
+        "merged_observed_duration_seconds": 132.504911921,
+        "system_time_boot_sample_count": 269,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-07-30-17-36-35",
+        "processed_sequence_count": 1,
+        "processed_sequence_ids": [
+          "carbonZ_2018-07-30-17-36-35_engine_failure_with_emr_traj"
+        ],
+        "merged_observed_duration_seconds": 156.96005615,
+        "system_time_boot_sample_count": 320,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-14-22-07",
+        "processed_sequence_count": 2,
+        "processed_sequence_ids": [
+          "carbonZ_2018-09-11-14-22-07_1_engine_failure",
+          "carbonZ_2018-09-11-14-22-07_2_engine_failure"
+        ],
+        "merged_observed_duration_seconds": 176.502886767,
+        "system_time_boot_sample_count": 363,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-07-30-17-46-31",
+        "processed_sequence_count": 1,
+        "processed_sequence_ids": [
+          "carbonZ_2018-07-30-17-46-31_engine_failure_with_emr_traj"
+        ],
+        "merged_observed_duration_seconds": 112.677218107,
+        "system_time_boot_sample_count": 0,
+        "system_time_boot_reset_event_count": 0,
+        "mavros_reconnect_transition_count": 0,
+        "mavros_disconnect_sample_count": 0
+      }
+    ],
+    "per_processed_sequence": [
+      {
+        "raw_flight_id": "carbonZ_2018-10-05-14-37-22",
+        "sequence_id": "carbonZ_2018-10-05-14-37-22_1_no_failure",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 73,
+          "median_interval_seconds": 1.000998256,
+          "large_gap_threshold_seconds": 10.00998256,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.051040224,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 14644,
+          "median_interval_seconds": 0.001958368,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.075176928,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 31,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 161,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": true
+        },
+        "time_reference": {
+          "sample_count": 161,
+          "median_interval_seconds": 0.451705568,
+          "large_gap_threshold_seconds": 4.51705568,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.656992288,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1538767917476436423,
+          1538767990165782119
+        ],
+        "observed_duration_seconds": 72.689345696
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-10-05-14-37-22",
+        "sequence_id": "carbonZ_2018-10-05-14-37-22_2_right_aileron_failure",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 145,
+          "median_interval_seconds": 0.9995559039999999,
+          "large_gap_threshold_seconds": 9.99555904,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.067371456,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 29077,
+          "median_interval_seconds": 0.0017741599999999999,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.087477952,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 66,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 315,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": true
+        },
+        "time_reference": {
+          "sample_count": 315,
+          "median_interval_seconds": 0.45477536,
+          "large_gap_threshold_seconds": 4.5477536,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.713669376,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1538768398784191943,
+          1538768543731379943
+        ],
+        "observed_duration_seconds": 144.947188
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-10-05-14-37-22",
+        "sequence_id": "carbonZ_2018-10-05-14-37-22_3_left_aileron_failure",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 97,
+          "median_interval_seconds": 1.002630704,
+          "large_gap_threshold_seconds": 10.026307039999999,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.067403616,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 19304,
+          "median_interval_seconds": 0.001746048,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.089847392,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 57,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 212,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": true
+        },
+        "time_reference": {
+          "sample_count": 212,
+          "median_interval_seconds": 0.449410976,
+          "large_gap_threshold_seconds": 4.494109760000001,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.70056448,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1538768543771943111,
+          1538768640193748967
+        ],
+        "observed_duration_seconds": 96.421805856
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-17-55-30",
+        "sequence_id": "carbonZ_2018-09-11-17-55-30_1_right_aileron_failure",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 134,
+          "median_interval_seconds": 1.000556708,
+          "large_gap_threshold_seconds": 10.005567079999999,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.054489645,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 26882,
+          "median_interval_seconds": 0.0017364,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.079614934,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 48,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 283,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": true
+        },
+        "time_reference": {
+          "sample_count": 283,
+          "median_interval_seconds": 0.4689308505,
+          "large_gap_threshold_seconds": 4.689308505,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.739220395,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1536703357962518855,
+          1536703491120849389
+        ],
+        "observed_duration_seconds": 133.158330534
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-17-55-30",
+        "sequence_id": "carbonZ_2018-09-11-17-55-30_2_left_aileron_failure",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 82,
+          "median_interval_seconds": 0.995543377,
+          "large_gap_threshold_seconds": 9.955433769999999,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.057968315,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 16331,
+          "median_interval_seconds": 0.001685068,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.081088251,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 32,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 0,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": false
+        },
+        "time_reference": {
+          "sample_count": 172,
+          "median_interval_seconds": 0.476211697,
+          "large_gap_threshold_seconds": 4.76211697,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.747059815,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1536703528928140902,
+          1536703610350043027
+        ],
+        "observed_duration_seconds": 81.421902125
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-10-18-11-04-35",
+        "sequence_id": "carbonZ_2018-10-18-11-04-35_engine_failure_with_emr_traj",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 110,
+          "median_interval_seconds": 0.999803616,
+          "large_gap_threshold_seconds": 9.99803616,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.09168656,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 21870,
+          "median_interval_seconds": 0.001682592,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.075868576,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 35,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 0,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": false
+        },
+        "time_reference": {
+          "sample_count": 232,
+          "median_interval_seconds": 0.47244528,
+          "large_gap_threshold_seconds": 4.7244528,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.738430336,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1539875216572137608,
+          1539875325818720424
+        ],
+        "observed_duration_seconds": 109.246582816
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-15-05-11",
+        "sequence_id": "carbonZ_2018-09-11-15-05-11_1_elevator_failure",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 77,
+          "median_interval_seconds": 0.9997930239999999,
+          "large_gap_threshold_seconds": 9.997930239999999,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.072040064,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 15243,
+          "median_interval_seconds": 0.0017044159999999998,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.085462112,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 33,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 0,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": false
+        },
+        "time_reference": {
+          "sample_count": 168,
+          "median_interval_seconds": 0.4549568,
+          "large_gap_threshold_seconds": 4.549568,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.64969216,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1536693065177511768,
+          1536693141359422232
+        ],
+        "observed_duration_seconds": 76.181910464
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-15-05-11",
+        "sequence_id": "carbonZ_2018-09-11-15-05-11_2_no_failure",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 68,
+          "median_interval_seconds": 1.001266112,
+          "large_gap_threshold_seconds": 10.012661119999999,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.061005152,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 13495,
+          "median_interval_seconds": 0.001623104,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.083652576,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 28,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 147,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": true
+        },
+        "time_reference": {
+          "sample_count": 147,
+          "median_interval_seconds": 0.46128244799999996,
+          "large_gap_threshold_seconds": 4.61282448,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.682145792,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1536693177164035192,
+          1536693244551563832
+        ],
+        "observed_duration_seconds": 67.38752864
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-14-52-54",
+        "sequence_id": "carbonZ_2018-09-11-14-52-54_left_aileron__right_aileron__failure",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 234,
+          "median_interval_seconds": 0.998705696,
+          "large_gap_threshold_seconds": 9.98705696,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.092141056,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 45967,
+          "median_interval_seconds": 0.001643248,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.102727776,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 98,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 477,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": true
+        },
+        "time_reference": {
+          "sample_count": 477,
+          "median_interval_seconds": 0.48952712,
+          "large_gap_threshold_seconds": 4.8952712,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.734640192,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1536692144733624504,
+          1536692378118446296
+        ],
+        "observed_duration_seconds": 233.384821792
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-07-30-17-10-45",
+        "sequence_id": "carbonZ_2018-07-30-17-10-45_engine_failure_with_emr_traj",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 133,
+          "median_interval_seconds": 0.9998730549999999,
+          "large_gap_threshold_seconds": 9.99873055,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.068513878,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 26391,
+          "median_interval_seconds": 0.0017803065,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.120065763,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 114,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 283,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": true
+        },
+        "time_reference": {
+          "sample_count": 283,
+          "median_interval_seconds": 0.4697269485,
+          "large_gap_threshold_seconds": 4.6972694850000005,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.727858662,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1532985276100516290,
+          1532985409234400727
+        ],
+        "observed_duration_seconds": 133.133884437
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-10-05-15-55-10",
+        "sequence_id": "carbonZ_2018-10-05-15-55-10_engine_failure_with_emr_traj",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 114,
+          "median_interval_seconds": 1.002384608,
+          "large_gap_threshold_seconds": 10.02384608,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.063219168,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 22783,
+          "median_interval_seconds": 0.00168032,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.085430048,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 48,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 242,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": true
+        },
+        "time_reference": {
+          "sample_count": 242,
+          "median_interval_seconds": 0.474959008,
+          "large_gap_threshold_seconds": 4.74959008,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.731407456,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1538769499331492032,
+          1538769612532293312
+        ],
+        "observed_duration_seconds": 113.20080128
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-10-05-14-34-20",
+        "sequence_id": "carbonZ_2018-10-05-14-34-20_1_no_failure",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 67,
+          "median_interval_seconds": 0.9999500800000001,
+          "large_gap_threshold_seconds": 9.9995008,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.07529744,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 13433,
+          "median_interval_seconds": 0.002136144,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.103191392,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 30,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 146,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": true
+        },
+        "time_reference": {
+          "sample_count": 146,
+          "median_interval_seconds": 0.450928544,
+          "large_gap_threshold_seconds": 4.50928544,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.697559136,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1538765324989706184,
+          1538765391759603528
+        ],
+        "observed_duration_seconds": 66.769897344
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-10-05-14-34-20",
+        "sequence_id": "carbonZ_2018-10-05-14-34-20_2_right_aileron_failure_with_emr_traj",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 163,
+          "median_interval_seconds": 1.0006710079999999,
+          "large_gap_threshold_seconds": 10.006710079999998,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.057612096,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 32312,
+          "median_interval_seconds": 0.001731968,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.086660352,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 66,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 345,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": true
+        },
+        "time_reference": {
+          "sample_count": 345,
+          "median_interval_seconds": 0.479659808,
+          "large_gap_threshold_seconds": 4.79659808,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.730167008,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1538765738226790536,
+          1538765900413536840
+        ],
+        "observed_duration_seconds": 162.186746304
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-14-16-55",
+        "sequence_id": "carbonZ_2018-09-11-14-16-55_no_failure",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 34,
+          "median_interval_seconds": 1.000505448,
+          "large_gap_threshold_seconds": 10.00505448,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.035569117,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 6784,
+          "median_interval_seconds": 0.001538279,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.061722878,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 14,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 74,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": true
+        },
+        "time_reference": {
+          "sample_count": 74,
+          "median_interval_seconds": 0.448818603,
+          "large_gap_threshold_seconds": 4.48818603,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.668489807,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1536689966499557811,
+          1536690000034550706
+        ],
+        "observed_duration_seconds": 33.534992895
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-15-06-34",
+        "sequence_id": "carbonZ_2018-09-11-15-06-34_1_rudder_right_failure",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 71,
+          "median_interval_seconds": 1.00109984,
+          "large_gap_threshold_seconds": 10.0109984,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.051201856,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 14027,
+          "median_interval_seconds": 0.001682,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.09428832,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 34,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 147,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": true
+        },
+        "time_reference": {
+          "sample_count": 147,
+          "median_interval_seconds": 0.48198416,
+          "large_gap_threshold_seconds": 4.8198416,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.691506688,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1536693419504351000,
+          1536693489792688152
+        ],
+        "observed_duration_seconds": 70.288337152
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-15-06-34",
+        "sequence_id": "carbonZ_2018-09-11-15-06-34_2_rudder_right_failure",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 70,
+          "median_interval_seconds": 0.99707184,
+          "large_gap_threshold_seconds": 9.9707184,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.082680928,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 13800,
+          "median_interval_seconds": 0.001596896,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.085420608,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 27,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 0,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": false
+        },
+        "time_reference": {
+          "sample_count": 147,
+          "median_interval_seconds": 0.47030152000000003,
+          "large_gap_threshold_seconds": 4.7030152,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.710726592,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1536693546558146360,
+          1536693615805829880
+        ],
+        "observed_duration_seconds": 69.24768352
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-15-06-34",
+        "sequence_id": "carbonZ_2018-09-11-15-06-34_3_rudder_left_failure",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 70,
+          "median_interval_seconds": 0.99975168,
+          "large_gap_threshold_seconds": 9.9975168,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.055881024,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 14009,
+          "median_interval_seconds": 0.001645248,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.09556736,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 31,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 150,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": true
+        },
+        "time_reference": {
+          "sample_count": 150,
+          "median_interval_seconds": 0.464773472,
+          "large_gap_threshold_seconds": 4.64773472,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.677096256,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1536693691419597432,
+          1536693760807442872
+        ],
+        "observed_duration_seconds": 69.38784544
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-07-18-16-37-39",
+        "sequence_id": "carbonZ_2018-07-18-16-37-39_1_no_failure",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 30,
+          "median_interval_seconds": 0.997466748,
+          "large_gap_threshold_seconds": 9.97466748,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.03882714,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 6069,
+          "median_interval_seconds": 0.0019289314999999998,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.086560783,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 28,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 0,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": false
+        },
+        "time_reference": {
+          "sample_count": 64,
+          "median_interval_seconds": 0.476601465,
+          "large_gap_threshold_seconds": 4.76601465,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.706366995,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1531946412602319429,
+          1531946443000146541
+        ],
+        "observed_duration_seconds": 30.397827112
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-07-18-16-37-39",
+        "sequence_id": "carbonZ_2018-07-18-16-37-39_2_engine_failure_with_emr_traj",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 130,
+          "median_interval_seconds": 0.998493186,
+          "large_gap_threshold_seconds": 9.98493186,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.093351826,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 25753,
+          "median_interval_seconds": 0.0017803164999999998,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.080750379,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 94,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 263,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": true
+        },
+        "time_reference": {
+          "sample_count": 263,
+          "median_interval_seconds": 0.4990704295,
+          "large_gap_threshold_seconds": 4.9907042950000005,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.753917589,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1531946683823888908,
+          1531946814264026132
+        ],
+        "observed_duration_seconds": 130.440137224
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-07-18-16-22-01",
+        "sequence_id": "carbonZ_2018-07-18-16-22-01_engine_failure_with_emr_traj",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 133,
+          "median_interval_seconds": 1.001295764,
+          "large_gap_threshold_seconds": 10.01295764,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.066307827,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 26188,
+          "median_interval_seconds": 0.001749278,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.084883539,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 116,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 269,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": true
+        },
+        "time_reference": {
+          "sample_count": 269,
+          "median_interval_seconds": 0.4924771415,
+          "large_gap_threshold_seconds": 4.924771415,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.754614592,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1531945830246604588,
+          1531945962751516509
+        ],
+        "observed_duration_seconds": 132.504911921
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-07-30-17-36-35",
+        "sequence_id": "carbonZ_2018-07-30-17-36-35_engine_failure_with_emr_traj",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 157,
+          "median_interval_seconds": 0.9997940780000001,
+          "large_gap_threshold_seconds": 9.99794078,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.046842672,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 30909,
+          "median_interval_seconds": 0.0017253545,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.090721743,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 114,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 320,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": true
+        },
+        "time_reference": {
+          "sample_count": 320,
+          "median_interval_seconds": 0.493083606,
+          "large_gap_threshold_seconds": 4.93083606,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.753065513,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1532986742198213838,
+          1532986899158269988
+        ],
+        "observed_duration_seconds": 156.96005615
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-14-22-07",
+        "sequence_id": "carbonZ_2018-09-11-14-22-07_1_engine_failure",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 115,
+          "median_interval_seconds": 1.000196228,
+          "large_gap_threshold_seconds": 10.00196228,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.085189401,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 22353,
+          "median_interval_seconds": 0.001694993,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.094325485,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 47,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 232,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": true
+        },
+        "time_reference": {
+          "sample_count": 232,
+          "median_interval_seconds": 0.496396786,
+          "large_gap_threshold_seconds": 4.9639678599999995,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.736903542,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1536690269455022857,
+          1536690383631513863
+        ],
+        "observed_duration_seconds": 114.176491006
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-09-11-14-22-07",
+        "sequence_id": "carbonZ_2018-09-11-14-22-07_2_engine_failure",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 63,
+          "median_interval_seconds": 0.9990889885,
+          "large_gap_threshold_seconds": 9.990889885000001,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.043677234,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 12230,
+          "median_interval_seconds": 0.001685729,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.093001278,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 20,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 131,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": true
+        },
+        "time_reference": {
+          "sample_count": 131,
+          "median_interval_seconds": 0.4768220995,
+          "large_gap_threshold_seconds": 4.768220995,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.728044605,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1536690450435563241,
+          1536690512761959002
+        ],
+        "observed_duration_seconds": 62.326395761
+      },
+      {
+        "raw_flight_id": "carbonZ_2018-07-30-17-46-31",
+        "sequence_id": "carbonZ_2018-07-30-17-46-31_engine_failure_with_emr_traj",
+        "members_present": {
+          "mavros_state": true,
+          "mavlink_from": true,
+          "time_reference": true
+        },
+        "mavros_state": {
+          "sample_count": 113,
+          "median_interval_seconds": 0.998401832,
+          "large_gap_threshold_seconds": 9.98401832,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 1.061702762,
+          "disconnect_sample_count": 0,
+          "reconnect_transition_count": 0,
+          "header_sequence_decrease_count": 0,
+          "system_status_values": [
+            4
+          ]
+        },
+        "mavlink": {
+          "sample_count": 22198,
+          "median_interval_seconds": 0.001706715,
+          "large_gap_threshold_seconds": 1.0,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.102022638,
+          "malformed_row_count": 0,
+          "ros_header_sequence_decrease_count": 0,
+          "component_stream_count": 2,
+          "mavlink_sequence_inferred_missing_messages": 86,
+          "mavlink_sequence_duplicate_count": 0,
+          "mavlink_sequence_backward_or_reordered_count": 0,
+          "system_time_boot_sample_count": 0,
+          "system_time_boot_reset_event_count": 0,
+          "system_time_boot_observable": false
+        },
+        "time_reference": {
+          "sample_count": 233,
+          "median_interval_seconds": 0.488271941,
+          "large_gap_threshold_seconds": 4.88271941,
+          "large_gap_count": 0,
+          "maximum_gap_seconds": 0.703771357,
+          "source_time_backward_count": 0
+        },
+        "observed_interval_ns": [
+          1532987297174582796,
+          1532987409851800903
+        ],
+        "observed_duration_seconds": 112.677218107
+      }
+    ]
+  },
+  "decisions": {
+    "flight_hierarchical_task_loss_model_confirmed": true,
+    "exact_10_percent_loss_rejected_by_cluster_interval": false,
+    "semantic_context_reset_calibrated": false,
+    "new_heartbeat_candidate": false,
+    "retain_fixed10_role": "stress_model_engineering_boundary",
+    "board_validation_still_required": true
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": [
+    "This confirms a public-data fault model, not the spectrum-selection algorithm.",
+    "AADM internal frame gaps are lower-bound uplink loss proxies.",
+    "ALFA FCU boot evidence is not semantic receiver-process evidence.",
+    "No board-level context persistence, process restart, power interruption, or recovery claim is permitted.",
+    "No heartbeat candidate is selected or tuned with confirmation values."
+  ]
+}
