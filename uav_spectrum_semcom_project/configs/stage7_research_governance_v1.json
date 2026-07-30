@@ -1,0 +1,117 @@
+{
+  "protocol_id": "stage7_research_governance_v1",
+  "status": "planning_frozen_s7_0",
+  "created_at": "2026-07-30",
+  "upstream_frozen_baseline": {
+    "candidate_id": "S6R-FH10-v1",
+    "heartbeat_interval_scenes": 10,
+    "task_regret_threshold_db": 0.2,
+    "codebook_escape_enabled": true,
+    "fail_closed_enabled": true,
+    "wrong_codebook_action_target": 0
+  },
+  "research_question": "Can calibrated multi-horizon task and receiver-context risk prediction improve the total-bit versus clean-rate frontier relative to the fixed-10-scene heartbeat while preserving analytic safety checks?",
+  "prediction_horizons_scenes": [
+    1,
+    3,
+    5,
+    10
+  ],
+  "labels": [
+    "task_action_failure_within_horizon",
+    "receiver_context_failure_within_horizon",
+    "any_clean_failure_within_horizon",
+    "discrete_time_to_failure"
+  ],
+  "data_roles": {
+    "stage7_development_only": [
+      "electrosense_4_pilot_sites",
+      "electrosense_24_consumed_stage6r_main_final_sites",
+      "electrosense_6_consumed_confirmation_lockbox_sites",
+      "previously_used_aerpaw_activities",
+      "previously_used_2023_2024_2025_adaptation_data"
+    ],
+    "remain_unread_not_sufficient_as_stage7_final": [
+      "electrosense_3_reserve_sites"
+    ],
+    "future_external_final_requirement": {
+      "minimum_independent_sites_or_equivalent_activities": 20,
+      "signal_values_unread_until_candidate_freeze": true,
+      "single_use": true,
+      "no_site_replacement_after_result": true
+    }
+  },
+  "split_rules": {
+    "group_by_whole_site_or_activity": true,
+    "random_window_split_forbidden": true,
+    "history_reset_at_group_boundaries": true,
+    "nested_group_validation_preferred": true,
+    "report_scene_weighted_and_equal_group_macro": true
+  },
+  "model_order": [
+    "fixed_heartbeat_no_prediction",
+    "current_regret_and_state_age_heuristic",
+    "persistence",
+    "first_order_markov_and_duration",
+    "l2_logistic_regression",
+    "discrete_time_survival",
+    "gradient_boosted_trees",
+    "conditional_gru_tcn_or_small_state_space_model"
+  ],
+  "ai_permissions": {
+    "may_rank_risk": true,
+    "may_schedule_probe": true,
+    "may_schedule_early_restore": true,
+    "may_schedule_duplicate_protection": true,
+    "may_reduce_heartbeat_interval_under_high_risk": true,
+    "may_directly_select_spectrum_action": false,
+    "may_cancel_current_regret_trigger": false,
+    "may_bypass_identity_or_version_checks": false,
+    "may_extend_maximum_state_age": false,
+    "may_bypass_escape_or_fail_closed": false
+  },
+  "s7_0_oracle_headroom_gate": {
+    "same_clean_total_bit_reduction_percent": 5.0,
+    "or_same_bit_clean_gain_percentage_points": 1.0,
+    "action_if_gate_fails": "stop_complex_prediction_and_study_stateless_or_periodically_self_contained_protocols"
+  },
+  "prediction_gate": {
+    "minimum_passing_n_count": 3,
+    "total_n_count": 4,
+    "minimum_auc": 0.7,
+    "minimum_ap_gain_over_prevalence": 0.1,
+    "require_positive_brier_skill": true,
+    "maximum_ece": 0.05,
+    "high_risk_recall_target": 0.8,
+    "maximum_alert_budget_fraction": 0.2
+  },
+  "system_gate": {
+    "option_a": {
+      "maximum_clean_noninferiority_loss_percentage_points": 0.5,
+      "minimum_total_bit_reduction_percent": 5.0,
+      "paired_95_percent_interval_lower_bound_must_be_positive": true
+    },
+    "option_b": {
+      "same_total_bit_budget": true,
+      "minimum_clean_gain_percentage_points": 1.0,
+      "paired_95_percent_interval_lower_bound_must_be_positive": true
+    },
+    "minimum_passing_n_count": 3,
+    "remaining_n_must_not_severely_degrade": true,
+    "wrong_codebook_actions_must_equal": 0
+  },
+  "prohibited_before_s7_0_gate": [
+    "gru",
+    "tcn",
+    "transformer",
+    "graph_neural_network",
+    "reinforcement_learning",
+    "learned_direct_spectrum_action"
+  ],
+  "stage6_access_counts_at_stage7_planning": {
+    "pilot": 1,
+    "stage6_final": 1,
+    "confirmation_lockbox": 1,
+    "reserve": 0
+  }
+}
