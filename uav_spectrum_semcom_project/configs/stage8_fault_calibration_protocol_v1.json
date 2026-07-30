@@ -1,0 +1,111 @@
+{
+  "version": "1.0",
+  "protocol_id": "stage8_fault_calibration_protocol_v1",
+  "registration_date": "2026-07-30",
+  "status": "REGISTERED_BEFORE_SIGNAL_ACCESS",
+  "candidate_id": "S6R-FH10-v1",
+  "research_questions": [
+    "Are the frozen 10 percent task loss and 20 percent ACK loss assumptions representative of real UAV wireless sessions?",
+    "Are real link failures independent per scene or temporally bursty?",
+    "Do public flight logs contain valid observable evidence for a 2 percent per-scene receiver runtime-context reset hazard?",
+    "Does fixed-10 heartbeat remain on the best total-bit versus clean-rate frontier under an empirically calibrated fault model?"
+  ],
+  "sources": {
+    "aadm": {
+      "outer_archive": "F:\\doi_10_5061_dryad_7d7wm3898__v20260312.zip",
+      "outer_bytes": 7697131442,
+      "inner_archive_member": "AADM2025Dryad.zip",
+      "readme_member": "README.md",
+      "role": "real_wireless_link_calibration_and_confirmation",
+      "official_testbed_flights_expected": 33,
+      "development_flights": 13,
+      "confirmation_flights": 20,
+      "split_population": "USRP/Testbed 33 flights Sep and matching LoRa flight directories",
+      "split_algorithm": "sort ascending by SHA256('stage8-aadm-v1|' + normalized_flight_id); first 13 development, remaining 20 confirmation",
+      "other_flights_policy": "digital-twin and 12 preparation flights may be used only for exploratory parser development and are never counted as real-flight confirmation"
+    },
+    "alfa": {
+      "outer_archive": "F:\\12707963.zip",
+      "outer_bytes": 1745473674,
+      "inner_archive_members": [
+        "processed.zip",
+        "raw.zip",
+        "dataflash.zip",
+        "telemetry.zip"
+      ],
+      "readme_member": "README.txt",
+      "role": "onboard_versus_ground_log_continuity_and_reset_proxy_audit",
+      "processed_sequences_expected": 47,
+      "raw_flights_expected": 39,
+      "development_raw_flights": 19,
+      "confirmation_raw_flights": 20,
+      "split_algorithm": "map every processed sequence to its underlying raw-flight timestamp; sort raw-flight IDs ascending by SHA256('stage8-alfa-v1|' + normalized_raw_flight_id); first 19 development, remaining 20 confirmation",
+      "raw_log_policy": "all processed sequences, telemetry and dataflash files derived from one raw flight inherit the same split; only development raw-flight groups may be opened before detector freeze"
+    }
+  },
+  "access_governance": {
+    "readme_and_archive_directory_are_metadata": true,
+    "outer_archive_payload_signal_access_count_at_registration": 0,
+    "development_values_may_be_opened_after_split_manifest_freeze": true,
+    "confirmation_values_may_be_opened_before_model_freeze": false,
+    "confirmation_access_is_single_use": true,
+    "post_confirmation_retuning": false,
+    "algorithm_external_final_claim_allowed": false,
+    "reason_not_algorithm_final": "AADM calibrates wireless faults and ALFA contains flight-system faults; neither is an independent wideband spectrum block-selection Final."
+  },
+  "aadm_primary_metrics": {
+    "flight_is_independent_unit": true,
+    "packet_counter_gap_fraction": true,
+    "inter_arrival_gap_distribution": true,
+    "outage_run_length_distribution": true,
+    "snr_rssi_and_throughput_context": true,
+    "lag1_failure_autocorrelation": true,
+    "real_flights_only_for_confirmatory_estimates": true
+  },
+  "alfa_primary_metrics": {
+    "raw_flight_is_independent_unit": true,
+    "processed_segments_from_same_raw_flight_are_not_independent": true,
+    "ground_telemetry_gap_rate": true,
+    "onboard_and_ground_timestamp_discontinuity": true,
+    "boot_or_sequence_counter_restart_marker": true,
+    "explicit_reset_marker_required_for_reset_probability_claim": true,
+    "absence_of_marker_without_detection_coverage_cannot_be_called_zero_resets": true
+  },
+  "statistics": {
+    "confidence_level": 0.95,
+    "paired_cluster_bootstrap_replicates": 10000,
+    "bootstrap_seed": 20261001,
+    "development_estimates_are_exploratory": true,
+    "confirmation_estimates_are_frozen_single_access": true,
+    "report_per_flight_or_sequence_and_aggregate": true,
+    "report_missingness_and_parser_coverage": true
+  },
+  "fault_model_decision": {
+    "current_task_loss_probability": 0.1,
+    "current_ack_loss_probability": 0.2,
+    "current_context_reset_probability_per_scene": 0.02,
+    "iid_model_retained_only_if_burst_diagnostics_are_small": true,
+    "burst_diagnostic_absolute_lag1_threshold": 0.1,
+    "context_reset_probability_may_change_only_with_explicit_reset_observability": true,
+    "if_reset_not_observable": "retain 2 percent only as a conservative stress point and do not call it empirically calibrated"
+  },
+  "protocol_replay": {
+    "heartbeat_intervals_scenes": [6, 10, 16, 20, 30, null],
+    "channel_counts": [8, 16, 32, 64],
+    "wrong_context_actions_must_equal": 0,
+    "candidate_vs_fixed10_gate": {
+      "minimum_passing_channel_counts": 3,
+      "maximum_clean_loss_percentage_points": 0.5,
+      "relative_total_bit_saving_ci_lower_strictly_greater_than": 0.0
+    },
+    "if_no_interval_passes": "retain fixed10 as the frozen stress-model boundary",
+    "if_interval_passes_confirmation": "create a new Stage-8 candidate; do not rewrite Stage-7"
+  },
+  "claim_boundaries": [
+    "Downloading, hashing, extracting nested archives, and listing member names do not consume confirmation values.",
+    "AADM link measurements cannot directly identify receiver process or codebook-context resets.",
+    "ALFA engine and actuator faults are not equivalent to semantic receiver-context resets.",
+    "No public-data result may be called target-board evidence.",
+    "Stage-6 Final remains FAILED and Stage-7 remains without an independent external Final."
+  ]
+}

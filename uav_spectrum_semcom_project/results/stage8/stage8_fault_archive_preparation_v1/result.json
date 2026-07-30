@@ -1,0 +1,94 @@
+{
+  "version": "1.0",
+  "status": "STAGE8_NESTED_ARCHIVES_PREPARED",
+  "protocol_id": "stage8_fault_calibration_protocol_v1",
+  "signal_values_accessed": false,
+  "archive_member_names_accessed": true,
+  "prepared": {
+    "aadm": {
+      "outer_archive": "F:\\doi_10_5061_dryad_7d7wm3898__v20260312.zip",
+      "outer_bytes": 7697131442,
+      "outer_sha256": "d6abdb28b44595feacd4269ebe25b4076ca352b6a36adee6ad9e563e93b454de",
+      "outer_directory": [
+        {
+          "member": "AADM2025Dryad.zip",
+          "bytes": 7697117367
+        },
+        {
+          "member": "README.md",
+          "bytes": 13693
+        }
+      ],
+      "nested_archives": [
+        {
+          "member": "AADM2025Dryad.zip",
+          "path": "F:\\uav_spectrum_stage8_fault_data\\source_archives\\aadm\\AADM2025Dryad.zip",
+          "bytes": 7697117367,
+          "sha256": "61fcb8d3e576318123e77894a1b3b15afbb006edbbc8c1d1deea562c737b13e9"
+        }
+      ]
+    },
+    "alfa": {
+      "outer_archive": "F:\\12707963.zip",
+      "outer_bytes": 1745473674,
+      "outer_sha256": "40d28d4ead5de0970677dc3954a91e8bbe9a88e2ade964f2835187c9d997ec8d",
+      "outer_directory": [
+        {
+          "member": "processed.zip",
+          "bytes": 271996798
+        },
+        {
+          "member": "raw.zip",
+          "bytes": 721413020
+        },
+        {
+          "member": "dataflash.zip",
+          "bytes": 541342491
+        },
+        {
+          "member": "telemetry.zip",
+          "bytes": 210717533
+        },
+        {
+          "member": "README.txt",
+          "bytes": 2850
+        },
+        {
+          "member": "Version History.txt",
+          "bytes": 126
+        }
+      ],
+      "nested_archives": [
+        {
+          "member": "processed.zip",
+          "path": "F:\\uav_spectrum_stage8_fault_data\\source_archives\\alfa\\processed.zip",
+          "bytes": 271996798,
+          "sha256": "02562756b9428aa24fbd27105f91687b38541ced8d5432766c14176573d0b4c9"
+        },
+        {
+          "member": "raw.zip",
+          "path": "F:\\uav_spectrum_stage8_fault_data\\source_archives\\alfa\\raw.zip",
+          "bytes": 721413020,
+          "sha256": "1539368bb9d05b033b29dd247f6abd5076eddef2ab53089a08dab3f0312ff763"
+        },
+        {
+          "member": "dataflash.zip",
+          "path": "F:\\uav_spectrum_stage8_fault_data\\source_archives\\alfa\\dataflash.zip",
+          "bytes": 541342491,
+          "sha256": "90585ca3286a970a36d76fc990e3ade2173a3b561c2def2c789ca78159e25a8b"
+        },
+        {
+          "member": "telemetry.zip",
+          "path": "F:\\uav_spectrum_stage8_fault_data\\source_archives\\alfa\\telemetry.zip",
+          "bytes": 210717533,
+          "sha256": "bc49ad9613ff76d03cc3497442afa0ff49fcfa51772399acc97b3032622ffa9e"
+        }
+      ]
+    }
+  },
+  "claim_boundary": [
+    "Only outer archive directories and complete nested archive bytes were copied.",
+    "No nested archive member payload was opened.",
+    "Development and confirmation signal access counts remain zero."
+  ]
+}

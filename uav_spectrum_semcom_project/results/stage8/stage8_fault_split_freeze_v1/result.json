@@ -1,0 +1,636 @@
+{
+  "version": "1.0",
+  "status": "FROZEN_BEFORE_SIGNAL_ACCESS",
+  "protocol_id": "stage8_fault_calibration_protocol_v1",
+  "config_path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\configs\\stage8_fault_calibration_protocol_v1.json",
+  "config_sha256": "9a1da0dacdb120c87d82ed36684496b544a202f4b91b31882e8d7db798035362",
+  "preparation_result_path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage8\\stage8_fault_archive_preparation_v1\\result.json",
+  "preparation_result_sha256": "780d4d2edd6a50a7fb0eccca9200e6e183002e89b8b0720432f72f26d0d5ed6d",
+  "signal_access": {
+    "development_value_access_count": 0,
+    "confirmation_value_access_count": 0,
+    "archive_member_names_accessed": true
+  },
+  "aadm": {
+    "independent_unit": "official physical-testbed flight",
+    "population_count": 33,
+    "development_count": 13,
+    "confirmation_count": 20,
+    "development_flight_ids": [
+      "792vol2_flight32",
+      "932vol2_flight2",
+      "928vol1_flight25",
+      "828vol2_flight11",
+      "1050vol3_flight18",
+      "928vol2_flight26",
+      "779vol2_flight5",
+      "1047vol3_flight9",
+      "934vol2_flight20",
+      "792vol3_flight33",
+      "934vol3_flight21",
+      "828vol3_flight12",
+      "1050vol2_flight17"
+    ],
+    "confirmation_flight_ids": [
+      "932vol3_flight3",
+      "799vol3_flight15",
+      "779vol3_flight6",
+      "1004vol3_flight30",
+      "1004vol2_flight29",
+      "1047vol2_flight8",
+      "828vol1_flight10",
+      "932vol1_flight1",
+      "779vol1_flight4",
+      "1004vol1_flight28",
+      "1047vol1_flight7",
+      "866vol2_flight23",
+      "934vol1_flight19",
+      "866vol1_flight22",
+      "866vol3_flight24",
+      "1050vol1_flight16",
+      "799vol2_flight14",
+      "928vol3_flight27",
+      "799vol1_flight13",
+      "792vol1_flight31"
+    ],
+    "flight_inventory": {
+      "1004vol1_flight28": {
+        "usrp_member_count": 32,
+        "lora_member_count": 3
+      },
+      "1004vol2_flight29": {
+        "usrp_member_count": 32,
+        "lora_member_count": 3
+      },
+      "1004vol3_flight30": {
+        "usrp_member_count": 32,
+        "lora_member_count": 3
+      },
+      "1047vol1_flight7": {
+        "usrp_member_count": 31,
+        "lora_member_count": 3
+      },
+      "1047vol2_flight8": {
+        "usrp_member_count": 31,
+        "lora_member_count": 3
+      },
+      "1047vol3_flight9": {
+        "usrp_member_count": 31,
+        "lora_member_count": 3
+      },
+      "1050vol1_flight16": {
+        "usrp_member_count": 32,
+        "lora_member_count": 2
+      },
+      "1050vol2_flight17": {
+        "usrp_member_count": 32,
+        "lora_member_count": 2
+      },
+      "1050vol3_flight18": {
+        "usrp_member_count": 32,
+        "lora_member_count": 2
+      },
+      "779vol1_flight4": {
+        "usrp_member_count": 31,
+        "lora_member_count": 3
+      },
+      "779vol2_flight5": {
+        "usrp_member_count": 31,
+        "lora_member_count": 3
+      },
+      "779vol3_flight6": {
+        "usrp_member_count": 31,
+        "lora_member_count": 3
+      },
+      "792vol1_flight31": {
+        "usrp_member_count": 32,
+        "lora_member_count": 3
+      },
+      "792vol2_flight32": {
+        "usrp_member_count": 32,
+        "lora_member_count": 3
+      },
+      "792vol3_flight33": {
+        "usrp_member_count": 32,
+        "lora_member_count": 3
+      },
+      "799vol1_flight13": {
+        "usrp_member_count": 32,
+        "lora_member_count": 3
+      },
+      "799vol2_flight14": {
+        "usrp_member_count": 32,
+        "lora_member_count": 3
+      },
+      "799vol3_flight15": {
+        "usrp_member_count": 32,
+        "lora_member_count": 3
+      },
+      "828vol1_flight10": {
+        "usrp_member_count": 32,
+        "lora_member_count": 3
+      },
+      "828vol2_flight11": {
+        "usrp_member_count": 32,
+        "lora_member_count": 3
+      },
+      "828vol3_flight12": {
+        "usrp_member_count": 32,
+        "lora_member_count": 3
+      },
+      "866vol1_flight22": {
+        "usrp_member_count": 31,
+        "lora_member_count": 3
+      },
+      "866vol2_flight23": {
+        "usrp_member_count": 31,
+        "lora_member_count": 3
+      },
+      "866vol3_flight24": {
+        "usrp_member_count": 31,
+        "lora_member_count": 3
+      },
+      "928vol1_flight25": {
+        "usrp_member_count": 32,
+        "lora_member_count": 3
+      },
+      "928vol2_flight26": {
+        "usrp_member_count": 32,
+        "lora_member_count": 3
+      },
+      "928vol3_flight27": {
+        "usrp_member_count": 32,
+        "lora_member_count": 3
+      },
+      "932vol1_flight1": {
+        "usrp_member_count": 32,
+        "lora_member_count": 3
+      },
+      "932vol2_flight2": {
+        "usrp_member_count": 32,
+        "lora_member_count": 3
+      },
+      "932vol3_flight3": {
+        "usrp_member_count": 32,
+        "lora_member_count": 3
+      },
+      "934vol1_flight19": {
+        "usrp_member_count": 31,
+        "lora_member_count": 3
+      },
+      "934vol2_flight20": {
+        "usrp_member_count": 31,
+        "lora_member_count": 3
+      },
+      "934vol3_flight21": {
+        "usrp_member_count": 31,
+        "lora_member_count": 3
+      }
+    },
+    "archive_sha256": "61fcb8d3e576318123e77894a1b3b15afbb006edbbc8c1d1deea562c737b13e9"
+  },
+  "alfa": {
+    "independent_unit": "raw flight",
+    "population_count": 39,
+    "development_count": 19,
+    "confirmation_count": 20,
+    "development_raw_flight_ids": [
+      "carbonZ_2018-09-11-14-41-51",
+      "carbonZ_2018-07-30-16-28-00",
+      "carbonZ_2018-07-30-16-39-00",
+      "carbonZ_2018-10-18-11-08-24",
+      "carbonZ_2018-07-18-12-10-11",
+      "carbonZ_2018-10-18-11-04-08",
+      "carbonZ_2018-10-18-11-04-00",
+      "carbonZ_2018-09-11-11-56-30",
+      "carbonZ_2018-09-11-17-10-10",
+      "carbonZ_2018-07-30-16-29-45",
+      "carbonZ_2018-10-18-11-06-47",
+      "carbonZ_2018-09-11-17-27-13",
+      "carbonZ_2018-07-18-15-53-31",
+      "carbonZ_2018-10-05-16-04-46",
+      "carbonZ_2018-09-11-14-41-38",
+      "carbonZ_2018-07-30-17-20-01",
+      "carbonZ_2018-10-18-11-06-06",
+      "carbonZ_2018-10-18-11-03-57",
+      "carbonZ_2018-10-05-15-52-12"
+    ],
+    "confirmation_raw_flight_ids": [
+      "carbonZ_2018-10-05-14-37-22",
+      "carbonZ_2018-07-30-17-02-48",
+      "carbonZ_2018-09-11-11-33-39",
+      "carbonZ_2018-09-11-14-42-06",
+      "carbonZ_2018-09-11-17-55-30",
+      "carbonZ_2018-09-11-13-57-47",
+      "carbonZ_2018-10-18-11-04-35",
+      "carbonZ_2018-09-11-15-05-11",
+      "carbonZ_2018-09-11-14-52-54",
+      "carbonZ_2018-07-30-17-10-45",
+      "carbonZ_2018-09-11-17-25-17",
+      "carbonZ_2018-10-05-15-55-10",
+      "carbonZ_2018-10-05-14-34-20",
+      "carbonZ_2018-09-11-14-16-55",
+      "carbonZ_2018-09-11-15-06-34",
+      "carbonZ_2018-07-18-16-37-39",
+      "carbonZ_2018-07-18-16-22-01",
+      "carbonZ_2018-07-30-17-36-35",
+      "carbonZ_2018-09-11-14-22-07",
+      "carbonZ_2018-07-30-17-46-31"
+    ],
+    "raw_flight_inventory": {
+      "carbonZ_2018-07-18-12-10-11": {
+        "raw_member": "raw/carbonZ_2018-07-18-12-10-11.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-07-18-12-10-11_no_ground_truth"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-07-18-12-10-11_no_ground_truth": 35
+        }
+      },
+      "carbonZ_2018-07-18-15-53-31": {
+        "raw_member": "raw/carbonZ_2018-07-18-15-53-31.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-07-18-15-53-31_1_engine_failure",
+          "carbonZ_2018-07-18-15-53-31_2_engine_failure"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-07-18-15-53-31_1_engine_failure": 36,
+          "carbonZ_2018-07-18-15-53-31_2_engine_failure": 36
+        }
+      },
+      "carbonZ_2018-07-18-16-22-01": {
+        "raw_member": "raw/carbonZ_2018-07-18-16-22-01.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-07-18-16-22-01_engine_failure_with_emr_traj"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-07-18-16-22-01_engine_failure_with_emr_traj": 37
+        }
+      },
+      "carbonZ_2018-07-18-16-37-39": {
+        "raw_member": "raw/carbonZ_2018-07-18-16-37-39.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-07-18-16-37-39_1_no_failure",
+          "carbonZ_2018-07-18-16-37-39_2_engine_failure_with_emr_traj"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-07-18-16-37-39_1_no_failure": 32,
+          "carbonZ_2018-07-18-16-37-39_2_engine_failure_with_emr_traj": 37
+        }
+      },
+      "carbonZ_2018-07-30-16-28-00": {
+        "raw_member": "raw/carbonZ_2018-07-30-16-28-00.bag",
+        "processed_sequence_directories": [],
+        "processed_sequence_member_counts": {}
+      },
+      "carbonZ_2018-07-30-16-29-45": {
+        "raw_member": "raw/carbonZ_2018-07-30-16-29-45.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-07-30-16-29-45_engine_failure_with_emr_traj"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-07-30-16-29-45_engine_failure_with_emr_traj": 37
+        }
+      },
+      "carbonZ_2018-07-30-16-39-00": {
+        "raw_member": "raw/carbonZ_2018-07-30-16-39-00.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-07-30-16-39-00_1_engine_failure",
+          "carbonZ_2018-07-30-16-39-00_2_engine_failure",
+          "carbonZ_2018-07-30-16-39-00_3_no_failure"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-07-30-16-39-00_1_engine_failure": 36,
+          "carbonZ_2018-07-30-16-39-00_2_engine_failure": 36,
+          "carbonZ_2018-07-30-16-39-00_3_no_failure": 35
+        }
+      },
+      "carbonZ_2018-07-30-17-02-48": {
+        "raw_member": "raw/carbonZ_2018-07-30-17-02-48.bag",
+        "processed_sequence_directories": [],
+        "processed_sequence_member_counts": {}
+      },
+      "carbonZ_2018-07-30-17-10-45": {
+        "raw_member": "raw/carbonZ_2018-07-30-17-10-45.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-07-30-17-10-45_engine_failure_with_emr_traj"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-07-30-17-10-45_engine_failure_with_emr_traj": 37
+        }
+      },
+      "carbonZ_2018-07-30-17-20-01": {
+        "raw_member": "raw/carbonZ_2018-07-30-17-20-01.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-07-30-17-20-01_engine_failure_with_emr_traj"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-07-30-17-20-01_engine_failure_with_emr_traj": 37
+        }
+      },
+      "carbonZ_2018-07-30-17-36-35": {
+        "raw_member": "raw/carbonZ_2018-07-30-17-36-35.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-07-30-17-36-35_engine_failure_with_emr_traj"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-07-30-17-36-35_engine_failure_with_emr_traj": 37
+        }
+      },
+      "carbonZ_2018-07-30-17-46-31": {
+        "raw_member": "raw/carbonZ_2018-07-30-17-46-31.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-07-30-17-46-31_engine_failure_with_emr_traj"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-07-30-17-46-31_engine_failure_with_emr_traj": 37
+        }
+      },
+      "carbonZ_2018-09-11-11-33-39": {
+        "raw_member": "raw/carbonZ_2018-09-11-11-33-39.bag",
+        "processed_sequence_directories": [],
+        "processed_sequence_member_counts": {}
+      },
+      "carbonZ_2018-09-11-11-56-30": {
+        "raw_member": "raw/carbonZ_2018-09-11-11-56-30.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-09-11-11-56-30_engine_failure"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-09-11-11-56-30_engine_failure": 36
+        }
+      },
+      "carbonZ_2018-09-11-13-57-47": {
+        "raw_member": "raw/carbonZ_2018-09-11-13-57-47.bag",
+        "processed_sequence_directories": [],
+        "processed_sequence_member_counts": {}
+      },
+      "carbonZ_2018-09-11-14-16-55": {
+        "raw_member": "raw/carbonZ_2018-09-11-14-16-55.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-09-11-14-16-55_no_failure"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-09-11-14-16-55_no_failure": 32
+        }
+      },
+      "carbonZ_2018-09-11-14-22-07": {
+        "raw_member": "raw/carbonZ_2018-09-11-14-22-07.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-09-11-14-22-07_1_engine_failure",
+          "carbonZ_2018-09-11-14-22-07_2_engine_failure"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-09-11-14-22-07_1_engine_failure": 36,
+          "carbonZ_2018-09-11-14-22-07_2_engine_failure": 36
+        }
+      },
+      "carbonZ_2018-09-11-14-41-38": {
+        "raw_member": "raw/carbonZ_2018-09-11-14-41-38.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-09-11-14-41-38_no_failure"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-09-11-14-41-38_no_failure": 32
+        }
+      },
+      "carbonZ_2018-09-11-14-41-51": {
+        "raw_member": "raw/carbonZ_2018-09-11-14-41-51.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-09-11-14-41-51_elevator_failure"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-09-11-14-41-51_elevator_failure": 36
+        }
+      },
+      "carbonZ_2018-09-11-14-42-06": {
+        "raw_member": "raw/carbonZ_2018-09-11-14-42-06.bag",
+        "processed_sequence_directories": [],
+        "processed_sequence_member_counts": {}
+      },
+      "carbonZ_2018-09-11-14-52-54": {
+        "raw_member": "raw/carbonZ_2018-09-11-14-52-54.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-09-11-14-52-54_left_aileron__right_aileron__failure"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-09-11-14-52-54_left_aileron__right_aileron__failure": 36
+        }
+      },
+      "carbonZ_2018-09-11-15-05-11": {
+        "raw_member": "raw/carbonZ_2018-09-11-15-05-11.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-09-11-15-05-11_1_elevator_failure",
+          "carbonZ_2018-09-11-15-05-11_2_no_failure"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-09-11-15-05-11_1_elevator_failure": 36,
+          "carbonZ_2018-09-11-15-05-11_2_no_failure": 35
+        }
+      },
+      "carbonZ_2018-09-11-15-06-34": {
+        "raw_member": "raw/carbonZ_2018-09-11-15-06-34.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-09-11-15-06-34_1_rudder_right_failure",
+          "carbonZ_2018-09-11-15-06-34_2_rudder_right_failure",
+          "carbonZ_2018-09-11-15-06-34_3_rudder_left_failure"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-09-11-15-06-34_1_rudder_right_failure": 36,
+          "carbonZ_2018-09-11-15-06-34_2_rudder_right_failure": 36,
+          "carbonZ_2018-09-11-15-06-34_3_rudder_left_failure": 33
+        }
+      },
+      "carbonZ_2018-09-11-17-10-10": {
+        "raw_member": "raw/carbonZ_2018-09-11-17-10-10.bag",
+        "processed_sequence_directories": [],
+        "processed_sequence_member_counts": {}
+      },
+      "carbonZ_2018-09-11-17-25-17": {
+        "raw_member": "raw/carbonZ_2018-09-11-17-25-17.bag",
+        "processed_sequence_directories": [],
+        "processed_sequence_member_counts": {}
+      },
+      "carbonZ_2018-09-11-17-27-13": {
+        "raw_member": "raw/carbonZ_2018-09-11-17-27-13.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-09-11-17-27-13_1_rudder_zero__left_aileron_failure",
+          "carbonZ_2018-09-11-17-27-13_2_both_ailerons_failure"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-09-11-17-27-13_1_rudder_zero__left_aileron_failure": 37,
+          "carbonZ_2018-09-11-17-27-13_2_both_ailerons_failure": 36
+        }
+      },
+      "carbonZ_2018-09-11-17-55-30": {
+        "raw_member": "raw/carbonZ_2018-09-11-17-55-30.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-09-11-17-55-30_1_right_aileron_failure",
+          "carbonZ_2018-09-11-17-55-30_2_left_aileron_failure"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-09-11-17-55-30_1_right_aileron_failure": 37,
+          "carbonZ_2018-09-11-17-55-30_2_left_aileron_failure": 36
+        }
+      },
+      "carbonZ_2018-10-05-14-34-20": {
+        "raw_member": "raw/carbonZ_2018-10-05-14-34-20.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-10-05-14-34-20_1_no_failure",
+          "carbonZ_2018-10-05-14-34-20_2_right_aileron_failure_with_emr_traj"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-10-05-14-34-20_1_no_failure": 32,
+          "carbonZ_2018-10-05-14-34-20_2_right_aileron_failure_with_emr_traj": 37
+        }
+      },
+      "carbonZ_2018-10-05-14-37-22": {
+        "raw_member": "raw/carbonZ_2018-10-05-14-37-22.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-10-05-14-37-22_1_no_failure",
+          "carbonZ_2018-10-05-14-37-22_2_right_aileron_failure",
+          "carbonZ_2018-10-05-14-37-22_3_left_aileron_failure"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-10-05-14-37-22_1_no_failure": 33,
+          "carbonZ_2018-10-05-14-37-22_2_right_aileron_failure": 36,
+          "carbonZ_2018-10-05-14-37-22_3_left_aileron_failure": 36
+        }
+      },
+      "carbonZ_2018-10-05-15-52-12": {
+        "raw_member": "raw/carbonZ_2018-10-05-15-52-12.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-10-05-15-52-12_1_no_failure",
+          "carbonZ_2018-10-05-15-52-12_2_no_failure",
+          "carbonZ_2018-10-05-15-52-12_3_engine_failure_with_emr_traj"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-10-05-15-52-12_1_no_failure": 35,
+          "carbonZ_2018-10-05-15-52-12_2_no_failure": 35,
+          "carbonZ_2018-10-05-15-52-12_3_engine_failure_with_emr_traj": 37
+        }
+      },
+      "carbonZ_2018-10-05-15-55-10": {
+        "raw_member": "raw/carbonZ_2018-10-05-15-55-10.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-10-05-15-55-10_engine_failure_with_emr_traj"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-10-05-15-55-10_engine_failure_with_emr_traj": 37
+        }
+      },
+      "carbonZ_2018-10-05-16-04-46": {
+        "raw_member": "raw/carbonZ_2018-10-05-16-04-46.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-10-05-16-04-46_engine_failure_with_emr_traj"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-10-05-16-04-46_engine_failure_with_emr_traj": 38
+        }
+      },
+      "carbonZ_2018-10-18-11-03-57": {
+        "raw_member": "raw/carbonZ_2018-10-18-11-03-57.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-10-18-11-03-57_engine_failure_with_emr_traj"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-10-18-11-03-57_engine_failure_with_emr_traj": 37
+        }
+      },
+      "carbonZ_2018-10-18-11-04-00": {
+        "raw_member": "raw/carbonZ_2018-10-18-11-04-00.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-10-18-11-04-00_engine_failure_with_emr_traj"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-10-18-11-04-00_engine_failure_with_emr_traj": 37
+        }
+      },
+      "carbonZ_2018-10-18-11-04-08": {
+        "raw_member": "raw/carbonZ_2018-10-18-11-04-08.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-10-18-11-04-08_1_engine_failure_with_emr_traj",
+          "carbonZ_2018-10-18-11-04-08_2_engine_failure_with_emr_traj"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-10-18-11-04-08_1_engine_failure_with_emr_traj": 37,
+          "carbonZ_2018-10-18-11-04-08_2_engine_failure_with_emr_traj": 37
+        }
+      },
+      "carbonZ_2018-10-18-11-04-35": {
+        "raw_member": "raw/carbonZ_2018-10-18-11-04-35.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-10-18-11-04-35_engine_failure_with_emr_traj"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-10-18-11-04-35_engine_failure_with_emr_traj": 37
+        }
+      },
+      "carbonZ_2018-10-18-11-06-06": {
+        "raw_member": "raw/carbonZ_2018-10-18-11-06-06.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-10-18-11-06-06_engine_failure_with_emr_traj"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-10-18-11-06-06_engine_failure_with_emr_traj": 37
+        }
+      },
+      "carbonZ_2018-10-18-11-06-47": {
+        "raw_member": "raw/carbonZ_2018-10-18-11-06-47.bag",
+        "processed_sequence_directories": [],
+        "processed_sequence_member_counts": {}
+      },
+      "carbonZ_2018-10-18-11-08-24": {
+        "raw_member": "raw/carbonZ_2018-10-18-11-08-24.bag",
+        "processed_sequence_directories": [
+          "carbonZ_2018-10-18-11-08-24_no_failure"
+        ],
+        "processed_sequence_member_counts": {
+          "carbonZ_2018-10-18-11-08-24_no_failure": 35
+        }
+      }
+    },
+    "unmapped_processed_member_count": 0,
+    "auxiliary_archives": {
+      "telemetry.zip": {
+        "member_count": 117,
+        "top_group_counts": {
+          "telemetry/2018-07-18": 24,
+          "telemetry/2018-07-30": 20,
+          "telemetry/2018-09-11": 30,
+          "telemetry/2018-10-05": 12,
+          "telemetry/2018-10-18": 31
+        },
+        "raw_flight_mapping_status": "UNRESOLVED_METADATA_ONLY",
+        "access_policy": "No payload may be opened until an auditable raw-flight mapping or a development-only exploratory role is frozen."
+      },
+      "dataflash.zip": {
+        "member_count": 60,
+        "top_group_counts": {
+          "dataflash/2018-07-18": 24,
+          "dataflash/2018-07-30": 36
+        },
+        "raw_flight_mapping_status": "UNRESOLVED_METADATA_ONLY",
+        "access_policy": "No payload may be opened until an auditable raw-flight mapping or a development-only exploratory role is frozen."
+      }
+    },
+    "archive_sha256": {
+      "processed.zip": "02562756b9428aa24fbd27105f91687b38541ced8d5432766c14176573d0b4c9",
+      "raw.zip": "1539368bb9d05b033b29dd247f6abd5076eddef2ab53089a08dab3f0312ff763",
+      "dataflash.zip": "90585ca3286a970a36d76fc990e3ade2173a3b561c2def2c789ca78159e25a8b",
+      "telemetry.zip": "bc49ad9613ff76d03cc3497442afa0ff49fcfa51772399acc97b3032622ffa9e"
+    }
+  },
+  "integrity_checks": {
+    "aadm_development_confirmation_disjoint": true,
+    "alfa_development_confirmation_disjoint": true,
+    "all_processed_segments_inherit_raw_flight_split": true,
+    "confirmation_payload_unread": true
+  },
+  "claim_boundary": [
+    "The split was derived from archive member names only.",
+    "No AADM or ALFA signal value was opened while freezing this manifest.",
+    "ALFA processed segments are grouped by their raw-flight timestamp and are not independent units.",
+    "Telemetry and dataflash files remain mapping-unresolved and payload-unread."
+  ]
+}
