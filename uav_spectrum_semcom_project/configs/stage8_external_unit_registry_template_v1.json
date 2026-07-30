@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "registry_id": "stage8_external_unit_registry_v1",
+  "status": "TEMPLATE_NO_SIGNAL_ACCESS",
+  "signal_access_count": 0,
+  "metadata_frozen": false,
+  "units": [
+    {
+      "unit_id": "replace_with_opaque_id",
+      "provenance_stratum": "replace_with_region_activity_or_date_group",
+      "source_dataset": "replace_with_dataset_name_and_version",
+      "license": "replace_with_license",
+      "signal_path": null,
+      "metadata_only_checked": false,
+      "compatible_frequency_axis": null,
+      "compatible_time_order": null,
+      "previously_seen": null,
+      "exclusion_reason": null
+    }
+  ]
+}

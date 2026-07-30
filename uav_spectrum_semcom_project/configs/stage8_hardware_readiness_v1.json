@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "protocol_id": "stage8_hardware_readiness_v1",
+  "candidate_id": "S6R-FH10-v1",
+  "registration_date": "2026-07-30",
+  "status": "REGISTERED_TARGET_PENDING",
+  "execution_target": {
+    "board_model": null,
+    "cpu_model": null,
+    "operating_system": null,
+    "power_mode": null,
+    "runtime_version": null,
+    "single_thread_required": true,
+    "gpu_required": false
+  },
+  "workloads": {
+    "channel_counts": [8, 16, 32, 64],
+    "warmup_scenes": 1000,
+    "measured_scenes_per_n": 10000,
+    "repetitions": 5,
+    "session_lengths": [10, 100, 1000, 10000],
+    "reset_and_ack_fault_injection": true,
+    "cold_start_measurement": true,
+    "steady_state_measurement": true
+  },
+  "measurement": {
+    "latency_percentiles": [50, 95, 99],
+    "peak_rss_mib": true,
+    "artifact_storage_kib": true,
+    "cpu_utilization": true,
+    "energy_per_scene_mj": true,
+    "temperature_and_throttling": true,
+    "wrong_context_action_executions": true
+  },
+  "engineering_gate": {
+    "online_encode_decode_p95_ms_max": 10.0,
+    "online_encode_decode_p99_ms_max": 20.0,
+    "peak_rss_mib_max": 256.0,
+    "frozen_runtime_artifact_storage_kib_max": 1024.0,
+    "wrong_context_action_executions_equals": 0,
+    "all_channel_counts_must_pass": true
+  },
+  "report_only_until_target_is_frozen": [
+    "energy_per_scene_mj",
+    "cpu_utilization",
+    "temperature_and_throttling",
+    "cold_start_latency_ms"
+  ],
+  "prohibitions": {
+    "desktop_results_may_not_be_called_board_results": true,
+    "unbounded_online_codebook_fit": true,
+    "gpu_only_deployment_claim": true,
+    "target_changed_after_failed_run": true
+  },
+  "execution_blockers": [
+    "board_model_not_selected",
+    "runtime_environment_not_frozen",
+    "power_measurement_method_not_registered",
+    "hardware_runner_not_implemented"
+  ]
+}

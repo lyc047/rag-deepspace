@@ -1,0 +1,48 @@
+{
+  "version": "1.0",
+  "status": "REGISTERED_NOT_EXECUTABLE",
+  "registration_id": "stage8_readiness_registration_v1",
+  "candidate_id": "S6R-FH10-v1",
+  "source_git_commit_at_registration": "1011a7b02a317faa89288b0787ad602a58d45e34",
+  "protocol_hashes": {
+    "configs/stage8_external_final_readiness_v1.json": "811aa26dec9a367db9990df4c8ce2768f93915e29bc330d31defafdbb8004de4",
+    "configs/stage8_hardware_readiness_v1.json": "7a38ce7263088c5261e9b33b6231e0fba2208915cb270ba9d9f72e3b35febc4c"
+  },
+  "candidate_freeze": {
+    "path": "results/stage7/stage7_candidate_freeze_v1/result.json",
+    "sha256": "450aca28ece6edf0504bfca75dc0e1890dff3035206d47bdd1a1a1fe5c1c9182",
+    "required_status": "FROZEN",
+    "required_artifact_count": 17
+  },
+  "external_final": {
+    "minimum_new_independent_units": 20,
+    "signal_access_allowed_now": false,
+    "blockers": [
+      "new_unit_registry_not_frozen",
+      "new_signal_paths_not_registered",
+      "compatibility_metadata_not_verified",
+      "execution_environment_not_frozen"
+    ]
+  },
+  "hardware": {
+    "target_selected": false,
+    "blockers": [
+      "board_model_not_selected",
+      "runtime_environment_not_frozen",
+      "power_measurement_method_not_registered",
+      "hardware_runner_not_implemented"
+    ]
+  },
+  "decision": {
+    "candidate_integrity_passed": true,
+    "external_protocol_registered": true,
+    "hardware_protocol_registered": true,
+    "execution_authorized": false
+  },
+  "claim_boundary": [
+    "This registration does not access any new signal values.",
+    "This registration is not an external Final result.",
+    "This registration is not a target-board benchmark.",
+    "Execution remains blocked until registries and environments are frozen."
+  ]
+}
