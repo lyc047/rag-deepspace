@@ -27,10 +27,19 @@
       }
     },
     "confirmation_lockbox": {
-      "access_count": 0,
-      "signal_values_accessed": false,
-      "first_access_at_utc": null,
-      "purpose": "future independent confirmation"
+      "access_count": 1,
+      "signal_values_accessed": true,
+      "first_access_at_utc": "2026-07-30T02:50:22.520747+00:00",
+      "purpose": "future independent confirmation",
+      "actor": "Codex Stage-6R supportive confirmation executor",
+      "declared_purpose": "single six-site S6R-FH10-v1 supportive confirmation",
+      "member_count": 6,
+      "evidence": {
+        "protocol_sha256": "6c8a08c299b5eea19a14686de3369219ee041333b45edd2b9f7b62f26bda2fff",
+        "freeze_result_sha256": "b9263842e11b45ca497237e436b7cafa7bf39014fa62c56daabe6eadd9578fa8",
+        "code_snapshot_sha256": "34e386037301af910302daafc647b4055ab001c878d74b7398f3587984d832e3",
+        "output_path": "C:\\Users\\Lenovo\\Desktop\\项目\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage6r\\confirmation_lockbox_v1\\result.json"
+      }
     },
     "reserve": {
       "access_count": 0,

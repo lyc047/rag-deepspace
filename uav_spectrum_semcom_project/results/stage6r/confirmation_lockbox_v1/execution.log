@@ -1,0 +1,43 @@
+confirmation_lockbox N=8 site=Oreland decision=BANK:aerpaw_packapalooza_2025
+confirmation_lockbox N=8 site=PiSDR1 decision=BANK:aerpaw_packapalooza_2025
+confirmation_lockbox N=8 site=Skap_French_Riviera decision=BANK:aerpaw_packapalooza_2025
+confirmation_lockbox N=8 site=Geneva decision=BANK:aerpaw_packapalooza_2025
+confirmation_lockbox N=8 site=URJC1 decision=BANK:aerpaw_packapalooza_2025
+confirmation_lockbox N=8 site=Princeton1 decision=BANK:aerpaw_packapalooza_2023
+confirmation_lockbox N=16 site=Oreland decision=UNRESOLVED_EXACT_FALLBACK
+confirmation_lockbox N=16 site=PiSDR1 decision=BANK:aerpaw_packapalooza_2025
+confirmation_lockbox N=16 site=Skap_French_Riviera decision=BANK:aerpaw_packapalooza_2025
+confirmation_lockbox N=16 site=Geneva decision=BANK:aerpaw_packapalooza_2025
+confirmation_lockbox N=16 site=URJC1 decision=BANK:aerpaw_packapalooza_2025
+confirmation_lockbox N=16 site=Princeton1 decision=UNRESOLVED_EXACT_FALLBACK
+confirmation_lockbox N=32 site=Oreland decision=UNRESOLVED_EXACT_FALLBACK
+confirmation_lockbox N=32 site=PiSDR1 decision=BANK:aerpaw_packapalooza_2025
+confirmation_lockbox N=32 site=Skap_French_Riviera decision=BANK:aerpaw_packapalooza_2025
+confirmation_lockbox N=32 site=Geneva decision=BANK:aerpaw_packapalooza_2025
+confirmation_lockbox N=32 site=URJC1 decision=BANK:aerpaw_packapalooza_2025
+confirmation_lockbox N=32 site=Princeton1 decision=BANK:aerpaw_packapalooza_2023
+confirmation_lockbox N=64 site=Oreland decision=UNRESOLVED_EXACT_FALLBACK
+confirmation_lockbox N=64 site=PiSDR1 decision=BANK:aerpaw_packapalooza_2025
+confirmation_lockbox N=64 site=Skap_French_Riviera decision=BANK:aerpaw_packapalooza_2025
+confirmation_lockbox N=64 site=Geneva decision=BANK:aerpaw_packapalooza_2025
+confirmation_lockbox N=64 site=URJC1 decision=BANK:aerpaw_packapalooza_2025
+confirmation_lockbox N=64 site=Princeton1 decision=UNRESOLVED_EXACT_FALLBACK
+{
+  "output": "C:\\Users\\Lenovo\\Desktop\\ÏîÄ¿\\rag-deepspace\\uav_spectrum_semcom_project\\results\\stage6r\\confirmation_lockbox_v1\\result.json",
+  "verification_status": "FAILED",
+  "primary_gate_passed": false,
+  "checks": {
+    "registered_site_count": 6,
+    "evaluable_site_count": 6,
+    "minimum_evaluable_site_gate_passed": true,
+    "semantic_clean_ci_lower_gate_passed_all_n": false,
+    "scene_weighted_savings_ci_lower_positive_all_n": true,
+    "equal_site_macro_savings_ci_lower_positive_n_count": 4,
+    "equal_site_macro_gate_passed": true,
+    "all_wrong_codebook_decode_counts_zero": true,
+    "all_bit_accounting_identities_valid": true,
+    "no_site_replacement": true,
+    "execution_role_access_count_after_run": 1
+  },
+  "elapsed_seconds": 81.8204063000012
+}
