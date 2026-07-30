@@ -1,0 +1,49 @@
+{
+  "version": "1.0",
+  "freeze_id": "stage7_candidate_freeze_v1",
+  "candidate_id": "S6R-FH10-v1",
+  "created_date": "2026-07-30",
+  "status": "registered_before_freeze",
+  "frozen_claim": "K=3 task-equivalent codebook with versioned activation, cumulative ACK, analytic regret/age triggers, exact escape, full-install fallback, and fixed 10-scene silence heartbeat.",
+  "required_decisions": {
+    "results/stage7/s7_4b0_event_piggyback_feasibility_v1/result.json": {
+      "path": ["decision", "system_gate_passed"],
+      "equals": false
+    },
+    "results/stage7/s7_4c0_semi_stateless_header_audit_v1/result.json": {
+      "path": ["decision", "gate_passed"],
+      "equals": false
+    },
+    "results/stage7/s7_5b_offline_fit_scaling_v1/result.json": {
+      "path": ["decision", "gate_passed"],
+      "equals": true
+    }
+  },
+  "artifacts": [
+    "configs/stage6r_codebook_activation_protocol_v1.json",
+    "configs/stage6r_matched_clean_scan_v1.json",
+    "configs/stage7_research_governance_v1.json",
+    "src/spectrum_semcom/stage6_task_codebook.py",
+    "src/spectrum_semcom/stage6_task_codec.py",
+    "src/spectrum_semcom/stage6_context_codec.py",
+    "src/spectrum_semcom/stage6_context_recovery.py",
+    "src/spectrum_semcom/stage6_context_heartbeat.py",
+    "src/spectrum_semcom/stage6r_codebook_activation.py",
+    "src/spectrum_semcom/stage6r_activation_reliability.py",
+    "results/stage6r/electrosense_final_freeze_v1/result.json",
+    "results/stage7/s7_3b_full_protocol_oracle_v1/result.json",
+    "results/stage7/s7_4a1_checkpoint_protocol_scan_v1/result.json",
+    "results/stage7/s7_4b0_event_piggyback_feasibility_v1/result.json",
+    "results/stage7/s7_4c0_semi_stateless_header_audit_v1/result.json",
+    "results/stage7/s7_5a_complexity_benchmark_v1/result.json",
+    "results/stage7/s7_5b_offline_fit_scaling_v1/result.json"
+  ],
+  "governance": {
+    "stage6_final_status_must_remain_failed": true,
+    "stage7_has_no_external_final": true,
+    "internal_development_test_must_remain_closed": true,
+    "reserve_must_remain_closed": true,
+    "future_final_requires_new_independent_units": 20,
+    "no_parameter_retuning_after_new_final_signal_access": true
+  }
+}

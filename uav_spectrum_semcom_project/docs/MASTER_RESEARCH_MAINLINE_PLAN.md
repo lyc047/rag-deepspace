@@ -1,11 +1,11 @@
 # 离散任务导向频谱语义通信系统主线研究计划书
 
-版本：2.3
+版本：2.4
 生效日期：2026-07-27；最近更新：2026-07-30
 状态：正式主线  
 适用范围：阶段6收尾、外部确认性验证、后续频谱预测与最小工程验证  
-当前入口：S7.6“阶段7论文证据整合与候选冻结清单”
-当前进度：S7.5复杂度审计完成。在线codec四种N两轮p95均低于1 ms，Python分配峰值低于6 MiB；无界码本拟合在N = 32/64超过5 s，但K = 3有界拟合在1024景下四种N均低于4 s。下一步整合阶段7正负证据、限制和未来外部验证条件。
+当前入口：S8.0“新独立外部验证与板载测试就绪协议”
+当前进度：阶段7证据已整合，候选S6R-FH10-v1已冻结17项关键配置、源代码和结果哈希。阶段7没有新的外部Final，不再使用已见站点调参；下一步只准备不少于20个新独立单元的单次Final协议和目标处理器测试规范。
 
 ## Material Passport
 
@@ -18,7 +18,7 @@
 - Stage 6R ElectroSense Main Final Access Count：1
 - Stage 6R Confirmation Lockbox Access Count：1
 - Stage 6 Closeout：COMPLETE
-- Stage 7 Research：ACTIVE AT S7.6
+- Stage 7 Research：CANDIDATE FROZEN
 - Stage 7 S7.0 Oracle Headroom：PASSED 4/4 N（development upper bound）
 - Stage 7 S7.1 Aggregate Gate：PASSED 3/4 N（development validation）
 - Stage 7 S7.1 Site Robustness：CAUTION；未打开内部开发测试集
@@ -29,6 +29,7 @@
 - Stage 7 S7.4B Event Piggyback：FAILED 0/4 N；停止增加有状态上下文组件
 - Stage 7 S7.4C Semi-Stateless Bound：FAILED 0/4 N；固定10景心跳冻结
 - Stage 7 S7.5 Complexity：ONLINE PASS 4/4 N；UNBOUNDED OFFLINE FAIL 2/4；K=3 OFFLINE PASS 4/4
+- Stage 7 S7.6 Evidence Integration：COMPLETE；17项候选工件已冻结
 - Supersession Rule：本文件是后续研究的唯一主线入口；既有阶段计划继续作为历史证据，不得用其旧顺序覆盖本文件
 
 ---
@@ -1298,3 +1299,21 @@ S7.4C在不读取原始信号的条件下，将S7.4B实测24-bit身份增量反�
 4. 当前进入S7.6，整合阶段7的正结果、负结果、冻结候选和未来外部验证条件。
 
 完整证据见 `docs/STAGE7_S7_5_COMPLEXITY_AND_SESSION_COST_RESULTS.md`。
+
+---
+
+## 32. 2026-07-30 阶段7证据整合与候选冻结
+
+阶段7正负证据已经统一写入 `docs/STAGE7_EVIDENCE_INTEGRATION_AND_FREEZE.md`。最终候选仍为S6R-FH10-v1：K = 3任务等价码本、版本化激活、累计ACK、解析regret/年龄触发、精确escape、完整安装回退和固定10景静默心跳。
+
+`stage7_candidate_freeze_v1`已经登记17项关键配置、源代码和结果SHA-256，并验证：
+
+- S7.4B事件捎带门槛失败；
+- S7.4C半无状态上界门槛失败；
+- S7.5B有界离线拟合门槛通过；
+- 阶段6 Final 失败状态不得改写；
+- 阶段7尚无独立外部Final；
+- 内部开发测试集与储备集继续关闭；
+- 未来Final至少需要20个新独立单元，信号访问后不得回调参数。
+
+当前转入S8.0，只准备新独立外部验证协议与板载测试规范，不再用已见数据继续搜索算法正结果。

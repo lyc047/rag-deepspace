@@ -1,0 +1,122 @@
+{
+  "version": "1.0",
+  "status": "FROZEN",
+  "freeze_id": "stage7_candidate_freeze_v1",
+  "candidate_id": "S6R-FH10-v1",
+  "frozen_claim": "K=3 task-equivalent codebook with versioned activation, cumulative ACK, analytic regret/age triggers, exact escape, full-install fallback, and fixed 10-scene silence heartbeat.",
+  "config_sha256": "19e74f0a630ca31f3ea277249d99e15f6966d74299dec75e52c7b5191d4a32e6",
+  "source_git_commit_at_freeze": "44fd9c6a76eee72ceb64d75a2e02f77dabe40b1d",
+  "decision_checks": {
+    "results/stage7/s7_4b0_event_piggyback_feasibility_v1/result.json": {
+      "path": [
+        "decision",
+        "system_gate_passed"
+      ],
+      "expected": false,
+      "actual": false,
+      "passed": true
+    },
+    "results/stage7/s7_4c0_semi_stateless_header_audit_v1/result.json": {
+      "path": [
+        "decision",
+        "gate_passed"
+      ],
+      "expected": false,
+      "actual": false,
+      "passed": true
+    },
+    "results/stage7/s7_5b_offline_fit_scaling_v1/result.json": {
+      "path": [
+        "decision",
+        "gate_passed"
+      ],
+      "expected": true,
+      "actual": true,
+      "passed": true
+    }
+  },
+  "artifact_hashes": {
+    "configs/stage6r_codebook_activation_protocol_v1.json": {
+      "sha256": "4f89d46baea177a3bc6ca958a46dbf27dc8e772c21aa0b32cf21e5115b6afc36",
+      "bytes": 3433
+    },
+    "configs/stage6r_matched_clean_scan_v1.json": {
+      "sha256": "6598125579d0e935a6003ce4d3b5c2997fab1746ffeda5ba51c94b93e3405fb3",
+      "bytes": 4224
+    },
+    "configs/stage7_research_governance_v1.json": {
+      "sha256": "67ebea7d6fba1d52a0c6777856ac28326180ff0600ebc08eb7ae5505d7b92462",
+      "bytes": 3963
+    },
+    "src/spectrum_semcom/stage6_task_codebook.py": {
+      "sha256": "ea4dc1f26e96aabf8bbeeaa7779f54e2d1b44570ce5146c43ebba02ad4adc03c",
+      "bytes": 12039
+    },
+    "src/spectrum_semcom/stage6_task_codec.py": {
+      "sha256": "d37dcbbd5370e2ef5a731c83517e0e73a03eed5ac0598ab7b515a33e88451bd3",
+      "bytes": 7869
+    },
+    "src/spectrum_semcom/stage6_context_codec.py": {
+      "sha256": "5eea3916b1ee3b7b43ec3bb0a070a6298210d62ff1d71f8b2ba964eee7dab0f5",
+      "bytes": 15824
+    },
+    "src/spectrum_semcom/stage6_context_recovery.py": {
+      "sha256": "2e63202e1e19e8fe33039db6d327f1fc0177454439721c8d799304adb678f2be",
+      "bytes": 7919
+    },
+    "src/spectrum_semcom/stage6_context_heartbeat.py": {
+      "sha256": "73413b4276974eb95396efa0eec09983b34e73cabe4b7a0379040c4c4dabb616",
+      "bytes": 3357
+    },
+    "src/spectrum_semcom/stage6r_codebook_activation.py": {
+      "sha256": "6bffec4aa021e353144dd9962ac836dca3e664da36419b0e070ff091678f8628",
+      "bytes": 9842
+    },
+    "src/spectrum_semcom/stage6r_activation_reliability.py": {
+      "sha256": "882402bb422a095f89e177fec4fbd43300e09435172e5671b06c98f1565254e3",
+      "bytes": 37091
+    },
+    "results/stage6r/electrosense_final_freeze_v1/result.json": {
+      "sha256": "41fd5bdf0e3f57b2f0ee571dec848585462216083f4ca9f851d0759e12bfcc0f",
+      "bytes": 97298
+    },
+    "results/stage7/s7_3b_full_protocol_oracle_v1/result.json": {
+      "sha256": "9025b936b038f436c7361463bbf06928f211106ba0ea958746000c1d98488ea5",
+      "bytes": 93394
+    },
+    "results/stage7/s7_4a1_checkpoint_protocol_scan_v1/result.json": {
+      "sha256": "dd3b739408da6fcb610ab1f787154b9bb8e2aecd194c2878077355c984c1ce75",
+      "bytes": 166252
+    },
+    "results/stage7/s7_4b0_event_piggyback_feasibility_v1/result.json": {
+      "sha256": "ded6bd42874fac3ed77534f8b9c5781b8f80270805cfe53767ee903fb5b5b987",
+      "bytes": 128051
+    },
+    "results/stage7/s7_4c0_semi_stateless_header_audit_v1/result.json": {
+      "sha256": "f00c0cd3177128fcabc2e4d74dc1ec83e8f00db0d4e31ba61f2b40544568fb87",
+      "bytes": 30550
+    },
+    "results/stage7/s7_5a_complexity_benchmark_v1/result.json": {
+      "sha256": "4c109f143dde299ec75a4882ab48e7aac58ead3b8f0698f15084954c1d5248db",
+      "bytes": 5364
+    },
+    "results/stage7/s7_5b_offline_fit_scaling_v1/result.json": {
+      "sha256": "381dfdb9f0956c9916f2152c52996f7afce1e21807e35d57d2cc8871c574ee5a",
+      "bytes": 5442
+    }
+  },
+  "governance": {
+    "stage6_final_status_must_remain_failed": true,
+    "stage7_has_no_external_final": true,
+    "internal_development_test_must_remain_closed": true,
+    "reserve_must_remain_closed": true,
+    "future_final_requires_new_independent_units": 20,
+    "no_parameter_retuning_after_new_final_signal_access": true
+  },
+  "claim_boundary": [
+    "This freeze does not change the FAILED Stage-6 Final status.",
+    "Stage 7 has no independent external Final.",
+    "The git commit identifies the parent state; this freeze result is committed afterward.",
+    "Future confirmation requires at least 20 new independent units and no post-access retuning."
+  ]
+}
