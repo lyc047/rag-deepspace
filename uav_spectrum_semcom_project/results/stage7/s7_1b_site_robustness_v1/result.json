@@ -1,0 +1,402 @@
+{
+  "version": "1.0",
+  "status": "stage7_s7_1b_site_robustness_complete",
+  "verification_status": "ANALYZED",
+  "experiment_id": "stage7_s7_1b_site_robustness_v1",
+  "config_sha256": "490e31e01919a1519c1c6acfcb1e44f587e9e484052c56289d8c7da60e6e1aed",
+  "source_result_sha256": "8b30af3f1449000a40212b5ad648a3dd3bc50bb19881e41f7fb3e75d50b28976",
+  "analysis_timing": "posthoc_after_registered_s7_1_result",
+  "n_results": {
+    "8": {
+      "n_channels": 8,
+      "primary_horizon_scenes": 1,
+      "selected_baseline": "symbol_markov_duration_lookup",
+      "aggregate_auc": 0.9352372725009883,
+      "aggregate_average_precision": 0.512727995787947,
+      "site_count": 6,
+      "evaluable_site_count": 4,
+      "total_positive_count": 163,
+      "dominant_positive_site": "EDLV",
+      "dominant_positive_count": 157,
+      "dominant_positive_event_share": 0.9631901840490797,
+      "dominant_site_auc": 0.6577120019982515,
+      "macro_within_site_auc": 0.8707947654946464,
+      "macro_within_site_ap_lift_over_site_prevalence": 0.7003599786313786,
+      "aggregate_minus_macro_auc": 0.06444250700634191,
+      "bootstrap": {
+        "unit": "evaluable_validation_site",
+        "replicates": 5000,
+        "confidence_level": 0.95,
+        "macro_auc_interval": [
+          0.7415895309892928,
+          1.0
+        ],
+        "macro_ap_lift_interval": [
+          0.35945248104540434,
+          0.9965777538467911
+        ]
+      },
+      "site_metrics": [
+        {
+          "site": "BGSOFIAMLADOST01",
+          "sample_count": 436,
+          "positive_count": 0,
+          "negative_count": 436,
+          "positive_prevalence": 0.0,
+          "roc_auc": null,
+          "average_precision": null,
+          "discrimination_evaluable": false
+        },
+        {
+          "site": "EDLV",
+          "sample_count": 412,
+          "positive_count": 157,
+          "negative_count": 255,
+          "positive_prevalence": 0.38106796116504854,
+          "roc_auc": 0.6577120019982515,
+          "average_precision": 0.5285336545466885,
+          "discrimination_evaluable": true
+        },
+        {
+          "site": "Geneva",
+          "sample_count": 443,
+          "positive_count": 1,
+          "negative_count": 442,
+          "positive_prevalence": 0.002257336343115124,
+          "roc_auc": 1.0,
+          "average_precision": 1.0,
+          "discrimination_evaluable": true
+        },
+        {
+          "site": "HuldOne",
+          "sample_count": 436,
+          "positive_count": 2,
+          "negative_count": 434,
+          "positive_prevalence": 0.0045871559633027525,
+          "roc_auc": 1.0,
+          "average_precision": 1.0,
+          "discrimination_evaluable": true
+        },
+        {
+          "site": "SP8AKM",
+          "sample_count": 342,
+          "positive_count": 3,
+          "negative_count": 339,
+          "positive_prevalence": 0.008771929824561403,
+          "roc_auc": 0.8254670599803342,
+          "average_precision": 0.6695906432748537,
+          "discrimination_evaluable": true
+        },
+        {
+          "site": "alcorcon1",
+          "sample_count": 189,
+          "positive_count": 0,
+          "negative_count": 189,
+          "positive_prevalence": 0.0,
+          "roc_auc": null,
+          "average_precision": null,
+          "discrimination_evaluable": false
+        }
+      ],
+      "caution_flags": {
+        "positive_events_overconcentrated": true,
+        "too_few_evaluable_sites": false,
+        "dominant_site_auc_below_minimum": false
+      },
+      "robustness_caution": true
+    },
+    "16": {
+      "n_channels": 16,
+      "primary_horizon_scenes": 1,
+      "selected_baseline": "action_duration_lookup",
+      "aggregate_auc": 0.9229205725942433,
+      "aggregate_average_precision": 0.42152310968968454,
+      "site_count": 6,
+      "evaluable_site_count": 4,
+      "total_positive_count": 162,
+      "dominant_positive_site": "EDLV",
+      "dominant_positive_count": 155,
+      "dominant_positive_event_share": 0.9567901234567902,
+      "dominant_site_auc": 0.6020872865275143,
+      "macro_within_site_auc": 0.7907653155467154,
+      "macro_within_site_ap_lift_over_site_prevalence": 0.24051392476632574,
+      "aggregate_minus_macro_auc": 0.13215525704752795,
+      "bootstrap": {
+        "unit": "evaluable_validation_site",
+        "replicates": 5000,
+        "confidence_level": 0.95,
+        "macro_auc_interval": [
+          0.6574405878061568,
+          0.9326402604052374
+        ],
+        "macro_ap_lift_interval": [
+          0.11957873745582331,
+          0.36144911207682817
+        ]
+      },
+      "site_metrics": [
+        {
+          "site": "BGSOFIAMLADOST01",
+          "sample_count": 436,
+          "positive_count": 0,
+          "negative_count": 436,
+          "positive_prevalence": 0.0,
+          "roc_auc": null,
+          "average_precision": null,
+          "discrimination_evaluable": false
+        },
+        {
+          "site": "EDLV",
+          "sample_count": 410,
+          "positive_count": 155,
+          "negative_count": 255,
+          "positive_prevalence": 0.3780487804878049,
+          "roc_auc": 0.6020872865275143,
+          "average_precision": 0.45279692507589997,
+          "discrimination_evaluable": true
+        },
+        {
+          "site": "Geneva",
+          "sample_count": 443,
+          "positive_count": 2,
+          "negative_count": 441,
+          "positive_prevalence": 0.004514672686230248,
+          "roc_auc": 0.7409297052154195,
+          "average_precision": 0.16892400300978178,
+          "discrimination_evaluable": true
+        },
+        {
+          "site": "HuldOne",
+          "sample_count": 436,
+          "positive_count": 2,
+          "negative_count": 434,
+          "positive_prevalence": 0.0045871559633027525,
+          "roc_auc": 0.9965437788018433,
+          "average_precision": 0.4,
+          "discrimination_evaluable": true
+        },
+        {
+          "site": "SP8AKM",
+          "sample_count": 342,
+          "positive_count": 3,
+          "negative_count": 339,
+          "positive_prevalence": 0.008771929824561403,
+          "roc_auc": 0.8235004916420845,
+          "average_precision": 0.3362573099415205,
+          "discrimination_evaluable": true
+        },
+        {
+          "site": "alcorcon1",
+          "sample_count": 189,
+          "positive_count": 0,
+          "negative_count": 189,
+          "positive_prevalence": 0.0,
+          "roc_auc": null,
+          "average_precision": null,
+          "discrimination_evaluable": false
+        }
+      ],
+      "caution_flags": {
+        "positive_events_overconcentrated": true,
+        "too_few_evaluable_sites": false,
+        "dominant_site_auc_below_minimum": true
+      },
+      "robustness_caution": true
+    },
+    "32": {
+      "n_channels": 32,
+      "primary_horizon_scenes": 1,
+      "selected_baseline": "symbol_markov_duration_lookup",
+      "aggregate_auc": 0.9210005353156847,
+      "aggregate_average_precision": 0.5530553044988108,
+      "site_count": 5,
+      "evaluable_site_count": 4,
+      "total_positive_count": 181,
+      "dominant_positive_site": "EDLV",
+      "dominant_positive_count": 174,
+      "dominant_positive_event_share": 0.9613259668508287,
+      "dominant_site_auc": 0.651417463537139,
+      "macro_within_site_auc": 0.7396448379966238,
+      "macro_within_site_ap_lift_over_site_prevalence": 0.39095431291270394,
+      "aggregate_minus_macro_auc": 0.18135569731906087,
+      "bootstrap": {
+        "unit": "evaluable_validation_site",
+        "replicates": 5000,
+        "confidence_level": 0.95,
+        "macro_auc_interval": [
+          0.6740789706687274,
+          0.8040081290866331
+        ],
+        "macro_ap_lift_interval": [
+          0.2026279372718193,
+          0.5792806885535886
+        ]
+      },
+      "site_metrics": [
+        {
+          "site": "BGSOFIAMLADOST01",
+          "sample_count": 436,
+          "positive_count": 2,
+          "negative_count": 434,
+          "positive_prevalence": 0.0045871559633027525,
+          "roc_auc": 0.7396313364055299,
+          "average_precision": 0.25229357798165136,
+          "discrimination_evaluable": true
+        },
+        {
+          "site": "EDLV",
+          "sample_count": 412,
+          "positive_count": 174,
+          "negative_count": 238,
+          "positive_prevalence": 0.4223300970873786,
+          "roc_auc": 0.651417463537139,
+          "average_precision": 0.5798795496126686,
+          "discrimination_evaluable": true
+        },
+        {
+          "site": "Geneva",
+          "sample_count": 443,
+          "positive_count": 2,
+          "negative_count": 441,
+          "positive_prevalence": 0.004514672686230248,
+          "roc_auc": 0.7420634920634921,
+          "average_precision": 0.5022573363431151,
+          "discrimination_evaluable": true
+        },
+        {
+          "site": "SP8AKM",
+          "sample_count": 342,
+          "positive_count": 3,
+          "negative_count": 339,
+          "positive_prevalence": 0.008771929824561403,
+          "roc_auc": 0.8254670599803342,
+          "average_precision": 0.6695906432748537,
+          "discrimination_evaluable": true
+        },
+        {
+          "site": "alcorcon1",
+          "sample_count": 189,
+          "positive_count": 0,
+          "negative_count": 189,
+          "positive_prevalence": 0.0,
+          "roc_auc": null,
+          "average_precision": null,
+          "discrimination_evaluable": false
+        }
+      ],
+      "caution_flags": {
+        "positive_events_overconcentrated": true,
+        "too_few_evaluable_sites": false,
+        "dominant_site_auc_below_minimum": false
+      },
+      "robustness_caution": true
+    },
+    "64": {
+      "n_channels": 64,
+      "primary_horizon_scenes": 1,
+      "selected_baseline": "symbol_markov_duration_lookup",
+      "aggregate_auc": 0.9297378160146113,
+      "aggregate_average_precision": 0.5362015317285653,
+      "site_count": 5,
+      "evaluable_site_count": 4,
+      "total_positive_count": 206,
+      "dominant_positive_site": "EDLV",
+      "dominant_positive_count": 200,
+      "dominant_positive_event_share": 0.970873786407767,
+      "dominant_site_auc": 0.5926768867924528,
+      "macro_within_site_auc": 0.6997128633483216,
+      "macro_within_site_ap_lift_over_site_prevalence": 0.2740072637206698,
+      "aggregate_minus_macro_auc": 0.23002495266628964,
+      "bootstrap": {
+        "unit": "evaluable_validation_site",
+        "replicates": 5000,
+        "confidence_level": 0.95,
+        "macro_auc_interval": [
+          0.6288826650943395,
+          0.7391417050691245
+        ],
+        "macro_ap_lift_interval": [
+          0.05062330473625885,
+          0.49739122270508074
+        ]
+      },
+      "site_metrics": [
+        {
+          "site": "BGSOFIAMLADOST01",
+          "sample_count": 436,
+          "positive_count": 2,
+          "negative_count": 434,
+          "positive_prevalence": 0.0045871559633027525,
+          "roc_auc": 0.7407834101382489,
+          "average_precision": 0.5022935779816514,
+          "discrimination_evaluable": true
+        },
+        {
+          "site": "EDLV",
+          "sample_count": 412,
+          "positive_count": 200,
+          "negative_count": 212,
+          "positive_prevalence": 0.4854368932038835,
+          "roc_auc": 0.5926768867924528,
+          "average_precision": 0.5532265533052306,
+          "discrimination_evaluable": true
+        },
+        {
+          "site": "Geneva",
+          "sample_count": 443,
+          "positive_count": 2,
+          "negative_count": 441,
+          "positive_prevalence": 0.004514672686230248,
+          "roc_auc": 0.727891156462585,
+          "average_precision": 0.03797162205740084,
+          "discrimination_evaluable": true
+        },
+        {
+          "site": "SP8AKM",
+          "sample_count": 342,
+          "positive_count": 2,
+          "negative_count": 340,
+          "positive_prevalence": 0.005847953216374269,
+          "roc_auc": 0.7374999999999999,
+          "average_precision": 0.5029239766081871,
+          "discrimination_evaluable": true
+        },
+        {
+          "site": "alcorcon1",
+          "sample_count": 189,
+          "positive_count": 0,
+          "negative_count": 189,
+          "positive_prevalence": 0.0,
+          "roc_auc": null,
+          "average_precision": null,
+          "discrimination_evaluable": false
+        }
+      ],
+      "caution_flags": {
+        "positive_events_overconcentrated": true,
+        "too_few_evaluable_sites": false,
+        "dominant_site_auc_below_minimum": true
+      },
+      "robustness_caution": true
+    }
+  },
+  "decision": {
+    "any_robustness_caution": true,
+    "next_action": "do_not_open_internal_test_continue_to_s7_2_site_robust_lightweight_models",
+    "registered_s7_1_aggregate_gate_result_unchanged": true,
+    "internal_development_test_may_be_opened": false
+  },
+  "governance_checks": {
+    "internal_development_test_loaded": false,
+    "reserve_loaded": false,
+    "external_final_claim_forbidden": true
+  },
+  "claim_boundary": [
+    "This is a transparently post-hoc robustness diagnostic triggered by inspection of the registered S7.1 result.",
+    "The diagnostic does not retroactively change the registered S7.1 aggregate decision.",
+    "The internal development-test and reserve signal values remain unread.",
+    "AUC and average precision are undefined for sites containing only one label class; such sites are reported but excluded from macro discrimination metrics.",
+    "Bootstrap resampling treats the validation site, not individual scenes, as the independent unit.",
+    "The diagnostic can block premature candidate freezing but cannot establish confirmatory model performance."
+  ]
+}

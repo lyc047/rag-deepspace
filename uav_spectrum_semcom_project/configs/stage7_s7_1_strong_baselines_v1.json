@@ -1,0 +1,128 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage7_s7_1_strong_baselines_v1",
+  "status": "registered_before_execution",
+  "created_date": "2026-07-30",
+  "evidence_role": "stage7_development_train_validation_only",
+  "purpose": "Measure cross-site multi-horizon task-risk predictability with causal non-neural baselines and verify the structural predictability limit of independent receiver resets.",
+  "inputs": {
+    "governance": "configs/stage7_research_governance_v1.json",
+    "development_split": "configs/stage7_development_split_v1.json",
+    "electrosense_protocol": "configs/stage6r_electrosense_external_final_protocol_v1.json",
+    "electrosense_registry": "results/stage6r/electrosense_final_registry_v1/registry.json",
+    "electrosense_access_state": "configs/stage6r_electrosense_final_access_state_v1.json",
+    "electrosense_freeze": "results/stage6r/electrosense_final_freeze_v1/result.json",
+    "matched_scan_config": "configs/stage6r_matched_clean_scan_v1.json",
+    "s7_0_result": "results/stage7/s7_0_oracle_headroom_v1/result.json"
+  },
+  "data": {
+    "fit_split": "train",
+    "threshold_and_selection_split": "validation",
+    "internal_development_test_signal_values_may_be_loaded": false,
+    "internal_development_test_metrics_may_be_computed": false,
+    "reserve_values_may_be_loaded": false,
+    "expected_train_site_count": 20,
+    "expected_validation_site_count": 7,
+    "expected_internal_development_test_site_count": 7,
+    "unresolved_exact_fallback_rule": "retain_count_but_exclude_from_semantic_hazard_model"
+  },
+  "task": {
+    "n_channels": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "demand_ratios": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "epsilon_db": 0.2,
+    "primary_k": 4,
+    "prediction_horizons_scenes": [
+      1,
+      3,
+      5,
+      10
+    ]
+  },
+  "task_risk_baselines": [
+    "constant_training_prevalence",
+    "previous_action_violation",
+    "past_power_change_quantile",
+    "runner_up_margin_quantile",
+    "action_duration_lookup",
+    "symbol_markov_duration_lookup"
+  ],
+  "lookup": {
+    "prior_strength": 10.0,
+    "continuous_quantile_bins": 10,
+    "threshold_target_training_oof_recall": 0.8,
+    "calibration_bins": 10
+  },
+  "context_risk_audit": {
+    "fault_model": "independent_identically_distributed_receiver_reset",
+    "reset_probability_per_scene": 0.02,
+    "trajectories": 60,
+    "random_seed": 20260731,
+    "causal_baselines": [
+      "constant_analytic_hazard",
+      "action_duration_lookup",
+      "heartbeat_phase_lookup"
+    ],
+    "analytic_probability": "1-(1-p)^h",
+    "claim": "Under the registered independent reset model, future reset occurrence is conditionally independent of all causal spectrum and protocol-history features."
+  },
+  "metrics": [
+    "positive_prevalence",
+    "roc_auc",
+    "average_precision",
+    "average_precision_lift_over_prevalence",
+    "brier_score",
+    "brier_skill_over_constant",
+    "expected_calibration_error",
+    "recall_at_frozen_threshold",
+    "false_positive_rate_at_frozen_threshold",
+    "alert_fraction_at_frozen_threshold"
+  ],
+  "decision_rules": {
+    "task_has_useful_baseline_structure": {
+      "minimum_n_count": 3,
+      "minimum_auc": 0.6,
+      "minimum_ap_lift_over_prevalence": 0.05,
+      "evaluate_horizon_scenes": 1
+    },
+    "baseline_already_meets_stage7_prediction_gate": {
+      "minimum_n_count": 3,
+      "minimum_auc": 0.7,
+      "minimum_ap_lift_over_prevalence": 0.1,
+      "require_positive_brier_skill": true,
+      "maximum_ece": 0.05,
+      "minimum_recall": 0.8,
+      "maximum_alert_fraction": 0.2
+    },
+    "context_iid_empirical_consistency": {
+      "minimum_dwell_auc": 0.45,
+      "maximum_dwell_auc": 0.55,
+      "maximum_absolute_prevalence_error": 0.01
+    },
+    "if_task_structure_exists_but_baseline_gate_fails": "continue_to_s7_2_logistic_and_discrete_survival",
+    "if_no_task_structure": "stop_task_predictor_and_reformulate_features_or_task",
+    "context_action": "use_analytic_belief_or_real_device_telemetry_not_spectrum_ml"
+  },
+  "bootstrap": {
+    "replicates": 5000,
+    "confidence_level": 0.95,
+    "seed": 20260821,
+    "unit": "validation_site"
+  },
+  "claim_boundary": [
+    "Only the 20 train and 7 validation sites are loaded; the 7 internal development-test sites remain closed for S7.1 model selection.",
+    "All sites were already consumed in Stage 6 and remain development evidence, not an external Final.",
+    "Every feature is computed from scene t and its past; future spectra appear only in labels.",
+    "The independent reset audit applies only to the registered synthetic i.i.d. reset model and does not prove that real device failures are unpredictable.",
+    "Strong baselines are evaluated before logistic regression, survival models, boosted trees, or neural networks.",
+    "No predictor may directly select a spectrum action or bypass the analytic safety layer."
+  ]
+}
