@@ -78,6 +78,8 @@ DEFAULT_OUTPUT = (
 def _metrics(
     matched,
     activated: ActivationMatchedTrajectoryResult | None,
+    *,
+    include_event_metrics: bool = False,
 ) -> dict[str, float]:
     output = _trajectory_metrics(matched)
     scenes = len(matched.clean)
@@ -110,7 +112,58 @@ def _metrics(
             ),
         }
     )
+    if include_event_metrics:
+        output.update(
+            {
+                "event_context_update_count_per_scene": (
+                    float(activated.event_context_update_count / scenes)
+                    if activated is not None
+                    else 0.0
+                ),
+                "event_context_update_bits_per_scene": (
+                    float(activated.event_context_update_bits / scenes)
+                    if activated is not None
+                    else 0.0
+                ),
+                "event_context_incremental_bits_per_scene": (
+                    float(
+                        activated.event_context_incremental_bits / scenes
+                    )
+                    if activated is not None
+                    else 0.0
+                ),
+                "event_context_rejection_count_per_scene": (
+                    float(
+                        activated.event_context_rejection_count / scenes
+                    )
+                    if activated is not None
+                    else 0.0
+                ),
+                "event_context_reset_rescue_count_per_scene": (
+                    float(
+                        activated.event_context_reset_rescue_count / scenes
+                    )
+                    if activated is not None
+                    else 0.0
+                ),
+            }
+        )
     return output
+
+
+def _gate(config: dict) -> dict:
+    return config.get("system_gate", config.get("feasibility_gate"))
+
+
+def _candidate_policies(config: dict) -> list[str]:
+    prefix = str(
+        config.get("reporting", {}).get(
+            "candidate_policy_prefix", "checkpoint"
+        )
+    )
+    return [
+        name for name in config["policies"] if name.startswith(prefix)
+    ]
 
 
 def _arrays(rows: list[dict[str, float]]) -> dict[str, np.ndarray]:
@@ -152,7 +205,7 @@ def _paired_comparisons(
     config: dict,
     seed: int,
 ) -> dict:
-    reference = str(config["system_gate"]["reference_policy"])
+    reference = str(_gate(config)["reference_policy"])
     baseline = site_arrays[reference]
     weights = np.asarray(scene_counts, dtype=np.float64)
     output = {}
@@ -209,11 +262,9 @@ def _policy_checks(
     *,
     config: dict,
 ) -> dict:
-    gate = config["system_gate"]
+    gate = _gate(config)
     checks = {}
-    for policy in (
-        name for name in config["policies"] if name.startswith("checkpoint")
-    ):
+    for policy in _candidate_policies(config):
         row = comparisons[policy]
         clean = row["paired_clean_gain_percentage_points"]
         bits = row["paired_total_bit_reduction_percentage"]
@@ -246,10 +297,13 @@ def _policy_checks(
     return checks
 
 
-def main() -> None:
+def main(
+    default_config: Path = DEFAULT_CONFIG,
+    default_output: Path = DEFAULT_OUTPUT,
+) -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
-    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument("--config", type=Path, default=default_config)
+    parser.add_argument("--output", type=Path, default=default_output)
     parser.add_argument("--max-sites", type=int, default=None)
     parser.add_argument("--trajectories", type=int, default=None)
     parser.add_argument(
@@ -263,8 +317,10 @@ def main() -> None:
     )
     args = parser.parse_args()
     if args.output.exists():
-        raise FileExistsError("refusing to overwrite S7.4A-1 result")
+        raise FileExistsError("refusing to overwrite registered result")
     config = read_json(args.config)
+    experiment_id = str(config["experiment_id"])
+    event_mode = "s7_4b" in experiment_id
     paths = {
         key: PROJECT_DIR / value
         for key, value in config["inputs"].items()
@@ -276,18 +332,26 @@ def main() -> None:
     freeze = read_json(paths["electrosense_freeze"])
     scan = read_json(paths["matched_scan_config"])
     activation = read_json(paths["activation_protocol"])
-    source = read_json(paths["s7_4a0_result"])
+    source = read_json(
+        paths["s7_4a_result"]
+        if event_mode
+        else paths["s7_4a0_result"]
+    )
     validation_sites = list(split["validation"])
     internal_sites = list(split["internal_development_test"])
     if (
-        not source["decision"]["feasibility_gate_passed"]
+        (
+            source["decision"]["system_gate_passed"]
+            if event_mode
+            else not source["decision"]["feasibility_gate_passed"]
+        )
         or len(split["train"])
         != int(config["data"]["expected_train_site_count"])
         or len(validation_sites)
         != int(config["data"]["expected_validation_site_count"])
         or int(access["roles"]["reserve"]["access_count"]) != 0
     ):
-        raise ValueError("S7.4A-1 governance or trigger mismatch")
+        raise ValueError("Stage-7 governance or trigger mismatch")
     smoke = (
         args.max_sites is not None
         or args.trajectories is not None
@@ -354,8 +418,7 @@ def main() -> None:
     n_results = {}
     policy_passing_n_count = {
         policy: 0
-        for policy in policies
-        if policy.startswith("checkpoint")
+        for policy in _candidate_policies(config)
     }
     for n_position, n_channels in enumerate(
         map(int, config["task"]["n_channels"])
@@ -426,7 +489,14 @@ def main() -> None:
             ]
             if not resolution["resolved"]:
                 policy_metrics = {
-                    policy: [_metrics(run, None) for run in exact_runs]
+                    policy: [
+                        _metrics(
+                            run,
+                            None,
+                            include_event_metrics=event_mode,
+                        )
+                        for run in exact_runs
+                    ]
                     for policy in policies
                 }
             else:
@@ -480,9 +550,14 @@ def main() -> None:
                     )
                     for policy, settings in policies.items():
                         heartbeat = settings["heartbeat_interval_scenes"]
-                        checkpoint = settings[
+                        checkpoint = settings.get(
                             "checkpoint_interval_scenes"
-                        ]
+                        )
+                        event_piggyback = bool(
+                            settings.get(
+                                "event_context_piggyback", False
+                            )
+                        )
                         activated = simulate_activation_semantic_trajectory(
                             states,
                             timestamps,
@@ -531,12 +606,17 @@ def main() -> None:
                                 if checkpoint is None
                                 else int(checkpoint)
                             ),
+                            self_contained_event_updates=event_piggyback,
                         )
                         combined = combine_matched_trajectory_results(
                             [calibration_result, activated.matched]
                         )
                         policy_metrics[policy].append(
-                            _metrics(combined, activated)
+                            _metrics(
+                                combined,
+                                activated,
+                                include_event_metrics=event_mode,
+                            )
                         )
                         wrong_decode[policy] += int(
                             combined.wrong_codebook_decode_count
@@ -553,7 +633,7 @@ def main() -> None:
                 ),
             }
             print(
-                f"S7.4A-1 N={n_channels} site={site} complete",
+                f"{experiment_id} N={n_channels} site={site} complete",
                 flush=True,
             )
         summary = _policy_summary(
@@ -583,15 +663,20 @@ def main() -> None:
             "policy_metrics": summary,
             "paired_comparisons_vs_fixed10": comparisons,
             "wrong_codebook_decode_total": wrong_decode,
-            "checkpoint_policy_checks": checks,
+            (
+                "event_policy_checks"
+                if event_mode
+                else "checkpoint_policy_checks"
+            ): checks,
         }
         print(
-            "S7.4A-1 "
+            f"{experiment_id} "
             f"N={n_channels} passing="
             f"{[key for key, value in checks.items() if value['system_gate_passed']]}",
             flush=True,
         )
-    required = int(config["system_gate"]["minimum_passing_n_count"])
+    gate = _gate(config)
+    required = int(gate["minimum_passing_n_count"])
     best_policy = max(
         policy_passing_n_count,
         key=lambda name: (policy_passing_n_count[name], name),
@@ -600,19 +685,27 @@ def main() -> None:
         policy_passing_n_count[best_policy] >= required and not smoke
     )
     next_action = (
-        config["system_gate"]["if_gate_passes"]
+        gate["if_gate_passes"]
         if passed
-        else config["system_gate"]["if_gate_fails"]
+        else gate["if_gate_fails"]
     )
     result = {
         "version": "1.0",
         "status": (
-            "stage7_s7_4a1_checkpoint_smoke_complete"
-            if smoke
-            else "stage7_s7_4a1_checkpoint_protocol_scan_complete"
+            (
+                f"{experiment_id}_smoke_complete"
+                if smoke
+                else f"{experiment_id}_complete"
+            )
+            if event_mode
+            else (
+                "stage7_s7_4a1_checkpoint_smoke_complete"
+                if smoke
+                else "stage7_s7_4a1_checkpoint_protocol_scan_complete"
+            )
         ),
         "verification_status": "ANALYZED",
-        "experiment_id": config["experiment_id"],
+        "experiment_id": experiment_id,
         "config_sha256": sha256_file(args.config),
         "input_hashes": {
             key: sha256_file(path)

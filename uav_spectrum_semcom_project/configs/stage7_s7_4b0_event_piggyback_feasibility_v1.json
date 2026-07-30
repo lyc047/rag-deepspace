@@ -92,6 +92,7 @@
     "if_gate_fails": "stop_adding_stateful_context_components_and_audit_semi_stateless_headers"
   },
   "reporting": {
+    "candidate_policy_prefix": "piggyback",
     "report_all_policies_and_all_n": true,
     "report_event_upgrade_count_incremental_bits_and_reset_rescues": true,
     "report_clean_availability_regret_cvar_longest_dirty_run": true,
