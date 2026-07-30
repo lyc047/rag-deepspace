@@ -1336,3 +1336,28 @@ S7.4C在不读取原始信号的条件下，将S7.4B实测24-bit身份增量反�
 10. 目标板、功耗模式、运行环境和测量方法尚未冻结，因此当前状态为 `REGISTERED_NOT_EXECUTABLE`。
 
 当前下一入口为S8.1元数据登记：只根据公开说明建立不少于20个候选独立单元的元数据表，不读取频谱信号值。完整协议见 `docs/STAGE8_EXTERNAL_FINAL_AND_HARDWARE_READINESS_PROTOCOL.md`，机器注册证据见 `results/stage8/stage8_readiness_registration_v1/result.json`。
+
+---
+
+## 34. 2026-07-30 阶段8.1本地元数据审计
+
+S8.1只检查F盘路径、文件大小和历史使用证据，没有打开压缩包负载，也没有读取IQ、功率、占用、regret或算法输出值。
+
+审计覆盖12个本地来源，12个路径均存在，但可计入阶段8新独立外部Final的单元为0/20：
+
+- AERPAW Helikite 2023为pilot，2024—2025已经进入阶段5—6外部流程；
+- AERPAW Sub-6 GHz 2022已经用于阶段4—6；
+- 本地34个ElectroSense站点已在阶段6—7中消费或转为开发证据；
+- RML2016.10A、LoRaIQ、RadDet和VisDrone与冻结的连续频谱块选择任务不匹配；
+- 单个5G短捕获和当前FIESTA本地包不足以构成20个独立会话。
+
+决定：
+
+1. `S6R-FH10-v1`继续冻结，不因数据不足打开算法调参；
+2. 阶段8外部Final继续保持未授权；
+3. 现有本地数据可用于复现、回归和其他任务研究，但不能再次承担独立确认；
+4. 下一步S8.2只搜索公开元数据，建立新的候选数据长名单；
+5. 候选必须具有连续功率谱或可转换PSD、明确时间顺序、站点/活动/日期层级和不少于20个独立单元；
+6. 在元数据门槛通过前，不下载或读取候选信号值。
+
+完整证据见 `docs/STAGE8_S8_1_LOCAL_METADATA_AUDIT.md` 与 `results/stage8/stage8_local_metadata_audit_v1/result.json`。

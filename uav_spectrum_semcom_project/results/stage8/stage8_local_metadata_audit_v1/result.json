@@ -1,0 +1,203 @@
+{
+  "version": "1.0",
+  "status": "METADATA_AUDIT_COMPLETE",
+  "audit_id": "stage8_local_metadata_sources_v1",
+  "signal_values_accessed": false,
+  "model_outputs_accessed": false,
+  "archive_payloads_opened": false,
+  "source_count": 12,
+  "existing_source_count": 12,
+  "eligible_new_independent_units": 0,
+  "minimum_new_independent_units_required": 20,
+  "independence_status_counts": {
+    "all_local_sites_consumed_or_development": 1,
+    "not_applicable": 4,
+    "pilot_seen": 1,
+    "previously_consumed": 4,
+    "single_archive": 1,
+    "single_capture": 1
+  },
+  "sources": [
+    {
+      "source_id": "aerpaw_helikite_lake_wheeler_2024",
+      "path": "F:\\uav_spectrum_final_data\\aerpaw_helikite_external_v1\\final\\Lake_Wheeler_2024\\Lake_Wheeler_2024_SigMF.zip",
+      "path_exists": true,
+      "path_kind": "file",
+      "file_size_bytes": 787189713,
+      "format": "SigMF_archive",
+      "task_compatibility": "compatible_after_frozen_adapter",
+      "independence_status": "previously_consumed",
+      "eligible_new_units": 0,
+      "reason": "Included in the Stage-5/Stage-6 airborne external workflow and cannot be reused as new independent confirmation."
+    },
+    {
+      "source_id": "aerpaw_helikite_packapalooza_2024",
+      "path": "F:\\uav_spectrum_final_data\\aerpaw_helikite_external_v1\\final\\Packapalooza_2024\\Packapalooza_2024_SigMF.zip",
+      "path_exists": true,
+      "path_kind": "file",
+      "file_size_bytes": 745874507,
+      "format": "SigMF_archive",
+      "task_compatibility": "compatible_after_frozen_adapter",
+      "independence_status": "previously_consumed",
+      "eligible_new_units": 0,
+      "reason": "Included in the Stage-5/Stage-6 airborne external workflow and cannot be reused as new independent confirmation."
+    },
+    {
+      "source_id": "aerpaw_helikite_packapalooza_2025",
+      "path": "F:\\uav_spectrum_final_data\\aerpaw_helikite_external_v1\\final\\Packapalooza_2025\\Dryad_submission_AERPAW_Pack2025_17Oct2025.zip",
+      "path_exists": true,
+      "path_kind": "file",
+      "file_size_bytes": 438557314,
+      "format": "SigMF_archive",
+      "task_compatibility": "compatible_after_metadata_adapter",
+      "independence_status": "previously_consumed",
+      "eligible_new_units": 0,
+      "reason": "Accessed in the Stage-6 external workflow; the metadata repair run is development evidence, not a fresh unit."
+    },
+    {
+      "source_id": "aerpaw_helikite_packapalooza_2023",
+      "path": "F:\\uav_spectrum_final_data\\aerpaw_helikite_external_v1\\pilot\\Packapalooza_2023\\AERPAW_helikite_packapalooza_23.7z",
+      "path_exists": true,
+      "path_kind": "file",
+      "file_size_bytes": 80854632,
+      "format": "SigMF_archive",
+      "task_compatibility": "compatible",
+      "independence_status": "pilot_seen",
+      "eligible_new_units": 0,
+      "reason": "Permanently designated as pilot data before the airborne external workflow."
+    },
+    {
+      "source_id": "aerpaw_sub6_feb2022",
+      "path": "F:\\uav_spectrum_final_data\\aerpaw_sub6_feb2022",
+      "path_exists": true,
+      "path_kind": "directory",
+      "file_size_bytes": null,
+      "format": "SigMF_archives_and_compact_derivatives",
+      "task_compatibility": "compatible",
+      "independence_status": "previously_consumed",
+      "eligible_new_units": 0,
+      "reason": "Used in Stage-4 through Stage-6 development and confirmation; remaining files are not new independent campaigns."
+    },
+    {
+      "source_id": "electrosense_spectrum_bands",
+      "path": "F:\\spectrum_bands.tar.gz",
+      "path_exists": true,
+      "path_kind": "file",
+      "file_size_bytes": 1731443582,
+      "format": "ElectroSense_power_spectrum_archive",
+      "task_compatibility": "compatible",
+      "independence_status": "all_local_sites_consumed_or_development",
+      "eligible_new_units": 0,
+      "reason": "All 34 local sites were consumed in Stage-6 or used as Stage-7 development evidence."
+    },
+    {
+      "source_id": "radioml2016_10a",
+      "path": "F:\\uav_spectrum_semcom_data\\raw\\radioml2016_10a\\RML2016.10a.tar.bz2",
+      "path_exists": true,
+      "path_kind": "file",
+      "file_size_bytes": 212669459,
+      "format": "labeled_IQ_modulation_examples",
+      "task_compatibility": "incompatible_primary_task",
+      "independence_status": "not_applicable",
+      "eligible_new_units": 0,
+      "reason": "Modulation-classification examples do not provide ordered wideband occupancy sessions for block-selection regret."
+    },
+    {
+      "source_id": "loraiq",
+      "path": "F:\\uav_spectrum_semcom_data\\raw\\loraiq\\dataset.csv",
+      "path_exists": true,
+      "path_kind": "file",
+      "file_size_bytes": 28253049,
+      "format": "LoRa_IQ_examples",
+      "task_compatibility": "incompatible_primary_task",
+      "independence_status": "not_applicable",
+      "eligible_new_units": 0,
+      "reason": "LoRa waveform examples do not provide the required multi-channel ordered spectrum-selection task."
+    },
+    {
+      "source_id": "sigmf_5g_short",
+      "path": "F:\\uav_spectrum_semcom_data\\raw\\sigmf_5g_short\\1876954_7680KSPS_srsRAN_Project_gnb_short.sigmf-data",
+      "path_exists": true,
+      "path_kind": "file",
+      "file_size_bytes": 8802176,
+      "format": "single_short_IQ_capture",
+      "task_compatibility": "insufficient_for_registered_task",
+      "independence_status": "single_capture",
+      "eligible_new_units": 0,
+      "reason": "One short capture cannot satisfy the 20-unit independent external protocol."
+    },
+    {
+      "source_id": "fiesta_single_archive",
+      "path": "F:\\uav_spectrum_semcom_data\\raw\\fiesta\\CF525MHz_BD50MHz_256.txt.zip",
+      "path_exists": true,
+      "path_kind": "file",
+      "file_size_bytes": 615188,
+      "format": "single_spectrum_archive",
+      "task_compatibility": "metadata_insufficient",
+      "independence_status": "single_archive",
+      "eligible_new_units": 0,
+      "reason": "Current local metadata does not establish 20 independent ordered sessions or registered-task compatibility."
+    },
+    {
+      "source_id": "raddet",
+      "path": "F:\\uav_spectrum_semcom_data\\raw\\raddet\\RadDet40k128HW001Tv2",
+      "path_exists": true,
+      "path_kind": "directory",
+      "file_size_bytes": null,
+      "format": "radar_detection_dataset",
+      "task_compatibility": "incompatible_primary_task",
+      "independence_status": "not_applicable",
+      "eligible_new_units": 0,
+      "reason": "Radar-object-detection data are outside the frozen spectrum block-selection task."
+    },
+    {
+      "source_id": "visdrone",
+      "path": "F:\\uav_spectrum_semcom_data\\raw\\visdrone\\VisDrone2019-DET-val.zip",
+      "path_exists": true,
+      "path_kind": "file",
+      "file_size_bytes": 81638851,
+      "format": "image_detection_dataset",
+      "task_compatibility": "incompatible_primary_task",
+      "independence_status": "not_applicable",
+      "eligible_new_units": 0,
+      "reason": "Image data may support future application adaptation but cannot validate the frozen spectrum protocol."
+    }
+  ],
+  "evidence_references": [
+    {
+      "path": "results/stage5/external_final_catalog_v1/catalog.json",
+      "exists": true
+    },
+    {
+      "path": "results/stage6/external_final_catalog_v1/catalog.json",
+      "exists": true
+    },
+    {
+      "path": "results/stage6r/electrosense_final_freeze_v1/result.json",
+      "exists": true
+    },
+    {
+      "path": "results/stage7/s7_0_oracle_headroom_v1/result.json",
+      "exists": true
+    },
+    {
+      "path": "docs/STAGE6_FINAL_CLOSEOUT_REPORT.md",
+      "exists": true
+    },
+    {
+      "path": "docs/STAGE7_EVIDENCE_INTEGRATION_AND_FREEZE.md",
+      "exists": true
+    }
+  ],
+  "decision": {
+    "local_external_final_ready": false,
+    "new_external_data_required": true,
+    "execution_authorized": false
+  },
+  "claim_boundary": [
+    "Only paths, file sizes, and previously registered evidence were inspected.",
+    "No IQ, power, occupancy, regret, or method output values were loaded.",
+    "Existing local archives cannot be relabeled as new independent Final units.",
+    "Task-incompatible datasets may be used for other research but not this frozen Final."
+  ]
+}

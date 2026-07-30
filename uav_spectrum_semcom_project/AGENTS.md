@@ -24,6 +24,7 @@
 - S7.5复杂度审计已完成：当前桌面CPU上在线codec四种N两轮p95均低于1 ms，Python分配峰值低于6 MiB；无界离线码本拟合在N = 32/64超过5 s，K = 3有界拟合则在1024景下四种N均低于4 s。该结果不是无人机板载验证；码本必须离线有界构造。当前进入S7.6论文证据整合。完整证据见 `docs/STAGE7_S7_5_COMPLEXITY_AND_SESSION_COST_RESULTS.md`。
 - 阶段7证据整合与候选冻结已完成：S6R-FH10-v1冻结17项配置、源代码和结果哈希；阶段7没有新的外部Final。当前进入S8.0，只准备不少于20个新独立单元的单次Final协议和目标处理器测试规范，不再用已见数据调参。完整证据见 `docs/STAGE7_EVIDENCE_INTEGRATION_AND_FREEZE.md` 与 `results/stage7/stage7_candidate_freeze_v1/result.json`。
 - S8.0外部Final与板载测试就绪协议已注册，状态必须保持为 `REGISTERED_NOT_EXECUTABLE`，直至不少于20个新独立单元、信号路径、执行环境和目标板卡全部冻结。当前不得读取新信号值，不得把协议注册称为Final或板载结果；执行门槛见 `docs/STAGE8_EXTERNAL_FINAL_AND_HARDWARE_READINESS_PROTOCOL.md`。
+- S8.1已完成F盘元数据级审计：12个本地来源均存在，但可计入新独立外部Final的单元为0/20；AERPAW和ElectroSense均已见或已消费，其余本地数据与冻结任务不匹配或独立单元不足。不得把旧包切片、不同N或故障轨迹改称新单元；完整证据见 `docs/STAGE8_S8_1_LOCAL_METADATA_AUDIT.md`。
 - 合成数据只用于训练、开发、稀有事件增强和压力测试，不得单独承担外部Final。
 - 后续AI只允许通过解析安全层接入，并以系统级rate–risk收益决定是否保留。
 - 阶段7先做预言机收益空间检查。若相同clean下总bit不能降低至少5%，且相同bit下clean不能提高至少1个百分点，则停止复杂预测模型，转向无状态或周期自包含协议；在S7.0通过前不得启动GRU、TCN、Transformer、GNN或强化学习。
