@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "status": "stage9_v1_invalidated_for_protocol_mismatch",
+  "audit_date": "2026-07-31",
+  "affected_artifacts": [
+    "configs/stage9_software_in_loop_protocol_v1.json",
+    "results/stage9/development_v1/result.json",
+    "results/stage9/stage9_candidate_freeze_v1.json",
+    "results/stage9/confirmation_v1/result.json",
+    "results/stage9/reproducibility_v1/result.json"
+  ],
+  "reason": "The V1 accounting used a K=4 codeword symbol width, while results/stage7/stage7_candidate_freeze_v1/result.json freezes K=3.",
+  "scientific_disposition": "Retain for audit history only. Do not cite V1 numerical results as Stage-9 evidence.",
+  "replacement": "stage9_software_in_loop_protocol_v2"
+}

@@ -1,0 +1,40 @@
+{
+  "version": "2.0",
+  "status": "stage9_candidate_frozen_before_confirmation",
+  "frozen_date": "2026-07-31",
+  "candidate_id": "S9-BER-v2",
+  "parent_candidate": "stage7_candidate_freeze_v1/S6R-FH10-v1",
+  "evidence_role": "development_selected_software_in_loop_candidate",
+  "input_hashes": {
+    "config": "b8a894633875c55178a72911e503fff15bc37a6c9f9da99a1ebddf1d066b5983",
+    "runtime": "2887f17f8d22782f0db19382bad7db6205e37c353373ca4c02cf33b17879f813",
+    "runner": "928acb898fb9bd056927fe57512ffe4d54a10110c0862ece751b90e3c39c61e3",
+    "worker": "97d122a078d8f38030c4304e70894c3b4696ad837d6b66f32645d0b9b0d2bb0e",
+    "tests": "8ff90ec6f17472f71c6805d2ede77aa0c97c52857f4f38b1451a6d40328573c0"
+  },
+  "development_result_sha256": "c39839ff15c421ec4e80b7eba0f074cb8adebd526310b5fbdd993215e287b554",
+  "development_gate": {
+    "passing_profile_count": 3,
+    "required_profile_count": 3,
+    "passed": true,
+    "failed_profile": "restart_stress",
+    "failed_reason": "Relative bit-saving confidence lower bound was 2.67 percent, below the preregistered 5 percent threshold."
+  },
+  "frozen_protocol_accounting": {
+    "codeword_budget": 3,
+    "compact_update_bits": 42,
+    "full_install_bits_for_n32_three_queries": 403,
+    "activation_bits": 64,
+    "ack_bits": 24,
+    "heartbeat_request_bits": 32,
+    "heartbeat_response_bits": 32,
+    "boot_status_bits": 64
+  },
+  "confirmation_rule": [
+    "Use seed 20260831 and 120 trajectories per fault profile.",
+    "Do not alter code, protocol bits, fault profiles, task trace, or gate before execution.",
+    "Do not tune from confirmation results.",
+    "Retain restart_stress as an expected boundary rather than excluding it."
+  ],
+  "claim_boundary": "The candidate is frozen for synthetic software-in-loop confirmation only. It is not an RF, board-level, or external-data Final candidate."
+}

@@ -1,0 +1,117 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage9_software_in_loop_protocol_v1",
+  "status": "registered_before_execution",
+  "registered_date": "2026-07-31",
+  "purpose": "Test whether receiver-originated boot identity and fail-closed event recovery can reduce control bits relative to the frozen fixed-10 heartbeat under matched task reliability.",
+  "evidence_role": "software_in_loop_engineering_evidence_not_external_final",
+  "candidate_under_test": "S9-BER-v1",
+  "parent_candidate": "S6R-FH10-v1",
+  "protected_data_policy": {
+    "external_final_data_used": false,
+    "stage6_confirmation_data_used": false,
+    "stage8_confirmation_data_used": false,
+    "trace_source": "registered synthetic Markov task-action traces",
+    "claim_boundary": "Results concern protocol recovery under registered software faults, not RF generalization or real-board reliability."
+  },
+  "protocol_bits": {
+    "compact_update_header_bits": 40,
+    "compact_symbol_bits": 3,
+    "compact_update_bits": 43,
+    "cumulative_ack_bits": 24,
+    "heartbeat_request_bits": 32,
+    "heartbeat_response_bits": 32,
+    "boot_status_bits": 64,
+    "preinstalled_activation_bits": 64,
+    "exact_action_header_bits": 48,
+    "exact_action_payload_bits": 14,
+    "full_install_bits": 417
+  },
+  "receiver_model": {
+    "independent_jsonl_process_required": true,
+    "fail_closed_after_boot": true,
+    "warm_restart_preserves_catalog": true,
+    "cold_restart_erases_catalog": true,
+    "volatile_action_cache_survives_restart": false,
+    "boot_status_repeated_until_restore_acknowledged": true,
+    "wrong_context_action_allowed": false
+  },
+  "policies": [
+    "fixed10",
+    "boot_event",
+    "no_heartbeat",
+    "stateless_exact"
+  ],
+  "task_trace": {
+    "scene_count": 1000,
+    "semantic_symbol_count": 4,
+    "symbol_change_probability": 0.08,
+    "temporary_equivalence_probability": 0.35,
+    "temporary_equivalence_scenes": 2
+  },
+  "fault_profiles": {
+    "sparse_restart": {
+      "restart_probability": 0.005,
+      "cold_restart_fraction": 0.1,
+      "forward_loss_probability": 0.05,
+      "feedback_loss_probability": 0.1,
+      "burst_entry_probability": 0.01,
+      "burst_exit_probability": 0.5
+    },
+    "mobile_mixed": {
+      "restart_probability": 0.02,
+      "cold_restart_fraction": 0.2,
+      "forward_loss_probability": 0.1,
+      "feedback_loss_probability": 0.2,
+      "burst_entry_probability": 0.02,
+      "burst_exit_probability": 0.35
+    },
+    "restart_stress": {
+      "restart_probability": 0.05,
+      "cold_restart_fraction": 0.3,
+      "forward_loss_probability": 0.08,
+      "feedback_loss_probability": 0.15,
+      "burst_entry_probability": 0.02,
+      "burst_exit_probability": 0.4
+    },
+    "feedback_stress": {
+      "restart_probability": 0.01,
+      "cold_restart_fraction": 0.1,
+      "forward_loss_probability": 0.1,
+      "feedback_loss_probability": 0.4,
+      "burst_entry_probability": 0.03,
+      "burst_exit_probability": 0.3
+    }
+  },
+  "development": {
+    "trajectories_per_profile": 80,
+    "seed": 20260731,
+    "bootstrap_replicates": 3000
+  },
+  "confirmation": {
+    "trajectories_per_profile": 120,
+    "seed": 20260831,
+    "bootstrap_replicates": 5000,
+    "execute_only_after_candidate_freeze": true
+  },
+  "primary_gate": {
+    "comparison": "boot_event minus fixed10 with paired common random numbers",
+    "clean_rate_margin_percentage_points": -0.5,
+    "minimum_relative_bit_saving_percent": 5.0,
+    "confidence_level": 0.95,
+    "wrong_context_execution_count": 0,
+    "recovery_latency_p95_not_worse": true,
+    "minimum_profiles_passing": 3
+  },
+  "secondary_questions": [
+    "Does either stateful policy remain below stateless exact total bits at comparable clean rate?",
+    "How much of the saving comes from avoiding periodic probes versus faster recovery?",
+    "Do cold restarts erase the benefit because full installation dominates?",
+    "Does feedback loss cause repeated boot announcements to become a new bottleneck?"
+  ],
+  "negative_result_policy": [
+    "If boot_event fails the primary gate, retain fixed10 and record the event-recovery branch as unsupported.",
+    "If all stateful policies are dominated by stateless_exact, reassess the value of receiver context for the modeled session length.",
+    "Do not tune against confirmation trajectories."
+  ]
+}

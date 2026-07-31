@@ -1,0 +1,49 @@
+{
+  "version": "2.0",
+  "status": "stage9_software_in_loop_confirmation_complete",
+  "candidate_id": "S9-BER-v2",
+  "parent_candidate": "stage7_candidate_freeze_v1/S6R-FH10-v1",
+  "primary_gate": {
+    "passing_profiles": [
+      "sparse_restart",
+      "mobile_mixed",
+      "feedback_stress"
+    ],
+    "failing_profiles": [
+      "restart_stress"
+    ],
+    "passing_profile_count": 3,
+    "required_profile_count": 3,
+    "passed": true
+  },
+  "safety": {
+    "wrong_context_execution_count": 0,
+    "fail_closed_after_restart": true
+  },
+  "reproducibility": {
+    "fixed_seed_reproduction_exact_except_completion_timestamp": true,
+    "verdict": "REPRODUCIBLE"
+  },
+  "statistical_validation": {
+    "paired_common_random_numbers": true,
+    "paired_bootstrap_confidence_level": 0.95,
+    "fallacy_types_checked": 11,
+    "overall_internal_confidence": "SOLID",
+    "real_hardware_external_validity": "CAUTION"
+  },
+  "governance": {
+    "stage9_v1_invalidated_for_protocol_mismatch": true,
+    "stage6_external_final_status_remains_failed": true,
+    "stage7_has_no_external_final": true,
+    "protected_external_data_read": false,
+    "s9_candidate_replaces_main_frozen_architecture": false
+  },
+  "artifact_hashes": {
+    "confirmation_result": "ce24bb37d4722f7faaa18a08d302ab3dfee8bba69a4d43a2a7614df31d6ccbdc",
+    "reproducibility_result": "f37600896f01be0f03a5def7c591a7674c7436e2794268e1138e99c1129e4094",
+    "final_report": "351c07224bbe67214d7408bee5969b8260442d4a208fd16fd25fd68275ed77bb",
+    "summary_figure": "2469be523901d0160ff13a08dedb49493ccff729467ee6ea27a135b79cfa8ddd"
+  },
+  "claim_boundary": "S9-BER-v2 is supported only as a synthetic software-in-loop engineering candidate. It is not an RF external Final, board-level reliability result, or real UAV deployment claim.",
+  "next_entry": "system-level process kill/restart and network-proxy fault injection without synthetic rate retuning"
+}
