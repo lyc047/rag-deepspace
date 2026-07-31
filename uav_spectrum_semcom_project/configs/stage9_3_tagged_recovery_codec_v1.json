@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage9_3_tagged_recovery_codec_v1",
+  "status": "registered_before_implementation_experiment",
+  "registered_date": "2026-07-31",
+  "purpose": "Implement and verify the Stage-9.2 restore-only 16-bit session-tag design in binary codecs and a real receiver process.",
+  "parent_candidate": "S9-RST16-BL128-v1",
+  "candidate": "S9-RCV2-v1",
+  "binary_schema": {
+    "session_identity_fields": {
+      "controller_epoch_bits": 8,
+      "receiver_boot_id_bits": 16,
+      "catalog_epoch_bits": 8
+    },
+    "session_tag_bits": 16,
+    "tag_derivation": "first 16 bits of SHA-256 over domain separator and fixed-width identity fields",
+    "tag_security_role": "accidental stale-session detection, not cryptographic authentication",
+    "tagged_activation_bits": 80,
+    "tagged_full_install_bits_primary_n32_k3": 419,
+    "ordinary_compact_update_bits": 42,
+    "ordinary_ack_bits": 24
+  },
+  "receiver_requirements": {
+    "restore_rechecks_current_boot_id": true,
+    "restore_rechecks_catalog_epoch": true,
+    "durable_catalog_has_sha256_checksum": true,
+    "corrupt_or_unparseable_state_fails_closed": true,
+    "update_serial_bits": 8,
+    "newer_serial_rule": "0 < (new-old) mod 256 < 128",
+    "maximum_deliverable_packet_age_updates": 127,
+    "queue_flush_on_recovery_session_change": true,
+    "duplicate_current_update_is_idempotent": true
+  },
+  "deterministic_process_scenarios": [
+    "tagged cold full install",
+    "tagged warm activation",
+    "stale restore from previous boot",
+    "stale restore from previous controller epoch",
+    "wrong catalog epoch restore",
+    "update wrap 254 to 255 to 0",
+    "delayed pre-wrap update rejection",
+    "duplicate update idempotence",
+    "queue flush on new recovery session",
+    "durable catalog checksum corruption",
+    "simultaneous sender and receiver restart"
+  ],
+  "random_adversarial_validation": {
+    "development_trajectories": 200,
+    "confirmation_trajectories": 500,
+    "steps_per_trajectory": 200,
+    "development_seed": 20261101,
+    "confirmation_seed": 20261201,
+    "events": [
+      "valid_update",
+      "duplicate_update",
+      "stale_update",
+      "receiver_warm_restart",
+      "receiver_cold_restart",
+      "sender_restart",
+      "valid_restore",
+      "stale_restore",
+      "catalog_corruption",
+      "queue_delayed_update",
+      "queue_flush"
+    ]
+  },
+  "gates": {
+    "tagged_activation_exact_bits": 80,
+    "tagged_full_install_exact_bits": 419,
+    "ordinary_update_width_unchanged": true,
+    "ordinary_ack_width_unchanged": true,
+    "deterministic_process_safety_violations": 0,
+    "random_adversarial_safety_violations": 0,
+    "stale_restore_acceptances": 0,
+    "wrong_catalog_restore_acceptances": 0,
+    "corrupt_catalog_executable_count": 0,
+    "confirmation_reproduction_exact_except_runtime_fields": true
+  },
+  "claim_boundary": [
+    "A 16-bit truncated hash can collide and is not a message-authentication code.",
+    "The receiver implementation is a desktop process prototype, not flight hardware.",
+    "Random adversarial tests complement but do not replace the Stage-9.2 bounded model check.",
+    "No external spectrum data are read and Stage-6 Final remains failed."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "candidate": "S9-RCV2-v1",
+  "freeze_date": "2026-07-31",
+  "freeze_status": "development_passed_confirmation_not_run",
+  "development_result_sha256": "235f5e077b52abb5e40144c1f10a0603abee0a45caa79f6e87980de86fb3d039",
+  "frozen_files": {
+    "configs/stage9_3_tagged_recovery_codec_v1.json": "851683bebea2b0bc755f4d4f2462b950ce84e79c43c140457acd28091f2ac44b",
+    "docs/STAGE9_3_TAGGED_RECOVERY_CODEC_PREREGISTRATION.md": "78345200bc5f19563e41e12c95805f39c65bb626d67a3b5d6da072c356985635",
+    "scripts/run_stage9_3_tagged_recovery_validation.py": "d477a60a354015311919de1d878886637eb7dbe3a48bee6b3a346786afa67dab",
+    "scripts/stage9_3_receiver_worker.py": "a04d32edae6f35e56ca9adcee3889aaeb45f49090b9a1d06693227b989f06d73",
+    "src/spectrum_semcom/stage9_3_tagged_recovery.py": "ca47b4f6cf0817ad53b4db42c49b801c8d152b465513d41b31bace0e43ef701c",
+    "tests/test_stage9_3_tagged_recovery.py": "baa36cbe3d4e3b55ba987ebf58aaa8f1fbb828829189314b7971da37fc645d5a"
+  },
+  "confirmation_seed": 20261201,
+  "confirmation_trajectories": 500,
+  "steps_per_trajectory": 200,
+  "prohibited_after_freeze": [
+    "editing frozen source or configuration before confirmation",
+    "changing confirmation seed or trajectory count after viewing results",
+    "treating the 16-bit tag as cryptographic authentication"
+  ]
+}

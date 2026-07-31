@@ -1,0 +1,64 @@
+{
+  "binary_codec": {
+    "activation_round_trip": true,
+    "full_install_round_trip": true,
+    "ordinary_ack_bits": 24,
+    "ordinary_compact_update_bits": 42,
+    "stale_codec_rejections": 2,
+    "tagged_activation_bits": 80,
+    "tagged_full_install_bits": 419
+  },
+  "candidate": "S9-RCV2-v1",
+  "config_sha256": "851683bebea2b0bc755f4d4f2462b950ce84e79c43c140457acd28091f2ac44b",
+  "experiment_id": "stage9_3_tagged_recovery_codec_v1",
+  "gates_passed": true,
+  "mode": "confirmation",
+  "process_conformance": {
+    "checks": {
+      "delayed_prewrap_rejected": true,
+      "duplicate_idempotent": true,
+      "durable_corruption_fail_closed": true,
+      "queue_age_128_rejected": true,
+      "queue_flush_on_session_change": true,
+      "serial_wrap_254_255_0": true,
+      "simultaneous_sender_receiver_restart": true,
+      "stale_previous_boot_rejected": true,
+      "stale_previous_controller_rejected": true,
+      "tagged_cold_full_install": true,
+      "tagged_warm_activation": true,
+      "wrong_catalog_rejected": true
+    },
+    "independent_process_count": 3,
+    "passed_count": 12,
+    "safety_violations": 0,
+    "scenario_count": 12,
+    "worker_pids": [
+      26036,
+      19508,
+      28120
+    ]
+  },
+  "random_adversarial": {
+    "corrupt_catalog_executable_count": 0,
+    "event_counts": {
+      "catalog_corruption": 8274,
+      "duplicate_update": 8384,
+      "queue_delayed_update": 8356,
+      "queue_flush": 8394,
+      "receiver_cold_restart": 8421,
+      "receiver_warm_restart": 8278,
+      "sender_restart": 8202,
+      "stale_restore": 8326,
+      "stale_update": 8342,
+      "valid_restore": 8494,
+      "valid_update": 8251,
+      "wrong_catalog_restore": 8278
+    },
+    "safety_violations": 0,
+    "seed": 20261201,
+    "stale_restore_acceptances": 0,
+    "steps_per_trajectory": 200,
+    "trajectories": 500,
+    "wrong_catalog_restore_acceptances": 0
+  }
+}
