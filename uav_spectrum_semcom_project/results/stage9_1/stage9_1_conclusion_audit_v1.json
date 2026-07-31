@@ -1,0 +1,45 @@
+{
+  "version": "1.0",
+  "status": "stage9_1_confirmation_complete",
+  "candidate_id": "S9-HBW30-v1",
+  "parent_candidate": "S9-BER-v2",
+  "primary_gate": {
+    "normal_profiles_passing": 2,
+    "normal_profiles_required": 2,
+    "emitter_failure_profiles_passing": 2,
+    "emitter_failure_profiles_required": 2,
+    "passed": true
+  },
+  "positive_result": "A 30-scene watchdog retains the boot-event advantage in normal profiles and improves clean relative to pure boot-event recovery when the boot emitter is degraded or unavailable.",
+  "negative_boundary": "With degraded or unavailable boot emitter, HBW30 clean remains 0.57 or 7.74 percentage points below fixed10; HBW30 is not an unconditional fixed10 replacement.",
+  "process_conformance": {
+    "real_os_processes_used": true,
+    "distinct_process_count": 3,
+    "safety_violation_count": 0,
+    "stale_update_accepted": false,
+    "wrong_catalog_epoch_accepted": false
+  },
+  "statistical_validation": {
+    "paired_common_random_numbers": true,
+    "confidence_level": 0.95,
+    "fallacy_types_checked": 11,
+    "confirmation_reproduced_exactly_except_timestamp": true,
+    "internal_confidence": "SOLID",
+    "real_hardware_external_validity": "CAUTION"
+  },
+  "governance": {
+    "external_spectrum_data_read": false,
+    "hardware_execution_performed": false,
+    "stage6_final_status_remains_failed": true,
+    "watchdog_interval_retuned_after_confirmation": false,
+    "candidate_replaces_main_frozen_architecture": false
+  },
+  "artifact_hashes": {
+    "confirmation_result": "2ce036afc8e5e29276f158311a4cfb0989e3f2c8b0a2c5b71902091ec65de886",
+    "reproduction_result": "77a74f66650cc5ffc04c8a2656c45f69c4c9245f5c5e9a3b497bc64aa16e43c1",
+    "process_conformance_result": "5d53a40a2b73a94eefc6fd7af9700859828d43a9be46514cced9bd624a5b9c7e",
+    "final_report": "85dc4ced6cd3db86ee96d2a3a7383120e17f0a05930a40418cba2d6805379118",
+    "summary_figure": "d9087cd2ea88508d400453ce5969b1d2adab970cfb7acd498a87c3ffc8f583bf"
+  },
+  "next_entry": "finite-state recovery protocol and formal safety invariants without further watchdog interval scanning"
+}

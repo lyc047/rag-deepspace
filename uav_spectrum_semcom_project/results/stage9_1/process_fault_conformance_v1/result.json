@@ -1,0 +1,184 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage9_1_process_fault_conformance_v1",
+  "status": "PASS",
+  "completed_utc": "2026-07-31T10:16:52.173611+00:00",
+  "real_os_processes_used": true,
+  "process_ids": [
+    24896,
+    24704,
+    25632
+  ],
+  "distinct_process_ids": 3,
+  "network_proxy_drop_count": 1,
+  "safety_violation_count": 0,
+  "elapsed_ms": 4094.8745000059716,
+  "events": [
+    {
+      "event": "cold_process_start",
+      "response": {
+        "active": false,
+        "boot_id": 1,
+        "catalog_epoch": null,
+        "catalog_present": false,
+        "update_epoch": null
+      }
+    },
+    {
+      "event": "full_install",
+      "response": {
+        "accepted": true,
+        "active": true,
+        "boot_id": 1,
+        "catalog_epoch": 3,
+        "catalog_present": true,
+        "update_epoch": 1
+      }
+    },
+    {
+      "event": "ordinary_update",
+      "response": {
+        "accepted": true,
+        "active": true,
+        "boot_id": 1,
+        "catalog_epoch": 3,
+        "catalog_present": true,
+        "duplicate": false,
+        "stale_or_wrong_epoch": false,
+        "update_epoch": 2
+      }
+    },
+    {
+      "event": "network_proxy_dropped_update_epoch_3",
+      "response": null
+    },
+    {
+      "event": "execute_after_drop",
+      "response": {
+        "actions": [
+          1
+        ],
+        "available": true,
+        "boot_id": 1
+      }
+    },
+    {
+      "event": "update_epoch_4",
+      "response": {
+        "accepted": true,
+        "active": true,
+        "boot_id": 1,
+        "catalog_epoch": 3,
+        "catalog_present": true,
+        "duplicate": false,
+        "stale_or_wrong_epoch": false,
+        "update_epoch": 4
+      }
+    },
+    {
+      "event": "delayed_update_epoch_3",
+      "response": {
+        "accepted": false,
+        "active": true,
+        "boot_id": 1,
+        "catalog_epoch": 3,
+        "catalog_present": true,
+        "duplicate": false,
+        "stale_or_wrong_epoch": true,
+        "update_epoch": 4
+      }
+    },
+    {
+      "event": "wrong_catalog_epoch",
+      "response": {
+        "accepted": false,
+        "active": true,
+        "boot_id": 1,
+        "catalog_epoch": 3,
+        "catalog_present": true,
+        "duplicate": false,
+        "stale_or_wrong_epoch": true,
+        "update_epoch": 4
+      }
+    },
+    {
+      "event": "warm_process_kill",
+      "response": {
+        "pid": 24896
+      }
+    },
+    {
+      "event": "warm_process_restart",
+      "response": {
+        "active": false,
+        "boot_id": 2,
+        "catalog_epoch": 3,
+        "catalog_present": true,
+        "update_epoch": null
+      }
+    },
+    {
+      "event": "fail_closed_after_warm_restart",
+      "response": {
+        "actions": null,
+        "available": false,
+        "boot_id": 2
+      }
+    },
+    {
+      "event": "activation_restore",
+      "response": {
+        "accepted": true,
+        "active": true,
+        "boot_id": 2,
+        "catalog_epoch": 3,
+        "catalog_present": true,
+        "update_epoch": 5
+      }
+    },
+    {
+      "event": "cold_process_kill",
+      "response": {
+        "pid": 24704
+      }
+    },
+    {
+      "event": "cold_process_restart",
+      "response": {
+        "active": false,
+        "boot_id": 3,
+        "catalog_epoch": null,
+        "catalog_present": false,
+        "update_epoch": null
+      }
+    },
+    {
+      "event": "activation_without_catalog",
+      "response": {
+        "accepted": false,
+        "active": false,
+        "boot_id": 3,
+        "catalog_epoch": null,
+        "catalog_present": false,
+        "update_epoch": null
+      }
+    },
+    {
+      "event": "full_reinstall",
+      "response": {
+        "accepted": true,
+        "active": true,
+        "boot_id": 3,
+        "catalog_epoch": 3,
+        "catalog_present": true,
+        "update_epoch": 6
+      }
+    }
+  ],
+  "input_hashes": {
+    "worker": "46bcc4702689b36a669c8f05dc9f33c6ecd44dd2f5cbff26a7a889d1bd1f91e6",
+    "runtime": "395f42736d403366e7acb1615cbe41f9f912e7755b87e2bb4b3d3c7e186da9bd",
+    "runner": "44ba2544d6bbdb86f9857fcaada7b4e98bf052c2e9ff7acb0702e52e3b3a964f"
+  },
+  "claim_boundary": "OS-process lifecycle conformance only; not a real board, RF link, or failure-rate estimate."
+}

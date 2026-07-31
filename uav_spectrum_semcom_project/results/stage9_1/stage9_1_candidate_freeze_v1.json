@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "status": "stage9_1_candidate_frozen_before_confirmation",
+  "frozen_date": "2026-07-31",
+  "candidate_id": "S9-HBW30-v1",
+  "parent_candidate": "S9-BER-v2",
+  "input_hashes": {
+    "config": "b8e33cc0fb1610924c5a39b91bdad83736046ff198b9ae5a780428fbedd1e3d3",
+    "runtime": "395f42736d403366e7acb1615cbe41f9f912e7755b87e2bb4b3d3c7e186da9bd",
+    "runner": "4bec148d30904fff14e94b778b0e14a50a3688c6182dc829ed9a3861fa616dcc",
+    "worker": "46bcc4702689b36a669c8f05dc9f33c6ecd44dd2f5cbff26a7a889d1bd1f91e6",
+    "tests": "d2174da7faa6c186475dc281b8ab4a932c9b607aa30e1c384083afdee1a22d0f",
+    "process_conformance": "5d53a40a2b73a94eefc6fd7af9700859828d43a9be46514cced9bd624a5b9c7e"
+  },
+  "development_result_sha256": "a0ec7d74dfc0406ee3e779b9d7f47e4ba927f69057f51a48959ec5d7a5443054",
+  "development_gate": {
+    "normal_profiles_passing": 2,
+    "normal_profiles_required": 2,
+    "emitter_failure_profiles_passing": 2,
+    "emitter_failure_profiles_required": 2,
+    "passed": true
+  },
+  "frozen_design": {
+    "primary_boot_event": true,
+    "fallback_watchdog_silence_scenes": 30,
+    "sensitivity_only_watchdog_silence_scenes": 60,
+    "boot_status_bits": 64,
+    "heartbeat_round_trip_bits": 64,
+    "fail_closed": true,
+    "stale_update_rejection": true,
+    "wrong_catalog_epoch_rejection": true
+  },
+  "known_boundary_before_confirmation": "When the boot emitter is completely unavailable, watchdog30 improves clean relative to boot_event but remains below fixed10 clean. This boundary must not be hidden or retuned away.",
+  "confirmation_rule": [
+    "Use seed 20261001 and 120 trajectories per profile.",
+    "Do not alter the watchdog interval, task trace, fault profiles, gates, code, or process evidence.",
+    "Do not tune from confirmation results.",
+    "Retain all four profiles regardless of direction."
+  ],
+  "claim_boundary": "Software protocol evidence only; no real board, RF Final, or real fault-rate claim."
+}

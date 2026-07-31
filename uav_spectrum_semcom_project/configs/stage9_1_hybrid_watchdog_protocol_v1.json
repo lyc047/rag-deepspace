@@ -1,0 +1,130 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage9_1_hybrid_watchdog_protocol_v1",
+  "status": "registered_before_execution",
+  "registered_date": "2026-07-31",
+  "purpose": "Determine whether a low-frequency watchdog can provide a fail-safe for S9-BER-v2 when receiver boot announcements are unavailable, without losing the normal-condition advantage over fixed-10 heartbeat.",
+  "evidence_role": "protocol_layer_software_in_loop_development_and_confirmation",
+  "parent_candidate": "S9-BER-v2",
+  "candidate": "S9-HBW30-v1",
+  "candidate_definition": {
+    "primary_recovery": "64-bit receiver boot status",
+    "fallback_recovery": "32-bit request plus 32-bit response after 30 scenes without confirmed context activity",
+    "watchdog_interval_scenes": 30,
+    "sensitivity_interval_scenes": 60,
+    "boot_status_retry": "once per active scene while receiver context is inactive",
+    "fail_closed": true,
+    "exact_escape_unchanged": true,
+    "task_codebook_unchanged": true
+  },
+  "protocol_bits": {
+    "compact_update_bits": 42,
+    "cumulative_ack_bits": 24,
+    "heartbeat_request_bits": 32,
+    "heartbeat_response_bits": 32,
+    "boot_status_bits": 64,
+    "preinstalled_activation_bits": 64,
+    "exact_action_bits": 62,
+    "full_install_bits": 403
+  },
+  "policies": [
+    "fixed10",
+    "boot_event",
+    "boot_event_watchdog30",
+    "boot_event_watchdog60",
+    "no_heartbeat"
+  ],
+  "task_trace": {
+    "scene_count": 1000,
+    "semantic_symbol_count": 3,
+    "symbol_change_probability": 0.08,
+    "temporary_equivalence_probability": 0.35,
+    "temporary_equivalence_scenes": 2
+  },
+  "fault_profiles": {
+    "normal_sparse": {
+      "restart_probability": 0.005,
+      "cold_restart_fraction": 0.1,
+      "forward_loss_probability": 0.05,
+      "feedback_loss_probability": 0.1,
+      "burst_entry_probability": 0.01,
+      "burst_exit_probability": 0.5,
+      "boot_emitter_failure_probability_per_boot": 0.0
+    },
+    "normal_mobile": {
+      "restart_probability": 0.02,
+      "cold_restart_fraction": 0.2,
+      "forward_loss_probability": 0.1,
+      "feedback_loss_probability": 0.2,
+      "burst_entry_probability": 0.02,
+      "burst_exit_probability": 0.35,
+      "boot_emitter_failure_probability_per_boot": 0.0
+    },
+    "emitter_degraded": {
+      "restart_probability": 0.02,
+      "cold_restart_fraction": 0.2,
+      "forward_loss_probability": 0.1,
+      "feedback_loss_probability": 0.2,
+      "burst_entry_probability": 0.02,
+      "burst_exit_probability": 0.35,
+      "boot_emitter_failure_probability_per_boot": 0.5
+    },
+    "emitter_failed": {
+      "restart_probability": 0.02,
+      "cold_restart_fraction": 0.2,
+      "forward_loss_probability": 0.1,
+      "feedback_loss_probability": 0.2,
+      "burst_entry_probability": 0.02,
+      "burst_exit_probability": 0.35,
+      "boot_emitter_failure_probability_per_boot": 1.0
+    }
+  },
+  "development": {
+    "trajectories_per_profile": 80,
+    "seed": 20260901,
+    "bootstrap_replicates": 3000
+  },
+  "confirmation": {
+    "trajectories_per_profile": 120,
+    "seed": 20261001,
+    "bootstrap_replicates": 5000,
+    "execute_only_after_freeze": true
+  },
+  "gates": {
+    "normal_profiles": {
+      "comparison": "boot_event_watchdog30 versus fixed10",
+      "clean_delta_ci_lower_percentage_points": -0.5,
+      "relative_bit_saving_ci_lower_percent": 5.0,
+      "required_profiles": 2
+    },
+    "emitter_failure_profiles": {
+      "comparison": "boot_event_watchdog30 versus boot_event",
+      "clean_delta_ci_lower_percentage_points": 1.0,
+      "maximum_mean_bit_increase_percent": 20.0,
+      "required_profiles": 2
+    },
+    "global": {
+      "wrong_context_execution_count": 0,
+      "watchdog30_recovery_latency_p95_not_worse_than_watchdog60": true
+    }
+  },
+  "process_fault_conformance": {
+    "required": true,
+    "operations": [
+      "cold process start and full installation",
+      "ordinary update",
+      "dropped update",
+      "delayed stale update rejection",
+      "warm process kill and restart",
+      "activation restore with persistent catalog",
+      "cold process kill, catalog deletion, and full reinstall"
+    ],
+    "stale_or_wrong_epoch_acceptance_count": 0
+  },
+  "claim_boundary": [
+    "The watchdog interval is a registered engineering design point, not a real-aircraft optimum.",
+    "Boot-emitter failure is a software fault injection parameter, not an estimated UAV failure probability.",
+    "No external spectrum or fault confirmation data are read.",
+    "A positive result does not replace Stage-6 external Final or real-board validation."
+  ]
+}
