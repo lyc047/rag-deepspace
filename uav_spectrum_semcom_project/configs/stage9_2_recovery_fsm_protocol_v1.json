@@ -1,0 +1,100 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage9_2_recovery_fsm_protocol_v1",
+  "status": "registered_before_model_check",
+  "registered_date": "2026-07-31",
+  "purpose": "Verify recovery-session safety under stale, duplicate, reordered, wrapped, corrupted, and dual-restart events, and quantify the signaling cost of stronger packet identity.",
+  "evidence_role": "protocol_formalization_and_bounded_model_check",
+  "parent_candidate": "S9-HBW30-v1",
+  "designs": {
+    "legacy_epoch_only": {
+      "restore_session_tag_bits": 0,
+      "update_session_tag_bits": 0,
+      "ack_session_tag_bits": 0,
+      "serial_bits_in_deployment": 8
+    },
+    "restore_tag16_bounded": {
+      "restore_session_tag_bits": 16,
+      "update_session_tag_bits": 0,
+      "ack_session_tag_bits": 0,
+      "serial_bits_in_deployment": 8,
+      "assumption": "No state-mutating packet or ACK remains deliverable for 128 or more subsequent update epochs."
+    },
+    "full_tag16": {
+      "restore_session_tag_bits": 16,
+      "update_session_tag_bits": 16,
+      "ack_session_tag_bits": 16,
+      "serial_bits_in_deployment": 8
+    }
+  },
+  "session_identity": {
+    "fields": [
+      "sender_controller_epoch",
+      "receiver_boot_id",
+      "catalog_epoch"
+    ],
+    "tag_bits": 16,
+    "collision_model": "collision-free symbolic tag during model checking; hash collision probability is outside the bounded model"
+  },
+  "safety_invariants": [
+    "An active receiver always has a valid catalog.",
+    "An executable action always originates from the receiver's current accepted recovery session.",
+    "A cold restart cannot be recovered by activation without a full install.",
+    "A stale restore cannot reactivate a newer receiver boot.",
+    "A stale or wrong-catalog update cannot replace the current action.",
+    "A stale ACK cannot make the sender READY for a different pending update.",
+    "Catalog corruption immediately makes the receiver fail-closed."
+  ],
+  "threat_events": [
+    "receiver_warm_restart",
+    "receiver_cold_restart",
+    "sender_restart",
+    "current_boot_status",
+    "current_restore",
+    "stale_restore",
+    "current_update",
+    "duplicate_update",
+    "stale_update",
+    "ancient_update_after_serial_wrap",
+    "current_ack",
+    "stale_ack",
+    "catalog_corruption"
+  ],
+  "model_check": {
+    "development_depth": 6,
+    "confirmation_depth": 9,
+    "reduced_serial_bits": 3,
+    "reason_for_reduced_serial": "Force wrap behavior within bounded exploration while preserving modular ordering logic.",
+    "maximum_states": 500000,
+    "expected_decision_pattern": {
+      "legacy_epoch_only_unbounded": "counterexample_required",
+      "restore_tag16_bounded": "no_counterexample_required",
+      "restore_tag16_unbounded": "counterexample_required",
+      "full_tag16_unbounded": "no_counterexample_required"
+    }
+  },
+  "bit_cost_scenarios": {
+    "session_scenes": 1000,
+    "ordinary_updates": 80,
+    "restore_counts": [5, 20, 50],
+    "base_compact_update_bits": 42,
+    "base_activation_bits": 64,
+    "base_ack_bits": 24
+  },
+  "decision_rule": {
+    "primary_candidate": "restore_tag16_bounded",
+    "accept_if": [
+      "No invariant counterexample at confirmation depth under the registered bounded-lifetime assumption.",
+      "Legacy and unbounded restore-only counterexamples are retained rather than suppressed.",
+      "Full-tag design has no counterexample in the same unbounded event model.",
+      "Restore-only tag adds less than 1 bit per scene in every registered cost scenario."
+    ],
+    "fallback": "If restore-only tagging fails bounded checking, retain full_tag16 or stop the stateful protocol extension."
+  },
+  "claim_boundary": [
+    "Bounded model checking is not a proof for arbitrary implementation code or unbounded executions.",
+    "A symbolic 16-bit tag does not model hash collision or malicious forgery.",
+    "The bounded-lifetime assumption must be enforced by a real maximum packet lifetime and queue flush rule.",
+    "No external spectrum data or hardware measurements are used."
+  ]
+}

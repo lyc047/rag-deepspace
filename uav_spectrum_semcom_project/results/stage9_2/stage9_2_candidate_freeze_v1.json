@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "status": "stage9_2_candidate_frozen_before_confirmation",
+  "frozen_date": "2026-07-31",
+  "candidate_id": "S9-RST16-BL128-v1",
+  "parent_candidate": "S9-HBW30-v1",
+  "input_hashes": {
+    "config": "efe26050fe409f1e1f26bdf0276e6e42eaa345f21584754971ace5370a30b9da",
+    "runtime": "88d905bcf92aebae686a93184ca17eb759e220586307d83554bacb158a0a1ad6",
+    "runner": "a8af4637c35aae336b88d147da93788fa345a022f930e71fcd01f7f8a760064c",
+    "tests": "4b2cc6eb47d7ecdf679634c4ceb9e6406f77e06bc08290ec9ddc80fc8988d0e8"
+  },
+  "development_result_sha256": "a813c22a1f8ce162c9c5a62a0478595f39f90ba1b6f21bae8fac2d9c010899c5",
+  "frozen_design": {
+    "restore_session_tag_bits": 16,
+    "ordinary_update_session_tag_bits": 0,
+    "ack_session_tag_bits": 0,
+    "deployment_update_serial_bits": 8,
+    "maximum_deliverable_packet_age_updates": 127,
+    "queue_flush_required_on_recovery_session_change": true,
+    "restore_receiver_boot_recheck_required": true,
+    "catalog_corruption_fail_closed": true
+  },
+  "development_pattern": {
+    "legacy_counterexample_found": true,
+    "restore_tag_bounded_counterexample_found": false,
+    "restore_tag_unbounded_counterexample_found": true,
+    "full_tag_unbounded_counterexample_found": false,
+    "restore_tag_max_incremental_bits_per_scene": 0.8,
+    "gate_passed": true
+  },
+  "implementation_gap_found_before_development_run": "The first unit check found that a receiver could restart between boot status and restore delivery. The tagged restore transition was corrected to recheck current boot ID before the registered development run.",
+  "confirmation_rule": [
+    "Increase bounded exploration depth from 6 to 9.",
+    "Keep reduced serial width at 3 bits to force wrap events.",
+    "Do not change events, invariants, cost scenarios, expected counterexample pattern, or code.",
+    "A truncated state search cannot count as a no-counterexample pass."
+  ],
+  "claim_boundary": "This is bounded symbolic model evidence. The lifetime bound and queue flush remain implementation obligations."
+}

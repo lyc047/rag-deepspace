@@ -1,0 +1,68 @@
+{
+  "version": "1.0",
+  "status": "stage9_2_confirmation_complete",
+  "candidate_id": "S9-RST16-BL128-v1",
+  "parent_candidate": "S9-HBW30-v1",
+  "primary_gate": {
+    "all_model_decisions_match_registration": true,
+    "restore_tag_cost_gate_passed": true,
+    "passed": true
+  },
+  "confirmation": {
+    "depth": 9,
+    "reduced_serial_bits": 3,
+    "legacy_counterexample_found": true,
+    "restore_tag_bounded_counterexample_found": false,
+    "restore_tag_bounded_states_explored": 502,
+    "restore_tag_unbounded_counterexample_found": true,
+    "full_tag_unbounded_counterexample_found": false,
+    "full_tag_unbounded_states_explored": 502,
+    "state_search_truncated": false
+  },
+  "counterexamples": {
+    "legacy": [
+      "receiver_warm_restart",
+      "stale_restore"
+    ],
+    "restore_tag_without_lifetime_bound": [
+      "receiver_warm_restart",
+      "current_boot_status",
+      "current_restore",
+      "ancient_update_collision"
+    ]
+  },
+  "candidate_obligations": {
+    "restore_session_tag_bits": 16,
+    "maximum_deliverable_packet_age_updates": 127,
+    "queue_flush_on_session_change": true,
+    "boot_id_recheck_on_restore_delivery": true,
+    "fail_closed_on_catalog_corruption": true
+  },
+  "cost": {
+    "restore_tag_incremental_bits_per_scene_range": [
+      0.08,
+      0.8
+    ],
+    "full_tag_incremental_bits_per_scene_range": [
+      2.72,
+      4.16
+    ]
+  },
+  "reproducibility": {
+    "exact_except_completion_timestamp": true,
+    "verdict": "REPRODUCIBLE"
+  },
+  "governance": {
+    "external_data_read": false,
+    "hardware_used": false,
+    "stage6_final_status_remains_failed": true,
+    "bounded_model_check_is_not_unbounded_proof": true,
+    "formal_candidate_is_not_yet_in_production_codec": true
+  },
+  "artifact_hashes": {
+    "confirmation_result": "f3df122cdbe0afc707fb61b64ad14c66d4c9a7f4f1ce625001a929928e19648a",
+    "reproduction_result": "a9a1cddde1b6d350db49d0f4369b96aa71e3acf1808a5eadaf224e56b2cf9f88",
+    "final_report": "592cde2671577e45451100377f6f468894dcc48e4fc84d02a28cefb195f8fc23"
+  },
+  "next_entry": "implement version-2 tagged restore codec and enforce queue lifetime in process-level tests"
+}

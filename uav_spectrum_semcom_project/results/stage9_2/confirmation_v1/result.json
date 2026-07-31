@@ -1,0 +1,149 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage9_2_recovery_fsm_protocol_v1",
+  "mode": "confirmation",
+  "status": "stage9_2_confirmation_complete",
+  "completed_utc": "2026-07-31T10:56:03.452847+00:00",
+  "input_hashes": {
+    "config": "efe26050fe409f1e1f26bdf0276e6e42eaa345f21584754971ace5370a30b9da",
+    "runtime": "88d905bcf92aebae686a93184ca17eb759e220586307d83554bacb158a0a1ad6",
+    "runner": "a8af4637c35aae336b88d147da93788fa345a022f930e71fcd01f7f8a760064c",
+    "tests": "4b2cc6eb47d7ecdf679634c4ceb9e6406f77e06bc08290ec9ddc80fc8988d0e8"
+  },
+  "model_depth": 9,
+  "serial_bits_in_model": 3,
+  "checks": {
+    "legacy_epoch_only_unbounded": {
+      "expectation": "counterexample_required",
+      "passed": true,
+      "result": {
+        "design": "legacy_epoch_only",
+        "allow_ancient_collision": true,
+        "depth": 9,
+        "explored_state_count": 11,
+        "explored_transition_count": 21,
+        "counterexample_found": true,
+        "counterexample_path": [
+          "receiver_warm_restart",
+          "stale_restore"
+        ],
+        "violated_invariant": "executable_action_originates_from_stale_session",
+        "truncated": false
+      }
+    },
+    "restore_tag16_bounded": {
+      "expectation": "no_counterexample_required",
+      "passed": true,
+      "result": {
+        "design": "restore_tag16_bounded",
+        "allow_ancient_collision": false,
+        "depth": 9,
+        "explored_state_count": 502,
+        "explored_transition_count": 6195,
+        "counterexample_found": false,
+        "counterexample_path": [],
+        "violated_invariant": null,
+        "truncated": false
+      }
+    },
+    "restore_tag16_unbounded": {
+      "expectation": "counterexample_required",
+      "passed": true,
+      "result": {
+        "design": "restore_tag16_bounded",
+        "allow_ancient_collision": true,
+        "depth": 9,
+        "explored_state_count": 59,
+        "explored_transition_count": 418,
+        "counterexample_found": true,
+        "counterexample_path": [
+          "receiver_warm_restart",
+          "current_boot_status",
+          "current_restore",
+          "ancient_update_collision"
+        ],
+        "violated_invariant": "executable_action_originates_from_stale_session",
+        "truncated": false
+      }
+    },
+    "full_tag16_unbounded": {
+      "expectation": "no_counterexample_required",
+      "passed": true,
+      "result": {
+        "design": "full_tag16",
+        "allow_ancient_collision": true,
+        "depth": 9,
+        "explored_state_count": 502,
+        "explored_transition_count": 6195,
+        "counterexample_found": false,
+        "counterexample_path": [],
+        "violated_invariant": null,
+        "truncated": false
+      }
+    }
+  },
+  "bit_cost_scenarios": {
+    "5": {
+      "legacy_epoch_only": {
+        "total_bits": 5930.0,
+        "bits_per_scene": 5.93,
+        "incremental_bits_per_scene": 0.0
+      },
+      "restore_tag16_bounded": {
+        "total_bits": 6010.0,
+        "bits_per_scene": 6.01,
+        "incremental_bits_per_scene": 0.08
+      },
+      "full_tag16": {
+        "total_bits": 8650.0,
+        "bits_per_scene": 8.65,
+        "incremental_bits_per_scene": 2.72
+      }
+    },
+    "20": {
+      "legacy_epoch_only": {
+        "total_bits": 7880.0,
+        "bits_per_scene": 7.88,
+        "incremental_bits_per_scene": 0.0
+      },
+      "restore_tag16_bounded": {
+        "total_bits": 8200.0,
+        "bits_per_scene": 8.2,
+        "incremental_bits_per_scene": 0.32
+      },
+      "full_tag16": {
+        "total_bits": 11080.0,
+        "bits_per_scene": 11.08,
+        "incremental_bits_per_scene": 3.2
+      }
+    },
+    "50": {
+      "legacy_epoch_only": {
+        "total_bits": 11780.0,
+        "bits_per_scene": 11.78,
+        "incremental_bits_per_scene": 0.0
+      },
+      "restore_tag16_bounded": {
+        "total_bits": 12580.0,
+        "bits_per_scene": 12.58,
+        "incremental_bits_per_scene": 0.8
+      },
+      "full_tag16": {
+        "total_bits": 15940.0,
+        "bits_per_scene": 15.94,
+        "incremental_bits_per_scene": 4.16
+      }
+    }
+  },
+  "primary_gate": {
+    "all_model_decisions_match_registration": true,
+    "restore_tag_cost_gate_passed": true,
+    "passed": true
+  },
+  "claim_boundary": [
+    "Bounded model checking is not a proof for arbitrary implementation code or unbounded executions.",
+    "A symbolic 16-bit tag does not model hash collision or malicious forgery.",
+    "The bounded-lifetime assumption must be enforced by a real maximum packet lifetime and queue flush rule.",
+    "No external spectrum data or hardware measurements are used."
+  ]
+}
