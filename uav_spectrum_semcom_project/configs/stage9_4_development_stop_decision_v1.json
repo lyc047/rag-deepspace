@@ -1,0 +1,35 @@
+{
+  "experiment_id": "stage9_4_end_to_end_tagged_hbw30_v1",
+  "candidate": "S9-HBW30-RCV2-v1",
+  "decision_date": "2026-07-31",
+  "status": "development_gate_failed_candidate_not_frozen",
+  "development_result": "results/stage9_4/development_result_v2.json",
+  "development_result_sha256": "202b87f6f9b5e0ecf8785bc28c026b932336bfbe934129be84e6d87b17d58310",
+  "development_reproduction_result": "results/stage9_4/development_result_v2_reproduction.json",
+  "development_reproduction_result_sha256": "62975d87afe6f97bcb1aa5411843be1e93569faa5495d0752dcbdd80d3700de7",
+  "reproduction_exact_except_completed_utc": true,
+  "input_hashes": {
+    "config": "a8af69a169ccbbe419d4b0ad5827261f3269a1da3ef2bc0989f94374f797ad8e",
+    "parent_config": "b8e33cc0fb1610924c5a39b91bdad83736046ff198b9ae5a780428fbedd1e3d3",
+    "stage9_1_runtime": "395f42736d403366e7acb1615cbe41f9f912e7755b87e2bb4b3d3c7e186da9bd",
+    "stage9_3_runtime": "ca47b4f6cf0817ad53b4db42c49b801c8d152b465513d41b31bace0e43ef701c",
+    "integration_runtime": "e13e27df5d00ff58c73633e0ba33a674b678b04cb230f91f5e1ef0ad171c3bcb",
+    "runner": "aaf8a4c5030ed8c1d0d0cf87bcd7ae685241e9805a56fd2e6dc4ad72c7095456",
+    "tests": "dc722c901dcf488abad97193411246a5be6b06e71f3f3bb6a3b20c6e9e1b20fb"
+  },
+  "gate_summary": {
+    "accounting_exact": true,
+    "shadow_outcomes_exact": true,
+    "integration_noninferiority_passing": 2,
+    "integration_noninferiority_required": 4,
+    "normal_value_passing": 2,
+    "normal_value_required": 2,
+    "emitter_failure_value_passing": 0,
+    "emitter_failure_value_required": 2,
+    "passed": false
+  },
+  "confirmation_executed": false,
+  "confirmation_seed_consumed": false,
+  "reason": "Causal boot-identity synchronization exposed substantial clean and availability loss when asynchronous boot announcements were degraded or unavailable.",
+  "next_research_entry": "Stage-9.5 explicit causal feedback state machine with counted reset-NACK and no sender access to receiver-internal acceptance state."
+}

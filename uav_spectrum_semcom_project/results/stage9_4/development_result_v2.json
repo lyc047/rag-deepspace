@@ -1,0 +1,979 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage9_4_end_to_end_tagged_hbw30_v1",
+  "candidate": "S9-HBW30-RCV2-v1",
+  "mode": "development",
+  "status": "stage9_4_development_complete",
+  "completed_utc": "2026-07-31T11:39:54.147602+00:00",
+  "input_hashes": {
+    "config": "a8af69a169ccbbe419d4b0ad5827261f3269a1da3ef2bc0989f94374f797ad8e",
+    "parent_config": "b8e33cc0fb1610924c5a39b91bdad83736046ff198b9ae5a780428fbedd1e3d3",
+    "stage9_1_runtime": "395f42736d403366e7acb1615cbe41f9f912e7755b87e2bb4b3d3c7e186da9bd",
+    "stage9_3_runtime": "ca47b4f6cf0817ad53b4db42c49b801c8d152b465513d41b31bace0e43ef701c",
+    "integration_runtime": "e13e27df5d00ff58c73633e0ba33a674b678b04cb230f91f5e1ef0ad171c3bcb",
+    "runner": "aaf8a4c5030ed8c1d0d0cf87bcd7ae685241e9805a56fd2e6dc4ad72c7095456",
+    "tests": "dc722c901dcf488abad97193411246a5be6b06e71f3f3bb6a3b20c6e9e1b20fb"
+  },
+  "protected_external_data_read": false,
+  "paired_common_random_numbers": true,
+  "profiles": {
+    "normal_sparse": {
+      "policies": {
+        "tagged_hbw30": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 11.171199999999999,
+            "ci": [
+              10.6875084375,
+              11.669531562500001
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.9919125000000001,
+            "ci": [
+              0.9903124999999999,
+              0.9933500000000001
+            ]
+          },
+          "availability": {
+            "mean": 0.9989999999999999,
+            "ci": [
+              0.9987124999999999,
+              0.9992750000000001
+            ]
+          },
+          "recovery_latency_p95_scenes": 2.0,
+          "wrong_context_execution_count": 0,
+          "stale_restore_acceptance_count": 0,
+          "restore_frame_count": 1140,
+          "identity_sync_wait_scenes": 0,
+          "recovery_tag_bits": 18240,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 0.5436,
+            "boot_status_bits": 0.45760000000000006,
+            "install_bits": 3.8350500000000003,
+            "update_bits": 4.14435,
+            "ack_bits": 2.1906000000000003
+          }
+        },
+        "zero_tag_shadow": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 10.943200000000001,
+            "ci": [
+              10.4803496875,
+              11.42046625
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.9919125000000001,
+            "ci": [
+              0.9902996874999999,
+              0.9934003125
+            ]
+          },
+          "availability": {
+            "mean": 0.9989999999999999,
+            "ci": [
+              0.9987,
+              0.9992625
+            ]
+          },
+          "recovery_latency_p95_scenes": 2.0,
+          "wrong_context_execution_count": 0,
+          "stale_restore_acceptance_count": 0,
+          "restore_frame_count": 1140,
+          "identity_sync_wait_scenes": 0,
+          "recovery_tag_bits": 0,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 0.5436,
+            "boot_status_bits": 0.45760000000000006,
+            "install_bits": 3.6070499999999996,
+            "update_bits": 4.14435,
+            "ack_bits": 2.1906000000000003
+          }
+        },
+        "legacy_hbw30": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 10.943200000000001,
+            "ci": [
+              10.487922812499999,
+              11.414715625
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.9919125000000001,
+            "ci": [
+              0.990325,
+              0.9934
+            ]
+          },
+          "availability": {
+            "mean": 0.9989999999999999,
+            "ci": [
+              0.998725,
+              0.9992625
+            ]
+          },
+          "recovery_latency_p95_scenes": 2.0,
+          "wrong_context_execution_count": 0,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 0.5436,
+            "boot_status_bits": 0.45760000000000006,
+            "install_bits": 3.6070499999999996,
+            "update_bits": 4.14435,
+            "ack_bits": 2.1906000000000003
+          }
+        },
+        "legacy_fixed10": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 14.8666,
+            "ci": [
+              14.434726874999997,
+              15.30492125
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.9720875,
+            "ci": [
+              0.9692249999999998,
+              0.9747375
+            ]
+          },
+          "availability": {
+            "mean": 0.9791124999999999,
+            "ci": [
+              0.9769621874999997,
+              0.9813128124999999
+            ]
+          },
+          "recovery_latency_p95_scenes": 9.0,
+          "wrong_context_execution_count": 0,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 4.9856,
+            "boot_status_bits": 0.0,
+            "install_bits": 3.587375,
+            "update_bits": 4.135425,
+            "ack_bits": 2.1582
+          }
+        },
+        "legacy_boot_event": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 10.45045,
+            "ci": [
+              9.983356250000002,
+              10.9198321875
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.9919125000000001,
+            "ci": [
+              0.9902124999999999,
+              0.9933875000000001
+            ]
+          },
+          "availability": {
+            "mean": 0.9989999999999999,
+            "ci": [
+              0.9987000000000001,
+              0.9992750000000001
+            ]
+          },
+          "recovery_latency_p95_scenes": 2.0,
+          "wrong_context_execution_count": 0,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 0.0,
+            "boot_status_bits": 0.45760000000000006,
+            "install_bits": 3.6578999999999993,
+            "update_bits": 4.14435,
+            "ack_bits": 2.1906000000000003
+          }
+        }
+      },
+      "tagged_minus_legacy_hbw30": {
+        "clean_delta_percentage_points_mean": 0.0,
+        "clean_delta_percentage_points_ci": [
+          0.0,
+          0.0
+        ],
+        "availability_delta_percentage_points_mean": 0.0,
+        "availability_delta_percentage_points_ci": [
+          0.0,
+          0.0
+        ],
+        "relative_bit_change_percent_mean": 2.0270952205151813,
+        "relative_bit_change_percent_ci": [
+          1.9351459707358234,
+          2.117116092273068
+        ]
+      },
+      "tagged_minus_legacy_fixed10": {
+        "clean_delta_percentage_points_mean": 1.9825000000000017,
+        "clean_delta_percentage_points_ci": [
+          1.7762500000000017,
+          2.1900000000000013
+        ],
+        "availability_delta_percentage_points_mean": 1.9887500000000018,
+        "availability_delta_percentage_points_ci": [
+          1.7887500000000016,
+          2.2012812500000023
+        ],
+        "relative_bit_change_percent_mean": -25.4325960276953,
+        "relative_bit_change_percent_ci": [
+          -26.76343473485953,
+          -24.104931909210716
+        ]
+      },
+      "tagged_minus_legacy_boot_event": {
+        "clean_delta_percentage_points_mean": 0.0,
+        "clean_delta_percentage_points_ci": [
+          0.0,
+          0.0
+        ],
+        "availability_delta_percentage_points_mean": 0.0,
+        "availability_delta_percentage_points_ci": [
+          0.0,
+          0.0
+        ],
+        "relative_bit_change_percent_mean": 7.182084980786689,
+        "relative_bit_change_percent_ci": [
+          6.652256956902238,
+          7.746494556610588
+        ]
+      },
+      "accounting_exact_every_trajectory": true,
+      "shadow_outcomes_exact_every_trajectory": true,
+      "integration_noninferiority_passed": true,
+      "value_gate_type": "normal_versus_legacy_fixed10",
+      "stage9_1_value_preserved": true,
+      "safety_passed": true,
+      "profile_gate_passed": true
+    },
+    "normal_mobile": {
+      "policies": {
+        "tagged_hbw30": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 23.3584375,
+            "ci": [
+              22.3829534375,
+              24.431856875
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.9688625,
+            "ci": [
+              0.9656371875,
+              0.9719
+            ]
+          },
+          "availability": {
+            "mean": 0.9893249999999998,
+            "ci": [
+              0.9881,
+              0.9904875000000001
+            ]
+          },
+          "recovery_latency_p95_scenes": 3.0,
+          "wrong_context_execution_count": 0,
+          "stale_restore_acceptance_count": 0,
+          "restore_frame_count": 3676,
+          "identity_sync_wait_scenes": 82,
+          "recovery_tag_bits": 58816,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 0.5176000000000001,
+            "boot_status_bits": 1.9712000000000003,
+            "install_bits": 12.6213625,
+            "update_bits": 5.6106750000000005,
+            "ack_bits": 2.6376
+          }
+        },
+        "zero_tag_shadow": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 22.623237500000002,
+            "ci": [
+              21.65869125,
+              23.596173125000004
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.9688625,
+            "ci": [
+              0.9657121875000001,
+              0.9718128125000001
+            ]
+          },
+          "availability": {
+            "mean": 0.9893249999999998,
+            "ci": [
+              0.9882118749999999,
+              0.9904875000000001
+            ]
+          },
+          "recovery_latency_p95_scenes": 3.0,
+          "wrong_context_execution_count": 0,
+          "stale_restore_acceptance_count": 0,
+          "restore_frame_count": 3676,
+          "identity_sync_wait_scenes": 82,
+          "recovery_tag_bits": 0,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 0.5176000000000001,
+            "boot_status_bits": 1.9712000000000003,
+            "install_bits": 11.886162500000001,
+            "update_bits": 5.6106750000000005,
+            "ack_bits": 2.6376
+          }
+        },
+        "legacy_hbw30": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 23.107775,
+            "ci": [
+              22.101995625,
+              24.080003750000003
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.96925,
+            "ci": [
+              0.9660493749999999,
+              0.9722375
+            ]
+          },
+          "availability": {
+            "mean": 0.9897124999999999,
+            "ci": [
+              0.9886121875,
+              0.9908124999999999
+            ]
+          },
+          "recovery_latency_p95_scenes": 3.0,
+          "wrong_context_execution_count": 0,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 0.5176000000000001,
+            "boot_status_bits": 1.9464000000000001,
+            "install_bits": 12.34585,
+            "update_bits": 5.653725,
+            "ack_bits": 2.6442
+          }
+        },
+        "legacy_fixed10": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 26.793887500000004,
+            "ci": [
+              25.8188665625,
+              27.73098125
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.9032500000000001,
+            "ci": [
+              0.8983743750000001,
+              0.908113125
+            ]
+          },
+          "availability": {
+            "mean": 0.9225125000000001,
+            "ci": [
+              0.9186740625,
+              0.926325
+            ]
+          },
+          "recovery_latency_p95_scenes": 10.0,
+          "wrong_context_execution_count": 0,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 5.9784,
+            "boot_status_bits": 0.0,
+            "install_bits": 12.820262500000002,
+            "update_bits": 5.513025000000001,
+            "ack_bits": 2.4821999999999997
+          }
+        },
+        "legacy_boot_event": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 22.7045875,
+            "ci": [
+              21.70738875,
+              23.69440375
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.96925,
+            "ci": [
+              0.966075,
+              0.9723003124999999
+            ]
+          },
+          "availability": {
+            "mean": 0.9897124999999999,
+            "ci": [
+              0.9885874999999998,
+              0.9908000000000001
+            ]
+          },
+          "recovery_latency_p95_scenes": 3.0,
+          "wrong_context_execution_count": 0,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 0.0,
+            "boot_status_bits": 1.9464000000000001,
+            "install_bits": 12.4602625,
+            "update_bits": 5.653725,
+            "ack_bits": 2.6442
+          }
+        }
+      },
+      "tagged_minus_legacy_hbw30": {
+        "clean_delta_percentage_points_mean": -0.038750000000000034,
+        "clean_delta_percentage_points_ci": [
+          -0.06625000000000006,
+          -0.017500000000000016
+        ],
+        "availability_delta_percentage_points_mean": -0.038750000000000034,
+        "availability_delta_percentage_points_ci": [
+          -0.06628125000000004,
+          -0.017500000000000016
+        ],
+        "relative_bit_change_percent_mean": 1.1854416830267538,
+        "relative_bit_change_percent_ci": [
+          0.38836492337053846,
+          1.9210765860118681
+        ]
+      },
+      "tagged_minus_legacy_fixed10": {
+        "clean_delta_percentage_points_mean": 6.561249999999996,
+        "clean_delta_percentage_points_ci": [
+          6.2049687499999955,
+          6.901249999999996
+        ],
+        "availability_delta_percentage_points_mean": 6.681249999999997,
+        "availability_delta_percentage_points_ci": [
+          6.314968749999998,
+          7.033749999999996
+        ],
+        "relative_bit_change_percent_mean": -13.084846132898914,
+        "relative_bit_change_percent_ci": [
+          -14.599749342003053,
+          -11.566403648361932
+        ]
+      },
+      "tagged_minus_legacy_boot_event": {
+        "clean_delta_percentage_points_mean": -0.038750000000000034,
+        "clean_delta_percentage_points_ci": [
+          -0.06625000000000006,
+          -0.017500000000000016
+        ],
+        "availability_delta_percentage_points_mean": -0.038750000000000034,
+        "availability_delta_percentage_points_ci": [
+          -0.06628125000000004,
+          -0.017500000000000016
+        ],
+        "relative_bit_change_percent_mean": 3.098553474798513,
+        "relative_bit_change_percent_ci": [
+          2.2391619202037054,
+          3.886766663567126
+        ]
+      },
+      "accounting_exact_every_trajectory": true,
+      "shadow_outcomes_exact_every_trajectory": true,
+      "integration_noninferiority_passed": true,
+      "value_gate_type": "normal_versus_legacy_fixed10",
+      "stage9_1_value_preserved": true,
+      "safety_passed": true,
+      "profile_gate_passed": true
+    },
+    "emitter_degraded": {
+      "policies": {
+        "tagged_hbw30": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 20.8646375,
+            "ci": [
+              19.939573437499998,
+              21.761145625
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.8225125,
+            "ci": [
+              0.8131250000000001,
+              0.831475
+            ]
+          },
+          "availability": {
+            "mean": 0.83735,
+            "ci": [
+              0.8279125,
+              0.847400625
+            ]
+          },
+          "recovery_latency_p95_scenes": 29.0,
+          "wrong_context_execution_count": 0,
+          "stale_restore_acceptance_count": 0,
+          "restore_frame_count": 3176,
+          "identity_sync_wait_scenes": 6807,
+          "recovery_tag_bits": 50816,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 1.0056,
+            "boot_status_bits": 0.9960000000000001,
+            "install_bits": 11.511162500000001,
+            "update_bits": 5.073075,
+            "ack_bits": 2.2788
+          }
+        },
+        "zero_tag_shadow": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 20.2294375,
+            "ci": [
+              19.330230000000004,
+              21.1219821875
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.8225125,
+            "ci": [
+              0.8136746874999999,
+              0.8323753125000001
+            ]
+          },
+          "availability": {
+            "mean": 0.83735,
+            "ci": [
+              0.8277374999999999,
+              0.8470503125
+            ]
+          },
+          "recovery_latency_p95_scenes": 29.0,
+          "wrong_context_execution_count": 0,
+          "stale_restore_acceptance_count": 0,
+          "restore_frame_count": 3176,
+          "identity_sync_wait_scenes": 6807,
+          "recovery_tag_bits": 0,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 1.0056,
+            "boot_status_bits": 0.9960000000000001,
+            "install_bits": 10.8759625,
+            "update_bits": 5.073075,
+            "ack_bits": 2.2788
+          }
+        },
+        "legacy_hbw30": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 25.022225,
+            "ci": [
+              23.9963778125,
+              26.057170312499995
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.8955749999999998,
+            "ci": [
+              0.8889496875,
+              0.9028003125
+            ]
+          },
+          "availability": {
+            "mean": 0.9120375,
+            "ci": [
+              0.9050240625,
+              0.9191378124999999
+            ]
+          },
+          "recovery_latency_p95_scenes": 20.0,
+          "wrong_context_execution_count": 0,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 0.6003999999999999,
+            "boot_status_bits": 0.9879999999999999,
+            "install_bits": 15.209624999999999,
+            "update_bits": 5.7015,
+            "ack_bits": 2.5226999999999995
+          }
+        },
+        "legacy_fixed10": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 27.798275,
+            "ci": [
+              26.851188437500003,
+              28.700413125000004
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.9035375000000002,
+            "ci": [
+              0.8995625,
+              0.9077249999999999
+            ]
+          },
+          "availability": {
+            "mean": 0.9197500000000002,
+            "ci": [
+              0.9154496874999999,
+              0.9241381249999999
+            ]
+          },
+          "recovery_latency_p95_scenes": 10.0,
+          "wrong_context_execution_count": 0,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 6.0207999999999995,
+            "boot_status_bits": 0.0,
+            "install_bits": 13.592125,
+            "update_bits": 5.65845,
+            "ack_bits": 2.5269
+          }
+        },
+        "legacy_boot_event": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 24.901049999999998,
+            "ci": [
+              23.8726878125,
+              25.888474062500002
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.8788750000000001,
+            "ci": [
+              0.869949375,
+              0.887828125
+            ]
+          },
+          "availability": {
+            "mean": 0.8950375000000002,
+            "ci": [
+              0.8853868749999999,
+              0.9045006249999998
+            ]
+          },
+          "recovery_latency_p95_scenes": 23.0,
+          "wrong_context_execution_count": 0,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 0.0,
+            "boot_status_bits": 0.9856000000000001,
+            "install_bits": 15.745625,
+            "update_bits": 5.685225,
+            "ack_bits": 2.4846
+          }
+        }
+      },
+      "tagged_minus_legacy_hbw30": {
+        "clean_delta_percentage_points_mean": -7.306250000000001,
+        "clean_delta_percentage_points_ci": [
+          -7.972624999999999,
+          -6.5999687499999995
+        ],
+        "availability_delta_percentage_points_mean": -7.468750000000002,
+        "availability_delta_percentage_points_ci": [
+          -8.175,
+          -6.7724687500000025
+        ],
+        "relative_bit_change_percent_mean": -16.398512984356902,
+        "relative_bit_change_percent_ci": [
+          -18.268275104675556,
+          -14.618683304067618
+        ]
+      },
+      "tagged_minus_legacy_fixed10": {
+        "clean_delta_percentage_points_mean": -8.102500000000003,
+        "clean_delta_percentage_points_ci": [
+          -8.921312500000004,
+          -7.253750000000004
+        ],
+        "availability_delta_percentage_points_mean": -8.240000000000004,
+        "availability_delta_percentage_points_ci": [
+          -9.067656250000002,
+          -7.395000000000001
+        ],
+        "relative_bit_change_percent_mean": -25.133033847705413,
+        "relative_bit_change_percent_ci": [
+          -26.921684572016847,
+          -23.283390740895246
+        ]
+      },
+      "tagged_minus_legacy_boot_event": {
+        "clean_delta_percentage_points_mean": -5.636250000000001,
+        "clean_delta_percentage_points_ci": [
+          -6.4750625,
+          -4.7824687500000005
+        ],
+        "availability_delta_percentage_points_mean": -5.76875,
+        "availability_delta_percentage_points_ci": [
+          -6.6425,
+          -4.926124999999999
+        ],
+        "relative_bit_change_percent_mean": -15.85982354133473,
+        "relative_bit_change_percent_ci": [
+          -17.88145948528883,
+          -13.93498364258539
+        ]
+      },
+      "accounting_exact_every_trajectory": true,
+      "shadow_outcomes_exact_every_trajectory": true,
+      "integration_noninferiority_passed": false,
+      "value_gate_type": "emitter_failure_versus_legacy_boot_event",
+      "stage9_1_value_preserved": false,
+      "safety_passed": true,
+      "profile_gate_passed": false
+    },
+    "emitter_failed": {
+      "policies": {
+        "tagged_hbw30": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 17.049,
+            "ci": [
+              16.246273125000002,
+              17.838708125
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.6923625,
+            "ci": [
+              0.678475,
+              0.706765625
+            ]
+          },
+          "availability": {
+            "mean": 0.703975,
+            "ci": [
+              0.6901996874999999,
+              0.7185131249999999
+            ]
+          },
+          "recovery_latency_p95_scenes": 30.0,
+          "wrong_context_execution_count": 0,
+          "stale_restore_acceptance_count": 0,
+          "restore_frame_count": 2481,
+          "identity_sync_wait_scenes": 13242,
+          "recovery_tag_bits": 39696,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 1.5575999999999997,
+            "boot_status_bits": 0.07440000000000002,
+            "install_bits": 9.099974999999999,
+            "update_bits": 4.410525,
+            "ack_bits": 1.9065
+          }
+        },
+        "zero_tag_shadow": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 16.552799999999998,
+            "ci": [
+              15.729551875000002,
+              17.303990000000002
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.6923625,
+            "ci": [
+              0.6788359375,
+              0.7069128124999999
+            ]
+          },
+          "availability": {
+            "mean": 0.703975,
+            "ci": [
+              0.6900490625000001,
+              0.7191128124999999
+            ]
+          },
+          "recovery_latency_p95_scenes": 30.0,
+          "wrong_context_execution_count": 0,
+          "stale_restore_acceptance_count": 0,
+          "restore_frame_count": 2481,
+          "identity_sync_wait_scenes": 13242,
+          "recovery_tag_bits": 0,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 1.5575999999999997,
+            "boot_status_bits": 0.07440000000000002,
+            "install_bits": 8.603775,
+            "update_bits": 4.410525,
+            "ack_bits": 1.9065
+          }
+        },
+        "legacy_hbw30": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 25.270587499999998,
+            "ci": [
+              24.29281375,
+              26.320450625
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.8298375,
+            "ci": [
+              0.8202999999999999,
+              0.8395753125
+            ]
+          },
+          "availability": {
+            "mean": 0.843675,
+            "ci": [
+              0.8342621875,
+              0.853275
+            ]
+          },
+          "recovery_latency_p95_scenes": 23.0,
+          "wrong_context_execution_count": 0,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 0.7071999999999999,
+            "boot_status_bits": 0.07440000000000002,
+            "install_bits": 16.5694375,
+            "update_bits": 5.574450000000001,
+            "ack_bits": 2.3451
+          }
+        },
+        "legacy_fixed10": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 27.188650000000003,
+            "ci": [
+              26.242654062499998,
+              28.153324687500003
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.9057625000000001,
+            "ci": [
+              0.9006871875000001,
+              0.9107003124999999
+            ]
+          },
+          "availability": {
+            "mean": 0.9217124999999999,
+            "ci": [
+              0.9170375,
+              0.9264875
+            ]
+          },
+          "recovery_latency_p95_scenes": 10.0,
+          "wrong_context_execution_count": 0,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 5.9032,
+            "boot_status_bits": 0.0,
+            "install_bits": 13.148175,
+            "update_bits": 5.616975,
+            "ack_bits": 2.5203
+          }
+        },
+        "legacy_boot_event": {
+          "trajectory_count": 80,
+          "bits_per_scene": {
+            "mean": 25.443462500000003,
+            "ci": [
+              24.4313140625,
+              26.451357812499996
+            ]
+          },
+          "clean_rate": {
+            "mean": 0.798025,
+            "ci": [
+              0.7865850000000001,
+              0.8099253125
+            ]
+          },
+          "availability": {
+            "mean": 0.8115500000000001,
+            "ci": [
+              0.7995990625,
+              0.8233009375
+            ]
+          },
+          "recovery_latency_p95_scenes": 29.0,
+          "wrong_context_execution_count": 0,
+          "component_bits_per_scene": {
+            "heartbeat_bits": 0.0,
+            "boot_status_bits": 0.07440000000000002,
+            "install_bits": 17.546937500000002,
+            "update_bits": 5.550825000000001,
+            "ack_bits": 2.2713
+          }
+        }
+      },
+      "tagged_minus_legacy_hbw30": {
+        "clean_delta_percentage_points_mean": -13.747499999999999,
+        "clean_delta_percentage_points_ci": [
+          -14.5676875,
+          -12.923656249999999
+        ],
+        "availability_delta_percentage_points_mean": -13.969999999999999,
+        "availability_delta_percentage_points_ci": [
+          -14.8438125,
+          -13.120000000000001
+        ],
+        "relative_bit_change_percent_mean": -32.0939688204716,
+        "relative_bit_change_percent_ci": [
+          -34.36030921810178,
+          -29.72181751979303
+        ]
+      },
+      "tagged_minus_legacy_fixed10": {
+        "clean_delta_percentage_points_mean": -21.340000000000003,
+        "clean_delta_percentage_points_ci": [
+          -22.358750000000004,
+          -20.294968750000002
+        ],
+        "availability_delta_percentage_points_mean": -21.77375,
+        "availability_delta_percentage_points_ci": [
+          -22.831375000000005,
+          -20.688593750000006
+        ],
+        "relative_bit_change_percent_mean": -37.27587951618358,
+        "relative_bit_change_percent_ci": [
+          -39.26122356178455,
+          -35.225516462252024
+        ]
+      },
+      "tagged_minus_legacy_boot_event": {
+        "clean_delta_percentage_points_mean": -10.56625,
+        "clean_delta_percentage_points_ci": [
+          -11.55253125,
+          -9.554999999999998
+        ],
+        "availability_delta_percentage_points_mean": -10.757499999999999,
+        "availability_delta_percentage_points_ci": [
+          -11.7765625,
+          -9.681218750000001
+        ],
+        "relative_bit_change_percent_mean": -32.5008727583751,
+        "relative_bit_change_percent_ci": [
+          -34.868313642222326,
+          -30.10005528018573
+        ]
+      },
+      "accounting_exact_every_trajectory": true,
+      "shadow_outcomes_exact_every_trajectory": true,
+      "integration_noninferiority_passed": false,
+      "value_gate_type": "emitter_failure_versus_legacy_boot_event",
+      "stage9_1_value_preserved": false,
+      "safety_passed": true,
+      "profile_gate_passed": false
+    }
+  },
+  "primary_gate": {
+    "accounting_exact": true,
+    "shadow_outcomes_exact": true,
+    "integration_noninferiority_passing": 2,
+    "integration_noninferiority_required": 4,
+    "normal_value_passing": 2,
+    "normal_value_required": 2,
+    "emitter_failure_value_passing": 0,
+    "emitter_failure_value_required": 2,
+    "passed": false
+  },
+  "claim_boundary": [
+    "The Stage-9.1 task and fault parameters are reused without tuning.",
+    "A positive result supports software protocol integration only, not Stage-6 external Final reversal.",
+    "No external spectrum data or aircraft fault data are read.",
+    "The 16-bit tag is accidental stale-session detection, not cryptographic authentication.",
+    "The receiver is a desktop process model, not flight hardware."
+  ]
+}

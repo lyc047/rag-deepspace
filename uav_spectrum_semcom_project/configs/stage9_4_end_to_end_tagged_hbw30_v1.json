@@ -1,0 +1,75 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage9_4_end_to_end_tagged_hbw30_v1",
+  "status": "registered_before_implementation_experiment",
+  "registered_date": "2026-07-31",
+  "purpose": "Integrate S9-RCV2-v1 tagged recovery into the frozen S9-HBW30-v1 end-to-end protocol loop without changing its watchdog or task model.",
+  "parent_protocol_config": "configs/stage9_1_hybrid_watchdog_protocol_v1.json",
+  "parent_protocol_config_sha256": "b8e33cc0fb1610924c5a39b91bdad83736046ff198b9ae5a780428fbedd1e3d3",
+  "parent_candidates": [
+    "S9-HBW30-v1",
+    "S9-RCV2-v1"
+  ],
+  "candidate": "S9-HBW30-RCV2-v1",
+  "candidate_definition": {
+    "watchdog_interval_scenes": 30,
+    "controller_epoch_bits": 8,
+    "receiver_boot_id_bits": 16,
+    "catalog_epoch_bits": 8,
+    "restore_session_tag_bits": 16,
+    "tagged_activation_bits": 80,
+    "tagged_full_install_bits": 419,
+    "ordinary_compact_update_bits": 42,
+    "ordinary_ack_bits": 24,
+    "maximum_deliverable_packet_age_updates": 127,
+    "queue_flush_on_recovery_session_change": true,
+    "boot_identity_source": "delivered boot status or delivered watchdog response",
+    "unknown_boot_behavior": "fail closed and wait for identity synchronization"
+  },
+  "comparisons": {
+    "primary_task": "tagged HBW30 versus legacy HBW30 on paired identical traces and faults",
+    "primary_overhead": "tagged HBW30 versus zero-tag shadow using the identical safe identity-synchronization state machine",
+    "secondary_normal": "tagged HBW30 versus legacy fixed10",
+    "secondary_emitter_failure": "tagged HBW30 versus legacy boot_event"
+  },
+  "development": {
+    "trajectories_per_profile": 80,
+    "seed": 20261301,
+    "bootstrap_replicates": 3000
+  },
+  "confirmation": {
+    "trajectories_per_profile": 120,
+    "seed": 20261401,
+    "bootstrap_replicates": 5000,
+    "execute_only_after_freeze": true
+  },
+  "gates": {
+    "global": {
+      "wrong_context_execution_count": 0,
+      "stale_restore_acceptance_count": 0,
+      "bit_accounting_exact_for_every_trajectory": true,
+      "ordinary_update_bits_equal_zero_tag_shadow_for_every_trajectory": true,
+      "ordinary_ack_bits_equal_zero_tag_shadow_for_every_trajectory": true
+    },
+    "integration_noninferiority": {
+      "minimum_clean_delta_percentage_points": -0.5,
+      "minimum_availability_delta_percentage_points": -0.5,
+      "required_profiles": 4
+    },
+    "preserve_stage9_1_value": {
+      "normal_profiles_relative_bit_saving_ci_lower_percent": 5.0,
+      "normal_profiles_clean_delta_ci_lower_percentage_points": -0.5,
+      "normal_profiles_required": 2,
+      "emitter_failure_clean_delta_ci_lower_percentage_points": 1.0,
+      "emitter_failure_maximum_mean_bit_increase_percent": 20.0,
+      "emitter_failure_profiles_required": 2
+    }
+  },
+  "claim_boundary": [
+    "The Stage-9.1 task and fault parameters are reused without tuning.",
+    "A positive result supports software protocol integration only, not Stage-6 external Final reversal.",
+    "No external spectrum data or aircraft fault data are read.",
+    "The 16-bit tag is accidental stale-session detection, not cryptographic authentication.",
+    "The receiver is a desktop process model, not flight hardware."
+  ]
+}
