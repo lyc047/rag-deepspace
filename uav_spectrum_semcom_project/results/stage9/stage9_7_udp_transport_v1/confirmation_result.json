@@ -1,0 +1,188 @@
+{
+  "candidate": "S9-UDP32-v1",
+  "endpoint_datagram_count": 624,
+  "gate_passed": true,
+  "gates": {
+    "corrupt_datagram_acceptance_count": 0,
+    "exact_protocol_and_udp_payload_widths": true,
+    "random_fault_violation_count": 0,
+    "real_udp_ports_nonzero": true,
+    "registered_scenario_pass_rate": 1.0,
+    "sender_transition_after_dropped_feedback_count": 0,
+    "stale_recovery_acceptance_count": 0,
+    "stale_update_acceptance_count": 0,
+    "three_distinct_processes": true,
+    "unaccounted_endpoint_datagram_count": 0,
+    "unknown_source_forward_count": 0,
+    "wrong_context_execution_count": 0
+  },
+  "latency_summary": {
+    "maximum_ms": 26.298,
+    "median_ms": 1.0164499999999999,
+    "p95_ms": 1.97835,
+    "sample_count": 506
+  },
+  "normalized_sha256": "40f952b2b4104e2424c907f7f9f6270fa71905ef28c2a2cfb96443781d55cfba",
+  "observed_protocol_widths": {
+    "activation": [
+      80
+    ],
+    "full_install": [
+      419
+    ],
+    "reset_nack": [
+      32
+    ],
+    "update": [
+      42
+    ]
+  },
+  "observed_udp_payload_widths": {
+    "activation": [
+      112
+    ],
+    "full_install": [
+      456
+    ],
+    "reset_nack": [
+      64
+    ],
+    "update": [
+      80
+    ]
+  },
+  "operations": 300,
+  "phase": "confirmation",
+  "ports": {
+    "proxy": 60886,
+    "receiver": 60885,
+    "sender": 60884
+  },
+  "proxy_forwarded_datagram_count": 613,
+  "proxy_ingress_datagram_count": 624,
+  "proxy_ingress_protocol_bits": 40399,
+  "proxy_ingress_udp_payload_bits": 63176,
+  "proxy_pids": [
+    24772,
+    11236
+  ],
+  "random_summary": {
+    "operation_counts": {
+      "cold_receiver_restart": 20,
+      "delayed_reorder_pair": 16,
+      "dropped_reset_nack": 10,
+      "durable_catalog_corruption": 13,
+      "ordinary_update": 194,
+      "single_bit_corruption_then_retry": 11,
+      "warm_receiver_restart": 36
+    },
+    "violation_count": 0
+  },
+  "receiver_pids": [
+    24764,
+    15336,
+    17788,
+    5976,
+    13644,
+    9588,
+    13780,
+    15988,
+    4940,
+    10468,
+    10244,
+    14388,
+    6836,
+    9120,
+    21952,
+    25444,
+    3004,
+    7256,
+    24764,
+    7960,
+    16200,
+    18220,
+    24000,
+    7816,
+    7640,
+    19708,
+    9680,
+    14080,
+    23180,
+    18348,
+    19432,
+    6108,
+    24216,
+    25432,
+    12484,
+    17912,
+    14552,
+    8832,
+    22616,
+    15592,
+    13140,
+    8480,
+    4840,
+    23736,
+    23320,
+    5876,
+    2844,
+    10372,
+    8248,
+    23456,
+    19996,
+    7196,
+    17596,
+    22724,
+    19740,
+    3240,
+    13764,
+    22836,
+    16036,
+    23568,
+    25076,
+    2936,
+    14412,
+    4336,
+    1152,
+    4104,
+    17524,
+    13780,
+    10340,
+    7232,
+    4708,
+    1984,
+    22908,
+    22580,
+    7724,
+    22648,
+    24884,
+    24008,
+    22080,
+    11856,
+    17460,
+    21924,
+    2996,
+    23672,
+    13144,
+    3384,
+    22788
+  ],
+  "scenarios": {
+    "cold_full_install_then_update_over_udp": true,
+    "delayed_old_recovery_rejected_after_receiver_restart": true,
+    "dropped_reset_nack_causes_sender_timeout_without_transition": true,
+    "duplicate_current_update_is_idempotent": true,
+    "durable_catalog_corruption_requires_full_install": true,
+    "proxy_restart_preserves_no_hidden_queue_and_endpoints_recover": true,
+    "reordered_update_rejected_across_serial_wrap": true,
+    "single_bit_corruption_fails_closed_then_retry_succeeds": true,
+    "three_distinct_processes_and_real_udp_ports": true,
+    "unknown_source_datagram_is_not_forwarded": true,
+    "warm_activation_then_update_over_udp": true
+  },
+  "seed": 20262001,
+  "sender_pids": [
+    23176
+  ],
+  "violation_messages": []
+}

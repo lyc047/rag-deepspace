@@ -1,0 +1,67 @@
+{
+  "candidate": "S9-UDP32-v1",
+  "decision_date": "2026-08-01",
+  "decision": "confirmed_for_localhost_udp_transport_conformance",
+  "confirmation_gate_passed": true,
+  "confirmation_reproduced": true,
+  "confirmation_normalized_sha256": "40f952b2b4104e2424c907f7f9f6270fa71905ef28c2a2cfb96443781d55cfba",
+  "evidence_hashes": {
+    "freeze_manifest": "2a3f2b3cf0a882b810568b3dd37601122bef25fb7b243c2a792622e5c2e073ff",
+    "confirmation_result": "ea313a7258ccb3a2496b33583baa654aef79005c1f76ec5468571e66c44b1325",
+    "confirmation_reproduction": "aea9c7975c41d96a1c588af56e497b503fbf53eb19f27856a34f0b319c28d609"
+  },
+  "confirmation_summary": {
+    "registered_scenarios_passed": 11,
+    "registered_scenarios_total": 11,
+    "random_fault_operations": 300,
+    "endpoint_datagram_count": 624,
+    "proxy_ingress_datagram_count": 624,
+    "proxy_forwarded_datagram_count": 613,
+    "proxy_ingress_protocol_bits": 40399,
+    "proxy_ingress_udp_payload_bits": 63176,
+    "udp_application_overhead_relative_to_protocol_percent": 56.38010841852521,
+    "random_fault_violation_count": 0,
+    "wrong_context_execution_count": 0,
+    "stale_recovery_acceptance_count": 0,
+    "stale_update_acceptance_count": 0,
+    "corrupt_datagram_acceptance_count": 0,
+    "unknown_source_forward_count": 0,
+    "unaccounted_endpoint_datagram_count": 0
+  },
+  "latency_descriptive_only": {
+    "first_confirmation_median_ms": 1.01645,
+    "first_confirmation_p95_ms": 1.97835,
+    "first_confirmation_maximum_ms": 26.298,
+    "reproduction_median_ms": 1.10795,
+    "reproduction_p95_ms": 2.11835,
+    "reproduction_maximum_ms": 36.2939,
+    "interpretation": "Parent-orchestrated desktop control-loop latency, excluded from pass gates and reproducibility hash."
+  },
+  "verified_claims": [
+    "Sender, UDP proxy, and receiver use three distinct operating-system processes and real IPv4 loopback UDP sockets.",
+    "All endpoint-generated datagrams reached the proxy ingress ledger.",
+    "Registered drop, delay, reorder, duplicate, corruption, timeout, process-restart, durable-corruption, and unknown-source scenarios fail closed.",
+    "Protocol and UDP application payload widths match their preregistered values.",
+    "Normalized protocol outcomes reproduce exactly after excluding process IDs, ports, and latency."
+  ],
+  "negative_or_cost_result": [
+    "The 32-bit experimental transport header and byte alignment increase aggregate UDP application payload from 40399 protocol bits to 63176 bits, a 56.38 percent increase.",
+    "A 42-bit compact update occupies an 80-bit UDP application payload, a 90.48 percent increase before IPv4, UDP, link-layer, retransmission, or security overhead."
+  ],
+  "not_verified": [
+    "physical RF link behavior",
+    "real network-interface driver queues",
+    "board-level latency, memory, power, or restart behavior",
+    "measured IPv4, UDP, link-layer, retransmission, or security overhead",
+    "external-spectrum clean-bit superiority",
+    "security against active source spoofing or packet forgery"
+  ],
+  "architecture_status": {
+    "external_data_main_freeze": "S6R-FH10-v1; Stage-6 external Final remains failed",
+    "causal_protocol_candidate": "S9-CRN32-HBW30-v1",
+    "binary_process_candidate": "S9-BPP32-v1",
+    "udp_transport_candidate": "S9-UDP32-v1",
+    "hardware_work": "paused"
+  },
+  "next_entry": "Stage 9.8 should test preregistered compact framing or bounded batching against the 56.38 percent UDP application overhead while preserving latency and fail-closed behavior."
+}

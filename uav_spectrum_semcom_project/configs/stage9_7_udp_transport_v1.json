@@ -1,0 +1,118 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage9_7_udp_transport_v1",
+  "status": "registered_before_implementation_experiment",
+  "registered_date": "2026-08-01",
+  "purpose": "Verify Stage-9.6 binary protocol behavior over real IPv4 loopback UDP sockets with a third independent fault-proxy process.",
+  "parent_candidate": "S9-BPP32-v1",
+  "candidate": "S9-UDP32-v1",
+  "data_policy": {
+    "external_spectrum_final_consumed": false,
+    "external_fault_dataset_consumed": false,
+    "input": "deterministic protocol fixture and registered UDP fault schedule"
+  },
+  "process_model": {
+    "required_distinct_processes": ["sender", "udp_fault_proxy", "receiver"],
+    "address_family": "IPv4",
+    "transport": "UDP",
+    "interface": "127.0.0.1 loopback",
+    "endpoint_ports_reused_across_process_restart": true,
+    "control_plane": "JSONL parent-worker commands",
+    "data_plane": "packed UDP datagrams only"
+  },
+  "transport_header": {
+    "total_bits": 32,
+    "magic_bits": 8,
+    "version_bits": 4,
+    "kind_bits": 4,
+    "protocol_length_bits": 16
+  },
+  "registered_protocol_width_bits": {
+    "reset_nack": 32,
+    "activation": 80,
+    "full_install": 419,
+    "update": 42
+  },
+  "registered_udp_payload_width_bits": {
+    "reset_nack": 64,
+    "activation": 112,
+    "full_install": 456,
+    "update": 80
+  },
+  "fault_actions": [
+    "deliver",
+    "drop",
+    "delay_then_release",
+    "reorder",
+    "duplicate",
+    "single_bit_corruption",
+    "receive_timeout",
+    "sender_process_restart",
+    "receiver_process_restart",
+    "proxy_process_restart",
+    "durable_catalog_corruption",
+    "unknown_source_datagram"
+  ],
+  "development": {
+    "seed": 20261901,
+    "random_fault_operations": 100,
+    "receive_timeout_ms": 100
+  },
+  "confirmation": {
+    "seed": 20262001,
+    "random_fault_operations": 300,
+    "receive_timeout_ms": 100,
+    "execute_only_after_freeze": true
+  },
+  "random_operation_probabilities": {
+    "ordinary_update": 0.60,
+    "warm_receiver_restart": 0.12,
+    "cold_receiver_restart": 0.07,
+    "dropped_reset_nack": 0.05,
+    "durable_catalog_corruption": 0.05,
+    "single_bit_corruption_then_retry": 0.05,
+    "delayed_reorder_pair": 0.06
+  },
+  "registered_scenarios": [
+    "three_distinct_processes_and_real_udp_ports",
+    "cold_full_install_then_update_over_udp",
+    "warm_activation_then_update_over_udp",
+    "dropped_reset_nack_causes_sender_timeout_without_transition",
+    "delayed_old_recovery_rejected_after_receiver_restart",
+    "reordered_update_rejected_across_serial_wrap",
+    "duplicate_current_update_is_idempotent",
+    "single_bit_corruption_fails_closed_then_retry_succeeds",
+    "unknown_source_datagram_is_not_forwarded",
+    "proxy_restart_preserves_no_hidden_queue_and_endpoints_recover",
+    "durable_catalog_corruption_requires_full_install"
+  ],
+  "gates": {
+    "registered_scenario_pass_rate": 1.0,
+    "three_distinct_processes": true,
+    "real_udp_ports_nonzero": true,
+    "exact_protocol_and_udp_payload_widths": true,
+    "wrong_context_execution_count": 0,
+    "stale_recovery_acceptance_count": 0,
+    "stale_update_acceptance_count": 0,
+    "corrupt_datagram_acceptance_count": 0,
+    "unknown_source_forward_count": 0,
+    "sender_transition_after_dropped_feedback_count": 0,
+    "unaccounted_endpoint_datagram_count": 0,
+    "random_fault_violation_count": 0,
+    "normalized_confirmation_reproducible": true
+  },
+  "latency_policy": {
+    "reported": true,
+    "statistics": ["median_ms", "p95_ms", "maximum_ms"],
+    "included_in_pass_gate": false,
+    "excluded_from_normalized_reproducibility_hash": true,
+    "interpretation": "desktop control-loop timing including JSONL orchestration; not RF one-way latency"
+  },
+  "claim_boundary": [
+    "Positive evidence is limited to localhost UDP transport and the registered proxy fault model.",
+    "No packet capture is performed, so IPv4 and UDP header overhead is not reported as measured traffic.",
+    "Loopback UDP does not establish RF, cellular, Wi-Fi, UAV mobility, hardware power, or real driver-queue behavior.",
+    "The transport header is an experimental framing layer and is counted separately from the frozen semantic protocol bits.",
+    "A positive result does not reverse the Stage-6 external Final failure or prove spectrum-algorithm gains."
+  ]
+}

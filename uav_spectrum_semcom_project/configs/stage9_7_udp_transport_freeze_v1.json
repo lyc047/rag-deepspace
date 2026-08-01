@@ -1,0 +1,47 @@
+{
+  "candidate": "S9-UDP32-v1",
+  "freeze_date": "2026-08-01",
+  "status": "stage9_7_candidate_frozen_before_confirmation",
+  "development_gate_passed": true,
+  "development_normalized_sha256": "9b862e9a66379f390b9547518f7e622c6fccc45a03f6188f9610a98b09befccb",
+  "development_result_sha256": "494aa0988babdb6fc4e4ed55bcfb65ebaa5e5751055c3244841ee85cca8026d6",
+  "input_hashes": {
+    "config": "802f1ac0a986308704f45e27a679be30cc6495ee5bd95e508a2d050f5c0274ae",
+    "parent_runtime": "fd3fb1da12a34306c392fcdc63d75d366d22588c38f502c84c1e8354bff118bc",
+    "udp_transport_runtime": "643b5f7832240c646895b39911b08130f4e69805b07683b935aa403687bb24dc",
+    "udp_worker": "4cc0a0bfd1860f76bb2c90f3555c63dec662c3b59b2f5ca4125b82bf0685a61b",
+    "runner": "2f626c563e893b54009e6fcb7d0d2d03952bacf7f9997e75ff6f2aff96c2ce40",
+    "tests": "c4a87d53813c88207b97108a1acb32e6d7f0c8e3b8e7049011333aad34c1010d"
+  },
+  "confirmation": {
+    "seed": 20262001,
+    "random_fault_operations": 300,
+    "receive_timeout_ms": 100
+  },
+  "development_summary": {
+    "registered_scenarios_passed": 11,
+    "registered_scenarios_total": 11,
+    "random_fault_operations": 100,
+    "random_fault_violation_count": 0,
+    "endpoint_datagram_count": 250,
+    "proxy_ingress_protocol_bits": 14403,
+    "proxy_ingress_udp_payload_bits": 23480,
+    "latency_is_descriptive_only": true
+  },
+  "regression_status": {
+    "stage9_2_to_stage9_7_and_context_codec": "25 passed",
+    "full_suite": "497 passed, 2 failed",
+    "failed_test_files": [
+      "tests/test_frame_manifest.py",
+      "tests/test_manifest.py"
+    ],
+    "failure_reason": "The migrated E-drive workspace lacks the legacy data/raw/sigmf_5g_short sample. No Stage-9.7 regression failed."
+  },
+  "prohibited_after_freeze": [
+    "editing frozen source, tests, configuration, or runner before confirmation",
+    "changing the confirmation seed, operation count, timeout, probabilities, scenarios, or gates",
+    "using latency to choose or reject the candidate",
+    "transporting semantic protocol frames through the JSONL control plane",
+    "claiming loopback UDP is RF, board-level, or external-spectrum evidence"
+  ]
+}
