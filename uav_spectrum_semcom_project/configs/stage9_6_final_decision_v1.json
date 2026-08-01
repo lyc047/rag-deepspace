@@ -1,0 +1,51 @@
+{
+  "candidate": "S9-BPP32-v1",
+  "decision_date": "2026-08-01",
+  "decision": "confirmed_for_desktop_binary_process_conformance",
+  "confirmation_gate_passed": true,
+  "confirmation_reproduced": true,
+  "confirmation_normalized_sha256": "91029cc1c8595d881e7d5f7f0a10f9f1652901f904e13ebc6ce7343ed2fef3be",
+  "evidence_hashes": {
+    "freeze_manifest": "3c24deb6c8ffca0c9a6d64495a4acbcb0ed7d11d71201b180aff997d4c1bfcc9",
+    "confirmation_result": "bb6e52354282555297a49914cdb062a98be4799e629cf03736ec3cd3d6c1effd",
+    "confirmation_reproduction": "eb6731b98db72bb431a939b0956fd33a7728ff78319cb6e0e2a3a9228abad31b"
+  },
+  "confirmation_summary": {
+    "registered_scenarios_passed": 11,
+    "registered_scenarios_total": 11,
+    "random_fault_operations": 500,
+    "ordinary_updates": 361,
+    "warm_restarts": 68,
+    "cold_restarts": 39,
+    "dropped_reset_nacks": 22,
+    "durable_catalog_corruptions": 10,
+    "wire_frame_count": 1003,
+    "wire_bits": 63329,
+    "random_fault_violation_count": 0,
+    "wrong_context_execution_count": 0,
+    "stale_recovery_acceptance_count": 0,
+    "stale_update_acceptance_count": 0,
+    "unaccounted_wire_frame_count": 0
+  },
+  "verified_protocol_claims": [
+    "32-bit RESET-NACK crosses an independent process boundary as packed bytes and alone updates sender recovery identity.",
+    "80-bit activation and 419-bit full installation restore codebook context but cannot restore an executable action without a later 42-bit compact update.",
+    "receiver and sender process restarts clear volatile beliefs and actions as registered.",
+    "stale recovery, serial-wrap stale update, corrupt durable catalog, truncated frame, corrupt frame identity, and nonzero padding fail closed.",
+    "all generated protocol frames are represented in the proxy bit ledger."
+  ],
+  "not_verified": [
+    "external-spectrum clean-bit superiority",
+    "real UAV hardware latency, memory, power, reboot behavior, or failure rate",
+    "UDP or TCP socket behavior and operating-system network-driver queues",
+    "RF propagation and link-layer retransmission",
+    "security against active attackers"
+  ],
+  "architecture_status": {
+    "external_data_main_freeze": "S6R-FH10-v1; Stage-6 external Final remains failed",
+    "causal_protocol_parent": "S9-CRN32-HBW30-v1",
+    "desktop_binary_conformance_candidate": "S9-BPP32-v1",
+    "hardware_work": "paused"
+  },
+  "next_entry": "Stage 9.7 may replace JSONL pipes with an actual UDP/TCP or emulator-backed transport and measured delay/loss/queue traces; this must be treated as transport validation, not as a new spectrum-algorithm claim."
+}

@@ -1,0 +1,49 @@
+{
+  "candidate": "S9-BPP32-v1",
+  "freeze_date": "2026-08-01",
+  "status": "stage9_6_candidate_frozen_before_confirmation",
+  "development_gate_passed": true,
+  "development_normalized_sha256": "caae9cfff7051ab971ed385f615f8b5c39865cdb88b55ec856b9f743b52cd2d4",
+  "development_result_sha256": "5d68d71ca6de27b1e32ea315b0db83243212721efbc41383462284a434dde847",
+  "input_hashes": {
+    "config": "e7c9c2224dcb92254742f6db3c442c676078e37f8eb1aaadbf33e137e1bfd780",
+    "stage9_3_runtime": "ca47b4f6cf0817ad53b4db42c49b801c8d152b465513d41b31bace0e43ef701c",
+    "stage9_5_runtime": "b3b312e2570f3730c92474468ef103b4980327e06874f965934efaff57e5a099",
+    "stage9_6_runtime": "fd3fb1da12a34306c392fcdc63d75d366d22588c38f502c84c1e8354bff118bc",
+    "worker": "fa0b2ecb6219c14965c4af75125fef72de57137e76f8977942330746556cc3de",
+    "runner": "e4ec5ce6f8741c4d1a24899ea02a655d218261b192bbdabd3a5b4c3d52c68508",
+    "tests": "5e244fd624cf4dfffbf3c794e3c158d5cf9ee3610b8c8e58a4ced6aa75ec80ed"
+  },
+  "confirmation": {
+    "seed": 20261801,
+    "random_fault_operations": 500
+  },
+  "development_summary": {
+    "registered_scenario_pass_rate": 1.0,
+    "random_fault_violation_count": 0,
+    "wire_frame_count": 476,
+    "wire_bits": 30802,
+    "observed_frame_widths": {
+      "reset_nack": 32,
+      "activation": 80,
+      "full_install": 419,
+      "update": 42
+    }
+  },
+  "regression_status": {
+    "stage9_2_to_stage9_6_and_context_codec": "23 passed",
+    "full_suite": "495 passed, 2 failed",
+    "failed_test_files": [
+      "tests/test_frame_manifest.py",
+      "tests/test_manifest.py"
+    ],
+    "failure_reason": "The migrated E-drive workspace does not contain the legacy data/raw/sigmf_5g_short sample; the failures are unchanged data-dependency failures and are outside Stage-9.6. The F-drive AERPAW dependency is present and its previously failing test now passes."
+  },
+  "prohibited_after_freeze": [
+    "editing frozen inputs before confirmation",
+    "changing the confirmation seed, operation count, scenarios, or gates after viewing confirmation",
+    "using receiver-internal state as untransmitted sender knowledge",
+    "activating an action from a context frame without a subsequent compact update",
+    "claiming desktop process evidence is board-level or external-spectrum evidence"
+  ]
+}

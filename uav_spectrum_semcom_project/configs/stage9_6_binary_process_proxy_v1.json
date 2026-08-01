@@ -1,0 +1,82 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage9_6_binary_process_proxy_v1",
+  "status": "registered_before_implementation_experiment",
+  "registered_date": "2026-08-01",
+  "purpose": "Verify the Stage-9.5 causal RESET-NACK and Stage-9.3 tagged recovery codecs across independent sender and receiver processes through a fault-injecting network proxy.",
+  "parent_candidate": "S9-CRN32-HBW30-v1",
+  "implementation_candidate": "S9-BPP32-v1",
+  "data_policy": {
+    "external_spectrum_final_consumed": false,
+    "external_aircraft_fault_data_consumed": false,
+    "input": "deterministic protocol fixtures only"
+  },
+  "protocol_fixture": {
+    "n_channels": 32,
+    "query_demands": [8, 16, 24],
+    "codeword_count": 3,
+    "catalog_epoch": 7,
+    "bank_id": 2,
+    "node_id": 1
+  },
+  "registered_frame_width_bits": {
+    "reset_nack": 32,
+    "tagged_activation": 80,
+    "tagged_full_install": 419,
+    "compact_update_codeword": 42
+  },
+  "causal_rules": [
+    "sender and receiver run as distinct operating-system processes",
+    "all protocol frames cross a network-proxy boundary as packed binary payloads",
+    "a dropped frame causes no destination state transition",
+    "a delayed frame is decoded only when the proxy later delivers its original bytes",
+    "the sender learns receiver boot and catalog state only from a delivered 32-bit RESET-NACK",
+    "activation or full installation restores codebook context only; a later compact update is required before action execution",
+    "receiver process restart clears volatile action state",
+    "durable catalog corruption must fail closed",
+    "no receiver function return value is converted into sender knowledge unless represented by a delivered frame"
+  ],
+  "development": {
+    "seed": 20261701,
+    "random_fault_operations": 200
+  },
+  "confirmation": {
+    "seed": 20261801,
+    "random_fault_operations": 500,
+    "execute_only_after_freeze": true
+  },
+  "registered_scenarios": [
+    "cold_receiver_requests_full_install",
+    "warm_receiver_requests_tagged_activation",
+    "compact_update_required_after_context_recovery",
+    "dropped_RESET_NACK_does_not_change_sender",
+    "delayed_old_recovery_rejected_after_second_restart",
+    "reordered_old_update_rejected_across_serial_wrap",
+    "receiver_process_termination_changes_pid_and_clears_action",
+    "sender_process_termination_changes_pid_and_requires_new_feedback",
+    "durable_catalog_corruption_fails_closed_then_full_install_recovers",
+    "truncated_or_padding-corrupt_binary_frame_is_rejected"
+  ],
+  "gates": {
+    "distinct_sender_receiver_pids": true,
+    "process_restart_pid_changes": true,
+    "exact_registered_frame_widths": true,
+    "cold_install_requires_followup_update": true,
+    "warm_activation_requires_followup_update": true,
+    "sender_transition_after_dropped_feedback_count": 0,
+    "stale_recovery_acceptance_count": 0,
+    "stale_update_acceptance_count": 0,
+    "wrong_context_execution_count": 0,
+    "corrupt_catalog_execution_count": 0,
+    "unaccounted_wire_frame_count": 0,
+    "registered_scenario_pass_rate": 1.0,
+    "random_fault_violation_count": 0,
+    "reproducible_after_excluding_pid_and_timestamp": true
+  },
+  "claim_boundary": [
+    "This is desktop software protocol conformance evidence, not a hardware-in-the-loop or UAV deployment result.",
+    "The proxy injects registered logical faults and does not emulate RF propagation, operating-system timing, energy use, or real network-driver queues.",
+    "The 16-bit recovery tag detects accidental stale sessions and is not an authentication code.",
+    "A positive result does not reverse the failed Stage-6 external Final and does not prove clean-bit superiority on external spectrum data."
+  ]
+}
