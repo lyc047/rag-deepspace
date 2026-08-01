@@ -1,0 +1,30 @@
+{
+  "experiment_id": "stage9_5_causal_reset_nack_v1",
+  "candidate": "S9-CRN32-HBW30-v1",
+  "decision_date": "2026-08-01",
+  "status": "confirmation_passed_software_protocol_candidate",
+  "development_result_sha256": "c4a5e743648d0fe277526ba64d0147371350b589f757b9806518a9683e931a9f",
+  "confirmation_result_sha256": "a87cd60819de399eaae77778eff035e25c64a5c3cafc25a2f85f6a72e4a71d48",
+  "confirmation_reproduction_result_sha256": "09b20792e495d4a0c2b8ac6e4f54ac933ac4c8461eaed13c26a4bd8d1066d169",
+  "confirmation_reproduction_exact_except_completed_utc": true,
+  "primary_gate": {
+    "normal_nack_passing": 2,
+    "normal_nack_required": 2,
+    "emitter_failure_nack_passing": 2,
+    "emitter_failure_nack_required": 2,
+    "normal_value_passing": 2,
+    "normal_value_required": 2,
+    "emitter_failure_value_passing": 2,
+    "emitter_failure_value_required": 2,
+    "causal_safety_all_profiles": true,
+    "passed": true
+  },
+  "claim_scope": "Synthetic software-in-loop evidence for asynchronous boot-announcement failure with an otherwise available lossy request-response feedback path.",
+  "not_claimed": [
+    "operation under total feedback-transmitter failure",
+    "real UAV failure probability or board-level timing",
+    "cryptographic authentication of RESET-NACK",
+    "reversal of the failed Stage-6 external Final"
+  ],
+  "next_research_entry": "Stage-9.6 binary RESET-NACK process conformance and sender/receiver subprocess network-proxy validation."
+}

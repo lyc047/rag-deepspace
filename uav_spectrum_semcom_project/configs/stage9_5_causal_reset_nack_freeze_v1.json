@@ -1,0 +1,34 @@
+{
+  "candidate": "S9-CRN32-HBW30-v1",
+  "freeze_date": "2026-08-01",
+  "status": "stage9_5_candidate_frozen_before_confirmation",
+  "development_result_sha256": "c4a5e743648d0fe277526ba64d0147371350b589f757b9806518a9683e931a9f",
+  "input_hashes": {
+    "config": "46632506434fd4e020ca3f127a5e8c4fa560e742d8cd7cdebbcc35abb53c45da",
+    "parent_config": "b8e33cc0fb1610924c5a39b91bdad83736046ff198b9ae5a780428fbedd1e3d3",
+    "stage9_3_runtime": "ca47b4f6cf0817ad53b4db42c49b801c8d152b465513d41b31bace0e43ef701c",
+    "stage9_5_runtime": "b3b312e2570f3730c92474468ef103b4980327e06874f965934efaff57e5a099",
+    "runner": "9f8481ce077a2c291c169260ef9137027a26d11605ab82e0ed2a4e538431cfc1",
+    "tests": "ce8688871190eb91afcea999664bb2a3eabc1da77ca30f3c6ac0d5f0e4588c4c"
+  },
+  "confirmation_seed": 20261601,
+  "confirmation_trajectories_per_profile": 120,
+  "scene_count_per_trajectory": 1000,
+  "development_gate_passed": true,
+  "regression_status": {
+    "stage9_5_tests": "6 passed",
+    "code_regression_excluding_migration_data_dependencies": "passed",
+    "excluded_data_dependent_test_files": [
+      "tests/test_c1_v4_final_protocol.py",
+      "tests/test_frame_manifest.py",
+      "tests/test_manifest.py"
+    ],
+    "exclusion_reason": "F-drive AERPAW manifest and data/raw/sigmf_5g_short were not present after migration to E drive"
+  },
+  "prohibited_after_freeze": [
+    "editing frozen inputs before confirmation",
+    "changing the confirmation seed or gates after viewing results",
+    "using receiver-internal return values as sender knowledge",
+    "claiming RESET-NACK covers total feedback-transmitter failure"
+  ]
+}

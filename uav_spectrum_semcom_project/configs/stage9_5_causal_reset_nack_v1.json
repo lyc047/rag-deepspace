@@ -1,0 +1,102 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage9_5_causal_reset_nack_v1",
+  "status": "registered_before_implementation_experiment",
+  "registered_date": "2026-08-01",
+  "purpose": "Test whether an explicitly transmitted and counted RESET-NACK restores task performance without sender access to receiver-internal state.",
+  "parent_fault_config": "configs/stage9_1_hybrid_watchdog_protocol_v1.json",
+  "parent_fault_config_sha256": "b8e33cc0fb1610924c5a39b91bdad83736046ff198b9ae5a780428fbedd1e3d3",
+  "parent_safety_candidate": "S9-RCV2-v1",
+  "candidate": "S9-CRN32-HBW30-v1",
+  "reset_nack_schema": {
+    "total_bits": 32,
+    "magic_bits": 4,
+    "version_bits": 2,
+    "reason_bits": 2,
+    "receiver_boot_id_bits": 16,
+    "catalog_epoch_bits": 8,
+    "reasons": {
+      "0": "context_inactive_catalog_present",
+      "1": "catalog_absent_after_cold_boot",
+      "2": "catalog_corrupt",
+      "3": "reserved"
+    }
+  },
+  "causal_rules": [
+    "sender state changes only after a feedback frame is delivered",
+    "receiver function return values are never read as sender knowledge",
+    "a forward packet that is lost produces no receiver response",
+    "a receiver response that is feedback-lost produces no sender transition",
+    "all ACK, RESET-NACK, boot-status and watchdog-response bits are counted",
+    "outcome evaluation may inspect receiver state but cannot feed it back to the sender"
+  ],
+  "policies": {
+    "causal_hbw30_reset_nack": {
+      "asynchronous_boot_status": true,
+      "watchdog_interval_scenes": 30,
+      "reset_nack": true
+    },
+    "causal_hbw30_no_nack": {
+      "asynchronous_boot_status": true,
+      "watchdog_interval_scenes": 30,
+      "reset_nack": false
+    },
+    "causal_fixed10_reset_nack": {
+      "asynchronous_boot_status": false,
+      "watchdog_interval_scenes": 10,
+      "reset_nack": true
+    },
+    "causal_boot_event_reset_nack": {
+      "asynchronous_boot_status": true,
+      "watchdog_interval_scenes": null,
+      "reset_nack": true
+    }
+  },
+  "development": {
+    "trajectories_per_profile": 80,
+    "seed": 20261501,
+    "bootstrap_replicates": 3000
+  },
+  "confirmation": {
+    "trajectories_per_profile": 120,
+    "seed": 20261601,
+    "bootstrap_replicates": 5000,
+    "execute_only_after_freeze": true
+  },
+  "gates": {
+    "global": {
+      "sender_internal_state_read_count": 0,
+      "uncharged_feedback_transition_count": 0,
+      "wrong_context_execution_count": 0,
+      "stale_restore_acceptance_count": 0,
+      "bit_component_accounting_exact": true
+    },
+    "normal_vs_no_nack": {
+      "minimum_clean_delta_ci_lower_percentage_points": -0.5,
+      "maximum_mean_bit_increase_percent": 5.0,
+      "required_profiles": 2
+    },
+    "emitter_failure_vs_no_nack": {
+      "minimum_clean_delta_ci_lower_percentage_points": 3.0,
+      "maximum_mean_bit_increase_percent": 20.0,
+      "required_profiles": 2
+    },
+    "normal_vs_causal_fixed10": {
+      "minimum_clean_delta_ci_lower_percentage_points": -0.5,
+      "minimum_relative_bit_saving_ci_lower_percent": 5.0,
+      "required_profiles": 2
+    },
+    "emitter_failure_vs_causal_boot_event": {
+      "minimum_clean_delta_ci_lower_percentage_points": 1.0,
+      "maximum_mean_bit_increase_percent": 20.0,
+      "required_profiles": 2
+    }
+  },
+  "claim_boundary": [
+    "Boot-announcement failure does not imply failure of the ordinary request-response feedback transmitter.",
+    "RESET-NACK is a status hint, not an authenticated control command.",
+    "Synthetic fault probabilities are stress parameters, not measured UAV failure rates.",
+    "No external spectrum or aircraft-fault data are read.",
+    "A positive result is software protocol evidence and does not reverse Stage-6 external Final."
+  ]
+}
