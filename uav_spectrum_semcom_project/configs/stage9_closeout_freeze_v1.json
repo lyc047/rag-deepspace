@@ -1,0 +1,235 @@
+{
+  "version": "1.0",
+  "freeze_id": "stage9_closeout_freeze_v1",
+  "evidence_bundle_id": "S9-EVIDENCE-BUNDLE-v1",
+  "created_date": "2026-08-02",
+  "status": "registered_before_closeout_freeze",
+  "bundle_semantics": "Evidence registry only; this identifier is not a separately tested algorithm, wire format, or external Final candidate.",
+  "frozen_stack": {
+    "external_data_algorithm_boundary": "S6R-FH10-v1",
+    "causal_recovery_semantics": "S9-CRN32-HBW30-v1",
+    "binary_process_conformance": "S9-BPP32-v1",
+    "localhost_udp_baseline": "S9-UDP32-v1",
+    "compact_udp_framing": "S9-CH8-v1",
+    "temporal_batching": "S9-CH8-B2-v1 and S9-CH8-B4-v1 rejected"
+  },
+  "required_checks": {
+    "configs/stage6_external_final_access_state.json": [
+      {
+        "path": ["status"],
+        "equals": "access_consumed_final_execution_failed"
+      },
+      {
+        "path": ["access_count"],
+        "equals": 1
+      },
+      {
+        "path": ["retry_on_this_final_permitted"],
+        "equals": false
+      }
+    ],
+    "results/stage6/external_final_v1/failure_receipt.json": [
+      {
+        "path": ["status"],
+        "equals": "stage6_external_final_execution_failed_inconclusive"
+      },
+      {
+        "path": ["algorithm_effectiveness_verdict"],
+        "equals": "inconclusive"
+      }
+    ],
+    "configs/stage9_4_development_stop_decision_v1.json": [
+      {
+        "path": ["status"],
+        "equals": "development_gate_failed_candidate_not_frozen"
+      },
+      {
+        "path": ["confirmation_executed"],
+        "equals": false
+      }
+    ],
+    "configs/stage9_5_final_decision_v1.json": [
+      {
+        "path": ["status"],
+        "equals": "confirmation_passed_software_protocol_candidate"
+      },
+      {
+        "path": ["primary_gate", "passed"],
+        "equals": true
+      }
+    ],
+    "configs/stage9_6_final_decision_v1.json": [
+      {
+        "path": ["confirmation_gate_passed"],
+        "equals": true
+      },
+      {
+        "path": ["confirmation_reproduced"],
+        "equals": true
+      }
+    ],
+    "configs/stage9_7_final_decision_v1.json": [
+      {
+        "path": ["confirmation_gate_passed"],
+        "equals": true
+      },
+      {
+        "path": ["confirmation_reproduced"],
+        "equals": true
+      }
+    ],
+    "configs/stage9_8_final_decision_v1.json": [
+      {
+        "path": ["confirmation_gate_passed"],
+        "equals": true
+      },
+      {
+        "path": ["confirmation_reproduced"],
+        "equals": true
+      },
+      {
+        "path": ["batching_decision", "adopted"],
+        "equals": false
+      }
+    ],
+    "configs/stage9_9_final_decision_v1.json": [
+      {
+        "path": ["status"],
+        "equals": "COMPLETED_NEGATIVE_RESULT"
+      },
+      {
+        "path": ["candidate_decisions", "S9-CH8-B2-v1"],
+        "equals": "REJECTED"
+      },
+      {
+        "path": ["candidate_decisions", "S9-CH8-B4-v1"],
+        "equals": "REJECTED"
+      },
+      {
+        "path": ["reproducibility", "exact_match"],
+        "equals": true
+      }
+    ]
+  },
+  "artifacts": [
+    ".gitattributes",
+    "AGENTS.md",
+    "docs/MASTER_RESEARCH_MAINLINE_PLAN.md",
+    "docs/STAGE9_EVIDENCE_INTEGRATION_AND_FREEZE.md",
+    "docs/STAGE9_SOFTWARE_IN_LOOP_PREREGISTRATION.md",
+    "docs/STAGE9_SOFTWARE_IN_LOOP_FINAL_REPORT.md",
+    "docs/STAGE9_1_HYBRID_WATCHDOG_PREREGISTRATION.md",
+    "docs/STAGE9_1_HYBRID_WATCHDOG_FINAL_REPORT.md",
+    "docs/STAGE9_2_RECOVERY_FSM_PREREGISTRATION.md",
+    "docs/STAGE9_2_RECOVERY_FSM_FINAL_REPORT.md",
+    "docs/STAGE9_3_TAGGED_RECOVERY_CODEC_PREREGISTRATION.md",
+    "docs/STAGE9_3_TAGGED_RECOVERY_CODEC_FINAL_REPORT.md",
+    "docs/STAGE9_4_END_TO_END_TAGGED_HBW30_PREREGISTRATION.md",
+    "docs/STAGE9_4_END_TO_END_TAGGED_HBW30_FINAL_REPORT.md",
+    "docs/STAGE9_5_CAUSAL_RESET_NACK_PREREGISTRATION.md",
+    "docs/STAGE9_5_CAUSAL_RESET_NACK_FINAL_REPORT.md",
+    "docs/STAGE9_6_BINARY_PROCESS_PROXY_PREREGISTRATION.md",
+    "docs/STAGE9_6_BINARY_PROCESS_PROXY_FINAL_REPORT.md",
+    "docs/STAGE9_7_UDP_TRANSPORT_PREREGISTRATION.md",
+    "docs/STAGE9_7_UDP_TRANSPORT_FINAL_REPORT.md",
+    "docs/STAGE9_8_COMPACT_HEADER_PREREGISTRATION.md",
+    "docs/STAGE9_8_COMPACT_HEADER_FINAL_REPORT.md",
+    "docs/STAGE9_9_TEMPORAL_BATCHING_PREREGISTRATION.md",
+    "docs/STAGE9_9_TEMPORAL_BATCHING_FINAL_REPORT.md",
+    "configs/stage6_external_final_access_state.json",
+    "results/stage6/external_final_v1/failure_receipt.json",
+    "configs/stage9_software_in_loop_protocol_v2.json",
+    "configs/stage9_1_hybrid_watchdog_protocol_v1.json",
+    "configs/stage9_2_recovery_fsm_protocol_v1.json",
+    "configs/stage9_3_tagged_recovery_codec_v1.json",
+    "configs/stage9_3_tagged_recovery_freeze_v1.json",
+    "configs/stage9_4_end_to_end_tagged_hbw30_v1.json",
+    "configs/stage9_4_development_stop_decision_v1.json",
+    "configs/stage9_5_causal_reset_nack_v1.json",
+    "configs/stage9_5_causal_reset_nack_freeze_v1.json",
+    "configs/stage9_5_final_decision_v1.json",
+    "configs/stage9_6_binary_process_proxy_v1.json",
+    "configs/stage9_6_binary_process_proxy_freeze_v1.json",
+    "configs/stage9_6_final_decision_v1.json",
+    "configs/stage9_7_udp_transport_v1.json",
+    "configs/stage9_7_udp_transport_freeze_v1.json",
+    "configs/stage9_7_final_decision_v1.json",
+    "configs/stage9_8_compact_header_v1.json",
+    "configs/stage9_8_compact_header_freeze_v1.json",
+    "configs/stage9_8_final_decision_v1.json",
+    "configs/stage9_9_temporal_batching_v1.json",
+    "configs/stage9_9_final_decision_v1.json",
+    "src/spectrum_semcom/stage9_sil_runtime.py",
+    "src/spectrum_semcom/stage9_1_hybrid_recovery.py",
+    "src/spectrum_semcom/stage9_2_recovery_fsm.py",
+    "src/spectrum_semcom/stage9_3_tagged_recovery.py",
+    "src/spectrum_semcom/stage9_4_tagged_hybrid_integration.py",
+    "src/spectrum_semcom/stage9_5_causal_feedback.py",
+    "src/spectrum_semcom/stage9_6_process_protocol.py",
+    "src/spectrum_semcom/stage9_7_udp_transport.py",
+    "src/spectrum_semcom/stage9_8_compact_transport.py",
+    "src/spectrum_semcom/stage9_9_temporal_batching.py",
+    "scripts/run_stage9_sil_experiment.py",
+    "scripts/run_stage9_1_hybrid_watchdog_experiment.py",
+    "scripts/run_stage9_2_recovery_fsm_check.py",
+    "scripts/run_stage9_3_tagged_recovery_validation.py",
+    "scripts/run_stage9_4_end_to_end_tagged_hbw30.py",
+    "scripts/run_stage9_5_causal_reset_nack.py",
+    "scripts/run_stage9_6_binary_process_proxy.py",
+    "scripts/run_stage9_7_udp_transport.py",
+    "scripts/run_stage9_8_compact_header.py",
+    "scripts/run_stage9_9_temporal_batching.py",
+    "scripts/stage9_receiver_worker.py",
+    "scripts/stage9_1_receiver_worker.py",
+    "scripts/stage9_3_receiver_worker.py",
+    "scripts/stage9_6_endpoint_worker.py",
+    "scripts/stage9_7_udp_worker.py",
+    "scripts/stage9_8_udp_worker.py",
+    "scripts/freeze_stage9_closeout.py",
+    "tests/test_stage9_sil_runtime.py",
+    "tests/test_stage9_1_hybrid_recovery.py",
+    "tests/test_stage9_2_recovery_fsm.py",
+    "tests/test_stage9_3_tagged_recovery.py",
+    "tests/test_stage9_4_tagged_hybrid_integration.py",
+    "tests/test_stage9_5_causal_feedback.py",
+    "tests/test_stage9_6_process_protocol.py",
+    "tests/test_stage9_7_udp_transport.py",
+    "tests/test_stage9_8_compact_transport.py",
+    "tests/test_stage9_9_temporal_batching.py",
+    "tests/test_stage9_closeout_freeze.py",
+    "results/stage9/confirmation_v2/result.json",
+    "results/stage9/reproducibility_v2/result.json",
+    "results/stage9/stage9_conclusion_audit_v2.json",
+    "results/stage9/stage9_v1_invalidation.json",
+    "results/stage9_1/hybrid_watchdog_confirmation_v1/result.json",
+    "results/stage9_1/hybrid_watchdog_reproduction_v1/result.json",
+    "results/stage9_1/stage9_1_conclusion_audit_v1.json",
+    "results/stage9_2/confirmation_v1/result.json",
+    "results/stage9_2/reproduction_v1/result.json",
+    "results/stage9_2/stage9_2_conclusion_audit_v1.json",
+    "results/stage9_3/confirmation_result.json",
+    "results/stage9_3/confirmation_reproduction_result.json",
+    "results/stage9_4/development_result_v2.json",
+    "results/stage9_4/development_result_v2_reproduction.json",
+    "results/stage9_5/confirmation_result.json",
+    "results/stage9_5/confirmation_reproduction_result.json",
+    "results/stage9/stage9_6_binary_process_proxy_v1/confirmation_result.json",
+    "results/stage9/stage9_6_binary_process_proxy_v1/confirmation_repro_result.json",
+    "results/stage9/stage9_7_udp_transport_v1/confirmation_result.json",
+    "results/stage9/stage9_7_udp_transport_v1/confirmation_repro_result.json",
+    "results/stage9/stage9_8_compact_header_v1/confirmation_result.json",
+    "results/stage9/stage9_8_compact_header_v1/confirmation_repro_result.json",
+    "results/stage9/stage9_9_temporal_batching_v1/confirmation_result.json",
+    "results/stage9/stage9_9_temporal_batching_v1/reproduction_result.json"
+  ],
+  "governance": {
+    "stage9_is_protocol_and_software_evidence_only": true,
+    "stage6_external_final_status_must_remain_failed": true,
+    "no_new_external_final_consumed_in_stage9": true,
+    "no_hardware_or_rf_claim": true,
+    "stage9_4_causal_leakage_must_remain_disclosed": true,
+    "stage9_9_negative_result_must_remain_disclosed": true,
+    "b2_b4_must_not_enter_frozen_stack": true,
+    "future_algorithm_tuning_requires_new_development_data": true
+  }
+}
