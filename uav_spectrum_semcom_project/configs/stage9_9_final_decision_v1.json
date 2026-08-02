@@ -1,0 +1,63 @@
+{
+  "decision_id": "stage9_9_final_decision_v1",
+  "date": "2026-08-02",
+  "status": "COMPLETED_NEGATIVE_RESULT",
+  "protocol_id": "stage9_9_temporal_batching_v1",
+  "baseline_retained": "S9-CH8-v1",
+  "candidate_decisions": {
+    "S9-CH8-B2-v1": "REJECTED",
+    "S9-CH8-B4-v1": "REJECTED"
+  },
+  "pooled_no_loss_results": {
+    "N8": {
+      "B2_update_bit_saving_percent": 12.698412698412698,
+      "B4_update_bit_saving_percent": 19.047619047619047,
+      "B2_clean_difference_pp": -23.35329341317365,
+      "B4_clean_difference_pp": -23.35329341317365
+    },
+    "N16": {
+      "B2_update_bit_saving_percent": 13.333333333333334,
+      "B4_update_bit_saving_percent": 19.047619047619047,
+      "B2_clean_difference_pp": -25.149700598802394,
+      "B4_clean_difference_pp": -25.149700598802394
+    },
+    "N32": {
+      "B2_update_bit_saving_percent": 13.333333333333334,
+      "B4_update_bit_saving_percent": 19.047619047619047,
+      "B2_clean_difference_pp": -25.149700598802394,
+      "B4_clean_difference_pp": -25.149700598802394
+    },
+    "N64": {
+      "B2_update_bit_saving_percent": 13.333333333333334,
+      "B4_update_bit_saving_percent": 19.047619047619047,
+      "B2_clean_difference_pp": -25.149700598802394,
+      "B4_clean_difference_pp": -25.149700598802394
+    }
+  },
+  "waiting_boundary": {
+    "B2_maximum_observed_wait_scenes": 45,
+    "B2_maximum_observed_wait_seconds": 698.0,
+    "B4_maximum_observed_wait_scenes": 55,
+    "B4_maximum_observed_wait_seconds": 853.0,
+    "interpretation": "Batch size does not bound waiting in scenes because update events are sparse and irregular."
+  },
+  "retention_gate_summary": {
+    "B2_passed_all_N": false,
+    "B4_passed_all_N": false,
+    "primary_failure": "Waiting-induced stale actions reduce no-loss clean by about 23 to 25 percentage points.",
+    "secondary_failure": "Paired Markov-loss stress also remains materially below B1."
+  },
+  "reproducibility": {
+    "confirmation_normalized_sha256": "65c3939f3248438edd412d04a7a2b658cb3073874c8e6b6b299250c70aab4d8a",
+    "reproduction_normalized_sha256": "65c3939f3248438edd412d04a7a2b658cb3073874c8e6b6b299250c70aab4d8a",
+    "exact_match": true
+  },
+  "governance": {
+    "external_final_signal_values_loaded": false,
+    "external_final_access_consumed": false,
+    "protected_access_state_unchanged": true,
+    "stage6_final_status_changed": false
+  },
+  "frozen_conclusion": "Do not aggregate sequential real-time semantic action updates by count. Keep one-update H8 datagrams and stop pure framing/batching optimization.",
+  "next_entry": "Close Stage 9 protocol evidence. Further algorithmic work requires either new external temporal spectrum data for generalization or later hardware/link traces; do not tune another batching threshold on the same pilot groups."
+}

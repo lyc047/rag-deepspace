@@ -1,0 +1,1544 @@
+{
+  "schema_version": "stage9_9_temporal_batching_result_v1",
+  "run_phase": "reproduction",
+  "protocol_id": "stage9_9_temporal_batching_v1",
+  "protocol_sha256": "14c6c0922860c51ac5da4838e5949ec249c82d6dae9dd3a3d6e2e1ef00b2e0d7",
+  "candidate_ids": [
+    "S9-CH8-B1-v1",
+    "S9-CH8-B2-v1",
+    "S9-CH8-B4-v1"
+  ],
+  "data_governance": {
+    "source_role": "permanently_excluded_2023_adapter_pilot_development_only",
+    "cache_sha256_verified": true,
+    "external_final_signal_values_loaded": false,
+    "external_final_access_consumed": false,
+    "protected_access_state_unchanged": true,
+    "access_state_sha256": {
+      "configs/stage5_external_final_access_state.json": "0949569e399e2d8f0742a0b4c93457e5cb61e3a9a97a6bc2745d1c8d5101b45b",
+      "configs/stage6_external_final_access_state.json": "1b19c8500adaf7cfeeccc151c1e98bc54eb0e93d90c411f78f5429f827f8ece5",
+      "configs/stage6r_electrosense_final_access_state_v1.json": "6c4105198a766c3925219bde3076379e0b10f9dfc0a1c6129cfeeaadc9df5ee3",
+      "configs/stage8_fault_confirmation_access_state_v1.json": "c53cb092889b4db6c8e03ef69a81c2e6e9fb52b07eae705f8b8088f28184dd4e"
+    }
+  },
+  "split": {
+    "source": "stage6_temporal_hazard_development_v1",
+    "training_groups": [
+      "aerpaw_packapalooza_2023:20230826T1215",
+      "aerpaw_packapalooza_2023:20230826T1300",
+      "aerpaw_packapalooza_2023:20230826T1315",
+      "aerpaw_packapalooza_2023:20230826T1330"
+    ],
+    "evaluation_groups": [
+      "aerpaw_packapalooza_2023:20230826T1200",
+      "aerpaw_packapalooza_2023:20230826T1230",
+      "aerpaw_packapalooza_2023:20230826T1245"
+    ],
+    "codebook_fitted_on_training_groups_only": true,
+    "candidate_comparison_uses_evaluation_groups_only": true
+  },
+  "codebook_summary": {
+    "8": {
+      "demands": [
+        2,
+        4,
+        6
+      ],
+      "training_scene_count": 197,
+      "codebook_size": 3,
+      "symbol_width_bits": 2,
+      "training_coverage_rate": 1.0
+    },
+    "16": {
+      "demands": [
+        4,
+        8,
+        12
+      ],
+      "training_scene_count": 197,
+      "codebook_size": 3,
+      "symbol_width_bits": 2,
+      "training_coverage_rate": 1.0
+    },
+    "32": {
+      "demands": [
+        8,
+        16,
+        24
+      ],
+      "training_scene_count": 197,
+      "codebook_size": 3,
+      "symbol_width_bits": 2,
+      "training_coverage_rate": 1.0
+    },
+    "64": {
+      "demands": [
+        16,
+        32,
+        48
+      ],
+      "training_scene_count": 197,
+      "codebook_size": 3,
+      "symbol_width_bits": 2,
+      "training_coverage_rate": 1.0
+    }
+  },
+  "no_loss_temporal_replay": {
+    "8": {
+      "aggregates": {
+        "B1": {
+          "temporal_group_count": 3,
+          "scene_count": 167,
+          "event_count": 9,
+          "datagram_count": 9,
+          "h8_update_path_bits": 504,
+          "clean_rate": 1.0,
+          "stale_action_scene_count": 0,
+          "mean_max_query_regret_db": 0.014667008451359001,
+          "cvar_0_9_max_query_regret_db": 0.1105355655445772,
+          "maximum_max_query_regret_db": 0.16602325439453125,
+          "mean_event_wait_scenes": 0.0,
+          "maximum_event_wait_scenes": 0,
+          "mean_event_wait_seconds": 0.0,
+          "maximum_event_wait_seconds": 0.0
+        },
+        "B2": {
+          "temporal_group_count": 3,
+          "scene_count": 167,
+          "event_count": 9,
+          "datagram_count": 5,
+          "h8_update_path_bits": 440,
+          "clean_rate": 0.7664670658682635,
+          "stale_action_scene_count": 39,
+          "mean_max_query_regret_db": 0.129187418315225,
+          "cvar_0_9_max_query_regret_db": 0.629605910357307,
+          "maximum_max_query_regret_db": 0.9671173095703125,
+          "mean_event_wait_scenes": 6.666666666666667,
+          "maximum_event_wait_scenes": 45,
+          "mean_event_wait_seconds": 103.44444444444444,
+          "maximum_event_wait_seconds": 698.0
+        },
+        "B4": {
+          "temporal_group_count": 3,
+          "scene_count": 167,
+          "event_count": 9,
+          "datagram_count": 3,
+          "h8_update_path_bits": 408,
+          "clean_rate": 0.7664670658682635,
+          "stale_action_scene_count": 39,
+          "mean_max_query_regret_db": 0.11459133582200833,
+          "cvar_0_9_max_query_regret_db": 0.5227477129767922,
+          "maximum_max_query_regret_db": 0.7738494873046875,
+          "mean_event_wait_scenes": 15.777777777777779,
+          "maximum_event_wait_scenes": 55,
+          "mean_event_wait_seconds": 244.77777777777777,
+          "maximum_event_wait_seconds": 853.0
+        }
+      },
+      "comparisons": {
+        "B2_vs_B1": {
+          "analysis_unit": "temporal_group",
+          "group_count": 3,
+          "repetitions": 5000,
+          "seed": 20261603,
+          "point": {
+            "update_bit_saving_percent": 12.698412698412698,
+            "clean_difference_pp": -23.35329341317365,
+            "mean_regret_increase_db": 0.11452040986386601
+          },
+          "update_bit_saving_percent_ci95": [
+            0.0,
+            14.285714285714286
+          ],
+          "clean_difference_pp_ci95": [
+            -60.3448275862069,
+            0.0
+          ],
+          "mean_regret_increase_db_ci95": [
+            0.0,
+            0.31108810161722117
+          ]
+        },
+        "B4_vs_B1": {
+          "analysis_unit": "temporal_group",
+          "group_count": 3,
+          "repetitions": 5000,
+          "seed": 20261604,
+          "point": {
+            "update_bit_saving_percent": 19.047619047619047,
+            "clean_difference_pp": -23.35329341317365,
+            "mean_regret_increase_db": 0.09992432737064932
+          },
+          "update_bit_saving_percent_ci95": [
+            0.0,
+            19.047619047619047
+          ],
+          "clean_difference_pp_ci95": [
+            -60.3448275862069,
+            0.0
+          ],
+          "mean_regret_increase_db_ci95": [
+            0.0,
+            0.2690614503005455
+          ]
+        }
+      },
+      "per_group": [
+        {
+          "group_id": "aerpaw_packapalooza_2023:20230826T1200",
+          "policies": {
+            "B1": {
+              "scene_count": 51,
+              "event_count": 6,
+              "batch_size": 1,
+              "datagram_count": 6,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 6,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 336,
+              "clean_scene_count": 51,
+              "clean_rate": 1.0,
+              "stale_action_scene_count": 0,
+              "mean_max_query_regret_db": 0.02751765531652114,
+              "cvar_0_9_max_query_regret_db": 0.13646316528320312,
+              "maximum_max_query_regret_db": 0.16602325439453125,
+              "mean_event_wait_scenes": 0.0,
+              "maximum_event_wait_scenes": 0,
+              "mean_event_wait_seconds": 0.0,
+              "maximum_event_wait_seconds": 0.0
+            },
+            "B2": {
+              "scene_count": 51,
+              "event_count": 6,
+              "batch_size": 2,
+              "datagram_count": 3,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 6,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 288,
+              "clean_scene_count": 47,
+              "clean_rate": 0.9215686274509803,
+              "stale_action_scene_count": 4,
+              "mean_max_query_regret_db": 0.04872939165900735,
+              "cvar_0_9_max_query_regret_db": 0.2690467834472656,
+              "maximum_max_query_regret_db": 0.5044326782226562,
+              "mean_event_wait_scenes": 1.0,
+              "maximum_event_wait_scenes": 3,
+              "mean_event_wait_seconds": 15.5,
+              "maximum_event_wait_seconds": 47.0
+            },
+            "B4": {
+              "scene_count": 51,
+              "event_count": 6,
+              "batch_size": 4,
+              "datagram_count": 2,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 6,
+              "group_end_remainder_item_count": 2,
+              "h8_update_path_bits": 272,
+              "clean_scene_count": 47,
+              "clean_rate": 0.9215686274509803,
+              "stale_action_scene_count": 4,
+              "mean_max_query_regret_db": 0.04872939165900735,
+              "cvar_0_9_max_query_regret_db": 0.2690467834472656,
+              "maximum_max_query_regret_db": 0.5044326782226562,
+              "mean_event_wait_scenes": 11.333333333333334,
+              "maximum_event_wait_scenes": 25,
+              "mean_event_wait_seconds": 175.83333333333334,
+              "maximum_event_wait_seconds": 388.0
+            }
+          }
+        },
+        {
+          "group_id": "aerpaw_packapalooza_2023:20230826T1230",
+          "policies": {
+            "B1": {
+              "scene_count": 58,
+              "event_count": 3,
+              "batch_size": 1,
+              "datagram_count": 3,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 3,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 168,
+              "clean_scene_count": 58,
+              "clean_rate": 1.0,
+              "stale_action_scene_count": 0,
+              "mean_max_query_regret_db": 0.014150948360048491,
+              "cvar_0_9_max_query_regret_db": 0.09711329142252605,
+              "maximum_max_query_regret_db": 0.1597900390625,
+              "mean_event_wait_scenes": 0.0,
+              "maximum_event_wait_scenes": 0,
+              "mean_event_wait_seconds": 0.0,
+              "maximum_event_wait_seconds": 0.0
+            },
+            "B2": {
+              "scene_count": 58,
+              "event_count": 3,
+              "batch_size": 2,
+              "datagram_count": 2,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 3,
+              "group_end_remainder_item_count": 1,
+              "h8_update_path_bits": 152,
+              "clean_scene_count": 23,
+              "clean_rate": 0.39655172413793105,
+              "stale_action_scene_count": 35,
+              "mean_max_query_regret_db": 0.32523904997726966,
+              "cvar_0_9_max_query_regret_db": 0.7792167663574219,
+              "maximum_max_query_regret_db": 0.9671173095703125,
+              "mean_event_wait_scenes": 18.0,
+              "maximum_event_wait_scenes": 45,
+              "mean_event_wait_seconds": 279.3333333333333,
+              "maximum_event_wait_seconds": 698.0
+            },
+            "B4": {
+              "scene_count": 58,
+              "event_count": 3,
+              "batch_size": 4,
+              "datagram_count": 1,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 3,
+              "group_end_remainder_item_count": 3,
+              "h8_update_path_bits": 136,
+              "clean_scene_count": 23,
+              "clean_rate": 0.39655172413793105,
+              "stale_action_scene_count": 35,
+              "mean_max_query_regret_db": 0.283212398660594,
+              "cvar_0_9_max_query_regret_db": 0.5813509623209635,
+              "maximum_max_query_regret_db": 0.7738494873046875,
+              "mean_event_wait_scenes": 24.666666666666668,
+              "maximum_event_wait_scenes": 55,
+              "mean_event_wait_seconds": 382.6666666666667,
+              "maximum_event_wait_seconds": 853.0
+            }
+          }
+        },
+        {
+          "group_id": "aerpaw_packapalooza_2023:20230826T1245",
+          "policies": {
+            "B1": {
+              "scene_count": 58,
+              "event_count": 0,
+              "batch_size": 1,
+              "datagram_count": 0,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 0,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 0,
+              "clean_scene_count": 58,
+              "clean_rate": 1.0,
+              "stale_action_scene_count": 0,
+              "mean_max_query_regret_db": 0.00388336181640625,
+              "cvar_0_9_max_query_regret_db": 0.037539164225260414,
+              "maximum_max_query_regret_db": 0.1477508544921875,
+              "mean_event_wait_scenes": 0.0,
+              "maximum_event_wait_scenes": 0,
+              "mean_event_wait_seconds": 0.0,
+              "maximum_event_wait_seconds": 0.0
+            },
+            "B2": {
+              "scene_count": 58,
+              "event_count": 0,
+              "batch_size": 2,
+              "datagram_count": 0,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 0,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 0,
+              "clean_scene_count": 58,
+              "clean_rate": 1.0,
+              "stale_action_scene_count": 0,
+              "mean_max_query_regret_db": 0.00388336181640625,
+              "cvar_0_9_max_query_regret_db": 0.037539164225260414,
+              "maximum_max_query_regret_db": 0.1477508544921875,
+              "mean_event_wait_scenes": 0.0,
+              "maximum_event_wait_scenes": 0,
+              "mean_event_wait_seconds": 0.0,
+              "maximum_event_wait_seconds": 0.0
+            },
+            "B4": {
+              "scene_count": 58,
+              "event_count": 0,
+              "batch_size": 4,
+              "datagram_count": 0,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 0,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 0,
+              "clean_scene_count": 58,
+              "clean_rate": 1.0,
+              "stale_action_scene_count": 0,
+              "mean_max_query_regret_db": 0.00388336181640625,
+              "cvar_0_9_max_query_regret_db": 0.037539164225260414,
+              "maximum_max_query_regret_db": 0.1477508544921875,
+              "mean_event_wait_scenes": 0.0,
+              "maximum_event_wait_scenes": 0,
+              "mean_event_wait_seconds": 0.0,
+              "maximum_event_wait_seconds": 0.0
+            }
+          }
+        }
+      ]
+    },
+    "16": {
+      "aggregates": {
+        "B1": {
+          "temporal_group_count": 3,
+          "scene_count": 167,
+          "event_count": 15,
+          "datagram_count": 15,
+          "h8_update_path_bits": 840,
+          "clean_rate": 1.0,
+          "stale_action_scene_count": 0,
+          "mean_max_query_regret_db": 0.02888142705677512,
+          "cvar_0_9_max_query_regret_db": 0.14649222878848805,
+          "maximum_max_query_regret_db": 0.19546890258789062,
+          "mean_event_wait_scenes": 0.0,
+          "maximum_event_wait_scenes": 0,
+          "mean_event_wait_seconds": 0.0,
+          "maximum_event_wait_seconds": 0.0
+        },
+        "B2": {
+          "temporal_group_count": 3,
+          "scene_count": 167,
+          "event_count": 15,
+          "datagram_count": 8,
+          "h8_update_path_bits": 728,
+          "clean_rate": 0.7485029940119761,
+          "stale_action_scene_count": 42,
+          "mean_max_query_regret_db": 0.14635332758555156,
+          "cvar_0_9_max_query_regret_db": 0.6291744007783777,
+          "maximum_max_query_regret_db": 0.9666519165039062,
+          "mean_event_wait_scenes": 4.266666666666667,
+          "maximum_event_wait_scenes": 29,
+          "mean_event_wait_seconds": 66.26666666666667,
+          "maximum_event_wait_seconds": 450.0
+        },
+        "B4": {
+          "temporal_group_count": 3,
+          "scene_count": 167,
+          "event_count": 15,
+          "datagram_count": 5,
+          "h8_update_path_bits": 680,
+          "clean_rate": 0.7485029940119761,
+          "stale_action_scene_count": 42,
+          "mean_max_query_regret_db": 0.14635332758555156,
+          "cvar_0_9_max_query_regret_db": 0.6291744007783777,
+          "maximum_max_query_regret_db": 0.9666519165039062,
+          "mean_event_wait_scenes": 15.733333333333333,
+          "maximum_event_wait_scenes": 47,
+          "mean_event_wait_seconds": 243.86666666666667,
+          "maximum_event_wait_seconds": 728.0
+        }
+      },
+      "comparisons": {
+        "B2_vs_B1": {
+          "analysis_unit": "temporal_group",
+          "group_count": 3,
+          "repetitions": 5000,
+          "seed": 20262403,
+          "point": {
+            "update_bit_saving_percent": 13.333333333333334,
+            "clean_difference_pp": -25.149700598802394,
+            "mean_regret_increase_db": 0.11747190052877643
+          },
+          "update_bit_saving_percent_ci95": [
+            11.428571428571429,
+            14.285714285714286
+          ],
+          "clean_difference_pp_ci95": [
+            -60.3448275862069,
+            -1.7241379310344862
+          ],
+          "mean_regret_increase_db_ci95": [
+            0.0023824757543103453,
+            0.3126541006154028
+          ]
+        },
+        "B4_vs_B1": {
+          "analysis_unit": "temporal_group",
+          "group_count": 3,
+          "repetitions": 5000,
+          "seed": 20262404,
+          "point": {
+            "update_bit_saving_percent": 19.047619047619047,
+            "clean_difference_pp": -25.149700598802394,
+            "mean_regret_increase_db": 0.11747190052877643
+          },
+          "update_bit_saving_percent_ci95": [
+            14.285714285714286,
+            21.428571428571427
+          ],
+          "clean_difference_pp_ci95": [
+            -60.3448275862069,
+            -1.7241379310344862
+          ],
+          "mean_regret_increase_db_ci95": [
+            0.0023824757543103453,
+            0.3126541006154028
+          ]
+        }
+      },
+      "per_group": [
+        {
+          "group_id": "aerpaw_packapalooza_2023:20230826T1200",
+          "policies": {
+            "B1": {
+              "scene_count": 51,
+              "event_count": 8,
+              "batch_size": 1,
+              "datagram_count": 8,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 8,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 448,
+              "clean_scene_count": 51,
+              "clean_rate": 1.0,
+              "stale_action_scene_count": 0,
+              "mean_max_query_regret_db": 0.04347329981186811,
+              "cvar_0_9_max_query_regret_db": 0.14448165893554688,
+              "maximum_max_query_regret_db": 0.17774581909179688,
+              "mean_event_wait_scenes": 0.0,
+              "maximum_event_wait_scenes": 0,
+              "mean_event_wait_seconds": 0.0,
+              "maximum_event_wait_seconds": 0.0
+            },
+            "B2": {
+              "scene_count": 51,
+              "event_count": 8,
+              "batch_size": 2,
+              "datagram_count": 4,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 8,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 384,
+              "clean_scene_count": 45,
+              "clean_rate": 0.8823529411764706,
+              "stale_action_scene_count": 6,
+              "mean_max_query_regret_db": 0.06985929900524664,
+              "cvar_0_9_max_query_regret_db": 0.31917444864908856,
+              "maximum_max_query_regret_db": 0.5052032470703125,
+              "mean_event_wait_scenes": 1.25,
+              "maximum_event_wait_scenes": 4,
+              "mean_event_wait_seconds": 19.5,
+              "maximum_event_wait_seconds": 63.0
+            },
+            "B4": {
+              "scene_count": 51,
+              "event_count": 8,
+              "batch_size": 4,
+              "datagram_count": 2,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 8,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 352,
+              "clean_scene_count": 45,
+              "clean_rate": 0.8823529411764706,
+              "stale_action_scene_count": 6,
+              "mean_max_query_regret_db": 0.06985929900524664,
+              "cvar_0_9_max_query_regret_db": 0.31917444864908856,
+              "maximum_max_query_regret_db": 0.5052032470703125,
+              "mean_event_wait_scenes": 3.75,
+              "maximum_event_wait_scenes": 10,
+              "mean_event_wait_seconds": 58.0,
+              "maximum_event_wait_seconds": 155.0
+            }
+          }
+        },
+        {
+          "group_id": "aerpaw_packapalooza_2023:20230826T1230",
+          "policies": {
+            "B1": {
+              "scene_count": 58,
+              "event_count": 5,
+              "batch_size": 1,
+              "datagram_count": 5,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 5,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 280,
+              "clean_scene_count": 58,
+              "clean_rate": 1.0,
+              "stale_action_scene_count": 0,
+              "mean_max_query_regret_db": 0.03448677062988281,
+              "cvar_0_9_max_query_regret_db": 0.1641839345296224,
+              "maximum_max_query_regret_db": 0.19546890258789062,
+              "mean_event_wait_scenes": 0.0,
+              "maximum_event_wait_scenes": 0,
+              "mean_event_wait_seconds": 0.0,
+              "maximum_event_wait_seconds": 0.0
+            },
+            "B2": {
+              "scene_count": 58,
+              "event_count": 5,
+              "batch_size": 2,
+              "datagram_count": 3,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 5,
+              "group_end_remainder_item_count": 1,
+              "h8_update_path_bits": 248,
+              "clean_scene_count": 23,
+              "clean_rate": 0.39655172413793105,
+              "stale_action_scene_count": 35,
+              "mean_max_query_regret_db": 0.3471408712452856,
+              "cvar_0_9_max_query_regret_db": 0.7784468332926432,
+              "maximum_max_query_regret_db": 0.9666519165039062,
+              "mean_event_wait_scenes": 10.4,
+              "maximum_event_wait_scenes": 29,
+              "mean_event_wait_seconds": 161.4,
+              "maximum_event_wait_seconds": 450.0
+            },
+            "B4": {
+              "scene_count": 58,
+              "event_count": 5,
+              "batch_size": 4,
+              "datagram_count": 2,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 5,
+              "group_end_remainder_item_count": 1,
+              "h8_update_path_bits": 232,
+              "clean_scene_count": 23,
+              "clean_rate": 0.39655172413793105,
+              "stale_action_scene_count": 35,
+              "mean_max_query_regret_db": 0.3471408712452856,
+              "cvar_0_9_max_query_regret_db": 0.7784468332926432,
+              "maximum_max_query_regret_db": 0.9666519165039062,
+              "mean_event_wait_scenes": 22.8,
+              "maximum_event_wait_scenes": 45,
+              "mean_event_wait_seconds": 353.8,
+              "maximum_event_wait_seconds": 698.0
+            }
+          }
+        },
+        {
+          "group_id": "aerpaw_packapalooza_2023:20230826T1245",
+          "policies": {
+            "B1": {
+              "scene_count": 58,
+              "event_count": 2,
+              "batch_size": 1,
+              "datagram_count": 2,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 2,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 112,
+              "clean_scene_count": 58,
+              "clean_rate": 1.0,
+              "stale_action_scene_count": 0,
+              "mean_max_query_regret_db": 0.010445298819706357,
+              "cvar_0_9_max_query_regret_db": 0.09725634256998698,
+              "maximum_max_query_regret_db": 0.1664276123046875,
+              "mean_event_wait_scenes": 0.0,
+              "maximum_event_wait_scenes": 0,
+              "mean_event_wait_seconds": 0.0,
+              "maximum_event_wait_seconds": 0.0
+            },
+            "B2": {
+              "scene_count": 58,
+              "event_count": 2,
+              "batch_size": 2,
+              "datagram_count": 1,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 2,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 96,
+              "clean_scene_count": 57,
+              "clean_rate": 0.9827586206896551,
+              "stale_action_scene_count": 1,
+              "mean_max_query_regret_db": 0.012827774574016702,
+              "cvar_0_9_max_query_regret_db": 0.12028694152832031,
+              "maximum_max_query_regret_db": 0.2719459533691406,
+              "mean_event_wait_scenes": 1.0,
+              "maximum_event_wait_scenes": 2,
+              "mean_event_wait_seconds": 15.5,
+              "maximum_event_wait_seconds": 31.0
+            },
+            "B4": {
+              "scene_count": 58,
+              "event_count": 2,
+              "batch_size": 4,
+              "datagram_count": 1,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 2,
+              "group_end_remainder_item_count": 2,
+              "h8_update_path_bits": 96,
+              "clean_scene_count": 57,
+              "clean_rate": 0.9827586206896551,
+              "stale_action_scene_count": 1,
+              "mean_max_query_regret_db": 0.012827774574016702,
+              "cvar_0_9_max_query_regret_db": 0.12028694152832031,
+              "maximum_max_query_regret_db": 0.2719459533691406,
+              "mean_event_wait_scenes": 46.0,
+              "maximum_event_wait_scenes": 47,
+              "mean_event_wait_seconds": 712.5,
+              "maximum_event_wait_seconds": 728.0
+            }
+          }
+        }
+      ]
+    },
+    "32": {
+      "aggregates": {
+        "B1": {
+          "temporal_group_count": 3,
+          "scene_count": 167,
+          "event_count": 15,
+          "datagram_count": 15,
+          "h8_update_path_bits": 840,
+          "clean_rate": 1.0,
+          "stale_action_scene_count": 0,
+          "mean_max_query_regret_db": 0.025098087782869264,
+          "cvar_0_9_max_query_regret_db": 0.15224097756778493,
+          "maximum_max_query_regret_db": 0.19598388671875,
+          "mean_event_wait_scenes": 0.0,
+          "maximum_event_wait_scenes": 0,
+          "mean_event_wait_seconds": 0.0,
+          "maximum_event_wait_seconds": 0.0
+        },
+        "B2": {
+          "temporal_group_count": 3,
+          "scene_count": 167,
+          "event_count": 15,
+          "datagram_count": 8,
+          "h8_update_path_bits": 728,
+          "clean_rate": 0.7485029940119761,
+          "stale_action_scene_count": 42,
+          "mean_max_query_regret_db": 0.13397298839515787,
+          "cvar_0_9_max_query_regret_db": 0.5771889967076919,
+          "maximum_max_query_regret_db": 0.7611112594604492,
+          "mean_event_wait_scenes": 4.266666666666667,
+          "maximum_event_wait_scenes": 29,
+          "mean_event_wait_seconds": 66.26666666666667,
+          "maximum_event_wait_seconds": 450.0
+        },
+        "B4": {
+          "temporal_group_count": 3,
+          "scene_count": 167,
+          "event_count": 15,
+          "datagram_count": 5,
+          "h8_update_path_bits": 680,
+          "clean_rate": 0.7485029940119761,
+          "stale_action_scene_count": 42,
+          "mean_max_query_regret_db": 0.13397298839515787,
+          "cvar_0_9_max_query_regret_db": 0.5771889967076919,
+          "maximum_max_query_regret_db": 0.7611112594604492,
+          "mean_event_wait_scenes": 15.733333333333333,
+          "maximum_event_wait_scenes": 47,
+          "mean_event_wait_seconds": 243.86666666666667,
+          "maximum_event_wait_seconds": 728.0
+        }
+      },
+      "comparisons": {
+        "B2_vs_B1": {
+          "analysis_unit": "temporal_group",
+          "group_count": 3,
+          "repetitions": 5000,
+          "seed": 20264003,
+          "point": {
+            "update_bit_saving_percent": 13.333333333333334,
+            "clean_difference_pp": -25.149700598802394,
+            "mean_regret_increase_db": 0.1088749006122886
+          },
+          "update_bit_saving_percent_ci95": [
+            11.428571428571429,
+            14.285714285714286
+          ],
+          "clean_difference_pp_ci95": [
+            -60.3448275862069,
+            -1.7241379310344862
+          ],
+          "mean_regret_increase_db_ci95": [
+            0.005221301111681707,
+            0.2803897939879319
+          ]
+        },
+        "B4_vs_B1": {
+          "analysis_unit": "temporal_group",
+          "group_count": 3,
+          "repetitions": 5000,
+          "seed": 20264004,
+          "point": {
+            "update_bit_saving_percent": 19.047619047619047,
+            "clean_difference_pp": -25.149700598802394,
+            "mean_regret_increase_db": 0.1088749006122886
+          },
+          "update_bit_saving_percent_ci95": [
+            14.285714285714286,
+            21.428571428571427
+          ],
+          "clean_difference_pp_ci95": [
+            -60.3448275862069,
+            -1.7241379310344862
+          ],
+          "mean_regret_increase_db_ci95": [
+            0.005221301111681707,
+            0.2803897939879319
+          ]
+        }
+      },
+      "per_group": [
+        {
+          "group_id": "aerpaw_packapalooza_2023:20230826T1200",
+          "policies": {
+            "B1": {
+              "scene_count": 51,
+              "event_count": 8,
+              "batch_size": 1,
+              "datagram_count": 8,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 8,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 448,
+              "clean_scene_count": 51,
+              "clean_rate": 1.0,
+              "stale_action_scene_count": 0,
+              "mean_max_query_regret_db": 0.039604355307186354,
+              "cvar_0_9_max_query_regret_db": 0.15870253245035806,
+              "maximum_max_query_regret_db": 0.17827224731445312,
+              "mean_event_wait_scenes": 0.0,
+              "maximum_event_wait_scenes": 0,
+              "mean_event_wait_seconds": 0.0,
+              "maximum_event_wait_seconds": 0.0
+            },
+            "B2": {
+              "scene_count": 51,
+              "event_count": 8,
+              "batch_size": 2,
+              "datagram_count": 4,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 8,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 384,
+              "clean_scene_count": 45,
+              "clean_rate": 0.8823529411764706,
+              "stale_action_scene_count": 6,
+              "mean_max_query_regret_db": 0.0713036668066885,
+              "cvar_0_9_max_query_regret_db": 0.31952476501464844,
+              "maximum_max_query_regret_db": 0.5052585601806641,
+              "mean_event_wait_scenes": 1.25,
+              "maximum_event_wait_scenes": 4,
+              "mean_event_wait_seconds": 19.5,
+              "maximum_event_wait_seconds": 63.0
+            },
+            "B4": {
+              "scene_count": 51,
+              "event_count": 8,
+              "batch_size": 4,
+              "datagram_count": 2,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 8,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 352,
+              "clean_scene_count": 45,
+              "clean_rate": 0.8823529411764706,
+              "stale_action_scene_count": 6,
+              "mean_max_query_regret_db": 0.0713036668066885,
+              "cvar_0_9_max_query_regret_db": 0.31952476501464844,
+              "maximum_max_query_regret_db": 0.5052585601806641,
+              "mean_event_wait_scenes": 3.75,
+              "maximum_event_wait_scenes": 10,
+              "mean_event_wait_seconds": 58.0,
+              "maximum_event_wait_seconds": 155.0
+            }
+          }
+        },
+        {
+          "group_id": "aerpaw_packapalooza_2023:20230826T1230",
+          "policies": {
+            "B1": {
+              "scene_count": 58,
+              "event_count": 5,
+              "batch_size": 1,
+              "datagram_count": 5,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 5,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 280,
+              "clean_scene_count": 58,
+              "clean_rate": 1.0,
+              "stale_action_scene_count": 0,
+              "mean_max_query_regret_db": 0.02945949565405117,
+              "cvar_0_9_max_query_regret_db": 0.16478665669759116,
+              "maximum_max_query_regret_db": 0.19598388671875,
+              "mean_event_wait_scenes": 0.0,
+              "maximum_event_wait_scenes": 0,
+              "mean_event_wait_seconds": 0.0,
+              "maximum_event_wait_seconds": 0.0
+            },
+            "B2": {
+              "scene_count": 58,
+              "event_count": 5,
+              "batch_size": 2,
+              "datagram_count": 3,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 5,
+              "group_end_remainder_item_count": 1,
+              "h8_update_path_bits": 248,
+              "clean_scene_count": 23,
+              "clean_rate": 0.39655172413793105,
+              "stale_action_scene_count": 35,
+              "mean_max_query_regret_db": 0.30984928964198305,
+              "cvar_0_9_max_query_regret_db": 0.6381856600443522,
+              "maximum_max_query_regret_db": 0.7611112594604492,
+              "mean_event_wait_scenes": 10.4,
+              "maximum_event_wait_scenes": 29,
+              "mean_event_wait_seconds": 161.4,
+              "maximum_event_wait_seconds": 450.0
+            },
+            "B4": {
+              "scene_count": 58,
+              "event_count": 5,
+              "batch_size": 4,
+              "datagram_count": 2,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 5,
+              "group_end_remainder_item_count": 1,
+              "h8_update_path_bits": 232,
+              "clean_scene_count": 23,
+              "clean_rate": 0.39655172413793105,
+              "stale_action_scene_count": 35,
+              "mean_max_query_regret_db": 0.30984928964198305,
+              "cvar_0_9_max_query_regret_db": 0.6381856600443522,
+              "maximum_max_query_regret_db": 0.7611112594604492,
+              "mean_event_wait_scenes": 22.8,
+              "maximum_event_wait_scenes": 45,
+              "mean_event_wait_seconds": 353.8,
+              "maximum_event_wait_seconds": 698.0
+            }
+          }
+        },
+        {
+          "group_id": "aerpaw_packapalooza_2023:20230826T1245",
+          "policies": {
+            "B1": {
+              "scene_count": 58,
+              "event_count": 2,
+              "batch_size": 1,
+              "datagram_count": 2,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 2,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 112,
+              "clean_scene_count": 58,
+              "clean_rate": 1.0,
+              "stale_action_scene_count": 0,
+              "mean_max_query_regret_db": 0.007981168812718886,
+              "cvar_0_9_max_query_regret_db": 0.07420857747395833,
+              "maximum_max_query_regret_db": 0.16709327697753906,
+              "mean_event_wait_scenes": 0.0,
+              "maximum_event_wait_scenes": 0,
+              "mean_event_wait_seconds": 0.0,
+              "maximum_event_wait_seconds": 0.0
+            },
+            "B2": {
+              "scene_count": 58,
+              "event_count": 2,
+              "batch_size": 2,
+              "datagram_count": 1,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 2,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 96,
+              "clean_scene_count": 57,
+              "clean_rate": 0.9827586206896551,
+              "stale_action_scene_count": 1,
+              "mean_max_query_regret_db": 0.013202469924400592,
+              "cvar_0_9_max_query_regret_db": 0.12090174357096355,
+              "maximum_max_query_regret_db": 0.27256011962890625,
+              "mean_event_wait_scenes": 1.0,
+              "maximum_event_wait_scenes": 2,
+              "mean_event_wait_seconds": 15.5,
+              "maximum_event_wait_seconds": 31.0
+            },
+            "B4": {
+              "scene_count": 58,
+              "event_count": 2,
+              "batch_size": 4,
+              "datagram_count": 1,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 2,
+              "group_end_remainder_item_count": 2,
+              "h8_update_path_bits": 96,
+              "clean_scene_count": 57,
+              "clean_rate": 0.9827586206896551,
+              "stale_action_scene_count": 1,
+              "mean_max_query_regret_db": 0.013202469924400592,
+              "cvar_0_9_max_query_regret_db": 0.12090174357096355,
+              "maximum_max_query_regret_db": 0.27256011962890625,
+              "mean_event_wait_scenes": 46.0,
+              "maximum_event_wait_scenes": 47,
+              "mean_event_wait_seconds": 712.5,
+              "maximum_event_wait_seconds": 728.0
+            }
+          }
+        }
+      ]
+    },
+    "64": {
+      "aggregates": {
+        "B1": {
+          "temporal_group_count": 3,
+          "scene_count": 167,
+          "event_count": 15,
+          "datagram_count": 15,
+          "h8_update_path_bits": 840,
+          "clean_rate": 1.0,
+          "stale_action_scene_count": 0,
+          "mean_max_query_regret_db": 0.025927802997672982,
+          "cvar_0_9_max_query_regret_db": 0.15398311614990234,
+          "maximum_max_query_regret_db": 0.1956624984741211,
+          "mean_event_wait_scenes": 0.0,
+          "maximum_event_wait_scenes": 0,
+          "mean_event_wait_seconds": 0.0,
+          "maximum_event_wait_seconds": 0.0
+        },
+        "B2": {
+          "temporal_group_count": 3,
+          "scene_count": 167,
+          "event_count": 15,
+          "datagram_count": 8,
+          "h8_update_path_bits": 728,
+          "clean_rate": 0.7485029940119761,
+          "stale_action_scene_count": 42,
+          "mean_max_query_regret_db": 0.13463497542573555,
+          "cvar_0_9_max_query_regret_db": 0.5775404817917767,
+          "maximum_max_query_regret_db": 0.7623696327209473,
+          "mean_event_wait_scenes": 4.266666666666667,
+          "maximum_event_wait_scenes": 29,
+          "mean_event_wait_seconds": 66.26666666666667,
+          "maximum_event_wait_seconds": 450.0
+        },
+        "B4": {
+          "temporal_group_count": 3,
+          "scene_count": 167,
+          "event_count": 15,
+          "datagram_count": 5,
+          "h8_update_path_bits": 680,
+          "clean_rate": 0.7485029940119761,
+          "stale_action_scene_count": 42,
+          "mean_max_query_regret_db": 0.13463497542573555,
+          "cvar_0_9_max_query_regret_db": 0.5775404817917767,
+          "maximum_max_query_regret_db": 0.7623696327209473,
+          "mean_event_wait_scenes": 15.733333333333333,
+          "maximum_event_wait_scenes": 47,
+          "mean_event_wait_seconds": 243.86666666666667,
+          "maximum_event_wait_seconds": 728.0
+        }
+      },
+      "comparisons": {
+        "B2_vs_B1": {
+          "analysis_unit": "temporal_group",
+          "group_count": 3,
+          "repetitions": 5000,
+          "seed": 20267203,
+          "point": {
+            "update_bit_saving_percent": 13.333333333333334,
+            "clean_difference_pp": -25.149700598802394,
+            "mean_regret_increase_db": 0.10870717242806256
+          },
+          "update_bit_saving_percent_ci95": [
+            11.428571428571429,
+            14.285714285714286
+          ],
+          "clean_difference_pp_ci95": [
+            -60.3448275862069,
+            -1.7241379310344862
+          ],
+          "mean_regret_increase_db_ci95": [
+            0.005209774806581694,
+            0.2799125252098873
+          ]
+        },
+        "B4_vs_B1": {
+          "analysis_unit": "temporal_group",
+          "group_count": 3,
+          "repetitions": 5000,
+          "seed": 20267204,
+          "point": {
+            "update_bit_saving_percent": 19.047619047619047,
+            "clean_difference_pp": -25.149700598802394,
+            "mean_regret_increase_db": 0.10870717242806256
+          },
+          "update_bit_saving_percent_ci95": [
+            14.285714285714286,
+            21.428571428571427
+          ],
+          "clean_difference_pp_ci95": [
+            -60.3448275862069,
+            -1.7241379310344862
+          ],
+          "mean_regret_increase_db_ci95": [
+            0.005209774806581694,
+            0.2799125252098873
+          ]
+        }
+      },
+      "per_group": [
+        {
+          "group_id": "aerpaw_packapalooza_2023:20230826T1200",
+          "policies": {
+            "B1": {
+              "scene_count": 51,
+              "event_count": 8,
+              "batch_size": 1,
+              "datagram_count": 8,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 8,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 448,
+              "clean_scene_count": 51,
+              "clean_rate": 1.0,
+              "stale_action_scene_count": 0,
+              "mean_max_query_regret_db": 0.0408021048003552,
+              "cvar_0_9_max_query_regret_db": 0.16112041473388672,
+              "maximum_max_query_regret_db": 0.18331527709960938,
+              "mean_event_wait_scenes": 0.0,
+              "maximum_event_wait_scenes": 0,
+              "mean_event_wait_seconds": 0.0,
+              "maximum_event_wait_seconds": 0.0
+            },
+            "B2": {
+              "scene_count": 51,
+              "event_count": 8,
+              "batch_size": 2,
+              "datagram_count": 4,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 8,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 384,
+              "clean_scene_count": 45,
+              "clean_rate": 0.8823529411764706,
+              "stale_action_scene_count": 6,
+              "mean_max_query_regret_db": 0.0725080733205758,
+              "cvar_0_9_max_query_regret_db": 0.31919336318969727,
+              "maximum_max_query_regret_db": 0.5049314498901367,
+              "mean_event_wait_scenes": 1.25,
+              "maximum_event_wait_scenes": 4,
+              "mean_event_wait_seconds": 19.5,
+              "maximum_event_wait_seconds": 63.0
+            },
+            "B4": {
+              "scene_count": 51,
+              "event_count": 8,
+              "batch_size": 4,
+              "datagram_count": 2,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 8,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 352,
+              "clean_scene_count": 45,
+              "clean_rate": 0.8823529411764706,
+              "stale_action_scene_count": 6,
+              "mean_max_query_regret_db": 0.0725080733205758,
+              "cvar_0_9_max_query_regret_db": 0.31919336318969727,
+              "maximum_max_query_regret_db": 0.5049314498901367,
+              "mean_event_wait_scenes": 3.75,
+              "maximum_event_wait_scenes": 10,
+              "mean_event_wait_seconds": 58.0,
+              "maximum_event_wait_seconds": 155.0
+            }
+          }
+        },
+        {
+          "group_id": "aerpaw_packapalooza_2023:20230826T1230",
+          "policies": {
+            "B1": {
+              "scene_count": 58,
+              "event_count": 5,
+              "batch_size": 1,
+              "datagram_count": 5,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 5,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 280,
+              "clean_scene_count": 58,
+              "clean_rate": 1.0,
+              "stale_action_scene_count": 0,
+              "mean_max_query_regret_db": 0.03050907589923409,
+              "cvar_0_9_max_query_regret_db": 0.16522534688313803,
+              "maximum_max_query_regret_db": 0.1956624984741211,
+              "mean_event_wait_scenes": 0.0,
+              "maximum_event_wait_scenes": 0,
+              "mean_event_wait_seconds": 0.0,
+              "maximum_event_wait_seconds": 0.0
+            },
+            "B2": {
+              "scene_count": 58,
+              "event_count": 5,
+              "batch_size": 2,
+              "datagram_count": 3,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 5,
+              "group_end_remainder_item_count": 1,
+              "h8_update_path_bits": 248,
+              "clean_scene_count": 23,
+              "clean_rate": 0.39655172413793105,
+              "stale_action_scene_count": 35,
+              "mean_max_query_regret_db": 0.31042160110912137,
+              "cvar_0_9_max_query_regret_db": 0.6386245886484782,
+              "maximum_max_query_regret_db": 0.7623696327209473,
+              "mean_event_wait_scenes": 10.4,
+              "maximum_event_wait_scenes": 29,
+              "mean_event_wait_seconds": 161.4,
+              "maximum_event_wait_seconds": 450.0
+            },
+            "B4": {
+              "scene_count": 58,
+              "event_count": 5,
+              "batch_size": 4,
+              "datagram_count": 2,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 5,
+              "group_end_remainder_item_count": 1,
+              "h8_update_path_bits": 232,
+              "clean_scene_count": 23,
+              "clean_rate": 0.39655172413793105,
+              "stale_action_scene_count": 35,
+              "mean_max_query_regret_db": 0.31042160110912137,
+              "cvar_0_9_max_query_regret_db": 0.6386245886484782,
+              "maximum_max_query_regret_db": 0.7623696327209473,
+              "mean_event_wait_scenes": 22.8,
+              "maximum_event_wait_scenes": 45,
+              "mean_event_wait_seconds": 353.8,
+              "maximum_event_wait_seconds": 698.0
+            }
+          }
+        },
+        {
+          "group_id": "aerpaw_packapalooza_2023:20230826T1245",
+          "policies": {
+            "B1": {
+              "scene_count": 58,
+              "event_count": 2,
+              "batch_size": 1,
+              "datagram_count": 2,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 2,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 112,
+              "clean_scene_count": 58,
+              "clean_rate": 1.0,
+              "stale_action_scene_count": 0,
+              "mean_max_query_regret_db": 0.008267402648925781,
+              "cvar_0_9_max_query_regret_db": 0.07683960596720378,
+              "maximum_max_query_regret_db": 0.166839599609375,
+              "mean_event_wait_scenes": 0.0,
+              "maximum_event_wait_scenes": 0,
+              "mean_event_wait_seconds": 0.0,
+              "maximum_event_wait_seconds": 0.0
+            },
+            "B2": {
+              "scene_count": 58,
+              "event_count": 2,
+              "batch_size": 2,
+              "datagram_count": 1,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 2,
+              "group_end_remainder_item_count": 0,
+              "h8_update_path_bits": 96,
+              "clean_scene_count": 57,
+              "clean_rate": 0.9827586206896551,
+              "stale_action_scene_count": 1,
+              "mean_max_query_regret_db": 0.013477177455507475,
+              "cvar_0_9_max_query_regret_db": 0.12300888697306316,
+              "maximum_max_query_regret_db": 0.2722511291503906,
+              "mean_event_wait_scenes": 1.0,
+              "maximum_event_wait_scenes": 2,
+              "mean_event_wait_seconds": 15.5,
+              "maximum_event_wait_seconds": 31.0
+            },
+            "B4": {
+              "scene_count": 58,
+              "event_count": 2,
+              "batch_size": 4,
+              "datagram_count": 1,
+              "lost_datagram_count": 0,
+              "delivered_update_item_count": 2,
+              "group_end_remainder_item_count": 2,
+              "h8_update_path_bits": 96,
+              "clean_scene_count": 57,
+              "clean_rate": 0.9827586206896551,
+              "stale_action_scene_count": 1,
+              "mean_max_query_regret_db": 0.013477177455507475,
+              "cvar_0_9_max_query_regret_db": 0.12300888697306316,
+              "maximum_max_query_regret_db": 0.2722511291503906,
+              "mean_event_wait_scenes": 46.0,
+              "maximum_event_wait_scenes": 47,
+              "mean_event_wait_seconds": 712.5,
+              "maximum_event_wait_seconds": 728.0
+            }
+          }
+        }
+      ]
+    }
+  },
+  "burst_loss_stress": {
+    "model": {
+      "status": "secondary_diagnostic_not_empirical_link_model",
+      "runs": 256,
+      "seed": 20260802,
+      "good_to_bad_probability_per_scene": 0.02,
+      "bad_to_good_probability_per_scene": 0.25,
+      "drop_probability_good": 0.01,
+      "drop_probability_bad": 0.5,
+      "stationary_initial_state": true,
+      "pairing": "The same scene-indexed Markov loss masks are reused across B1, B2, B4 and all N values.",
+      "recovery_boundary": "Frozen no-loss update schedules are replayed without ARQ; this isolates packet-concentration risk and is not a complete Stage-9 protocol simulation."
+    },
+    "results": {
+      "8": {
+        "B1": {
+          "run_count": 256,
+          "mean_clean_rate": 0.9837200598802396,
+          "clean_rate_ci95_across_runs": [
+            0.844311377245509,
+            1.0
+          ],
+          "mean_realized_datagram_loss_rate": 0.04036458333333333
+        },
+        "B2": {
+          "run_count": 256,
+          "mean_clean_rate": 0.7664670658682636,
+          "clean_rate_ci95_across_runs": [
+            0.7664670658682635,
+            0.7664670658682635
+          ],
+          "mean_realized_datagram_loss_rate": 0.046875,
+          "paired_clean_difference_vs_B1_pp": -21.725299401197603,
+          "paired_clean_difference_vs_B1_pp_ci95": [
+            -23.35329341317365,
+            -7.784431137724546
+          ]
+        },
+        "B4": {
+          "run_count": 256,
+          "mean_clean_rate": 0.7664670658682636,
+          "clean_rate_ci95_across_runs": [
+            0.7664670658682635,
+            0.7664670658682635
+          ],
+          "mean_realized_datagram_loss_rate": 0.046875,
+          "paired_clean_difference_vs_B1_pp": -21.725299401197603,
+          "paired_clean_difference_vs_B1_pp_ci95": [
+            -23.35329341317365,
+            -7.784431137724546
+          ]
+        }
+      },
+      "16": {
+        "B1": {
+          "run_count": 256,
+          "mean_clean_rate": 0.9779191616766467,
+          "clean_rate_ci95_across_runs": [
+            0.7956586826347306,
+            1.0
+          ],
+          "mean_realized_datagram_loss_rate": 0.04166666666666667
+        },
+        "B2": {
+          "run_count": 256,
+          "mean_clean_rate": 0.7485029940119758,
+          "clean_rate_ci95_across_runs": [
+            0.7485029940119761,
+            0.7485029940119761
+          ],
+          "mean_realized_datagram_loss_rate": 0.0439453125,
+          "paired_clean_difference_vs_B1_pp": -22.94161676646706,
+          "paired_clean_difference_vs_B1_pp_ci95": [
+            -25.149700598802394,
+            -4.71556886227545
+          ]
+        },
+        "B4": {
+          "run_count": 256,
+          "mean_clean_rate": 0.7485029940119758,
+          "clean_rate_ci95_across_runs": [
+            0.7485029940119761,
+            0.7485029940119761
+          ],
+          "mean_realized_datagram_loss_rate": 0.0453125,
+          "paired_clean_difference_vs_B1_pp": -22.94161676646706,
+          "paired_clean_difference_vs_B1_pp_ci95": [
+            -25.149700598802394,
+            -4.71556886227545
+          ]
+        }
+      },
+      "32": {
+        "B1": {
+          "run_count": 256,
+          "mean_clean_rate": 0.9787846182634731,
+          "clean_rate_ci95_across_runs": [
+            0.7994011976047904,
+            1.0
+          ],
+          "mean_realized_datagram_loss_rate": 0.04166666666666667
+        },
+        "B2": {
+          "run_count": 256,
+          "mean_clean_rate": 0.7485029940119758,
+          "clean_rate_ci95_across_runs": [
+            0.7485029940119761,
+            0.7485029940119761
+          ],
+          "mean_realized_datagram_loss_rate": 0.0439453125,
+          "paired_clean_difference_vs_B1_pp": -23.028162425149695,
+          "paired_clean_difference_vs_B1_pp_ci95": [
+            -25.149700598802394,
+            -5.089820359281434
+          ]
+        },
+        "B4": {
+          "run_count": 256,
+          "mean_clean_rate": 0.7485029940119758,
+          "clean_rate_ci95_across_runs": [
+            0.7485029940119761,
+            0.7485029940119761
+          ],
+          "mean_realized_datagram_loss_rate": 0.0453125,
+          "paired_clean_difference_vs_B1_pp": -23.028162425149695,
+          "paired_clean_difference_vs_B1_pp_ci95": [
+            -25.149700598802394,
+            -5.089820359281434
+          ]
+        }
+      },
+      "64": {
+        "B1": {
+          "run_count": 256,
+          "mean_clean_rate": 0.9787846182634731,
+          "clean_rate_ci95_across_runs": [
+            0.7994011976047904,
+            1.0
+          ],
+          "mean_realized_datagram_loss_rate": 0.04166666666666667
+        },
+        "B2": {
+          "run_count": 256,
+          "mean_clean_rate": 0.7485029940119758,
+          "clean_rate_ci95_across_runs": [
+            0.7485029940119761,
+            0.7485029940119761
+          ],
+          "mean_realized_datagram_loss_rate": 0.0439453125,
+          "paired_clean_difference_vs_B1_pp": -23.028162425149695,
+          "paired_clean_difference_vs_B1_pp_ci95": [
+            -25.149700598802394,
+            -5.089820359281434
+          ]
+        },
+        "B4": {
+          "run_count": 256,
+          "mean_clean_rate": 0.7485029940119758,
+          "clean_rate_ci95_across_runs": [
+            0.7485029940119761,
+            0.7485029940119761
+          ],
+          "mean_realized_datagram_loss_rate": 0.0453125,
+          "paired_clean_difference_vs_B1_pp": -23.028162425149695,
+          "paired_clean_difference_vs_B1_pp_ci95": [
+            -25.149700598802394,
+            -5.089820359281434
+          ]
+        }
+      }
+    }
+  },
+  "retention_gates": {
+    "B2": {
+      "8": {
+        "checks": {
+          "bit_saving_lower_bound": false,
+          "no_loss_clean_lower_bound": false,
+          "mean_regret_upper_bound": false,
+          "burst_clean_lower_bound": false
+        },
+        "passed": false
+      },
+      "16": {
+        "checks": {
+          "bit_saving_lower_bound": true,
+          "no_loss_clean_lower_bound": false,
+          "mean_regret_upper_bound": false,
+          "burst_clean_lower_bound": false
+        },
+        "passed": false
+      },
+      "32": {
+        "checks": {
+          "bit_saving_lower_bound": true,
+          "no_loss_clean_lower_bound": false,
+          "mean_regret_upper_bound": false,
+          "burst_clean_lower_bound": false
+        },
+        "passed": false
+      },
+      "64": {
+        "checks": {
+          "bit_saving_lower_bound": true,
+          "no_loss_clean_lower_bound": false,
+          "mean_regret_upper_bound": false,
+          "burst_clean_lower_bound": false
+        },
+        "passed": false
+      }
+    },
+    "B4": {
+      "8": {
+        "checks": {
+          "bit_saving_lower_bound": false,
+          "no_loss_clean_lower_bound": false,
+          "mean_regret_upper_bound": false,
+          "burst_clean_lower_bound": false
+        },
+        "passed": false
+      },
+      "16": {
+        "checks": {
+          "bit_saving_lower_bound": true,
+          "no_loss_clean_lower_bound": false,
+          "mean_regret_upper_bound": false,
+          "burst_clean_lower_bound": false
+        },
+        "passed": false
+      },
+      "32": {
+        "checks": {
+          "bit_saving_lower_bound": true,
+          "no_loss_clean_lower_bound": false,
+          "mean_regret_upper_bound": false,
+          "burst_clean_lower_bound": false
+        },
+        "passed": false
+      },
+      "64": {
+        "checks": {
+          "bit_saving_lower_bound": true,
+          "no_loss_clean_lower_bound": false,
+          "mean_regret_upper_bound": false,
+          "burst_clean_lower_bound": false
+        },
+        "passed": false
+      }
+    }
+  },
+  "retention_decision": {
+    "candidate_retained": {
+      "B2": false,
+      "B4": false
+    },
+    "batching_adopted": false,
+    "fallback": "Do not adopt batching; retain S9-CH8-v1 and stop sequential-update aggregation."
+  },
+  "environment": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "python_executable": "D:\\anaconda\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "packages": {
+      "numpy": "1.26.4"
+    }
+  },
+  "claim_boundary": "This stage can decide whether sequential B2/B4 aggregation is useful on one already seen fixed-site pilot dataset. It cannot establish external generalization, measured UAV-link reliability, board-level feasibility, or repair the failed Stage-6 Final.",
+  "normalized_result_sha256": "65c3939f3248438edd412d04a7a2b658cb3073874c8e6b6b299250c70aab4d8a"
+}

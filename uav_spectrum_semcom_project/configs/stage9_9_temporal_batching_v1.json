@@ -1,0 +1,111 @@
+{
+  "protocol_id": "stage9_9_temporal_batching_v1",
+  "status": "preregistered_before_stage9_9_result_access",
+  "created_date": "2026-08-02",
+  "research_question": "Can literal B2 or B4 aggregation of the already scheduled real-time semantic update stream preserve task quality while reducing H8 update-path bits?",
+  "baseline": {
+    "candidate_id": "S9-CH8-B1-v1",
+    "description": "Each update on the frozen no-loss event schedule is transmitted immediately in one H8 datagram."
+  },
+  "candidates": [
+    {
+      "candidate_id": "S9-CH8-B2-v1",
+      "batch_size": 2
+    },
+    {
+      "candidate_id": "S9-CH8-B4-v1",
+      "batch_size": 4
+    }
+  ],
+  "development_source": {
+    "cache": "results/stage5/helikite_pilot_v1/helikite_pilot_cache.npz",
+    "cache_sha256": "19441716a0888da1df28d6b77b954008e30dd725f51288e21468f110dd432a50",
+    "role": "permanently_excluded_2023_adapter_pilot_development_only",
+    "scene_count": 364,
+    "temporal_group_count": 7
+  },
+  "fixed_split": {
+    "source": "stage6_temporal_hazard_development_v1",
+    "training_groups": [
+      "aerpaw_packapalooza_2023:20230826T1215",
+      "aerpaw_packapalooza_2023:20230826T1300",
+      "aerpaw_packapalooza_2023:20230826T1315",
+      "aerpaw_packapalooza_2023:20230826T1330"
+    ],
+    "evaluation_groups": [
+      "aerpaw_packapalooza_2023:20230826T1200",
+      "aerpaw_packapalooza_2023:20230826T1230",
+      "aerpaw_packapalooza_2023:20230826T1245"
+    ],
+    "codebook_fitted_on_training_groups_only": true,
+    "candidate_comparison_uses_evaluation_groups_only": true
+  },
+  "task_grid": {
+    "n_channels": [8, 16, 32, 64],
+    "demand_ratios": [0.25, 0.5, 0.75],
+    "epsilon_db": 0.2
+  },
+  "frozen_batch_semantics": {
+    "event_schedule": "Generate the immediate B1 schedule first. B2 and B4 receive exactly the same ordered update items and may not invent, delete, or reorder them.",
+    "delivery_rule": "A full batch is sent at the scene of its last item and the receiver applies only the newest action after successful delivery.",
+    "remainder_rule": "A group-end partial batch is transmitted after the last scene and is charged bits but cannot retroactively improve task performance.",
+    "online_causality": true,
+    "cross_group_batching": false,
+    "prediction_or_future_access": false,
+    "normal_update_protocol_bits_per_item": 42,
+    "h8_header_bits_per_datagram": 8,
+    "udp_byte_padding": true
+  },
+  "burst_loss_stress": {
+    "status": "secondary_diagnostic_not_empirical_link_model",
+    "runs": 256,
+    "seed": 20260802,
+    "good_to_bad_probability_per_scene": 0.02,
+    "bad_to_good_probability_per_scene": 0.25,
+    "drop_probability_good": 0.01,
+    "drop_probability_bad": 0.5,
+    "stationary_initial_state": true,
+    "pairing": "The same scene-indexed Markov loss masks are reused across B1, B2, B4 and all N values.",
+    "recovery_boundary": "Frozen no-loss update schedules are replayed without ARQ; this isolates packet-concentration risk and is not a complete Stage-9 protocol simulation."
+  },
+  "metrics": [
+    "H8 update-path bits",
+    "datagram count",
+    "clean rate",
+    "mean max-query regret in dB",
+    "CVaR0.9 max-query regret in dB",
+    "stale-action scene count",
+    "event waiting scenes and seconds",
+    "paired Markov-loss clean difference"
+  ],
+  "statistics": {
+    "group_is_analysis_unit": true,
+    "paired_group_bootstrap_repetitions": 5000,
+    "paired_group_bootstrap_seed": 20260803,
+    "confidence_level": 0.95,
+    "no_p_value_claim": true
+  },
+  "retention_rule": {
+    "evaluated_per_candidate_across_every_n": true,
+    "minimum_update_bit_saving_lower_95_percent_bound": 5.0,
+    "minimum_no_loss_clean_difference_lower_95_percent_bound_pp": -0.5,
+    "maximum_mean_regret_increase_upper_95_percent_bound_db": 0.02,
+    "minimum_burst_clean_difference_lower_95_percent_bound_pp": -0.5,
+    "all_conditions_required": true,
+    "failure_action": "Do not adopt batching; retain S9-CH8-v1 and stop sequential-update aggregation."
+  },
+  "access_state_sha256_before": {
+    "configs/stage5_external_final_access_state.json": "0949569e399e2d8f0742a0b4c93457e5cb61e3a9a97a6bc2745d1c8d5101b45b",
+    "configs/stage6_external_final_access_state.json": "1b19c8500adaf7cfeeccc151c1e98bc54eb0e93d90c411f78f5429f827f8ece5",
+    "configs/stage6r_electrosense_final_access_state_v1.json": "6c4105198a766c3925219bde3076379e0b10f9dfc0a1c6129cfeeaadc9df5ee3",
+    "configs/stage8_fault_confirmation_access_state_v1.json": "c53cb092889b4db6c8e03ef69a81c2e6e9fb52b07eae705f8b8088f28184dd4e"
+  },
+  "governance": {
+    "development_only": true,
+    "external_final_archives_may_be_opened": false,
+    "external_final_signal_values_may_be_loaded": false,
+    "external_final_access_may_be_consumed": false,
+    "output_is_confirmatory_final": false
+  },
+  "claim_boundary": "This stage can decide whether sequential B2/B4 aggregation is useful on one already seen fixed-site pilot dataset. It cannot establish external generalization, measured UAV-link reliability, board-level feasibility, or repair the failed Stage-6 Final."
+}
