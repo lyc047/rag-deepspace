@@ -1,0 +1,52 @@
+{
+  "candidate": "S9-CH8-v1",
+  "freeze_date": "2026-08-02",
+  "status": "stage9_8_candidate_frozen_before_confirmation",
+  "development_gate_passed": true,
+  "development_normalized_sha256": "fe04c5f4d89090d507b44478b31e1bde513a6307ec6ee29099c8a5320a7581c5",
+  "development_result_sha256": "8a3825833302d530fa60b706027104d0b4b2da91fe816dcb794c19175003e8e2",
+  "input_hashes": {
+    "config": "3d28208a3ec6db5e5187224ee812f5166ed542974341226b01b49e9d75a5e471",
+    "parent_udp_codec": "643b5f7832240c646895b39911b08130f4e69805b07683b935aa403687bb24dc",
+    "compact_codec": "610b52fc14580a1e9f83a70d32febaca2a415264c3cbdf4717bdf46f93b01974",
+    "compact_worker": "ef0278fbb9a1c9d357295789f1924f04918128cc33acb78688a569d91df923d2",
+    "parent_runner": "2f626c563e893b54009e6fcb7d0d2d03952bacf7f9997e75ff6f2aff96c2ce40",
+    "compact_runner": "28527e65d3c357d6efb20189d4cab5a09eda621e61ceb11a3fda1a7a96d6f758",
+    "tests": "23691ae9c4086b3a41930aa2aacad9d49da9431aedc5210d7df0a18ae4b621d3"
+  },
+  "confirmation": {
+    "seed": 20262201,
+    "random_fault_operations": 300,
+    "receive_timeout_ms": 100
+  },
+  "development_summary": {
+    "registered_scenarios_passed": 11,
+    "registered_scenarios_total": 11,
+    "random_fault_violation_count": 0,
+    "endpoint_datagram_count": 248,
+    "counterfactual_h32_udp_payload_bits": 26168,
+    "observed_h8_udp_payload_bits": 20216,
+    "h8_saving_vs_h32_percent": 22.74533781718129,
+    "h8_overhead_relative_to_protocol_percent": 18.035849827757342,
+    "B2_ideal_update_saving_percent": 14.285714285714286,
+    "B4_ideal_update_saving_percent": 21.34453781512605,
+    "batching_adopted": false
+  },
+  "regression_status": {
+    "stage9_2_to_stage9_8_and_context_codec": "28 passed",
+    "full_suite": "499 passed, 3 failed",
+    "failed_test_files": [
+      "tests/test_c1_v4_final_protocol.py",
+      "tests/test_frame_manifest.py",
+      "tests/test_manifest.py"
+    ],
+    "failure_reason": "F-drive AERPAW manifest is unavailable in the current session and the migrated E-drive workspace lacks the legacy SigMF sample. No Stage-9.8 test failed."
+  },
+  "prohibited_after_freeze": [
+    "editing frozen source, tests, configuration, parent harness, or runner",
+    "changing the confirmation seed, fault probabilities, operation count, timeout, or gates",
+    "selecting H8 based on latency",
+    "adopting B2 or B4 without temporal task-regret evaluation",
+    "claiming H8 is authenticated or applicable to unregistered variable-length schemas"
+  ]
+}

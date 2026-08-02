@@ -1,0 +1,247 @@
+{
+  "batching_upper_bound": {
+    "B2": {
+      "adopted": false,
+      "average_wait_scenes_full_batch": 0.5,
+      "batch_size": 2,
+      "ideal_saving_percent": 14.285714285714286,
+      "ideal_udp_payload_bits": 21984,
+      "individual_h8_udp_payload_bits": 25648,
+      "lost_updates_per_lost_datagram": 2,
+      "maximum_wait_scenes": 1,
+      "update_count": 458
+    },
+    "B4": {
+      "adopted": false,
+      "average_wait_scenes_full_batch": 1.5,
+      "batch_size": 4,
+      "ideal_saving_percent": 21.397379912663755,
+      "ideal_udp_payload_bits": 20160,
+      "individual_h8_udp_payload_bits": 25648,
+      "lost_updates_per_lost_datagram": 4,
+      "maximum_wait_scenes": 3,
+      "update_count": 458
+    },
+    "reason": "No temporal task-regret evaluation is permitted in Stage-9.8.",
+    "status": "analytical_upper_bound_not_adopted"
+  },
+  "candidate": "S9-CH8-v1",
+  "codec_checks": {
+    "escape_56_bit_roundtrip": true,
+    "invalid_length_rejected": true
+  },
+  "endpoint_datagram_count": 670,
+  "gate_passed": true,
+  "gates": {
+    "corrupt_datagram_acceptance_count": 0,
+    "escape_56_bit_roundtrip": true,
+    "exact_24_bit_saving_per_normal_datagram": true,
+    "exact_protocol_and_udp_payload_widths": true,
+    "invalid_length_rejected": true,
+    "maximum_h8_overhead_relative_to_protocol_percent": true,
+    "minimum_h8_udp_payload_saving_vs_h32_percent": true,
+    "random_fault_violation_count": 0,
+    "real_udp_ports_nonzero": true,
+    "registered_scenario_pass_rate": 1.0,
+    "sender_transition_after_dropped_feedback_count": 0,
+    "stale_recovery_acceptance_count": 0,
+    "stale_update_acceptance_count": 0,
+    "three_distinct_processes": true,
+    "unaccounted_endpoint_datagram_count": 0,
+    "unknown_source_forward_count": 0,
+    "wrong_context_execution_count": 0
+  },
+  "latency_summary": {
+    "maximum_ms": 43.7178,
+    "median_ms": 1.5106000000000002,
+    "p95_ms": 2.889275,
+    "sample_count": 536
+  },
+  "matched_ledger_comparison": {
+    "counterfactual_h32_udp_payload_bits": 69360,
+    "exact_24_bit_saving_per_normal_datagram": true,
+    "frame_counts": {
+      "activation": 56,
+      "full_install": 42,
+      "reset_nack": 114,
+      "update": 458
+    },
+    "h8_overhead_relative_to_protocol_percent": 18.50006672301054,
+    "h8_saving_vs_h32_percent": 23.18339100346021,
+    "observed_h8_udp_payload_bits": 53280
+  },
+  "normalized_sha256": "5e4fcb629849af27416b69656a17dfb5407d309fb53f2f81fc1f41b28e07e267",
+  "observed_protocol_widths": {
+    "activation": [
+      80
+    ],
+    "full_install": [
+      419
+    ],
+    "reset_nack": [
+      32
+    ],
+    "update": [
+      42
+    ]
+  },
+  "observed_udp_payload_widths": {
+    "activation": [
+      88
+    ],
+    "full_install": [
+      432
+    ],
+    "reset_nack": [
+      40
+    ],
+    "update": [
+      56
+    ]
+  },
+  "operations": 300,
+  "phase": "confirmation",
+  "ports": {
+    "proxy": 59851,
+    "receiver": 59850,
+    "sender": 59849
+  },
+  "proxy_forwarded_datagram_count": 654,
+  "proxy_ingress_datagram_count": 670,
+  "proxy_ingress_protocol_bits": 44962,
+  "proxy_ingress_udp_payload_bits": 53280,
+  "proxy_pids": [
+    19528,
+    20260
+  ],
+  "random_summary": {
+    "operation_counts": {
+      "cold_receiver_restart": 23,
+      "delayed_reorder_pair": 16,
+      "dropped_reset_nack": 15,
+      "durable_catalog_corruption": 17,
+      "ordinary_update": 180,
+      "single_bit_corruption_then_retry": 14,
+      "warm_receiver_restart": 35
+    },
+    "violation_count": 0
+  },
+  "receiver_pids": [
+    7852,
+    22484,
+    17876,
+    23036,
+    1904,
+    3916,
+    17752,
+    19308,
+    15884,
+    22448,
+    2488,
+    16272,
+    13888,
+    16840,
+    23156,
+    20176,
+    22632,
+    16836,
+    20556,
+    8744,
+    10152,
+    20792,
+    21032,
+    22484,
+    19748,
+    812,
+    15728,
+    6396,
+    2880,
+    15916,
+    11344,
+    2172,
+    15380,
+    15652,
+    23468,
+    22868,
+    7852,
+    6320,
+    16120,
+    23308,
+    4324,
+    10316,
+    22380,
+    17876,
+    2244,
+    13160,
+    18796,
+    22728,
+    8196,
+    16112,
+    22484,
+    11176,
+    10388,
+    23048,
+    22904,
+    8272,
+    17788,
+    12912,
+    5356,
+    15380,
+    17496,
+    5060,
+    10340,
+    7216,
+    9668,
+    4316,
+    22848,
+    20056,
+    20156,
+    13160,
+    10024,
+    10836,
+    22200,
+    12204,
+    884,
+    812,
+    19864,
+    23320,
+    11720,
+    7488,
+    15884,
+    15408,
+    23124,
+    3084,
+    23044,
+    17576,
+    17724,
+    22904,
+    8272,
+    7432,
+    3784,
+    13884,
+    17848,
+    19916,
+    13672,
+    14276,
+    20032,
+    22752
+  ],
+  "scenarios": {
+    "cold_full_install_then_update_over_udp": true,
+    "delayed_old_recovery_rejected_after_receiver_restart": true,
+    "dropped_reset_nack_causes_sender_timeout_without_transition": true,
+    "duplicate_current_update_is_idempotent": true,
+    "durable_catalog_corruption_requires_full_install": true,
+    "proxy_restart_preserves_no_hidden_queue_and_endpoints_recover": true,
+    "reordered_update_rejected_across_serial_wrap": true,
+    "single_bit_corruption_fails_closed_then_retry_succeeds": true,
+    "three_distinct_processes_and_real_udp_ports": true,
+    "unknown_source_datagram_is_not_forwarded": true,
+    "warm_activation_then_update_over_udp": true
+  },
+  "seed": 20262201,
+  "sender_pids": [
+    22964
+  ],
+  "violation_messages": []
+}

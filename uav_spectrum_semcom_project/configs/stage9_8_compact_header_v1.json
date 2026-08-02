@@ -1,0 +1,103 @@
+{
+  "version": "1.0",
+  "experiment_id": "stage9_8_compact_header_v1",
+  "status": "registered_before_implementation_experiment",
+  "registered_date": "2026-08-02",
+  "purpose": "Test whether an 8-bit fixed-schema UDP application header reduces Stage-9.7 framing overhead while preserving the same causal and fail-closed protocol behavior.",
+  "parent_candidate": "S9-UDP32-v1",
+  "candidate": "S9-CH8-v1",
+  "data_policy": {
+    "external_spectrum_final_consumed": false,
+    "external_fault_dataset_consumed": false,
+    "input": "registered protocol fixture and synthetic UDP fault schedule only"
+  },
+  "compact_header": {
+    "total_bits": 8,
+    "magic_bits": 4,
+    "version_bits": 2,
+    "kind_bits": 2,
+    "explicit_length_bits": 0,
+    "length_inference": "frame kind plus UDP datagram payload byte count",
+    "allowed_protocol_bits": {
+      "reset_nack": [32],
+      "activation": [80],
+      "full_install": [419],
+      "update": [42, 56]
+    }
+  },
+  "normal_path_udp_payload_bits": {
+    "reset_nack": 40,
+    "activation": 88,
+    "full_install": 432,
+    "update": 56
+  },
+  "baseline_h32_udp_payload_bits": {
+    "reset_nack": 64,
+    "activation": 112,
+    "full_install": 456,
+    "update": 80
+  },
+  "development": {
+    "seed": 20262101,
+    "random_fault_operations": 100,
+    "receive_timeout_ms": 100
+  },
+  "confirmation": {
+    "seed": 20262201,
+    "random_fault_operations": 300,
+    "receive_timeout_ms": 100,
+    "execute_only_after_freeze": true
+  },
+  "random_operation_probabilities": {
+    "ordinary_update": 0.60,
+    "warm_receiver_restart": 0.12,
+    "cold_receiver_restart": 0.07,
+    "dropped_reset_nack": 0.05,
+    "durable_catalog_corruption": 0.05,
+    "single_bit_corruption_then_retry": 0.05,
+    "delayed_reorder_pair": 0.06
+  },
+  "comparison_rules": [
+    "H32 and H8 overhead are computed on the identical realized frame ledger.",
+    "Each normal-path H8 datagram must save exactly 24 bits relative to H32.",
+    "Protocol actions, fault schedule, endpoint state machines, ports, and proxy behavior are unchanged.",
+    "Timing is descriptive and excluded from selection and reproducibility hashes."
+  ],
+  "batching_analysis_only": {
+    "batch_sizes": [2, 4],
+    "scope": "ideal upper bound for fixed 42-bit ordinary updates",
+    "batch_count_inferred_from_udp_length": true,
+    "average_wait_scenes_full_batch": {
+      "2": 0.5,
+      "4": 1.5
+    },
+    "maximum_wait_scenes": {
+      "2": 1,
+      "4": 3
+    },
+    "lost_updates_per_lost_datagram": {
+      "2": 2,
+      "4": 4
+    },
+    "adoption_status": "not eligible without task-regret evaluation on temporal spectrum traces"
+  },
+  "gates": {
+    "all_stage9_7_safety_gates": true,
+    "exact_normal_path_widths": true,
+    "minimum_h8_udp_payload_saving_vs_h32_percent": 20.0,
+    "maximum_h8_overhead_relative_to_protocol_percent": 25.0,
+    "exact_24_bit_saving_per_normal_datagram": true,
+    "escape_56_bit_roundtrip": true,
+    "invalid_length_rejected": true,
+    "random_fault_violation_count": 0,
+    "normalized_confirmation_reproducible": true
+  },
+  "claim_boundary": [
+    "The 4-bit magic is only a framing discriminator; inner protocol magic and version checks remain mandatory.",
+    "The compact header is not an authentication or integrity code.",
+    "The result applies only to the registered fixed schema and allowed update lengths.",
+    "Batching results are analytical upper bounds, not adopted protocol results.",
+    "No IPv4, UDP, link-layer, retransmission, or cryptographic overhead is claimed as measured.",
+    "A positive transport result does not reverse the Stage-6 external Final failure."
+  ]
+}

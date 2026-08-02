@@ -1,0 +1,71 @@
+{
+  "candidate": "S9-CH8-v1",
+  "decision_date": "2026-08-02",
+  "decision": "confirmed_for_fixed_schema_compact_udp_framing",
+  "confirmation_gate_passed": true,
+  "confirmation_reproduced": true,
+  "confirmation_normalized_sha256": "5e4fcb629849af27416b69656a17dfb5407d309fb53f2f81fc1f41b28e07e267",
+  "evidence_hashes": {
+    "freeze_manifest": "fca15edf9aa31283d39cffbc27f3555a4a022972ae63ab80e0cac4ad8ae591c0",
+    "confirmation_result": "5b22fa84cb6a9fb536c15301c5620c030028a180b7c1da8cbb9c3684dc3443d3",
+    "confirmation_reproduction": "8dfe3fbc1ea092b81d3987395e9322264cb36decd65e5d2a06838c3b8b808d78"
+  },
+  "confirmation_summary": {
+    "registered_scenarios_passed": 11,
+    "registered_scenarios_total": 11,
+    "random_fault_operations": 300,
+    "endpoint_datagram_count": 670,
+    "frame_counts": {
+      "activation": 56,
+      "full_install": 42,
+      "reset_nack": 114,
+      "update": 458
+    },
+    "protocol_bits": 44962,
+    "counterfactual_h32_udp_payload_bits": 69360,
+    "observed_h8_udp_payload_bits": 53280,
+    "h8_saving_vs_h32_percent": 23.18339100346021,
+    "h8_overhead_relative_to_protocol_percent": 18.50006672301054,
+    "random_fault_violation_count": 0,
+    "all_safety_violation_counts": 0
+  },
+  "batching_decision": {
+    "adopted": false,
+    "B2_update_only_ideal_saving_percent": 14.285714285714286,
+    "B2_total_h8_ideal_saving_percent": 6.876876876876876,
+    "B2_average_wait_scenes": 0.5,
+    "B2_maximum_wait_scenes": 1,
+    "B2_lost_updates_per_lost_datagram": 2,
+    "B4_update_only_ideal_saving_percent": 21.397379912663755,
+    "B4_total_h8_ideal_saving_percent": 10.3003003003003,
+    "B4_average_wait_scenes": 1.5,
+    "B4_maximum_wait_scenes": 3,
+    "B4_lost_updates_per_lost_datagram": 4,
+    "reason": "Only an ideal bit upper bound is available; temporal task regret and stale-action risk were not evaluated."
+  },
+  "verified_claims": [
+    "An 8-bit fixed-schema header preserves the registered Stage-9.7 safety outcomes over real localhost UDP.",
+    "Each normal-path datagram saves exactly 24 bits relative to H32 on the identical frame ledger.",
+    "The 56-bit escape update transport representation round-trips and invalid lengths fail closed.",
+    "H8 reduces UDP application payload by 23.18 percent relative to H32 and limits framing overhead above protocol bits to 18.50 percent in confirmation.",
+    "Normalized confirmation results reproduce exactly after excluding environment-sensitive identifiers and timing."
+  ],
+  "not_verified": [
+    "end-to-end escape recovery under the random three-process fixture",
+    "batching task regret, clean rate, or stale-action risk",
+    "unregistered variable-length protocol schemas",
+    "authentication or active-attack security",
+    "real RF, board-level, IP, UDP, link-layer, retransmission, or security overhead",
+    "external-spectrum algorithm superiority"
+  ],
+  "architecture_status": {
+    "external_data_main_freeze": "S6R-FH10-v1; Stage-6 external Final remains failed",
+    "causal_protocol_candidate": "S9-CRN32-HBW30-v1",
+    "binary_process_candidate": "S9-BPP32-v1",
+    "udp_transport_baseline": "S9-UDP32-v1",
+    "compact_udp_candidate": "S9-CH8-v1",
+    "batching": "not adopted",
+    "hardware_work": "paused"
+  },
+  "next_entry": "Stop pure framing optimization. If temporal development traces are available, evaluate B2/B4 waiting-induced regret and burst-loss risk before any batching adoption; otherwise return to the spectrum prediction and external validation mainline."
+}
